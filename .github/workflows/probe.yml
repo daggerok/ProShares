@@ -32,6 +32,7 @@ jobs:
             url=$(printf '%s' "$line" | cut -d'|' -f1 | sed 's/[[:space:]]*$//')
             bytes=$(printf '%s' "$line" | sed -n 's/.*| *bytes=\([0-9]*\).*/\1/p')
             grep_pat=$(printf '%s' "$line" | sed -n 's/.*| *grep=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
+            near_pat=$(printf '%s' "$line" | sed -n 's/.*| *near=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
             [ -n "${bytes:-}" ] || bytes=$MAX
             out=$(printf 'probe/out/%03d.txt' "$n")
             {
@@ -39,7 +40,10 @@ jobs:
               code=$(curl -sS -L -A "$UA" -o /tmp/body -w '%{http_code} %{size_download} bytes %{content_type}' --max-time 180 "$url" 2>/tmp/err || echo "000 0 -")
               echo "STATUS: $code"
               if [ -s /tmp/err ]; then echo "STDERR:"; head -c 600 /tmp/err; fi
-              if [ -n "$grep_pat" ]; then
+              if [ -n "$near_pat" ]; then
+                echo "NEAR: $near_pat"
+                grep -n -E -B 14 -A 4 "$near_pat" /tmp/body | head -100
+              elif [ -n "$grep_pat" ]; then
                 echo "GREP: $grep_pat"
                 grep -o -E ".{0,300}${grep_pat}.{0,1200}" /tmp/body | head -60
               else

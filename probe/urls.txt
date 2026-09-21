@@ -1,3 +1,6 @@
-https://www.proshares.com/sitemap.xml | bytes=6000
-https://www.proshares.com/our-etfs/strategic/nobl | grep=Download Holdings
-https://accounts.profunds.com/etfdata/ByFund/NOBL-historical_nav.csv | bytes=1500
+https://www.proshares.com/our-etfs/strategic/nobl | near=Download Holdings | bytes=0
+https://www.proshares.com/our-etfs/strategic/nobl | grep=accounts\.profunds\.com
+https://accounts.profunds.com/etfdata/ByFund/ | bytes=2000
+https://accounts.profunds.com/etfdata/ByFund/NOBL-holdings.csv | bytes=800
+https://accounts.profunds.com/etfdata/ByFund/NOBL.csv | bytes=800
+https://www.proshares.com/sitemap.xml | near=our-etfs/ | bytes=0
