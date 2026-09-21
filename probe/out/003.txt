@@ -1,12 +1,8 @@
-URL: https://www.proshares.com/our-etfs/find-proshares-etfs
-STATUS: 200 1411340 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/our-etfs/find-proshares-etfs' -o /tmp/f.html; echo "=== premium mentions:"; grep -o -i -E '.{0,160}premium.{0,240}' /tmp/f.html | head -6; echo "=== counts per tab:"; grep -oE 'div[A-Za-z-]+Count">\(?[0-9]+' /tmp/f.html | head -20
-=== premium mentions:
-                                                                    <a class="site-header__resources-header-link" href="/resources/tools/premium-discount">
-                                                                            <h6 class="mb-0 pr-2">Premium/Discount Tool</h6>
-                                                                    <a class="site-header__resources-header-link" href="/resources/tools/premium-discount">
-                                                                            <h6 class="mb-0 pr-2">Premium/Discount Tool</h6>
-                                    <th style="text-align: right;">Premium/Discount</th>
-                                                <a href="/resources/tools/premium-discount">
-=== counts per tab:
-divMainCount">56
+URL: https://accounts.profunds.com/etfdata/historical_nav.csv
+STATUS: 200 52674493 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/historical_nav.csv -o /tmp/h.csv; echo "rows: $(wc -l < /tmp/h.csv)"; echo "funds: $(cut -d, -f3 /tmp/h.csv | tail -n +2 | sort -u | wc -l)"; echo "oldest/newest:"; tail -1 /tmp/h.csv | cut -d, -f1; sed -n 2p /tmp/h.csv | cut -d, -f1
+rows: 539910
+funds: 173
+oldest/newest:
+01/03/2011
+09/18/2026

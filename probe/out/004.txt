@@ -1,22 +1,7 @@
-URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
-STATUS: 200 1857021 bytes text/csv
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; echo "=== IGHG bond rows:"; grep '^"IGHG"' /tmp/a.csv | head -6; echo "=== rows with coupon values:"; grep -E '^"[A-Z]+","[^"]*","[^"]*","[^"]*","[^"]*",[0-9]' /tmp/a.csv | head -4; echo "=== quoted commas sample:"; grep -E '"[^"]*,[^"]*"' /tmp/a.csv | head -3
-grep: write error: Broken pipe
-grep: write error: Broken pipe
-grep: write error: Broken pipe
-=== IGHG bond rows:
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY",,,-1557,-164774390.6,,
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US LONG BOND(CBT) BOND 21/DEC/2026 USZ6 COMDTY",,,-1452,-155409375,,
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US ULTRA BOND CBT BOND 21/DEC/2026 WNZ6 COMDTY",,,-225,-24461718.75,,
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","BYM4WR8","MORGAN STANLEY",4.375,2047-01-22,7779000,,6152311.3,
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","B65HZL3","PFIZER INC",7.2,2039-03-15,4769000,,5331598.02,
-"IGHG","ProShares Investment Grade-Interest Rate Hedged","","B1L80H6","HOME DEPOT INC",5.875,2036-12-16,5194000,,5284059.18,
-=== rows with coupon values:
-"DDM","ProShares Ultra Dow30","","BMWFL25","TREASURY BILL",0,2026-09-22,5000000,,4999474.3,
-"DDM","ProShares Ultra Dow30","","BW5Z070","TREASURY BILL",0,2026-09-24,5000000,,4998431.25,
-"DDM","ProShares Ultra Dow30","","BRCDQ07","TREASURY BILL",0,2026-11-17,5000000,,4969016.15,
-"DDM","ProShares Ultra Dow30","","BW61LR4","TREASURY BILL",0,2026-12-03,5000000,,4960161,
-=== quoted commas sample:
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","NDX100 35% VOLATILITY AUTOCALLABLE SWAP Bank of America NA",,,21613,23390669.25,,
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","IQMM",,"PROSHARES GENIUS MNY MKT ETF",,,90000,,9009000,
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","Net Other Assets (Liabilities)",,,14373441.9,,14373441.9,
+URL: https://accounts.profunds.com/etfdata/etf_performance.csv
+STATUS: 200 130205 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/etf_performance.csv -o /tmp/p.csv; echo "rows: $(wc -l < /tmp/p.csv)"; echo "return types: $(cut -d, -f3 /tmp/p.csv | tail -n +2 | sort -u | tr '\n' ' ')"; echo "data periods: $(cut -d, -f4 /tmp/p.csv | tail -n +2 | sort -u | tr '\n' ' ')"; echo "symbols: $(cut -d, -f2 /tmp/p.csv | tail -n +2 | sort -u | wc -l)"
+rows: 943
+return types: MARKET NAV 
+data periods: MONTH QUARTER 
+symbols: 238

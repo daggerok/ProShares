@@ -1,26 +1,17 @@
-URL: https://www.proshares.com/api/distributionsummary?fund=NOBL&year=2025
-STATUS: 200 1681 bytes application/json; charset=utf-8
-[
-  {
-    "CashDividendPerShare": 0.330594,
-    "Dividend": ".330594",
-    "EffectiveDate": "2025-12-23T00:00:00",
-    "ExDate": "2025-12-24T00:00:00",
-    "LongTermCapGains": null,
-    "OtherPerShare": null,
-    "PayableDate": "2025-12-31T00:00:00",
-    "RecordDate": "2025-12-24T00:00:00",
-    "ReturnOfCapital": null,
-    "ShortTermCapGains": null,
-    "SpecialPerShare": null,
-    "Symbol": "NOBL"
-  },
-  {
-    "CashDividendPerShare": 0.274372,
-    "Dividend": ".274372",
-    "EffectiveDate": "2025-09-23T00:00:00",
-    "ExDate": "2025-09-24T00:00:00",
-    "LongTermCapGains": null,
-    "OtherPerShare": null,
-    "PayableDate": "2025-09-30T00:00:00",
-    "RecordDate": "20
+URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
+STATUS: 200 1857021 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; echo "total rows: $(wc -l < /tmp/a.csv)"; echo "funds: $(grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort -u | wc -l)"; echo "max rows per fund:"; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort | uniq -c | sort -rn | head -6; echo "min rows per fund:"; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort | uniq -c | sort -n | head -4
+total rows: 20237
+funds: 173
+max rows per fund:
+   1998 "URTY"
+   1996 "UWM"
+   1989 "HDG"
+   1981 "ITWO"
+   1971 "RB"
+    608 "SAA"
+min rows per fund:
+      2 "KRYP"
+      3 "ACQQ"
+      3 "ACRT"
+      3 "ACSP"

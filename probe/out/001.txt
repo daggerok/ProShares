@@ -1,6 +1,76 @@
-URL: https://www.proshares.com/resources/distributions
-STATUS: 200 188932 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -sL -A "$UA" 'https://www.proshares.com/resources/distributions' -o /tmp/d.html -w 'status=%{http_code} size=%{size_download}\n'; echo "=== api + csv links:"; grep -oE '(/api/[a-zA-Z0-9/?&=_-]+|href="[^"]+\.(csv|xls|xlsx)")' /tmp/d.html | sort -u | head -20; echo "=== table headers:"; grep -oE '<th[^>]*>[^<]{2,40}</th>' /tmp/d.html | sed 's/<[^>]*>//g' | sort -u | head -25
-status=200 size=188932
-=== api + csv links:
-=== table headers:
+URL: https://www.proshares.com/our-etfs/strategic/ighg
+STATUS: 200 389022 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/ighg -o /tmp/i.html; echo "=== net assets:"; grep -oE 'id="snapshot-netAssets"[^>]*>[^<]*' /tmp/i.html; echo "=== first holdings rows:"; grep -n -A 8 -m 1 'id="holdingstable"' /tmp/i.html | head -20; ln=$(grep -n -m1 'holdingstable' /tmp/i.html | cut -d: -f1); sed -n "$((ln)),$((ln+70))p" /tmp/i.html | sed 's/^ *//' | head -60
+=== net assets:
+id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$373,690,764
+id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$373,690,764
+=== first holdings rows:
+2023:<div id="holdingstable" class="fund-detail__tabs">
+2024-    <h3>Total Return</h3>
+2025-    <div class="tabs">
+2026-        <div class="position-relative">
+2027-            <div class="py-lg-3 d-xs-block d-lg-none tabs__selected">
+2028-                <span class="px-3 pt-3 pb-2 d-block tabs__selected-label link-primary tabs__caret">
+2029-                    Month-End Total Returns as of 8/31/2026
+2030-                </span>
+2031-            </div>
+<div id="holdingstable" class="fund-detail__tabs">
+<h3>Total Return</h3>
+<div class="tabs">
+<div class="position-relative">
+<div class="py-lg-3 d-xs-block d-lg-none tabs__selected">
+<span class="px-3 pt-3 pb-2 d-block tabs__selected-label link-primary tabs__caret">
+Month-End Total Returns as of 8/31/2026
+</span>
+</div>
+<ul class="tabs__items nav nav-tabs" role="tablist">
+<li class="nav-item tabs__list-item" role="tab">
+<a class="nav-link text-util-sm-bold active" href="#month-end-total-returns.html" id="month-end-total-returns-tab" data-toggle="tab" data-target="#month-end-total-returns" aria-controls="month-end-total-returns">
+<span>Month-End Total Returns as of 8/31/2026</span>
+</a>
+</li>
+<li class="nav-item tabs__list-item" role="tab">
+<a class="nav-link text-util-sm-bold 0" href="#month-end-total-returns1.html" id="month-end-total-returns1-tab" data-toggle="tab" data-target="#month-end-total-returns1" aria-controls="month-end-total-returns1">
+<span>Quarter-End Total Returns as of 6/30/2026</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="tabs__content tab-content">
+<div class="tab-pane  fade active show" id="month-end-total-returns" role="tabpanel" aria-labelledby="month-end-total-returns-tab">
+<div class="fund-detail-table fund-index-table product-total-return-table">
+<div class="container">
+<div class="fund-screener-table">
+<table id="total-return-table" class="table" tabindex="0">
+<thead>
+<tr>
+<th>Fund + Index</th>
+<th>1m</th>
+<th>3m</th>
+<th>6m</th>
+<th>YTD</th>
+<th>1Y</th>
+<th>3Y</th>
+<th>5Y</th>
+<th>10Y</th>
+<th>Since Inception</th>
+<th>Inception Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IGHG NAV</td>
+<td>0.32%</td>
+<td>0.28%</td>
+<td>2.92%</td>
+<td>2.47%</td>
+<td>4.40%</td>
+<td>7.26%</td>
+<td>5.44%</td>
+<td>4.54%</td>
+<td>3.72%</td>
+<td>11/05/2013</td>
+</tr>
+<tr>
+<td>IGHG Market Price</td>
+<td>0.30%</td>
