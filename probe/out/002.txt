@@ -1,17 +1,14 @@
-URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
-STATUS: 200 1857021 bytes text/csv
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; echo "total rows: $(wc -l < /tmp/a.csv)"; echo "funds: $(grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort -u | wc -l)"; echo "max rows per fund:"; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort | uniq -c | sort -rn | head -6; echo "min rows per fund:"; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | sort | uniq -c | sort -n | head -4
-total rows: 20237
-funds: 173
-max rows per fund:
-   1998 "URTY"
-   1996 "UWM"
-   1989 "HDG"
-   1981 "ITWO"
-   1971 "RB"
-    608 "SAA"
-min rows per fund:
-      2 "KRYP"
-      3 "ACQQ"
-      3 "ACRT"
-      3 "ACSP"
+URL: https://accounts.profunds.com/etfdata/ByFund/URTY-psdlyhld.csv
+STATUS: 200 195761 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/ByFund/URTY-psdlyhld.csv -o /tmp/u.csv; echo "rows: $(wc -l < /tmp/u.csv)"; head -6 /tmp/u.csv | cut -c1-260; echo "..."; echo "tail:"; tail -2 /tmp/u.csv | cut -c1-200
+rows: 2002
+PORTFOLIO HOLDINGS INFORMATION,,,,
+AS OF 9/18/2026,,,,
+,,,,
+Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+"URTY","ProShares UltraPro Russell2000","","","Russell 2000 Index SWAP UBS AG",,,46815,133909626,,
+"URTY","ProShares UltraPro Russell2000","","","Russell 2000 Index SWAP Societe Generale",,,42403,121289541.2,,
+...
+tail:
+"URTY","ProShares UltraPro Russell2000","","888CVR9","TOBIRA THERAPEUTICS INC - CVR",,,218,,0,
+"URTY","ProShares UltraPro Russell2000","","","Net Other Assets (Liabilities)",,,79678693.66,,79678693.66,

@@ -1,7 +1,0 @@
-URL: https://accounts.profunds.com/etfdata/etf_performance.csv
-STATUS: 200 130205 bytes text/csv
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/etf_performance.csv -o /tmp/p.csv; echo "rows: $(wc -l < /tmp/p.csv)"; echo "return types: $(cut -d, -f3 /tmp/p.csv | tail -n +2 | sort -u | tr '\n' ' ')"; echo "data periods: $(cut -d, -f4 /tmp/p.csv | tail -n +2 | sort -u | tr '\n' ' ')"; echo "symbols: $(cut -d, -f2 /tmp/p.csv | tail -n +2 | sort -u | wc -l)"
-rows: 943
-return types: MARKET NAV 
-data periods: MONTH QUARTER 
-symbols: 238
