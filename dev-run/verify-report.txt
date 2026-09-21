@@ -219,6 +219,32 @@
   FETCH FAILED: fetch failed: https://www.proshares.com/our-etfs/strategic/spcf
 === ACQQ (https://www.proshares.com/our-etfs/leveraged-and-inverse/acqq)
   FETCH FAILED: fetch failed: https://www.proshares.com/our-etfs/leveraged-and-inverse/acqq
+=== official per-fund holdings download vs the all-funds file
+  NOBL per-fund: bytes 8169 · header line 3 · 70 rows for NOBL
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "NOBL","ProShares S&P 500 Dividend Aristocrats ETF","BDX","2087807","BECTON DICKINSON AND CO",,,1079626,,195347528.4,
+    row: "NOBL","ProShares S&P 500 Dividend Aristocrats ETF","FDS","2329770","FACTSET RESEARCH SYSTEMS INC",,,674337,,191397070.7,
+  NOBL all-funds: bytes 1857021 · header line 3 · 70 rows for NOBL
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "NOBL","ProShares S&P 500 Dividend Aristocrats ETF","BDX",,"BECTON DICKINSON AND CO",,,1079626,,195347528.4,
+    row: "NOBL","ProShares S&P 500 Dividend Aristocrats ETF","FDS",,"FACTSET RESEARCH SYSTEMS INC",,,674337,,191397070.7,
+  IGHG per-fund: bytes 24336 · header line 3 · 187 rows for IGHG
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY",,,-1557,-164774390.6,,
+    row: "IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US LONG BOND(CBT) BOND 21/DEC/2026 USZ6 COMDTY",,,-1452,-155409375,,
+  IGHG all-funds: bytes 1857021 · header line 3 · 187 rows for IGHG
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY",,,-1557,-164774390.6,,
+    row: "IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US LONG BOND(CBT) BOND 21/DEC/2026 USZ6 COMDTY",,,-1452,-155409375,,
+  AGQ per-fund: bytes 839 · header line 3 · 6 rows for AGQ
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "AGQ","ProShares Ultra Silver","","","SILVER FUTURE DEC26",,,3411,1145226195,,
+    row: "AGQ","ProShares Ultra Silver","","","BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",,,1769495.8585,860209445.43,,
+  AGQ all-funds: bytes 1857021 · header line 3 · 6 rows for AGQ
+    header: Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+    row: "AGQ","ProShares Ultra Silver","","","SILVER FUTURE DEC26",,,3411,1145226195,,
+    row: "AGQ","ProShares Ultra Silver","","","BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",,,1769495.8585,860209445.43,,
+
 === official performance file: blank tenors for the youngest funds
   header: Fund Name,Fund Symbol,Return Type,Data Period,Return Effective Date,1-Month Return,3-Month Return,6-Month Return,Year-To-Date Return,1-Year Return,3-Year Return,5-Year Return,10-Year Return,Return Since Inception,Inception Date
   Ultra SpaceX,SPCF,NAV,MONTH,2026-08-31 00:00:00.000,60.61,,,-37.24,,,,,,2026-06-15 00:00:00.000
