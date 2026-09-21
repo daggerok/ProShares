@@ -1,0 +1,557 @@
+{
+ "ticker": "TINT",
+ "name": "Smart Materials ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/tint",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/TINT-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/TINT-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TINT&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/TINT-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347G473",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$37.90",
+  "value": 37.9,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$37.85",
+  "value": 37.85,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.13%",
+  "value": -0.1319,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$1,895,209",
+  "value": 1895207.9034,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 1.13,
+  "dividendYieldText": "1.13%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 1.13,
+  "yield12MText": "1.13%",
+  "indicatedYield": 3.2745,
+  "indicatedYieldText": "3.27%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Oct 26 2021",
+   "mo1": 4.4,
+   "mo3": -4.12,
+   "mo6": 2.49,
+   "ytd": 21.64,
+   "yr1": 25.74,
+   "yr3": 8.6,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 1.4,
+   "mo1Text": "4.40%",
+   "ytdText": "21.64%",
+   "yr1Text": "25.74%",
+   "yr3Text": "8.60%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "1.40%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Oct 26 2021",
+    "mo1": 5.21,
+    "mo3": -4.06,
+    "mo6": 2.59,
+    "ytd": 21.72,
+    "yr1": 25.57,
+    "yr3": 8.58,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 1.37,
+    "mo1Text": "5.21%",
+    "ytdText": "21.72%",
+    "yr1Text": "25.57%",
+    "yr3Text": "8.58%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "1.37%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Oct 26 2021",
+   "mo1": -5.64,
+   "mo3": 12.94,
+   "mo6": 19.72,
+   "ytd": 19.72,
+   "yr1": 32.86,
+   "yr3": 7.42,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 1.11,
+   "mo1Text": "-5.64%",
+   "ytdText": "19.72%",
+   "yr1Text": "32.86%",
+   "yr3Text": "7.42%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "1.11%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Oct 26 2021",
+    "mo1": -4.87,
+    "mo3": 12.4,
+    "mo6": 20.69,
+    "ytd": 20.69,
+    "yr1": 33.53,
+    "yr3": 7.48,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 1.24,
+    "mo1Text": "-4.87%",
+    "ytdText": "20.69%",
+    "yr1Text": "33.53%",
+    "yr3Text": "7.48%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "1.24%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "23-Dec-2021",
+    "Record Date": "27-Dec-2021",
+    "Payable Date": "31-Dec-2021",
+    "Dividend": "0.047740",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Mar-2022",
+    "Record Date": "24-Mar-2022",
+    "Payable Date": "30-Mar-2022",
+    "Dividend": "0.118751",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Jun-2022",
+    "Record Date": "23-Jun-2022",
+    "Payable Date": "29-Jun-2022",
+    "Dividend": "0.040026",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Sep-2022",
+    "Record Date": "22-Sep-2022",
+    "Payable Date": "28-Sep-2022",
+    "Dividend": "0.027232",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Dec-2022",
+    "Record Date": "23-Dec-2022",
+    "Payable Date": "30-Dec-2022",
+    "Dividend": "0.202576",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Mar-2023",
+    "Record Date": "23-Mar-2023",
+    "Payable Date": "29-Mar-2023",
+    "Dividend": "0.053514",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2023",
+    "Record Date": "22-Jun-2023",
+    "Payable Date": "28-Jun-2023",
+    "Dividend": "0.171910",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Sep-2023",
+    "Record Date": "21-Sep-2023",
+    "Payable Date": "27-Sep-2023",
+    "Dividend": "0.019053",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.091119",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.013397",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.268150",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2024",
+    "Record Date": "25-Sep-2024",
+    "Payable Date": "02-Oct-2024",
+    "Dividend": "0.062401",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.085059",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.083153",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.265870",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.030799",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.042960",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.069453",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.310262",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 34,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 1230,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/TINT-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "32",
+   "Price/Book Ratio": "1.809",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "30",
+   "Price/Earnings Ratio": "21.88",
+   "Price/Book Ratio": "2.39",
+   "Dividend Yield ( % )": "2.09",
+   "Avg. Index Market Capitalization": "$166.21 billion",
+   "": "2021"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "ZEON CORP",
+      "Weight": 6.785694
+     },
+     {
+      "Company": "SYENSQO SA",
+      "Weight": 6.610993
+     },
+     {
+      "Company": "SIKA AG-REG",
+      "Weight": 5.845390999999999
+     },
+     {
+      "Company": "NVIDIA CORP",
+      "Weight": 5.148813
+     },
+     {
+      "Company": "AKZO NOBEL N.V.",
+      "Weight": 5.099018
+     },
+     {
+      "Company": "CABOT CORP",
+      "Weight": 4.883093000000001
+     },
+     {
+      "Company": "HEXCEL CORP",
+      "Weight": 4.758386
+     },
+     {
+      "Company": "PPG INDUSTRIES INC",
+      "Weight": 4.59416
+     },
+     {
+      "Company": "RPM INTERNATIONAL INC",
+      "Weight": 4.521084
+     },
+     {
+      "Company": "SOLVAY SA",
+      "Weight": 4.3476479999999995
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 39.082626999999995
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 15.269874
+     },
+     {
+      "Country": "Japan",
+      "Weight": 11.646688
+     },
+     {
+      "Country": "Belgium",
+      "Weight": 11.000350000000001
+     },
+     {
+      "Country": "France",
+      "Weight": 6.903302
+     },
+     {
+      "Country": "Switzerland",
+      "Weight": 5.8676390000000005
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 5.118425
+     },
+     {
+      "Country": "Canada",
+      "Weight": 5.111096
+     }
+    ]
+   },
+   {
+    "label": "Fund Currency Weighting",
+    "rows": [
+     {
+      "Currency": "USD",
+      "Weight": 39.082626711297365
+     },
+     {
+      "Currency": "EUR",
+      "Weight": 23.022076477097006
+     },
+     {
+      "Currency": "KRW",
+      "Weight": 15.269874113715101
+     },
+     {
+      "Currency": "JPY",
+      "Weight": 11.64668812217279
+     },
+     {
+      "Currency": "CHF",
+      "Weight": 5.867638873514263
+     },
+     {
+      "Currency": "CAD",
+      "Weight": 5.111095702203475
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Materials",
+      "Weight": 72.879302476188
+     },
+     {
+      "Sector": "Semiconductors & Semiconductor",
+      "Weight": 14.091733813892231
+     },
+     {
+      "Sector": "Capital Goods",
+      "Weight": 7.317714958055312
+     },
+     {
+      "Sector": "Technology Hardware & Equipment",
+      "Weight": 4.435406350403907
+     },
+     {
+      "Sector": "Pharmaceuticals, Biotechnology",
+      "Weight": 0.8966841108829294
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheettint.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_tint.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TINT&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TINT&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TINT&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TINT&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TINT&document-label=semi-annual-report"
+ }
+}

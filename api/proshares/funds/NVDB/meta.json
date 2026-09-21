@@ -1,0 +1,270 @@
+{
+ "ticker": "NVDB",
+ "name": "Ultra NVDA",
+ "category": "Equity",
+ "categoryPath": "Equity > Single Stock",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/nvdb",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/NVDB-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/NVDB-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=NVDB&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/NVDB-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74349Y399",
+  "isin": null,
+  "indexTicker": "NVDA",
+  "indexName": "NVIDIA Corporation (NVDA)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "1.08%",
+   "value": 1.08
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
+ },
+ "nav": {
+  "display": "$32.64",
+  "value": 32.64,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$32.49",
+  "value": 32.49,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.46%",
+  "value": -0.4596,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$6,527,637",
+  "value": 6527632.638,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 1.7897,
+  "indicatedYieldText": "1.79%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Sep 10 2025",
+   "mo1": 17.86,
+   "mo3": 1.2,
+   "mo6": 35.1,
+   "ytd": 16.95,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "mo1Text": "17.86%",
+   "ytdText": "16.95%",
+   "yr1Text": "—",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "—",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Sep 10 2025",
+    "mo1": 17.97,
+    "mo3": 0.74,
+    "mo6": 34.68,
+    "ytd": 16.73,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null,
+    "mo1Text": "17.97%",
+    "ytdText": "16.73%",
+    "yr1Text": "—",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "—"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Sep 10 2025",
+   "mo1": -12.49,
+   "mo3": 23.25,
+   "mo6": 1.13,
+   "ytd": 1.13,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "mo1Text": "-12.49%",
+   "ytdText": "1.13%",
+   "yr1Text": "—",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "—",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Sep 10 2025",
+    "mo1": -13.06,
+    "mo3": 23.3,
+    "mo6": 0.75,
+    "ytd": 0.75,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null,
+    "mo1Text": "-13.06%",
+    "ytdText": "0.75%",
+    "yr1Text": "—",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "—"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.154067",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.148935",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.146043",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 5,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 260,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/NVDB-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Price/Earnings Ratio": "47.17",
+   "Price/Book Ratio": "38.12",
+   "Dividend Yield ( % )": "0.02%",
+   "Market Capitalization": "$4,531.95 billion",
+   "": "2025"
+  },
+  "indexAsOf": "Dec 31 2025",
+  "geared": {
+   "strategy": "Single Stock",
+   "dailyObjective": "+2x",
+   "benchmark": "NVIDIA Corporation (NVDA)"
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetnvdb.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_nvdb.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=NVDB&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=NVDB&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=NVDB&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=NVDB&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=NVDB&document-label=semi-annual-report"
+ }
+}

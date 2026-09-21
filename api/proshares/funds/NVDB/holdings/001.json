@@ -1,0 +1,62 @@
+{
+ "ticker": "NVDB",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NVIDIA Corp (NVDA) SWAP NOMURA NOMURA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "78.4620213693",
+   "Market Value": "—",
+   "Shares Held": "22986",
+   "Exposure Value": "5121740.52"
+  },
+  {
+   "Name": "NVIDIA Corp (NVDA) SWAP BANK OF AMERICA NA BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "72.1436884034",
+   "Market Value": "—",
+   "Shares Held": "21135",
+   "Exposure Value": "4709300.7"
+  },
+  {
+   "Name": "NVIDIA Corp (NVDA) SWAP GOLDMAN SACHS GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "27.4511257223",
+   "Market Value": "—",
+   "Shares Held": "8042",
+   "Exposure Value": "1791918.44"
+  },
+  {
+   "Name": "NVIDIA Corp (NVDA) SWAP CITIBANK NA CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "21.8837561559",
+   "Market Value": "—",
+   "Shares Held": "6411",
+   "Exposure Value": "1428499.02"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "6527668.33",
+   "Shares Held": "6527668.33",
+   "Exposure Value": "—"
+  }
+ ]
+}

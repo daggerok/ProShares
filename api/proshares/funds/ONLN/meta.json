@@ -1,0 +1,411 @@
+{
+ "ticker": "ONLN",
+ "name": "Online Retail ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/onln",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/ONLN-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/ONLN-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ONLN&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/ONLN-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347B169",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$55.85",
+  "value": 55.85,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$55.83",
+  "value": 55.83,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.04%",
+  "value": -0.0358,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$58,645,957",
+  "value": 58645915.8532,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 0.29,
+  "dividendYieldText": "0.29%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 0.29,
+  "yield12MText": "0.29%",
+  "indicatedYield": 0.3395,
+  "indicatedYieldText": "0.34%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jul 16 2018",
+   "mo1": -2.41,
+   "mo3": 1.01,
+   "mo6": 4.44,
+   "ytd": -1.86,
+   "yr1": 1.76,
+   "yr3": 20.26,
+   "yr5": -3.9,
+   "yr10": null,
+   "sinceInception": 4.95,
+   "mo1Text": "-2.41%",
+   "ytdText": "-1.86%",
+   "yr1Text": "1.76%",
+   "yr3Text": "20.26%",
+   "yr5Text": "-3.90%",
+   "yr10Text": "—",
+   "sinceInceptionText": "4.95%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jul 16 2018",
+    "mo1": -2.5,
+    "mo3": 1.04,
+    "mo6": 4.35,
+    "ytd": -1.89,
+    "yr1": 1.77,
+    "yr3": 20.25,
+    "yr5": -3.91,
+    "yr10": null,
+    "sinceInception": 4.95,
+    "mo1Text": "-2.50%",
+    "ytdText": "-1.89%",
+    "yr1Text": "1.77%",
+    "yr3Text": "20.25%",
+    "yr5Text": "-3.91%",
+    "yr10Text": "—",
+    "sinceInceptionText": "4.95%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jul 16 2018",
+   "mo1": -5.21,
+   "mo3": 2.39,
+   "mo6": -7.9,
+   "ytd": -7.9,
+   "yr1": 7.65,
+   "yr3": 18.77,
+   "yr5": -7.44,
+   "yr10": null,
+   "sinceInception": 4.23,
+   "mo1Text": "-5.21%",
+   "ytdText": "-7.90%",
+   "yr1Text": "7.65%",
+   "yr3Text": "18.77%",
+   "yr5Text": "-7.44%",
+   "yr10Text": "—",
+   "sinceInceptionText": "4.23%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jul 16 2018",
+    "mo1": -5.21,
+    "mo3": 2.34,
+    "mo6": -7.96,
+    "ytd": -7.96,
+    "yr1": 7.56,
+    "yr3": 18.73,
+    "yr5": -7.47,
+    "yr10": null,
+    "sinceInception": 4.22,
+    "mo1Text": "-5.21%",
+    "ytdText": "-7.96%",
+    "yr1Text": "7.56%",
+    "yr3Text": "18.73%",
+    "yr5Text": "-7.47%",
+    "yr10Text": "—",
+    "sinceInceptionText": "4.22%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.045306",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.045033",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.055724",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.071874",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.052984",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.067467",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.047404",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 23,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 2057,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/ONLN-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "24",
+   "Price/Book Ratio": "4.365",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "19",
+   "Price/Earnings Ratio": "24.61",
+   "Price/Book Ratio": "4.84",
+   "Avg. Index Market Capitalization": "$170.18 billion",
+   "": "2020"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "AMAZON.COM INC",
+      "Weight": 24.785578
+     },
+     {
+      "Company": "ALIBABA GROUP HOLDING-SP ADR",
+      "Weight": 8.724263
+     },
+     {
+      "Company": "EBAY INC",
+      "Weight": 8.694596
+     },
+     {
+      "Company": "CARVANA CO",
+      "Weight": 4.640725
+     },
+     {
+      "Company": "PDD HOLDINGS INC",
+      "Weight": 4.496277
+     },
+     {
+      "Company": "MERCADOLIBRE INC",
+      "Weight": 3.9043710000000003
+     },
+     {
+      "Company": "WILLIAMS-SONOMA INC",
+      "Weight": 3.698107
+     },
+     {
+      "Company": "WAYFAIR INC- CLASS A",
+      "Weight": 3.492258
+     },
+     {
+      "Company": "COUPANG INC",
+      "Weight": 3.426905
+     },
+     {
+      "Company": "LIQUIDITY SERVICES INC",
+      "Weight": 3.272349
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 59.951851
+     },
+     {
+      "Country": "Other",
+      "Weight": 15.613978000000001
+     },
+     {
+      "Country": "China",
+      "Weight": 11.244479
+     },
+     {
+      "Country": "Ireland",
+      "Weight": 4.496351
+     },
+     {
+      "Country": "Uruguay",
+      "Weight": 3.904435
+     },
+     {
+      "Country": "Singapore",
+      "Weight": 3.0586189999999998
+     },
+     {
+      "Country": "Israel",
+      "Weight": 1.730288
+     },
+     {
+      "Country": "Russian Federation",
+      "Weight": 0
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Consumer Discretionary Distrib",
+      "Weight": 78.556857500221
+     },
+     {
+      "Sector": "Media & Entertainment",
+      "Weight": 3.0585691944243343
+     },
+     {
+      "Sector": "Consumer Durables & Apparel",
+      "Weight": 2.7692211554659263
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetonln.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_onln.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ONLN&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ONLN&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ONLN&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ONLN&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ONLN&document-label=semi-annual-report"
+ }
+}

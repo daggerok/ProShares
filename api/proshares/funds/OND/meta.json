@@ -1,0 +1,399 @@
+{
+ "ticker": "OND",
+ "name": "On-Demand ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/ond",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/OND-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/OND-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=OND&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347G523",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$33.11",
+  "value": 33.11,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$33.01",
+  "value": 33.01,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.30%",
+  "value": -0.302,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$2,483,461",
+  "value": 2483463.1124,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Oct 26 2021",
+   "mo1": 1.47,
+   "mo3": -0.09,
+   "mo6": -3.84,
+   "ytd": -14.27,
+   "yr1": -20.52,
+   "yr3": 15.11,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -2.41,
+   "mo1Text": "1.47%",
+   "ytdText": "-14.27%",
+   "yr1Text": "-20.52%",
+   "yr3Text": "15.11%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "-2.41%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Oct 26 2021",
+    "mo1": 1.59,
+    "mo3": -0.06,
+    "mo6": -3.51,
+    "ytd": -14.56,
+    "yr1": -20.85,
+    "yr3": 15.08,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": -2.47,
+    "mo1Text": "1.59%",
+    "ytdText": "-14.56%",
+    "yr1Text": "-20.85%",
+    "yr3Text": "15.08%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "-2.47%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Oct 26 2021",
+   "mo1": -1.33,
+   "mo3": 5.09,
+   "mo6": -15.33,
+   "ytd": -15.33,
+   "yr1": -18.63,
+   "yr3": 14.23,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -2.76,
+   "mo1Text": "-1.33%",
+   "ytdText": "-15.33%",
+   "yr1Text": "-18.63%",
+   "yr3Text": "14.23%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "-2.76%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Oct 26 2021",
+    "mo1": -1.22,
+    "mo3": 4.1,
+    "mo6": -15.55,
+    "ytd": -15.55,
+    "yr1": -19.04,
+    "yr3": 14.2,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": -2.8,
+    "mo1Text": "-1.22%",
+    "ytdText": "-15.55%",
+    "yr1Text": "-19.04%",
+    "yr3Text": "14.20%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "-2.80%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 28,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 1230,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "29",
+   "Price/Book Ratio": "4.21",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "28",
+   "Price/Book Ratio": "4.09",
+   "Dividend Yield ( % )": "0.53",
+   "Avg. Index Market Capitalization": "$201.79 billion",
+   "": "2021"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "DOORDASH INC - A",
+      "Weight": 5.990183
+     },
+     {
+      "Company": "ROBLOX CORP -CLASS A",
+      "Weight": 5.566999
+     },
+     {
+      "Company": "NVIDIA CORP",
+      "Weight": 5.271808
+     },
+     {
+      "Company": "CAPCOM CO LTD",
+      "Weight": 5.245723
+     },
+     {
+      "Company": "SPOTIFY TECHNOLOGY SA",
+      "Weight": 5.005585
+     },
+     {
+      "Company": "UBER TECHNOLOGIES INC",
+      "Weight": 4.854547
+     },
+     {
+      "Company": "NETEASE INC",
+      "Weight": 4.739235
+     },
+     {
+      "Company": "NEXON CO LTD",
+      "Weight": 4.702809
+     },
+     {
+      "Company": "TAKE-TWO INTERACTIVE SOFTWRE",
+      "Weight": 4.666043
+     },
+     {
+      "Company": "DELIVERY HERO SE",
+      "Weight": 4.494722
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 42.979471000000004
+     },
+     {
+      "Country": "Hong Kong",
+      "Weight": 14.190781999999999
+     },
+     {
+      "Country": "Japan",
+      "Weight": 9.988209000000001
+     },
+     {
+      "Country": "China",
+      "Weight": 7.622428
+     },
+     {
+      "Country": "Luxembourg",
+      "Weight": 5.025549
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 4.985814
+     },
+     {
+      "Country": "Germany",
+      "Weight": 4.5126479999999995
+     },
+     {
+      "Country": "Singapore",
+      "Weight": 4.090783
+     },
+     {
+      "Country": "Taiwan",
+      "Weight": 3.709776
+     },
+     {
+      "Country": "Poland",
+      "Weight": 2.89454
+     }
+    ]
+   },
+   {
+    "label": "Fund Currency Weighting",
+    "rows": [
+     {
+      "Currency": "USD",
+      "Weight": 52.09580258761548
+     },
+     {
+      "Currency": "HKD",
+      "Weight": 21.813209811463636
+     },
+     {
+      "Currency": "JPY",
+      "Weight": 9.98820874535316
+     },
+     {
+      "Currency": "KRW",
+      "Weight": 4.985813817312505
+     },
+     {
+      "Currency": "EUR",
+      "Weight": 4.512648355721276
+     },
+     {
+      "Currency": "TWD",
+      "Weight": 3.709776201538851
+     },
+     {
+      "Currency": "PLN",
+      "Weight": 2.894540480995087
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Media & Entertainment",
+      "Weight": 53.84220575464672
+     },
+     {
+      "Sector": "Transportation",
+      "Weight": 15.566320180093438
+     },
+     {
+      "Sector": "Consumer Services",
+      "Weight": 14.936818892147608
+     },
+     {
+      "Sector": "Semiconductors & Semiconductor",
+      "Weight": 10.530407325850348
+     },
+     {
+      "Sector": "Software & Services",
+      "Weight": 3.3130663975153936
+     },
+     {
+      "Sector": "Consumer Durables & Apparel",
+      "Weight": 1.4139433761927003
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetond.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_ond.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=OND&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=OND&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=OND&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=OND&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=OND&document-label=semi-annual-report"
+ }
+}

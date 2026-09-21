@@ -1,0 +1,44 @@
+{
+ "ticker": "BETH",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 25/SEP/2026 BTCU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "82.7572473496",
+   "Market Value": "—",
+   "Shares Held": "24",
+   "Exposure Value": "9759600"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 25/SEP/2026 DCRU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "16.8118147800",
+   "Market Value": "—",
+   "Shares Held": "15",
+   "Exposure Value": "1982625"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "11793045.7",
+   "Shares Held": "11793045.7",
+   "Exposure Value": "—"
+  }
+ ]
+}

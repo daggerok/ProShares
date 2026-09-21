@@ -1,0 +1,71 @@
+{
+ "ticker": "RINF",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "FTSE 30-Year TIPS (Treasury Rate-Hedged) Index TSY SWAP Societe Generale (Inverse Index)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "113.9740718748",
+   "Market Value": "—",
+   "Shares Held": "364083",
+   "Exposure Value": "21222398.07"
+  },
+  {
+   "Name": "FTSE 30-Year TIPS (Treasury Rate-Hedged) Index TIP SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "82.5764302720",
+   "Market Value": "—",
+   "Shares Held": "112678",
+   "Exposure Value": "15376039.88"
+  },
+  {
+   "Name": "FTSE 30-Year TIPS (Treasury Rate-Hedged) Index TSY SWAP Citibank NA (Inverse Index)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "24.3347480040",
+   "Market Value": "—",
+   "Shares Held": "77735.82",
+   "Exposure Value": "4531221.01"
+  },
+  {
+   "Name": "FTSE 30-Year TIPS (Treasury Rate-Hedged) Index TIP SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "15.9593766090",
+   "Market Value": "—",
+   "Shares Held": "21777.05",
+   "Exposure Value": "2971695.56"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "—",
+   "Weight": "83.3337196933",
+   "Market Value": "15517050",
+   "Shares Held": "155000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3103323.67",
+   "Shares Held": "3103323.67",
+   "Exposure Value": "—"
+  }
+ ]
+}

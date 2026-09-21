@@ -1,0 +1,35 @@
+{
+ "ticker": "KRYP",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 2,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CoinDesk 20 Index Swap Galaxy GALAXY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "100.7290530017",
+   "Market Value": "—",
+   "Shares Held": "603",
+   "Exposure Value": "1410246.53"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1400039.5",
+   "Shares Held": "1400039.5",
+   "Exposure Value": "—"
+  }
+ ]
+}

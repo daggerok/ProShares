@@ -1,0 +1,6014 @@
+{
+ "ticker": "TTT",
+ "page": 1,
+ "pageSize": 1000,
+ "totalRows": 3641,
+ "headers": [
+  "Date",
+  "NAV",
+  "Shares Outstanding",
+  "Total Net Assets"
+ ],
+ "rows": [
+  {
+   "Date": "Mar 27 2012",
+   "NAV": "400",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2500025"
+  },
+  {
+   "Date": "Mar 28 2012",
+   "NAV": "400.32",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2502025.02"
+  },
+  {
+   "Date": "Mar 29 2012",
+   "NAV": "393.28",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2458024.58"
+  },
+  {
+   "Date": "Mar 30 2012",
+   "NAV": "408.48",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2553025.53"
+  },
+  {
+   "Date": "Apr 02 2012",
+   "NAV": "406.4",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2540025.4"
+  },
+  {
+   "Date": "Apr 03 2012",
+   "NAV": "420.64",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2629026.29"
+  },
+  {
+   "Date": "Apr 04 2012",
+   "NAV": "413.44",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2584025.84"
+  },
+  {
+   "Date": "Apr 05 2012",
+   "NAV": "401.28",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2508025.08"
+  },
+  {
+   "Date": "Apr 09 2012",
+   "NAV": "370.56",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2316023.16"
+  },
+  {
+   "Date": "Apr 10 2012",
+   "NAV": "361.6",
+   "Shares Outstanding": "6250",
+   "Total Net Assets": "2260022.6"
+  },
+  {
+   "Date": "Apr 11 2012",
+   "NAV": "370.56",
+   "Shares Outstanding": "9380",
+   "Total Net Assets": "3474023.16"
+  },
+  {
+   "Date": "Apr 12 2012",
+   "NAV": "375.36",
+   "Shares Outstanding": "9380",
+   "Total Net Assets": "3519023.46"
+  },
+  {
+   "Date": "Apr 13 2012",
+   "NAV": "363.2",
+   "Shares Outstanding": "9380",
+   "Total Net Assets": "3405022.7"
+  },
+  {
+   "Date": "Apr 16 2012",
+   "NAV": "356",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4450022.25"
+  },
+  {
+   "Date": "Apr 17 2012",
+   "NAV": "363.68",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4546022.73"
+  },
+  {
+   "Date": "Apr 18 2012",
+   "NAV": "357.92",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4474022.37"
+  },
+  {
+   "Date": "Apr 19 2012",
+   "NAV": "354.72",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4434022.17"
+  },
+  {
+   "Date": "Apr 20 2012",
+   "NAV": "358.08",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4476022.38"
+  },
+  {
+   "Date": "Apr 23 2012",
+   "NAV": "349.28",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4366021.83"
+  },
+  {
+   "Date": "Apr 24 2012",
+   "NAV": "354.4",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4430022.15"
+  },
+  {
+   "Date": "Apr 25 2012",
+   "NAV": "360.48",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4506022.53"
+  },
+  {
+   "Date": "Apr 26 2012",
+   "NAV": "357.92",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "5592522.37"
+  },
+  {
+   "Date": "Apr 27 2012",
+   "NAV": "354.4",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "5537522.15"
+  },
+  {
+   "Date": "Apr 30 2012",
+   "NAV": "352.48",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "5507522.03"
+  },
+  {
+   "Date": "May 01 2012",
+   "NAV": "361.92",
+   "Shares Outstanding": "9380",
+   "Total Net Assets": "3393022.62"
+  },
+  {
+   "Date": "May 02 2012",
+   "NAV": "352.96",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4412022.06"
+  },
+  {
+   "Date": "May 03 2012",
+   "NAV": "352.48",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4406022.03"
+  },
+  {
+   "Date": "May 04 2012",
+   "NAV": "344.64",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4308021.54"
+  },
+  {
+   "Date": "May 07 2012",
+   "NAV": "343.36",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4292021.46"
+  },
+  {
+   "Date": "May 08 2012",
+   "NAV": "335.52",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4194020.97"
+  },
+  {
+   "Date": "May 09 2012",
+   "NAV": "337.76",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4222021.11"
+  },
+  {
+   "Date": "May 10 2012",
+   "NAV": "339.84",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4248021.24"
+  },
+  {
+   "Date": "May 11 2012",
+   "NAV": "331.52",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "4144020.72"
+  },
+  {
+   "Date": "May 14 2012",
+   "NAV": "319.52",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "3994019.97"
+  },
+  {
+   "Date": "May 15 2012",
+   "NAV": "316.64",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "3958019.79"
+  },
+  {
+   "Date": "May 16 2012",
+   "NAV": "312.32",
+   "Shares Outstanding": "12500",
+   "Total Net Assets": "3904019.52"
+  },
+  {
+   "Date": "May 17 2012",
+   "NAV": "295.52",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "4617518.47"
+  },
+  {
+   "Date": "May 18 2012",
+   "NAV": "293.44",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "4585018.34"
+  },
+  {
+   "Date": "May 21 2012",
+   "NAV": "294.08",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "4595018.38"
+  },
+  {
+   "Date": "May 22 2012",
+   "NAV": "308.96",
+   "Shares Outstanding": "15630",
+   "Total Net Assets": "4827519.31"
+  },
+  {
+   "Date": "May 23 2012",
+   "NAV": "292.64",
+   "Shares Outstanding": "18750",
+   "Total Net Assets": "5487018.29"
+  },
+  {
+   "Date": "May 24 2012",
+   "NAV": "300.48",
+   "Shares Outstanding": "21880",
+   "Total Net Assets": "6573018.78"
+  },
+  {
+   "Date": "May 25 2012",
+   "NAV": "300.32",
+   "Shares Outstanding": "21880",
+   "Total Net Assets": "6569518.77"
+  },
+  {
+   "Date": "May 29 2012",
+   "NAV": "299.36",
+   "Shares Outstanding": "21880",
+   "Total Net Assets": "6548518.71"
+  },
+  {
+   "Date": "May 30 2012",
+   "NAV": "279.2",
+   "Shares Outstanding": "18750",
+   "Total Net Assets": "5235017.45"
+  },
+  {
+   "Date": "May 31 2012",
+   "NAV": "272.48",
+   "Shares Outstanding": "18750",
+   "Total Net Assets": "5109017.03"
+  },
+  {
+   "Date": "Jun 01 2012",
+   "NAV": "252.96",
+   "Shares Outstanding": "18750",
+   "Total Net Assets": "4743015.81"
+  },
+  {
+   "Date": "Jun 04 2012",
+   "NAV": "256.96",
+   "Shares Outstanding": "21880",
+   "Total Net Assets": "5621016.06"
+  },
+  {
+   "Date": "Jun 05 2012",
+   "NAV": "264.32",
+   "Shares Outstanding": "28130",
+   "Total Net Assets": "7434016.52"
+  },
+  {
+   "Date": "Jun 06 2012",
+   "NAV": "278.24",
+   "Shares Outstanding": "34380",
+   "Total Net Assets": "9564517.39"
+  },
+  {
+   "Date": "Jun 07 2012",
+   "NAV": "284",
+   "Shares Outstanding": "34380",
+   "Total Net Assets": "9762517.75"
+  },
+  {
+   "Date": "Jun 08 2012",
+   "NAV": "284.8",
+   "Shares Outstanding": "34380",
+   "Total Net Assets": "9790017.8"
+  },
+  {
+   "Date": "Jun 11 2012",
+   "NAV": "277.6",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10410017.35"
+  },
+  {
+   "Date": "Jun 12 2012",
+   "NAV": "285.12",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10692017.82"
+  },
+  {
+   "Date": "Jun 13 2012",
+   "NAV": "275.68",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10338017.23"
+  },
+  {
+   "Date": "Jun 14 2012",
+   "NAV": "275.52",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10332017.22"
+  },
+  {
+   "Date": "Jun 15 2012",
+   "NAV": "273.12",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10242017.07"
+  },
+  {
+   "Date": "Jun 18 2012",
+   "NAV": "270.88",
+   "Shares Outstanding": "37500",
+   "Total Net Assets": "10158016.93"
+  },
+  {
+   "Date": "Jun 19 2012",
+   "NAV": "277.92",
+   "Shares Outstanding": "40630",
+   "Total Net Assets": "11290517.37"
+  },
+  {
+   "Date": "Jun 20 2012",
+   "NAV": "276.8",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "12110017.3"
+  },
+  {
+   "Date": "Jun 21 2012",
+   "NAV": "271.04",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11858016.94"
+  },
+  {
+   "Date": "Jun 22 2012",
+   "NAV": "280.8",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "12285017.55"
+  },
+  {
+   "Date": "Jun 25 2012",
+   "NAV": "269.28",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11781016.83"
+  },
+  {
+   "Date": "Jun 26 2012",
+   "NAV": "271.68",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11886016.98"
+  },
+  {
+   "Date": "Jun 27 2012",
+   "NAV": "270.88",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11851016.93"
+  },
+  {
+   "Date": "Jun 28 2012",
+   "NAV": "266.72",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11669016.67"
+  },
+  {
+   "Date": "Jun 29 2012",
+   "NAV": "281.28",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "12306017.58"
+  },
+  {
+   "Date": "Jul 02 2012",
+   "NAV": "267.84",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11718016.74"
+  },
+  {
+   "Date": "Jul 03 2012",
+   "NAV": "276.32",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "12089017.27"
+  },
+  {
+   "Date": "Jul 05 2012",
+   "NAV": "272.64",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11928017.04"
+  },
+  {
+   "Date": "Jul 06 2012",
+   "NAV": "264.32",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11564016.52"
+  },
+  {
+   "Date": "Jul 09 2012",
+   "NAV": "257.76",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "12082516.11"
+  },
+  {
+   "Date": "Jul 10 2012",
+   "NAV": "254.24",
+   "Shares Outstanding": "43750",
+   "Total Net Assets": "11123015.89"
+  },
+  {
+   "Date": "Jul 11 2012",
+   "NAV": "253.6",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "11887515.85"
+  },
+  {
+   "Date": "Jul 12 2012",
+   "NAV": "249.76",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "11707515.61"
+  },
+  {
+   "Date": "Jul 13 2012",
+   "NAV": "252.48",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "11835015.78"
+  },
+  {
+   "Date": "Jul 16 2012",
+   "NAV": "247.2",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "11587515.45"
+  },
+  {
+   "Date": "Jul 17 2012",
+   "NAV": "253.44",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "11880015.84"
+  },
+  {
+   "Date": "Jul 18 2012",
+   "NAV": "251.36",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "12568015.71"
+  },
+  {
+   "Date": "Jul 19 2012",
+   "NAV": "256",
+   "Shares Outstanding": "46880",
+   "Total Net Assets": "12000016"
+  },
+  {
+   "Date": "Jul 20 2012",
+   "NAV": "246.72",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "12336015.42"
+  },
+  {
+   "Date": "Jul 23 2012",
+   "NAV": "242.24",
+   "Shares Outstanding": "53130",
+   "Total Net Assets": "12869015.14"
+  },
+  {
+   "Date": "Jul 24 2012",
+   "NAV": "236.16",
+   "Shares Outstanding": "53130",
+   "Total Net Assets": "12546014.76"
+  },
+  {
+   "Date": "Jul 25 2012",
+   "NAV": "236",
+   "Shares Outstanding": "53130",
+   "Total Net Assets": "12537514.75"
+  },
+  {
+   "Date": "Jul 26 2012",
+   "NAV": "238.72",
+   "Shares Outstanding": "56250",
+   "Total Net Assets": "13428014.92"
+  },
+  {
+   "Date": "Jul 27 2012",
+   "NAV": "258.24",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "15333016.14"
+  },
+  {
+   "Date": "Jul 30 2012",
+   "NAV": "249.12",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "14791515.57"
+  },
+  {
+   "Date": "Jul 31 2012",
+   "NAV": "248.64",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "14763015.54"
+  },
+  {
+   "Date": "Aug 01 2012",
+   "NAV": "253.44",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "15048015.84"
+  },
+  {
+   "Date": "Aug 02 2012",
+   "NAV": "244.16",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "14497015.26"
+  },
+  {
+   "Date": "Aug 03 2012",
+   "NAV": "259.2",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "15390016.2"
+  },
+  {
+   "Date": "Aug 06 2012",
+   "NAV": "256.48",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "15228516.03"
+  },
+  {
+   "Date": "Aug 07 2012",
+   "NAV": "266.56",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "15827016.66"
+  },
+  {
+   "Date": "Aug 08 2012",
+   "NAV": "269.92",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16026516.87"
+  },
+  {
+   "Date": "Aug 09 2012",
+   "NAV": "270.88",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17776516.93"
+  },
+  {
+   "Date": "Aug 10 2012",
+   "NAV": "266.4",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17482516.65"
+  },
+  {
+   "Date": "Aug 13 2012",
+   "NAV": "266.4",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17482516.65"
+  },
+  {
+   "Date": "Aug 14 2012",
+   "NAV": "278.88",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "18301517.43"
+  },
+  {
+   "Date": "Aug 15 2012",
+   "NAV": "291.84",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19152018.24"
+  },
+  {
+   "Date": "Aug 16 2012",
+   "NAV": "298.4",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "18650018.65"
+  },
+  {
+   "Date": "Aug 17 2012",
+   "NAV": "294.4",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "18400018.4"
+  },
+  {
+   "Date": "Aug 20 2012",
+   "NAV": "292.96",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "17394518.31"
+  },
+  {
+   "Date": "Aug 21 2012",
+   "NAV": "290.24",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "17233018.14"
+  },
+  {
+   "Date": "Aug 22 2012",
+   "NAV": "277.12",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16454017.32"
+  },
+  {
+   "Date": "Aug 23 2012",
+   "NAV": "270.24",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16045516.89"
+  },
+  {
+   "Date": "Aug 24 2012",
+   "NAV": "271.68",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16131016.98"
+  },
+  {
+   "Date": "Aug 27 2012",
+   "NAV": "266.4",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "16650016.65"
+  },
+  {
+   "Date": "Aug 28 2012",
+   "NAV": "264.48",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "16530016.53"
+  },
+  {
+   "Date": "Aug 29 2012",
+   "NAV": "267.52",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "16720016.72"
+  },
+  {
+   "Date": "Aug 30 2012",
+   "NAV": "263.04",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "16440016.44"
+  },
+  {
+   "Date": "Aug 31 2012",
+   "NAV": "255.52",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "15970015.97"
+  },
+  {
+   "Date": "Sep 04 2012",
+   "NAV": "255.52",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "15970015.97"
+  },
+  {
+   "Date": "Sep 05 2012",
+   "NAV": "257.76",
+   "Shares Outstanding": "62500",
+   "Total Net Assets": "16110016.11"
+  },
+  {
+   "Date": "Sep 06 2012",
+   "NAV": "270.72",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16074016.92"
+  },
+  {
+   "Date": "Sep 07 2012",
+   "NAV": "274.4",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16292517.15"
+  },
+  {
+   "Date": "Sep 10 2012",
+   "NAV": "276.48",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16416017.28"
+  },
+  {
+   "Date": "Sep 11 2012",
+   "NAV": "276.96",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "16444517.31"
+  },
+  {
+   "Date": "Sep 12 2012",
+   "NAV": "288.8",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "17147518.05"
+  },
+  {
+   "Date": "Sep 13 2012",
+   "NAV": "294.08",
+   "Shares Outstanding": "59380",
+   "Total Net Assets": "17461018.38"
+  },
+  {
+   "Date": "Sep 14 2012",
+   "NAV": "313.12",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "20548519.57"
+  },
+  {
+   "Date": "Sep 17 2012",
+   "NAV": "303.84",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19939518.99"
+  },
+  {
+   "Date": "Sep 18 2012",
+   "NAV": "300.32",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19708518.77"
+  },
+  {
+   "Date": "Sep 19 2012",
+   "NAV": "294.4",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19320018.4"
+  },
+  {
+   "Date": "Sep 20 2012",
+   "NAV": "291.2",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19110018.2"
+  },
+  {
+   "Date": "Sep 21 2012",
+   "NAV": "291.36",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "19120518.21"
+  },
+  {
+   "Date": "Sep 24 2012",
+   "NAV": "283.36",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "18595517.71"
+  },
+  {
+   "Date": "Sep 25 2012",
+   "NAV": "276.64",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "18154517.29"
+  },
+  {
+   "Date": "Sep 26 2012",
+   "NAV": "265.92",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17451016.62"
+  },
+  {
+   "Date": "Sep 27 2012",
+   "NAV": "270.72",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17766016.92"
+  },
+  {
+   "Date": "Sep 28 2012",
+   "NAV": "271.04",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17787016.94"
+  },
+  {
+   "Date": "Oct 01 2012",
+   "NAV": "269.6",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17692516.85"
+  },
+  {
+   "Date": "Oct 02 2012",
+   "NAV": "267.52",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17556016.72"
+  },
+  {
+   "Date": "Oct 03 2012",
+   "NAV": "269.92",
+   "Shares Outstanding": "65630",
+   "Total Net Assets": "17713516.87"
+  },
+  {
+   "Date": "Oct 04 2012",
+   "NAV": "277.92",
+   "Shares Outstanding": "68750",
+   "Total Net Assets": "19107017.37"
+  },
+  {
+   "Date": "Oct 05 2012",
+   "NAV": "290.24",
+   "Shares Outstanding": "68750",
+   "Total Net Assets": "19954018.14"
+  },
+  {
+   "Date": "Oct 08 2012",
+   "NAV": "290.24",
+   "Shares Outstanding": "68750",
+   "Total Net Assets": "19954018.14"
+  },
+  {
+   "Date": "Oct 09 2012",
+   "NAV": "284.8",
+   "Shares Outstanding": "68750",
+   "Total Net Assets": "19580017.8"
+  },
+  {
+   "Date": "Oct 10 2012",
+   "NAV": "278.4",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "20010017.4"
+  },
+  {
+   "Date": "Oct 11 2012",
+   "NAV": "272.48",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "19584517.03"
+  },
+  {
+   "Date": "Oct 12 2012",
+   "NAV": "269.6",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "19377516.85"
+  },
+  {
+   "Date": "Oct 15 2012",
+   "NAV": "270.72",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "19458016.92"
+  },
+  {
+   "Date": "Oct 16 2012",
+   "NAV": "280.96",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "20194017.56"
+  },
+  {
+   "Date": "Oct 17 2012",
+   "NAV": "292",
+   "Shares Outstanding": "71880",
+   "Total Net Assets": "20987518.25"
+  },
+  {
+   "Date": "Oct 18 2012",
+   "NAV": "295.04",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "23050018.44"
+  },
+  {
+   "Date": "Oct 19 2012",
+   "NAV": "284",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "22187517.75"
+  },
+  {
+   "Date": "Oct 22 2012",
+   "NAV": "285.12",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "22275017.82"
+  },
+  {
+   "Date": "Oct 23 2012",
+   "NAV": "280",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21875017.5"
+  },
+  {
+   "Date": "Oct 24 2012",
+   "NAV": "282.4",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "22062517.65"
+  },
+  {
+   "Date": "Oct 25 2012",
+   "NAV": "290.08",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "22662518.13"
+  },
+  {
+   "Date": "Oct 26 2012",
+   "NAV": "280",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21875017.5"
+  },
+  {
+   "Date": "Oct 31 2012",
+   "NAV": "269.44",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21050016.84"
+  },
+  {
+   "Date": "Nov 01 2012",
+   "NAV": "276",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21562517.25"
+  },
+  {
+   "Date": "Nov 02 2012",
+   "NAV": "279.2",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21812517.45"
+  },
+  {
+   "Date": "Nov 05 2012",
+   "NAV": "271.68",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21225016.98"
+  },
+  {
+   "Date": "Nov 06 2012",
+   "NAV": "278.56",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "21762517.41"
+  },
+  {
+   "Date": "Nov 07 2012",
+   "NAV": "263.84",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "20612516.49"
+  },
+  {
+   "Date": "Nov 08 2012",
+   "NAV": "256.16",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "20012516.01"
+  },
+  {
+   "Date": "Nov 09 2012",
+   "NAV": "253.12",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "19775015.82"
+  },
+  {
+   "Date": "Nov 12 2012",
+   "NAV": "253.12",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "19775015.82"
+  },
+  {
+   "Date": "Nov 13 2012",
+   "NAV": "248.8",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "19437515.55"
+  },
+  {
+   "Date": "Nov 14 2012",
+   "NAV": "249.44",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "19487515.59"
+  },
+  {
+   "Date": "Nov 15 2012",
+   "NAV": "248.96",
+   "Shares Outstanding": "78130",
+   "Total Net Assets": "19450015.56"
+  },
+  {
+   "Date": "Nov 16 2012",
+   "NAV": "248.64",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "20979015.54"
+  },
+  {
+   "Date": "Nov 19 2012",
+   "NAV": "253.76",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21411015.86"
+  },
+  {
+   "Date": "Nov 20 2012",
+   "NAV": "260",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21937516.25"
+  },
+  {
+   "Date": "Nov 21 2012",
+   "NAV": "262.72",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22167016.42"
+  },
+  {
+   "Date": "Nov 23 2012",
+   "NAV": "263.2",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22207516.45"
+  },
+  {
+   "Date": "Nov 26 2012",
+   "NAV": "258.24",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21789016.14"
+  },
+  {
+   "Date": "Nov 27 2012",
+   "NAV": "256.8",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21667516.05"
+  },
+  {
+   "Date": "Nov 28 2012",
+   "NAV": "255.04",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21519015.94"
+  },
+  {
+   "Date": "Nov 29 2012",
+   "NAV": "257.28",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21708016.08"
+  },
+  {
+   "Date": "Nov 30 2012",
+   "NAV": "257.12",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21694516.07"
+  },
+  {
+   "Date": "Dec 03 2012",
+   "NAV": "258.24",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21789016.14"
+  },
+  {
+   "Date": "Dec 04 2012",
+   "NAV": "254.4",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21465015.9"
+  },
+  {
+   "Date": "Dec 05 2012",
+   "NAV": "254.08",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21438015.88"
+  },
+  {
+   "Date": "Dec 06 2012",
+   "NAV": "252.16",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21276015.76"
+  },
+  {
+   "Date": "Dec 07 2012",
+   "NAV": "258.56",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21816016.16"
+  },
+  {
+   "Date": "Dec 10 2012",
+   "NAV": "256.96",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "21681016.06"
+  },
+  {
+   "Date": "Dec 11 2012",
+   "NAV": "261.44",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22059016.34"
+  },
+  {
+   "Date": "Dec 12 2012",
+   "NAV": "269.76",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22761016.86"
+  },
+  {
+   "Date": "Dec 13 2012",
+   "NAV": "270.72",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22842016.92"
+  },
+  {
+   "Date": "Dec 14 2012",
+   "NAV": "266.08",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22450516.63"
+  },
+  {
+   "Date": "Dec 17 2012",
+   "NAV": "274.4",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "23152517.15"
+  },
+  {
+   "Date": "Dec 18 2012",
+   "NAV": "286.24",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "24151517.89"
+  },
+  {
+   "Date": "Dec 19 2012",
+   "NAV": "280.8",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "23692517.55"
+  },
+  {
+   "Date": "Dec 20 2012",
+   "NAV": "281.28",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "23733017.58"
+  },
+  {
+   "Date": "Dec 21 2012",
+   "NAV": "271.68",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22923016.98"
+  },
+  {
+   "Date": "Dec 24 2012",
+   "NAV": "273.76",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "23098517.11"
+  },
+  {
+   "Date": "Dec 26 2012",
+   "NAV": "273.12",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "23044517.07"
+  },
+  {
+   "Date": "Dec 27 2012",
+   "NAV": "265.44",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22396516.59"
+  },
+  {
+   "Date": "Dec 28 2012",
+   "NAV": "264.96",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22356016.56"
+  },
+  {
+   "Date": "Dec 31 2012",
+   "NAV": "272.32",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "22977017.02"
+  },
+  {
+   "Date": "Jan 02 2013",
+   "NAV": "288.16",
+   "Shares Outstanding": "84380",
+   "Total Net Assets": "24313518.01"
+  },
+  {
+   "Date": "Jan 03 2013",
+   "NAV": "297.6",
+   "Shares Outstanding": "87500",
+   "Total Net Assets": "26040018.6"
+  },
+  {
+   "Date": "Jan 04 2013",
+   "NAV": "298.08",
+   "Shares Outstanding": "87500",
+   "Total Net Assets": "26082018.63"
+  },
+  {
+   "Date": "Jan 07 2013",
+   "NAV": "295.68",
+   "Shares Outstanding": "87500",
+   "Total Net Assets": "25872018.48"
+  },
+  {
+   "Date": "Jan 08 2013",
+   "NAV": "291.36",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "28225518.21"
+  },
+  {
+   "Date": "Jan 09 2013",
+   "NAV": "288.48",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27946518.03"
+  },
+  {
+   "Date": "Jan 10 2013",
+   "NAV": "292.64",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "28349518.29"
+  },
+  {
+   "Date": "Jan 11 2013",
+   "NAV": "288.48",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27946518.03"
+  },
+  {
+   "Date": "Jan 14 2013",
+   "NAV": "286.72",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27776017.92"
+  },
+  {
+   "Date": "Jan 15 2013",
+   "NAV": "282.56",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27373017.66"
+  },
+  {
+   "Date": "Jan 16 2013",
+   "NAV": "282.88",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27404017.68"
+  },
+  {
+   "Date": "Jan 17 2013",
+   "NAV": "290.08",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "28101518.13"
+  },
+  {
+   "Date": "Jan 18 2013",
+   "NAV": "284.8",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27590017.8"
+  },
+  {
+   "Date": "Jan 22 2013",
+   "NAV": "282.56",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27373017.66"
+  },
+  {
+   "Date": "Jan 23 2013",
+   "NAV": "283.52",
+   "Shares Outstanding": "96880",
+   "Total Net Assets": "27466017.72"
+  },
+  {
+   "Date": "Jan 24 2013",
+   "NAV": "284.8",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "29370017.8"
+  },
+  {
+   "Date": "Jan 25 2013",
+   "NAV": "299.04",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "30838518.69"
+  },
+  {
+   "Date": "Jan 28 2013",
+   "NAV": "301.28",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "31069518.83"
+  },
+  {
+   "Date": "Jan 29 2013",
+   "NAV": "304.16",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "31366519.01"
+  },
+  {
+   "Date": "Jan 30 2013",
+   "NAV": "308.64",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "31828519.29"
+  },
+  {
+   "Date": "Jan 31 2013",
+   "NAV": "304.16",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "31366519.01"
+  },
+  {
+   "Date": "Feb 01 2013",
+   "NAV": "310.56",
+   "Shares Outstanding": "103130",
+   "Total Net Assets": "32026519.41"
+  },
+  {
+   "Date": "Feb 04 2013",
+   "NAV": "304.64",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33320019.04"
+  },
+  {
+   "Date": "Feb 05 2013",
+   "NAV": "311.36",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "34055019.46"
+  },
+  {
+   "Date": "Feb 06 2013",
+   "NAV": "305.12",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33372519.07"
+  },
+  {
+   "Date": "Feb 07 2013",
+   "NAV": "302.24",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33057518.89"
+  },
+  {
+   "Date": "Feb 08 2013",
+   "NAV": "303.2",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33162518.95"
+  },
+  {
+   "Date": "Feb 11 2013",
+   "NAV": "300",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "32812518.75"
+  },
+  {
+   "Date": "Feb 12 2013",
+   "NAV": "306.56",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33530019.16"
+  },
+  {
+   "Date": "Feb 13 2013",
+   "NAV": "311.52",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "34072519.47"
+  },
+  {
+   "Date": "Feb 14 2013",
+   "NAV": "304",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33250019"
+  },
+  {
+   "Date": "Feb 15 2013",
+   "NAV": "306.08",
+   "Shares Outstanding": "109380",
+   "Total Net Assets": "33477519.13"
+  },
+  {
+   "Date": "Feb 19 2013",
+   "NAV": "309.76",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "37752019.36"
+  },
+  {
+   "Date": "Feb 20 2013",
+   "NAV": "310.08",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "37791019.38"
+  },
+  {
+   "Date": "Feb 21 2013",
+   "NAV": "303.04",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "36933018.94"
+  },
+  {
+   "Date": "Feb 22 2013",
+   "NAV": "301.12",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "36699018.82"
+  },
+  {
+   "Date": "Feb 25 2013",
+   "NAV": "290.72",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34523018.17"
+  },
+  {
+   "Date": "Feb 26 2013",
+   "NAV": "288.16",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34219018.01"
+  },
+  {
+   "Date": "Feb 27 2013",
+   "NAV": "292.64",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34751018.29"
+  },
+  {
+   "Date": "Feb 28 2013",
+   "NAV": "291.04",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34561018.19"
+  },
+  {
+   "Date": "Mar 01 2013",
+   "NAV": "286.56",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34029017.91"
+  },
+  {
+   "Date": "Mar 04 2013",
+   "NAV": "289.92",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34428018.12"
+  },
+  {
+   "Date": "Mar 05 2013",
+   "NAV": "292.64",
+   "Shares Outstanding": "118750",
+   "Total Net Assets": "34751018.29"
+  },
+  {
+   "Date": "Mar 06 2013",
+   "NAV": "299.68",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "36523518.73"
+  },
+  {
+   "Date": "Mar 07 2013",
+   "NAV": "307.36",
+   "Shares Outstanding": "121880",
+   "Total Net Assets": "37459519.21"
+  },
+  {
+   "Date": "Mar 08 2013",
+   "NAV": "316.32",
+   "Shares Outstanding": "125000",
+   "Total Net Assets": "39540019.77"
+  },
+  {
+   "Date": "Mar 11 2013",
+   "NAV": "316.16",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "42484019.76"
+  },
+  {
+   "Date": "Mar 12 2013",
+   "NAV": "309.92",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "41645519.37"
+  },
+  {
+   "Date": "Mar 13 2013",
+   "NAV": "309.76",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "41624019.36"
+  },
+  {
+   "Date": "Mar 14 2013",
+   "NAV": "313.92",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "42183019.62"
+  },
+  {
+   "Date": "Mar 15 2013",
+   "NAV": "310.88",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "41774519.43"
+  },
+  {
+   "Date": "Mar 18 2013",
+   "NAV": "304",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "40850019"
+  },
+  {
+   "Date": "Mar 19 2013",
+   "NAV": "295.36",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "39689018.46"
+  },
+  {
+   "Date": "Mar 20 2013",
+   "NAV": "301.44",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "40506018.84"
+  },
+  {
+   "Date": "Mar 21 2013",
+   "NAV": "298.24",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "40076018.64"
+  },
+  {
+   "Date": "Mar 22 2013",
+   "NAV": "295.2",
+   "Shares Outstanding": "134380",
+   "Total Net Assets": "39667518.45"
+  },
+  {
+   "Date": "Mar 25 2013",
+   "NAV": "296",
+   "Shares Outstanding": "143750",
+   "Total Net Assets": "42550018.5"
+  },
+  {
+   "Date": "Mar 26 2013",
+   "NAV": "294.24",
+   "Shares Outstanding": "143750",
+   "Total Net Assets": "42297018.39"
+  },
+  {
+   "Date": "Mar 27 2013",
+   "NAV": "288.48",
+   "Shares Outstanding": "143750",
+   "Total Net Assets": "41469018.03"
+  },
+  {
+   "Date": "Mar 28 2013",
+   "NAV": "291.68",
+   "Shares Outstanding": "143750",
+   "Total Net Assets": "41929018.23"
+  },
+  {
+   "Date": "Apr 01 2013",
+   "NAV": "286.72",
+   "Shares Outstanding": "143750",
+   "Total Net Assets": "41216017.92"
+  },
+  {
+   "Date": "Apr 02 2013",
+   "NAV": "289.44",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "43416018.09"
+  },
+  {
+   "Date": "Apr 03 2013",
+   "NAV": "282.08",
+   "Shares Outstanding": "153130",
+   "Total Net Assets": "43193517.63"
+  },
+  {
+   "Date": "Apr 04 2013",
+   "NAV": "271.2",
+   "Shares Outstanding": "153130",
+   "Total Net Assets": "41527516.95"
+  },
+  {
+   "Date": "Apr 05 2013",
+   "NAV": "253.44",
+   "Shares Outstanding": "153130",
+   "Total Net Assets": "38808015.84"
+  },
+  {
+   "Date": "Apr 08 2013",
+   "NAV": "258.88",
+   "Shares Outstanding": "153130",
+   "Total Net Assets": "39641016.18"
+  },
+  {
+   "Date": "Apr 09 2013",
+   "NAV": "262.72",
+   "Shares Outstanding": "162500",
+   "Total Net Assets": "42692016.42"
+  },
+  {
+   "Date": "Apr 10 2013",
+   "NAV": "272.64",
+   "Shares Outstanding": "162500",
+   "Total Net Assets": "44304017.04"
+  },
+  {
+   "Date": "Apr 11 2013",
+   "NAV": "271.36",
+   "Shares Outstanding": "168750",
+   "Total Net Assets": "45792016.96"
+  },
+  {
+   "Date": "Apr 12 2013",
+   "NAV": "259.68",
+   "Shares Outstanding": "168750",
+   "Total Net Assets": "43821016.23"
+  },
+  {
+   "Date": "Apr 15 2013",
+   "NAV": "254.24",
+   "Shares Outstanding": "175000",
+   "Total Net Assets": "44492015.89"
+  },
+  {
+   "Date": "Apr 16 2013",
+   "NAV": "257.44",
+   "Shares Outstanding": "175000",
+   "Total Net Assets": "45052016.09"
+  },
+  {
+   "Date": "Apr 17 2013",
+   "NAV": "254.72",
+   "Shares Outstanding": "175000",
+   "Total Net Assets": "44576015.92"
+  },
+  {
+   "Date": "Apr 18 2013",
+   "NAV": "251.52",
+   "Shares Outstanding": "175000",
+   "Total Net Assets": "44016015.72"
+  },
+  {
+   "Date": "Apr 19 2013",
+   "NAV": "253.92",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "46023015.87"
+  },
+  {
+   "Date": "Apr 22 2013",
+   "NAV": "253.28",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "45907015.83"
+  },
+  {
+   "Date": "Apr 23 2013",
+   "NAV": "254.4",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "46110015.9"
+  },
+  {
+   "Date": "Apr 24 2013",
+   "NAV": "254.08",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "46052015.88"
+  },
+  {
+   "Date": "Apr 25 2013",
+   "NAV": "256.64",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "46516016.04"
+  },
+  {
+   "Date": "Apr 26 2013",
+   "NAV": "249.44",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "45211015.59"
+  },
+  {
+   "Date": "Apr 29 2013",
+   "NAV": "251.36",
+   "Shares Outstanding": "181250",
+   "Total Net Assets": "45559015.71"
+  },
+  {
+   "Date": "Apr 30 2013",
+   "NAV": "253.12",
+   "Shares Outstanding": "187500",
+   "Total Net Assets": "47460015.82"
+  },
+  {
+   "Date": "May 01 2013",
+   "NAV": "246.56",
+   "Shares Outstanding": "187500",
+   "Total Net Assets": "46230015.41"
+  },
+  {
+   "Date": "May 02 2013",
+   "NAV": "245.12",
+   "Shares Outstanding": "187500",
+   "Total Net Assets": "45960015.32"
+  },
+  {
+   "Date": "May 03 2013",
+   "NAV": "262.08",
+   "Shares Outstanding": "187500",
+   "Total Net Assets": "49140016.38"
+  },
+  {
+   "Date": "May 06 2013",
+   "NAV": "265.92",
+   "Shares Outstanding": "187500",
+   "Total Net Assets": "49860016.62"
+  },
+  {
+   "Date": "May 07 2013",
+   "NAV": "268",
+   "Shares Outstanding": "196880",
+   "Total Net Assets": "52762516.75"
+  },
+  {
+   "Date": "May 08 2013",
+   "NAV": "264.32",
+   "Shares Outstanding": "196880",
+   "Total Net Assets": "52038016.52"
+  },
+  {
+   "Date": "May 09 2013",
+   "NAV": "267.2",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "55110016.7"
+  },
+  {
+   "Date": "May 10 2013",
+   "NAV": "279.52",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "57651017.47"
+  },
+  {
+   "Date": "May 13 2013",
+   "NAV": "283.04",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "58377017.69"
+  },
+  {
+   "Date": "May 14 2013",
+   "NAV": "288.32",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "59466018.02"
+  },
+  {
+   "Date": "May 15 2013",
+   "NAV": "287.2",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "61927517.95"
+  },
+  {
+   "Date": "May 16 2013",
+   "NAV": "276",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "59512517.25"
+  },
+  {
+   "Date": "May 17 2013",
+   "NAV": "287.84",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "62065517.99"
+  },
+  {
+   "Date": "May 20 2013",
+   "NAV": "288.96",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "62307018.06"
+  },
+  {
+   "Date": "May 21 2013",
+   "NAV": "284.96",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "61444517.81"
+  },
+  {
+   "Date": "May 22 2013",
+   "NAV": "294.24",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "63445518.39"
+  },
+  {
+   "Date": "May 23 2013",
+   "NAV": "292.16",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "62997018.26"
+  },
+  {
+   "Date": "May 24 2013",
+   "NAV": "288.48",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "62203518.03"
+  },
+  {
+   "Date": "May 28 2013",
+   "NAV": "305.76",
+   "Shares Outstanding": "215630",
+   "Total Net Assets": "65929519.11"
+  },
+  {
+   "Date": "May 29 2013",
+   "NAV": "302.72",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "62436018.92"
+  },
+  {
+   "Date": "May 30 2013",
+   "NAV": "305.28",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "62964019.08"
+  },
+  {
+   "Date": "May 31 2013",
+   "NAV": "308.16",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "63558019.26"
+  },
+  {
+   "Date": "Jun 03 2013",
+   "NAV": "303.52",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "62601018.97"
+  },
+  {
+   "Date": "Jun 04 2013",
+   "NAV": "307.84",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "63492019.24"
+  },
+  {
+   "Date": "Jun 05 2013",
+   "NAV": "301.12",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "62106018.82"
+  },
+  {
+   "Date": "Jun 06 2013",
+   "NAV": "296.32",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "61116018.52"
+  },
+  {
+   "Date": "Jun 07 2013",
+   "NAV": "311.2",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "64185019.45"
+  },
+  {
+   "Date": "Jun 10 2013",
+   "NAV": "318.48",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "65686519.905"
+  },
+  {
+   "Date": "Jun 11 2013",
+   "NAV": "312.6",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "64473769.5375"
+  },
+  {
+   "Date": "Jun 12 2013",
+   "NAV": "319.68",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "65934019.98"
+  },
+  {
+   "Date": "Jun 13 2013",
+   "NAV": "310.68",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "64077769.4175"
+  },
+  {
+   "Date": "Jun 14 2013",
+   "NAV": "304.72",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "62848519.045"
+  },
+  {
+   "Date": "Jun 17 2013",
+   "NAV": "313.24",
+   "Shares Outstanding": "206250",
+   "Total Net Assets": "64605769.5775"
+  },
+  {
+   "Date": "Jun 18 2013",
+   "NAV": "311.64",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "64269283.47"
+  },
+  {
+   "Date": "Jun 19 2013",
+   "NAV": "324.4",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "66900768.7"
+  },
+  {
+   "Date": "Jun 20 2013",
+   "NAV": "341.4",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "70406665.95"
+  },
+  {
+   "Date": "Jun 21 2013",
+   "NAV": "350.84",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "72353470.07"
+  },
+  {
+   "Date": "Jun 24 2013",
+   "NAV": "348.76",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "71924513.23"
+  },
+  {
+   "Date": "Jun 25 2013",
+   "NAV": "358.64",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73962058.22"
+  },
+  {
+   "Date": "Jun 26 2013",
+   "NAV": "350.72",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "72328722.56"
+  },
+  {
+   "Date": "Jun 27 2013",
+   "NAV": "344.48",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "71041852.04"
+  },
+  {
+   "Date": "Jun 28 2013",
+   "NAV": "336.92",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "69482758.91"
+  },
+  {
+   "Date": "Jul 01 2013",
+   "NAV": "334.4",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "68963061.2"
+  },
+  {
+   "Date": "Jul 02 2013",
+   "NAV": "331.04",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "68270130.92"
+  },
+  {
+   "Date": "Jul 03 2013",
+   "NAV": "336",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "69293028"
+  },
+  {
+   "Date": "Jul 05 2013",
+   "NAV": "367.2",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "75727380.6"
+  },
+  {
+   "Date": "Jul 08 2013",
+   "NAV": "358.92",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74019802.41"
+  },
+  {
+   "Date": "Jul 09 2013",
+   "NAV": "361.12",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74473506.76"
+  },
+  {
+   "Date": "Jul 10 2013",
+   "NAV": "368.24",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "75941859.02"
+  },
+  {
+   "Date": "Jul 11 2013",
+   "NAV": "355.28",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73269127.94"
+  },
+  {
+   "Date": "Jul 12 2013",
+   "NAV": "359.48",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74135290.79"
+  },
+  {
+   "Date": "Jul 15 2013",
+   "NAV": "351.92",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "72576197.66"
+  },
+  {
+   "Date": "Jul 16 2013",
+   "NAV": "347.16",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "71594546.43"
+  },
+  {
+   "Date": "Jul 17 2013",
+   "NAV": "344.2",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "70984107.85"
+  },
+  {
+   "Date": "Jul 18 2013",
+   "NAV": "355.2",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73252629.6"
+  },
+  {
+   "Date": "Jul 19 2013",
+   "NAV": "343.28",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "70794376.94"
+  },
+  {
+   "Date": "Jul 22 2013",
+   "NAV": "340.36",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "70192187.53"
+  },
+  {
+   "Date": "Jul 23 2013",
+   "NAV": "346.36",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "71429563.03"
+  },
+  {
+   "Date": "Jul 24 2013",
+   "NAV": "356.96",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73615593.08"
+  },
+  {
+   "Date": "Jul 25 2013",
+   "NAV": "359.52",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74143539.96"
+  },
+  {
+   "Date": "Jul 26 2013",
+   "NAV": "350.28",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "72237981.69"
+  },
+  {
+   "Date": "Jul 29 2013",
+   "NAV": "357.12",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73648589.76"
+  },
+  {
+   "Date": "Jul 30 2013",
+   "NAV": "359.36",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74110543.28"
+  },
+  {
+   "Date": "Jul 31 2013",
+   "NAV": "354.36",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73079397.03"
+  },
+  {
+   "Date": "Aug 01 2013",
+   "NAV": "377.16",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "77781423.93"
+  },
+  {
+   "Date": "Aug 02 2013",
+   "NAV": "361",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74448759.25"
+  },
+  {
+   "Date": "Aug 05 2013",
+   "NAV": "368.44",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "75983104.87"
+  },
+  {
+   "Date": "Aug 06 2013",
+   "NAV": "368.48",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "75991354.04"
+  },
+  {
+   "Date": "Aug 07 2013",
+   "NAV": "358.68",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73970307.39"
+  },
+  {
+   "Date": "Aug 08 2013",
+   "NAV": "355.88",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73392865.49"
+  },
+  {
+   "Date": "Aug 09 2013",
+   "NAV": "355.32",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "73277377.11"
+  },
+  {
+   "Date": "Aug 12 2013",
+   "NAV": "360",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "74242530"
+  },
+  {
+   "Date": "Aug 13 2013",
+   "NAV": "376.88",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "77723679.74"
+  },
+  {
+   "Date": "Aug 14 2013",
+   "NAV": "375.92",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "77525699.66"
+  },
+  {
+   "Date": "Aug 15 2013",
+   "NAV": "384.04",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "79200281.17"
+  },
+  {
+   "Date": "Aug 16 2013",
+   "NAV": "396.64",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "81798769.72"
+  },
+  {
+   "Date": "Aug 19 2013",
+   "NAV": "405.24",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "83572341.27"
+  },
+  {
+   "Date": "Aug 20 2013",
+   "NAV": "394.32",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "81320317.86"
+  },
+  {
+   "Date": "Aug 21 2013",
+   "NAV": "400.16",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "82524696.68"
+  },
+  {
+   "Date": "Aug 22 2013",
+   "NAV": "400.6",
+   "Shares Outstanding": "206230",
+   "Total Net Assets": "82615437.55"
+  },
+  {
+   "Date": "Aug 23 2013",
+   "NAV": "382.84",
+   "Shares Outstanding": "218730",
+   "Total Net Assets": "83738306.07"
+  },
+  {
+   "Date": "Aug 26 2013",
+   "NAV": "379.36",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "92461128.28"
+  },
+  {
+   "Date": "Aug 27 2013",
+   "NAV": "362.6",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "88376226.05"
+  },
+  {
+   "Date": "Aug 28 2013",
+   "NAV": "372.52",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "90794020.21"
+  },
+  {
+   "Date": "Aug 29 2013",
+   "NAV": "362.36",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "88317731.03"
+  },
+  {
+   "Date": "Aug 30 2013",
+   "NAV": "357.44",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "87118583.12"
+  },
+  {
+   "Date": "Sep 03 2013",
+   "NAV": "375.72",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "91573953.81"
+  },
+  {
+   "Date": "Sep 04 2013",
+   "NAV": "379.2",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "92422131.6"
+  },
+  {
+   "Date": "Sep 05 2013",
+   "NAV": "395.2",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "96321799.6"
+  },
+  {
+   "Date": "Sep 06 2013",
+   "NAV": "393.2",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "95834341.1"
+  },
+  {
+   "Date": "Sep 09 2013",
+   "NAV": "385.92",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "94059992.16"
+  },
+  {
+   "Date": "Sep 10 2013",
+   "NAV": "396.32",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "96594776.36"
+  },
+  {
+   "Date": "Sep 11 2013",
+   "NAV": "390.16",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "95093404.18"
+  },
+  {
+   "Date": "Sep 12 2013",
+   "NAV": "387",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "94323219.75"
+  },
+  {
+   "Date": "Sep 13 2013",
+   "NAV": "387.08",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "94342718.09"
+  },
+  {
+   "Date": "Sep 16 2013",
+   "NAV": "391.32",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "95376130.11"
+  },
+  {
+   "Date": "Sep 17 2013",
+   "NAV": "384.68",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "93757767.89"
+  },
+  {
+   "Date": "Sep 18 2013",
+   "NAV": "365.84",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "89165908.82"
+  },
+  {
+   "Date": "Sep 19 2013",
+   "NAV": "375.68",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "91564204.64"
+  },
+  {
+   "Date": "Sep 20 2013",
+   "NAV": "366.96",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "89438885.58"
+  },
+  {
+   "Date": "Sep 23 2013",
+   "NAV": "363.16",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "88512714.43"
+  },
+  {
+   "Date": "Sep 24 2013",
+   "NAV": "349.48",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "85178498.29"
+  },
+  {
+   "Date": "Sep 25 2013",
+   "NAV": "345.48",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "84203581.29"
+  },
+  {
+   "Date": "Sep 26 2013",
+   "NAV": "352.56",
+   "Shares Outstanding": "243730",
+   "Total Net Assets": "85929184.38"
+  },
+  {
+   "Date": "Sep 27 2013",
+   "NAV": "350.88",
+   "Shares Outstanding": "256230",
+   "Total Net Assets": "89905719.24"
+  },
+  {
+   "Date": "Sep 30 2013",
+   "NAV": "351.96",
+   "Shares Outstanding": "268730",
+   "Total Net Assets": "94581946.83"
+  },
+  {
+   "Date": "Oct 01 2013",
+   "NAV": "357.56",
+   "Shares Outstanding": "268730",
+   "Total Net Assets": "96086830.63"
+  },
+  {
+   "Date": "Oct 02 2013",
+   "NAV": "355.08",
+   "Shares Outstanding": "281230",
+   "Total Net Assets": "99858882.09"
+  },
+  {
+   "Date": "Oct 03 2013",
+   "NAV": "354.48",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "104121144.54"
+  },
+  {
+   "Date": "Oct 04 2013",
+   "NAV": "358.56",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "105319559.88"
+  },
+  {
+   "Date": "Oct 07 2013",
+   "NAV": "352.96",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "103674676.08"
+  },
+  {
+   "Date": "Oct 08 2013",
+   "NAV": "351.56",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "103263455.13"
+  },
+  {
+   "Date": "Oct 09 2013",
+   "NAV": "356.72",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "104779098.06"
+  },
+  {
+   "Date": "Oct 10 2013",
+   "NAV": "359.96",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "105730780.83"
+  },
+  {
+   "Date": "Oct 11 2013",
+   "NAV": "358.16",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "105202068.18"
+  },
+  {
+   "Date": "Oct 14 2013",
+   "NAV": "358.16",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "105202068.18"
+  },
+  {
+   "Date": "Oct 15 2013",
+   "NAV": "365.52",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "107363915.46"
+  },
+  {
+   "Date": "Oct 16 2013",
+   "NAV": "355.36",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "104379626.28"
+  },
+  {
+   "Date": "Oct 17 2013",
+   "NAV": "342.6",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "100631641.05"
+  },
+  {
+   "Date": "Oct 18 2013",
+   "NAV": "341.96",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "100443654.33"
+  },
+  {
+   "Date": "Oct 21 2013",
+   "NAV": "346.4",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "101747812.2"
+  },
+  {
+   "Date": "Oct 22 2013",
+   "NAV": "333.28",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "97894084.44"
+  },
+  {
+   "Date": "Oct 23 2013",
+   "NAV": "328.32",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "96437187.36"
+  },
+  {
+   "Date": "Oct 24 2013",
+   "NAV": "333.32",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "97905833.61"
+  },
+  {
+   "Date": "Oct 25 2013",
+   "NAV": "329.92",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "96907154.16"
+  },
+  {
+   "Date": "Oct 28 2013",
+   "NAV": "331.32",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "97318375.11"
+  },
+  {
+   "Date": "Oct 29 2013",
+   "NAV": "334.08",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "98129067.84"
+  },
+  {
+   "Date": "Oct 30 2013",
+   "NAV": "335.92",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "98669529.66"
+  },
+  {
+   "Date": "Oct 31 2013",
+   "NAV": "335.48",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "98540288.79"
+  },
+  {
+   "Date": "Nov 01 2013",
+   "NAV": "346.2",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "101689066.35"
+  },
+  {
+   "Date": "Nov 04 2013",
+   "NAV": "344.76",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "105575596.23"
+  },
+  {
+   "Date": "Nov 05 2013",
+   "NAV": "356.56",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "109189101.38"
+  },
+  {
+   "Date": "Nov 06 2013",
+   "NAV": "358.56",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "109801559.88"
+  },
+  {
+   "Date": "Nov 07 2013",
+   "NAV": "350.56",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "107351725.88"
+  },
+  {
+   "Date": "Nov 08 2013",
+   "NAV": "371.08",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "113635550.09"
+  },
+  {
+   "Date": "Nov 11 2013",
+   "NAV": "371.08",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "113635550.09"
+  },
+  {
+   "Date": "Nov 12 2013",
+   "NAV": "373.04",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "109572759.42"
+  },
+  {
+   "Date": "Nov 13 2013",
+   "NAV": "367.96",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "108080614.83"
+  },
+  {
+   "Date": "Nov 14 2013",
+   "NAV": "362.12",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "106365236.01"
+  },
+  {
+   "Date": "Nov 15 2013",
+   "NAV": "362.24",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "106400483.52"
+  },
+  {
+   "Date": "Nov 18 2013",
+   "NAV": "355.48",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "104414873.79"
+  },
+  {
+   "Date": "Nov 19 2013",
+   "NAV": "362.08",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "106353486.84"
+  },
+  {
+   "Date": "Nov 20 2013",
+   "NAV": "380.16",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "111664111.68"
+  },
+  {
+   "Date": "Nov 21 2013",
+   "NAV": "376",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "110442198"
+  },
+  {
+   "Date": "Nov 22 2013",
+   "NAV": "367.24",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "107869129.77"
+  },
+  {
+   "Date": "Nov 25 2013",
+   "NAV": "366.04",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "107516654.67"
+  },
+  {
+   "Date": "Nov 26 2013",
+   "NAV": "356.52",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "104720352.21"
+  },
+  {
+   "Date": "Nov 27 2013",
+   "NAV": "360.92",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "106012760.91"
+  },
+  {
+   "Date": "Nov 29 2013",
+   "NAV": "360.36",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "105848272.53"
+  },
+  {
+   "Date": "Dec 02 2013",
+   "NAV": "369",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "108386093.25"
+  },
+  {
+   "Date": "Dec 03 2013",
+   "NAV": "364.6",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "107093684.55"
+  },
+  {
+   "Date": "Dec 04 2013",
+   "NAV": "377.32",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "110829920.61"
+  },
+  {
+   "Date": "Dec 05 2013",
+   "NAV": "378.92",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "111299887.41"
+  },
+  {
+   "Date": "Dec 06 2013",
+   "NAV": "379.04",
+   "Shares Outstanding": "293730",
+   "Total Net Assets": "111335134.92"
+  },
+  {
+   "Date": "Dec 09 2013",
+   "NAV": "373.76",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "114456244.48"
+  },
+  {
+   "Date": "Dec 10 2013",
+   "NAV": "362.36",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "110965231.03"
+  },
+  {
+   "Date": "Dec 11 2013",
+   "NAV": "371.36",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "113721294.28"
+  },
+  {
+   "Date": "Dec 12 2013",
+   "NAV": "374.76",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "114762473.73"
+  },
+  {
+   "Date": "Dec 13 2013",
+   "NAV": "370.12",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "113341570.01"
+  },
+  {
+   "Date": "Dec 16 2013",
+   "NAV": "373.32",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "114321503.61"
+  },
+  {
+   "Date": "Dec 17 2013",
+   "NAV": "368.6",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "112876101.55"
+  },
+  {
+   "Date": "Dec 18 2013",
+   "NAV": "377",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "115448427.25"
+  },
+  {
+   "Date": "Dec 19 2013",
+   "NAV": "373.92",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "114505241.16"
+  },
+  {
+   "Date": "Dec 20 2013",
+   "NAV": "359.4",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "110058792.45"
+  },
+  {
+   "Date": "Dec 23 2013",
+   "NAV": "362.44",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "110989729.37"
+  },
+  {
+   "Date": "Dec 24 2013",
+   "NAV": "372.92",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "114199011.91"
+  },
+  {
+   "Date": "Dec 26 2013",
+   "NAV": "376.72",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "115362683.06"
+  },
+  {
+   "Date": "Dec 27 2013",
+   "NAV": "380.8",
+   "Shares Outstanding": "306230",
+   "Total Net Assets": "116612098.4"
+  },
+  {
+   "Date": "Dec 30 2013",
+   "NAV": "372.96",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "118873261.08"
+  },
+  {
+   "Date": "Dec 31 2013",
+   "NAV": "379.76",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "121040619.98"
+  },
+  {
+   "Date": "Jan 02 2014",
+   "NAV": "375.12",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "119561716.26"
+  },
+  {
+   "Date": "Jan 03 2014",
+   "NAV": "377.36",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "120275669.78"
+  },
+  {
+   "Date": "Jan 06 2014",
+   "NAV": "369.96",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "117917073.33"
+  },
+  {
+   "Date": "Jan 07 2014",
+   "NAV": "367",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "116973634.75"
+  },
+  {
+   "Date": "Jan 08 2014",
+   "NAV": "371.16",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "118299548.43"
+  },
+  {
+   "Date": "Jan 09 2014",
+   "NAV": "365.2",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "116399922.1"
+  },
+  {
+   "Date": "Jan 10 2014",
+   "NAV": "349.88",
+   "Shares Outstanding": "318730",
+   "Total Net Assets": "111516989.99"
+  },
+  {
+   "Date": "Jan 13 2014",
+   "NAV": "344.12",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "113982609.51"
+  },
+  {
+   "Date": "Jan 14 2014",
+   "NAV": "349.8",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "115863991.65"
+  },
+  {
+   "Date": "Jan 15 2014",
+   "NAV": "350.84",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "116208470.07"
+  },
+  {
+   "Date": "Jan 16 2014",
+   "NAV": "345",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "114274091.25"
+  },
+  {
+   "Date": "Jan 17 2014",
+   "NAV": "341.92",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "113253905.16"
+  },
+  {
+   "Date": "Jan 21 2014",
+   "NAV": "338.36",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "112074729.03"
+  },
+  {
+   "Date": "Jan 22 2014",
+   "NAV": "342",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "113280403.5"
+  },
+  {
+   "Date": "Jan 23 2014",
+   "NAV": "327.96",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "108629944.83"
+  },
+  {
+   "Date": "Jan 24 2014",
+   "NAV": "322.8",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "106920801.9"
+  },
+  {
+   "Date": "Jan 27 2014",
+   "NAV": "327",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "108311964.75"
+  },
+  {
+   "Date": "Jan 28 2014",
+   "NAV": "325.68",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "107874742.14"
+  },
+  {
+   "Date": "Jan 29 2014",
+   "NAV": "317.08",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "105026170.59"
+  },
+  {
+   "Date": "Jan 30 2014",
+   "NAV": "319.32",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "105768124.11"
+  },
+  {
+   "Date": "Jan 31 2014",
+   "NAV": "316.96",
+   "Shares Outstanding": "331230",
+   "Total Net Assets": "104986423.08"
+  },
+  {
+   "Date": "Feb 03 2014",
+   "NAV": "303.44",
+   "Shares Outstanding": "343730",
+   "Total Net Assets": "104301203.62"
+  },
+  {
+   "Date": "Feb 04 2014",
+   "NAV": "311.76",
+   "Shares Outstanding": "343730",
+   "Total Net Assets": "107161030.98"
+  },
+  {
+   "Date": "Feb 05 2014",
+   "NAV": "320.96",
+   "Shares Outstanding": "343730",
+   "Total Net Assets": "110323340.08"
+  },
+  {
+   "Date": "Feb 06 2014",
+   "NAV": "324.64",
+   "Shares Outstanding": "343730",
+   "Total Net Assets": "111588263.72"
+  },
+  {
+   "Date": "Feb 07 2014",
+   "NAV": "322.92",
+   "Shares Outstanding": "343730",
+   "Total Net Assets": "110997049.41"
+  },
+  {
+   "Date": "Feb 10 2014",
+   "NAV": "322.28",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "114805562.69"
+  },
+  {
+   "Date": "Feb 11 2014",
+   "NAV": "325.32",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "115888499.61"
+  },
+  {
+   "Date": "Feb 12 2014",
+   "NAV": "331.88",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "118225363.49"
+  },
+  {
+   "Date": "Feb 13 2014",
+   "NAV": "325.12",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "115817253.76"
+  },
+  {
+   "Date": "Feb 14 2014",
+   "NAV": "326.32",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "116244728.86"
+  },
+  {
+   "Date": "Feb 18 2014",
+   "NAV": "322.48",
+   "Shares Outstanding": "356230",
+   "Total Net Assets": "114876808.54"
+  },
+  {
+   "Date": "Feb 19 2014",
+   "NAV": "326.72",
+   "Shares Outstanding": "368730",
+   "Total Net Assets": "120471220.56"
+  },
+  {
+   "Date": "Feb 20 2014",
+   "NAV": "329.8",
+   "Shares Outstanding": "368730",
+   "Total Net Assets": "121606906.65"
+  },
+  {
+   "Date": "Feb 21 2014",
+   "NAV": "324.88",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "123853758.74"
+  },
+  {
+   "Date": "Feb 24 2014",
+   "NAV": "327",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "124661964.75"
+  },
+  {
+   "Date": "Feb 25 2014",
+   "NAV": "318.24",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "121322396.52"
+  },
+  {
+   "Date": "Feb 26 2014",
+   "NAV": "313.92",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "119675486.16"
+  },
+  {
+   "Date": "Feb 27 2014",
+   "NAV": "307.44",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "117205120.62"
+  },
+  {
+   "Date": "Feb 28 2014",
+   "NAV": "307.08",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "117067878.09"
+  },
+  {
+   "Date": "Mar 03 2014",
+   "NAV": "301.08",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "114780502.59"
+  },
+  {
+   "Date": "Mar 04 2014",
+   "NAV": "313.36",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "119461997.78"
+  },
+  {
+   "Date": "Mar 05 2014",
+   "NAV": "314.2",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "119782230.35"
+  },
+  {
+   "Date": "Mar 06 2014",
+   "NAV": "321.08",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "122405087.59"
+  },
+  {
+   "Date": "Mar 07 2014",
+   "NAV": "327.2",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "124738210.6"
+  },
+  {
+   "Date": "Mar 10 2014",
+   "NAV": "327.52",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "124860203.96"
+  },
+  {
+   "Date": "Mar 11 2014",
+   "NAV": "323.92",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "123487778.66"
+  },
+  {
+   "Date": "Mar 12 2014",
+   "NAV": "317",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "120849672.25"
+  },
+  {
+   "Date": "Mar 13 2014",
+   "NAV": "306.04",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "116671399.67"
+  },
+  {
+   "Date": "Mar 14 2014",
+   "NAV": "303.8",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "115817446.15"
+  },
+  {
+   "Date": "Mar 17 2014",
+   "NAV": "309.8",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "118104821.65"
+  },
+  {
+   "Date": "Mar 18 2014",
+   "NAV": "309.16",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "117860834.93"
+  },
+  {
+   "Date": "Mar 19 2014",
+   "NAV": "316.2",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "120544688.85"
+  },
+  {
+   "Date": "Mar 20 2014",
+   "NAV": "314.56",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "119919472.88"
+  },
+  {
+   "Date": "Mar 21 2014",
+   "NAV": "306.16",
+   "Shares Outstanding": "381230",
+   "Total Net Assets": "116717147.18"
+  },
+  {
+   "Date": "Mar 24 2014",
+   "NAV": "300.16",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "118181771.68"
+  },
+  {
+   "Date": "Mar 25 2014",
+   "NAV": "300.92",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "118481005.91"
+  },
+  {
+   "Date": "Mar 26 2014",
+   "NAV": "296.52",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "116748597.21"
+  },
+  {
+   "Date": "Mar 27 2014",
+   "NAV": "290",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "114181482.5"
+  },
+  {
+   "Date": "Mar 28 2014",
+   "NAV": "295.28",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "116260372.94"
+  },
+  {
+   "Date": "Mar 31 2014",
+   "NAV": "297.8",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "117252570.65"
+  },
+  {
+   "Date": "Apr 01 2014",
+   "NAV": "304.12",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "119740939.51"
+  },
+  {
+   "Date": "Apr 02 2014",
+   "NAV": "310.96",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "122434047.58"
+  },
+  {
+   "Date": "Apr 03 2014",
+   "NAV": "306.88",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "120827632.24"
+  },
+  {
+   "Date": "Apr 04 2014",
+   "NAV": "300.64",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "118370761.72"
+  },
+  {
+   "Date": "Apr 07 2014",
+   "NAV": "295.72",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "120130113.81"
+  },
+  {
+   "Date": "Apr 08 2014",
+   "NAV": "293.16",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "119090166.93"
+  },
+  {
+   "Date": "Apr 09 2014",
+   "NAV": "296.4",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "120406349.7"
+  },
+  {
+   "Date": "Apr 10 2014",
+   "NAV": "286.4",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "116344057.2"
+  },
+  {
+   "Date": "Apr 11 2014",
+   "NAV": "282.52",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "114767887.71"
+  },
+  {
+   "Date": "Apr 14 2014",
+   "NAV": "283.44",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "115141618.62"
+  },
+  {
+   "Date": "Apr 15 2014",
+   "NAV": "279.8",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "113662944.15"
+  },
+  {
+   "Date": "Apr 16 2014",
+   "NAV": "278.64",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "113191718.22"
+  },
+  {
+   "Date": "Apr 17 2014",
+   "NAV": "287.04",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "116604043.92"
+  },
+  {
+   "Date": "Apr 21 2014",
+   "NAV": "288.56",
+   "Shares Outstanding": "418730",
+   "Total Net Assets": "120828512.38"
+  },
+  {
+   "Date": "Apr 22 2014",
+   "NAV": "285",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "112212836.25"
+  },
+  {
+   "Date": "Apr 23 2014",
+   "NAV": "279.84",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "110181193.32"
+  },
+  {
+   "Date": "Apr 24 2014",
+   "NAV": "279.12",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "109897708.26"
+  },
+  {
+   "Date": "Apr 25 2014",
+   "NAV": "275.44",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "108448784.62"
+  },
+  {
+   "Date": "Apr 28 2014",
+   "NAV": "278.24",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "109551226.52"
+  },
+  {
+   "Date": "Apr 29 2014",
+   "NAV": "282.6",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "111267886.05"
+  },
+  {
+   "Date": "Apr 30 2014",
+   "NAV": "277.44",
+   "Shares Outstanding": "393730",
+   "Total Net Assets": "109236243.12"
+  },
+  {
+   "Date": "May 01 2014",
+   "NAV": "269.68",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "109551904.14"
+  },
+  {
+   "Date": "May 02 2014",
+   "NAV": "264.44",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "107423262.87"
+  },
+  {
+   "Date": "May 05 2014",
+   "NAV": "269.8",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "109600651.65"
+  },
+  {
+   "Date": "May 06 2014",
+   "NAV": "265.68",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "107926987.14"
+  },
+  {
+   "Date": "May 07 2014",
+   "NAV": "268.72",
+   "Shares Outstanding": "406230",
+   "Total Net Assets": "109161924.06"
+  },
+  {
+   "Date": "May 08 2014",
+   "NAV": "269.96",
+   "Shares Outstanding": "418730",
+   "Total Net Assets": "113040148.33"
+  },
+  {
+   "Date": "May 09 2014",
+   "NAV": "275.04",
+   "Shares Outstanding": "418730",
+   "Total Net Assets": "115167292.92"
+  },
+  {
+   "Date": "May 12 2014",
+   "NAV": "278.56",
+   "Shares Outstanding": "418730",
+   "Total Net Assets": "116641219.88"
+  },
+  {
+   "Date": "May 13 2014",
+   "NAV": "272.88",
+   "Shares Outstanding": "418730",
+   "Total Net Assets": "114262837.74"
+  },
+  {
+   "Date": "May 14 2014",
+   "NAV": "261.72",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "112861319.31"
+  },
+  {
+   "Date": "May 15 2014",
+   "NAV": "256.56",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "110636176.38"
+  },
+  {
+   "Date": "May 16 2014",
+   "NAV": "257.76",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "111153651.48"
+  },
+  {
+   "Date": "May 19 2014",
+   "NAV": "262.6",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "113240801.05"
+  },
+  {
+   "Date": "May 20 2014",
+   "NAV": "261.16",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "112619830.93"
+  },
+  {
+   "Date": "May 21 2014",
+   "NAV": "266.64",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "114982967.22"
+  },
+  {
+   "Date": "May 22 2014",
+   "NAV": "268.48",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "115776429.04"
+  },
+  {
+   "Date": "May 23 2014",
+   "NAV": "264.12",
+   "Shares Outstanding": "431230",
+   "Total Net Assets": "113896269.51"
+  },
+  {
+   "Date": "May 27 2014",
+   "NAV": "259.32",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "115067869.11"
+  },
+  {
+   "Date": "May 28 2014",
+   "NAV": "248.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "110364339.06"
+  },
+  {
+   "Date": "May 29 2014",
+   "NAV": "250.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "111251797.56"
+  },
+  {
+   "Date": "May 30 2014",
+   "NAV": "251.92",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "111784272.66"
+  },
+  {
+   "Date": "Jun 02 2014",
+   "NAV": "260.08",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "115405103.34"
+  },
+  {
+   "Date": "Jun 03 2014",
+   "NAV": "267.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "118795194.81"
+  },
+  {
+   "Date": "Jun 04 2014",
+   "NAV": "269.12",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "119416415.76"
+  },
+  {
+   "Date": "Jun 05 2014",
+   "NAV": "267.36",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "118635452.28"
+  },
+  {
+   "Date": "Jun 06 2014",
+   "NAV": "267.96",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "118901689.83"
+  },
+  {
+   "Date": "Jun 09 2014",
+   "NAV": "269.44",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "119558409.12"
+  },
+  {
+   "Date": "Jun 10 2014",
+   "NAV": "271.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "120570111.81"
+  },
+  {
+   "Date": "Jun 11 2014",
+   "NAV": "271.84",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "120623359.32"
+  },
+  {
+   "Date": "Jun 12 2014",
+   "NAV": "263.32",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "116842786.11"
+  },
+  {
+   "Date": "Jun 13 2014",
+   "NAV": "263.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "117020277.81"
+  },
+  {
+   "Date": "Jun 16 2014",
+   "NAV": "261.48",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "116026324.29"
+  },
+  {
+   "Date": "Jun 17 2014",
+   "NAV": "267.96",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "118901689.83"
+  },
+  {
+   "Date": "Jun 18 2014",
+   "NAV": "264.16",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "117215518.68"
+  },
+  {
+   "Date": "Jun 19 2014",
+   "NAV": "269.56",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "119611656.63"
+  },
+  {
+   "Date": "Jun 20 2014",
+   "NAV": "268.2",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "119008184.85"
+  },
+  {
+   "Date": "Jun 23 2014",
+   "NAV": "267.36",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "118635452.28"
+  },
+  {
+   "Date": "Jun 24 2014",
+   "NAV": "261.72",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "116132819.31"
+  },
+  {
+   "Date": "Jun 25 2014",
+   "NAV": "258.2",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "114570892.35"
+  },
+  {
+   "Date": "Jun 26 2014",
+   "NAV": "253.08",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "112298998.59"
+  },
+  {
+   "Date": "Jun 27 2014",
+   "NAV": "255.52",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "113381697.96"
+  },
+  {
+   "Date": "Jun 30 2014",
+   "NAV": "252",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "111819771"
+  },
+  {
+   "Date": "Jul 01 2014",
+   "NAV": "259.56",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "115174364.13"
+  },
+  {
+   "Date": "Jul 02 2014",
+   "NAV": "269",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "119363168.25"
+  },
+  {
+   "Date": "Jul 03 2014",
+   "NAV": "271.12",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "120303874.26"
+  },
+  {
+   "Date": "Jul 07 2014",
+   "NAV": "264.52",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "117375261.21"
+  },
+  {
+   "Date": "Jul 08 2014",
+   "NAV": "256.32",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "113736681.36"
+  },
+  {
+   "Date": "Jul 09 2014",
+   "NAV": "253.48",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "112476490.29"
+  },
+  {
+   "Date": "Jul 10 2014",
+   "NAV": "253.92",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "112671731.16"
+  },
+  {
+   "Date": "Jul 11 2014",
+   "NAV": "251.12",
+   "Shares Outstanding": "443730",
+   "Total Net Assets": "111429289.26"
+  },
+  {
+   "Date": "Jul 14 2014",
+   "NAV": "254.32",
+   "Shares Outstanding": "456230",
+   "Total Net Assets": "116028222.86"
+  },
+  {
+   "Date": "Jul 15 2014",
+   "NAV": "253.92",
+   "Shares Outstanding": "456230",
+   "Total Net Assets": "115845731.16"
+  },
+  {
+   "Date": "Jul 16 2014",
+   "NAV": "251.44",
+   "Shares Outstanding": "456230",
+   "Total Net Assets": "114714282.62"
+  },
+  {
+   "Date": "Jul 17 2014",
+   "NAV": "243.44",
+   "Shares Outstanding": "468730",
+   "Total Net Assets": "114107448.62"
+  },
+  {
+   "Date": "Jul 18 2014",
+   "NAV": "243.92",
+   "Shares Outstanding": "468730",
+   "Total Net Assets": "114332438.66"
+  },
+  {
+   "Date": "Jul 21 2014",
+   "NAV": "240.04",
+   "Shares Outstanding": "468730",
+   "Total Net Assets": "112513769.17"
+  },
+  {
+   "Date": "Jul 22 2014",
+   "NAV": "238.56",
+   "Shares Outstanding": "468730",
+   "Total Net Assets": "111820049.88"
+  },
+  {
+   "Date": "Jul 23 2014",
+   "NAV": "239.16",
+   "Shares Outstanding": "468730",
+   "Total Net Assets": "112101287.43"
+  },
+  {
+   "Date": "Jul 24 2014",
+   "NAV": "244.28",
+   "Shares Outstanding": "481230",
+   "Total Net Assets": "117554681.19"
+  },
+  {
+   "Date": "Jul 25 2014",
+   "NAV": "237.12",
+   "Shares Outstanding": "481230",
+   "Total Net Assets": "114109079.76"
+  },
+  {
+   "Date": "Jul 28 2014",
+   "NAV": "239.24",
+   "Shares Outstanding": "493730",
+   "Total Net Assets": "118119785.77"
+  },
+  {
+   "Date": "Jul 29 2014",
+   "NAV": "234.16",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "118538641.18"
+  },
+  {
+   "Date": "Jul 30 2014",
+   "NAV": "244.76",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "123904671.23"
+  },
+  {
+   "Date": "Jul 31 2014",
+   "NAV": "245.08",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "124066664.59"
+  },
+  {
+   "Date": "Aug 01 2014",
+   "NAV": "242.68",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "122851714.39"
+  },
+  {
+   "Date": "Aug 04 2014",
+   "NAV": "242.24",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "122628973.52"
+  },
+  {
+   "Date": "Aug 05 2014",
+   "NAV": "240.12",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "121555767.51"
+  },
+  {
+   "Date": "Aug 06 2014",
+   "NAV": "240.04",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "121515269.17"
+  },
+  {
+   "Date": "Aug 07 2014",
+   "NAV": "234.84",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "118882877.07"
+  },
+  {
+   "Date": "Aug 08 2014",
+   "NAV": "233.72",
+   "Shares Outstanding": "506230",
+   "Total Net Assets": "118315900.31"
+  },
+  {
+   "Date": "Aug 11 2014",
+   "NAV": "234.4",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "121590136.2"
+  },
+  {
+   "Date": "Aug 12 2014",
+   "NAV": "238.48",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "123706551.54"
+  },
+  {
+   "Date": "Aug 13 2014",
+   "NAV": "235.16",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "121984370.43"
+  },
+  {
+   "Date": "Aug 14 2014",
+   "NAV": "228.88",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "118726750.74"
+  },
+  {
+   "Date": "Aug 15 2014",
+   "NAV": "221.24",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "114763659.27"
+  },
+  {
+   "Date": "Aug 18 2014",
+   "NAV": "228.12",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "118332516.51"
+  },
+  {
+   "Date": "Aug 19 2014",
+   "NAV": "231",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "119826456.75"
+  },
+  {
+   "Date": "Aug 20 2014",
+   "NAV": "231",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "119826456.75"
+  },
+  {
+   "Date": "Aug 21 2014",
+   "NAV": "227.56",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "118042028.13"
+  },
+  {
+   "Date": "Aug 22 2014",
+   "NAV": "223.48",
+   "Shares Outstanding": "518730",
+   "Total Net Assets": "115925612.79"
+  },
+  {
+   "Date": "Aug 25 2014",
+   "NAV": "220.76",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "117274169.23"
+  },
+  {
+   "Date": "Aug 26 2014",
+   "NAV": "222.64",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "118272880.22"
+  },
+  {
+   "Date": "Aug 27 2014",
+   "NAV": "217.52",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "115552986.46"
+  },
+  {
+   "Date": "Aug 28 2014",
+   "NAV": "212.96",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "113130581.08"
+  },
+  {
+   "Date": "Aug 29 2014",
+   "NAV": "214.28",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "113831803.69"
+  },
+  {
+   "Date": "Sep 02 2014",
+   "NAV": "224.2",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "119101597.85"
+  },
+  {
+   "Date": "Sep 03 2014",
+   "NAV": "222.2",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "118039139.35"
+  },
+  {
+   "Date": "Sep 04 2014",
+   "NAV": "227.68",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "120950275.64"
+  },
+  {
+   "Date": "Sep 05 2014",
+   "NAV": "231.52",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "122990195.96"
+  },
+  {
+   "Date": "Sep 08 2014",
+   "NAV": "229.64",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "121991484.97"
+  },
+  {
+   "Date": "Sep 09 2014",
+   "NAV": "230.68",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "122543963.39"
+  },
+  {
+   "Date": "Sep 10 2014",
+   "NAV": "235.2",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "124945119.6"
+  },
+  {
+   "Date": "Sep 11 2014",
+   "NAV": "233.32",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "123946408.61"
+  },
+  {
+   "Date": "Sep 12 2014",
+   "NAV": "245.16",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "130236162.93"
+  },
+  {
+   "Date": "Sep 15 2014",
+   "NAV": "243.36",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "129279950.28"
+  },
+  {
+   "Date": "Sep 16 2014",
+   "NAV": "244.8",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "130044920.4"
+  },
+  {
+   "Date": "Sep 17 2014",
+   "NAV": "246.04",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "130703644.67"
+  },
+  {
+   "Date": "Sep 18 2014",
+   "NAV": "245.6",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "130469903.8"
+  },
+  {
+   "Date": "Sep 19 2014",
+   "NAV": "237.92",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "126390063.16"
+  },
+  {
+   "Date": "Sep 22 2014",
+   "NAV": "236.36",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "125561345.53"
+  },
+  {
+   "Date": "Sep 23 2014",
+   "NAV": "231.52",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "122990195.96"
+  },
+  {
+   "Date": "Sep 24 2014",
+   "NAV": "235.16",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "124923870.43"
+  },
+  {
+   "Date": "Sep 25 2014",
+   "NAV": "227.28",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "120737783.94"
+  },
+  {
+   "Date": "Sep 26 2014",
+   "NAV": "227.08",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "120631538.09"
+  },
+  {
+   "Date": "Sep 29 2014",
+   "NAV": "222.36",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "118124136.03"
+  },
+  {
+   "Date": "Sep 30 2014",
+   "NAV": "225.64",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "119866567.97"
+  },
+  {
+   "Date": "Oct 01 2014",
+   "NAV": "213.8",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "113576813.65"
+  },
+  {
+   "Date": "Oct 02 2014",
+   "NAV": "218.08",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "115850474.84"
+  },
+  {
+   "Date": "Oct 03 2014",
+   "NAV": "215.96",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "114724268.83"
+  },
+  {
+   "Date": "Oct 06 2014",
+   "NAV": "215.2",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "114320534.6"
+  },
+  {
+   "Date": "Oct 07 2014",
+   "NAV": "206.8",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "109858208.9"
+  },
+  {
+   "Date": "Oct 08 2014",
+   "NAV": "207.28",
+   "Shares Outstanding": "531230",
+   "Total Net Assets": "110113198.94"
+  },
+  {
+   "Date": "Oct 09 2014",
+   "NAV": "207.36",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "112747697.28"
+  },
+  {
+   "Date": "Oct 10 2014",
+   "NAV": "204.2",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "111029512.85"
+  },
+  {
+   "Date": "Oct 13 2014",
+   "NAV": "204.12",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "110986014.51"
+  },
+  {
+   "Date": "Oct 14 2014",
+   "NAV": "195.36",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "106222946.28"
+  },
+  {
+   "Date": "Oct 15 2014",
+   "NAV": "186.72",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "101525125.56"
+  },
+  {
+   "Date": "Oct 16 2014",
+   "NAV": "192.6",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "107129753.55"
+  },
+  {
+   "Date": "Oct 17 2014",
+   "NAV": "195.8",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "108909687.15"
+  },
+  {
+   "Date": "Oct 20 2014",
+   "NAV": "194.64",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "108264461.22"
+  },
+  {
+   "Date": "Oct 21 2014",
+   "NAV": "197.2",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "109688408.1"
+  },
+  {
+   "Date": "Oct 22 2014",
+   "NAV": "198.84",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "110600624.07"
+  },
+  {
+   "Date": "Oct 23 2014",
+   "NAV": "203.64",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "113270524.47"
+  },
+  {
+   "Date": "Oct 24 2014",
+   "NAV": "203.96",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "113448517.83"
+  },
+  {
+   "Date": "Oct 27 2014",
+   "NAV": "202.12",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "112425056.01"
+  },
+  {
+   "Date": "Oct 28 2014",
+   "NAV": "204.72",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116430252.06"
+  },
+  {
+   "Date": "Oct 29 2014",
+   "NAV": "203.8",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115907021.15"
+  },
+  {
+   "Date": "Oct 30 2014",
+   "NAV": "202.48",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115156298.54"
+  },
+  {
+   "Date": "Oct 31 2014",
+   "NAV": "204.88",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116521248.74"
+  },
+  {
+   "Date": "Nov 03 2014",
+   "NAV": "205.36",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116794238.78"
+  },
+  {
+   "Date": "Nov 04 2014",
+   "NAV": "203.72",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115861522.81"
+  },
+  {
+   "Date": "Nov 05 2014",
+   "NAV": "204.88",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116521248.74"
+  },
+  {
+   "Date": "Nov 06 2014",
+   "NAV": "207.84",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "118204687.32"
+  },
+  {
+   "Date": "Nov 07 2014",
+   "NAV": "202.68",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115270044.39"
+  },
+  {
+   "Date": "Nov 10 2014",
+   "NAV": "206.92",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "117681456.41"
+  },
+  {
+   "Date": "Nov 11 2014",
+   "NAV": "206.92",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "117681456.41"
+  },
+  {
+   "Date": "Nov 12 2014",
+   "NAV": "205.84",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "117067228.82"
+  },
+  {
+   "Date": "Nov 13 2014",
+   "NAV": "205.24",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116725991.27"
+  },
+  {
+   "Date": "Nov 14 2014",
+   "NAV": "202.08",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "114928806.84"
+  },
+  {
+   "Date": "Nov 17 2014",
+   "NAV": "203.72",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115861522.81"
+  },
+  {
+   "Date": "Nov 18 2014",
+   "NAV": "202.08",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "114928806.84"
+  },
+  {
+   "Date": "Nov 19 2014",
+   "NAV": "204.36",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "116225509.53"
+  },
+  {
+   "Date": "Nov 20 2014",
+   "NAV": "202.88",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "115383790.24"
+  },
+  {
+   "Date": "Nov 21 2014",
+   "NAV": "199.48",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "108463110.79"
+  },
+  {
+   "Date": "Nov 24 2014",
+   "NAV": "198.96",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "108180371.58"
+  },
+  {
+   "Date": "Nov 25 2014",
+   "NAV": "193.28",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "105091989.44"
+  },
+  {
+   "Date": "Nov 26 2014",
+   "NAV": "190.64",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "103656544.22"
+  },
+  {
+   "Date": "Nov 28 2014",
+   "NAV": "187",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "101677369.75"
+  },
+  {
+   "Date": "Dec 01 2014",
+   "NAV": "190.12",
+   "Shares Outstanding": "543730",
+   "Total Net Assets": "103373805.01"
+  },
+  {
+   "Date": "Dec 02 2014",
+   "NAV": "195.96",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "108998683.83"
+  },
+  {
+   "Date": "Dec 03 2014",
+   "NAV": "194.52",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "108197713.71"
+  },
+  {
+   "Date": "Dec 04 2014",
+   "NAV": "190.96",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "106217537.58"
+  },
+  {
+   "Date": "Dec 05 2014",
+   "NAV": "191.72",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "106640271.81"
+  },
+  {
+   "Date": "Dec 08 2014",
+   "NAV": "185",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "102902411.25"
+  },
+  {
+   "Date": "Dec 09 2014",
+   "NAV": "182.32",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "101411716.86"
+  },
+  {
+   "Date": "Dec 10 2014",
+   "NAV": "178.48",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "99275796.54"
+  },
+  {
+   "Date": "Dec 11 2014",
+   "NAV": "177.52",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "98741816.46"
+  },
+  {
+   "Date": "Dec 12 2014",
+   "NAV": "170.72",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "94959457.56"
+  },
+  {
+   "Date": "Dec 15 2014",
+   "NAV": "169.4",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "94225234.95"
+  },
+  {
+   "Date": "Dec 16 2014",
+   "NAV": "165.48",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "92044816.29"
+  },
+  {
+   "Date": "Dec 17 2014",
+   "NAV": "169.68",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "94380979.14"
+  },
+  {
+   "Date": "Dec 18 2014",
+   "NAV": "175.48",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "97607108.79"
+  },
+  {
+   "Date": "Dec 19 2014",
+   "NAV": "171.76",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "95537935.98"
+  },
+  {
+   "Date": "Dec 22 2014",
+   "NAV": "169.44",
+   "Shares Outstanding": "556230",
+   "Total Net Assets": "94247484.12"
+  },
+  {
+   "Date": "Dec 23 2014",
+   "NAV": "178.64",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "103830793.22"
+  },
+  {
+   "Date": "Dec 24 2014",
+   "NAV": "176.52",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "102598587.21"
+  },
+  {
+   "Date": "Dec 26 2014",
+   "NAV": "174.84",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "101622122.07"
+  },
+  {
+   "Date": "Dec 29 2014",
+   "NAV": "171.28",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "99552945.94"
+  },
+  {
+   "Date": "Dec 30 2014",
+   "NAV": "169.6",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "98576480.8"
+  },
+  {
+   "Date": "Dec 31 2014",
+   "NAV": "168.56",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "97972002.38"
+  },
+  {
+   "Date": "Jan 02 2015",
+   "NAV": "163.4",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "94972859.45"
+  },
+  {
+   "Date": "Jan 05 2015",
+   "NAV": "155.2",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "90206779.6"
+  },
+  {
+   "Date": "Jan 06 2015",
+   "NAV": "148",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "86021929"
+  },
+  {
+   "Date": "Jan 07 2015",
+   "NAV": "147.12",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "85510447.26"
+  },
+  {
+   "Date": "Jan 08 2015",
+   "NAV": "153.48",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "89207065.29"
+  },
+  {
+   "Date": "Jan 09 2015",
+   "NAV": "150.28",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "87347131.69"
+  },
+  {
+   "Date": "Jan 12 2015",
+   "NAV": "145.12",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "84347988.76"
+  },
+  {
+   "Date": "Jan 13 2015",
+   "NAV": "144.36",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "83906254.53"
+  },
+  {
+   "Date": "Jan 14 2015",
+   "NAV": "141.72",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "82371809.31"
+  },
+  {
+   "Date": "Jan 15 2015",
+   "NAV": "138.64",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "80581623.22"
+  },
+  {
+   "Date": "Jan 16 2015",
+   "NAV": "140.6",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "79963332.55"
+  },
+  {
+   "Date": "Jan 20 2015",
+   "NAV": "137.64",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "78279893.97"
+  },
+  {
+   "Date": "Jan 21 2015",
+   "NAV": "140.6",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "79963332.55"
+  },
+  {
+   "Date": "Jan 22 2015",
+   "NAV": "143.04",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "81351031.92"
+  },
+  {
+   "Date": "Jan 23 2015",
+   "NAV": "137.24",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "78052402.27"
+  },
+  {
+   "Date": "Jan 26 2015",
+   "NAV": "137.56",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "78234395.63"
+  },
+  {
+   "Date": "Jan 27 2015",
+   "NAV": "137.8",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "78370890.65"
+  },
+  {
+   "Date": "Jan 28 2015",
+   "NAV": "130.08",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "73980300.84"
+  },
+  {
+   "Date": "Jan 29 2015",
+   "NAV": "131.92",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "75026762.66"
+  },
+  {
+   "Date": "Jan 30 2015",
+   "NAV": "127.44",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "72478855.62"
+  },
+  {
+   "Date": "Feb 02 2015",
+   "NAV": "127.48",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "72501604.79"
+  },
+  {
+   "Date": "Feb 03 2015",
+   "NAV": "135.52",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "77074187.96"
+  },
+  {
+   "Date": "Feb 04 2015",
+   "NAV": "136.32",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "77529171.36"
+  },
+  {
+   "Date": "Feb 05 2015",
+   "NAV": "138.84",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "78962369.07"
+  },
+  {
+   "Date": "Feb 06 2015",
+   "NAV": "146",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "83034470.5"
+  },
+  {
+   "Date": "Feb 09 2015",
+   "NAV": "146.12",
+   "Shares Outstanding": "568730",
+   "Total Net Assets": "83102718.01"
+  },
+  {
+   "Date": "Feb 10 2015",
+   "NAV": "150.12",
+   "Shares Outstanding": "581230",
+   "Total Net Assets": "87254135.01"
+  },
+  {
+   "Date": "Feb 11 2015",
+   "NAV": "149.56",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "90667646.63"
+  },
+  {
+   "Date": "Feb 12 2015",
+   "NAV": "150.08",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "90982885.84"
+  },
+  {
+   "Date": "Feb 13 2015",
+   "NAV": "154.2",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "93480550.35"
+  },
+  {
+   "Date": "Feb 17 2015",
+   "NAV": "163.28",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "98985111.94"
+  },
+  {
+   "Date": "Feb 18 2015",
+   "NAV": "159.12",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "96463198.26"
+  },
+  {
+   "Date": "Feb 19 2015",
+   "NAV": "162.12",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "98281886.01"
+  },
+  {
+   "Date": "Feb 20 2015",
+   "NAV": "162.8",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "98694121.9"
+  },
+  {
+   "Date": "Feb 23 2015",
+   "NAV": "155.24",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "94111028.77"
+  },
+  {
+   "Date": "Feb 24 2015",
+   "NAV": "150.6",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "91298125.05"
+  },
+  {
+   "Date": "Feb 25 2015",
+   "NAV": "148.44",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "89988669.87"
+  },
+  {
+   "Date": "Feb 26 2015",
+   "NAV": "151.4",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "91783108.45"
+  },
+  {
+   "Date": "Feb 27 2015",
+   "NAV": "150.6",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "91298125.05"
+  },
+  {
+   "Date": "Mar 02 2015",
+   "NAV": "157.48",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "95468982.29"
+  },
+  {
+   "Date": "Mar 03 2015",
+   "NAV": "159.72",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "96826935.81"
+  },
+  {
+   "Date": "Mar 04 2015",
+   "NAV": "160.32",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "97190673.36"
+  },
+  {
+   "Date": "Mar 05 2015",
+   "NAV": "159.8",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "96875434.15"
+  },
+  {
+   "Date": "Mar 06 2015",
+   "NAV": "170.64",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "103446959.22"
+  },
+  {
+   "Date": "Mar 09 2015",
+   "NAV": "166.64",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "101022042.22"
+  },
+  {
+   "Date": "Mar 10 2015",
+   "NAV": "159.64",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "96778437.47"
+  },
+  {
+   "Date": "Mar 11 2015",
+   "NAV": "156.28",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "94741507.19"
+  },
+  {
+   "Date": "Mar 12 2015",
+   "NAV": "155.8",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "94450517.15"
+  },
+  {
+   "Date": "Mar 13 2015",
+   "NAV": "156.88",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "95105244.74"
+  },
+  {
+   "Date": "Mar 16 2015",
+   "NAV": "155.4",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "94208025.45"
+  },
+  {
+   "Date": "Mar 17 2015",
+   "NAV": "150.36",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "91152630.03"
+  },
+  {
+   "Date": "Mar 18 2015",
+   "NAV": "143.72",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "87127267.81"
+  },
+  {
+   "Date": "Mar 19 2015",
+   "NAV": "143.96",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "87272762.83"
+  },
+  {
+   "Date": "Mar 20 2015",
+   "NAV": "141.28",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "85648068.44"
+  },
+  {
+   "Date": "Mar 23 2015",
+   "NAV": "141.56",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "85817812.63"
+  },
+  {
+   "Date": "Mar 24 2015",
+   "NAV": "138.04",
+   "Shares Outstanding": "606230",
+   "Total Net Assets": "83683885.67"
+  },
+  {
+   "Date": "Mar 25 2015",
+   "NAV": "140.76",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "87092329.23"
+  },
+  {
+   "Date": "Mar 26 2015",
+   "NAV": "148.24",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "91720424.02"
+  },
+  {
+   "Date": "Mar 27 2015",
+   "NAV": "142.04",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "87884302.67"
+  },
+  {
+   "Date": "Mar 30 2015",
+   "NAV": "144.24",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "89245507.02"
+  },
+  {
+   "Date": "Mar 31 2015",
+   "NAV": "143.2",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "88602028.6"
+  },
+  {
+   "Date": "Apr 01 2015",
+   "NAV": "137.72",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "85211392.31"
+  },
+  {
+   "Date": "Apr 02 2015",
+   "NAV": "141.48",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "87537814.29"
+  },
+  {
+   "Date": "Apr 06 2015",
+   "NAV": "144.28",
+   "Shares Outstanding": "618730",
+   "Total Net Assets": "89270256.19"
+  },
+  {
+   "Date": "Apr 07 2015",
+   "NAV": "141.4",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "91023315.95"
+  },
+  {
+   "Date": "Apr 08 2015",
+   "NAV": "140.56",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "90482583.38"
+  },
+  {
+   "Date": "Apr 09 2015",
+   "NAV": "146.24",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "94138965.52"
+  },
+  {
+   "Date": "Apr 10 2015",
+   "NAV": "145.2",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "93469487.1"
+  },
+  {
+   "Date": "Apr 13 2015",
+   "NAV": "144.72",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "93160497.06"
+  },
+  {
+   "Date": "Apr 14 2015",
+   "NAV": "142.08",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "91461051.84"
+  },
+  {
+   "Date": "Apr 15 2015",
+   "NAV": "142.6",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "91795791.05"
+  },
+  {
+   "Date": "Apr 16 2015",
+   "NAV": "142.64",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "91821540.22"
+  },
+  {
+   "Date": "Apr 17 2015",
+   "NAV": "138.84",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "89375369.07"
+  },
+  {
+   "Date": "Apr 20 2015",
+   "NAV": "143.64",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "92465269.47"
+  },
+  {
+   "Date": "Apr 21 2015",
+   "NAV": "144.68",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "93134747.89"
+  },
+  {
+   "Date": "Apr 22 2015",
+   "NAV": "150.12",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "96636635.01"
+  },
+  {
+   "Date": "Apr 23 2015",
+   "NAV": "148.52",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "95606668.21"
+  },
+  {
+   "Date": "Apr 24 2015",
+   "NAV": "147",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "94628199.75"
+  },
+  {
+   "Date": "Apr 27 2015",
+   "NAV": "146.52",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "94319209.71"
+  },
+  {
+   "Date": "Apr 28 2015",
+   "NAV": "151",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "97203116.75"
+  },
+  {
+   "Date": "Apr 29 2015",
+   "NAV": "156.72",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "100885248.06"
+  },
+  {
+   "Date": "Apr 30 2015",
+   "NAV": "157.6",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "101451729.8"
+  },
+  {
+   "Date": "May 01 2015",
+   "NAV": "163.84",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "105468600.32"
+  },
+  {
+   "Date": "May 04 2015",
+   "NAV": "167.44",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "107786025.62"
+  },
+  {
+   "Date": "May 05 2015",
+   "NAV": "170.68",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "109871708.39"
+  },
+  {
+   "Date": "May 06 2015",
+   "NAV": "178",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "114583806.5"
+  },
+  {
+   "Date": "May 07 2015",
+   "NAV": "170.4",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "109691464.2"
+  },
+  {
+   "Date": "May 08 2015",
+   "NAV": "169.56",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "109150731.63"
+  },
+  {
+   "Date": "May 11 2015",
+   "NAV": "181.32",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "116720987.61"
+  },
+  {
+   "Date": "May 12 2015",
+   "NAV": "179.52",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "115562274.96"
+  },
+  {
+   "Date": "May 13 2015",
+   "NAV": "184.64",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "118858168.72"
+  },
+  {
+   "Date": "May 14 2015",
+   "NAV": "183.52",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "118137191.96"
+  },
+  {
+   "Date": "May 15 2015",
+   "NAV": "171.52",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "110412440.96"
+  },
+  {
+   "Date": "May 18 2015",
+   "NAV": "180.12",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "115948512.51"
+  },
+  {
+   "Date": "May 19 2015",
+   "NAV": "182.08",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "117210221.84"
+  },
+  {
+   "Date": "May 20 2015",
+   "NAV": "183.2",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "117931198.6"
+  },
+  {
+   "Date": "May 21 2015",
+   "NAV": "176.04",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "113322097.17"
+  },
+  {
+   "Date": "May 22 2015",
+   "NAV": "178.24",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "114738301.52"
+  },
+  {
+   "Date": "May 26 2015",
+   "NAV": "167.32",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "107708778.11"
+  },
+  {
+   "Date": "May 27 2015",
+   "NAV": "166.12",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "106936303.01"
+  },
+  {
+   "Date": "May 28 2015",
+   "NAV": "166.88",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "107425537.24"
+  },
+  {
+   "Date": "May 29 2015",
+   "NAV": "163.36",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "105159610.28"
+  },
+  {
+   "Date": "Jun 01 2015",
+   "NAV": "172.32",
+   "Shares Outstanding": "643730",
+   "Total Net Assets": "110927424.36"
+  },
+  {
+   "Date": "Jun 02 2015",
+   "NAV": "178.64",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "117228793.22"
+  },
+  {
+   "Date": "Jun 03 2015",
+   "NAV": "186.8",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "122583623.9"
+  },
+  {
+   "Date": "Jun 04 2015",
+   "NAV": "179.4",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "117727527.45"
+  },
+  {
+   "Date": "Jun 05 2015",
+   "NAV": "186.68",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "122504876.39"
+  },
+  {
+   "Date": "Jun 08 2015",
+   "NAV": "185.72",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "121874896.31"
+  },
+  {
+   "Date": "Jun 09 2015",
+   "NAV": "190.2",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "124814803.35"
+  },
+  {
+   "Date": "Jun 10 2015",
+   "NAV": "195.72",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "128437188.81"
+  },
+  {
+   "Date": "Jun 11 2015",
+   "NAV": "184.6",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "121139919.55"
+  },
+  {
+   "Date": "Jun 12 2015",
+   "NAV": "184.04",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "120772431.17"
+  },
+  {
+   "Date": "Jun 15 2015",
+   "NAV": "182.96",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "120063703.58"
+  },
+  {
+   "Date": "Jun 16 2015",
+   "NAV": "179.28",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "117648779.94"
+  },
+  {
+   "Date": "Jun 17 2015",
+   "NAV": "181.2",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "118908740.1"
+  },
+  {
+   "Date": "Jun 18 2015",
+   "NAV": "187.4",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "125319861.45"
+  },
+  {
+   "Date": "Jun 19 2015",
+   "NAV": "178.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "119568789.9"
+  },
+  {
+   "Date": "Jun 22 2015",
+   "NAV": "187.96",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "125694349.83"
+  },
+  {
+   "Date": "Jun 23 2015",
+   "NAV": "192.4",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "128663507.7"
+  },
+  {
+   "Date": "Jun 24 2015",
+   "NAV": "186.72",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "124865125.56"
+  },
+  {
+   "Date": "Jun 25 2015",
+   "NAV": "187.84",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "125614102.32"
+  },
+  {
+   "Date": "Jun 26 2015",
+   "NAV": "197",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "131739662.25"
+  },
+  {
+   "Date": "Jun 29 2015",
+   "NAV": "180.92",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "120986495.91"
+  },
+  {
+   "Date": "Jun 30 2015",
+   "NAV": "181.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "121253987.61"
+  },
+  {
+   "Date": "Jul 01 2015",
+   "NAV": "189.88",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "126978309.99"
+  },
+  {
+   "Date": "Jul 02 2015",
+   "NAV": "189.44",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "126684069.12"
+  },
+  {
+   "Date": "Jul 06 2015",
+   "NAV": "176.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "118231331.4"
+  },
+  {
+   "Date": "Jul 07 2015",
+   "NAV": "171.28",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "116680945.94"
+  },
+  {
+   "Date": "Jul 08 2015",
+   "NAV": "168.6",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "114855251.55"
+  },
+  {
+   "Date": "Jul 09 2015",
+   "NAV": "178.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "121640294.88"
+  },
+  {
+   "Date": "Jul 10 2015",
+   "NAV": "188.8",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "128616082.4"
+  },
+  {
+   "Date": "Jul 13 2015",
+   "NAV": "188.28",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "128261843.19"
+  },
+  {
+   "Date": "Jul 14 2015",
+   "NAV": "186.72",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "127199125.56"
+  },
+  {
+   "Date": "Jul 15 2015",
+   "NAV": "180.72",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "123111750.06"
+  },
+  {
+   "Date": "Jul 16 2015",
+   "NAV": "178.64",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "121694793.22"
+  },
+  {
+   "Date": "Jul 17 2015",
+   "NAV": "175.24",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "119378613.77"
+  },
+  {
+   "Date": "Jul 20 2015",
+   "NAV": "177.24",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "120741072.27"
+  },
+  {
+   "Date": "Jul 21 2015",
+   "NAV": "174.68",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "118997125.39"
+  },
+  {
+   "Date": "Jul 22 2015",
+   "NAV": "170.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "116190460.88"
+  },
+  {
+   "Date": "Jul 23 2015",
+   "NAV": "165.28",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "112593570.44"
+  },
+  {
+   "Date": "Jul 24 2015",
+   "NAV": "164.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "111966839.53"
+  },
+  {
+   "Date": "Jul 27 2015",
+   "NAV": "161.92",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "110304640.16"
+  },
+  {
+   "Date": "Jul 28 2015",
+   "NAV": "163.52",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "111394606.96"
+  },
+  {
+   "Date": "Jul 29 2015",
+   "NAV": "165.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "112784314.63"
+  },
+  {
+   "Date": "Jul 30 2015",
+   "NAV": "162.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "110604381.03"
+  },
+  {
+   "Date": "Jul 31 2015",
+   "NAV": "160.12",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "109078427.51"
+  },
+  {
+   "Date": "Aug 03 2015",
+   "NAV": "154.16",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "105018301.18"
+  },
+  {
+   "Date": "Aug 04 2015",
+   "NAV": "156.48",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "108554753.04"
+  },
+  {
+   "Date": "Aug 05 2015",
+   "NAV": "160.72",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "111496165.06"
+  },
+  {
+   "Date": "Aug 06 2015",
+   "NAV": "157.44",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "109220733.12"
+  },
+  {
+   "Date": "Aug 07 2015",
+   "NAV": "150.56",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "104447875.88"
+  },
+  {
+   "Date": "Aug 10 2015",
+   "NAV": "156.44",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "108527003.87"
+  },
+  {
+   "Date": "Aug 11 2015",
+   "NAV": "148.52",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "103032668.21"
+  },
+  {
+   "Date": "Aug 12 2015",
+   "NAV": "149.48",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "103698648.29"
+  },
+  {
+   "Date": "Aug 13 2015",
+   "NAV": "152.24",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "105613341.02"
+  },
+  {
+   "Date": "Aug 14 2015",
+   "NAV": "151.24",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "106810111.77"
+  },
+  {
+   "Date": "Aug 17 2015",
+   "NAV": "147.8",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "104380683.15"
+  },
+  {
+   "Date": "Aug 18 2015",
+   "NAV": "152.6",
+   "Shares Outstanding": "718730",
+   "Total Net Assets": "109678083.55"
+  },
+  {
+   "Date": "Aug 19 2015",
+   "NAV": "148.8",
+   "Shares Outstanding": "718730",
+   "Total Net Assets": "106946912.4"
+  },
+  {
+   "Date": "Aug 20 2015",
+   "NAV": "143.56",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "101386271.13"
+  },
+  {
+   "Date": "Aug 21 2015",
+   "NAV": "143.08",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "101047281.09"
+  },
+  {
+   "Date": "Aug 24 2015",
+   "NAV": "140.92",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "99521825.91"
+  },
+  {
+   "Date": "Aug 25 2015",
+   "NAV": "151.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "103110859.28"
+  },
+  {
+   "Date": "Aug 26 2015",
+   "NAV": "157.64",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "107388978.97"
+  },
+  {
+   "Date": "Aug 27 2015",
+   "NAV": "154.88",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "105508786.24"
+  },
+  {
+   "Date": "Aug 28 2015",
+   "NAV": "155.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "105835776.28"
+  },
+  {
+   "Date": "Aug 31 2015",
+   "NAV": "157.64",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "107388978.97"
+  },
+  {
+   "Date": "Sep 01 2015",
+   "NAV": "157.68",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "107416228.14"
+  },
+  {
+   "Date": "Sep 02 2015",
+   "NAV": "160.4",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "109269171.7"
+  },
+  {
+   "Date": "Sep 03 2015",
+   "NAV": "158.72",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "108124706.56"
+  },
+  {
+   "Date": "Sep 04 2015",
+   "NAV": "153.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "104609563.63"
+  },
+  {
+   "Date": "Sep 08 2015",
+   "NAV": "160.08",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "109051178.34"
+  },
+  {
+   "Date": "Sep 09 2015",
+   "NAV": "157.64",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "107388978.97"
+  },
+  {
+   "Date": "Sep 10 2015",
+   "NAV": "161.2",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "109814155.1"
+  },
+  {
+   "Date": "Sep 11 2015",
+   "NAV": "157.2",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "105124238.1"
+  },
+  {
+   "Date": "Sep 14 2015",
+   "NAV": "156.84",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "104883495.57"
+  },
+  {
+   "Date": "Sep 15 2015",
+   "NAV": "166.68",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "111463791.39"
+  },
+  {
+   "Date": "Sep 16 2015",
+   "NAV": "169.12",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "113095490.76"
+  },
+  {
+   "Date": "Sep 17 2015",
+   "NAV": "164.12",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "109751844.51"
+  },
+  {
+   "Date": "Sep 18 2015",
+   "NAV": "154.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103198297.86"
+  },
+  {
+   "Date": "Sep 21 2015",
+   "NAV": "162.68",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "108788874.39"
+  },
+  {
+   "Date": "Sep 22 2015",
+   "NAV": "153.6",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102716812.8"
+  },
+  {
+   "Date": "Sep 23 2015",
+   "NAV": "154.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103198297.86"
+  },
+  {
+   "Date": "Sep 24 2015",
+   "NAV": "150.88",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "100897869.24"
+  },
+  {
+   "Date": "Sep 25 2015",
+   "NAV": "155.2",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103786779.6"
+  },
+  {
+   "Date": "Sep 28 2015",
+   "NAV": "147.56",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98677688.13"
+  },
+  {
+   "Date": "Sep 29 2015",
+   "NAV": "146.2",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "97768216.35"
+  },
+  {
+   "Date": "Sep 30 2015",
+   "NAV": "148.12",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "97200676.51"
+  },
+  {
+   "Date": "Oct 01 2015",
+   "NAV": "146",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "95809470.5"
+  },
+  {
+   "Date": "Oct 02 2015",
+   "NAV": "143.64",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "94260769.47"
+  },
+  {
+   "Date": "Oct 05 2015",
+   "NAV": "149",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "97778158.25"
+  },
+  {
+   "Date": "Oct 06 2015",
+   "NAV": "146.8",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "96334453.9"
+  },
+  {
+   "Date": "Oct 07 2015",
+   "NAV": "147.68",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "96911935.64"
+  },
+  {
+   "Date": "Oct 08 2015",
+   "NAV": "152.32",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "99956839.36"
+  },
+  {
+   "Date": "Oct 09 2015",
+   "NAV": "150.84",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "98985620.07"
+  },
+  {
+   "Date": "Oct 12 2015",
+   "NAV": "150.8",
+   "Shares Outstanding": "656230",
+   "Total Net Assets": "98959370.9"
+  },
+  {
+   "Date": "Oct 13 2015",
+   "NAV": "147.92",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98918430.66"
+  },
+  {
+   "Date": "Oct 14 2015",
+   "NAV": "142.92",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "95574784.41"
+  },
+  {
+   "Date": "Oct 15 2015",
+   "NAV": "145.16",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "97072737.93"
+  },
+  {
+   "Date": "Oct 16 2015",
+   "NAV": "144.4",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "96564503.7"
+  },
+  {
+   "Date": "Oct 19 2015",
+   "NAV": "145.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "97500724.65"
+  },
+  {
+   "Date": "Oct 20 2015",
+   "NAV": "149.12",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "99720905.76"
+  },
+  {
+   "Date": "Oct 21 2015",
+   "NAV": "144.64",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "96724998.72"
+  },
+  {
+   "Date": "Oct 22 2015",
+   "NAV": "143.96",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "96270262.83"
+  },
+  {
+   "Date": "Oct 23 2015",
+   "NAV": "147.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98356698.09"
+  },
+  {
+   "Date": "Oct 26 2015",
+   "NAV": "144.48",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "96618002.04"
+  },
+  {
+   "Date": "Oct 27 2015",
+   "NAV": "143.12",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "95708530.26"
+  },
+  {
+   "Date": "Oct 28 2015",
+   "NAV": "144.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "96511005.36"
+  },
+  {
+   "Date": "Oct 29 2015",
+   "NAV": "152",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "101646846"
+  },
+  {
+   "Date": "Oct 30 2015",
+   "NAV": "149.2",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "99774404.1"
+  },
+  {
+   "Date": "Nov 02 2015",
+   "NAV": "150.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "100844370.9"
+  },
+  {
+   "Date": "Nov 03 2015",
+   "NAV": "154.36",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103225047.03"
+  },
+  {
+   "Date": "Nov 04 2015",
+   "NAV": "153.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102850558.65"
+  },
+  {
+   "Date": "Nov 05 2015",
+   "NAV": "155.44",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103947274.62"
+  },
+  {
+   "Date": "Nov 06 2015",
+   "NAV": "161.84",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "108227141.82"
+  },
+  {
+   "Date": "Nov 09 2015",
+   "NAV": "163.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "109056366.09"
+  },
+  {
+   "Date": "Nov 10 2015",
+   "NAV": "161.76",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "108173643.48"
+  },
+  {
+   "Date": "Nov 11 2015",
+   "NAV": "161.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "108200392.65"
+  },
+  {
+   "Date": "Nov 12 2015",
+   "NAV": "161.44",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "107959650.12"
+  },
+  {
+   "Date": "Nov 13 2015",
+   "NAV": "159.36",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "106568693.28"
+  },
+  {
+   "Date": "Nov 16 2015",
+   "NAV": "160.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "107210673.36"
+  },
+  {
+   "Date": "Nov 17 2015",
+   "NAV": "158.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "105712719.84"
+  },
+  {
+   "Date": "Nov 18 2015",
+   "NAV": "157.56",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "105364980.63"
+  },
+  {
+   "Date": "Nov 19 2015",
+   "NAV": "154.28",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103171548.69"
+  },
+  {
+   "Date": "Nov 20 2015",
+   "NAV": "155.64",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "104081020.47"
+  },
+  {
+   "Date": "Nov 23 2015",
+   "NAV": "154.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103198297.86"
+  },
+  {
+   "Date": "Nov 24 2015",
+   "NAV": "154.16",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "103091301.18"
+  },
+  {
+   "Date": "Nov 25 2015",
+   "NAV": "153.16",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102422571.93"
+  },
+  {
+   "Date": "Nov 27 2015",
+   "NAV": "153.6",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102716812.8"
+  },
+  {
+   "Date": "Nov 30 2015",
+   "NAV": "152.56",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102021334.38"
+  },
+  {
+   "Date": "Dec 01 2015",
+   "NAV": "146.28",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "97821714.69"
+  },
+  {
+   "Date": "Dec 02 2015",
+   "NAV": "145.12",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "97045988.76"
+  },
+  {
+   "Date": "Dec 03 2015",
+   "NAV": "158.24",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "105819716.52"
+  },
+  {
+   "Date": "Dec 04 2015",
+   "NAV": "152.6",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "102048083.55"
+  },
+  {
+   "Date": "Dec 07 2015",
+   "NAV": "147.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98356698.09"
+  },
+  {
+   "Date": "Dec 08 2015",
+   "NAV": "149.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "99694156.59"
+  },
+  {
+   "Date": "Dec 09 2015",
+   "NAV": "148.04",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98998678.17"
+  },
+  {
+   "Date": "Dec 10 2015",
+   "NAV": "148.84",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "99533661.57"
+  },
+  {
+   "Date": "Dec 11 2015",
+   "NAV": "140.88",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "94210576.74"
+  },
+  {
+   "Date": "Dec 14 2015",
+   "NAV": "146.68",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "98089206.39"
+  },
+  {
+   "Date": "Dec 15 2015",
+   "NAV": "149.08",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "99694156.59"
+  },
+  {
+   "Date": "Dec 16 2015",
+   "NAV": "149.96",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "100282638.33"
+  },
+  {
+   "Date": "Dec 17 2015",
+   "NAV": "144.4",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "98369503.7"
+  },
+  {
+   "Date": "Dec 18 2015",
+   "NAV": "142.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "96979796.03"
+  },
+  {
+   "Date": "Dec 21 2015",
+   "NAV": "143.52",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "101358021.96"
+  },
+  {
+   "Date": "Dec 22 2015",
+   "NAV": "146.72",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "103617955.56"
+  },
+  {
+   "Date": "Dec 23 2015",
+   "NAV": "149.44",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "105538899.12"
+  },
+  {
+   "Date": "Dec 24 2015",
+   "NAV": "146.68",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "103589706.39"
+  },
+  {
+   "Date": "Dec 28 2015",
+   "NAV": "144.48",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "102036002.04"
+  },
+  {
+   "Date": "Dec 29 2015",
+   "NAV": "152.4",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "107629337.7"
+  },
+  {
+   "Date": "Dec 30 2015",
+   "NAV": "152.48",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "107685836.04"
+  },
+  {
+   "Date": "Dec 31 2015",
+   "NAV": "150",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "105934387.5"
+  },
+  {
+   "Date": "Jan 04 2016",
+   "NAV": "147.68",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "104295935.64"
+  },
+  {
+   "Date": "Jan 05 2016",
+   "NAV": "149.56",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "105623646.63"
+  },
+  {
+   "Date": "Jan 06 2016",
+   "NAV": "143.36",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "101245025.28"
+  },
+  {
+   "Date": "Jan 07 2016",
+   "NAV": "142.24",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "100454048.52"
+  },
+  {
+   "Date": "Jan 08 2016",
+   "NAV": "141.8",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "100143307.65"
+  },
+  {
+   "Date": "Jan 11 2016",
+   "NAV": "144.28",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "101894756.19"
+  },
+  {
+   "Date": "Jan 12 2016",
+   "NAV": "138.2",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "97600882.35"
+  },
+  {
+   "Date": "Jan 13 2016",
+   "NAV": "135.32",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "95566942.11"
+  },
+  {
+   "Date": "Jan 14 2016",
+   "NAV": "138.72",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "97968121.56"
+  },
+  {
+   "Date": "Jan 15 2016",
+   "NAV": "132.88",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "92182742.74"
+  },
+  {
+   "Date": "Jan 19 2016",
+   "NAV": "132.2",
+   "Shares Outstanding": "693730",
+   "Total Net Assets": "91711006.85"
+  },
+  {
+   "Date": "Jan 20 2016",
+   "NAV": "128.6",
+   "Shares Outstanding": "706230",
+   "Total Net Assets": "90821081.55"
+  },
+  {
+   "Date": "Jan 21 2016",
+   "NAV": "131.48",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "89568021.79"
+  },
+  {
+   "Date": "Jan 22 2016",
+   "NAV": "133.08",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "90657988.59"
+  },
+  {
+   "Date": "Jan 25 2016",
+   "NAV": "131.48",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "89568021.79"
+  },
+  {
+   "Date": "Jan 26 2016",
+   "NAV": "130.04",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "88587051.67"
+  },
+  {
+   "Date": "Jan 27 2016",
+   "NAV": "130.64",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "88995789.22"
+  },
+  {
+   "Date": "Jan 28 2016",
+   "NAV": "130.6",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "88968540.05"
+  },
+  {
+   "Date": "Jan 29 2016",
+   "NAV": "127.8",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "87061098.15"
+  },
+  {
+   "Date": "Feb 01 2016",
+   "NAV": "129.44",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "88178314.12"
+  },
+  {
+   "Date": "Feb 02 2016",
+   "NAV": "122.04",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "83137217.67"
+  },
+  {
+   "Date": "Feb 03 2016",
+   "NAV": "123.84",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "84363430.32"
+  },
+  {
+   "Date": "Feb 04 2016",
+   "NAV": "123.2",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "83927443.6"
+  },
+  {
+   "Date": "Feb 05 2016",
+   "NAV": "121.92",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "83055470.16"
+  },
+  {
+   "Date": "Feb 08 2016",
+   "NAV": "113.92",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "77605636.16"
+  },
+  {
+   "Date": "Feb 09 2016",
+   "NAV": "113.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "77360393.63"
+  },
+  {
+   "Date": "Feb 10 2016",
+   "NAV": "111.72",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "76106931.81"
+  },
+  {
+   "Date": "Feb 11 2016",
+   "NAV": "109.64",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "73319474.97"
+  },
+  {
+   "Date": "Feb 12 2016",
+   "NAV": "114.36",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "76475877.03"
+  },
+  {
+   "Date": "Feb 16 2016",
+   "NAV": "116.6",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "77973830.55"
+  },
+  {
+   "Date": "Feb 17 2016",
+   "NAV": "119.76",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "80087014.98"
+  },
+  {
+   "Date": "Feb 18 2016",
+   "NAV": "115.92",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "77519094.66"
+  },
+  {
+   "Date": "Feb 19 2016",
+   "NAV": "114.44",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "76529375.37"
+  },
+  {
+   "Date": "Feb 22 2016",
+   "NAV": "115.36",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "77144606.28"
+  },
+  {
+   "Date": "Feb 23 2016",
+   "NAV": "113.8",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "76101388.65"
+  },
+  {
+   "Date": "Feb 24 2016",
+   "NAV": "114",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "76235134.5"
+  },
+  {
+   "Date": "Feb 25 2016",
+   "NAV": "112.28",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "75084920.19"
+  },
+  {
+   "Date": "Feb 26 2016",
+   "NAV": "116.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "77786586.36"
+  },
+  {
+   "Date": "Feb 29 2016",
+   "NAV": "115.32",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "77117857.11"
+  },
+  {
+   "Date": "Mar 01 2016",
+   "NAV": "121",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "80916239.25"
+  },
+  {
+   "Date": "Mar 02 2016",
+   "NAV": "119.96",
+   "Shares Outstanding": "668730",
+   "Total Net Assets": "80220760.83"
+  },
+  {
+   "Date": "Mar 03 2016",
+   "NAV": "117.88",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "80303303.99"
+  },
+  {
+   "Date": "Mar 04 2016",
+   "NAV": "120.92",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "82374240.91"
+  },
+  {
+   "Date": "Mar 07 2016",
+   "NAV": "120.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "82128998.38"
+  },
+  {
+   "Date": "Mar 08 2016",
+   "NAV": "116.4",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "79295084.7"
+  },
+  {
+   "Date": "Mar 09 2016",
+   "NAV": "119.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "81311523.28"
+  },
+  {
+   "Date": "Mar 10 2016",
+   "NAV": "120.36",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "81992752.53"
+  },
+  {
+   "Date": "Mar 11 2016",
+   "NAV": "123.56",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "84172686.13"
+  },
+  {
+   "Date": "Mar 14 2016",
+   "NAV": "122.44",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "83409709.37"
+  },
+  {
+   "Date": "Mar 15 2016",
+   "NAV": "121.76",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "82946473.48"
+  },
+  {
+   "Date": "Mar 16 2016",
+   "NAV": "122.6",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "83518706.05"
+  },
+  {
+   "Date": "Mar 17 2016",
+   "NAV": "119.68",
+   "Shares Outstanding": "681230",
+   "Total Net Assets": "81529516.64"
+  }
+ ]
+}

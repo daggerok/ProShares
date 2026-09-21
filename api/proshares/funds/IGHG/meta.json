@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/IGHG-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T13:35:43Z",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -29,7 +29,16 @@
  },
  "expenseRatio": {
   "display": "0.30%",
-  "value": 0.3
+  "value": 0.3,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.30%",
+   "value": 0.3
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
   "display": "$77.85",
@@ -163,6 +172,222 @@
    "Return of Capital"
   ],
   "rows": [
+   {
+    "Ex-Date": "01-Feb-2016",
+    "Record Date": "03-Feb-2016",
+    "Payable Date": "09-Feb-2016",
+    "Dividend": "0.241138",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2016",
+    "Record Date": "03-Mar-2016",
+    "Payable Date": "09-Mar-2016",
+    "Dividend": "0.212284",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2016",
+    "Record Date": "05-Apr-2016",
+    "Payable Date": "11-Apr-2016",
+    "Dividend": "0.225119",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-May-2016",
+    "Record Date": "04-May-2016",
+    "Payable Date": "10-May-2016",
+    "Dividend": "0.230306",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2016",
+    "Record Date": "03-Jun-2016",
+    "Payable Date": "09-Jun-2016",
+    "Dividend": "0.228668",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2016",
+    "Record Date": "06-Jul-2016",
+    "Payable Date": "12-Jul-2016",
+    "Dividend": "0.215782",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2016",
+    "Record Date": "03-Aug-2016",
+    "Payable Date": "09-Aug-2016",
+    "Dividend": "0.214334",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2016",
+    "Record Date": "06-Sep-2016",
+    "Payable Date": "12-Sep-2016",
+    "Dividend": "0.207471",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Oct-2016",
+    "Record Date": "05-Oct-2016",
+    "Payable Date": "11-Oct-2016",
+    "Dividend": "0.196493",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2016",
+    "Record Date": "03-Nov-2016",
+    "Payable Date": "09-Nov-2016",
+    "Dividend": "0.207164",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2016",
+    "Record Date": "05-Dec-2016",
+    "Payable Date": "09-Dec-2016",
+    "Dividend": "0.196439",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Dec-2016",
+    "Record Date": "23-Dec-2016",
+    "Payable Date": "30-Dec-2016",
+    "Dividend": "0.194977",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2017",
+    "Record Date": "03-Feb-2017",
+    "Payable Date": "09-Feb-2017",
+    "Dividend": "0.210015",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2017",
+    "Record Date": "03-Mar-2017",
+    "Payable Date": "09-Mar-2017",
+    "Dividend": "0.194376",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Apr-2017",
+    "Record Date": "05-Apr-2017",
+    "Payable Date": "11-Apr-2017",
+    "Dividend": "0.236008",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2017",
+    "Record Date": "03-May-2017",
+    "Payable Date": "09-May-2017",
+    "Dividend": "0.208106",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2017",
+    "Record Date": "05-Jun-2017",
+    "Payable Date": "09-Jun-2017",
+    "Dividend": "0.222274",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Jul-2017",
+    "Record Date": "06-Jul-2017",
+    "Payable Date": "12-Jul-2017",
+    "Dividend": "0.208887",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2017",
+    "Record Date": "03-Aug-2017",
+    "Payable Date": "09-Aug-2017",
+    "Dividend": "0.218034",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2017",
+    "Record Date": "06-Sep-2017",
+    "Payable Date": "12-Sep-2017",
+    "Dividend": "0.218530",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Oct-2017",
+    "Record Date": "03-Oct-2017",
+    "Payable Date": "10-Oct-2017",
+    "Dividend": "0.221452",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2017",
+    "Record Date": "02-Nov-2017",
+    "Payable Date": "09-Nov-2017",
+    "Dividend": "0.217324",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2017",
+    "Record Date": "04-Dec-2017",
+    "Payable Date": "11-Dec-2017",
+    "Dividend": "0.219090",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Dec-2017",
+    "Record Date": "27-Dec-2017",
+    "Payable Date": "04-Jan-2018",
+    "Dividend": "0.217590",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
    {
     "Ex-Date": "01-Feb-2018",
     "Record Date": "02-Feb-2018",
@@ -1120,6 +1345,7 @@
    "Maturity Date"
   ],
   "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
   "pages": [
    "./holdings/001.json"
   ]

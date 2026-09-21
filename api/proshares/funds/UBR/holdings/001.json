@@ -1,0 +1,71 @@
+{
+ "ticker": "UBR",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI Brazil Capped (EWZ) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "86.5201960892",
+   "Market Value": "—",
+   "Shares Held": "1806",
+   "Exposure Value": "2686081.86"
+  },
+  {
+   "Name": "iShares MSCI Brazil Capped (EWZ) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "39.5233453896",
+   "Market Value": "—",
+   "Shares Held": "825",
+   "Exposure Value": "1227030.75"
+  },
+  {
+   "Name": "iShares MSCI Brazil Capped (EWZ) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "37.1758982089",
+   "Market Value": "—",
+   "Shares Held": "776",
+   "Exposure Value": "1154152.56"
+  },
+  {
+   "Name": "iShares MSCI Brazil Capped (EWZ) SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "27.2258841314",
+   "Market Value": "—",
+   "Shares Held": "568.31",
+   "Exposure Value": "845247.2"
+  },
+  {
+   "Name": "iShares MSCI Brazil Capped (EWZ) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "9.6293241495",
+   "Market Value": "—",
+   "Shares Held": "201",
+   "Exposure Value": "298949.31"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3104572.09",
+   "Shares Held": "3104572.09",
+   "Exposure Value": "—"
+  }
+ ]
+}

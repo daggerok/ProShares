@@ -1,0 +1,287 @@
+{
+ "ticker": "QB",
+ "name": "Nasdaq-100 Dynamic Buffer ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > DynamicBuffer",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/qb",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/QB-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/QB-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=QB&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/QB-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74349Y597",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$49.22",
+  "value": 49.22,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$49.17",
+  "value": 49.17,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.10%",
+  "value": -0.1016,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$3,445,118",
+  "value": 3445120.2153,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 0.6226,
+  "indicatedYieldText": "0.62%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jun 26 2025",
+   "mo1": 1.66,
+   "mo3": 4.34,
+   "mo6": 13.14,
+   "ytd": 15.49,
+   "yr1": 20.46,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 18.86,
+   "mo1Text": "1.66%",
+   "ytdText": "15.49%",
+   "yr1Text": "20.46%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "18.86%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jun 26 2025",
+    "mo1": 1.44,
+    "mo3": 4.3,
+    "mo6": 13.1,
+    "ytd": 15.48,
+    "yr1": 20.75,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 18.85,
+    "mo1Text": "1.44%",
+    "ytdText": "15.48%",
+    "yr1Text": "20.75%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "18.85%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jun 26 2025",
+   "mo1": 0.53,
+   "mo3": 8.86,
+   "mo6": 11.27,
+   "ytd": 11.27,
+   "yr1": 17.43,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 17.94,
+   "mo1Text": "0.53%",
+   "ytdText": "11.27%",
+   "yr1Text": "17.43%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "17.94%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jun 26 2025",
+    "mo1": 0.53,
+    "mo3": 8.89,
+    "mo6": 11.31,
+    "ytd": 11.31,
+    "yr1": 17.33,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 17.98,
+    "mo1Text": "0.53%",
+    "ytdText": "11.31%",
+    "yr1Text": "17.33%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "17.98%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.037882",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.164657",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.088108",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.076610",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 103,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 313,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/QB-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Expiration Date 9/21/": "2026",
+   "Strike Price - Short Call": "29,875",
+   "Strike Price - Long Put": "29,625",
+   "Strike Price - Short Put": "29,010",
+   "FIGI - Short Call BBG024T56KJ": "5",
+   "FIGI - Long Put BBG024T8DYT": "0",
+   "FIGI - Short Put BBG02544T1W": "4",
+   "Total Number of Holdings": "101",
+   "Price/Earnings Ratio": "7.92",
+   "Price/Book Ratio": "32.71",
+   "Dividend Yield ( % )": "0.99",
+   "Avg. Index Market Capitalization": "$299.14 billion",
+   "": "2025"
+  },
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetqb.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_qb.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QB&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QB&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QB&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QB&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QB&document-label=semi-annual-report"
+ }
+}

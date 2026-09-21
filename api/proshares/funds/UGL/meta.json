@@ -1,0 +1,248 @@
+{
+ "ticker": "UGL",
+ "name": "Ultra Gold",
+ "category": "Commodity",
+ "categoryPath": "Commodity > Commodity",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/ugl",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/UGL-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/UGL-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UGL&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/UGL-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347W601",
+  "isin": null,
+  "indexTicker": "BCOMGC",
+  "indexName": "Bloomberg Gold Subindex SM (BCOMGC)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$51.09",
+  "value": 51.09,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$50.87",
+  "value": 50.87,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.43%",
+  "value": -0.4306,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$886,472,353",
+  "value": 868589625.46,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Dec 03 2008",
+   "mo1": 18.72,
+   "mo3": -8.5,
+   "mo6": -32.99,
+   "ytd": -6.18,
+   "yr1": 39.22,
+   "yr3": 53.11,
+   "yr5": 28.55,
+   "yr10": 16.99,
+   "sinceInception": 12.73,
+   "mo1Text": "18.72%",
+   "ytdText": "-6.18%",
+   "yr1Text": "39.22%",
+   "yr3Text": "53.11%",
+   "yr5Text": "28.55%",
+   "yr10Text": "16.99%",
+   "sinceInceptionText": "12.73%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Dec 03 2008",
+    "mo1": 19.73,
+    "mo3": -7.01,
+    "mo6": -33.25,
+    "ytd": -4.7,
+    "yr1": 40.38,
+    "yr3": 53.54,
+    "yr5": 28.79,
+    "yr10": 17.1,
+    "sinceInception": 12.79,
+    "mo1Text": "19.73%",
+    "ytdText": "-4.70%",
+    "yr1Text": "40.38%",
+    "yr3Text": "53.54%",
+    "yr5Text": "28.79%",
+    "yr10Text": "17.10%",
+    "sinceInceptionText": "12.79%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Dec 03 2008",
+   "mo1": -23.15,
+   "mo3": -27.27,
+   "mo6": -21.2,
+   "ytd": -21.2,
+   "yr1": 28.06,
+   "yr3": 44.54,
+   "yr5": 25.2,
+   "yr10": 14.68,
+   "sinceInception": 11.75,
+   "mo1Text": "-23.15%",
+   "ytdText": "-21.20%",
+   "yr1Text": "28.06%",
+   "yr3Text": "44.54%",
+   "yr5Text": "25.20%",
+   "yr10Text": "14.68%",
+   "sinceInceptionText": "11.75%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Dec 03 2008",
+    "mo1": -22.9,
+    "mo3": -28.62,
+    "mo6": -20.98,
+    "ytd": -20.98,
+    "yr1": 26.57,
+    "yr3": 44.43,
+    "yr5": 25.12,
+    "yr10": 14.57,
+    "sinceInception": 11.72,
+    "mo1Text": "-22.90%",
+    "ytdText": "-20.98%",
+    "yr1Text": "26.57%",
+    "yr3Text": "44.43%",
+    "yr5Text": "25.12%",
+    "yr10Text": "14.57%",
+    "sinceInceptionText": "11.72%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 6,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 4477,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/UGL-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json",
+   "./history/005.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Commodity",
+   "dailyObjective": "+2x",
+   "benchmark": "Bloomberg Gold Subindex SM (BCOMGC)"
+  },
+  "splits": [
+   {
+    "date": "Jun 13 2025",
+    "splitType": "Forward",
+    "ratio": 4,
+    "preSplitCusip": "74347W601",
+    "postSplitCusip": ""
+   }
+  ],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetugl.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_ugl.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UGL&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UGL&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UGL&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UGL&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UGL&document-label=semi-annual-report"
+ }
+}

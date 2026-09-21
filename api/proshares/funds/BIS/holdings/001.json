@@ -1,0 +1,71 @@
+{
+ "ticker": "BIS",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NASDAQ Biotechnology Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-50.3493144114",
+   "Market Value": "—",
+   "Shares Held": "-141",
+   "Exposure Value": "-982834.86"
+  },
+  {
+   "Name": "NASDAQ Bio Index SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-45.3500917039",
+   "Market Value": "—",
+   "Shares Held": "-127",
+   "Exposure Value": "-885248.42"
+  },
+  {
+   "Name": "NASDAQ Biotechnology Index SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-39.2796069876",
+   "Market Value": "—",
+   "Shares Held": "-110",
+   "Exposure Value": "-766750.6"
+  },
+  {
+   "Name": "NASDAQ Biotechnology Index SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-38.2083449789",
+   "Market Value": "—",
+   "Shares Held": "-107",
+   "Exposure Value": "-745839.22"
+  },
+  {
+   "Name": "NASDAQ Biotechnology Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-26.4244628826",
+   "Market Value": "—",
+   "Shares Held": "-74",
+   "Exposure Value": "-515814.04"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1952032.26",
+   "Shares Held": "1952032.26",
+   "Exposure Value": "—"
+  }
+ ]
+}

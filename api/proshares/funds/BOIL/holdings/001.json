@@ -1,0 +1,44 @@
+{
+ "ticker": "BOIL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NATURAL GAS FUTR NOV26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "199.9665650380",
+   "Market Value": "—",
+   "Shares Held": "25857",
+   "Exposure Value": "786828510"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "35.6190880225",
+   "Market Value": "—",
+   "Shares Held": "1400000",
+   "Exposure Value": "140154000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "393480034.95",
+   "Shares Held": "393480034.95",
+   "Exposure Value": "—"
+  }
+ ]
+}

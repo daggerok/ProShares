@@ -1,0 +1,44 @@
+{
+ "ticker": "KOLD",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NATURAL GAS FUTR NOV26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-199.9651386380",
+   "Market Value": "—",
+   "Shares Held": "-7042",
+   "Exposure Value": "-214288060"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "28.0256072537",
+   "Market Value": "—",
+   "Shares Held": "300000",
+   "Exposure Value": "30033000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "107162709.19",
+   "Shares Held": "107162709.19",
+   "Exposure Value": "—"
+  }
+ ]
+}

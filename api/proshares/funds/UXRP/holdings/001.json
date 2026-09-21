@@ -1,0 +1,53 @@
+{
+ "ticker": "UXRP",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CME XRP FUTURES DIGITAL ASSETS 25/SEP/2026 XRLU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "132.0048165437",
+   "Market Value": "—",
+   "Shares Held": "906",
+   "Exposure Value": "64076850"
+  },
+  {
+   "Name": "XRP FUTURES DIGITAL ASSETS 30/OCT/2026 XMLV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "53.0900524171",
+   "Market Value": "—",
+   "Shares Held": "1800",
+   "Exposure Value": "25770600"
+  },
+  {
+   "Name": "CME XRP FUTURES DIGITAL ASSETS 30/OCT/2026 XRLV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "14.6679228737",
+   "Market Value": "—",
+   "Shares Held": "100",
+   "Exposure Value": "7120000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "48541296.96",
+   "Shares Held": "48541296.96",
+   "Exposure Value": "—"
+  }
+ ]
+}

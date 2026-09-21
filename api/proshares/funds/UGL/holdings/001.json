@@ -1,0 +1,71 @@
+{
+ "ticker": "UGL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "GOLD 100 OZ FUTR DEC26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "86.4483923973",
+   "Market Value": "—",
+   "Shares Held": "1697",
+   "Exposure Value": "750905530"
+  },
+  {
+   "Name": "BLOOMBERG GOLD SUBINDEX SWAP - CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "63.8937043812",
+   "Market Value": "—",
+   "Shares Held": "1436214.9246",
+   "Exposure Value": "554991650.18"
+  },
+  {
+   "Name": "BLOOMBERG GOLD SUBINDEX SWAP - UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "37.9185569259",
+   "Market Value": "—",
+   "Shares Held": "852340.5851",
+   "Exposure Value": "329367074.34"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "34.5756485356",
+   "Market Value": "—",
+   "Shares Held": "3000000",
+   "Exposure Value": "300330000"
+  },
+  {
+   "Name": "BLOOMBERG GOLD SUBINDEX SWAP - GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "11.7005854163",
+   "Market Value": "—",
+   "Shares Held": "263008",
+   "Exposure Value": "101633287.21"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "868617112.68",
+   "Shares Held": "868617112.68",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "ticker": "UCYB",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "First Trust Nasdaq Cybersecurity (CIBR) SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "58.5228016264",
+   "Market Value": "—",
+   "Shares Held": "2592",
+   "Exposure Value": "5834280.96"
+  },
+  {
+   "Name": "FIRST TRUST NASDAQ CIBR SWAP Societe Generale SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "57.0100594547",
+   "Market Value": "—",
+   "Shares Held": "2525",
+   "Exposure Value": "5683472"
+  },
+  {
+   "Name": "First Trust Nasdaq Cybersecurity (CIBR) SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "49.6721310101",
+   "Market Value": "—",
+   "Shares Held": "2200",
+   "Exposure Value": "4951936"
+  },
+  {
+   "Name": "First Trust Nasdaq Cybersecurity (CIBR) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.7093143627",
+   "Market Value": "—",
+   "Shares Held": "1493",
+   "Exposure Value": "3360563.84"
+  },
+  {
+   "Name": "First Trust Nasdaq Cybersecurity (CIBR) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "0.9031296547",
+   "Market Value": "—",
+   "Shares Held": "40",
+   "Exposure Value": "90035.2"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "9969244.12",
+   "Shares Held": "9969244.12",
+   "Exposure Value": "—"
+  }
+ ]
+}

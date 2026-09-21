@@ -1,0 +1,647 @@
+{
+ "ticker": "SKYU",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 70,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ISE Cloud Computing Index SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "59.1127965516",
+   "Market Value": "—",
+   "Shares Held": "1913",
+   "Exposure Value": "3453902.37"
+  },
+  {
+   "Name": "ISE Cloud Computing Index SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "32.8473093227",
+   "Market Value": "—",
+   "Shares Held": "1063",
+   "Exposure Value": "1919235.87"
+  },
+  {
+   "Name": "ISE Cloud Computing Index SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "29.2937434035",
+   "Market Value": "—",
+   "Shares Held": "948",
+   "Exposure Value": "1711604.52"
+  },
+  {
+   "Name": "ISE Cloud Computing Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "16.9644146925",
+   "Market Value": "—",
+   "Shares Held": "549",
+   "Exposure Value": "991214.01"
+  },
+  {
+   "Name": "DIGITALOCEAN HOLDINGS INC",
+   "Ticker": "DOCN",
+   "Identifier": "—",
+   "Weight": "2.5725524319",
+   "Market Value": "150311.7",
+   "Shares Held": "1155",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "EVERPURE INC-A",
+   "Ticker": "P",
+   "Identifier": "—",
+   "Weight": "2.4524911881",
+   "Market Value": "143296.64",
+   "Shares Held": "1376",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ALPHABET INC-CL A",
+   "Ticker": "GOOGL",
+   "Identifier": "—",
+   "Weight": "2.2553278377",
+   "Market Value": "131776.58",
+   "Shares Held": "377",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ARISTA NETWORKS INC",
+   "Ticker": "ANET",
+   "Identifier": "—",
+   "Weight": "2.2283735916",
+   "Market Value": "130201.67",
+   "Shares Held": "653",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NUTANIX INC - A",
+   "Ticker": "NTNX",
+   "Identifier": "—",
+   "Weight": "2.2279513699",
+   "Market Value": "130177",
+   "Shares Held": "1865",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ORACLE CORP",
+   "Ticker": "ORCL",
+   "Identifier": "—",
+   "Weight": "2.1675769119",
+   "Market Value": "126649.38",
+   "Shares Held": "858",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "INTL BUSINESS MACHINES CORP",
+   "Ticker": "IBM",
+   "Identifier": "—",
+   "Weight": "2.1489982994",
+   "Market Value": "125563.85",
+   "Shares Held": "547",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "AMZN",
+   "Identifier": "—",
+   "Weight": "2.1363585172",
+   "Market Value": "124825.32",
+   "Shares Held": "492",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "MSFT",
+   "Identifier": "—",
+   "Weight": "2.1296365142",
+   "Market Value": "124432.56",
+   "Shares Held": "252",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LUMEN TECHNOLOGIES INC",
+   "Ticker": "LUMN",
+   "Identifier": "—",
+   "Weight": "1.8673462724",
+   "Market Value": "109107.2",
+   "Shares Held": "17048",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COREWEAVE INC-CL A",
+   "Ticker": "CRWV",
+   "Identifier": "—",
+   "Weight": "1.7461434724",
+   "Market Value": "102025.44",
+   "Shares Held": "1254",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CLOUDFLARE INC - CLASS A",
+   "Ticker": "NET",
+   "Identifier": "—",
+   "Weight": "1.5451980969",
+   "Market Value": "90284.4",
+   "Shares Held": "279",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MONGODB INC",
+   "Ticker": "MDB",
+   "Identifier": "—",
+   "Weight": "1.5426685317",
+   "Market Value": "90136.6",
+   "Shares Held": "235",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CISCO SYSTEMS INC",
+   "Ticker": "CSCO",
+   "Identifier": "—",
+   "Weight": "1.4450391231",
+   "Market Value": "84432.21",
+   "Shares Held": "771",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AKAMAI TECHNOLOGIES INC",
+   "Ticker": "AKAM",
+   "Identifier": "—",
+   "Weight": "1.4042373045",
+   "Market Value": "82048.2",
+   "Shares Held": "785",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DELL TECHNOLOGIES -C",
+   "Ticker": "DELL",
+   "Identifier": "—",
+   "Weight": "1.3611114692",
+   "Market Value": "79528.4",
+   "Shares Held": "140",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HEWLETT PACKARD ENTERPRISE",
+   "Ticker": "HPE",
+   "Identifier": "—",
+   "Weight": "1.2728306697",
+   "Market Value": "74370.24",
+   "Shares Held": "1224",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RUBRIK INC-A",
+   "Ticker": "RBRK",
+   "Identifier": "—",
+   "Weight": "1.2546809536",
+   "Market Value": "73309.77",
+   "Shares Held": "687",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NETSKOPE INC-CL A",
+   "Ticker": "NTSK",
+   "Identifier": "—",
+   "Weight": "1.2500337760",
+   "Market Value": "73038.24",
+   "Shares Held": "4176",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NETAPP INC",
+   "Ticker": "NTAP",
+   "Identifier": "—",
+   "Weight": "1.1678709987",
+   "Market Value": "68237.55",
+   "Shares Held": "345",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GITLAB INC-CL A",
+   "Ticker": "GTLB",
+   "Identifier": "—",
+   "Weight": "1.1568360699",
+   "Market Value": "67592.79",
+   "Shares Held": "1373",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FASTLY INC - CLASS A",
+   "Ticker": "FSLY",
+   "Identifier": "—",
+   "Weight": "1.1454463516",
+   "Market Value": "66927.3",
+   "Shares Held": "2805",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TWILIO INC - A",
+   "Ticker": "TWLO",
+   "Identifier": "—",
+   "Weight": "1.1309559478",
+   "Market Value": "66080.64",
+   "Shares Held": "271",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RINGCENTRAL INC-CLASS A",
+   "Ticker": "RNG",
+   "Identifier": "—",
+   "Weight": "1.1290192387",
+   "Market Value": "65967.48",
+   "Shares Held": "918",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SENTINELONE INC -CLASS A",
+   "Ticker": "S",
+   "Identifier": "—",
+   "Weight": "1.1145392748",
+   "Market Value": "65121.43",
+   "Shares Held": "2893",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ATLASSIAN CORP-CL A",
+   "Ticker": "TEAM",
+   "Identifier": "—",
+   "Weight": "1.0812193556",
+   "Market Value": "63174.58",
+   "Shares Held": "329",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "APPLOVIN CORP-CLASS A",
+   "Ticker": "APP",
+   "Identifier": "—",
+   "Weight": "1.0808380382",
+   "Market Value": "63152.3",
+   "Shares Held": "205",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SALESFORCE INC",
+   "Ticker": "CRM",
+   "Identifier": "—",
+   "Weight": "1.0098435138",
+   "Market Value": "59004.16",
+   "Shares Held": "248",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SERVICENOW INC",
+   "Ticker": "NOW",
+   "Identifier": "—",
+   "Weight": "1.0016092485",
+   "Market Value": "58523.04",
+   "Shares Held": "432",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WORKIVA INC",
+   "Ticker": "WK",
+   "Identifier": "—",
+   "Weight": "0.9994630544",
+   "Market Value": "58397.64",
+   "Shares Held": "798",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SHOPIFY INC - CLASS A",
+   "Ticker": "SHOP",
+   "Identifier": "—",
+   "Weight": "0.9544744459",
+   "Market Value": "55769",
+   "Shares Held": "434",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ADOBE INC",
+   "Ticker": "ADBE",
+   "Identifier": "—",
+   "Weight": "0.9287262787",
+   "Market Value": "54264.56",
+   "Shares Held": "218",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HUBSPOT INC",
+   "Ticker": "HUBS",
+   "Identifier": "—",
+   "Weight": "0.9062175981",
+   "Market Value": "52949.4",
+   "Shares Held": "245",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FIVE9 INC",
+   "Ticker": "FIVN",
+   "Identifier": "—",
+   "Weight": "0.8830344237",
+   "Market Value": "51594.83",
+   "Shares Held": "1589",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SAP SE-SPONSORED ADR",
+   "Ticker": "SAP",
+   "Identifier": "—",
+   "Weight": "0.6918455025",
+   "Market Value": "40423.85",
+   "Shares Held": "193",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WIX.COM LTD",
+   "Ticker": "WIX",
+   "Identifier": "—",
+   "Weight": "0.6488329671",
+   "Market Value": "37910.67",
+   "Shares Held": "483",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SERVICETITAN INC-A",
+   "Ticker": "TTAN",
+   "Identifier": "—",
+   "Weight": "0.6141825445",
+   "Market Value": "35886.08",
+   "Shares Held": "652",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "APPIAN CORP-A",
+   "Ticker": "APPN",
+   "Identifier": "—",
+   "Weight": "0.5124330938",
+   "Market Value": "29940.96",
+   "Shares Held": "798",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ZSCALER INC",
+   "Ticker": "ZS",
+   "Identifier": "—",
+   "Weight": "0.3815917603",
+   "Market Value": "22296.03",
+   "Shares Held": "113",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DOCUSIGN INC",
+   "Ticker": "DOCU",
+   "Identifier": "—",
+   "Weight": "0.3806420609",
+   "Market Value": "22240.54",
+   "Shares Held": "322",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DROPBOX INC-CLASS A",
+   "Ticker": "DBX",
+   "Identifier": "—",
+   "Weight": "0.3783544987",
+   "Market Value": "22106.88",
+   "Shares Held": "606",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CROWDSTRIKE HOLDINGS INC - A",
+   "Ticker": "CRWD",
+   "Identifier": "—",
+   "Weight": "0.3741942368",
+   "Market Value": "21863.8",
+   "Shares Held": "92",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TRADE DESK INC/THE -CLASS A",
+   "Ticker": "TTD",
+   "Identifier": "—",
+   "Weight": "0.3699833151",
+   "Market Value": "21617.76",
+   "Shares Held": "1553",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SNOWFLAKE INC",
+   "Ticker": "SNOW",
+   "Identifier": "—",
+   "Weight": "0.3641259510",
+   "Market Value": "21275.52",
+   "Shares Held": "64",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WORKDAY INC-CLASS A",
+   "Ticker": "WDAY",
+   "Identifier": "—",
+   "Weight": "0.3583486842",
+   "Market Value": "20937.96",
+   "Shares Held": "108",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DATADOG INC - CLASS A",
+   "Ticker": "DDOG",
+   "Identifier": "—",
+   "Weight": "0.3541528235",
+   "Market Value": "20692.8",
+   "Shares Held": "90",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PALO ALTO NETWORKS INC",
+   "Ticker": "PANW",
+   "Identifier": "—",
+   "Weight": "0.3484652382",
+   "Market Value": "20360.48",
+   "Shares Held": "56",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PAYCOM SOFTWARE INC",
+   "Ticker": "PAYC",
+   "Identifier": "—",
+   "Weight": "0.3446732864",
+   "Market Value": "20138.92",
+   "Shares Held": "89",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BOX INC - CLASS A",
+   "Ticker": "BOX",
+   "Identifier": "—",
+   "Weight": "0.3439578884",
+   "Market Value": "20097.12",
+   "Shares Held": "596",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "QUALYS INC",
+   "Ticker": "QLYS",
+   "Identifier": "—",
+   "Weight": "0.3413619178",
+   "Market Value": "19945.44",
+   "Shares Held": "114",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ASANA INC - CL A",
+   "Ticker": "ASAN",
+   "Identifier": "—",
+   "Weight": "0.3387069012",
+   "Market Value": "19790.31",
+   "Shares Held": "2081",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "APPFOLIO INC - A",
+   "Ticker": "APPF",
+   "Identifier": "—",
+   "Weight": "0.3342745142",
+   "Market Value": "19531.33",
+   "Shares Held": "91",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ZOOM COMMUNICATIONS INC",
+   "Ticker": "ZM",
+   "Identifier": "—",
+   "Weight": "0.3342414826",
+   "Market Value": "19529.4",
+   "Shares Held": "220",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VEEVA SYSTEMS INC-CLASS A",
+   "Ticker": "VEEV",
+   "Identifier": "—",
+   "Weight": "0.3340078658",
+   "Market Value": "19515.75",
+   "Shares Held": "75",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "OPEN TEXT CORP",
+   "Ticker": "OTEX",
+   "Identifier": "—",
+   "Weight": "0.3304163282",
+   "Market Value": "19305.9",
+   "Shares Held": "855",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Q2 HOLDINGS INC",
+   "Ticker": "QTWO",
+   "Identifier": "—",
+   "Weight": "0.3296896344",
+   "Market Value": "19263.44",
+   "Shares Held": "328",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PAYLOCITY HOLDING CORP",
+   "Ticker": "PCTY",
+   "Identifier": "—",
+   "Weight": "0.3271677708",
+   "Market Value": "19116.09",
+   "Shares Held": "133",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BLACKBAUD INC",
+   "Ticker": "BLKB",
+   "Identifier": "—",
+   "Weight": "0.3248822624",
+   "Market Value": "18982.55",
+   "Shares Held": "443",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ELASTIC NV",
+   "Ticker": "ESTC",
+   "Identifier": "—",
+   "Weight": "0.3244497718",
+   "Market Value": "18957.28",
+   "Shares Held": "218",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TOAST INC-CLASS A",
+   "Ticker": "TOST",
+   "Identifier": "—",
+   "Weight": "0.3181210666",
+   "Market Value": "18587.5",
+   "Shares Held": "625",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BLACKLINE INC",
+   "Ticker": "BL",
+   "Identifier": "—",
+   "Weight": "0.3087120424",
+   "Market Value": "18037.74",
+   "Shares Held": "641",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "INTUIT INC",
+   "Ticker": "INTU",
+   "Identifier": "—",
+   "Weight": "0.3061528686",
+   "Market Value": "17888.21",
+   "Shares Held": "59",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FIGMA INC-CL A",
+   "Ticker": "FIG",
+   "Identifier": "—",
+   "Weight": "0.3005708815",
+   "Market Value": "17562.06",
+   "Shares Held": "774",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KLAVIYO INC-A",
+   "Ticker": "KVYO",
+   "Identifier": "—",
+   "Weight": "0.2731468345",
+   "Market Value": "15959.7",
+   "Shares Held": "1035",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RACKSPACE TECHNOLOGY INC",
+   "Ticker": "RXT",
+   "Identifier": "—",
+   "Weight": "0.2131886082",
+   "Market Value": "12456.4",
+   "Shares Held": "3278",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "2208410.75",
+   "Shares Held": "2208410.75",
+   "Exposure Value": "—"
+  }
+ ]
+}

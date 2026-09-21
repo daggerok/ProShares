@@ -1,0 +1,71 @@
+{
+ "ticker": "MYY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "S&P MidCap 400 Index SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-38.7971683288",
+   "Market Value": "—",
+   "Shares Held": "-370",
+   "Exposure Value": "-1350770.1"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-20.3422990697",
+   "Market Value": "—",
+   "Shares Held": "-194",
+   "Exposure Value": "-708241.62"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-16.0431533900",
+   "Market Value": "—",
+   "Shares Held": "-153",
+   "Exposure Value": "-558561.69"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-14.1557235794",
+   "Market Value": "—",
+   "Shares Held": "-135",
+   "Exposure Value": "-492848.55"
+  },
+  {
+   "Name": "S&P MID 400 EMINI EQUITY INDEX 18/DEC/2026 FAZ6 INDEX",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-10.5611745437",
+   "Market Value": "—",
+   "Shares Held": "-1",
+   "Exposure Value": "-367700"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3481620.33",
+   "Shares Held": "3481620.33",
+   "Exposure Value": "—"
+  }
+ ]
+}

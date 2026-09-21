@@ -1,0 +1,71 @@
+{
+ "ticker": "ZSL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "BLOOMBERG SILVER SUBINDEX SWAP - UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-69.9362230587",
+   "Market Value": "—",
+   "Shares Held": "-93332.108",
+   "Exposure Value": "-45371770.99"
+  },
+  {
+   "Name": "SILVER FUTURE DEC26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-63.1372740631",
+   "Market Value": "—",
+   "Shares Held": "-122",
+   "Exposure Value": "-40960890"
+  },
+  {
+   "Name": "BLOOMBERG SILVER SUBINDEX SWAP - GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-51.3633351852",
+   "Market Value": "—",
+   "Shares Held": "-68546",
+   "Exposure Value": "-33322438.35"
+  },
+  {
+   "Name": "BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-15.6592171610",
+   "Market Value": "—",
+   "Shares Held": "-20897.722",
+   "Exposure Value": "-10159061.84"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "10.8016958482",
+   "Market Value": "—",
+   "Shares Held": "70000",
+   "Exposure Value": "7007700"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "64875924.1",
+   "Shares Held": "64875924.1",
+   "Exposure Value": "—"
+  }
+ ]
+}

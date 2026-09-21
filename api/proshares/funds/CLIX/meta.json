@@ -1,0 +1,458 @@
+{
+ "ticker": "CLIX",
+ "name": "Long Online/Short Stores ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/clix",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/CLIX-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/CLIX-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=CLIX&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/CLIX-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347B375",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.65%",
+  "value": 0.65,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.65%",
+   "value": 0.65
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$58.00",
+  "value": 58,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$57.99",
+  "value": 57.99,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.02%",
+  "value": -0.0172,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$6,090,063",
+  "value": 6090068.5001,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 0.53,
+  "dividendYieldText": "0.53%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 0.53,
+  "yield12MText": "0.53%",
+  "indicatedYield": 0.6397,
+  "indicatedYieldText": "0.64%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 16 2017",
+   "mo1": -0.71,
+   "mo3": 2.2,
+   "mo6": 10.19,
+   "ytd": -1.32,
+   "yr1": 6.33,
+   "yr3": 17.8,
+   "yr5": -3.52,
+   "yr10": null,
+   "sinceInception": 4.93,
+   "mo1Text": "-0.71%",
+   "ytdText": "-1.32%",
+   "yr1Text": "6.33%",
+   "yr3Text": "17.80%",
+   "yr5Text": "-3.52%",
+   "yr10Text": "—",
+   "sinceInceptionText": "4.93%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 16 2017",
+    "mo1": -0.74,
+    "mo3": 2.3,
+    "mo6": 10.29,
+    "ytd": -1.31,
+    "yr1": 6.46,
+    "yr3": 17.85,
+    "yr5": -3.51,
+    "yr10": null,
+    "sinceInception": 4.94,
+    "mo1Text": "-0.74%",
+    "ytdText": "-1.31%",
+    "yr1Text": "6.46%",
+    "yr3Text": "17.85%",
+    "yr5Text": "-3.51%",
+    "yr10Text": "—",
+    "sinceInceptionText": "4.94%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 16 2017",
+   "mo1": -5.18,
+   "mo3": 3.34,
+   "mo6": -8.46,
+   "ytd": -8.46,
+   "yr1": 6.49,
+   "yr3": 16.89,
+   "yr5": -7.58,
+   "yr10": null,
+   "sinceInception": 4.12,
+   "mo1Text": "-5.18%",
+   "ytdText": "-8.46%",
+   "yr1Text": "6.49%",
+   "yr3Text": "16.89%",
+   "yr5Text": "-7.58%",
+   "yr10Text": "—",
+   "sinceInceptionText": "4.12%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 16 2017",
+    "mo1": -5.1,
+    "mo3": 3.41,
+    "mo6": -8.45,
+    "ytd": -8.45,
+    "yr1": 6.51,
+    "yr3": 16.9,
+    "yr5": -7.59,
+    "yr10": null,
+    "sinceInception": 4.13,
+    "mo1Text": "-5.10%",
+    "ytdText": "-8.45%",
+    "yr1Text": "6.51%",
+    "yr3Text": "16.90%",
+    "yr5Text": "-7.59%",
+    "yr10Text": "—",
+    "sinceInceptionText": "4.13%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.153005",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.056548",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.001395",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.092739",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.098571",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.036406",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.051776",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.134142",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.092762",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 30,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 2222,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/CLIX-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Price/Book Ratio": "4.22",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "34",
+   "Price/Earnings Ratio": "16.56",
+   "Price/Book Ratio": "3.31",
+   "Avg. Index Market Capitalization": "$75.03 billion",
+   "": "2020"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Index Country Weightings (Long)",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 71.98879099999999
+     },
+     {
+      "Country": "China",
+      "Weight": 13.852523
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 4.849004
+     },
+     {
+      "Country": "Israel",
+      "Weight": 4.297365
+     },
+     {
+      "Country": "Brazil",
+      "Weight": 2.590776
+     },
+     {
+      "Country": "Singapore",
+      "Weight": 2.421541
+     }
+    ]
+   },
+   {
+    "label": "Index Country Weightings (Short)",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 100
+     }
+    ]
+   },
+   {
+    "label": "Top 10 Index Holdings (Long)",
+    "rows": [
+     {
+      "Company": "Amazon.com Inc.",
+      "Weight": 22.851786
+     },
+     {
+      "Company": "eBay Inc.",
+      "Weight": 11.779285999999999
+     },
+     {
+      "Company": "Alibaba Group Holding Ltd.-Sponsored ADR",
+      "Weight": 9.658384
+     },
+     {
+      "Company": "Wayfair Inc.",
+      "Weight": 5.334357
+     },
+     {
+      "Company": "Coupang Inc.",
+      "Weight": 4.849004
+     },
+     {
+      "Company": "Etsy Inc.",
+      "Weight": 4.82458
+     },
+     {
+      "Company": "Revolve Group Inc.",
+      "Weight": 4.810272
+     },
+     {
+      "Company": "Carvana Co.",
+      "Weight": 4.47482
+     },
+     {
+      "Company": "Bed Bath Beyond Inc.",
+      "Weight": 3.939274
+     },
+     {
+      "Company": "Chewy Inc.-Class A",
+      "Weight": 3.831772
+     }
+    ]
+   },
+   {
+    "label": "Top 10 Index Holdings (Short)",
+    "rows": [
+     {
+      "Company": "Bath & Body Works Inc.",
+      "Weight": 3.7657629999999997
+     },
+     {
+      "Company": "Dollar Tree",
+      "Weight": 3.726082
+     },
+     {
+      "Company": "Grocery Outlet Holding Corp.",
+      "Weight": 3.637403
+     },
+     {
+      "Company": "Home Depot Inc.",
+      "Weight": 3.278305
+     },
+     {
+      "Company": "Advance Auto Parts Inc.",
+      "Weight": 3.257828
+     },
+     {
+      "Company": "Sally Beauty Holdings Inc.",
+      "Weight": 3.213896
+     },
+     {
+      "Company": "Dollar General Corp.",
+      "Weight": 3.2069889999999996
+     },
+     {
+      "Company": "Sherwin-Williams Co.",
+      "Weight": 3.193295
+     },
+     {
+      "Company": "Weis Markets Inc.",
+      "Weight": 3.1435039999999996
+     },
+     {
+      "Company": "Tractor Supply Co.",
+      "Weight": 3.061924
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetclix.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_clix.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=CLIX&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=CLIX&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=CLIX&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=CLIX&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=CLIX&document-label=semi-annual-report"
+ }
+}

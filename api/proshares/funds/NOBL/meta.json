@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/NOBL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T13:35:43Z",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -29,7 +29,16 @@
  },
  "expenseRatio": {
   "display": "0.35%",
-  "value": 0.35
+  "value": 0.35,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.35%",
+   "value": 0.35
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
   "display": "$55.66",
@@ -163,6 +172,78 @@
    "Return of Capital"
   ],
   "rows": [
+   {
+    "Ex-Date": "23-Mar-2016",
+    "Record Date": "28-Mar-2016",
+    "Payable Date": "01-Apr-2016",
+    "Dividend": "0.102733",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Jun-2016",
+    "Record Date": "24-Jun-2016",
+    "Payable Date": "30-Jun-2016",
+    "Dividend": "0.123345",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Sep-2016",
+    "Record Date": "23-Sep-2016",
+    "Payable Date": "29-Sep-2016",
+    "Dividend": "0.136709",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Dec-2016",
+    "Record Date": "23-Dec-2016",
+    "Payable Date": "30-Dec-2016",
+    "Dividend": "0.211859",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Mar-2017",
+    "Record Date": "24-Mar-2017",
+    "Payable Date": "30-Mar-2017",
+    "Dividend": "0.096933",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2017",
+    "Record Date": "23-Jun-2017",
+    "Payable Date": "29-Jun-2017",
+    "Dividend": "0.107612",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "27-Sep-2017",
+    "Record Date": "28-Sep-2017",
+    "Payable Date": "05-Oct-2017",
+    "Dividend": "0.166467",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Dec-2017",
+    "Record Date": "27-Dec-2017",
+    "Payable Date": "04-Jan-2018",
+    "Dividend": "0.186130",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
    {
     "Ex-Date": "21-Mar-2018",
     "Record Date": "22-Mar-2018",
@@ -487,6 +568,7 @@
    "Shares Held"
   ],
   "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
   "pages": [
    "./holdings/001.json"
   ]

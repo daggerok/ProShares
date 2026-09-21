@@ -1,0 +1,53 @@
+{
+ "ticker": "YCL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "YEN/US DOLLAR FORWARD - GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "106.6190150008",
+   "Market Value": "—",
+   "Shares Held": "5240247056",
+   "Exposure Value": "33484088.72"
+  },
+  {
+   "Name": "YEN/US DOLLAR FORWARD - UBS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "94.1488569381",
+   "Market Value": "—",
+   "Shares Held": "4627347856",
+   "Exposure Value": "29567790.31"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "35.0608906813",
+   "Market Value": "—",
+   "Shares Held": "110000",
+   "Exposure Value": "11011000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "31405363.03",
+   "Shares Held": "31405363.03",
+   "Exposure Value": "—"
+  }
+ ]
+}

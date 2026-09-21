@@ -1,0 +1,80 @@
+{
+ "ticker": "EUM",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 7,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-30.6660488232",
+   "Market Value": "—",
+   "Shares Held": "-2171",
+   "Exposure Value": "-3992599.26"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-29.4936480621",
+   "Market Value": "—",
+   "Shares Held": "-2088",
+   "Exposure Value": "-3839957.28"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-23.0807571520",
+   "Market Value": "—",
+   "Shares Held": "-1634",
+   "Exposure Value": "-3005024.04"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-10.3114765734",
+   "Market Value": "—",
+   "Shares Held": "-730",
+   "Exposure Value": "-1342513.8"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-6.5541440138",
+   "Market Value": "—",
+   "Shares Held": "-464",
+   "Exposure Value": "-853323.84"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "—",
+   "Weight": "88.4166424025",
+   "Market Value": "11511500",
+   "Shares Held": "115000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1508107.72",
+   "Shares Held": "1508107.72",
+   "Exposure Value": "—"
+  }
+ ]
+}

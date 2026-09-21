@@ -1,0 +1,53 @@
+{
+ "ticker": "QQDN",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NASDAQ 100 MEGA INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-85.9995425983",
+   "Market Value": "—",
+   "Shares Held": "-536",
+   "Exposure Value": "-873680"
+  },
+  {
+   "Name": "NASDAQ 100 MEGA INDEX SWAP BANK OF AMERICA NA BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-61.2907187921",
+   "Market Value": "—",
+   "Shares Held": "-382",
+   "Exposure Value": "-622660"
+  },
+  {
+   "Name": "NASDAQ 100 MEGA INDEX SWAP BARCLAYS CAPITAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-52.6265857691",
+   "Market Value": "—",
+   "Shares Held": "-328",
+   "Exposure Value": "-534640"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1015912.38",
+   "Shares Held": "1015912.38",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TQQQ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T13:35:43Z",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -28,8 +28,17 @@
   "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
  },
  "expenseRatio": {
-  "display": "—",
-  "value": null
+  "display": "0.82%",
+  "value": 0.82,
+  "gross": {
+   "display": "0.97%",
+   "value": 0.97
+  },
+  "net": {
+   "display": "0.82%",
+   "value": 0.82
+  },
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
   "display": "$72.78",
@@ -61,8 +70,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": null,
-  "indicatedYieldText": "—",
+  "indicatedYield": 0.9411,
+  "indicatedYieldText": "0.94%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -151,8 +160,8 @@
   }
  },
  "distributions": {
-  "frequency": "—",
-  "paymentsPerYear": null,
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
   "headers": [
    "Ex-Date",
    "Record Date",
@@ -364,6 +373,7 @@
    "Maturity Date"
   ],
   "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
   "pages": [
    "./holdings/001.json"
   ]

@@ -1,0 +1,299 @@
+{
+ "ticker": "BOIL",
+ "name": "Ultra Bloomberg Natural Gas",
+ "category": "Commodity",
+ "categoryPath": "Commodity > Commodity",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/boil",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/BOIL-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/BOIL-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=BOIL&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/BOIL-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347Y664",
+  "isin": null,
+  "indexTicker": "BCOMNG",
+  "indexName": "Bloomberg Natural Gas Subindex SM (BCOMNG)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$20.17",
+  "value": 20.17,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$20.02",
+  "value": 20.02,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.74%",
+  "value": -0.7437,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$393,459,777",
+  "value": 393459777.2287085,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Oct 06 2011",
+   "mo1": 0.88,
+   "mo3": -31.81,
+   "mo6": -37.42,
+   "ytd": -54.57,
+   "yr1": -66.05,
+   "yr3": -68.03,
+   "yr5": -70.95,
+   "yr10": -59.09,
+   "sinceInception": -57.83,
+   "mo1Text": "0.88%",
+   "ytdText": "-54.57%",
+   "yr1Text": "-66.05%",
+   "yr3Text": "-68.03%",
+   "yr5Text": "-70.95%",
+   "yr10Text": "-59.09%",
+   "sinceInceptionText": "-57.83%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Oct 06 2011",
+    "mo1": -0.73,
+    "mo3": -32.17,
+    "mo6": -38.05,
+    "ytd": -55.52,
+    "yr1": -66.58,
+    "yr3": -68.08,
+    "yr5": -71.01,
+    "yr10": -59.08,
+    "sinceInception": -57.85,
+    "mo1Text": "-0.73%",
+    "ytdText": "-55.52%",
+    "yr1Text": "-66.58%",
+    "yr3Text": "-68.08%",
+    "yr5Text": "-71.01%",
+    "yr10Text": "-59.08%",
+    "sinceInceptionText": "-57.85%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Oct 06 2011",
+   "mo1": -7.92,
+   "mo3": -13.69,
+   "mo6": -38.65,
+   "ytd": -38.65,
+   "yr1": -70.15,
+   "yr3": -65.85,
+   "yr5": -67,
+   "yr10": -58.38,
+   "sinceInception": -57.39,
+   "mo1Text": "-7.92%",
+   "ytdText": "-38.65%",
+   "yr1Text": "-70.15%",
+   "yr3Text": "-65.85%",
+   "yr5Text": "-67.00%",
+   "yr10Text": "-58.38%",
+   "sinceInceptionText": "-57.39%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Oct 06 2011",
+    "mo1": -8.62,
+    "mo3": -14.89,
+    "mo6": -40.09,
+    "ytd": -40.09,
+    "yr1": -70.23,
+    "yr3": -65.87,
+    "yr5": -67.38,
+    "yr10": -58.39,
+    "sinceInception": -57.42,
+    "mo1Text": "-8.62%",
+    "ytdText": "-40.09%",
+    "yr1Text": "-70.23%",
+    "yr3Text": "-65.87%",
+    "yr5Text": "-67.38%",
+    "yr10Text": "-58.39%",
+    "sinceInceptionText": "-57.42%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 3,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 3761,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/BOIL-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Commodity",
+   "dailyObjective": "+2x",
+   "benchmark": "Bloomberg Natural Gas Subindex SM (BCOMNG)"
+  },
+  "splits": [
+   {
+    "date": "May 28 2026",
+    "splitType": "Reverse",
+    "ratio": 2,
+    "preSplitCusip": "74347Y748",
+    "postSplitCusip": "74347Y664"
+   },
+   {
+    "date": "Nov 07 2024",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347Y763",
+    "postSplitCusip": "74347Y748"
+   },
+   {
+    "date": "Jun 23 2023",
+    "splitType": "Reverse",
+    "ratio": 20,
+    "preSplitCusip": "74347Y870",
+    "postSplitCusip": "74347Y763"
+   },
+   {
+    "date": "Apr 21 2020",
+    "splitType": "Reverse",
+    "ratio": 10,
+    "preSplitCusip": "74347Y706",
+    "postSplitCusip": "74347Y870"
+   },
+   {
+    "date": "Mar 20 2018",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347W296",
+    "postSplitCusip": "74347Y706"
+   },
+   {
+    "date": "May 20 2015",
+    "splitType": "Reverse",
+    "ratio": 4,
+    "preSplitCusip": "74347W122",
+    "postSplitCusip": "74347W296"
+   },
+   {
+    "date": "May 11 2012",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347W775",
+    "postSplitCusip": "74347W122"
+   }
+  ],
+  "exposures": [
+   {
+    "label": "Index Contract Weightings",
+    "rows": [
+     {
+      "Contract": "Natural Gas Futures, September 2026",
+      "Weight": 100
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetboil.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_boil.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=BOIL&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=BOIL&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=BOIL&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=BOIL&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=BOIL&document-label=semi-annual-report"
+ }
+}

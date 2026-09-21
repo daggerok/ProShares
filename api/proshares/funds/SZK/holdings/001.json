@@ -1,0 +1,62 @@
+{
+ "ticker": "SZK",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-70.2849737001",
+   "Market Value": "—",
+   "Shares Held": "-3860",
+   "Exposure Value": "-3218892.6"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-47.4514615188",
+   "Market Value": "—",
+   "Shares Held": "-2606",
+   "Exposure Value": "-2173169.46"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-44.1739238851",
+   "Market Value": "—",
+   "Shares Held": "-2426",
+   "Exposure Value": "-2023065.66"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-38.1104792628",
+   "Market Value": "—",
+   "Shares Held": "-2093",
+   "Exposure Value": "-1745373.63"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4579773.5",
+   "Shares Held": "4579773.5",
+   "Exposure Value": "—"
+  }
+ ]
+}

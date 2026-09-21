@@ -1,0 +1,80 @@
+{
+ "ticker": "PST",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 7,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-65.2913076517",
+   "Market Value": "—",
+   "Shares Held": "-65164",
+   "Exposure Value": "-7242326.96"
+  },
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-51.8941853969",
+   "Market Value": "—",
+   "Shares Held": "-51793",
+   "Exposure Value": "-5756274.02"
+  },
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-44.2703200737",
+   "Market Value": "—",
+   "Shares Held": "-44184",
+   "Exposure Value": "-4910609.76"
+  },
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-35.7697453067",
+   "Market Value": "—",
+   "Shares Held": "-35700",
+   "Exposure Value": "-3967698"
+  },
+  {
+   "Name": "US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-2.8609297160",
+   "Market Value": "—",
+   "Shares Held": "-3",
+   "Exposure Value": "-317343.75"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "—",
+   "Weight": "76.7061600813",
+   "Market Value": "8508500",
+   "Shares Held": "85000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "2583829.47",
+   "Shares Held": "2583829.47",
+   "Exposure Value": "—"
+  }
+ ]
+}

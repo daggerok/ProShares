@@ -1,0 +1,240 @@
+{
+ "ticker": "EUO",
+ "name": "UltraShort Euro",
+ "category": "Currency",
+ "categoryPath": "Currency > Currency",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/euo",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/EUO-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/EUO-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=EUO&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/EUO-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347W882",
+  "isin": null,
+  "indexTicker": "EURO",
+  "indexName": "Euro/US Dollar (EURO)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$30.66",
+  "value": 30.66,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$30.66",
+  "value": 30.66,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.00%",
+  "value": 0,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$33,724,009",
+  "value": 33724009.165,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": -1.03,
+   "mo3": 2.06,
+   "mo6": 5.96,
+   "ytd": 5.36,
+   "yr1": 6.53,
+   "yr3": 0.2,
+   "yr5": 4.5,
+   "yr10": 2.19,
+   "sinceInception": 1.02,
+   "mo1Text": "-1.03%",
+   "ytdText": "5.36%",
+   "yr1Text": "6.53%",
+   "yr3Text": "0.20%",
+   "yr5Text": "4.50%",
+   "yr10Text": "2.19%",
+   "sinceInceptionText": "1.02%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": -0.99,
+    "mo3": 2.05,
+    "mo6": 5.62,
+    "ytd": 5.44,
+    "yr1": 6.45,
+    "yr3": 0.24,
+    "yr5": 4.46,
+    "yr10": 2.19,
+    "sinceInception": 1.01,
+    "mo1Text": "-0.99%",
+    "ytdText": "5.44%",
+    "yr1Text": "6.45%",
+    "yr3Text": "0.24%",
+    "yr5Text": "4.46%",
+    "yr10Text": "2.19%",
+    "sinceInceptionText": "1.01%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": 4.6,
+   "mo3": 3.63,
+   "mo6": 7.98,
+   "ytd": 7.98,
+   "yr1": 11.71,
+   "yr3": 1.76,
+   "yr5": 5.18,
+   "yr10": 2.35,
+   "sinceInception": 1.17,
+   "mo1Text": "4.60%",
+   "ytdText": "7.98%",
+   "yr1Text": "11.71%",
+   "yr3Text": "1.76%",
+   "yr5Text": "5.18%",
+   "yr10Text": "2.35%",
+   "sinceInceptionText": "1.17%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": 4.61,
+    "mo3": 3.45,
+    "mo6": 8.08,
+    "ytd": 8.08,
+    "yr1": 11.43,
+    "yr3": 1.7,
+    "yr5": 5.15,
+    "yr10": 2.33,
+    "sinceInception": 1.16,
+    "mo1Text": "4.61%",
+    "ytdText": "8.08%",
+    "yr1Text": "11.43%",
+    "yr3Text": "1.70%",
+    "yr5Text": "5.15%",
+    "yr10Text": "2.33%",
+    "sinceInceptionText": "1.16%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 4,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 4481,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/EUO-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json",
+   "./history/005.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Currency",
+   "dailyObjective": "-2x",
+   "benchmark": "Euro/US Dollar (EURO)"
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheeteuo.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_euo.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EUO&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EUO&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EUO&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EUO&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EUO&document-label=semi-annual-report"
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "ticker": "BITI",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 25/SEP/2026 BTCU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-91.5542311126",
+   "Market Value": "—",
+   "Shares Held": "-239",
+   "Exposure Value": "-97189350"
+  },
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-8.4716255239",
+   "Market Value": "—",
+   "Shares Held": "-22",
+   "Exposure Value": "-8993050"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "—",
+   "Weight": "47.1480596093",
+   "Market Value": "50050000",
+   "Shares Held": "500000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "56104951.9",
+   "Shares Held": "56104951.9",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -1,0 +1,544 @@
+{
+ "ticker": "REGL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 66,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held"
+ ],
+ "rows": [
+  {
+   "Name": "ROYAL GOLD INC",
+   "Ticker": "RGLD",
+   "Identifier": "—",
+   "Weight": "1.9925818720",
+   "Market Value": "33735454.15",
+   "Shares Held": "135131"
+  },
+  {
+   "Name": "UNUM GROUP",
+   "Ticker": "UNM",
+   "Identifier": "—",
+   "Weight": "1.7417882030",
+   "Market Value": "29489386.05",
+   "Shares Held": "309795"
+  },
+  {
+   "Name": "AVIENT CORP",
+   "Ticker": "AVNT",
+   "Identifier": "—",
+   "Weight": "1.7353786640",
+   "Market Value": "29380869.2",
+   "Shares Held": "727970"
+  },
+  {
+   "Name": "HANOVER INSURANCE GROUP INC/",
+   "Ticker": "THG",
+   "Identifier": "—",
+   "Weight": "1.7153117357",
+   "Market Value": "29041125.6",
+   "Shares Held": "127760"
+  },
+  {
+   "Name": "SEI INVESTMENTS COMPANY",
+   "Ticker": "SEIC",
+   "Identifier": "—",
+   "Weight": "1.7113019129",
+   "Market Value": "28973237.2",
+   "Shares Held": "275411"
+  },
+  {
+   "Name": "MSA SAFETY INC",
+   "Ticker": "MSA",
+   "Identifier": "—",
+   "Weight": "1.6795515242",
+   "Market Value": "28435686.5",
+   "Shares Held": "158275"
+  },
+  {
+   "Name": "REINSURANCE GROUP OF AMERICA",
+   "Ticker": "RGA",
+   "Identifier": "—",
+   "Weight": "1.6772184162",
+   "Market Value": "28396185.76",
+   "Shares Held": "115582"
+  },
+  {
+   "Name": "ESSENTIAL UTILITIES INC",
+   "Ticker": "WTRG",
+   "Identifier": "—",
+   "Weight": "1.6732579055",
+   "Market Value": "28329132.24",
+   "Shares Held": "690281"
+  },
+  {
+   "Name": "LINCOLN ELECTRIC HOLDINGS",
+   "Ticker": "LECO",
+   "Identifier": "—",
+   "Weight": "1.6581519201",
+   "Market Value": "28073380",
+   "Shares Held": "109150"
+  },
+  {
+   "Name": "GRACO INC",
+   "Ticker": "GGG",
+   "Identifier": "—",
+   "Weight": "1.6581420267",
+   "Market Value": "28073212.5",
+   "Shares Held": "368125"
+  },
+  {
+   "Name": "ENSIGN GROUP INC/THE",
+   "Ticker": "ENSG",
+   "Identifier": "—",
+   "Weight": "1.6519809260",
+   "Market Value": "27968901.84",
+   "Shares Held": "160824"
+  },
+  {
+   "Name": "RENAISSANCERE HOLDINGS LTD",
+   "Ticker": "RNR",
+   "Identifier": "—",
+   "Weight": "1.6437803101",
+   "Market Value": "27830061.12",
+   "Shares Held": "85076"
+  },
+  {
+   "Name": "AMERICAN FINANCIAL GROUP INC",
+   "Ticker": "AFG",
+   "Identifier": "—",
+   "Weight": "1.6281424930",
+   "Market Value": "27565304.69",
+   "Shares Held": "193699"
+  },
+  {
+   "Name": "RELIANCE INC",
+   "Ticker": "RS",
+   "Identifier": "—",
+   "Weight": "1.6227249411",
+   "Market Value": "27473582.7",
+   "Shares Held": "70418"
+  },
+  {
+   "Name": "RLI CORP",
+   "Ticker": "RLI",
+   "Identifier": "—",
+   "Weight": "1.6172733483",
+   "Market Value": "27381284.38",
+   "Shares Held": "461042"
+  },
+  {
+   "Name": "SERVICE CORP INTERNATIONAL",
+   "Ticker": "SCI",
+   "Identifier": "—",
+   "Weight": "1.6148824251",
+   "Market Value": "27340804.8",
+   "Shares Held": "351605"
+  },
+  {
+   "Name": "UNITED BANKSHARES INC",
+   "Ticker": "UBSI",
+   "Identifier": "—",
+   "Weight": "1.6132297042",
+   "Market Value": "27312823.37",
+   "Shares Held": "579767"
+  },
+  {
+   "Name": "CHEMED CORP",
+   "Ticker": "CHE",
+   "Identifier": "—",
+   "Weight": "1.6081487940",
+   "Market Value": "27226800.9",
+   "Shares Held": "54015"
+  },
+  {
+   "Name": "CHURCHILL DOWNS INC",
+   "Ticker": "CHDN",
+   "Identifier": "—",
+   "Weight": "1.6018836445",
+   "Market Value": "27120728.64",
+   "Shares Held": "331104"
+  },
+  {
+   "Name": "FIRST AMERICAN FINANCIAL",
+   "Ticker": "FAF",
+   "Identifier": "—",
+   "Weight": "1.5852095417",
+   "Market Value": "26838427.35",
+   "Shares Held": "385665"
+  },
+  {
+   "Name": "GATX CORP",
+   "Ticker": "GATX",
+   "Identifier": "—",
+   "Weight": "1.5845379664",
+   "Market Value": "26827057.23",
+   "Shares Held": "150807"
+  },
+  {
+   "Name": "TORO CO",
+   "Ticker": "TTC",
+   "Identifier": "—",
+   "Weight": "1.5831735509",
+   "Market Value": "26803956.96",
+   "Shares Held": "286704"
+  },
+  {
+   "Name": "CULLEN/FROST BANKERS INC",
+   "Ticker": "CFR",
+   "Identifier": "—",
+   "Weight": "1.5819994017",
+   "Market Value": "26784078",
+   "Shares Held": "167610"
+  },
+  {
+   "Name": "LITTELFUSE INC",
+   "Ticker": "LFUS",
+   "Identifier": "—",
+   "Weight": "1.5747584017",
+   "Market Value": "26661484.08",
+   "Shares Held": "65366"
+  },
+  {
+   "Name": "HOME BANCSHARES INC",
+   "Ticker": "HOMB",
+   "Identifier": "—",
+   "Weight": "1.5746739383",
+   "Market Value": "26660054.07",
+   "Shares Held": "894933"
+  },
+  {
+   "Name": "NATIONAL FUEL GAS CO",
+   "Ticker": "NFG",
+   "Identifier": "—",
+   "Weight": "1.5687862013",
+   "Market Value": "26560371.6",
+   "Shares Held": "328230"
+  },
+  {
+   "Name": "COMMERCE BANCSHARES INC",
+   "Ticker": "CBSH",
+   "Identifier": "—",
+   "Weight": "1.5623259338",
+   "Market Value": "26450995.89",
+   "Shares Held": "463321"
+  },
+  {
+   "Name": "SPIRE INC",
+   "Ticker": "SR",
+   "Identifier": "—",
+   "Weight": "1.5506090439",
+   "Market Value": "26252622.81",
+   "Shares Held": "331347"
+  },
+  {
+   "Name": "APTARGROUP INC",
+   "Ticker": "ATR",
+   "Identifier": "—",
+   "Weight": "1.5475653146",
+   "Market Value": "26201090.88",
+   "Shares Held": "210552"
+  },
+  {
+   "Name": "CUBESMART",
+   "Ticker": "CUBE",
+   "Identifier": "—",
+   "Weight": "1.5450583614",
+   "Market Value": "26158646.85",
+   "Shares Held": "661407"
+  },
+  {
+   "Name": "OLD REPUBLIC INTL CORP",
+   "Ticker": "ORI",
+   "Identifier": "—",
+   "Weight": "1.5426759424",
+   "Market Value": "26118311.25",
+   "Shares Held": "653775"
+  },
+  {
+   "Name": "CARLISLE COS INC",
+   "Ticker": "CSL",
+   "Identifier": "—",
+   "Weight": "1.5423169016",
+   "Market Value": "26112232.5",
+   "Shares Held": "82975"
+  },
+  {
+   "Name": "PROSPERITY BANCSHARES INC",
+   "Ticker": "PB",
+   "Identifier": "—",
+   "Weight": "1.5395528193",
+   "Market Value": "26065435.14",
+   "Shares Held": "372257"
+  },
+  {
+   "Name": "UMB FINANCIAL CORP",
+   "Ticker": "UMBF",
+   "Identifier": "—",
+   "Weight": "1.5349425413",
+   "Market Value": "25987380.72",
+   "Shares Held": "193186"
+  },
+  {
+   "Name": "DONALDSON CO INC",
+   "Ticker": "DCI",
+   "Identifier": "—",
+   "Weight": "1.5265659119",
+   "Market Value": "25845560",
+   "Shares Held": "299000"
+  },
+  {
+   "Name": "INGREDION INC",
+   "Ticker": "INGR",
+   "Identifier": "—",
+   "Weight": "1.5260849144",
+   "Market Value": "25837416.46",
+   "Shares Held": "265462"
+  },
+  {
+   "Name": "FIRST FINL BANKSHARES INC",
+   "Ticker": "FFIN",
+   "Identifier": "—",
+   "Weight": "1.5197730617",
+   "Market Value": "25730553.49",
+   "Shares Held": "784229"
+  },
+  {
+   "Name": "NORTHWESTERN ENERGY GROUP IN",
+   "Ticker": "NWE",
+   "Identifier": "—",
+   "Weight": "1.5164564377",
+   "Market Value": "25674401.31",
+   "Shares Held": "374973"
+  },
+  {
+   "Name": "APPLIED INDUSTRIAL TECH INC",
+   "Ticker": "AIT",
+   "Identifier": "—",
+   "Weight": "1.5141219872",
+   "Market Value": "25634877.84",
+   "Shares Held": "79651"
+  },
+  {
+   "Name": "BLACK HILLS CORP",
+   "Ticker": "BKH",
+   "Identifier": "—",
+   "Weight": "1.5093477024",
+   "Market Value": "25554046.7",
+   "Shares Held": "362726"
+  },
+  {
+   "Name": "BANK OZK",
+   "Ticker": "OZK",
+   "Identifier": "—",
+   "Weight": "1.5089934960",
+   "Market Value": "25548049.8",
+   "Shares Held": "533585"
+  },
+  {
+   "Name": "ONE GAS INC",
+   "Ticker": "OGS",
+   "Identifier": "—",
+   "Weight": "1.5047172212",
+   "Market Value": "25475650.23",
+   "Shares Held": "338817"
+  },
+  {
+   "Name": "EASTGROUP PROPERTIES INC",
+   "Ticker": "EGP",
+   "Identifier": "—",
+   "Weight": "1.5027031920",
+   "Market Value": "25441551.66",
+   "Shares Held": "125718"
+  },
+  {
+   "Name": "LITHIA MOTORS INC",
+   "Ticker": "LAD",
+   "Identifier": "—",
+   "Weight": "1.4944556389",
+   "Market Value": "25301916.27",
+   "Shares Held": "80001"
+  },
+  {
+   "Name": "PRIMERICA INC",
+   "Ticker": "PRI",
+   "Identifier": "—",
+   "Weight": "1.4921927284",
+   "Market Value": "25263604.01",
+   "Shares Held": "86939"
+  },
+  {
+   "Name": "INTERNATIONAL BANCSHARES CRP",
+   "Ticker": "IBOC",
+   "Identifier": "—",
+   "Weight": "1.4867892044",
+   "Market Value": "25172119.52",
+   "Shares Held": "358373"
+  },
+  {
+   "Name": "OGE ENERGY CORP",
+   "Ticker": "OGE",
+   "Identifier": "—",
+   "Weight": "1.4828919888",
+   "Market Value": "25106137.62",
+   "Shares Held": "551662"
+  },
+  {
+   "Name": "EQUITY LIFESTYLE PROPERTIES",
+   "Ticker": "ELS",
+   "Identifier": "—",
+   "Weight": "1.4817591934",
+   "Market Value": "25086958.8",
+   "Shares Held": "415347"
+  },
+  {
+   "Name": "MARZETTI COMPANY/THE",
+   "Ticker": "MZTI",
+   "Identifier": "—",
+   "Weight": "1.4774364776",
+   "Market Value": "25013772.96",
+   "Shares Held": "250338"
+  },
+  {
+   "Name": "RPM INTERNATIONAL INC",
+   "Ticker": "RPM",
+   "Identifier": "—",
+   "Weight": "1.4709143072",
+   "Market Value": "24903349.2",
+   "Shares Held": "253160"
+  },
+  {
+   "Name": "STAG INDUSTRIAL INC",
+   "Ticker": "STAG",
+   "Identifier": "—",
+   "Weight": "1.4624704100",
+   "Market Value": "24760389.6",
+   "Shares Held": "658521"
+  },
+  {
+   "Name": "NEW JERSEY RESOURCES CORP",
+   "Ticker": "NJR",
+   "Identifier": "—",
+   "Weight": "1.4546965806",
+   "Market Value": "24628774.6",
+   "Shares Held": "461905"
+  },
+  {
+   "Name": "WESTLAKE CORP",
+   "Ticker": "WLK",
+   "Identifier": "—",
+   "Weight": "1.4398344755",
+   "Market Value": "24377151.38",
+   "Shares Held": "352934"
+  },
+  {
+   "Name": "PORTLAND GENERAL ELECTRIC CO",
+   "Ticker": "POR",
+   "Identifier": "—",
+   "Weight": "1.4339756690",
+   "Market Value": "24277958.72",
+   "Shares Held": "513928"
+  },
+  {
+   "Name": "SONOCO PRODUCTS CO",
+   "Ticker": "SON",
+   "Identifier": "—",
+   "Weight": "1.4225991513",
+   "Market Value": "24085348.32",
+   "Shares Held": "493148"
+  },
+  {
+   "Name": "IDACORP INC",
+   "Ticker": "IDA",
+   "Identifier": "—",
+   "Weight": "1.4210822366",
+   "Market Value": "24059666.16",
+   "Shares Held": "182852"
+  },
+  {
+   "Name": "THOR INDUSTRIES INC",
+   "Ticker": "THO",
+   "Identifier": "—",
+   "Weight": "1.4028916939",
+   "Market Value": "23751690.75",
+   "Shares Held": "350475"
+  },
+  {
+   "Name": "DT MIDSTREAM INC",
+   "Ticker": "DTM",
+   "Identifier": "—",
+   "Weight": "1.4014896209",
+   "Market Value": "23727952.92",
+   "Shares Held": "189854"
+  },
+  {
+   "Name": "CABOT CORP",
+   "Ticker": "CBT",
+   "Identifier": "—",
+   "Weight": "1.3886717042",
+   "Market Value": "23510938.88",
+   "Shares Held": "303602"
+  },
+  {
+   "Name": "RYDER SYSTEM INC",
+   "Ticker": "R",
+   "Identifier": "—",
+   "Weight": "1.3865466110",
+   "Market Value": "23474959.94",
+   "Shares Held": "98411"
+  },
+  {
+   "Name": "NNN REIT INC",
+   "Ticker": "NNN",
+   "Identifier": "—",
+   "Weight": "1.3629794696",
+   "Market Value": "23075955.9",
+   "Shares Held": "555378"
+  },
+  {
+   "Name": "SILGAN HOLDINGS INC",
+   "Ticker": "SLGN",
+   "Identifier": "—",
+   "Weight": "1.3131200662",
+   "Market Value": "22231810.1",
+   "Shares Held": "597790"
+  },
+  {
+   "Name": "EVERCORE INC - A",
+   "Ticker": "EVR",
+   "Identifier": "—",
+   "Weight": "1.2593397858",
+   "Market Value": "21321281.8",
+   "Shares Held": "81193"
+  },
+  {
+   "Name": "RB GLOBAL INC",
+   "Ticker": "RBA",
+   "Identifier": "—",
+   "Weight": "1.2093849334",
+   "Market Value": "20475520",
+   "Shares Held": "246100"
+  },
+  {
+   "Name": "POLARIS INC",
+   "Ticker": "PII",
+   "Identifier": "—",
+   "Weight": "1.1707533595",
+   "Market Value": "19821467.23",
+   "Shares Held": "366589"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3251407.86",
+   "Shares Held": "3251407.86"
+  }
+ ]
+}

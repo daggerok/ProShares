@@ -1,0 +1,53 @@
+{
+ "ticker": "EWV",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI Japan (EWJ) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-88.9358434319",
+   "Market Value": "—",
+   "Shares Held": "-1615",
+   "Exposure Value": "-3905748.3"
+  },
+  {
+   "Name": "iShares MSCI Japan (EWJ) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-56.6656240814",
+   "Market Value": "—",
+   "Shares Held": "-1029",
+   "Exposure Value": "-2488554.18"
+  },
+  {
+   "Name": "iShares MSCI Japan (EWJ) SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-54.7784220817",
+   "Market Value": "—",
+   "Shares Held": "-994.73",
+   "Exposure Value": "-2405674.93"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4391647",
+   "Shares Held": "4391647",
+   "Exposure Value": "—"
+  }
+ ]
+}

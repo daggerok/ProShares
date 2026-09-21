@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/AGQ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T13:35:43Z",
+  "catalogReadAt": "2026-09-21T13:40:33Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -29,7 +29,16 @@
  },
  "expenseRatio": {
   "display": "0.95%",
-  "value": 0.95
+  "value": 0.95,
+  "gross": {
+   "display": "—",
+   "value": null
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
   "display": "$82.15",
@@ -181,6 +190,7 @@
    "Exposure Value"
   ],
   "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
   "pages": [
    "./holdings/001.json"
   ]

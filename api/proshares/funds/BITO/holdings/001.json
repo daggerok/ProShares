@@ -1,0 +1,71 @@
+{
+ "ticker": "BITO",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 25/SEP/2026 BTCU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "60.7158982805",
+   "Market Value": "—",
+   "Shares Held": "2480",
+   "Exposure Value": "1008492000"
+  },
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "20.1803245659",
+   "Market Value": "—",
+   "Shares Held": "820",
+   "Exposure Value": "335195500"
+  },
+  {
+   "Name": "COINBASE BIT FUT DIGITAL ASSETS 25/SEP/2026 BTIU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "14.7055854821",
+   "Market Value": "—",
+   "Shares Held": "3000",
+   "Exposure Value": "244260000"
+  },
+  {
+   "Name": "S&P CME BITCOIN FUTURES DAILY ROLL INDEX SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "4.3673453802",
+   "Market Value": "—",
+   "Shares Held": "219179",
+   "Exposure Value": "72541673.63"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "—",
+   "Weight": "64.7847084977",
+   "Market Value": "1076075000",
+   "Shares Held": "10750000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "584926531",
+   "Shares Held": "584926531",
+   "Exposure Value": "—"
+  }
+ ]
+}
