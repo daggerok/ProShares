@@ -1,0 +1,576 @@
+{
+ "ticker": "NOBL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 70,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held"
+ ],
+ "rows": [
+  {
+   "Name": "BECTON DICKINSON AND CO",
+   "Ticker": "BDX",
+   "Identifier": "—",
+   "Weight": "1.7340858408",
+   "Market Value": "195347528.4",
+   "Shares Held": "1079626"
+  },
+  {
+   "Name": "FACTSET RESEARCH SYSTEMS INC",
+   "Ticker": "FDS",
+   "Identifier": "—",
+   "Weight": "1.6990179143",
+   "Market Value": "191397070.7",
+   "Shares Held": "674337"
+  },
+  {
+   "Name": "TARGET CORP",
+   "Ticker": "TGT",
+   "Identifier": "—",
+   "Weight": "1.6835868495",
+   "Market Value": "189658736.7",
+   "Shares Held": "1198930"
+  },
+  {
+   "Name": "ERIE INDEMNITY COMPANY-CL A",
+   "Ticker": "ERIE",
+   "Identifier": "—",
+   "Weight": "1.6640615904",
+   "Market Value": "187459185.2",
+   "Shares Held": "784184"
+  },
+  {
+   "Name": "MEDTRONIC PLC",
+   "Ticker": "MDT",
+   "Identifier": "—",
+   "Weight": "1.6514255362",
+   "Market Value": "186035713.6",
+   "Shares Held": "2019274"
+  },
+  {
+   "Name": "AUTOMATIC DATA PROCESSING",
+   "Ticker": "ADP",
+   "Identifier": "—",
+   "Weight": "1.6375365455",
+   "Market Value": "184471096.7",
+   "Shares Held": "680153"
+  },
+  {
+   "Name": "INTL BUSINESS MACHINES CORP",
+   "Ticker": "IBM",
+   "Identifier": "—",
+   "Weight": "1.6375232035",
+   "Market Value": "184469593.7",
+   "Shares Held": "803614"
+  },
+  {
+   "Name": "ROPER TECHNOLOGIES INC",
+   "Ticker": "ROP",
+   "Identifier": "—",
+   "Weight": "1.6249249251",
+   "Market Value": "183050377.6",
+   "Shares Held": "491094"
+  },
+  {
+   "Name": "CHEVRON CORP",
+   "Ticker": "CVX",
+   "Identifier": "—",
+   "Weight": "1.5936223329",
+   "Market Value": "179524090.8",
+   "Shares Held": "856876"
+  },
+  {
+   "Name": "FASTENAL CO",
+   "Ticker": "FAST",
+   "Identifier": "—",
+   "Weight": "1.5870318960",
+   "Market Value": "178781667.6",
+   "Shares Held": "3647861"
+  },
+  {
+   "Name": "EXPEDITORS INTL WASH INC",
+   "Ticker": "EXPD",
+   "Identifier": "—",
+   "Weight": "1.5794252409",
+   "Market Value": "177924765.8",
+   "Shares Held": "931836"
+  },
+  {
+   "Name": "COCA-COLA CO/THE",
+   "Ticker": "KO",
+   "Identifier": "—",
+   "Weight": "1.5760976758",
+   "Market Value": "177549910.3",
+   "Shares Held": "2011897"
+  },
+  {
+   "Name": "EMERSON ELECTRIC CO",
+   "Ticker": "EMR",
+   "Identifier": "—",
+   "Weight": "1.5760541656",
+   "Market Value": "177545008.8",
+   "Shares Held": "1184265"
+  },
+  {
+   "Name": "NORDSON CORP",
+   "Ticker": "NDSN",
+   "Identifier": "—",
+   "Weight": "1.5683850009",
+   "Market Value": "176681065.2",
+   "Shares Held": "567067"
+  },
+  {
+   "Name": "GENUINE PARTS CO",
+   "Ticker": "GPC",
+   "Identifier": "—",
+   "Weight": "1.5618626660",
+   "Market Value": "175946313.8",
+   "Shares Held": "1373722"
+  },
+  {
+   "Name": "EXXONMOBIL HOLDINGS CORP",
+   "Ticker": "XOM",
+   "Identifier": "—",
+   "Weight": "1.5542235968",
+   "Market Value": "175085760.5",
+   "Shares Held": "1070599"
+  },
+  {
+   "Name": "JOHNSON & JOHNSON",
+   "Ticker": "JNJ",
+   "Identifier": "—",
+   "Weight": "1.5503246807",
+   "Market Value": "174646541.4",
+   "Shares Held": "646863"
+  },
+  {
+   "Name": "NUCOR CORP",
+   "Ticker": "NUE",
+   "Identifier": "—",
+   "Weight": "1.5455433962",
+   "Market Value": "174107922.1",
+   "Shares Held": "700974"
+  },
+  {
+   "Name": "ABBVIE INC",
+   "Ticker": "ABBV",
+   "Identifier": "—",
+   "Weight": "1.5296904510",
+   "Market Value": "172322062.6",
+   "Shares Held": "652834"
+  },
+  {
+   "Name": "JM SMUCKER CO/THE",
+   "Ticker": "SJM",
+   "Identifier": "—",
+   "Weight": "1.5284144530",
+   "Market Value": "172178319.4",
+   "Shares Held": "1400393"
+  },
+  {
+   "Name": "CARDINAL HEALTH INC",
+   "Ticker": "CAH",
+   "Identifier": "—",
+   "Weight": "1.4999592463",
+   "Market Value": "168972795.1",
+   "Shares Held": "749724"
+  },
+  {
+   "Name": "ABBOTT LABORATORIES",
+   "Ticker": "ABT",
+   "Identifier": "—",
+   "Weight": "1.4976257719",
+   "Market Value": "168709925.5",
+   "Shares Held": "1644186"
+  },
+  {
+   "Name": "FRANKLIN TEMPLETON INC",
+   "Ticker": "BEN",
+   "Identifier": "—",
+   "Weight": "1.4964178440",
+   "Market Value": "168573850.5",
+   "Shares Held": "5106751"
+  },
+  {
+   "Name": "WEST PHARMACEUTICAL SERVICES",
+   "Ticker": "WST",
+   "Identifier": "—",
+   "Weight": "1.4837968975",
+   "Market Value": "167152080.8",
+   "Shares Held": "461351"
+  },
+  {
+   "Name": "ECOLAB INC",
+   "Ticker": "ECL",
+   "Identifier": "—",
+   "Weight": "1.4822554466",
+   "Market Value": "166978433.9",
+   "Shares Held": "619678"
+  },
+  {
+   "Name": "STANLEY BLACK & DECKER INC",
+   "Ticker": "SWK",
+   "Identifier": "—",
+   "Weight": "1.4732779577",
+   "Market Value": "165967105.5",
+   "Shares Held": "1852725"
+  },
+  {
+   "Name": "SHERWIN-WILLIAMS CO/THE",
+   "Ticker": "SHW",
+   "Identifier": "—",
+   "Weight": "1.4716587174",
+   "Market Value": "165784695.5",
+   "Shares Held": "516898"
+  },
+  {
+   "Name": "BROWN & BROWN INC",
+   "Ticker": "BRO",
+   "Identifier": "—",
+   "Weight": "1.4595528519",
+   "Market Value": "164420950.5",
+   "Shares Held": "2528775"
+  },
+  {
+   "Name": "CHUBB LTD",
+   "Ticker": "CB",
+   "Identifier": "—",
+   "Weight": "1.4567393169",
+   "Market Value": "164104001.3",
+   "Shares Held": "481752"
+  },
+  {
+   "Name": "ILLINOIS TOOL WORKS",
+   "Ticker": "ITW",
+   "Identifier": "—",
+   "Weight": "1.4437479397",
+   "Market Value": "162640502",
+   "Shares Held": "603669"
+  },
+  {
+   "Name": "BROWN-FORMAN CORP-CLASS B",
+   "Ticker": "BF/B",
+   "Identifier": "—",
+   "Weight": "1.4417372757",
+   "Market Value": "162413997.5",
+   "Shares Held": "6261141"
+  },
+  {
+   "Name": "PROCTER & GAMBLE CO/THE",
+   "Ticker": "PG",
+   "Identifier": "—",
+   "Weight": "1.4408886912",
+   "Market Value": "162318403.1",
+   "Shares Held": "1108808"
+  },
+  {
+   "Name": "CINTAS CORP",
+   "Ticker": "CTAS",
+   "Identifier": "—",
+   "Weight": "1.4407164814",
+   "Market Value": "162299003.4",
+   "Shares Held": "821185"
+  },
+  {
+   "Name": "WALMART INC",
+   "Ticker": "WMT",
+   "Identifier": "—",
+   "Weight": "1.4329775805",
+   "Market Value": "161427203.9",
+   "Shares Held": "1512482"
+  },
+  {
+   "Name": "CHURCH & DWIGHT CO INC",
+   "Ticker": "CHD",
+   "Identifier": "—",
+   "Weight": "1.4318924152",
+   "Market Value": "161304958.3",
+   "Shares Held": "1702427"
+  },
+  {
+   "Name": "ARCHER-DANIELS-MIDLAND CO",
+   "Ticker": "ADM",
+   "Identifier": "—",
+   "Weight": "1.4318763746",
+   "Market Value": "161303151.3",
+   "Shares Held": "1893674"
+  },
+  {
+   "Name": "AMCOR PLC",
+   "Ticker": "AMCR",
+   "Identifier": "—",
+   "Weight": "1.4240044875",
+   "Market Value": "160416370.7",
+   "Shares Held": "3828553"
+  },
+  {
+   "Name": "SYSCO CORP",
+   "Ticker": "SYY",
+   "Identifier": "—",
+   "Weight": "1.4129863422",
+   "Market Value": "159175159.1",
+   "Shares Held": "2013601"
+  },
+  {
+   "Name": "SMITH (A.O.) CORP",
+   "Ticker": "AOS",
+   "Identifier": "—",
+   "Weight": "1.4084984508",
+   "Market Value": "158669591",
+   "Shares Held": "2786121"
+  },
+  {
+   "Name": "AIR PRODUCTS & CHEMICALS INC",
+   "Ticker": "APD",
+   "Identifier": "—",
+   "Weight": "1.4045029227",
+   "Market Value": "158219488.4",
+   "Shares Held": "556758"
+  },
+  {
+   "Name": "PEPSICO INC",
+   "Ticker": "PEP",
+   "Identifier": "—",
+   "Weight": "1.4040099345",
+   "Market Value": "158163952.5",
+   "Shares Held": "1218990"
+  },
+  {
+   "Name": "COLGATE-PALMOLIVE CO",
+   "Ticker": "CL",
+   "Identifier": "—",
+   "Weight": "1.4012177778",
+   "Market Value": "157849411.6",
+   "Shares Held": "1804612"
+  },
+  {
+   "Name": "GENERAL DYNAMICS CORP",
+   "Ticker": "GD",
+   "Identifier": "—",
+   "Weight": "1.3887941565",
+   "Market Value": "156449870.9",
+   "Shares Held": "443138"
+  },
+  {
+   "Name": "S&P GLOBAL INC",
+   "Ticker": "SPGI",
+   "Identifier": "—",
+   "Weight": "1.3866677515",
+   "Market Value": "156210328",
+   "Shares Held": "385400"
+  },
+  {
+   "Name": "ALBEMARLE CORP",
+   "Ticker": "ALB",
+   "Identifier": "—",
+   "Weight": "1.3861260255",
+   "Market Value": "156149301.7",
+   "Shares Held": "1407892"
+  },
+  {
+   "Name": "CINCINNATI FINANCIAL CORP",
+   "Ticker": "CINF",
+   "Identifier": "—",
+   "Weight": "1.3841062076",
+   "Market Value": "155921766",
+   "Shares Held": "922614"
+  },
+  {
+   "Name": "LOWE'S COS INC",
+   "Ticker": "LOW",
+   "Identifier": "—",
+   "Weight": "1.3826481927",
+   "Market Value": "155757518.3",
+   "Shares Held": "809172"
+  },
+  {
+   "Name": "MCDONALD'S CORP",
+   "Ticker": "MCD",
+   "Identifier": "—",
+   "Weight": "1.3825153104",
+   "Market Value": "155742548.9",
+   "Shares Held": "627387"
+  },
+  {
+   "Name": "AFLAC INC",
+   "Ticker": "AFL",
+   "Identifier": "—",
+   "Weight": "1.3817433754",
+   "Market Value": "155655589.2",
+   "Shares Held": "1338052"
+  },
+  {
+   "Name": "CONSOLIDATED EDISON INC",
+   "Ticker": "ED",
+   "Identifier": "—",
+   "Weight": "1.3806642686",
+   "Market Value": "155534026.1",
+   "Shares Held": "1475235"
+  },
+  {
+   "Name": "MCCORMICK & CO-NON VTG SHRS",
+   "Ticker": "MKC",
+   "Identifier": "—",
+   "Weight": "1.3747383230",
+   "Market Value": "154866458.9",
+   "Shares Held": "3178704"
+  },
+  {
+   "Name": "WW GRAINGER INC",
+   "Ticker": "GWW",
+   "Identifier": "—",
+   "Weight": "1.3730240809",
+   "Market Value": "154673346.8",
+   "Shares Held": "122116"
+  },
+  {
+   "Name": "ESSEX PROPERTY TRUST INC",
+   "Ticker": "ESS",
+   "Identifier": "—",
+   "Weight": "1.3525490402",
+   "Market Value": "152366800.9",
+   "Shares Held": "564217"
+  },
+  {
+   "Name": "KENVUE INC",
+   "Ticker": "KVUE",
+   "Identifier": "—",
+   "Weight": "1.3504627554",
+   "Market Value": "152131777.6",
+   "Shares Held": "8643851"
+  },
+  {
+   "Name": "CATERPILLAR INC",
+   "Ticker": "CAT",
+   "Identifier": "—",
+   "Weight": "1.3354286562",
+   "Market Value": "150438162.4",
+   "Shares Held": "185958"
+  },
+  {
+   "Name": "LINDE PLC",
+   "Ticker": "LIN",
+   "Identifier": "—",
+   "Weight": "1.3286470031",
+   "Market Value": "149674198.4",
+   "Shares Held": "325096"
+  },
+  {
+   "Name": "NEXTERA ENERGY INC",
+   "Ticker": "NEE",
+   "Identifier": "—",
+   "Weight": "1.3210880162",
+   "Market Value": "148822666.5",
+   "Shares Held": "1849418"
+  },
+  {
+   "Name": "EVERSOURCE ENERGY",
+   "Ticker": "ES",
+   "Identifier": "—",
+   "Weight": "1.3194589056",
+   "Market Value": "148639144.6",
+   "Shares Held": "2220732"
+  },
+  {
+   "Name": "KIMBERLY-CLARK CORP",
+   "Ticker": "KMB",
+   "Identifier": "—",
+   "Weight": "1.3192983566",
+   "Market Value": "148621058.5",
+   "Shares Held": "1518711"
+  },
+  {
+   "Name": "ATMOS ENERGY CORP",
+   "Ticker": "ATO",
+   "Identifier": "—",
+   "Weight": "1.3184414118",
+   "Market Value": "148524522.3",
+   "Shares Held": "926541"
+  },
+  {
+   "Name": "T ROWE PRICE GROUP INC",
+   "Ticker": "TROW",
+   "Identifier": "—",
+   "Weight": "1.3179368712",
+   "Market Value": "148467685",
+   "Shares Held": "1425381"
+  },
+  {
+   "Name": "PPG INDUSTRIES INC",
+   "Ticker": "PPG",
+   "Identifier": "—",
+   "Weight": "1.3069408205",
+   "Market Value": "147228962.4",
+   "Shares Held": "1408620"
+  },
+  {
+   "Name": "PENTAIR PLC",
+   "Ticker": "PNR",
+   "Identifier": "—",
+   "Weight": "1.3024911958",
+   "Market Value": "146727705.1",
+   "Shares Held": "2623886"
+  },
+  {
+   "Name": "FEDERAL REALTY INVS TRUST",
+   "Ticker": "FRT",
+   "Identifier": "—",
+   "Weight": "1.3018877964",
+   "Market Value": "146659731.2",
+   "Shares Held": "1322331"
+  },
+  {
+   "Name": "DOVER CORP",
+   "Ticker": "DOV",
+   "Identifier": "—",
+   "Weight": "1.2823938826",
+   "Market Value": "144463710.8",
+   "Shares Held": "770802"
+  },
+  {
+   "Name": "REALTY INCOME CORP",
+   "Ticker": "O",
+   "Identifier": "—",
+   "Weight": "1.2789402306",
+   "Market Value": "144074651.4",
+   "Shares Held": "2542793"
+  },
+  {
+   "Name": "CLOROX COMPANY",
+   "Ticker": "CLX",
+   "Identifier": "—",
+   "Weight": "1.2737991554",
+   "Market Value": "143495501.1",
+   "Shares Held": "1726781"
+  },
+  {
+   "Name": "HORMEL FOODS CORP",
+   "Ticker": "HRL",
+   "Identifier": "—",
+   "Weight": "1.2128402727",
+   "Market Value": "136628386",
+   "Shares Held": "6559212"
+  },
+  {
+   "Name": "C.H. ROBINSON WORLDWIDE INC",
+   "Ticker": "CHRW",
+   "Identifier": "—",
+   "Weight": "1.0830303197",
+   "Market Value": "122005088.3",
+   "Shares Held": "797471"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "0.2473205502",
+   "Market Value": "27861053.4",
+   "Shares Held": "27861053.4"
+  }
+ ]
+}

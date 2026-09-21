@@ -1,0 +1,1178 @@
+{
+ "ticker": "IGHG",
+ "name": "Investment Grade - Interest Rate Hedged",
+ "category": "Fixed Income",
+ "categoryPath": "Fixed Income > RisingRates",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/ighg",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/IGHG-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/IGHG-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=IGHG&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/IGHG-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T13:35:43Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347B607",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.30%",
+  "value": 0.3
+ },
+ "nav": {
+  "display": "$77.85",
+  "value": 77.85,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$78.06",
+  "value": 78.06,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.27%",
+  "value": 0.2697,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$373,690,764",
+  "value": 379529552.8522,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 5.1,
+  "dividendYieldText": "5.10%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 5.1,
+  "yield12MText": "5.10%",
+  "indicatedYield": 5.2428,
+  "indicatedYieldText": "5.24%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 07 2013",
+   "mo1": 0.32,
+   "mo3": 0.28,
+   "mo6": 2.92,
+   "ytd": 2.47,
+   "yr1": 4.4,
+   "yr3": 7.26,
+   "yr5": 5.44,
+   "yr10": 4.54,
+   "sinceInception": 3.72,
+   "mo1Text": "0.32%",
+   "ytdText": "2.47%",
+   "yr1Text": "4.40%",
+   "yr3Text": "7.26%",
+   "yr5Text": "5.44%",
+   "yr10Text": "4.54%",
+   "sinceInceptionText": "3.72%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 07 2013",
+    "mo1": 0.3,
+    "mo3": 0.2,
+    "mo6": 3.11,
+    "ytd": 2.5,
+    "yr1": 4.37,
+    "yr3": 7.28,
+    "yr5": 5.41,
+    "yr10": 4.6,
+    "sinceInception": 3.73,
+    "mo1Text": "0.30%",
+    "ytdText": "2.50%",
+    "yr1Text": "4.37%",
+    "yr3Text": "7.28%",
+    "yr5Text": "5.41%",
+    "yr10Text": "4.60%",
+    "sinceInceptionText": "3.73%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 07 2013",
+   "mo1": -0.21,
+   "mo3": 2.22,
+   "mo6": 1.98,
+   "ytd": 1.98,
+   "yr1": 5.41,
+   "yr3": 7.99,
+   "yr5": 5.11,
+   "yr10": 4.82,
+   "sinceInception": 3.74,
+   "mo1Text": "-0.21%",
+   "ytdText": "1.98%",
+   "yr1Text": "5.41%",
+   "yr3Text": "7.99%",
+   "yr5Text": "5.11%",
+   "yr10Text": "4.82%",
+   "sinceInceptionText": "3.74%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 07 2013",
+    "mo1": -0.25,
+    "mo3": 2.18,
+    "mo6": 2.04,
+    "ytd": 2.04,
+    "yr1": 5.23,
+    "yr3": 7.91,
+    "yr5": 5.12,
+    "yr10": 4.87,
+    "sinceInception": 3.74,
+    "mo1Text": "-0.25%",
+    "ytdText": "2.04%",
+    "yr1Text": "5.23%",
+    "yr3Text": "7.91%",
+    "yr5Text": "5.12%",
+    "yr10Text": "4.87%",
+    "sinceInceptionText": "3.74%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Monthly",
+  "paymentsPerYear": 12,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "01-Feb-2018",
+    "Record Date": "02-Feb-2018",
+    "Payable Date": "08-Feb-2018",
+    "Dividend": "0.203015",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2018",
+    "Record Date": "02-Mar-2018",
+    "Payable Date": "08-Mar-2018",
+    "Dividend": "0.220240",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Apr-2018",
+    "Record Date": "03-Apr-2018",
+    "Payable Date": "09-Apr-2018",
+    "Dividend": "0.226642",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2018",
+    "Record Date": "02-May-2018",
+    "Payable Date": "08-May-2018",
+    "Dividend": "0.235277",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2018",
+    "Record Date": "04-Jun-2018",
+    "Payable Date": "08-Jun-2018",
+    "Dividend": "0.233522",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Jul-2018",
+    "Record Date": "03-Jul-2018",
+    "Payable Date": "10-Jul-2018",
+    "Dividend": "0.248617",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2018",
+    "Record Date": "02-Aug-2018",
+    "Payable Date": "08-Aug-2018",
+    "Dividend": "0.233595",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "04-Sep-2018",
+    "Record Date": "05-Sep-2018",
+    "Payable Date": "11-Sep-2018",
+    "Dividend": "0.257174",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2018",
+    "Record Date": "02-Oct-2018",
+    "Payable Date": "09-Oct-2018",
+    "Dividend": "0.241207",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2018",
+    "Record Date": "02-Nov-2018",
+    "Payable Date": "08-Nov-2018",
+    "Dividend": "0.255507",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Dec-2018",
+    "Record Date": "04-Dec-2018",
+    "Payable Date": "10-Dec-2018",
+    "Dividend": "0.275611",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Dec-2018",
+    "Record Date": "27-Dec-2018",
+    "Payable Date": "03-Jan-2019",
+    "Dividend": "0.304139",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2019",
+    "Record Date": "04-Feb-2019",
+    "Payable Date": "08-Feb-2019",
+    "Dividend": "0.210932",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2019",
+    "Record Date": "04-Mar-2019",
+    "Payable Date": "08-Mar-2019",
+    "Dividend": "0.217622",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2019",
+    "Record Date": "02-Apr-2019",
+    "Payable Date": "08-Apr-2019",
+    "Dividend": "0.252204",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2019",
+    "Record Date": "02-May-2019",
+    "Payable Date": "08-May-2019",
+    "Dividend": "0.242578",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Jun-2019",
+    "Record Date": "04-Jun-2019",
+    "Payable Date": "10-Jun-2019",
+    "Dividend": "0.238118",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2019",
+    "Record Date": "02-Jul-2019",
+    "Payable Date": "09-Jul-2019",
+    "Dividend": "0.224644",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2019",
+    "Record Date": "02-Aug-2019",
+    "Payable Date": "08-Aug-2019",
+    "Dividend": "0.222810",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Sep-2019",
+    "Record Date": "04-Sep-2019",
+    "Payable Date": "10-Sep-2019",
+    "Dividend": "0.218248",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2019",
+    "Record Date": "02-Oct-2019",
+    "Payable Date": "08-Oct-2019",
+    "Dividend": "0.211211",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2019",
+    "Record Date": "04-Nov-2019",
+    "Payable Date": "08-Nov-2019",
+    "Dividend": "0.212391",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Dec-2019",
+    "Record Date": "03-Dec-2019",
+    "Payable Date": "09-Dec-2019",
+    "Dividend": "0.214399",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2019",
+    "Record Date": "26-Dec-2019",
+    "Payable Date": "02-Jan-2020",
+    "Dividend": "0.227932",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Feb-2020",
+    "Record Date": "04-Feb-2020",
+    "Payable Date": "10-Feb-2020",
+    "Dividend": "0.199410",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Mar-2020",
+    "Record Date": "03-Mar-2020",
+    "Payable Date": "09-Mar-2020",
+    "Dividend": "0.196283",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2020",
+    "Record Date": "02-Apr-2020",
+    "Payable Date": "08-Apr-2020",
+    "Dividend": "0.219427",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2020",
+    "Record Date": "04-May-2020",
+    "Payable Date": "08-May-2020",
+    "Dividend": "0.183459",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2020",
+    "Record Date": "02-Jun-2020",
+    "Payable Date": "08-Jun-2020",
+    "Dividend": "0.179020",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2020",
+    "Record Date": "02-Jul-2020",
+    "Payable Date": "09-Jul-2020",
+    "Dividend": "0.183873",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Aug-2020",
+    "Record Date": "04-Aug-2020",
+    "Payable Date": "10-Aug-2020",
+    "Dividend": "0.176923",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2020",
+    "Record Date": "02-Sep-2020",
+    "Payable Date": "09-Sep-2020",
+    "Dividend": "0.172924",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2020",
+    "Record Date": "02-Oct-2020",
+    "Payable Date": "08-Oct-2020",
+    "Dividend": "0.175756",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Nov-2020",
+    "Record Date": "03-Nov-2020",
+    "Payable Date": "09-Nov-2020",
+    "Dividend": "0.105307",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2020",
+    "Record Date": "02-Dec-2020",
+    "Payable Date": "08-Dec-2020",
+    "Dividend": "0.146244",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2020",
+    "Record Date": "24-Dec-2020",
+    "Payable Date": "31-Dec-2020",
+    "Dividend": "0.165763",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2021",
+    "Record Date": "02-Feb-2021",
+    "Payable Date": "08-Feb-2021",
+    "Dividend": "0.141366",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2021",
+    "Record Date": "02-Mar-2021",
+    "Payable Date": "08-Mar-2021",
+    "Dividend": "0.155257",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2021",
+    "Record Date": "05-Apr-2021",
+    "Payable Date": "09-Apr-2021",
+    "Dividend": "0.152152",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-May-2021",
+    "Record Date": "04-May-2021",
+    "Payable Date": "10-May-2021",
+    "Dividend": "0.164931",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2021",
+    "Record Date": "02-Jun-2021",
+    "Payable Date": "08-Jun-2021",
+    "Dividend": "0.155733",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2021",
+    "Record Date": "02-Jul-2021",
+    "Payable Date": "09-Jul-2021",
+    "Dividend": "0.158345",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Aug-2021",
+    "Record Date": "03-Aug-2021",
+    "Payable Date": "09-Aug-2021",
+    "Dividend": "0.146802",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2021",
+    "Record Date": "02-Sep-2021",
+    "Payable Date": "09-Sep-2021",
+    "Dividend": "0.149702",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2021",
+    "Record Date": "04-Oct-2021",
+    "Payable Date": "08-Oct-2021",
+    "Dividend": "0.153340",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2021",
+    "Record Date": "02-Nov-2021",
+    "Payable Date": "08-Nov-2021",
+    "Dividend": "0.150346",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2021",
+    "Record Date": "02-Dec-2021",
+    "Payable Date": "08-Dec-2021",
+    "Dividend": "0.152449",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2021",
+    "Record Date": "27-Dec-2021",
+    "Payable Date": "31-Dec-2021",
+    "Dividend": "0.178320",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2022",
+    "Record Date": "02-Feb-2022",
+    "Payable Date": "08-Feb-2022",
+    "Dividend": "0.140479",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2022",
+    "Record Date": "02-Mar-2022",
+    "Payable Date": "08-Mar-2022",
+    "Dividend": "0.185977",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2022",
+    "Record Date": "04-Apr-2022",
+    "Payable Date": "08-Apr-2022",
+    "Dividend": "0.184993",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-May-2022",
+    "Record Date": "03-May-2022",
+    "Payable Date": "09-May-2022",
+    "Dividend": "0.187474",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2022",
+    "Record Date": "02-Jun-2022",
+    "Payable Date": "08-Jun-2022",
+    "Dividend": "0.190206",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2022",
+    "Record Date": "05-Jul-2022",
+    "Payable Date": "11-Jul-2022",
+    "Dividend": "0.211897",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2022",
+    "Record Date": "02-Aug-2022",
+    "Payable Date": "08-Aug-2022",
+    "Dividend": "0.198682",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2022",
+    "Record Date": "02-Sep-2022",
+    "Payable Date": "09-Sep-2022",
+    "Dividend": "0.200386",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Oct-2022",
+    "Record Date": "04-Oct-2022",
+    "Payable Date": "11-Oct-2022",
+    "Dividend": "0.229372",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2022",
+    "Record Date": "02-Nov-2022",
+    "Payable Date": "08-Nov-2022",
+    "Dividend": "0.242952",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2022",
+    "Record Date": "02-Dec-2022",
+    "Payable Date": "08-Dec-2022",
+    "Dividend": "0.292741",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Dec-2022",
+    "Record Date": "23-Dec-2022",
+    "Payable Date": "30-Dec-2022",
+    "Dividend": "0.256714",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2023",
+    "Record Date": "02-Feb-2023",
+    "Payable Date": "08-Feb-2023",
+    "Dividend": "0.288483",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2023",
+    "Record Date": "02-Mar-2023",
+    "Payable Date": "08-Mar-2023",
+    "Dividend": "0.286967",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Apr-2023",
+    "Record Date": "04-Apr-2023",
+    "Payable Date": "11-Apr-2023",
+    "Dividend": "0.291517",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2023",
+    "Record Date": "02-May-2023",
+    "Payable Date": "08-May-2023",
+    "Dividend": "0.297498",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2023",
+    "Record Date": "02-Jun-2023",
+    "Payable Date": "08-Jun-2023",
+    "Dividend": "0.316348",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Jul-2023",
+    "Record Date": "05-Jul-2023",
+    "Payable Date": "11-Jul-2023",
+    "Dividend": "0.305631",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2023",
+    "Record Date": "02-Aug-2023",
+    "Payable Date": "08-Aug-2023",
+    "Dividend": "0.305098",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2023",
+    "Record Date": "05-Sep-2023",
+    "Payable Date": "11-Sep-2023",
+    "Dividend": "0.335401",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Oct-2023",
+    "Record Date": "03-Oct-2023",
+    "Payable Date": "10-Oct-2023",
+    "Dividend": "0.324824",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2023",
+    "Record Date": "02-Nov-2023",
+    "Payable Date": "08-Nov-2023",
+    "Dividend": "0.340465",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2023",
+    "Record Date": "04-Dec-2023",
+    "Payable Date": "08-Dec-2023",
+    "Dividend": "0.345495",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.326944",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Feb-2024",
+    "Record Date": "02-Feb-2024",
+    "Payable Date": "08-Feb-2024",
+    "Dividend": "0.291247",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Mar-2024",
+    "Record Date": "04-Mar-2024",
+    "Payable Date": "08-Mar-2024",
+    "Dividend": "0.337564",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2024",
+    "Record Date": "02-Apr-2024",
+    "Payable Date": "08-Apr-2024",
+    "Dividend": "0.330235",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2024",
+    "Record Date": "02-May-2024",
+    "Payable Date": "08-May-2024",
+    "Dividend": "0.335231",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Jun-2024",
+    "Record Date": "03-Jun-2024",
+    "Payable Date": "10-Jun-2024",
+    "Dividend": "0.342414",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2024",
+    "Record Date": "01-Jul-2024",
+    "Payable Date": "09-Jul-2024",
+    "Dividend": "0.341625",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2024",
+    "Record Date": "01-Aug-2024",
+    "Payable Date": "08-Aug-2024",
+    "Dividend": "0.339625",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Sep-2024",
+    "Record Date": "03-Sep-2024",
+    "Payable Date": "10-Sep-2024",
+    "Dividend": "0.327718",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2024",
+    "Record Date": "01-Oct-2024",
+    "Payable Date": "08-Oct-2024",
+    "Dividend": "0.321690",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Nov-2024",
+    "Record Date": "01-Nov-2024",
+    "Payable Date": "08-Nov-2024",
+    "Dividend": "0.325069",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Dec-2024",
+    "Record Date": "02-Dec-2024",
+    "Payable Date": "09-Dec-2024",
+    "Dividend": "0.332431",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.329050",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Feb-2025",
+    "Record Date": "03-Feb-2025",
+    "Payable Date": "07-Feb-2025",
+    "Dividend": "0.324841",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Mar-2025",
+    "Record Date": "03-Mar-2025",
+    "Payable Date": "07-Mar-2025",
+    "Dividend": "0.339946",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2025",
+    "Record Date": "01-Apr-2025",
+    "Payable Date": "07-Apr-2025",
+    "Dividend": "0.337417",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2025",
+    "Record Date": "01-May-2025",
+    "Payable Date": "07-May-2025",
+    "Dividend": "0.356483",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Jun-2025",
+    "Record Date": "02-Jun-2025",
+    "Payable Date": "06-Jun-2025",
+    "Dividend": "0.328193",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2025",
+    "Record Date": "01-Jul-2025",
+    "Payable Date": "08-Jul-2025",
+    "Dividend": "0.343795",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Aug-2025",
+    "Record Date": "01-Aug-2025",
+    "Payable Date": "07-Aug-2025",
+    "Dividend": "0.351797",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Sep-2025",
+    "Record Date": "02-Sep-2025",
+    "Payable Date": "08-Sep-2025",
+    "Dividend": "0.337350",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Oct-2025",
+    "Record Date": "01-Oct-2025",
+    "Payable Date": "07-Oct-2025",
+    "Dividend": "0.333438",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Nov-2025",
+    "Record Date": "03-Nov-2025",
+    "Payable Date": "07-Nov-2025",
+    "Dividend": "0.321298",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Dec-2025",
+    "Record Date": "01-Dec-2025",
+    "Payable Date": "05-Dec-2025",
+    "Dividend": "0.332635",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.321946",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Feb-2026",
+    "Record Date": "02-Feb-2026",
+    "Payable Date": "06-Feb-2026",
+    "Dividend": "0.324371",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "02-Mar-2026",
+    "Record Date": "02-Mar-2026",
+    "Payable Date": "06-Mar-2026",
+    "Dividend": "0.332183",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Apr-2026",
+    "Record Date": "01-Apr-2026",
+    "Payable Date": "08-Apr-2026",
+    "Dividend": "0.341985",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-May-2026",
+    "Record Date": "01-May-2026",
+    "Payable Date": "07-May-2026",
+    "Dividend": "0.337730",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jun-2026",
+    "Record Date": "01-Jun-2026",
+    "Payable Date": "05-Jun-2026",
+    "Dividend": "0.331603",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Jul-2026",
+    "Record Date": "01-Jul-2026",
+    "Payable Date": "08-Jul-2026",
+    "Dividend": "0.332867",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "03-Aug-2026",
+    "Record Date": "03-Aug-2026",
+    "Payable Date": "07-Aug-2026",
+    "Dividend": "0.331832",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "01-Sep-2026",
+    "Record Date": "01-Sep-2026",
+    "Payable Date": "08-Sep-2026",
+    "Dividend": "0.340128",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 187,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value",
+   "Coupon",
+   "Maturity Date"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv)",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 3236,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/IGHG-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "188",
+   "Weighted Average Yield to Maturity": "5.63%"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Issues": "187",
+   "Long Portfolio Duration": "9.44",
+   "Net Effective Duration": "0.00",
+   "Long Portfolio Yield": "5.56",
+   "Net Index Yield": "4.77",
+   "": "2017"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetighg.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_ighg.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=IGHG&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=IGHG&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=IGHG&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=IGHG&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=IGHG&document-label=semi-annual-report"
+ }
+}
