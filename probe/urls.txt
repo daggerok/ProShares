@@ -1,8 +1,4 @@
-https://accounts.profunds.com/etfdata/psdlyhld.csv | HEAD
-https://accounts.profunds.com/etfdata/historical_nav.csv | HEAD
-https://accounts.profunds.com/etfdata/etf_splits.csv | HEAD
-https://accounts.profunds.com/etfdata/psdlyhld.csv | bytes=1200
-https://accounts.profunds.com/etfdata/historical_nav.csv | cmd=wc -l /tmp/body; head -3 /tmp/body; tail -2 /tmp/body
-https://accounts.profunds.com/etfdata/etf_splits.csv | bytes=700
-https://www.proshares.com/our-etfs/strategic/ighg | near=30-Day | bytes=0
-https://www.proshares.com/our-etfs/strategic/nobl | near=Ex-Date|Payable Date | bytes=0
+https://accounts.profunds.com/etfdata/psdlyhld.csv | cmd=UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-proshares-etfs -o /tmp/b.html; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs -o /tmp/c.html; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | tr -d '"' | sort -u > /tmp/h.txt; grep -ohE 'href="/our-etfs/(strategic|leveraged-and-inverse)/[a-z0-9]+' /tmp/b.html /tmp/c.html | grep -oE '[a-z0-9]+$' | tr 'a-z' 'A-Z' | sort -u > /tmp/f.txt; echo "holdings tickers: $(wc -l < /tmp/h.txt)  finder tickers: $(wc -l < /tmp/f.txt)"; echo; echo "IN HOLDINGS, NOT ON FINDER PAGES:"; comm -23 /tmp/h.txt /tmp/f.txt | tr '\n' ' '; echo; echo "ON FINDER, NO HOLDINGS ROW:"; comm -13 /tmp/h.txt /tmp/f.txt | tr '\n' ' '; echo; echo "finder page b results text:"; grep -oE '[0-9]+ Results' /tmp/b.html | head -3; grep -oE '[0-9]+ Results' /tmp/c.html | head -3
+https://www.proshares.com/our-etfs/strategic/nobl | cmd=UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/nobl -o /tmp/n.html; grep -n -i -E 'distributionTab|dividend|ex-date|ex date|payable' /tmp/n.html | head -40
+https://query1.finance.yahoo.com/v8/finance/chart/NOBL?range=1mo&interval=1d&events=div%7Csplit | bytes=1200
+https://query1.finance.yahoo.com/v8/finance/chart/BF%2FB?range=5d&interval=1d | bytes=300
