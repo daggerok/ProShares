@@ -1,4 +1,6 @@
-URL: https://www.proshares.com/our-etfs/strategic/nobl
-STATUS: 200 323857 bytes text/html; charset=utf-8
-GREP: accounts\.profunds\.com
-                                           href="https://accounts.profunds.com/etfdata/ByFund/NOBL-historical_nav.csv"
+URL: https://accounts.profunds.com/etfdata/ByFund/
+STATUS: 200 150885 bytes text/html;charset=ISO-8859-1
+CMD: grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | grep -oE '^[A-Z0-9]+-[a-z_]+\.(csv|xls|xlsx|txt|json)$' | sed -E 's/^[A-Z0-9]+-//' | sort | uniq -c | sort -rn
+    238 historical_nav.csv
+    221 psdlyhld.xls
+    221 psdlyhld.csv

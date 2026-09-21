@@ -1,20 +1,4 @@
 URL: https://accounts.profunds.com/etfdata/ByFund/
 STATUS: 200 150885 bytes text/html;charset=ISO-8859-1
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<html>
- <head>
-  <title>Index of /etfdata/ByFund</title>
- </head>
- <body>
-<h1>Index of /etfdata/ByFund</h1>
-  <table>
-   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
-   <tr><th colspan="5"><hr></th></tr>
-<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/etfdata/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ACQQ-historical_nav.csv">ACQQ-historical_nav.csv</a></td><td align="right">2026-09-18 21:01  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ACQQ-psdlyhld.csv">ACQQ-psdlyhld.csv</a>      </td><td align="right">2026-09-18 22:27  </td><td align="right">615 </td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ACQQ-psdlyhld.xls">ACQQ-psdlyhld.xls</a>      </td><td align="right">2026-09-18 22:27  </td><td align="right">5.5K</td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ACRT-historical_nav.csv">ACRT-historical_nav.csv</a></td><td align="right">2026-09-18 21:01  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ACRT-psdlyhld.csv">ACRT-psdlyhld.csv</a>      </td><td align="right">2026-09-18 22:27  </td><td align="right">604 </td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ACRT-psdlyhld.xls">ACRT-psdlyhld.xls</a>      </td><td align="right">2026-09-18 22:27  </td><td align="right">5.5K</td><td>&nbsp;</td></tr>
-<tr><td valign="top"><img src="/icons
+CMD: grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | grep -E '^[A-Z0-9]+-' | sed -E 's/-(historical_nav|psdlyhld).*//' | sort -u | tr '\n' ' ' 
+ACQQ ACRT ACSP AGQ ALTS ANEW BETE BETH BIB BIS BITI BITO BITU BOIL BUYB BZQ CLIX CMD COBO COIA CRCA CROC CSM CTEX DAT DDG DDM DIG DOG DUG DXD EET EETH EEV EFAD EFO EFU EFZ EMDV EMSH EMTY EPV EQQQ EQRR ETHD ETHT EUDV EUFX EUM EUO EWV EZJ FB FINF FINU FINZ FUT FUTS FXP GDAY GDJJ GDJS GDXS GDXX GGOV GLL HBU HBZ HDG HGEU HGJP HYHG IGHG IGS IGU ION IQMM IQQQ ISPY ITWO JPX KOLD KRS KRU KRYP LTL MAKX MRGR MVV MYY MZZ NOBL NVDB OILD OILK OILU OND ONLN PAWZ PEX PLTA PSQ PST QB QID QLD QQDN QQQA QQUP QQXL RALS RB REGL REK REW RINF ROM RWM RXD RXL SAA SBB SBIT SBM SCC SCO SCOM SDD SDK SDOW SDP SDS SEF SETH SFK SH SIJ SINF SJB SJF SJH SJL SKF SKHU SKK SKYU SLON SMDD SMDV SMK SMN SOP SPCF SPXB SPXE SPXN SPXT SPXU SPXV SQQQ SRS SRTY SSG SSO SUPL SVXY SZK TBF TBT TBX TBZ TDV TINT TINY TLL TMDV TOLZ TPS TQQQ TSLI TTT TWM TWQ TYTE UBIO UBR UBT UCC UCD UCO UCOM UCOP UCYB UDOW UGE UGL UINF UJB UKF UKK UKW ULE UMDD UMX UOP UPAL UPLT UPRO UPV UPW URE URSP URTY USD UST UVG UVT UVU UVXY UWC UWM UXI UXJ UXRP UYG UYM VERS VIXM VIXY WYDE XCOM XPP YCL YCOM YCS YXI ZBIO ZSL 

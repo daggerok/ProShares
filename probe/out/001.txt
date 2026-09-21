@@ -1,22 +1,26 @@
-URL: https://www.proshares.com/our-etfs/strategic/nobl
-STATUS: 200 323857 bytes text/html; charset=utf-8
-NEAR: Download Holdings | bytes=0
-3490-                                        <td>NET OTHER ASSETS (LIABILITIES)</td>
-3491-                                        <td>--</td>
-3492-                                        <td>$27,861,053.40</td>
-3493-                                        <td>27,861,053</td>
-3494-                                        <td>--</td>
-3495-                                </tr>
-3496-                        </tbody>
-3497-                    </table>
-3498-                </div>
-3499-
-3500-                <div class="fund-detail-table-download text-center">
-3501-                    <button class="btn btn-secondary close-btn btn-blue ">Show Fewer Holdings</button>
-3502-                    <button class="btn btn-secondary open-btn btn-blue">Show all holdings</button>
-3503-                    <a class="btn btn-secondary btn-blue" onclick="ExportToCSV()">
-3504:                        Download Holdings (.csv)<span class="sr-only">This links to a pdf file</span><span class="sr-only">This link opens a new window</span>
-3505-                    </a>
-3506-                </div>
-3507-            </div>
-3508-        </div>
+URL: https://accounts.profunds.com/etfdata/ByFund/NOBL-psdlyhld.csv
+STATUS: 200 8169 bytes text/csv
+PORTFOLIO HOLDINGS INFORMATION,,,,
+AS OF 9/18/2026,,,,
+,,,,
+Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","BDX","2087807","BECTON DICKINSON AND CO",,,1079626,,195347528.4,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","FDS","2329770","FACTSET RESEARCH SYSTEMS INC",,,674337,,191397070.7,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","TGT","2259101","TARGET CORP",,,1198930,,189658736.7,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","ERIE","2311711","ERIE INDEMNITY COMPANY-CL A",,,784184,,187459185.2,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","MDT","BTN1Y11","MEDTRONIC PLC",,,2019274,,186035713.6,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","ADP","2065308","AUTOMATIC DATA PROCESSING",,,680153,,184471096.7,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","IBM","2005973","INTL BUSINESS MACHINES CORP",,,803614,,184469593.7,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","ROP","2749602","ROPER TECHNOLOGIES INC",,,491094,,183050377.6,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","CVX","2838555","CHEVRON CORP",,,856876,,179524090.8,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","FAST","2332262","FASTENAL CO",,,3647861,,178781667.6,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","EXPD","2325507","EXPEDITORS INTL WASH INC",,,931836,,177924765.8,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","KO","2206657","COCA-COLA CO/THE",,,2011897,,177549910.3,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","EMR","2313405","EMERSON ELECTRIC CO",,,1184265,,177545008.8,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","NDSN","2641838","NORDSON CORP",,,567067,,176681065.2,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","GPC","2367480","GENUINE PARTS CO",,,1373722,,175946313.8,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","XOM","BVSRPD7","EXXONMOBIL HOLDINGS CORP",,,1070599,,175085760.5,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","JNJ","2475833","JOHNSON & JOHNSON",,,646863,,174646541.4,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","NUE","2651086","NUCOR CORP",,,700974,,174107922.1,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","ABBV","B92SR70","ABBVIE INC",,,652834,,172322062.6,
+"NOBL","ProShares S&P 500 Dividend Aristocrats ETF","SJM","2951452","JM SMUCKER CO/THE",,,1400393,,1721783
