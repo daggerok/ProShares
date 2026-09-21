@@ -1,6 +1,4 @@
-URL: https://accounts.profunds.com/etfdata/ByFund/
-STATUS: 200 150885 bytes text/html;charset=ISO-8859-1
-CMD: grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | grep -oE '^[A-Z0-9]+-[a-z_]+\.(csv|xls|xlsx|txt|json)$' | sed -E 's/^[A-Z0-9]+-//' | sort | uniq -c | sort -rn
-    238 historical_nav.csv
-    221 psdlyhld.xls
-    221 psdlyhld.csv
+URL: https://accounts.profunds.com/etfdata/
+STATUS: 200 4410 bytes text/html;charset=ISO-8859-1
+CMD: grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | tr '\n' ' '
+?C=N;O=D ?C=M;O=A ?C=S;O=A ?C=D;O=A / ByFund/ CDS/ CS13030/ GearingUpBullBearData.xlsx GearingUpData.xlsx GearingUpFlowsData.xlsx IQMM_MM_LIQUIDITY.csv PFA_DailyHoldingsSilver_web.csv PST2_SILVER_Web_DLYHLD.csv Schedule_of_investments.xls XBRL/ bnytest/ etf_performance.csv etf_splits.csv historical_nav.csv psdlyhld.csv psdlyhld.xls 
