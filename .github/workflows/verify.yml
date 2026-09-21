@@ -23,7 +23,10 @@ jobs:
           bun-version: latest
 
       - name: Verify
-        run: set +e; bun ./dev-run/verify-sources.ts > dev-run/verify-report.txt 2>&1; echo "verify exit status: $?" | tee -a dev-run/verify-report.txt
+        run: |
+          set +e
+          bun ./dev-run/verify-sources.ts > dev-run/verify-report.txt 2>&1
+          echo "verify exit status: $?" | tee -a dev-run/verify-report.txt
 
       - name: Commit report
         if: always()
