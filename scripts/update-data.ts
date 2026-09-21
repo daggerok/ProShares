@@ -851,7 +851,9 @@ export function parseFundPage(html: string): FundPageData {
   // publish two ("Gross Expense Ratio" / "Net Expense Ratio").
   const grossExpenseRatioText = extractIdText(html, 'snapshot-grossExpenseRatio') || cleanText(snapshot['Gross Expense Ratio'] || '');
   const netExpenseRatioText = extractIdText(html, 'snapshot-netExpenseRatio') || cleanText(snapshot['Net Expense Ratio'] || '');
-  const expenseRatioText = extractIdText(html, 'snapshot-expenseRatio') || netExpenseRatioText || grossExpenseRatioText;
+  const expenseRatioText = extractIdText(html, 'snapshot-expenseRatio')
+    || netExpenseRatioText
+    || cleanText(snapshot['Expense Ratio'] || '');
   const twelveMonthYieldText = extractIdText(html, 'distributions-12MonthYield');
   const indexStats: Record<string, string> = {};
   const indexStart = html.search(/id="index"/i);
@@ -988,7 +990,7 @@ export function cleanRatioText(raw: unknown): string {
 }
 
 export function holdingWeight(row: HoldingsRow, totalNetAssets: number): string {
-  if (isOtherAssetsRow(row)) return '—';
+  if (isWeightlessRow(row)) return '—';
   const value = numberOrNull(row.marketValue) ?? numberOrNull(row.exposure);
   if (value === null || !totalNetAssets) return '—';
   return round((value / totalNetAssets) * 100, 10).toFixed(10);
@@ -997,6 +999,18 @@ export function holdingWeight(row: HoldingsRow, totalNetAssets: number): string 
 /** The "Net Other Assets (Liabilities)" / "Net Other Assets / Cash" line. */
 export function isOtherAssetsRow(row: HoldingsRow): boolean {
   return /net\s+other\s+assets/i.test(row.name);
+}
+
+/**
+ * Rows the fund pages render without a weight: the residual net-other-assets
+ * line and its cash equivalents (Treasury bills and the ProShares money-market
+ * fund it holds). Every other position — equities, bonds, futures and swaps —
+ * carries the page's own number.
+ */
+export function isWeightlessRow(row: HoldingsRow): boolean {
+  return isOtherAssetsRow(row)
+    || /^treasury\s+bill/i.test(row.name)
+    || /genius\s+mny\s+mkt/i.test(row.name);
 }
 
 /** Total net assets a holdings file implies: the sum of its market values. */
@@ -1040,6 +1054,10 @@ export type NavRow = {
   sharesOutstanding: number | null;
   netAssets: number | null;
 };
+
+export function holdingsUrl(ticker: string): string {
+  return `${PROSHARES_DATA_HOST}/ByFund/${ticker}-psdlyhld.csv`;
+}
 
 export function navHistoryUrl(ticker: string): string {
   return `${PROSHARES_DATA_HOST}/ByFund/${ticker}-historical_nav.csv`;
@@ -1447,6 +1465,7 @@ export function buildFeed(inputs: {
   navRows: NavRow[];
   holdingsRows: HoldingsRow[];
   holdingsAsOf: string;
+  holdingsSourceLabel: string;
   distributions: DistributionRow[];
   exchange: string;
   exchangeSource: string;
@@ -1456,7 +1475,7 @@ export function buildFeed(inputs: {
 }): FundArtifacts {
   const {
     fund, page, performanceNavMonth, performanceNavQuarter, performanceMarketMonth, performanceMarketQuarter,
-    navRows, holdingsRows, holdingsAsOf, distributions, exchange, exchangeSource, splits, config, catalogReadAt,
+    navRows, holdingsRows, holdingsAsOf, holdingsSourceLabel, distributions, exchange, exchangeSource, splits, config, catalogReadAt,
   } = inputs;
 
   const orderedNavRows = [...navRows].sort((a, b) => compareDisplayDates(a.date, b.date));
@@ -1580,7 +1599,7 @@ export function buildFeed(inputs: {
       splitsFile: SPLITS_URL,
       distributionsApi: distributionSummaryUrl(fund.ticker, new Date().getUTCFullYear()),
       exchangeSource,
-      holdingsSource: `official ProShares daily holdings file (psdlyhld.csv, as of ${holdingsAsOf || '—'})`,
+      holdingsSource: holdingsSourceLabel,
       historySource: `official ProShares NAV history file (ByFund/${fund.ticker}-historical_nav.csv)`,
       provider: 'ProShares public fund pages and the official ProShares/ProFunds data host',
       catalogReadAt,
@@ -1654,8 +1673,8 @@ export function buildFeed(inputs: {
       asOfDate: holdingsAsOf || '—',
       asOf: holdingsAsOf ? toIsoDate(holdingsAsOf) : '—',
       headers: holdingsCsvHeaders,
-      source: 'official ProShares daily holdings file (psdlyhld.csv)',
-      weightNote: 'Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.',
+      source: holdingsSourceLabel,
+      weightNote: 'Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.',
     },
     history: {
       pageSize: config.historyPageSize,
@@ -2046,7 +2065,30 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         distributions.sort((a, b) => compareDisplayDates(a.exDate, b.exDate));
       }
 
-      const holdings = holdingsFile.funds.get(fund.ticker);
+      // The per-fund download is what the fund page itself offers and the only
+      // official file that keeps the SEDOL identifiers for equity positions;
+      // the all-funds file is the fallback when it is unavailable.
+      let holdings = holdingsFile.funds.get(fund.ticker);
+      let holdingsAsOf = holdingsFile.asOf;
+      let holdingsSourceLabel = `official ProShares daily holdings file (psdlyhld.csv, as of ${holdingsFile.asOf || '—'})`;
+      try {
+        const text = await fetchText(
+          holdingsUrl(fund.ticker),
+          browserHeaders(),
+          config,
+          `${fund.ticker} holdings file`,
+          `${fund.ticker}-psdlyhld.csv`,
+        );
+        const perFund = parseHoldingsFile(text);
+        const bucket = perFund.funds.get(fund.ticker);
+        if (bucket && bucket.rows.length) {
+          holdings = bucket;
+          holdingsAsOf = perFund.asOf || holdingsAsOf;
+          holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
+        }
+      } catch (error) {
+        console.warn(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
+      }
       const splitRows = splits.get(fund.ticker) || [];
       const artifacts = buildFeed({
         fund,
@@ -2057,7 +2099,8 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         performanceMarketQuarter: performance.get(`${fund.ticker}|MARKET|QUARTER`),
         navRows,
         holdingsRows: holdings ? holdings.rows : [],
-        holdingsAsOf: holdingsFile.asOf,
+        holdingsAsOf,
+        holdingsSourceLabel,
         distributions,
         exchange: exchanges.get(fund.ticker) || '',
         exchangeSource: exchanges.get(fund.ticker) ? exchangeSource : '—',

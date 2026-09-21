@@ -2216,8 +2216,12 @@ function parseProSharesHoldingsUpload(text: string): { asOfDate: string; funds: 
     bucket.headers = headers;
     bucket.rows = bucket.rows.map((row: any) => {
       const parsed = numberOrNull(row.marketValue) ?? numberOrNull(row.exposure);
-      const otherAssets = /net\s+other\s+assets/i.test(String(row.name || ''));
-      const weight = !otherAssets && total > 0 && parsed !== null ? (parsed / total) * 100 : null;
+      // The fund pages render no weight for the residual net-other-assets line
+      // and its cash equivalents (Treasury bills, the money-market fund).
+      const weightless = /net\s+other\s+assets/i.test(String(row.name || ''))
+        || /^treasury\s+bill/i.test(String(row.name || ''))
+        || /genius\s+mny\s+mkt/i.test(String(row.name || ''));
+      const weight = !weightless && total > 0 && parsed !== null ? (parsed / total) * 100 : null;
       const cells: Record<string, string> = {
         Name: row.name || '—',
         Ticker: row.ticker || '-',

@@ -28,6 +28,7 @@ import {
   historyRangeDays,
   holdingWeight,
   holdingsHeaders,
+  holdingsUrl,
   holdingsNetAssets,
   isOtherAssetsRow,
   isWeightlessRow,
@@ -573,6 +574,7 @@ describe('NAV history parsing', () => {
 
   test('per-fund URL pattern and range windows', () => {
     expect(navHistoryUrl('NOBL')).toBe('https://accounts.profunds.com/etfdata/ByFund/NOBL-historical_nav.csv');
+    expect(holdingsUrl('NOBL')).toBe('https://accounts.profunds.com/etfdata/ByFund/NOBL-psdlyhld.csv');
     expect(historyRangeDays('max')).toBeNull();
     expect(historyRangeDays('10y')).toBe(3650);
     expect(historyRangeDays('6m')).toBe(180);
@@ -697,6 +699,7 @@ describe('feed assembly', () => {
     navRows: parseNavHistoryFile(NAV_CSV, 'NOBL'),
     holdingsRows: parseHoldingsFile(HOLDINGS_CSV).funds.get('NOBL')?.rows || [],
     holdingsAsOf: 'Sep 18 2026',
+    holdingsSourceLabel: 'official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Sep 18 2026)',
     distributions: parseDistributionSummary(DISTRIBUTIONS_JSON),
     exchange: 'NYSE Arca',
     exchangeSource: 'Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)',
