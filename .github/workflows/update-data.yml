@@ -9,7 +9,7 @@ on:
         default: ""
         type: string
       request_sleep:
-        description: "Seconds between outgoing request starts; keep requests polite to proshares.com, SEC and Yahoo"
+        description: "Seconds between outgoing request starts; keep requests polite to proshares.com and the ProShares data host"
         required: false
         default: "2"
         type: string
@@ -59,37 +59,27 @@ on:
         default: ""
         type: string
       dividend_yield:
-        description: "Catalog indicated-yield percentage range; colon required"
+        description: "Catalog dividend-yield percentage range; colon required"
         required: false
         default: ":"
         type: string
       sec_yield:
-        description: "Catalog SEC 30-day yield percentage range; colon required"
+        description: "Catalog 30-day SEC yield percentage range; ProShares publishes none, so this filter is parity-only"
         required: false
         default: ":"
         type: string
       history_range:
-        description: "Yahoo chart range used for history/distribution rows (max, 10y, 5y, ...)"
+        description: "How much official NAV history to publish (max, 20y, 10y, 5y, or a number of months/days such as 36m or 90d)"
         required: false
         default: "max"
         type: string
-      edgar_fallback:
-        description: "Fall back to SEC EDGAR Form N-PORT-P (ProShares ETF Trust, CIK 0001137360) when a holdings download is unavailable"
+      distribution_years:
+        description: "How many years of the official distribution summary to walk per fund"
         required: false
-        default: "1"
-        type: string
-      skip_yahoo:
-        description: "Keep previous history and distributions while refreshing catalog/holdings"
-        required: false
-        default: ""
+        default: "10"
         type: string
       skip_proshares:
         description: "Keep the previously published official catalog"
-        required: false
-        default: ""
-        type: string
-      sec_ua:
-        description: "SEC User-Agent contact string (EDGAR requires a declared identity)"
         required: false
         default: ""
         type: string
@@ -114,10 +104,8 @@ jobs:
       DIVIDEND_YIELD: ${{ inputs.dividend_yield || ':' }}
       SEC_YIELD: ${{ inputs.sec_yield || ':' }}
       HISTORY_RANGE: ${{ inputs.history_range || 'max' }}
-      EDGAR_FALLBACK: ${{ inputs.edgar_fallback || '1' }}
-      SKIP_YAHOO: ${{ inputs.skip_yahoo || '' }}
+      DISTRIBUTION_YEARS: ${{ inputs.distribution_years || '10' }}
       SKIP_PROSHARES: ${{ inputs.skip_proshares || '' }}
-      SEC_UA: ${{ inputs.sec_ua || '' }}
 
     steps:
       - name: Checkout

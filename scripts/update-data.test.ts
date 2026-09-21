@@ -28,6 +28,8 @@ import {
   historyRangeDays,
   holdingWeight,
   holdingsHeaders,
+  holdingsNetAssets,
+  isOtherAssetsRow,
   indicatedYield,
   matchesRange,
   matchesReturnRange,
@@ -57,6 +59,7 @@ import {
   toIsoDate,
   writeIfChanged,
   writeSheetPages,
+  type HoldingsRow,
   type NavRow,
   type UpdaterConfig,
 } from './update-data';
@@ -220,7 +223,6 @@ const testConfig: UpdaterConfig = {
   category: '',
   audienceType: '',
   secUa: '',
-  skipYahoo: false,
   skipProShares: false,
   offlineSeed: false,
   performanceRanges: {},
@@ -425,6 +427,20 @@ describe('fund page parsing', () => {
     expect(page.distributionFrequency).toBe('Quarterly');
     expect(page.twelveMonthYield).toBe(2.01);
     expect(page.inceptionDate).toBe('Oct 09 2013');
+    expect(page.expenseRatio).toBe(0.35);
+    expect(page.netExpenseRatio).toBe(0.35);
+    expect(page.grossExpenseRatio).toBeNull();
+  });
+
+  test('geared pages publish gross and net ratios plus a snapshot frequency', () => {
+    const geared = parseFundPage(`
+<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span></div></li>
+<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.82%</span></div></li>
+<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>`);
+    expect(geared.grossExpenseRatio).toBe(0.97);
+    expect(geared.netExpenseRatio).toBe(0.82);
+    expect(geared.expenseRatio).toBe(0.82);
+    expect(geared.distributionFrequency).toBe('Quarterly');
   });
 
   test('characteristics and index stats', () => {
@@ -439,6 +455,16 @@ describe('fund page parsing', () => {
     expect(page.returns.monthEnd.mpytd).toBe(12.37);
     expect(page.returns.quarterEnd.asOfDate).toBe('Jun 30 2026');
     expect(page.returns.quarterEnd.ytd).toBe(9.09);
+  });
+
+  test('return tenors follow the header labels, not their position', () => {
+    const swapped = parseFundPage(FUND_PAGE.replace(
+      '<th>Fund + Index</th><th>1m</th><th>3m</th>',
+      '<th>Fund + Index</th><th>3m</th><th>1m</th>'));
+    // The NOBL NAV row reads 1.41% for 1m and 8.43% for 3m; swapped columns must
+    // still land in their own tenor.
+    expect(swapped.returns.monthEnd.mo1).toBe(8.43);
+    expect(swapped.returns.monthEnd.mo3).toBe(1.41);
   });
 
   test('exposure JSON blocks are decoded', () => {
@@ -474,11 +500,37 @@ describe('holdings file parsing', () => {
     expect(holdingsHeaders(file.funds.get('IGHG')?.rows || [])).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Exposure Value', 'Coupon', 'Maturity Date']);
   });
 
-  test('weights reproduce the fund page weights against total net assets', () => {
-    // The ProShares NOBL page renders BDX at 1.73% of net assets.
-    const weight = holdingWeight('195347528.4', 11_270_728_460, 11_270_728_460);
-    expect(Number(weight).toFixed(2)).toBe('1.73');
-    expect(holdingWeight('', 11_270_728_460, 11_270_728_460)).toBe('—');
+  test('weights reproduce the fund page Exposure Weight column', () => {
+    // Live checks: NOBL BDX 1.73%, TQQQ NVDA 3.11%, TQQQ Barclays swap 29.64%,
+    // AGQ Silver DEC26 77.04%, IGHG Morgan Stanley 1.62% — the denominator is the
+    // sum of the market values the same official file reports.
+    const nobl = parseHoldingsFile(HOLDINGS_CSV).funds.get('NOBL')?.rows || [];
+    // The fixture keeps three of NOBL's seventy rows, so the published fund
+    // total (Σ market values in the official file on 2026-09-18) is used here.
+    expect(Number(holdingWeight(nobl[0], 11_264_839_323)).toFixed(2)).toBe('1.73');
+    expect(holdingsNetAssets(nobl)).toBeCloseTo(409_244_295.4, 4);
+    expect(isOtherAssetsRow(nobl[2])).toBe(true);
+
+    const tqqq: HoldingsRow[] = [
+      { name: 'NVDA', ticker: 'NVDA', identifier: '', coupon: '', maturity: '', shares: '5127506', exposure: '', marketValue: '1139690759' },
+      { name: 'NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '366121', exposure: '10853353165', marketValue: '' },
+      { name: 'Net Other Assets (Liabilities)', ticker: '', identifier: '', coupon: '', maturity: '', shares: '9707363674', exposure: '', marketValue: '9707363673.76' },
+      { name: 'TREASURY BILL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '1000000000' },
+    ];
+    // Σ market values for TQQQ in the official file on 2026-09-18.
+    const tqqqTotal = 36_617_542_112;
+    expect(holdingsNetAssets(tqqq)).toBeCloseTo(11_847_054_432.76, 2);
+    expect(Number(holdingWeight(tqqq[0], tqqqTotal)).toFixed(2)).toBe('3.11');
+    expect(Number(holdingWeight(tqqq[1], tqqqTotal)).toFixed(2)).toBe('29.64');
+    expect(holdingWeight(tqqq[2], tqqqTotal)).toBe('—');
+
+    const agq: HoldingsRow[] = [
+      { name: 'SILVER FUTURE DEC26', ticker: '', identifier: '', coupon: '', maturity: '', shares: '3411', exposure: '1145226195', marketValue: '' },
+      { name: 'Net Other Assets / Cash', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1486541291', exposure: '', marketValue: '1486541291.25' },
+    ];
+    expect(Number(holdingWeight(agq[0], holdingsNetAssets(agq))).toFixed(2)).toBe('77.04');
+
+    expect(holdingWeight({ name: 'NO SIDE', ticker: '', identifier: '', coupon: '', maturity: '', shares: '', exposure: '', marketValue: '' }, 1)).toBe('—');
   });
 });
 
@@ -639,6 +691,9 @@ describe('feed assembly', () => {
     expect(entry.ticker).toBe('NOBL');
     expect(entry.category).toBe('Equity');
     expect(entry.terValue).toBe(0.35);
+    expect(entry.terNetValue).toBe(0.35);
+    // ProShares publishes one ratio for NOBL, so it serves as gross and net.
+    expect(entry.terGrossValue).toBe(0.35);
     expect(entry.nav).toBe('$55.66');
     expect(entry.aumValue).toBe(11_265_159_071.3158);
     expect(entry.exchange).toBe('NYSE Arca');

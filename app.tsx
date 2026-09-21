@@ -143,16 +143,16 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Identifier: 'SEDOL — Security identifier published in the official ProShares daily holdings file (Security Sedol). ProShares publishes no CUSIP/ISIN/FIGI for its positions, so this is the identifier key: rows without an exchange ticker (futures, swaps, bonds, cash) are identified in the Watchlist by this.',
   SEDOL: 'SEDOL — Stock Exchange Daily Official List identifier, exactly as published in the ProShares daily holdings file (Security Sedol).',
   FIGI: 'FIGI — Bloomberg Financial Instrument Global Identifier. Not published by ProShares; shown as "—" (data limitation).',
-  TER: 'Expense Ratio — Total annual fund operating expenses as a % of assets, as published in the ProShares fund page snapshot.',
+  TER: 'Expense Ratio — Total annual fund operating expenses as a % of assets. ProShares publishes a single ratio for most funds and a gross plus a net ratio for the geared funds; the feed headline is the net ratio.',
   NAV: 'NAV (Net Asset Value) — Per-share dollar value of the fund, as published in the ProShares fund page price block and in the official daily NAV history file.',
   'Net Assets': 'Net Assets (AUM) — Total net assets as published in the ProShares fund page snapshot and in the official daily NAV history file.',
-  Weight: 'Weight — Position weight as a percentage of the fund\'s total net assets, computed by the updater from the position value and the fund\'s published net assets (the ProShares holdings file carries no weight column).',
+  Weight: 'Weight — ProShares Exposure Weight: the position value (market value, or notional exposure for futures and swaps) as a percentage of the fund\'s total net assets in the same official holdings file (the file carries no weight column, so the updater reproduces the column the fund pages render). Cash and payable lines carry no weight.',
   'Weight Sum': 'Weight Sum — Summed weight of this holding across all selected ETFs (%).',
   'Max Weight': 'Max Weight — Highest single-fund weight for this holding across selected ETFs (%).',
   '# ETFs': 'Number of selected ETFs that currently hold this security.',
   ETFs: 'Selected ETFs holding this security.',
   Type: 'Category — the asset-class part of the proshares.com classification (see the Category column). Same source as the category tabs.',
-  Expense: 'Expense Ratio — Total annual fund operating expenses as a % of assets, as published in the ProShares fund page snapshot.',
+  Expense: 'Expense Ratio — Total annual fund operating expenses as a % of assets. ProShares publishes a single ratio for most funds and a gross plus a net ratio for the geared funds; the feed headline is the net ratio.',
   'Dividend Yield': 'Dividend Yield — the official 12-Month Yield published in the ProShares fund page distributions block: the last 12 months\' distributions divided by the latest NAV plus any capital-gain distributions. "—" for funds with no distribution history yet.',
   'SEC Yield': 'SEC Yield (30-Day) — Not published by ProShares on its fund pages; shown as "—" (data limitation). ProShares prints a Weighted Average Yield to Maturity for its interest rate hedged bond funds instead, which the Overview tab reports.',
   'YTD Return': 'YTD Return — Year-To-Date return from the official ProShares performance file (etf_performance.csv, NAV total return, month-end period), as of the date shown in the Return As Of column.',
@@ -1511,7 +1511,8 @@ function renderOverviewTable(fund: FundRow): void {
     { section: 'Fund', metric: 'Holdings Source', value: meta && meta.source ? meta.source.holdingsSource : null },
     { section: 'Fund', metric: 'History Source', value: meta && meta.source ? meta.source.historySource : null },
     { section: 'Fund', metric: 'Provider', value: meta && meta.source ? meta.source.provider : null },
-    { section: 'Cost', metric: 'TER (Gross Expense Ratio)', value: fund.ter },
+    { section: 'Cost', metric: 'Expense Ratio (Net)', value: fund.ter },
+    { section: 'Cost', metric: 'Gross Expense Ratio', value: meta && meta.expenseRatio && meta.expenseRatio.gross ? meta.expenseRatio.gross.display : null },
     { section: 'Price', metric: 'NAV', value: fund.nav },
     { section: 'Price', metric: 'Close Price', value: fund.closePrice },
     { section: 'Price', metric: 'Premium / Discount', value: fund.premiumDiscount },
@@ -2199,20 +2200,22 @@ function parseProSharesHoldingsUpload(text: string): { asOfDate: string; funds: 
   }
   if (!buckets.size) throw new Error('no holdings rows found in the file');
 
-  // Weight = position value / the fund's total position value (the official file
-  // carries no weight column), exactly like the updater does for the feed.
+  // Weight = ProShares Exposure Weight: position value (market value, or notional
+  // exposure for futures and swaps) / the fund's total net assets as reported by
+  // the same file (Σ market values, including the Net Other Assets line). Cash
+  // and payable lines carry no weight, exactly like the updater does for the feed.
   buckets.forEach(bucket => {
     let total = 0;
-    bucket.rows.forEach((row: any) => { total += Math.abs(numberOrNull(row.marketValue || row.exposure) ?? 0); });
+    bucket.rows.forEach((row: any) => { total += numberOrNull(row.marketValue) ?? 0; });
     const headers = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held'];
     if (bucket.rows.some((row: any) => row.exposure !== '')) headers.push('Exposure Value');
     if (bucket.rows.some((row: any) => row.coupon !== '')) headers.push('Coupon');
     if (bucket.rows.some((row: any) => row.maturity !== '')) headers.push('Maturity Date');
     bucket.headers = headers;
     bucket.rows = bucket.rows.map((row: any) => {
-      const value = row.marketValue || row.exposure;
-      const parsed = numberOrNull(value);
-      const weight = total > 0 && parsed !== null ? (parsed / total) * 100 : null;
+      const parsed = numberOrNull(row.marketValue) ?? numberOrNull(row.exposure);
+      const otherAssets = /net\s+other\s+assets/i.test(String(row.name || ''));
+      const weight = !otherAssets && total > 0 && parsed !== null ? (parsed / total) * 100 : null;
       const cells: Record<string, string> = {
         Name: row.name || '—',
         Ticker: row.ticker || '-',

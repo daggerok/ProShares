@@ -306,7 +306,6 @@ export type UpdaterConfig = {
   category: string;
   audienceType: string;
   secUa: string;
-  skipYahoo: boolean;
   skipProShares: boolean;
   offlineSeed: boolean;
   aumRange?: Range;
@@ -452,13 +451,15 @@ Environment variables
                                       large (>=$10B).
   TER                    ":"          Expense-ratio range in % (min:max).
   DIVIDEND_YIELD         ":"          Official 12-month yield range in %.
-  SEC_YIELD              ":"          Kept for parity: ProShares publishes no SEC
-                                      yield, so any bound matches no fund.
+  SEC_YIELD              ":"          Kept for parity with the sibling sites:
+                                      ProShares publishes no 30-day SEC yield, so
+                                      any bound matches no fund.
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y  ""    Annualized-return ranges (min:max).
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y ""    Cumulative-return ranges (min:max).
   CONCURRENCY            3            Parallel fund workers.
   REQUEST_SLEEP          1.5          Seconds between outgoing request starts.
-  MAX_RETRIES            3            Retries after the initial request.
+  MAX_RETRIES            3            Retries after the initial request
+                                      (408/425/429/403/5xx).
   HOLDINGS_PAGE_SIZE     250          Rows per generated holdings JSON page.
   HISTORY_PAGE_SIZE      1000         Rows per generated history JSON page
                                       (alias HISTORICAL_PAGE_SIZE).
@@ -469,8 +470,6 @@ Environment variables
                                       after two empty years.
   SKIP_PROSHARES         ""           Rebuild the feed from the previous catalog
                                       and the bulk official files only.
-  SKIP_YAHOO             ""           Never contact Yahoo Finance (it is an
-                                      optional distribution fallback only).
   STORE_RAW_DOWNLOADS    ""           Keep one raw sample of each source under
                                       api/proshares/raw (1/true/yes/on).
   OFFLINE_SEED           ""           Replay the previously published catalog and
@@ -502,7 +501,6 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
     category: envValue(env, 'CATEGORY'),
     audienceType: envValue(env, 'AUDIENCE_TYPE'),
     secUa: envValue(env, 'SEC_UA'),
-    skipYahoo: parseBoolean(envValue(env, 'SKIP_YAHOO')),
     skipProShares: parseBoolean(envValue(env, 'SKIP_PROSHARES', ['SKIP_PROSHARES_ETF'])),
     offlineSeed: parseBoolean(envValue(env, 'OFFLINE_SEED')),
     performanceRanges: parseRanges(env, 'PERFORMANCE'),
@@ -706,6 +704,10 @@ export type FundPageData = {
   cusip: string;
   expenseRatio: number | null;
   expenseRatioText: string;
+  grossExpenseRatio: number | null;
+  grossExpenseRatioText: string;
+  netExpenseRatio: number | null;
+  netExpenseRatioText: string;
   inceptionDate: string;
   netAssetsText: string;
   netAssetsValue: number | null;
@@ -753,6 +755,19 @@ function listItems(html: string, containerId: string): Record<string, string> {
   return items;
 }
 
+const RETURN_TENOR_KEYS: Record<string, string> = {
+  '1m': 'mo1',
+  '3m': 'mo3',
+  '6m': 'mo6',
+  ytd: 'ytd',
+  '1y': 'yr1',
+  '3y': 'yr3',
+  '5y': 'yr5',
+  '10y': 'yr10',
+  'since inception': 'sinceInception',
+};
+const RETURN_TENOR_KEYS_BY_INDEX = [...Object.values(RETURN_TENOR_KEYS), 'inceptionDate'];
+
 function parseReturnTables(html: string): FundPageData['returns'] {
   const labels = [...html.matchAll(/(Month-End|Quarter-End) Total Returns as of (\d{1,2}\/\d{1,2}\/\d{4})/gi)].map(match => ({
     period: match[1].toLowerCase().startsWith('month') ? 'monthEnd' : 'quarterEnd',
@@ -762,8 +777,17 @@ function parseReturnTables(html: string): FundPageData['returns'] {
   const result: FundPageData['returns'] = { monthEnd: {}, quarterEnd: {} };
   tables.forEach((table, index) => {
     const label = labels[index] || (index === 0 ? { period: 'monthEnd', asOf: '' } : { period: 'quarterEnd', asOf: '' });
-    const headers = [...table.matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map(cell => stripTags(cell[1]));
-    const tenorKeys = ['mo1', 'mo3', 'mo6', 'ytd', 'yr1', 'yr3', 'yr5', 'yr10', 'sinceInception', 'inceptionDate'];
+    const headers = [...table.matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map(cell => cleanText(stripTags(cell[1])));
+    // The site prints Fund + Index, 1m … Inception Date. Map by header label so
+    // a changed column set cannot silently shift the tenors.
+    let tenorColumns = headers
+      .map((header, columnIndex) => ({ key: RETURN_TENOR_KEYS[header.toLowerCase()], columnIndex }))
+      .filter(entry => entry.key !== undefined && entry.key !== 'inceptionDateLabel');
+    let inceptionColumn = headers.findIndex(header => header.toLowerCase() === 'inception date');
+    if (!tenorColumns.length) {
+      tenorColumns = RETURN_TENOR_KEYS_BY_INDEX.map((key, index) => ({ key, columnIndex: index + 1 }));
+      inceptionColumn = RETURN_TENOR_KEYS_BY_INDEX.length + 1;
+    }
     const rowPattern = /<tr\b[^>]*>([\s\S]*?)<\/tr>/gi;
     let rowMatch: RegExpExecArray | null;
     const target: Record<string, number | null | string> = result[label.period as 'monthEnd' | 'quarterEnd'];
@@ -777,17 +801,11 @@ function parseReturnTables(html: string): FundPageData['returns'] {
       if (rowLabel.includes('nav') && target.nav) continue;
       const basis = rowLabel.includes('market') ? 'marketPrice' : 'nav';
       (target as Record<string, unknown>)[basis] = null;
-      tenorKeys.forEach((key, tenorIndex) => {
-        const value = numberOrNull(cells[tenorIndex + 1]);
-        if (key === 'inceptionDate') {
-          (target as Record<string, unknown>).inceptionDate = formatUsDate(cells[tenorIndex + 1]);
-          return;
-        }
-        (target as Record<string, number | null>)[`${basis === 'nav' ? '' : 'mp'}${key}`] = value;
-      });
-      // The header order is fixed by the site: Fund+Index, 1m, 3m, 6m, YTD,
-      // 1Y, 3Y, 5Y, 10Y, Since Inception, Inception Date.
-      void headers;
+      for (const { key, columnIndex } of tenorColumns) {
+        if (!key) continue;
+        (target as Record<string, number | null>)[`${basis === 'nav' ? '' : 'mp'}${key}`] = numberOrNull(cells[columnIndex]);
+      }
+      if (inceptionColumn >= 0) (target as Record<string, unknown>).inceptionDate = formatUsDate(cells[inceptionColumn]);
     }
   });
   return result;
@@ -827,7 +845,11 @@ export function parseFundPage(html: string): FundPageData {
   const navText = extractIdText(html, 'price-nav');
   const marketPriceText = extractIdText(html, 'price-marketPrice');
   const netAssetsText = extractIdText(html, 'snapshot-netAssets');
-  const expenseRatioText = extractIdText(html, 'snapshot-expenseRatio');
+  // Equity and bond pages publish one ratio ("Expense Ratio"); the geared pages
+  // publish two ("Gross Expense Ratio" / "Net Expense Ratio").
+  const grossExpenseRatioText = extractIdText(html, 'snapshot-grossExpenseRatio') || cleanText(snapshot['Gross Expense Ratio'] || '');
+  const netExpenseRatioText = extractIdText(html, 'snapshot-netExpenseRatio') || cleanText(snapshot['Net Expense Ratio'] || '');
+  const expenseRatioText = extractIdText(html, 'snapshot-expenseRatio') || netExpenseRatioText || grossExpenseRatioText;
   const twelveMonthYieldText = extractIdText(html, 'distributions-12MonthYield');
   const indexStats: Record<string, string> = {};
   const indexStart = html.search(/id="index"/i);
@@ -845,6 +867,10 @@ export function parseFundPage(html: string): FundPageData {
     cusip: extractIdText(html, 'snapshot-cusip') || cleanText(snapshot.CUSIP || ''),
     expenseRatio: numberOrNull(expenseRatioText),
     expenseRatioText: expenseRatioText || '—',
+    grossExpenseRatio: numberOrNull(grossExpenseRatioText),
+    grossExpenseRatioText: grossExpenseRatioText || '—',
+    netExpenseRatio: numberOrNull(netExpenseRatioText || expenseRatioText),
+    netExpenseRatioText: (netExpenseRatioText || expenseRatioText) || '—',
     inceptionDate: formatUsDate(extractIdText(html, 'snapshot-inceptionDate') || snapshot['Inception Date'] || ''),
     netAssetsText: netAssetsText || cleanText(snapshot['Net Assets'] || ''),
     netAssetsValue: numberOrNull(netAssetsText || snapshot['Net Assets'] || ''),
@@ -853,7 +879,7 @@ export function parseFundPage(html: string): FundPageData {
     marketPrice: numberOrNull(marketPriceText),
     marketPriceText: marketPriceText || '—',
     priceAsOf: formatUsDate((extractIdText(html, 'price-asOfDate') || '').replace(/^as of\s*/i, '')),
-    distributionFrequency: extractIdText(html, 'distributions-distributionFrequency'),
+    distributionFrequency: extractIdText(html, 'distributions-distributionFrequency') || extractIdText(html, 'snapshot-distributions'),
     twelveMonthYield: numberOrNull(twelveMonthYieldText),
     twelveMonthYieldText: twelveMonthYieldText || '—',
     distributionsAsOf: formatUsDate((extractIdText(html, 'distributions-asOfDate') || '').replace(/^as of\s*/i, '')),
@@ -932,18 +958,30 @@ export function parseHoldingsFile(text: string): HoldingsFile {
 }
 
 /**
- * Weights are not published in the holdings file: the updater reproduces the
- * fund page's own weight by dividing each position value by the fund's total
- * net assets for the same as-of date (falling back to the summed position
- * value when net assets are not known). Verified against the ProShares fund
- * pages for equity, bond and geared funds.
+ * The holdings file carries no weight column, so the updater reproduces the
+ * "Exposure Weight" column the fund pages render: the position value (market
+ * value, or notional exposure for futures and swaps) divided by the fund's
+ * total net assets as reported in that same official file — the sum of its
+ * market values, which includes the "Net Other Assets (Liabilities)" line.
+ * Verified against the live fund pages: TQQQ NVDA 3.11% and the Barclays swap
+ * 29.64%, AGQ Silver DEC26 77.04%, NOBL BDX 1.73%, IGHG Morgan Stanley 1.62%.
+ * Cash and payable lines carry no weight on the fund pages and stay blank.
  */
-export function holdingWeight(marketValue: string, netAssets: number | null, totalFallback: number): string {
-  const value = numberOrNull(marketValue);
-  if (value === null) return '—';
-  const denominator = netAssets && netAssets > 0 ? netAssets : totalFallback;
-  if (!denominator) return '—';
-  return round((value / denominator) * 100, 10).toFixed(10);
+export function holdingWeight(row: HoldingsRow, totalNetAssets: number): string {
+  if (isOtherAssetsRow(row)) return '—';
+  const value = numberOrNull(row.marketValue) ?? numberOrNull(row.exposure);
+  if (value === null || !totalNetAssets) return '—';
+  return round((value / totalNetAssets) * 100, 10).toFixed(10);
+}
+
+/** The "Net Other Assets (Liabilities)" / "Net Other Assets / Cash" line. */
+export function isOtherAssetsRow(row: HoldingsRow): boolean {
+  return /net\s+other\s+assets/i.test(row.name);
+}
+
+/** Total net assets a holdings file implies: the sum of its market values. */
+export function holdingsNetAssets(rows: HoldingsRow[]): number {
+  return rows.reduce((sum, row) => sum + (numberOrNull(row.marketValue) ?? 0), 0);
 }
 
 export function holdingsHeaders(rows: HoldingsRow[]): string[] {
@@ -954,14 +992,14 @@ export function holdingsHeaders(rows: HoldingsRow[]): string[] {
   return headers;
 }
 
-export function holdingsRowsForCsv(rows: HoldingsRow[], headers: string[], netAssets: number | null): Record<string, string>[] {
-  const totalFallback = rows.reduce((sum, row) => sum + Math.abs(numberOrNull(row.marketValue) ?? 0), 0);
+export function holdingsRowsForCsv(rows: HoldingsRow[], headers: string[]): Record<string, string>[] {
+  const totalNetAssets = holdingsNetAssets(rows);
   return rows.map(row => {
     const value: Record<string, string> = {
       Name: row.name || '—',
       Ticker: row.ticker || '-',
       Identifier: row.identifier || '—',
-      Weight: holdingWeight(row.marketValue, netAssets, totalFallback),
+      Weight: holdingWeight(row, totalNetAssets),
       'Market Value': row.marketValue || '—',
       'Shares Held': row.shares || '—',
     };
@@ -1352,8 +1390,7 @@ function documentsFor(ticker: string): Record<string, string> {
   };
 }
 
-function performanceBlock(row: PerformanceRow | undefined, basis: 'NAV' | 'MARKET'): Record<string, unknown> {
-  const key = basis === 'NAV' ? '' : 'mp';
+function performanceBlock(row: PerformanceRow | undefined): Record<string, unknown> {
   if (!row) {
     return { asOfDate: '—', mo1: null, qtd: null, ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null };
   }
@@ -1377,7 +1414,6 @@ function performanceBlock(row: PerformanceRow | undefined, basis: 'NAV' | 'MARKE
     yr10Text: formatPercentText(row.yr10),
     sinceInceptionText: formatPercentText(row.sinceInception),
   };
-  void key;
   return block;
 }
 
@@ -1415,7 +1451,7 @@ export function buildFeed(inputs: {
   const payments = paymentsPerYear(frequency);
   const indicated = indicatedYield(latestDistribution?.dividend ?? null, frequency, nav);
   const holdingsCsvHeaders = holdingsHeaders(holdingsRows);
-  const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders, netAssets);
+  const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders);
 
   const historyHeaders = ['Date', 'NAV', 'Shares Outstanding', 'Total Net Assets'];
   const historyRows = orderedNavRows.map(row => ({
@@ -1426,10 +1462,10 @@ export function buildFeed(inputs: {
   }));
 
   const distributionCsvRows = distributionRowsForCsv(distributions);
-  const navMonth = performanceBlock(performanceNavMonth, 'NAV');
-  const navQuarter = performanceBlock(performanceNavQuarter, 'NAV');
-  const marketMonth = performanceBlock(performanceMarketMonth, 'MARKET');
-  const marketQuarter = performanceBlock(performanceMarketQuarter, 'MARKET');
+  const navMonth = performanceBlock(performanceNavMonth);
+  const navQuarter = performanceBlock(performanceNavQuarter);
+  const marketMonth = performanceBlock(performanceMarketMonth);
+  const marketQuarter = performanceBlock(performanceMarketQuarter);
 
   const metrics = {
     ytd: performanceNavMonth?.ytd ?? null,
@@ -1460,8 +1496,12 @@ export function buildFeed(inputs: {
     dataFile: `./funds/${fund.ticker}/meta.json`,
     cusip: page.cusip || null,
     isin: null,
-    ter: page.expenseRatioText || '—',
-    terValue: page.expenseRatio,
+    ter: page.netExpenseRatioText || page.expenseRatioText || '—',
+    terValue: page.netExpenseRatio ?? page.expenseRatio,
+    terGross: page.grossExpenseRatioText || page.netExpenseRatioText || page.expenseRatioText || '—',
+    terGrossValue: page.grossExpenseRatio ?? page.netExpenseRatio ?? page.expenseRatio,
+    terNet: page.netExpenseRatioText || page.expenseRatioText || '—',
+    terNetValue: page.netExpenseRatio ?? page.expenseRatio,
     nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
     navValue: nav,
     aum: page.netAssetsText || formatAumDisplay(netAssets),
@@ -1520,7 +1560,15 @@ export function buildFeed(inputs: {
       indexName: fund.benchmark || null,
       sedolNote: 'positions identify by SEDOL (Security Sedol) in the official holdings file',
     },
-    expenseRatio: { display: page.expenseRatioText || '—', value: page.expenseRatio },
+    expenseRatio: {
+      display: page.netExpenseRatioText || page.expenseRatioText || '—',
+      value: page.netExpenseRatio ?? page.expenseRatio,
+      gross: { display: page.grossExpenseRatioText || '—', value: page.grossExpenseRatio },
+      net: { display: page.netExpenseRatioText || '—', value: page.netExpenseRatio },
+      note: page.grossExpenseRatio !== null && page.grossExpenseRatio !== page.netExpenseRatio
+        ? 'ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio'
+        : 'ProShares publishes a single expense ratio for this fund',
+    },
     nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate },
     marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate },
     premiumDiscount: {
@@ -1569,6 +1617,7 @@ export function buildFeed(inputs: {
       asOf: holdingsAsOf ? toIsoDate(holdingsAsOf) : '—',
       headers: holdingsCsvHeaders,
       source: 'official ProShares daily holdings file (psdlyhld.csv)',
+      weightNote: 'Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.',
     },
     history: {
       pageSize: config.historyPageSize,
@@ -1759,7 +1808,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       console.error(`Splits file failed — ${errorMessage(error)}`);
       stats.failed++;
     }
-    if (!config.skipYahoo || true) {
+    {
       try {
         const [listed, other] = await Promise.all([
           fetchText(NASDAQ_LISTED_URL, browserHeaders(), config, 'nasdaqlisted symbol directory', 'nasdaq-nasdaqlisted.txt').catch(() => ''),
@@ -1844,6 +1893,10 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           cusip: String(previousMeta.identifiers?.cusip || ''),
           expenseRatio: numberOrNull(previousMeta.expenseRatio?.value),
           expenseRatioText: String(previousMeta.expenseRatio?.display || '—'),
+          grossExpenseRatio: numberOrNull(previousMeta.expenseRatio?.gross?.value),
+          grossExpenseRatioText: String(previousMeta.expenseRatio?.gross?.display || '—'),
+          netExpenseRatio: numberOrNull(previousMeta.expenseRatio?.net?.value),
+          netExpenseRatioText: String(previousMeta.expenseRatio?.net?.display || '—'),
           inceptionDate: String(previous?.inceptionDate || '—'),
           netAssetsText: String(previousMeta.aum?.display || '—'),
           netAssetsValue: numberOrNull(previousMeta.aum?.value),
@@ -1989,7 +2042,6 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
     }
   });
-  void results;
 
   // --- index.json -----------------------------------------------------------
   const indexFile = path.join(API_ROOT, 'index.json');
