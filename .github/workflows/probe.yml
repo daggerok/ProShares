@@ -3,12 +3,11 @@ name: Probe external data source
 on:
   push:
     paths:
-      - 'probe/**'
-      - '.github/workflows/probe.yml'
+      - 'probe/urls.txt'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: probe
@@ -25,6 +24,7 @@ jobs:
           set -u
           UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
           MAX=${PROBE_MAX_BYTES:-16000}
+          rm -rf probe/out && mkdir -p probe/out
           n=0
           while IFS= read -r line; do
             case "$line" in ''|'#'*) continue;; esac
@@ -33,16 +33,27 @@ jobs:
             bytes=$(printf '%s' "$line" | sed -n 's/.*| *bytes=\([0-9]*\).*/\1/p')
             grep_pat=$(printf '%s' "$line" | sed -n 's/.*| *grep=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
             [ -n "${bytes:-}" ] || bytes=$MAX
-            echo "=============================== $n) $url ==============================="
-            code=$(curl -sS -L -A "$UA" -o /tmp/body -w '%{http_code} %{size_download} bytes %{content_type}' --max-time 180 "$url" 2>/tmp/err || echo "000 0 -")
-            echo "STATUS: $code"
-            if [ -s /tmp/err ]; then echo "STDERR:"; head -c 600 /tmp/err; fi
-            if [ -n "$grep_pat" ]; then
-              echo "GREP: $grep_pat"
-              grep -o -E ".{0,300}${grep_pat}.{0,1200}" /tmp/body | head -60
-            else
-              head -c "$bytes" /tmp/body
-            fi
-            echo
-            echo
+            out=$(printf 'probe/out/%03d.txt' "$n")
+            {
+              echo "URL: $url"
+              code=$(curl -sS -L -A "$UA" -o /tmp/body -w '%{http_code} %{size_download} bytes %{content_type}' --max-time 180 "$url" 2>/tmp/err || echo "000 0 -")
+              echo "STATUS: $code"
+              if [ -s /tmp/err ]; then echo "STDERR:"; head -c 600 /tmp/err; fi
+              if [ -n "$grep_pat" ]; then
+                echo "GREP: $grep_pat"
+                grep -o -E ".{0,300}${grep_pat}.{0,1200}" /tmp/body | head -60
+              else
+                head -c "$bytes" /tmp/body
+              fi
+            } > "$out" 2>&1
           done < probe/urls.txt
+          ls -la probe/out
+
+      - name: Commit probe output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add probe/out
+          if git diff --cached --quiet; then echo "no probe output changes"; exit 0; fi
+          git commit -m "chore: probe output [skip ci]"
+          git push
