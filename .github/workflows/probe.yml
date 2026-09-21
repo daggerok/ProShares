@@ -1,0 +1,56 @@
+name: Probe external data source
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to fetch (one per line)"
+        required: true
+        default: "https://www.proshares.com/our-etfs/strategic/nobl"
+      extra:
+        description: "Extra curl arguments (e.g. -H 'Referer: ...')"
+        required: false
+        default: ""
+      max_bytes:
+        description: "Print at most N bytes of each body"
+        required: false
+        default: "12000"
+      grep:
+        description: "Optional extended-regexp; prints matches with surrounding context"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch
+        env:
+          URLS: ${{ inputs.url }}
+          EXTRA: ${{ inputs.extra }}
+          MAX_BYTES: ${{ inputs.max_bytes }}
+          GREP: ${{ inputs.grep }}
+        run: |
+          UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+          i=0
+          printf '%s\n' "$URLS" | while IFS= read -r u; do
+            [ -z "$u" ] && continue
+            i=$((i+1))
+            echo "=================== $i) $u ==================="
+            code=$(curl -sS -L -A "$UA" $EXTRA -o /tmp/body -w '%{http_code} %{size_download} %{content_type}' --max-time 120 "$u" 2>/tmp/err || echo "000 0 -")
+            echo "status/size/type: $code"
+            if [ -s /tmp/err ]; then head -c 800 /tmp/err; fi
+            if [ -n "$GREP" ]; then
+              grep -o -E ".{0,250}$GREP.{0,900}" /tmp/body | head -40
+            else
+              head -c "$MAX_BYTES" /tmp/body
+            fi
+            echo
+          done
