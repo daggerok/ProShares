@@ -1,4 +1,4 @@
-URL: import csv
+URL:     print(ticker, 'rows', len(rows), 'sum_mv %.2f' % sum(mv), 'sum_mv_without_netother %.2f' % sum(mv_no_net))
 STATUS: 000 0 bytes 000 0 -
 STDERR:
 curl: (3) URL rejected: Malformed input to a URL function

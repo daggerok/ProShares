@@ -1,7 +1,9 @@
-URL: import csv
-STATUS: 000 0 bytes 000 0 -
+URL:     mv=[abs(float(r[9])) for r in rows if r[9].strip()]
+STATUS: 000 0 -
 STDERR:
-curl: (3) URL rejected: Malformed input to a URL function
+curl: (3) bad range in URL position 9:
+    mv=[abs(float(r[9])) for r in rows if r[9].strip()]
+        ^
 PORTFOLIO HOLDINGS INFORMATION,,,,
 AS OF 9/18/2026,,,,
 ,,,,

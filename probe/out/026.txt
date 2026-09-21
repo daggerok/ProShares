@@ -1,7 +1,9 @@
-URL: import csv
-STATUS: 000 0 bytes 000 0 -
+URL:         if 'net other' in r[4].lower():
+STATUS: 000 0 -
 STDERR:
-curl: (3) URL rejected: Malformed input to a URL function
+curl: (3) bad range in URL position 29:
+        if 'net other' in r[4].lower():
+                            ^
 PORTFOLIO HOLDINGS INFORMATION,,,,
 AS OF 9/18/2026,,,,
 ,,,,

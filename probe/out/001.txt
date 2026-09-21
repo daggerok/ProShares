@@ -1,8 +1,4 @@
-URL: https://accounts.profunds.com/etfdata/ByFund/DDM-historical_nav.csv
-STATUS: 200 472472 bytes text/csv
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/ByFund/DDM-historical_nav.csv -o /tmp/d.csv; echo "rows: $(wc -l < /tmp/d.csv)"; echo "header: $(head -1 /tmp/d.csv)"; echo "newest: $(sed -n 2p /tmp/d.csv)"; echo "oldest: $(tail -1 /tmp/d.csv)"; echo "=== bulk file DDM rows:"; head -3 /tmp/d.csv >/dev/null
-rows: 5096
-header: Date,ProShares Name,Ticker,NAV,Prior NAV,NAV Change (%),NAV Change ($),Shares Outstanding (000),Assets Under Management
-newest: 09/18/2026,ProShares Ultra Dow30,DDM,63.352,63.6376,-0.44879,-0.2856,8050,509983600
-oldest: 06/19/2006,ProShares Ultra Dow30,DDM,5.8333333335,5.8333333335,0.00000,0,2700,15750000.00045
-=== bulk file DDM rows:
+URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
+STATUS: 200 1857021 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; python3 - <<'PY' > /tmp/w.txt
+bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `PY')

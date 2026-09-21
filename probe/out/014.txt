@@ -1,7 +1,9 @@
-URL: import csv
-STATUS: 000 0 bytes 000 0 -
+URL:             if cells[0].strip()!=ticker: continue
+STATUS: 000 0 -
 STDERR:
-curl: (3) URL rejected: Malformed input to a URL function
+curl: (3) bad range in URL position 22:
+            if cells[0].strip()!=ticker: continue
+                     ^
 PORTFOLIO HOLDINGS INFORMATION,,,,
 AS OF 9/18/2026,,,,
 ,,,,
