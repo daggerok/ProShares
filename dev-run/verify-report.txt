@@ -1,10 +1,34 @@
 === NOBL (https://www.proshares.com/our-etfs/strategic/nobl)
+  raw thead: <thead> <tr> <th>Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 71
+  raw row: <tr> <td>1.73%</td> <td>BDX</td> <td>BECTON DICKINSON AND CO</td> <td>--</td> <td>$195,347,528.40</td> <td>1,079,626</td> <td>2087807</td> </tr>
+  raw row: <tr> <td>1.70%</td> <td>FDS</td> <td>FACTSET RESEARCH SYSTEMS INC</td> <td>--</td> <td>$191,397,070.70</td> <td>674,337</td> <td>2329770</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$27,861,053.40</td> <td>27,861,053</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$11,270,728,460</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.35%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">2.01%</span></div><div class="about-fund__popover-content"><p><strong>12-Month Yield</strong> represents the sum of the funds dividends for the last 12 months divided by the sum of the last month's NAV and any capital gain distributions made over the past 12 months.</p></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"> <a class="about-fund__list-link d-block link-primary" href="#distributionTab">Distribution Details</a> </li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$11,270,728,460</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 70 · feed rows 70 · matched 70 · mismatched 0
   expense ratio: gross — / net — / single 0.35%
   frequency block: Quarterly
   12-month yield block: 2.01%
 
 === TQQQ (https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 128
+  raw row: <tr> <td>3.11%</td> <td>NVDA</td> <td>NVIDIA CORP</td> <td>--</td> <td>$1,139,690,759.00</td> <td>5,127,506</td> <td>2379504</td> </tr>
+  raw row: <tr> <td>2.85%</td> <td>AAPL</td> <td>APPLE INC</td> <td>--</td> <td>$1,043,701,129.00</td> <td>3,105,052</td> <td>2046251</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$9,707,363,673.76</td> <td>9,707,363,674</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$36,885,565,159</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.82%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$36,885,565,159</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 127 · feed rows 127 · matched 113 · mismatched 14
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 19.1691245374
     TREASURY BILL: page -- vs feed 0.2724022265
@@ -16,6 +40,16 @@
   12-month yield block: — (element absent)
 
 === AGQ (https://www.proshares.com/our-etfs/leveraged-and-inverse/agq)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 7
+  raw row: <tr> <td>77.04%</td> <td>--</td> <td>SILVER FUTURE DEC26</td> <td>1,145,226,195</td> <td>--</td> <td>3,411</td> <td>--</td> </tr>
+  raw row: <tr> <td>57.87%</td> <td>--</td> <td>BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA</td> <td>860,209,445</td> <td>--</td> <td>1,769,496</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS / CASH</td> <td>--</td> <td>$1,486,541,291.25</td> <td>1,486,541,291</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$1,486,566,251</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$1,486,566,251</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p>This fund has not made any distributions.</p> </div> <div class="fund-screener-table"> <table id="distributions" class="table" tabindex="0"> <tbody> </tbody> </table> </div> </div> </div> <input type="hidden" id="trustindicator" value="2" /> <script> function isValidJSONS
   rendered rows 6 · feed rows 6 · matched 4 · mismatched 1
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 33.6721221904
   expense ratio: gross — / net — / single 0.95%
@@ -23,6 +57,18 @@
   12-month yield block: — (element absent)
 
 === IGHG (https://www.proshares.com/our-etfs/strategic/ighg)
+  raw thead: <thead> <tr> <th>Weight</th> <th>Ticker</th> <th>Description</th> <th>Coupon Rate</th> <th>Maturity Date</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 188
+  raw row: <tr> <td>1.62%</td> <td>--</td> <td>MORGAN STANLEY</td> <td>4.38%</td> <td>01/22/2047</td> <td>--</td> <td>$6,152,311.30</td> <td>7,779,000</td> <td>BYM4WR8</td> </tr>
+  raw row: <tr> <td>1.40%</td> <td>--</td> <td>PFIZER INC</td> <td>7.20%</td> <td>03/15/2039</td> <td>--</td> <td>$5,331,598.02</td> <td>4,769,000</td> <td>B65HZL3</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>--</td> <td>--</td> <td>$20,516,609.72</td> <td>20,516,610</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$373,690,764</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.30%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Weighted Average Yield to <br/> Maturity</span> <div><span id="characteristics-weightedAverageYieldMaturity" class="about-fund__list-value d-inline-block">5.63%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Monthly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">5.10%</span></div><div class="about-fund__popover-content"><p><strong>12-Month Yield</strong> represents the sum of the funds dividends for the last 12 months divided by the sum of the last month's NAV and any capital gain distributions made over the past 12 months.</p></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"> <a class="about-fund__list-link d-block link-primary" href="#distributionTab">Distribution Details</a> </li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 187 · feed rows 187 · matched 96 · mismatched 91
     MORGAN STANLEY: page 1.62% vs feed 0.2573543172
     PFIZER INC: page 1.40% vs feed 0.0641470106
@@ -34,6 +80,18 @@
   12-month yield block: 5.10%
 
 === SH (https://www.proshares.com/our-etfs/leveraged-and-inverse/sh)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 19
+  raw row: <tr> <td>-13.54%</td> <td>--</td> <td>S&amp;P500 EMINI FUT EQUITY INDEX 18/DEC/2026 ESZ6 INDEX</td> <td>-128,027,500</td> <td>--</td> <td>-332</td> <td>--</td> </tr>
+  raw row: <tr> <td>-12.27%</td> <td>--</td> <td>S&amp;P 500 INDEX SWAP BNP PARIBAS</td> <td>-115,973,930</td> <td>--</td> <td>-15,159</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$-135,790,423.00</td> <td>-135,790,423</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$974,816,115</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.89%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.89%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$974,816,115</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.89%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 18 · feed rows 18 · matched 12 · mismatched 6
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 82.7800598939
     TREASURY BILL: page -- vs feed 2.6323325750
@@ -45,12 +103,36 @@
   12-month yield block: — (element absent)
 
 === SMDD (https://www.proshares.com/our-etfs/leveraged-and-inverse/smdd)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 7
+  raw row: <tr> <td>-100.38%</td> <td>--</td> <td>S&amp;P MIDCAP 400 INDEX SWAP SOCIETE GENERALE</td> <td>-2,040,758</td> <td>--</td> <td>-559</td> <td>--</td> </tr>
+  raw row: <tr> <td>-67.70%</td> <td>--</td> <td>S&amp;P MIDCAP 400 INDEX SWAP BNP PARIBAS</td> <td>-1,376,325</td> <td>--</td> <td>-377</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$2,032,941.82</td> <td>2,032,942</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$2,032,640</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">3.28%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$2,032,640</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">3.28%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 6 · feed rows 6 · matched 6 · mismatched 0
   expense ratio: gross 3.28% / net 0.95% / single —
   frequency block: Quarterly
   12-month yield block: — (element absent)
 
 === RINF (https://www.proshares.com/our-etfs/strategic/rinf)
+  raw thead: <thead> <tr> <th>Weight</th> <th>Ticker</th> <th>Description</th> <th>Coupon Rate</th> <th>Maturity Date</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 7
+  raw row: <tr> <td>113.97%</td> <td>--</td> <td>FTSE 30-YEAR TIPS (TREASURY RATE-HEDGED) INDEX TSY SWAP SOCIETE GENERALE (INVERSE INDEX)</td> <td>--</td> <td>--</td> <td>21,222,398</td> <td>--</td> <td>364,083</td> <td>--</td> </tr>
+  raw row: <tr> <td>82.58%</td> <td>--</td> <td>FTSE 30-YEAR TIPS (TREASURY RATE-HEDGED) INDEX TIP SWAP SOCIETE GENERALE</td> <td>--</td> <td>--</td> <td>15,376,040</td> <td>--</td> <td>112,678</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>--</td> <td>--</td> <td>$3,103,323.67</td> <td>3,103,324</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$18,946,694</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.30%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">1.12%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$18,946,694</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.30%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 6 · feed rows 6 · matched 5 · mismatched 1
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 83.3337196933
   expense ratio: gross 1.12% / net 0.30% / single —
@@ -58,6 +140,18 @@
   12-month yield block: — (element absent)
 
 === BITO (https://www.proshares.com/our-etfs/strategic/bito)
+  raw thead: <thead> <tr> <th>Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 7
+  raw row: <tr> <td>60.72%</td> <td>--</td> <td>CME BITCOIN FUT DIGITAL ASSETS 25/SEP/2026 BTCU6 CURNCY</td> <td>1,008,492,000</td> <td>--</td> <td>2,480</td> <td>--</td> </tr>
+  raw row: <tr> <td>20.18%</td> <td>--</td> <td>CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY</td> <td>335,195,500</td> <td>--</td> <td>820</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$584,926,531.00</td> <td>584,926,531</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$1,679,278,215</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Monthly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">38.16%</span></div><div class="about-fund__popover-content"><p><strong>12-Month Yield</strong> represents the sum of the funds dividends for the last 12 months divided by the sum of the last month's NAV and any capital gain distributions made over the past 12 months.</p></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"> <a class="about-fund__list-link d-block link-primary" href="#distributionTab">Distribution Details</a> </li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$1,679,278,215</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 6 · feed rows 6 · matched 5 · mismatched 1
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 64.7847084977
   expense ratio: gross — / net — / single 0.95%
@@ -65,6 +159,16 @@
   12-month yield block: 38.16%
 
 === UCO (https://www.proshares.com/our-etfs/leveraged-and-inverse/uco)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 10
+  raw row: <tr> <td>61.10%</td> <td>--</td> <td>BLOOMBERG WTI CRUDE OIL BALANCED SWAP - SG</td> <td>267,593,319</td> <td>--</td> <td>2,127,302</td> <td>--</td> </tr>
+  raw row: <tr> <td>48.15%</td> <td>--</td> <td>BLOOMBERG WTI CRUDE OIL BALANCED SWAP - GS</td> <td>210,886,180</td> <td>--</td> <td>1,676,494</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS / CASH</td> <td>--</td> <td>$437,938,387.60</td> <td>437,938,388</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$437,923,708</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$437,923,708</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p>This fund has not made any distributions.</p> </div> <div class="fund-screener-table"> <table id="distributions" class="table" tabindex="0"> <tbody> </tbody> </table> </div> </div> </div> <input type="hidden" id="trustindicator" value="2" /> <script> function isValidJSONS
   rendered rows 9 · feed rows 9 · matched 7 · mismatched 1
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 34.2890699358
   expense ratio: gross — / net — / single 0.95%
@@ -72,6 +176,18 @@
   12-month yield block: — (element absent)
 
 === TOLZ (https://www.proshares.com/our-etfs/strategic/tolz)
+  raw thead: <thead> <tr> <th>Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 117
+  raw row: <tr> <td>5.83%</td> <td>ENB</td> <td>ENBRIDGE INC</td> <td>--</td> <td>$9,850,031.25</td> <td>202,248</td> <td>2466149</td> </tr>
+  raw row: <tr> <td>5.32%</td> <td>NG/</td> <td>NATIONAL GRID PLC</td> <td>--</td> <td>$8,991,446.90</td> <td>584,716</td> <td>BDR05C0</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$672,571.06</td> <td>672,571</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$169,056,625</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.46%*</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">3.01%</span></div><div class="about-fund__popover-content"><p><strong>12-Month Yield</strong> represents the sum of the funds dividends for the last 12 months divided by the sum of the last month's NAV and any capital gain distributions made over the past 12 months.</p></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"> <a class="about-fund__list-link d-block link-primary" href="#distributionTab">Distribution Details</a> </li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$169,056,625</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 116 · feed rows 124 · matched 115 · mismatched 1
     WATERBRIDGE INFRASTRUC-CL A: page 0.06% vs feed 0.0234579642
   expense ratio: gross — / net — / single 0.46%*
@@ -80,6 +196,18 @@
   12-month yield block: 3.01%
 
 === EZJ (https://www.proshares.com/our-etfs/leveraged-and-inverse/ezj)
+  raw thead: <thead> <tr> <th>Exposure Weight</th> <th>Ticker</th> <th>Description</th> <th>Exposure Value<br>(Notional + GL)</th> <th>Market Value</th> <th>Shares/Contracts</th> <th>SEDOL Number</th> </tr> </thead>
+  raw row count: 9
+  raw row: <tr> <td>38.40%</td> <td>EWJ</td> <td>ISHARES MSCI JAPAN ETF</td> <td>--</td> <td>$4,486,250.00</td> <td>46,250</td> <td>BDR7G84</td> </tr>
+  raw row: <tr> <td>44.49%</td> <td>--</td> <td>ISHARES MSCI JAPAN (EWJ) SWAP SOCIETE GENERALE</td> <td>5,197,185</td> <td>--</td> <td>2,149</td> <td>--</td> </tr>
+  raw row: <tr> <td>--</td> <td>--</td> <td>NET OTHER ASSETS (LIABILITIES)</td> <td>--</td> <td>$3,692,114.45</td> <td>3,692,114</td> <td>--</td> </tr>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$11,682,664</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">2.91%</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">1.17%*</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$11,682,664</span></div></li>
+  raw list item: <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">2.91%</span></div></li>
+  raw distribution tab: id="distributionTab"> <div class="fund-detail-table fund-detail__distributions md-sm-5"> <div class="container"> <div id="distributionTab"></div> <div class="section-header"> <h2 class="section-header-title">Distributions</h2> <div class="section-header-line bg-green"></div> </div> <div class="fund-detail-table-link mb-4"> <p class="text-util-sm-semibold d-inline">For</p> <div class="dropdown d-inline-block"> <div class="dropdown__list"> <div class="dropdown__list-selected d-block tabs__selected"> <div class="dropdown__list-selected-label"><span class="dropdown__list-label tabs__caret tabs__se
   rendered rows 8 · feed rows 8 · matched 7 · mismatched 1
     PROSHARES GENIUS MNY MKT ETF: page -- vs feed 29.9909317986
   expense ratio: gross 2.91% / net 1.17%* / single —
