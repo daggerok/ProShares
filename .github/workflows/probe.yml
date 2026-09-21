@@ -1,24 +1,11 @@
 name: Probe external data source
 
 on:
+  push:
+    paths:
+      - 'probe/**'
+      - '.github/workflows/probe.yml'
   workflow_dispatch:
-    inputs:
-      url:
-        description: "URL to fetch (one per line)"
-        required: true
-        default: "https://www.proshares.com/our-etfs/strategic/nobl"
-      extra:
-        description: "Extra curl arguments (e.g. -H 'Referer: ...')"
-        required: false
-        default: ""
-      max_bytes:
-        description: "Print at most N bytes of each body"
-        required: false
-        default: "12000"
-      grep:
-        description: "Optional extended-regexp; prints matches with surrounding context"
-        required: false
-        default: ""
 
 permissions:
   contents: read
@@ -31,26 +18,31 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch
-        env:
-          URLS: ${{ inputs.url }}
-          EXTRA: ${{ inputs.extra }}
-          MAX_BYTES: ${{ inputs.max_bytes }}
-          GREP: ${{ inputs.grep }}
+      - uses: actions/checkout@v4
+
+      - name: Fetch probe URLs
         run: |
+          set -u
           UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-          i=0
-          printf '%s\n' "$URLS" | while IFS= read -r u; do
-            [ -z "$u" ] && continue
-            i=$((i+1))
-            echo "=================== $i) $u ==================="
-            code=$(curl -sS -L -A "$UA" $EXTRA -o /tmp/body -w '%{http_code} %{size_download} %{content_type}' --max-time 120 "$u" 2>/tmp/err || echo "000 0 -")
-            echo "status/size/type: $code"
-            if [ -s /tmp/err ]; then head -c 800 /tmp/err; fi
-            if [ -n "$GREP" ]; then
-              grep -o -E ".{0,250}$GREP.{0,900}" /tmp/body | head -40
+          MAX=${PROBE_MAX_BYTES:-16000}
+          n=0
+          while IFS= read -r line; do
+            case "$line" in ''|'#'*) continue;; esac
+            n=$((n+1))
+            url=$(printf '%s' "$line" | cut -d'|' -f1 | sed 's/[[:space:]]*$//')
+            bytes=$(printf '%s' "$line" | sed -n 's/.*| *bytes=\([0-9]*\).*/\1/p')
+            grep_pat=$(printf '%s' "$line" | sed -n 's/.*| *grep=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
+            [ -n "${bytes:-}" ] || bytes=$MAX
+            echo "=============================== $n) $url ==============================="
+            code=$(curl -sS -L -A "$UA" -o /tmp/body -w '%{http_code} %{size_download} bytes %{content_type}' --max-time 180 "$url" 2>/tmp/err || echo "000 0 -")
+            echo "STATUS: $code"
+            if [ -s /tmp/err ]; then echo "STDERR:"; head -c 600 /tmp/err; fi
+            if [ -n "$grep_pat" ]; then
+              echo "GREP: $grep_pat"
+              grep -o -E ".{0,300}${grep_pat}.{0,1200}" /tmp/body | head -60
             else
-              head -c "$MAX_BYTES" /tmp/body
+              head -c "$bytes" /tmp/body
             fi
             echo
-          done
+            echo
+          done < probe/urls.txt
