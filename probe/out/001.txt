@@ -1,78 +1,40 @@
-URL: https://www.proshares.com/our-etfs/find-proshares-etfs
-STATUS: 200 1411340 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/our-etfs/find-proshares-etfs' -o /tmp/f.html; echo "=== section ids:"; grep -oE '(id|data-target)="[#a-zA-Z0-9-]{2,40}"' /tmp/f.html | sort -u | head -70; echo "=== around Payable Date:"; grep -oE '.{0,200}Payable Date.{0,700}' /tmp/f.html | head -4; echo "=== around 'Ex Date':"; grep -oE '.{0,400}Ex Date.{0,500}' /tmp/f.html | head -3
-=== section ids:
-data-target="#Alternative"
-data-target="#AutocallableIncome"
-data-target="#Crypto"
-data-target="#Crypto-Linked"
-data-target="#DividendGrowers"
-data-target="#DynamicBuffer"
-data-target="#Ex-Sector"
-data-target="#Factor"
-data-target="#HighIncome"
-data-target="#MoneyMarket"
-data-target="#RisingRates"
-data-target="#StockBuybacks"
-data-target="#Thematic"
-data-target="#Volatility"
-data-target="#all-etf"
-data-target="#geared-etf"
-data-target="#geared-etf-mobile"
-data-target="#geared-etf-tablet"
-data-target="#insight-series"
-data-target="#select-dropdown-modal"
-data-target="#site-header-mobile-menu"
-data-target="#site-header-search"
-data-target="#strategy-topic"
-data-target="#view-etf"
-data-target="#view-etf-mobile"
-data-target="#view-etf-tablet"
-id="Alternative"
-id="Alternative-tab"
-id="AutocallableIncome"
-id="AutocallableIncome-tab"
-id="Crypto-Linked"
-id="Crypto-Linked-tab"
-id="DividendGrowers"
-id="DividendGrowers-tab"
-id="DynamicBuffer"
-id="DynamicBuffer-tab"
-id="Ex-Sector"
-id="Ex-Sector-tab"
-id="Factor"
-id="Factor-tab"
-id="HighIncome"
-id="HighIncome-tab"
-id="MoneyMarket"
-id="MoneyMarket-tab"
-id="RisingRates"
-id="RisingRates-tab"
-id="StockBuybacks"
-id="StockBuybacks-tab"
-id="Thematic"
-id="Thematic-tab"
-id="Volatility"
-id="Volatility-tab"
-id="about"
-id="all-etf"
-id="all-etf-tab"
-id="aod-distributions"
-id="aod-literature"
-id="aod-nMonth"
-id="aod-nQuarter"
-id="aod-nav"
-id="aod-overview"
-id="aod-pMonth"
-id="aod-pQuarter"
-id="distributions"
-id="distributionsBody"
-id="div-spinner"
-id="divAlternativeCount"
-id="divAutocallableIncomeCount"
-id="divCrypto-LinkedCount"
-id="divDividendGrowersCount"
-=== around Payable Date:
-                                    <th>Payable Date</th>
-=== around 'Ex Date':
-                                    <th>Ex Date</th>
+URL: https://www.proshares.com/our-etfs/strategic/nobl
+STATUS: 200 323857 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/nobl -o /tmp/n.html; echo "=== all element ids (unique):"; grep -oE 'id="[a-zA-Z0-9_-]+"' /tmp/n.html | sort -u | tr '\n' ' '; echo; echo "=== ISIN/exchange/schema:"; grep -o -i -E '.{0,80}(isin|exchange|json-ld|application/ld).{0,120}' /tmp/n.html | head -10; echo "=== exposures section:"; grep -n -A 22 'Fund Country Weighting' /tmp/n.html | head -40
+=== all element ids (unique):
+id="1ea95ef1-9f2a-4d44-89dd-ebd574212971" id="2017" id="2018" id="2019" id="2020" id="2021" id="2022" id="2023" id="2024" id="2025" id="2026" id="47065601" id="AbouttheFund" id="Documents" id="Exposures" id="Header" id="Holdings" id="Index" id="Performance" id="RelatedArticles" id="about" id="aboutthefund" id="animationProgress" id="characteristcs-priceEarningsRatio" id="characteristics-asOfDate" id="characteristics-avgMarketCap" id="characteristics-numberOfHoldings" id="characteristics-priceBookRatio" id="chartTimeFrame" id="densityChart" id="distributionTab" id="distributions" id="distributions-12MonthYield" id="distributions-asOfDate" id="distributions-distributionFrequency" id="etf-tabs" id="etf-tabsContent" id="exposures" id="exposures-asOfDate" id="funds" id="geared-etf" id="geared-etf-mobile" id="geared-etf-mobile-tab" id="geared-etf-tablet" id="ghaph-tabs" id="header_search_button" id="header_search_container" id="holdings" id="holdingstable" id="index" id="index-asOfDate" id="insights" id="left-side" id="linegraph" id="month-end-total-returns" id="month-end-total-returns-tab" id="month-end-total-returns1" id="month-end-total-returns1-tab" id="performance" id="price-30DayMedianBidAskSpread" id="price-MarketPriceChange" id="price-asOfDate" id="price-marketPrice" id="price-nav" id="price-navChange" id="price-tradingVolume" id="related-insights" id="resources" id="root" id="scroll-in-view" id="search-filter-tag" id="site-header-mobile-menu" id="site_header_search_button" id="snapshot-cusip" id="snapshot-expenseRatio" id="snapshot-inceptionDate" id="snapshot-intradayTicker" id="snapshot-navCalculationTimes" id="snapshot-netAssets" id="snapshot-optionsAvailable" id="snapshot-ticker" id="strategies" id="subscribe" id="table" id="total-return-table" id="trustindicator" id="view-etf" id="view-etf-mobile" id="view-etf-mobile-tab" id="view-etf-tablet" 
+=== ISIN/exchange/schema:
+                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates.svg" class="site-header__strategy-item-icon-single default-icon img-fluid" />
+                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates-blue.svg" class="site-header__strategy-icon-single hover-icon img-fluid" />
+         <span class="site-header__strategy-item-label h6 mb-0">Strategies for rising rates</span>
+eader__resources-header-link" href="/browse-all-insights/insights/playbook-for-rising-rates">
+                                          <h6 class="mb-0 pr-2">A Playbook for Rising Rates</h6>
+                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates.svg" class="site-header__strategy-item-icon-single default-icon img-fluid" />
+                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates-blue.svg" class="site-header__strategy-icon-single hover-icon img-fluid" />
+         <span class="site-header__strategy-item-label h6 mb-0">Strategies for rising rates</span>
+eader__resources-header-link" href="/browse-all-insights/insights/playbook-for-rising-rates">
+                                          <h6 class="mb-0 pr-2">A Playbook for Rising Rates</h6>
+=== exposures section:
+2503:    "label": "Fund Country Weighting",
+2504-    "tableData": [
+2505-      {
+2506-        "Country": "United States",
+2507-        "Weight": 92.592586
+2508-      },
+2509-      {
+2510-        "Country": "Switzerland",
+2511-        "Weight": 2.8879680000000003
+2512-      },
+2513-      {
+2514-        "Country": "Ireland",
+2515-        "Weight": 1.6555670000000002
+2516-      },
+2517-      {
+2518-        "Country": "Other",
+2519-        "Weight": 1.558121
+2520-      },
+2521-      {
+2522-        "Country": "United Kingdom",
+2523-        "Weight": 1.305758
+2524-      }
+2525-    ]

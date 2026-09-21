@@ -1,32 +1,59 @@
-URL: https://www.proshares.com/api/distributionsummary/?fund=NOBL&year=2026
-STATUS: 200 841 bytes application/json; charset=utf-8
-[
-  {
-    "CashDividendPerShare": 0.303711,
-    "Dividend": ".303711",
-    "EffectiveDate": "2026-06-23T00:00:00",
-    "ExDate": "2026-06-24T00:00:00",
-    "LongTermCapGains": null,
-    "OtherPerShare": null,
-    "PayableDate": "2026-06-30T00:00:00",
-    "RecordDate": "2026-06-24T00:00:00",
-    "ReturnOfCapital": null,
-    "ShortTermCapGains": null,
-    "SpecialPerShare": null,
-    "Symbol": "NOBL"
-  },
-  {
-    "CashDividendPerShare": 0.256121,
-    "Dividend": ".256121",
-    "EffectiveDate": "2026-03-24T00:00:00",
-    "ExDate": "2026-03-25T00:00:00",
-    "LongTermCapGains": null,
-    "OtherPerShare": null,
-    "PayableDate": "2026-03-31T00:00:00",
-    "RecordDate": "2026-03-25T00:00:00",
-    "ReturnOfCapital": null,
-    "ShortTermCapGains": null,
-    "SpecialPerShare": null,
-    "Symbol": "NOBL"
-  }
-]
+URL: https://www.proshares.com/our-etfs/leveraged-and-inverse/agq
+STATUS: 200 259926 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/leveraged-and-inverse/agq -o /tmp/a.html; echo "=== ids:"; grep -oE 'id="(snapshot|characteristics|price|distributions|index|exposure)[a-zA-Z0-9_-]*"' /tmp/a.html | sort -u | tr '\n' ' '; echo; echo "=== snapshot block:"; ln=$(grep -n 'id="snapshot-cusip"' /tmp/a.html | head -1 | cut -d: -f1); sed -n "$((ln-26)),$((ln+26))p" /tmp/a.html
+=== ids:
+id="distributions" id="index" id="index-asOfDate" id="price-30DayMedianBidAskSpread" id="price-MarketPriceChange" id="price-asOfDate" id="price-marketPrice" id="price-nav" id="price-navChange" id="price-tradingVolume" id="snapshot-cusip" id="snapshot-expenseRatio" id="snapshot-inceptionDate" id="snapshot-intradayTicker" id="snapshot-navCalculationTimes" id="snapshot-netAssets" id="snapshot-optionsAvailable" id="snapshot-ticker" 
+=== snapshot block:
+
+
+
+
+<div class="container fund-detail__about-the-fund mb-6">
+    <div class="about-fund">
+        <div id="aboutthefund"></div>
+        <div class="section-header">
+            <h3 class="section-header-title">About the Fund</h3>
+                <div class="section-header-line bg-green"></div>
+
+        </div>
+        <div class="about-fund__content">
+            <div class="container" data-nosnippet>
+
+                <div class="d-none row d-xl-flex">
+                    <div class="about-fund__content-group col-xl-3">
+                        
+                        <div class="about-fund__contentlist">
+                            <div class="about-fund__list-heading">
+                                <h5 class="about-fund__list-header">Snapshot</h5>
+                                
+                            </div>
+                            <ul class="about-fund__list list-unstyled">
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Ticker</span> <div><span id="snapshot-ticker" class="about-fund__list-value d-inline-block">AGQ</span></div></li>
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Intraday Ticker</span> <div><span id="snapshot-intradayTicker" class="about-fund__list-value d-inline-block">AGQ.IV</span></div></li>
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">CUSIP</span> <div><span id="snapshot-cusip" class="about-fund__list-value d-inline-block">74347W353</span></div></li>
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block"data-nosnippet>Inception Date</span> <div><span id="snapshot-inceptionDate" class="about-fund__list-value d-inline-block"data-nosnippet>12/1/08</span></div></li>
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Assets</span> <div><span id="snapshot-netAssets" class="about-fund__list-value d-inline-block">$1,486,566,251</span></div></li>
+<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Expense Ratio</span> <div><span id="snapshot-expenseRatio" class="about-fund__list-value d-inline-block">0.95%</span></div></li>
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">NAV Calculation Time</span> <div><span id="snapshot-navCalculationTimes" class="about-fund__list-value d-inline-block">1:25 p.m. ET</span></div></li>
+                                
+                                <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Options Available</span> <div><span id="snapshot-optionsAvailable" class="about-fund__list-value d-inline-block">Yes</span></div></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                                            <div class="about-fund__content-group col-xl-3">
+                            
+                            <div class="about-fund__contentlist">
+                                <div class="about-fund__list-heading">
+                                    <h5 class="about-fund__list-header">Price</h5>
+                                    <span id="price-asOfDate" class="about-fund__list-subheader">as of 9/18/2026</span>
+                                </div>
+                                <ul class="about-fund__list list-unstyled">
+                                    
+                                    <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">NAV</span> <div><span id="price-nav" class="about-fund__list-value d-inline-block">$82.15</span></div></li>
+                                    <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">NAV Change</span> <div><span id="price-navChange" class="about-fund__list-value d-inline-block">$+2.55</span><span class="about-fund__list-image">
+                                    <img src="/areas/proshares/assets/images/up-caret-icon.svg" height="9"
+                                         alt="up caret" />
+                                </span></div></li>
+                                    <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Market Price</span> <div><span id="price-marketPrice" class="about-fund__list-value d-inline-block">$81.48</span></div></li>
+                                    <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Market Price Change</span> <div><span id="price-MarketPriceChange" class="about-fund__list-value d-inline-block">$+2.57</span><span class="about-fund__list-image">
