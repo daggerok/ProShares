@@ -721,6 +721,7 @@ export type FundPageData = {
   twelveMonthYield: number | null;
   twelveMonthYieldText: string;
   distributionsAsOf: string;
+  distributionsNote?: string;
   characteristics: Record<string, string>;
   characteristicsAsOf: string;
   indexStats: Record<string, string>;
@@ -886,6 +887,8 @@ export function parseFundPage(html: string): FundPageData {
     twelveMonthYield: ratioValue(twelveMonthYieldText),
     twelveMonthYieldText: twelveMonthYieldText || '—',
     distributionsAsOf: formatUsDate((extractIdText(html, 'distributions-asOfDate') || '').replace(/^as of\s*/i, '')),
+    // The fund page states this itself when a fund never distributed.
+    distributionsNote: /This fund has not made any distributions\s*\./i.test(html) ? 'This fund has not made any distributions.' : '',
     characteristics,
     characteristicsAsOf: formatUsDate((extractIdText(html, 'characteristics-asOfDate') || '').replace(/^as of\s*/i, '')),
     indexStats,
@@ -1545,6 +1548,7 @@ export function buildFeed(inputs: {
     premiumDiscountValue,
     distributions: {
       frequency: frequency === '—' ? '—' : frequency,
+      note: page.distributionsNote || null,
       exDate: latestDistribution?.exDate && latestDistribution.exDate !== '—' ? latestDistribution.exDate : '—',
       dividend: latestDistribution?.dividend === null || latestDistribution?.dividend === undefined
         ? '—'
@@ -1944,6 +1948,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           twelveMonthYield: numberOrNull(previousMeta.yields?.dividendYield),
           twelveMonthYieldText: String(previousMeta.yields?.dividendYieldText || '—'),
           distributionsAsOf: String(previousMeta.distributions?.asOfDate || '—'),
+          distributionsNote: String(previousMeta.distributions?.note || ''),
           characteristics: (previousMeta.officialMetrics?.characteristics || {}) as Record<string, string>,
           characteristicsAsOf: String(previousMeta.officialMetrics?.characteristicsAsOf || '—'),
           indexStats: (previousMeta.officialMetrics?.index || {}) as Record<string, string>,

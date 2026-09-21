@@ -30,6 +30,7 @@ import {
   holdingsHeaders,
   holdingsNetAssets,
   isOtherAssetsRow,
+  isWeightlessRow,
   indicatedYield,
   matchesRange,
   matchesReturnRange,
@@ -434,6 +435,12 @@ describe('fund page parsing', () => {
     expect(page.expenseRatioFootnote).toBe('');
   });
 
+  test('a fund that never distributed says so on its own page', () => {
+    const never = parseFundPage('<div id="distributionTab"><p>This fund has not made any distributions.</p></div>');
+    expect(never.distributionsNote).toBe('This fund has not made any distributions.');
+    expect(parseFundPage(FUND_PAGE).distributionsNote).toBe('');
+  });
+
   test('geared pages publish gross and net ratios plus a snapshot frequency', () => {
     const geared = parseFundPage(`
 <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span></div></li>
@@ -530,6 +537,13 @@ describe('holdings file parsing', () => {
     expect(Number(holdingWeight(tqqq[0], tqqqTotal)).toFixed(2)).toBe('3.11');
     expect(Number(holdingWeight(tqqq[1], tqqqTotal)).toFixed(2)).toBe('29.64');
     expect(holdingWeight(tqqq[2], tqqqTotal)).toBe('—');
+    // The fund page renders no weight for its cash-equivalent lines either:
+    // Net Other Assets, Treasury bills and the ProShares money-market fund.
+    expect(isWeightlessRow(tqqq[2])).toBe(true);
+    expect(isWeightlessRow({ name: 'TREASURY BILL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '998429170' })).toBe(true);
+    expect(isWeightlessRow({ name: 'PROSHARES GENIUS MNY MKT ETF', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '7019262250' })).toBe(true);
+    expect(isWeightlessRow({ name: 'US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY', ticker: '', identifier: '', coupon: '', maturity: '', shares: '-1557', exposure: '-164774390.6', marketValue: '' })).toBe(false);
+    expect(holdingWeight({ name: 'PROSHARES GENIUS MNY MKT ETF', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '7019262250' }, tqqqTotal)).toBe('—');
 
     const agq: HoldingsRow[] = [
       { name: 'SILVER FUTURE DEC26', ticker: '', identifier: '', coupon: '', maturity: '', shares: '3411', exposure: '1145226195', marketValue: '' },

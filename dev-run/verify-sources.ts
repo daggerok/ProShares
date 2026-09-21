@@ -185,6 +185,27 @@ for (const [ticker, audience] of SAMPLE) {
   log();
 }
 
+log('=== official per-fund holdings download vs the all-funds file');
+for (const ticker of ['NOBL', 'IGHG', 'AGQ']) {
+  for (const [label, url] of [
+    ['per-fund', `https://accounts.profunds.com/etfdata/ByFund/${ticker}-psdlyhld.csv`],
+    ['all-funds', 'https://accounts.profunds.com/etfdata/psdlyhld.csv'],
+  ] as Array<[string, string]>) {
+    try {
+      const text = await get(url);
+      await sleep(400);
+      const lines = text.split(/\r?\n/);
+      const headerAt = lines.findIndex(line => line.startsWith('Fund Ticker'));
+      const own = lines.filter(line => line.includes(`"${ticker}"`)).slice(0, 2);
+      log(`  ${ticker} ${label}: bytes ${text.length} · header line ${headerAt} · ${lines.filter(line => line.includes(`"${ticker}"`)).length} rows for ${ticker}`);
+      log(`    header: ${(lines[headerAt] || '').slice(0, 200)}`);
+      for (const line of own) log(`    row: ${line.slice(0, 200)}`);
+    } catch (error) {
+      log(`  ${ticker} ${label}: FAILED ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+}
+log();
 log('=== official performance file: blank tenors for the youngest funds');
 const performance = await get('https://accounts.profunds.com/etfdata/etf_performance.csv');
 const header = performance.split(/\r?\n/, 1)[0];
