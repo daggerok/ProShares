@@ -1,39 +1,12 @@
 URL: https://www.proshares.com/our-etfs/find-proshares-etfs
 STATUS: 200 1411340 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-proshares-etfs -o /tmp/f.html; echo "=== NOBL row:"; ln=$(grep -n -m1 '/our-etfs/strategic/nobl' /tmp/f.html | cut -d: -f1); sed -n "$((ln-4)),$((ln+30))p" /tmp/f.html | cut -c1-400
-=== NOBL row:
-                                                </td>
-                                            <td style="display:none" class="td_category">Alternative</td>
-                                        </tr>
-                                        <tr>
-                                                <td><a href="/our-etfs/strategic/nobl">NOBL</a></td>
-                                             <td>S&amp;P 500 Dividend Aristocrats ETF</td>
-                                            
-                                            
-                                                <td>Dividend Growers</td>
-                                                                                            <td>Equity</td>
-                                                                                                <td class="fund-screener-table__upss-arrow text-nowrap bracket-sort"><span class="fund-screener-table__value-one">$11,270,728,460</span></td>
-
-                                            
-                                            
-                                           
-                                                <td>10/09/2013</td>
-
-                                                <td class="text-left">
-                                                    <a class="fund-screener-table__link" href="/globalassets/proshares/fact-sheet/prosharesfactsheetnobl.pdf" rel="noreferrer noopener" target="_blank">
-                                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="download-asset" class="svg-inline--fa fa-download-asset fa-w-16 fa-sm fund-screener-table__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroklinejoin="round">
-                                                            <path fill="currentColor" d="M15.5 25.248V15.123M15.5 8.18a.209.209 0 0 0-.21.21c0 .119.092.212.21.212s.21-.093.21-.211a.209.209 0 0 0-.21-.211zM15.5 1.455a.209.209 0 0 0-.21.211c0 .118.092.21.21.21.118.001.21-.092.21-.21a.209.209 0 0 0-.21-.21zM29 31.998H2M22.248 18.498l-6.751 6.752-6.75-6.752"></path>
-                                                        </svg>
-                                                    </a>
-                                                </td>
-                                            <td style="display:none" class="td_category">DividendGrowers</td>
-                                        </tr>
-                                        <tr>
-                                                <td><a href="/our-etfs/strategic/oilk">OILK</a></td>
-                                             <td>K-1 Free Crude Oil ETF&#160;</td>
-                                            
-                                            
-                                                <td>Alternative</td>
-                                                                                            <td>Commodity</td>
-                                                                                                <td class="fund-screener-table__upss-arrow text-nowrap bracket-sort"><span class="fund-screener-table__value-one">$240,215,775</span></td>
-
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/our-etfs/find-proshares-etfs' -o /tmp/f.html; echo "=== premium mentions:"; grep -o -i -E '.{0,160}premium.{0,240}' /tmp/f.html | head -6; echo "=== counts per tab:"; grep -oE 'div[A-Za-z-]+Count">\(?[0-9]+' /tmp/f.html | head -20
+=== premium mentions:
+                                                                    <a class="site-header__resources-header-link" href="/resources/tools/premium-discount">
+                                                                            <h6 class="mb-0 pr-2">Premium/Discount Tool</h6>
+                                                                    <a class="site-header__resources-header-link" href="/resources/tools/premium-discount">
+                                                                            <h6 class="mb-0 pr-2">Premium/Discount Tool</h6>
+                                    <th style="text-align: right;">Premium/Discount</th>
+                                                <a href="/resources/tools/premium-discount">
+=== counts per tab:
+divMainCount">56

@@ -1,39 +1,22 @@
-URL: https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs
-STATUS: 200 2848158 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs -o /tmp/g.html; echo "=== TQQQ row:"; ln=$(grep -n -m1 '/our-etfs/leveraged-and-inverse/tqqq' /tmp/g.html | cut -d: -f1); sed -n "$((ln-4)),$((ln+30))p" /tmp/g.html | cut -c1-400
-=== TQQQ row:
-                                        <td class="td_benchmark d-none" data-symbol="IDCOT7TR"> ICE U.S. Treasury 7-10 Year Bond Index<span>&nbsp;(IDCOT7TR)</span></td>
-
-                                    </tr>
-                                    <tr>
-                                            <td><a href="/our-etfs/leveraged-and-inverse/tqqq">TQQQ</a></td>
-                                        <td>UltraPro QQQ</td>
-
-                                            <td class="strategy">Broad Market</td>
-                                        
-                                            <td class="etf">
-<span class="d-none">+</span>3x<span></span>
-                                            </td>
-
-                                            <td>Equity</td>
-                                        
-                                                <td class="fund-screener-table__up-arrow text-nowrap"><span class="fund-screener-table__value-one">$36,885,565,159</span></td>
-
-                                        <td class="benchmark"> Nasdaq-100&reg; Index<span>&nbsp;(NDX)</span></td>
-                                            <td class="text-left">
-                                                <a class="fund-screener-table__link" href="/globalassets/proshares/fact-sheet/prosharesfactsheettqqq.pdf" rel="noreferrer noopener" target="_blank">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="download-asset" class="svg-inline--fa fa-download-asset fa-w-16 fa-sm fund-screener-table__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroklinejoin="round">
-                                                        <path fill="currentColor" d="M15.5 25.248V15.123M15.5 8.18a.209.209 0 0 0-.21.21c0 .119.092.212.21.212s.21-.093.21-.211a.209.209 0 0 0-.21-.211zM15.5 1.455a.209.209 0 0 0-.21.211c0 .118.092.21.21.21.118.001.21-.092.21-.21a.209.209 0 0 0-.21-.21zM29 31.998H2M22.248 18.498l-6.751 6.752-6.75-6.752"></path>
-                                                    </svg>
-                                                </a>
-                                            </td>
-
-                                        <td class="td_strategies d-none">Broad Market</td>
-                                        <td class="td_strategies d-none">Equity</td>
-                                        <td class="td_dailyobjective d-none">
-<span>+</span>3x<span></span>
-                                        </td>
-                                        <td class="td_benchmark d-none" data-symbol="NDX"> Nasdaq-100&reg; Index<span>&nbsp;(NDX)</span></td>
-
-                                    </tr>
-                                    <tr>
+URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
+STATUS: 200 1857021 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; echo "=== IGHG bond rows:"; grep '^"IGHG"' /tmp/a.csv | head -6; echo "=== rows with coupon values:"; grep -E '^"[A-Z]+","[^"]*","[^"]*","[^"]*","[^"]*",[0-9]' /tmp/a.csv | head -4; echo "=== quoted commas sample:"; grep -E '"[^"]*,[^"]*"' /tmp/a.csv | head -3
+grep: write error: Broken pipe
+grep: write error: Broken pipe
+grep: write error: Broken pipe
+=== IGHG bond rows:
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY",,,-1557,-164774390.6,,
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US LONG BOND(CBT) BOND 21/DEC/2026 USZ6 COMDTY",,,-1452,-155409375,,
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","","US ULTRA BOND CBT BOND 21/DEC/2026 WNZ6 COMDTY",,,-225,-24461718.75,,
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","BYM4WR8","MORGAN STANLEY",4.375,2047-01-22,7779000,,6152311.3,
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","B65HZL3","PFIZER INC",7.2,2039-03-15,4769000,,5331598.02,
+"IGHG","ProShares Investment Grade-Interest Rate Hedged","","B1L80H6","HOME DEPOT INC",5.875,2036-12-16,5194000,,5284059.18,
+=== rows with coupon values:
+"DDM","ProShares Ultra Dow30","","BMWFL25","TREASURY BILL",0,2026-09-22,5000000,,4999474.3,
+"DDM","ProShares Ultra Dow30","","BW5Z070","TREASURY BILL",0,2026-09-24,5000000,,4998431.25,
+"DDM","ProShares Ultra Dow30","","BRCDQ07","TREASURY BILL",0,2026-11-17,5000000,,4969016.15,
+"DDM","ProShares Ultra Dow30","","BW61LR4","TREASURY BILL",0,2026-12-03,5000000,,4960161,
+=== quoted commas sample:
+"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","NDX100 35% VOLATILITY AUTOCALLABLE SWAP Bank of America NA",,,21613,23390669.25,,
+"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","IQMM",,"PROSHARES GENIUS MNY MKT ETF",,,90000,,9009000,
+"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","Net Other Assets (Liabilities)",,,14373441.9,,14373441.9,

@@ -1,40 +1,6 @@
-URL: https://www.proshares.com/our-etfs/strategic/nobl
-STATUS: 200 323857 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/nobl -o /tmp/n.html; echo "=== all element ids (unique):"; grep -oE 'id="[a-zA-Z0-9_-]+"' /tmp/n.html | sort -u | tr '\n' ' '; echo; echo "=== ISIN/exchange/schema:"; grep -o -i -E '.{0,80}(isin|exchange|json-ld|application/ld).{0,120}' /tmp/n.html | head -10; echo "=== exposures section:"; grep -n -A 22 'Fund Country Weighting' /tmp/n.html | head -40
-=== all element ids (unique):
-id="1ea95ef1-9f2a-4d44-89dd-ebd574212971" id="2017" id="2018" id="2019" id="2020" id="2021" id="2022" id="2023" id="2024" id="2025" id="2026" id="47065601" id="AbouttheFund" id="Documents" id="Exposures" id="Header" id="Holdings" id="Index" id="Performance" id="RelatedArticles" id="about" id="aboutthefund" id="animationProgress" id="characteristcs-priceEarningsRatio" id="characteristics-asOfDate" id="characteristics-avgMarketCap" id="characteristics-numberOfHoldings" id="characteristics-priceBookRatio" id="chartTimeFrame" id="densityChart" id="distributionTab" id="distributions" id="distributions-12MonthYield" id="distributions-asOfDate" id="distributions-distributionFrequency" id="etf-tabs" id="etf-tabsContent" id="exposures" id="exposures-asOfDate" id="funds" id="geared-etf" id="geared-etf-mobile" id="geared-etf-mobile-tab" id="geared-etf-tablet" id="ghaph-tabs" id="header_search_button" id="header_search_container" id="holdings" id="holdingstable" id="index" id="index-asOfDate" id="insights" id="left-side" id="linegraph" id="month-end-total-returns" id="month-end-total-returns-tab" id="month-end-total-returns1" id="month-end-total-returns1-tab" id="performance" id="price-30DayMedianBidAskSpread" id="price-MarketPriceChange" id="price-asOfDate" id="price-marketPrice" id="price-nav" id="price-navChange" id="price-tradingVolume" id="related-insights" id="resources" id="root" id="scroll-in-view" id="search-filter-tag" id="site-header-mobile-menu" id="site_header_search_button" id="snapshot-cusip" id="snapshot-expenseRatio" id="snapshot-inceptionDate" id="snapshot-intradayTicker" id="snapshot-navCalculationTimes" id="snapshot-netAssets" id="snapshot-optionsAvailable" id="snapshot-ticker" id="strategies" id="subscribe" id="table" id="total-return-table" id="trustindicator" id="view-etf" id="view-etf-mobile" id="view-etf-mobile-tab" id="view-etf-tablet" 
-=== ISIN/exchange/schema:
-                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates.svg" class="site-header__strategy-item-icon-single default-icon img-fluid" />
-                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates-blue.svg" class="site-header__strategy-icon-single hover-icon img-fluid" />
-         <span class="site-header__strategy-item-label h6 mb-0">Strategies for rising rates</span>
-eader__resources-header-link" href="/browse-all-insights/insights/playbook-for-rising-rates">
-                                          <h6 class="mb-0 pr-2">A Playbook for Rising Rates</h6>
-                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates.svg" class="site-header__strategy-item-icon-single default-icon img-fluid" />
-                 <img src="/globalassets/proshares/strategy-icon-updated-color/rising-rates-blue.svg" class="site-header__strategy-icon-single hover-icon img-fluid" />
-         <span class="site-header__strategy-item-label h6 mb-0">Strategies for rising rates</span>
-eader__resources-header-link" href="/browse-all-insights/insights/playbook-for-rising-rates">
-                                          <h6 class="mb-0 pr-2">A Playbook for Rising Rates</h6>
-=== exposures section:
-2503:    "label": "Fund Country Weighting",
-2504-    "tableData": [
-2505-      {
-2506-        "Country": "United States",
-2507-        "Weight": 92.592586
-2508-      },
-2509-      {
-2510-        "Country": "Switzerland",
-2511-        "Weight": 2.8879680000000003
-2512-      },
-2513-      {
-2514-        "Country": "Ireland",
-2515-        "Weight": 1.6555670000000002
-2516-      },
-2517-      {
-2518-        "Country": "Other",
-2519-        "Weight": 1.558121
-2520-      },
-2521-      {
-2522-        "Country": "United Kingdom",
-2523-        "Weight": 1.305758
-2524-      }
-2525-    ]
+URL: https://www.proshares.com/resources/distributions
+STATUS: 200 188932 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -sL -A "$UA" 'https://www.proshares.com/resources/distributions' -o /tmp/d.html -w 'status=%{http_code} size=%{size_download}\n'; echo "=== api + csv links:"; grep -oE '(/api/[a-zA-Z0-9/?&=_-]+|href="[^"]+\.(csv|xls|xlsx)")' /tmp/d.html | sort -u | head -20; echo "=== table headers:"; grep -oE '<th[^>]*>[^<]{2,40}</th>' /tmp/d.html | sed 's/<[^>]*>//g' | sort -u | head -25
+status=200 size=188932
+=== api + csv links:
+=== table headers:
