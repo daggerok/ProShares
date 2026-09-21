@@ -1,14 +1,3 @@
-URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
-STATUS: 200 1857021 bytes text/csv
-PORTFOLIO HOLDINGS INFORMATION,,,,
-AS OF 9/18/2026,,,,
-,,,,
-Fund Ticker, Fund Name, Security Ticker, Security Sedol, Security Description, Coupon, Maturity Date, Shares/Contracts, Exposure Value (Notional + G/L), Market Value
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","NDX100 35% VOLATILITY AUTOCALLABLE SWAP Bank of America NA",,,21613,23390669.25,,
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","IQMM",,"PROSHARES GENIUS MNY MKT ETF",,,90000,,9009000,
-"ACQQ","ProShares Nasdaq-100 Autocallable Income ETF","","","Net Other Assets (Liabilities)",,,14373441.9,,14373441.9,
-"ACRT","ProShares Russell 2000 Autocallable Income ETF","","","RU2K LADDERED AUTOCALL SWAP Bank of America NA",,,2278,1525462.7,,
-"ACRT","ProShares Russell 2000 Autocallable Income ETF","IQMM",,"PROSHARES GENIUS MNY MKT ETF",,,13500,,1351350,
-"ACRT","ProShares Russell 2000 Autocallable Income ETF","","","Net Other Assets (Liabilities)",,,174546.46,,174546.46,
-"ACSP","ProShares S&P 500 Autocallable Income ETF","","","S&P500 Futures 35% Autocall SWAP Bank of America NA",,,2692,26692122.2,,
-"ACSP","ProShares S&P 500 Autocallable Income ETF","IQMM",,"PROSHARES GENIUS MNY MKT ETF",,,50000
+URL: https://query1.finance.yahoo.com/v8/finance/chart/BF%2FB?range=5d&interval=1d
+STATUS: 429 19 bytes text/html
+Too Many Requests
