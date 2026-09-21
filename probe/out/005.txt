@@ -1,0 +1,9 @@
+URL: https://accounts.profunds.com/etfdata/historical_nav.csv
+STATUS: 200 52674493 bytes text/csv
+CMD: wc -l /tmp/body; head -3 /tmp/body; tail -2 /tmp/body
+539910 /tmp/body
+Date,ProShares Name,Ticker,NAV,Prior NAV,NAV Change (%),NAV Change ($),Shares Outstanding (000),Assets Under Management
+09/18/2026,ProShares Big Data Refiners ETF,DAT,49.3719,49.9604,-1.17793,-0.5885,100,4937239.3719
+09/17/2026,ProShares Big Data Refiners ETF,DAT,49.9604,49.1364,1.67696,0.824,100,4996089.9604
+01/04/2011,ProShares VIX Short-Term Futures ETF,VIXY,635760,640000,-0.66250,-4240,0.01,7947397.35
+01/03/2011,ProShares VIX Short-Term Futures ETF,VIXY,640000,640000,0.00000,0,0.01,8000400
