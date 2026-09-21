@@ -99,6 +99,35 @@ async function feedRows(ticker: string): Promise<Cell[]> {
 
 const normalize = (name: string) => name.replace(/[^A-Z0-9 ]/gi, ' ').replace(/\s+/g, ' ').trim().toUpperCase();
 
+function rawSnippets(ticker: string, html: string) {
+  const start = html.indexOf('id="holdings"');
+  if (start < 0) {
+    log('  holdings table: absent');
+  } else {
+    const table = html.slice(start, html.indexOf('</table>', start));
+    const header = /<thead[\s\S]*?<\/thead>/i.exec(table)?.[0] || '';
+    log(`  raw thead: ${header.replace(/\s+/g, ' ').slice(0, 500)}`);
+    const rows = [...table.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi)].map(match => match[0].replace(/\s+/g, ' '));
+    log(`  raw row count: ${rows.length}`);
+    for (const row of [rows[1], rows[2], rows[rows.length - 1]]) {
+      if (row) log(`  raw row: ${row.slice(0, 700)}`);
+    }
+  }
+  const listStart = html.search(/id="aboutthefund"/i);
+  if (listStart >= 0) {
+    const fragment = html.slice(listStart, listStart + 22_000);
+    const items = [...fragment.matchAll(/<li\b[^>]*>[\s\S]*?<\/li>/gi)]
+      .map(match => match[0].replace(/\s+/g, ' '))
+      .filter(item => /expense|distribut|yield|net asset/i.test(item))
+      .slice(0, 6);
+    for (const item of items) log(`  raw list item: ${item.slice(0, 500)}`);
+  }
+  const distributionBlock = /id="distributionTab"[\s\S]{0,1200}/i.exec(html)?.[0];
+  if (distributionBlock) {
+    log(`  raw distribution tab: ${distributionBlock.replace(/\s+/g, ' ').slice(0, 600)}`);
+  }
+}
+
 for (const [ticker, audience] of SAMPLE) {
   const url = `${SITE}/our-etfs/${audience === 'strategic' ? 'strategic' : 'leveraged-and-inverse'}/${ticker.toLowerCase()}`;
   log(`=== ${ticker} (${url})`);
@@ -111,6 +140,7 @@ for (const [ticker, audience] of SAMPLE) {
   }
   await sleep(1200);
 
+  rawSnippets(ticker, html);
   const rendered = renderedHoldings(html);
   const feed = await feedRows(ticker);
   const feedByName = new Map(feed.map(row => [normalize(row.name), row]));

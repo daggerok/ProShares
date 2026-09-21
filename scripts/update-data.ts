@@ -704,6 +704,7 @@ export type FundPageData = {
   cusip: string;
   expenseRatio: number | null;
   expenseRatioText: string;
+  expenseRatioFootnote: string;
   grossExpenseRatio: number | null;
   grossExpenseRatioText: string;
   netExpenseRatio: number | null;
@@ -865,12 +866,14 @@ export function parseFundPage(html: string): FundPageData {
   }
   return {
     cusip: extractIdText(html, 'snapshot-cusip') || cleanText(snapshot.CUSIP || ''),
-    expenseRatio: numberOrNull(expenseRatioText),
-    expenseRatioText: expenseRatioText || '—',
-    grossExpenseRatio: numberOrNull(grossExpenseRatioText),
-    grossExpenseRatioText: grossExpenseRatioText || '—',
-    netExpenseRatio: numberOrNull(netExpenseRatioText || expenseRatioText),
-    netExpenseRatioText: (netExpenseRatioText || expenseRatioText) || '—',
+    expenseRatio: ratioValue(expenseRatioText),
+    expenseRatioText: cleanRatioText(expenseRatioText) || '—',
+    expenseRatioFootnote: /[*\u2020\u2021\u00b0]\s*$/.test(expenseRatioText) ? expenseRatioText.trim().slice(-1) : '',
+    // A single published ratio is both gross and net (no waiver is published).
+    grossExpenseRatio: ratioValue(grossExpenseRatioText || netExpenseRatioText || expenseRatioText),
+    grossExpenseRatioText: cleanRatioText(grossExpenseRatioText || netExpenseRatioText || expenseRatioText) || '—',
+    netExpenseRatio: ratioValue(netExpenseRatioText || expenseRatioText),
+    netExpenseRatioText: cleanRatioText(netExpenseRatioText || expenseRatioText) || '—',
     inceptionDate: formatUsDate(extractIdText(html, 'snapshot-inceptionDate') || snapshot['Inception Date'] || ''),
     netAssetsText: netAssetsText || cleanText(snapshot['Net Assets'] || ''),
     netAssetsValue: numberOrNull(netAssetsText || snapshot['Net Assets'] || ''),
@@ -880,7 +883,7 @@ export function parseFundPage(html: string): FundPageData {
     marketPriceText: marketPriceText || '—',
     priceAsOf: formatUsDate((extractIdText(html, 'price-asOfDate') || '').replace(/^as of\s*/i, '')),
     distributionFrequency: extractIdText(html, 'distributions-distributionFrequency') || extractIdText(html, 'snapshot-distributions'),
-    twelveMonthYield: numberOrNull(twelveMonthYieldText),
+    twelveMonthYield: ratioValue(twelveMonthYieldText),
     twelveMonthYieldText: twelveMonthYieldText || '—',
     distributionsAsOf: formatUsDate((extractIdText(html, 'distributions-asOfDate') || '').replace(/^as of\s*/i, '')),
     characteristics,
@@ -967,6 +970,20 @@ export function parseHoldingsFile(text: string): HoldingsFile {
  * 29.64%, AGQ Silver DEC26 77.04%, NOBL BDX 1.73%, IGHG Morgan Stanley 1.62%.
  * Cash and payable lines carry no weight on the fund pages and stay blank.
  */
+/**
+ * The fund pages mark a ratio with a footnote marker when a fee waiver
+ * applies ("1.17%*"). The marker is kept in the verbatim display strings and
+ * stripped before parsing, so the value is still a number.
+ */
+export function ratioValue(raw: unknown): number | null {
+  return numberOrNull(cleanText(raw).replace(/[*\u2020\u2021\u00b0]/g, ''));
+}
+
+/** Removes the fund page's footnote markers from a display string. */
+export function cleanRatioText(raw: unknown): string {
+  return cleanText(raw).replace(/\s*[*\u2020\u2021\u00b0]\s*$/, '');
+}
+
 export function holdingWeight(row: HoldingsRow, totalNetAssets: number): string {
   if (isOtherAssetsRow(row)) return '—';
   const value = numberOrNull(row.marketValue) ?? numberOrNull(row.exposure);
@@ -1450,6 +1467,16 @@ export function buildFeed(inputs: {
   const latestDistribution = distributions.length ? distributions[distributions.length - 1] : null;
   const payments = paymentsPerYear(frequency);
   const indicated = indicatedYield(latestDistribution?.dividend ?? null, frequency, nav);
+  // The Yield the site publishes: the official 12-Month Yield where ProShares
+  // prints one (strategic pages), otherwise the indicated yield computed from
+  // the latest official distribution. Funds that never distributed keep '—'.
+  const publishedYield = page.twelveMonthYield;
+  const effectiveYield = publishedYield ?? indicated;
+  const effectiveYieldBasis = publishedYield !== null
+    ? 'official ProShares 12-Month Yield (page distributions block)'
+    : indicated !== null
+      ? 'indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)'
+      : 'not published by ProShares and no distributions yet (data limitation)';
   const holdingsCsvHeaders = holdingsHeaders(holdingsRows);
   const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders);
 
@@ -1477,8 +1504,10 @@ export function buildFeed(inputs: {
     cagr5y: performanceNavMonth?.yr5 ?? null,
     cagr10y: performanceNavMonth?.yr10 ?? null,
     siAnn: performanceNavMonth?.sinceInception ?? null,
-    dividendYield: page.twelveMonthYield,
-    dividendYieldText: page.twelveMonthYieldText,
+    dividendYield: effectiveYield,
+    dividendYieldText: formatPercentText(effectiveYield),
+    dividendYieldBasis: effectiveYieldBasis,
+    dividendYieldComputed: publishedYield === null && indicated !== null,
     secYield: null,
     secYieldText: '—',
     returnsBasis: 'official ProShares performance file (etf_performance.csv, NAV total return, month-end)',
@@ -1565,6 +1594,7 @@ export function buildFeed(inputs: {
       value: page.netExpenseRatio ?? page.expenseRatio,
       gross: { display: page.grossExpenseRatioText || '—', value: page.grossExpenseRatio },
       net: { display: page.netExpenseRatioText || '—', value: page.netExpenseRatio },
+      footnote: page.expenseRatioFootnote || null,
       note: page.grossExpenseRatio !== null && page.grossExpenseRatio !== page.netExpenseRatio
         ? 'ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio'
         : 'ProShares publishes a single expense ratio for this fund',
@@ -1587,6 +1617,10 @@ export function buildFeed(inputs: {
       dividendYield: page.twelveMonthYield,
       dividendYieldText: page.twelveMonthYieldText,
       dividendYieldKind: 'official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month\'s NAV plus capital-gain distributions)',
+      effectiveYield,
+      effectiveYieldText: formatPercentText(effectiveYield),
+      effectiveYieldBasis,
+      effectiveYieldComputed: publishedYield === null && indicated !== null,
       distributionYield: null,
       distributionYieldText: null,
       yield12M: page.twelveMonthYield,
@@ -1893,6 +1927,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           cusip: String(previousMeta.identifiers?.cusip || ''),
           expenseRatio: numberOrNull(previousMeta.expenseRatio?.value),
           expenseRatioText: String(previousMeta.expenseRatio?.display || '—'),
+          expenseRatioFootnote: String(previousMeta.expenseRatio?.footnote || ''),
           grossExpenseRatio: numberOrNull(previousMeta.expenseRatio?.gross?.value),
           grossExpenseRatioText: String(previousMeta.expenseRatio?.gross?.display || '—'),
           netExpenseRatio: numberOrNull(previousMeta.expenseRatio?.net?.value),
@@ -1923,6 +1958,9 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         stats.filtered++;
         return;
       }
+      // DIVIDEND_YIELD matches the official 12-Month Yield when the fund page
+      // publishes one and the indicated yield (computed from the official
+      // distribution rows) otherwise, i.e. the value the feed reports.
       if (config.dividendYieldRange && !matchesRange(page.twelveMonthYield, config.dividendYieldRange)) {
         stats.filtered++;
         return;

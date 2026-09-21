@@ -429,7 +429,9 @@ describe('fund page parsing', () => {
     expect(page.inceptionDate).toBe('Oct 09 2013');
     expect(page.expenseRatio).toBe(0.35);
     expect(page.netExpenseRatio).toBe(0.35);
-    expect(page.grossExpenseRatio).toBeNull();
+    // One published ratio serves as gross and net (ProShares publishes no waiver).
+    expect(page.grossExpenseRatio).toBe(0.35);
+    expect(page.expenseRatioFootnote).toBe('');
   });
 
   test('geared pages publish gross and net ratios plus a snapshot frequency', () => {
@@ -441,6 +443,11 @@ describe('fund page parsing', () => {
     expect(geared.netExpenseRatio).toBe(0.82);
     expect(geared.expenseRatio).toBe(0.82);
     expect(geared.distributionFrequency).toBe('Quarterly');
+    // "Net Expense Ratio 1.17%*" keeps the footnote marker out of the number.
+    const waived = parseFundPage('<li><span class="about-fund__list-label">Net Expense Ratio</span> <span id="snapshot-netExpenseRatio" class="about-fund__list-value">1.17%*</span></li>');
+    expect(waived.netExpenseRatio).toBe(1.17);
+    expect(waived.netExpenseRatioText).toBe('1.17%');
+    expect(waived.expenseRatioFootnote).toBe('*');
   });
 
   test('characteristics and index stats', () => {
