@@ -1,7 +1,6 @@
 # Lines are exported as environment variables for scripts/update-data.ts.
 # Editing this file (and pushing) runs the dev data refresh on this branch.
 MAX_FETCHES=0
-TICKERS=NOBL,TQQQ,AGQ,IGHG
-CONCURRENCY=2
+CONCURRENCY=3
 REQUEST_SLEEP=1
 DISTRIBUTION_YEARS=10
