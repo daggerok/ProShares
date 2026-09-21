@@ -1,3 +1,14 @@
-URL: https://query1.finance.yahoo.com/v8/finance/chart/NOBL?range=1mo&interval=1d&events=div%7Csplit
-STATUS: 429 19 bytes text/html
-Too Many Requests
+URL: https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq
+STATUS: 200 336615 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq -o /tmp/t.html; echo "--- snapshot + frequency + return table headers:"; grep -n -oE '(Expense Ratio|CUSIP|Inception Date|Net Assets|Distribution Frequency|12-Month Yield|NAV Calculation Time|Options Available)' /tmp/t.html | sort -t: -k2 | uniq -c -f1 | head -20; echo "--- monthly return row sample:"; grep -n -oE 'Total Returns as of [0-9/]+' /tmp/t.html | head -4
+--- snapshot + frequency + return table headers:
+      2 2140:CUSIP
+      4 2143:Expense Ratio
+      4 2016:Inception Date
+      2 2144:NAV Calculation Time
+      2 2142:Net Assets
+      2 2146:Options Available
+--- monthly return row sample:
+1982:Total Returns as of 8/31/2026
+1988:Total Returns as of 8/31/2026
+1993:Total Returns as of 6/30/2026

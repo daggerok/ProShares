@@ -1,3 +1,4 @@
-URL: https://query1.finance.yahoo.com/v8/finance/chart/BF%2FB?range=5d&interval=1d
+URL: https://query2.finance.yahoo.com/v8/finance/chart/NOBL?range=1mo&interval=1d&events=div
 STATUS: 429 19 bytes text/html
+CMD: sleep 4; UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'; curl -s -A "$UA" -H 'Accept: application/json' 'https://query2.finance.yahoo.com/v8/finance/chart/NOBL?range=3mo&interval=1d&events=div' | head -c 900
 Too Many Requests

@@ -1,11 +1,90 @@
-URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
-STATUS: 200 1857021 bytes text/csv
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-proshares-etfs -o /tmp/b.html; curl -s -A "$UA" https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs -o /tmp/c.html; grep -oE '^"[A-Z0-9]+"' /tmp/a.csv | tr -d '"' | sort -u > /tmp/h.txt; grep -ohE 'href="/our-etfs/(strategic|leveraged-and-inverse)/[a-z0-9]+' /tmp/b.html /tmp/c.html | grep -oE '[a-z0-9]+$' | tr 'a-z' 'A-Z' | sort -u > /tmp/f.txt; echo "holdings tickers: $(wc -l < /tmp/h.txt)  finder tickers: $(wc -l < /tmp/f.txt)"; echo; echo "IN HOLDINGS, NOT ON FINDER PAGES:"; comm -23 /tmp/h.txt /tmp/f.txt | tr '\n' ' '; echo; echo "ON FINDER, NO HOLDINGS ROW:"; comm -13 /tmp/h.txt /tmp/f.txt | tr '\n' ' '; echo; echo "finder page b results text:"; grep -oE '[0-9]+ Results' /tmp/b.html | head -3; grep -oE '[0-9]+ Results' /tmp/c.html | head -3
-holdings tickers: 173  finder tickers: 173
+URL: https://www.proshares.com/our-etfs/strategic/nobl
+STATUS: 200 323857 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/nobl -o /tmp/n.html; echo "--- api/urls in page:"; grep -oE '(https?://[a-zA-Z0-9./_-]*api[a-zA-Z0-9./_-]*|"/api/[a-zA-Z0-9./?&_=-]+")' /tmp/n.html | sort -u | head -30; echo "--- distribution section:"; grep -n -i -E 'id="distribution|Distributions' /tmp/n.html | head -10; echo "--- around first Distributions heading:"; ln=$(grep -n -i -m1 'Distributions' /tmp/n.html | cut -d: -f1); sed -n "$((ln-2)),$((ln+60))p" /tmp/n.html | head -70
+grep: write error: Broken pipe
+--- api/urls in page:
+"/api/distributionsummary/?fund=NOBL&year="
+"/api/fund-performance-growth-10k-10y?fund=NOBL"
+"/api/fund-performance-growth-10k-1m?fund=NOBL"
+"/api/fund-performance-growth-10k-1y?fund=NOBL"
+"/api/fund-performance-growth-10k-3m?fund=NOBL"
+"/api/fund-performance-growth-10k-3y?fund=NOBL"
+"/api/fund-performance-growth-10k-5y?fund=NOBL"
+"/api/fund-performance-growth-10k-6m?fund=NOBL"
+"/api/fund-performance-growth-10k-ytd?fund=NOBL"
+"/api/fund-performance-growth-10k?fund=NOBL"
+--- distribution section:
+549:                                                                <a class="site-header__resources-header-link" href="/resources/distributions">
+1275:                                                                    <a class="site-header__resources-header-link" href="/resources/distributions">
+1476:                                    <a href="#distributionTab">Distributions</a>
+1489:                                <li class="py-xl-4"><a class="d-inline-block link-primary" href="#distributionTab">Distributions</a></li>
+2315:                                    <h5 class="about-fund__list-header">Distributions</h5>
+2316:                                    <span id="distributions-asOfDate" class="about-fund__list-subheader">as of 8/31/2026</span>
+2320:<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>                                    
+2330:                                    <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">2.01%</span></div><div class="about-fund__popover-content"><p><strong>12-Month Yield</strong> represents the sum of the funds dividends for the last 12 months divided by the sum of the last month's NAV and any capital gain distributions made over the past 12 months.</p></div></li>
+2423:                                    <h5 class="about-fund__list-header">Distributions</h5>
+2424:                                    <span id="distributions-asOfDate" class="about-fund__list-subheader">as of 8/31/2026</span>
+--- around first Distributions heading:
+                                                            </li>
+                                                            <li class="site-header__resources-list-item">
+                                                                <a class="site-header__resources-header-link" href="/resources/distributions">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <h6 class="mb-0 pr-2">Distribution Information</h6>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                            <div class="site-header__resources-group col-md-12 col-lg-4">
+                                                <p class="text-util-lg-semibold site-header__resources-header"></p>
+                                                <ul class="site-header__resources-list">
+                                                </ul>
+                                            </div>
+                                        </div>
 
-IN HOLDINGS, NOT ON FINDER PAGES:
+                                    </div>
+                            </div>                    </li>
+                    <li class="dropundefined dropdown nav-item site-header__navbar-dropdown about">
+                        <a class="position-relative nav-link text-util-sm" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" id="about">
+                            About
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-16 fa-md cta-link__icon align-middle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M13.49 5.24a.75.75 0 00-.54.22.75.75 0 000 1.06l4.73 4.71H4.48a.75.75 0 00-.75.75.75.75 0 00.75.75h13.24l-4.77 4.75a.75.75 0 000 1.06.75.75 0 001.06 0l6.04-6a.75.75 0 000-1.07L14 5.46a.75.75 0 00-.52-.22z"></path>
+                            </svg>
+                        </a>
+                            <div class="dropdown-menu light-gray w-100" role="menu" aria-labelledby="#About">
+                                <div class="container d-block dropdown-text">
+                                    <button class="site-header__mobile-sub-submenu-toggle site-header__mobile-sub-submenu-close" type="button">
+                                        <div class="site-header__mobile-menu-action-inner align-items-center mt-3 text-util-sm">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-16 fa-lg site-header__mobile-submenu-icon mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M10.51 18.76a.75.75 0 00.54-.22.75.75 0 000-1.06l-4.73-4.71h13.2a.75.75 0 00.75-.75.75.75 0 00-.75-.75H6.28l4.77-4.75a.75.75 0 000-1.06.75.75 0 00-1.06 0l-6.04 6a.75.75 0 000 1.07L10 18.54a.75.75 0 00.52.22z"></path>
+                                            </svg>
+                                            <h4 class="mb-0"> About</h4>
+                                        </div>
+                                    </button>
+                                        <div>
+                                            <div class="site-header__about row">
+                                                <div class="site-header__about-content col-md-8">
+                                                    <div>
+                                                        <span class="text-util-lg-semibold site-header__about-tag">About ProShares</span>
+                                                        <h5 class="site-header__about-header">At the forefront of the ETF revolution since 2006.</h5>
+                                                            <div class="text-util-lg-regular site-header__about-description">
+<p>ProShares now offers one of the largest lineups of ETFs, with over $105 billion in assets. The company is a leader in strategies such as crypto, dividend growth, interest rate hedged bond and geared (leveraged and inverse) ETF investing. ProShares continues to innovate with products that provide strategic and tactical opportunities for investors to manage risk and enhance returns.</p>                                                                
 
-ON FINDER, NO HOLDINGS ROW:
-
-finder page b results text:
-56 Results
+                                                            </div>
+                                                    </div>
+                                                    <div class="site-header__about-social-links">
+                                                                <div class="site-header__about-social-links-single">
+                                                                    <a href="https://x.com/ProShares" rel="noreferrer noopener" target="_blank">
+                                                                        <img src="/areas/proshares/assets/icons/Twitter-icon-black.svg" alt="Twitter-icon-black" class="img-fluid default-icon" />
+                                                                        <img src="/areas/proshares/assets/icons/twitter-icon-gray.svg" alt="twitter-icon-gray" class="img-fluid hover-icon">
+                                                                        <span class="sr-only">This link opens a new window</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="site-header__about-social-links-single">
+                                                                    <a href="https://www.instagram.com/proshares/" rel="noreferrer noopener" target="_blank">
+                                                                        <img src="/areas/proshares/assets/icons/Instagram-icon-black
+.svg" alt="Instagram-icon-black
+" class="img-fluid default-icon" />
+                                                                        <img src="/areas/proshares/assets/icons/instagram-icon-gray.svg" alt="instagram-icon-gray" class="img-fluid hover-icon">
+                                                                        <span class="sr-only">This link opens a new window</span>
+                                                                    </a>
