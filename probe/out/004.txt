@@ -1,62 +1,8 @@
-URL: https://www.proshares.com/our-etfs/find-proshares-etfs
-STATUS: 200 1411340 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/our-etfs/find-proshares-etfs' -o /tmp/f.html; echo "--- table headers:"; grep -oE '<th[^>]*>[^<]{2,40}</th>' /tmp/f.html | sed 's/<[^>]*>//g' | sort -u | head -40; echo "--- data attributes:"; grep -oE 'data-[a-z-]+="[^"]{0,60}"' /tmp/f.html | sort -u | head -25
---- table headers:
-10Y
-1M
-1Y
-30 Day Bid/Ask Spread
-3M
-3Y
-5Y
-Annual Reports
-Asset Class
-Attribution Report
-Category
-Dividend
-Ex Date
-Fact Sheet
-Fund Name
-History
-Inception Date
-Long Term Cap Gains
-Market Price(Change)
-NAV(Change)
-Net Assets
-Payable Date
-Premium/Discount
-Record Date
-Return of Capital
-Semi Annual Reports
-Short Term Cap Gains
-Since Inception
-Strategy
-Summary Prospectus
-Ticker
-YTD
---- data attributes:
-data-dismiss="modal"
-data-icon="arrow-left"
-data-icon="arrow-right"
-data-icon="download-asset"
-data-nosnippet=""
-data-prefix="far"
-data-target="#Alternative"
-data-target="#AutocallableIncome"
-data-target="#Crypto"
-data-target="#Crypto-Linked"
-data-target="#DividendGrowers"
-data-target="#DynamicBuffer"
-data-target="#Ex-Sector"
-data-target="#Factor"
-data-target="#HighIncome"
-data-target="#MoneyMarket"
-data-target="#RisingRates"
-data-target="#StockBuybacks"
-data-target="#Thematic"
-data-target="#Volatility"
-data-target="#all-etf"
-data-target="#geared-etf"
-data-target="#geared-etf-mobile"
-data-target="#geared-etf-tablet"
-data-target="#insight-series"
+URL: https://ftr.proshares.com/
+STATUS: 000 0 bytes 000 0 -
+STDERR:
+curl: (6) Could not resolve host: ftr.proshares.com
+CMD: echo "probe alt host"; UA='Mozilla/5.0'; curl -s -A "$UA" -o /dev/null -w 'root=%{http_code}\n' 'https://www.proshares.com/resources/tools/premium-discount?fund=nobl'; curl -sL -A "$UA" 'https://www.proshares.com/resources/tools/premium-discount?fund=nobl' -o /tmp/p.html -w 'tool=%{http_code} size=%{size_download}\n'; grep -oE '"/api/[^"]+"' /tmp/p.html | sort -u | head -10
+probe alt host
+root=200
+tool=200 size=239155

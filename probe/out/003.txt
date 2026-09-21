@@ -1,6 +1,6 @@
-URL: https://www.proshares.com/resources/tools/premium-discount/?fund=nobl
-STATUS: 200 239155 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/resources/tools/premium-discount/?fund=nobl' -o /tmp/p.html; echo "--- size: $(wc -c < /tmp/p.html)"; grep -oE '"/api/[^"]+"|/api/[a-zA-Z0-9/?&=_-]+' /tmp/p.html | sort -u | head -20; echo "--- premium/discount mentions:"; grep -n -i -oE '.{0,120}(premium|discount).{0,160}' /tmp/p.html | head -12
---- size: 191
---- premium/discount mentions:
-2:<body><h1>Object Moved</h1>This document may be found <a HREF="https://www.proshares.com/resources/tools/premium-discount?fund=nobl">here</a></body>
+URL: https://www.proshares.com/api/distributionsummary/?fund=nobl&year=2026
+STATUS: 200 841 bytes application/json; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" -H 'X-Requested-With: XMLHttpRequest' -H 'Accept: application/json' -o /tmp/d.json -w 'status=%{http_code} size=%{size_download} type=%{content_type}\n' 'https://www.proshares.com/api/distributionsummary/?fund=NOBL&year=2026'; head -c 1200 /tmp/d.json
+status=301 size=196 type=text/html; charset=UTF-8
+<head><title>Document Moved</title></head>
+<body><h1>Object Moved</h1>This document may be found <a HREF="https://www.proshares.com/api/distributionsummary?fund=NOBL&amp;year=2026">here</a></body>

@@ -1,40 +1,32 @@
-URL: https://www.proshares.com/api/distributionsummary/?fund=IGHG&year=
-STATUS: 500 187930 bytes text/html; charset=utf-8
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript">
-_iaq = [ ['client', 'fc24f936bf5a4115936905b661d32dc4'], ['track', 'consume'] ]; !function(d,s){var ia=d.createElement(s);ia.async=1,s=d.getElementsByTagName(s)[0],ia.src='//s.USEA01.idio.episerver.net/ia.js',s.parentNode.insertBefore(ia,s)}(document,'script');
-</script>
-
-
-            <meta name="title" content="Error" />
-            <meta name="description" />
-            <meta name="keywords" />
-            <meta property="og:url" content="https://www.proshares.com/error?aspxerrorpath=/api/distributionsummary" />
-            <meta property="og:title" content="Error" />
-            <meta property="og:description" />
-            <meta property="og:image" content="https://www.proshares.com/globalassets/proshares/ps-logo_new.png" />
-            <meta property="og:type" content="GeneralError" />
-            <meta itemprop="name" content="Error" />
-            <meta itemprop="description" />
-            <title>Error</title>
-            <link rel="canonical" href="https://www.proshares.com/error?aspxerrorpath=/api/distributionsummary" />
-    <!-- Favicon -->
-        <link rel="shortcut icon" href="/contentassets/53d45dcd6816447eb9b1802a7690ca57/proshares-fav-icon.png" type="image/x-icon" />
-
-
-
-    <!-- <link rel="shortcut icon" href="/Static/favicon.ico" type="image/x-icon" />  -->
-    
-    
-
-    <!-- CSS here -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script type='text/javascript'>
-        var zaius = window['zaius'] || (window['zaius'] = []); zaius.methods = ["initialize", "onload", "customer", "entity", "event", "subscribe", "unsubscribe", "consent", "identify", "anonymize", "dispatch"]; zaius.factory = function (e) { return function () { var t = Array.prot
+URL: https://www.proshares.com/api/distributionsummary/?fund=NOBL&year=2026
+STATUS: 200 841 bytes application/json; charset=utf-8
+[
+  {
+    "CashDividendPerShare": 0.303711,
+    "Dividend": ".303711",
+    "EffectiveDate": "2026-06-23T00:00:00",
+    "ExDate": "2026-06-24T00:00:00",
+    "LongTermCapGains": null,
+    "OtherPerShare": null,
+    "PayableDate": "2026-06-30T00:00:00",
+    "RecordDate": "2026-06-24T00:00:00",
+    "ReturnOfCapital": null,
+    "ShortTermCapGains": null,
+    "SpecialPerShare": null,
+    "Symbol": "NOBL"
+  },
+  {
+    "CashDividendPerShare": 0.256121,
+    "Dividend": ".256121",
+    "EffectiveDate": "2026-03-24T00:00:00",
+    "ExDate": "2026-03-25T00:00:00",
+    "LongTermCapGains": null,
+    "OtherPerShare": null,
+    "PayableDate": "2026-03-31T00:00:00",
+    "RecordDate": "2026-03-25T00:00:00",
+    "ReturnOfCapital": null,
+    "ShortTermCapGains": null,
+    "SpecialPerShare": null,
+    "Symbol": "NOBL"
+  }
+]

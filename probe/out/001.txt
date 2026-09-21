@@ -1,48 +1,78 @@
-URL: https://www.proshares.com/api/distributionsummary/?fund=NOBL&year=
-STATUS: 500 187930 bytes text/html; charset=utf-8
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript">
-_iaq = [ ['client', 'fc24f936bf5a4115936905b661d32dc4'], ['track', 'consume'] ]; !function(d,s){var ia=d.createElement(s);ia.async=1,s=d.getElementsByTagName(s)[0],ia.src='//s.USEA01.idio.episerver.net/ia.js',s.parentNode.insertBefore(ia,s)}(document,'script');
-</script>
-
-
-            <meta name="title" content="Error" />
-            <meta name="description" />
-            <meta name="keywords" />
-            <meta property="og:url" content="https://www.proshares.com/error?aspxerrorpath=/api/distributionsummary" />
-            <meta property="og:title" content="Error" />
-            <meta property="og:description" />
-            <meta property="og:image" content="https://www.proshares.com/globalassets/proshares/ps-logo_new.png" />
-            <meta property="og:type" content="GeneralError" />
-            <meta itemprop="name" content="Error" />
-            <meta itemprop="description" />
-            <title>Error</title>
-            <link rel="canonical" href="https://www.proshares.com/error?aspxerrorpath=/api/distributionsummary" />
-    <!-- Favicon -->
-        <link rel="shortcut icon" href="/contentassets/53d45dcd6816447eb9b1802a7690ca57/proshares-fav-icon.png" type="image/x-icon" />
-
-
-
-    <!-- <link rel="shortcut icon" href="/Static/favicon.ico" type="image/x-icon" />  -->
-    
-    
-
-    <!-- CSS here -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script type='text/javascript'>
-        var zaius = window['zaius'] || (window['zaius'] = []); zaius.methods = ["initialize", "onload", "customer", "entity", "event", "subscribe", "unsubscribe", "consent", "identify", "anonymize", "dispatch"]; zaius.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); zaius.push(t); return zaius } }; (function () { for (var i = 0; i < zaius.methods.length; i++) { var method = zaius.methods[i]; zaius[method] = zaius.factory(method) } var e = document.createElement("script"); e.type = "text/javascript"; e.async = true; e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "d1igp3oop3iho5.cloudfront.net/v2/tkBR6uWRFV7L-S-7GJlOzw/zaius-min.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t) })();
-        // Edits to this script should only be made below this line.
-        zaius.event('pageview');
-    </script>
-
-    <link rel="stylesheet" href="/areas/proshares/assets/style.css?17092026-091142">
-    <link rel="stylesheet" href="/areas/proshares/assets/content.css?17092026-091142">
-    <link rel="stylesheet" href="/areas/proshares/assets/chart.css?17092026-091142">
-    <link rel="stylesheet" href="/areas/proshares/assets/constituents.css?17092026
+URL: https://www.proshares.com/our-etfs/find-proshares-etfs
+STATUS: 200 1411340 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/our-etfs/find-proshares-etfs' -o /tmp/f.html; echo "=== section ids:"; grep -oE '(id|data-target)="[#a-zA-Z0-9-]{2,40}"' /tmp/f.html | sort -u | head -70; echo "=== around Payable Date:"; grep -oE '.{0,200}Payable Date.{0,700}' /tmp/f.html | head -4; echo "=== around 'Ex Date':"; grep -oE '.{0,400}Ex Date.{0,500}' /tmp/f.html | head -3
+=== section ids:
+data-target="#Alternative"
+data-target="#AutocallableIncome"
+data-target="#Crypto"
+data-target="#Crypto-Linked"
+data-target="#DividendGrowers"
+data-target="#DynamicBuffer"
+data-target="#Ex-Sector"
+data-target="#Factor"
+data-target="#HighIncome"
+data-target="#MoneyMarket"
+data-target="#RisingRates"
+data-target="#StockBuybacks"
+data-target="#Thematic"
+data-target="#Volatility"
+data-target="#all-etf"
+data-target="#geared-etf"
+data-target="#geared-etf-mobile"
+data-target="#geared-etf-tablet"
+data-target="#insight-series"
+data-target="#select-dropdown-modal"
+data-target="#site-header-mobile-menu"
+data-target="#site-header-search"
+data-target="#strategy-topic"
+data-target="#view-etf"
+data-target="#view-etf-mobile"
+data-target="#view-etf-tablet"
+id="Alternative"
+id="Alternative-tab"
+id="AutocallableIncome"
+id="AutocallableIncome-tab"
+id="Crypto-Linked"
+id="Crypto-Linked-tab"
+id="DividendGrowers"
+id="DividendGrowers-tab"
+id="DynamicBuffer"
+id="DynamicBuffer-tab"
+id="Ex-Sector"
+id="Ex-Sector-tab"
+id="Factor"
+id="Factor-tab"
+id="HighIncome"
+id="HighIncome-tab"
+id="MoneyMarket"
+id="MoneyMarket-tab"
+id="RisingRates"
+id="RisingRates-tab"
+id="StockBuybacks"
+id="StockBuybacks-tab"
+id="Thematic"
+id="Thematic-tab"
+id="Volatility"
+id="Volatility-tab"
+id="about"
+id="all-etf"
+id="all-etf-tab"
+id="aod-distributions"
+id="aod-literature"
+id="aod-nMonth"
+id="aod-nQuarter"
+id="aod-nav"
+id="aod-overview"
+id="aod-pMonth"
+id="aod-pQuarter"
+id="distributions"
+id="distributionsBody"
+id="div-spinner"
+id="divAlternativeCount"
+id="divAutocallableIncomeCount"
+id="divCrypto-LinkedCount"
+id="divDividendGrowersCount"
+=== around Payable Date:
+                                    <th>Payable Date</th>
+=== around 'Ex Date':
+                                    <th>Ex Date</th>
