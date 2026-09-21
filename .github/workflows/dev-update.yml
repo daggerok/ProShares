@@ -1,0 +1,58 @@
+# TEMPORARY development helper: dispatches the real updater from a feature
+# branch (workflow_dispatch only reaches the default branch), captures its log
+# in the repo and commits generated api/proshares/** data. Deleted before the
+# final delivery; .github/workflows/update-data.yml is the shipped workflow.
+name: Dev data refresh
+
+on:
+  push:
+    paths:
+      - 'dev-run/request.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dev-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Run updater
+        run: |
+          set -a
+          while IFS= read -r line; do
+            case "$line" in ''|'#'*) continue;; esac
+            export "$line"
+          done < dev-run/request.txt
+          set +a
+          mkdir -p dev-run
+          set +e
+          bun ./scripts/update-data.ts > dev-run/last-run.log 2>&1
+          status=$?
+          set -e
+          tail -n 400 dev-run/last-run.log
+          echo "updater exit status: $status" | tee -a dev-run/last-run.log
+          exit $status
+
+      - name: Commit generated data and log
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add api dev-run/last-run.log
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "data: dev refresh of api/proshares [skip ci]"
+          git push
