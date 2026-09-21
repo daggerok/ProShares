@@ -1,14 +1,6 @@
-URL: https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq
-STATUS: 200 336615 bytes text/html; charset=utf-8
-CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq -o /tmp/t.html; echo "--- snapshot + frequency + return table headers:"; grep -n -oE '(Expense Ratio|CUSIP|Inception Date|Net Assets|Distribution Frequency|12-Month Yield|NAV Calculation Time|Options Available)' /tmp/t.html | sort -t: -k2 | uniq -c -f1 | head -20; echo "--- monthly return row sample:"; grep -n -oE 'Total Returns as of [0-9/]+' /tmp/t.html | head -4
---- snapshot + frequency + return table headers:
-      2 2140:CUSIP
-      4 2143:Expense Ratio
-      4 2016:Inception Date
-      2 2144:NAV Calculation Time
-      2 2142:Net Assets
-      2 2146:Options Available
---- monthly return row sample:
-1982:Total Returns as of 8/31/2026
-1988:Total Returns as of 8/31/2026
-1993:Total Returns as of 6/30/2026
+URL: https://www.proshares.com/resources/tools/premium-discount/?fund=nobl
+STATUS: 200 239155 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" 'https://www.proshares.com/resources/tools/premium-discount/?fund=nobl' -o /tmp/p.html; echo "--- size: $(wc -c < /tmp/p.html)"; grep -oE '"/api/[^"]+"|/api/[a-zA-Z0-9/?&=_-]+' /tmp/p.html | sort -u | head -20; echo "--- premium/discount mentions:"; grep -n -i -oE '.{0,120}(premium|discount).{0,160}' /tmp/p.html | head -12
+--- size: 191
+--- premium/discount mentions:
+2:<body><h1>Object Moved</h1>This document may be found <a HREF="https://www.proshares.com/resources/tools/premium-discount?fund=nobl">here</a></body>
