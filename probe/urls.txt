@@ -1,6 +1,4 @@
-https://accounts.profunds.com/etfdata/ByFund/NOBL-psdlyhld.csv | bytes=2500
-https://accounts.profunds.com/etfdata/ByFund/ | cmd=grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | grep -oE '^[A-Z0-9]+-[a-z_]+\.(csv|xls|xlsx|txt|json)$' | sed -E 's/^[A-Z0-9]+-//' | sort | uniq -c | sort -rn
-https://accounts.profunds.com/etfdata/ByFund/ | cmd=grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | grep -E '^[A-Z0-9]+-' | sed -E 's/-(historical_nav|psdlyhld).*//' | sort -u | tr '\n' ' ' 
-https://accounts.profunds.com/etfdata/ | bytes=4000
-https://accounts.profunds.com/etfdata/ByFund/NOBL-distributions.csv | bytes=600
-https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq | near=Download Holdings | bytes=0
+https://accounts.profunds.com/etfdata/etf_performance.csv | bytes=2500
+https://accounts.profunds.com/etfdata/ | cmd=grep -oE '<a href="[^"]+"' /tmp/body | sed 's/.*href="//;s/"$//' | tr '\n' ' '
+https://www.proshares.com/our-etfs/strategic/ighg | grep=SEC|30-Day|30 Day
+https://www.proshares.com/our-etfs/strategic/nobl | near=distributionTab | bytes=0
