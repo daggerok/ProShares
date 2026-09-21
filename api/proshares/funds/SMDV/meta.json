@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SMDV&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SMDV-psdlyhld.csv, as of Sep 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SMDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T13:40:33Z",
+  "catalogReadAt": "2026-09-21T14:14:57Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -31,13 +31,14 @@
   "display": "0.40%",
   "value": 0.4,
   "gross": {
-   "display": "—",
-   "value": null
+   "display": "0.40%",
+   "value": 0.4
   },
   "net": {
    "display": "0.40%",
    "value": 0.4
   },
+  "footnote": null,
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
@@ -66,6 +67,10 @@
   "dividendYield": 2.32,
   "dividendYieldText": "2.32%",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 2.32,
+  "effectiveYieldText": "2.32%",
+  "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+  "effectiveYieldComputed": false,
   "distributionYield": null,
   "distributionYieldText": null,
   "yield12M": 2.32,
@@ -567,8 +572,8 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings file (psdlyhld.csv)",
-  "weightNote": "Weight reproduces the fund page Exposure Weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. Cash and payable lines carry no weight and stay blank.",
+  "source": "official ProShares daily holdings download (ByFund/SMDV-psdlyhld.csv, as of Sep 18 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
   ]

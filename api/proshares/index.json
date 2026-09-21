@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-21T14:12:15Z",
+ "generatedAt": "2026-09-21T14:25:37Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-09-21T14:11:41Z"
+  "catalogReadAt": "2026-09-21T14:14:57Z"
  },
  "counts": {
   "funds": 173,
@@ -38,7 +38,7 @@
    "isin": null,
    "ter": "0.72%",
    "terValue": 0.72,
-   "terGross": "—",
+   "terGross": "0.72%",
    "terGrossValue": 0.72,
    "terNet": "0.72%",
    "terNetValue": 0.72,
@@ -56,6 +56,7 @@
    "premiumDiscountValue": -0.0817,
    "distributions": {
     "frequency": "Monthly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -136,6 +137,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -157,7 +160,7 @@
    "isin": null,
    "ter": "0.72%",
    "terValue": 0.72,
-   "terGross": "—",
+   "terGross": "0.72%",
    "terGrossValue": 0.72,
    "terNet": "0.72%",
    "terNetValue": 0.72,
@@ -175,6 +178,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Monthly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -255,6 +259,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -276,7 +282,7 @@
    "isin": null,
    "ter": "0.72%",
    "terValue": 0.72,
-   "terGross": "—",
+   "terGross": "0.72%",
    "terGrossValue": 0.72,
    "terNet": "0.72%",
    "terNetValue": 0.72,
@@ -294,6 +300,7 @@
    "premiumDiscountValue": 0.2086,
    "distributions": {
     "frequency": "Monthly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -374,6 +381,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -535,7 +544,7 @@
    "isin": null,
    "ter": "0.45%",
    "terValue": 0.45,
-   "terGross": "—",
+   "terGross": "0.45%",
    "terGrossValue": 0.45,
    "terNet": "0.45%",
    "terNetValue": 0.45,
@@ -553,6 +562,7 @@
    "premiumDiscountValue": -0.0743,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0883"
    },
@@ -651,6 +661,8 @@
     "siAnn": 6.21,
     "dividendYield": 0.5,
     "dividendYieldText": "0.50%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -690,6 +702,7 @@
    "premiumDiscountValue": 0.0248,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0383"
    },
@@ -788,6 +801,8 @@
     "siAnn": 24.11,
     "dividendYield": 50.09,
     "dividendYieldText": "50.09%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -827,6 +842,7 @@
    "premiumDiscountValue": 0.0221,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0477"
    },
@@ -925,6 +941,8 @@
     "siAnn": 29.16,
     "dividendYield": 33.37,
     "dividendYieldText": "33.37%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -964,6 +982,7 @@
    "premiumDiscountValue": -0.0541,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Mar 25 2026",
     "dividend": "0.0071"
    },
@@ -1060,8 +1079,10 @@
     "cagr5y": 2.64,
     "cagr10y": 10.06,
     "siAnn": 18.42,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.0257,
+    "dividendYieldText": "0.03%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1101,6 +1122,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1366"
    },
@@ -1197,8 +1219,10 @@
     "cagr5y": -17.55,
     "cagr10y": -26.27,
     "siAnn": -33.19,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.6345,
+    "dividendYieldText": "4.63%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1220,7 +1244,7 @@
    "isin": null,
    "ter": "1.01%",
    "terValue": 1.01,
-   "terGross": "—",
+   "terGross": "1.01%",
    "terGrossValue": 1.01,
    "terNet": "1.01%",
    "terNetValue": 1.01,
@@ -1238,6 +1262,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.3762"
    },
@@ -1334,8 +1359,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -39.28,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 24.8342,
+    "dividendYieldText": "24.83%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1357,7 +1384,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -1375,6 +1402,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0108"
    },
@@ -1473,6 +1501,8 @@
     "siAnn": -0.01,
     "dividendYield": 38.16,
     "dividendYieldText": "38.16%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1494,7 +1524,7 @@
    "isin": null,
    "ter": "0.98%",
    "terValue": 0.98,
-   "terGross": "—",
+   "terGross": "0.98%",
    "terGrossValue": 0.98,
    "terNet": "0.98%",
    "terNetValue": 0.98,
@@ -1512,6 +1542,7 @@
    "premiumDiscountValue": -0.0691,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0148"
    },
@@ -1608,8 +1639,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -25.08,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.2263,
+    "dividendYieldText": "1.23%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1631,7 +1664,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -1649,6 +1682,7 @@
    "premiumDiscountValue": -0.7437,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -1747,6 +1781,8 @@
     "siAnn": -57.83,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1768,7 +1804,7 @@
    "isin": null,
    "ter": "0.39%",
    "terValue": 0.39,
-   "terGross": "—",
+   "terGross": "0.39%",
    "terGrossValue": 0.39,
    "terNet": "0.39%",
    "terNetValue": 0.39,
@@ -1786,6 +1822,7 @@
    "premiumDiscountValue": -0.024,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0493"
    },
@@ -1882,8 +1919,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.4729,
+    "dividendYieldText": "0.47%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -1923,6 +1962,7 @@
    "premiumDiscountValue": 0.1564,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3231"
    },
@@ -2019,8 +2059,10 @@
     "cagr5y": -26.35,
     "cagr10y": -34.35,
     "siAnn": -29.27,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 6.7373,
+    "dividendYieldText": "6.74%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2042,7 +2084,7 @@
    "isin": null,
    "ter": "0.65%",
    "terValue": 0.65,
-   "terGross": "—",
+   "terGross": "0.65%",
    "terGrossValue": 0.65,
    "terNet": "0.65%",
    "terNetValue": 0.65,
@@ -2060,6 +2102,7 @@
    "premiumDiscountValue": -0.0172,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0928"
    },
@@ -2158,6 +2201,8 @@
     "siAnn": 4.93,
     "dividendYield": 0.53,
     "dividendYieldText": "0.53%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2197,6 +2242,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0608"
    },
@@ -2293,8 +2339,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.5467,
+    "dividendYieldText": "2.55%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2334,6 +2382,7 @@
    "premiumDiscountValue": 0.3623,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1811"
    },
@@ -2430,8 +2479,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -87.8,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.2815,
+    "dividendYieldText": "3.28%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2453,7 +2504,7 @@
    "isin": null,
    "ter": "0.45%",
    "terValue": 0.45,
-   "terGross": "—",
+   "terGross": "0.45%",
    "terGrossValue": 0.45,
    "terNet": "0.45%",
    "terNetValue": 0.45,
@@ -2471,6 +2522,7 @@
    "premiumDiscountValue": -0.0571,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2276"
    },
@@ -2569,6 +2621,8 @@
     "siAnn": 14.92,
     "dividendYield": 1.02,
     "dividendYieldText": "1.02%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2590,7 +2644,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -2608,6 +2662,7 @@
    "premiumDiscountValue": -0.4986,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Dec 24 2025",
     "dividend": "0.6568"
    },
@@ -2706,6 +2761,8 @@
     "siAnn": -4.08,
     "dividendYield": 2.33,
     "dividendYieldText": "2.33%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2727,7 +2784,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -2745,6 +2802,7 @@
    "premiumDiscountValue": -0.3848,
    "distributions": {
     "frequency": "Quarterly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -2843,6 +2901,8 @@
     "siAnn": 5.46,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -2882,6 +2942,7 @@
    "premiumDiscountValue": 0.0316,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1715"
    },
@@ -2978,8 +3039,10 @@
     "cagr5y": 12.99,
     "cagr10y": 19.63,
     "siAnn": 14.52,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.0832,
+    "dividendYieldText": "1.08%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3019,6 +3082,7 @@
    "premiumDiscountValue": -0.1704,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1965"
    },
@@ -3115,8 +3179,10 @@
     "cagr5y": 39.6,
     "cagr10y": 6.63,
     "siAnn": 0.85,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.1158,
+    "dividendYieldText": "1.12%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3156,6 +3222,7 @@
    "premiumDiscountValue": 0.0453,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1633"
    },
@@ -3252,8 +3319,10 @@
     "cagr5y": -5.54,
     "cagr10y": -11.12,
     "siAnn": -10.41,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.9584,
+    "dividendYieldText": "2.96%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3293,6 +3362,7 @@
    "premiumDiscountValue": 0.1389,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1238"
    },
@@ -3389,8 +3459,10 @@
     "cagr5y": -42.73,
     "cagr10y": -33.19,
     "siAnn": -30.55,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.44,
+    "dividendYieldText": "3.44%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3430,6 +3502,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1448"
    },
@@ -3526,8 +3599,10 @@
     "cagr5y": -15.25,
     "cagr10y": -24.62,
     "siAnn": -23.08,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.2678,
+    "dividendYieldText": "3.27%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3567,6 +3642,7 @@
    "premiumDiscountValue": -0.0182,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.4097"
    },
@@ -3663,8 +3739,10 @@
     "cagr5y": 4.5,
     "cagr10y": 8.1,
     "siAnn": 4.23,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.4948,
+    "dividendYieldText": "1.49%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3704,6 +3782,7 @@
    "premiumDiscountValue": -0.0626,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0266"
    },
@@ -3802,6 +3881,8 @@
     "siAnn": 7.88,
     "dividendYield": 55.62,
     "dividendYieldText": "55.62%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3841,6 +3922,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3070"
    },
@@ -3937,8 +4019,10 @@
     "cagr5y": -16.94,
     "cagr10y": -22.41,
     "siAnn": -25.59,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 11.4119,
+    "dividendYieldText": "11.41%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -3960,7 +4044,7 @@
    "isin": null,
    "ter": "0.50%",
    "terValue": 0.5,
-   "terGross": "—",
+   "terGross": "0.50%",
    "terGrossValue": 0.5,
    "terNet": "0.50%",
    "terNetValue": 0.5,
@@ -3978,6 +4062,7 @@
    "premiumDiscountValue": 0.0229,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3721"
    },
@@ -4076,6 +4161,8 @@
     "siAnn": 3.32,
     "dividendYield": 2.51,
     "dividendYieldText": "2.51%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4115,6 +4202,7 @@
    "premiumDiscountValue": 0.2045,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2925"
    },
@@ -4211,8 +4299,10 @@
     "cagr5y": 8.99,
     "cagr10y": 10.9,
     "siAnn": 8.6,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.5947,
+    "dividendYieldText": "1.59%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4252,6 +4342,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0779"
    },
@@ -4348,8 +4439,10 @@
     "cagr5y": -16.52,
     "cagr10y": -19.73,
     "siAnn": -19.15,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.3303,
+    "dividendYieldText": "4.33%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4389,6 +4482,7 @@
    "premiumDiscountValue": -0.1306,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2624"
    },
@@ -4485,8 +4579,10 @@
     "cagr5y": -5.99,
     "cagr10y": -8.38,
     "siAnn": -7.54,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.5699,
+    "dividendYieldText": "4.57%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4508,7 +4604,7 @@
    "isin": null,
    "ter": "0.60%",
    "terValue": 0.6,
-   "terGross": "—",
+   "terGross": "0.60%",
    "terGrossValue": 0.6,
    "terNet": "0.60%",
    "terNetValue": 0.6,
@@ -4526,6 +4622,7 @@
    "premiumDiscountValue": -0.4917,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2105"
    },
@@ -4624,6 +4721,8 @@
     "siAnn": 4.19,
     "dividendYield": 1.88,
     "dividendYieldText": "1.88%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4645,7 +4744,7 @@
    "isin": null,
    "ter": "0.65%",
    "terValue": 0.65,
-   "terGross": "—",
+   "terGross": "0.65%",
    "terGrossValue": 0.65,
    "terNet": "0.65%",
    "terNetValue": 0.65,
@@ -4663,6 +4762,7 @@
    "premiumDiscountValue": -0.04,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1648"
    },
@@ -4759,8 +4859,10 @@
     "cagr5y": -1.56,
     "cagr10y": null,
     "siAnn": -10.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6344,
+    "dividendYieldText": "2.63%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4800,6 +4902,7 @@
    "premiumDiscountValue": -0.1084,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1833"
    },
@@ -4896,8 +4999,10 @@
     "cagr5y": -18.89,
     "cagr10y": -22.65,
     "siAnn": -25.56,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.9747,
+    "dividendYieldText": "3.97%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -4937,6 +5042,7 @@
    "premiumDiscountValue": -0.4329,
    "distributions": {
     "frequency": "Quarterly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -5017,6 +5123,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5038,7 +5146,7 @@
    "isin": null,
    "ter": "0.35%",
    "terValue": 0.35,
-   "terGross": "—",
+   "terGross": "0.35%",
    "terGrossValue": 0.35,
    "terNet": "0.35%",
    "terNetValue": 0.35,
@@ -5056,6 +5164,7 @@
    "premiumDiscountValue": -0.0463,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1981"
    },
@@ -5154,6 +5263,8 @@
     "siAnn": 11.38,
     "dividendYield": 1.01,
     "dividendYieldText": "1.01%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5175,7 +5286,7 @@
    "isin": null,
    "ter": "0.99%",
    "terValue": 0.99,
-   "terGross": "—",
+   "terGross": "0.99%",
    "terGrossValue": 0.99,
    "terNet": "0.99%",
    "terNetValue": 0.99,
@@ -5193,6 +5304,7 @@
    "premiumDiscountValue": 0.0779,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.8568"
    },
@@ -5289,8 +5401,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -62.17,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 40.0698,
+    "dividendYieldText": "40.07%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5330,6 +5444,7 @@
    "premiumDiscountValue": -0.0526,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0087"
    },
@@ -5426,8 +5541,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -66.13,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.5498,
+    "dividendYieldText": "0.55%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5449,7 +5566,7 @@
    "isin": null,
    "ter": "0.55%",
    "terValue": 0.55,
-   "terGross": "—",
+   "terGross": "0.55%",
    "terGrossValue": 0.55,
    "terNet": "0.55%",
    "terNetValue": 0.55,
@@ -5467,6 +5584,7 @@
    "premiumDiscountValue": 0.0381,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.7232"
    },
@@ -5565,6 +5683,8 @@
     "siAnn": 5.11,
     "dividendYield": 2,
     "dividendYieldText": "2.00%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5604,6 +5724,7 @@
    "premiumDiscountValue": -0.0634,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1664"
    },
@@ -5700,8 +5821,10 @@
     "cagr5y": -5.88,
     "cagr10y": -9.35,
     "siAnn": -9.71,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.2185,
+    "dividendYieldText": "4.22%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5723,7 +5846,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -5741,6 +5864,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -5839,6 +5963,8 @@
     "siAnn": 1.02,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5878,6 +6004,7 @@
    "premiumDiscountValue": -0.1229,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1876"
    },
@@ -5974,8 +6101,10 @@
     "cagr5y": -18.93,
     "cagr10y": -19.83,
     "siAnn": -18.86,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.6114,
+    "dividendYieldText": "4.61%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -5995,12 +6124,12 @@
    "dataFile": "./funds/EZJ/meta.json",
    "cusip": "74347X708",
    "isin": null,
-   "ter": "1.17%*",
-   "terValue": null,
+   "ter": "1.17%",
+   "terValue": 1.17,
    "terGross": "2.91%",
    "terGrossValue": 2.91,
-   "terNet": "1.17%*",
-   "terNetValue": null,
+   "terNet": "1.17%",
+   "terNetValue": 1.17,
    "nav": "$68.72",
    "navValue": 68.72,
    "aum": "$11,682,664",
@@ -6015,6 +6144,7 @@
    "premiumDiscountValue": 0.0291,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3326"
    },
@@ -6111,8 +6241,10 @@
     "cagr5y": 8.82,
     "cagr10y": 9.98,
     "siAnn": 8,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.9359,
+    "dividendYieldText": "1.94%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6134,7 +6266,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -6152,6 +6284,7 @@
    "premiumDiscountValue": 0.066,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3360"
    },
@@ -6248,8 +6381,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 12.4,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.9555,
+    "dividendYieldText": "2.96%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6289,6 +6424,7 @@
    "premiumDiscountValue": 0.4157,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1119"
    },
@@ -6385,8 +6521,10 @@
     "cagr5y": -19.89,
     "cagr10y": -21.26,
     "siAnn": -27.85,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.0677,
+    "dividendYieldText": "2.07%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6408,7 +6546,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -6426,6 +6564,7 @@
    "premiumDiscountValue": 0.4014,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -6524,6 +6663,8 @@
     "siAnn": -22.45,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6563,6 +6704,7 @@
    "premiumDiscountValue": 0.1101,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2926"
    },
@@ -6661,6 +6803,8 @@
     "siAnn": 2.98,
     "dividendYield": 2.36,
     "dividendYieldText": "2.36%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6682,7 +6826,7 @@
    "isin": null,
    "ter": "0.50%",
    "terValue": 0.5,
-   "terGross": "—",
+   "terGross": "0.50%",
    "terGrossValue": 0.5,
    "terNet": "0.50%",
    "terNetValue": 0.5,
@@ -6700,6 +6844,7 @@
    "premiumDiscountValue": 0.1391,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.3607"
    },
@@ -6798,6 +6943,8 @@
     "siAnn": 4.27,
     "dividendYield": 6.66,
     "dividendYieldText": "6.66%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -6959,7 +7106,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -6977,6 +7124,7 @@
    "premiumDiscountValue": -0.5945,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2065"
    },
@@ -7075,6 +7223,8 @@
     "siAnn": 10.07,
     "dividendYield": 1.42,
     "dividendYieldText": "1.42%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7114,6 +7264,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Weekly",
+    "note": null,
     "exDate": "Sep 15 2026",
     "dividend": "0.0762"
    },
@@ -7212,6 +7363,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7233,7 +7386,7 @@
    "isin": null,
    "ter": "0.55%",
    "terValue": 0.55,
-   "terGross": "—",
+   "terGross": "0.55%",
    "terGrossValue": 0.55,
    "terNet": "0.55%",
    "terNetValue": 0.55,
@@ -7251,6 +7404,7 @@
    "premiumDiscountValue": -0.1444,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.2296"
    },
@@ -7347,8 +7501,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 18.86,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 5.682,
+    "dividendYieldText": "5.68%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7370,7 +7526,7 @@
    "isin": null,
    "ter": "0.56%",
    "terValue": 0.56,
-   "terGross": "—",
+   "terGross": "0.56%",
    "terGrossValue": 0.56,
    "terNet": "0.56%",
    "terNetValue": 0.56,
@@ -7388,6 +7544,7 @@
    "premiumDiscountValue": -0.0416,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.2320"
    },
@@ -7484,8 +7641,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 17.05,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 5.7857,
+    "dividendYieldText": "5.79%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7507,7 +7666,7 @@
    "isin": null,
    "ter": "0.55%",
    "terValue": 0.55,
-   "terGross": "—",
+   "terGross": "0.55%",
    "terGrossValue": 0.55,
    "terNet": "0.55%",
    "terNetValue": 0.55,
@@ -7525,6 +7684,7 @@
    "premiumDiscountValue": 0.1593,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.2168"
    },
@@ -7621,8 +7781,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 19.44,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 5.9212,
+    "dividendYieldText": "5.92%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7644,7 +7806,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -7662,6 +7824,7 @@
    "premiumDiscountValue": 0.5923,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -7760,6 +7923,8 @@
     "siAnn": -11.55,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7781,7 +7946,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -7799,6 +7964,7 @@
    "premiumDiscountValue": 0.3,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0256"
    },
@@ -7895,8 +8061,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.3186,
+    "dividendYieldText": "1.32%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -7936,6 +8104,7 @@
    "premiumDiscountValue": -0.0839,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0413"
    },
@@ -8032,8 +8201,10 @@
     "cagr5y": 14.5,
     "cagr10y": 7.88,
     "siAnn": 7.13,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.6922,
+    "dividendYieldText": "0.69%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8055,7 +8226,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -8073,6 +8244,7 @@
    "premiumDiscountValue": -0.0765,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0164"
    },
@@ -8171,6 +8343,8 @@
     "siAnn": 10.87,
     "dividendYield": 0.14,
     "dividendYieldText": "0.14%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8210,6 +8384,7 @@
    "premiumDiscountValue": -0.1775,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0875"
    },
@@ -8308,6 +8483,8 @@
     "siAnn": 2.19,
     "dividendYield": 1.14,
     "dividendYieldText": "1.14%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8347,6 +8524,7 @@
    "premiumDiscountValue": 0.049,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1055"
    },
@@ -8443,8 +8621,10 @@
     "cagr5y": 6.12,
     "cagr10y": 12.64,
     "siAnn": 11.45,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.5166,
+    "dividendYieldText": "0.52%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8484,6 +8664,7 @@
    "premiumDiscountValue": -0.0628,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1394"
    },
@@ -8580,8 +8761,10 @@
     "cagr5y": -5.45,
     "cagr10y": -10.61,
     "siAnn": -11.61,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.5032,
+    "dividendYieldText": "3.50%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8621,6 +8804,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0224"
    },
@@ -8717,8 +8901,10 @@
     "cagr5y": -15.81,
     "cagr10y": -24.41,
     "siAnn": -25.93,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.3869,
+    "dividendYieldText": "1.39%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -8898,6 +9084,7 @@
    "premiumDiscountValue": -0.4596,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1460"
    },
@@ -8994,8 +9181,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.7897,
+    "dividendYieldText": "1.79%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9017,7 +9206,7 @@
    "isin": null,
    "ter": "0.69%",
    "terValue": 0.69,
-   "terGross": "—",
+   "terGross": "0.69%",
    "terGrossValue": 0.69,
    "terNet": "0.69%",
    "terNetValue": 0.69,
@@ -9035,6 +9224,7 @@
    "premiumDiscountValue": -0.1731,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "1.4454"
    },
@@ -9131,8 +9321,10 @@
     "cagr5y": 16.71,
     "cagr10y": null,
     "siAnn": 3.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 30.0284,
+    "dividendYieldText": "30.03%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9154,7 +9346,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -9172,6 +9364,7 @@
    "premiumDiscountValue": -0.302,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "—",
     "dividend": "—"
    },
@@ -9270,6 +9463,8 @@
     "siAnn": -2.41,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9291,7 +9486,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -9309,6 +9504,7 @@
    "premiumDiscountValue": -0.0358,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0474"
    },
@@ -9407,6 +9603,8 @@
     "siAnn": 4.95,
     "dividendYield": 0.29,
     "dividendYieldText": "0.29%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9428,7 +9626,7 @@
    "isin": null,
    "ter": "0.50%",
    "terValue": 0.5,
-   "terGross": "—",
+   "terGross": "0.50%",
    "terGrossValue": 0.5,
    "terNet": "0.50%",
    "terNetValue": 0.5,
@@ -9446,6 +9644,7 @@
    "premiumDiscountValue": 0.0206,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1677"
    },
@@ -9544,6 +9743,8 @@
     "siAnn": 3.96,
     "dividendYield": 0.67,
     "dividendYieldText": "0.67%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9563,12 +9764,12 @@
    "dataFile": "./funds/PEX/meta.json",
    "cusip": "74348A533",
    "isin": null,
-   "ter": "2.95%*",
-   "terValue": null,
+   "ter": "2.95%",
+   "terValue": 2.95,
    "terGross": "4.24%",
    "terGrossValue": 4.24,
-   "terNet": "2.95%*",
-   "terNetValue": null,
+   "terNet": "2.95%",
+   "terNetValue": 2.95,
    "nav": "$23.42",
    "navValue": 23.42,
    "aum": "$11,240,194",
@@ -9583,6 +9784,7 @@
    "premiumDiscountValue": -0.3416,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Mar 25 2026",
     "dividend": "0.0143"
    },
@@ -9681,6 +9883,8 @@
     "siAnn": 5.87,
     "dividendYield": 8.03,
     "dividendYieldText": "8.03%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9720,6 +9924,7 @@
    "premiumDiscountValue": -0.1541,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0682"
    },
@@ -9816,8 +10021,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.4008,
+    "dividendYieldText": "1.40%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9857,6 +10064,7 @@
    "premiumDiscountValue": 0.0389,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2286"
    },
@@ -9953,8 +10161,10 @@
     "cagr5y": -11.68,
     "cagr10y": -18.41,
     "siAnn": -16.56,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.5563,
+    "dividendYieldText": "3.56%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -9994,6 +10204,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1373"
    },
@@ -10090,8 +10301,10 @@
     "cagr5y": 11.07,
     "cagr10y": 3.11,
     "siAnn": -4.97,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.2272,
+    "dividendYieldText": "2.23%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10113,7 +10326,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -10131,6 +10344,7 @@
    "premiumDiscountValue": -0.1016,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0766"
    },
@@ -10227,8 +10441,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 18.86,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.6226,
+    "dividendYieldText": "0.62%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10268,6 +10484,7 @@
    "premiumDiscountValue": 0.1421,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1461"
    },
@@ -10364,8 +10581,10 @@
     "cagr5y": -28.16,
     "cagr10y": -37.77,
     "siAnn": -34.56,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.1544,
+    "dividendYieldText": "4.15%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10405,6 +10624,7 @@
    "premiumDiscountValue": -0.1207,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0607"
    },
@@ -10501,8 +10721,10 @@
     "cagr5y": 17.29,
     "cagr10y": 33.21,
     "siAnn": 25.26,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.2666,
+    "dividendYieldText": "0.27%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10542,6 +10764,7 @@
    "premiumDiscountValue": 0.0492,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2062"
    },
@@ -10638,8 +10861,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -39.54,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.0604,
+    "dividendYieldText": "4.06%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10661,7 +10886,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -10679,6 +10904,7 @@
    "premiumDiscountValue": -0.0581,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0152"
    },
@@ -10777,6 +11003,8 @@
     "siAnn": 11.49,
     "dividendYield": 0.03,
     "dividendYieldText": "0.03%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10816,6 +11044,7 @@
    "premiumDiscountValue": -0.1248,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1016"
    },
@@ -10912,8 +11141,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 46.49,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.634,
+    "dividendYieldText": "0.63%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -10953,6 +11184,7 @@
    "premiumDiscountValue": -0.0888,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1585"
    },
@@ -11049,8 +11281,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 34.66,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.1261,
+    "dividendYieldText": "1.13%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11072,7 +11306,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -11090,6 +11324,7 @@
    "premiumDiscountValue": 0.0428,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1361"
    },
@@ -11186,8 +11421,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 16.76,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.1643,
+    "dividendYieldText": "1.16%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11209,7 +11446,7 @@
    "isin": null,
    "ter": "0.40%",
    "terValue": 0.4,
-   "terGross": "—",
+   "terGross": "0.40%",
    "terGrossValue": 0.4,
    "terNet": "0.40%",
    "terNetValue": 0.4,
@@ -11227,6 +11464,7 @@
    "premiumDiscountValue": -0.0224,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.4647"
    },
@@ -11325,6 +11563,8 @@
     "siAnn": 9.88,
     "dividendYield": 2.19,
     "dividendYieldText": "2.19%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11364,6 +11604,7 @@
    "premiumDiscountValue": 0.0611,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1227"
    },
@@ -11460,8 +11701,10 @@
     "cagr5y": 1.1,
     "cagr10y": -5.75,
     "siAnn": -9.69,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.9976,
+    "dividendYieldText": "3.00%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11501,6 +11744,7 @@
    "premiumDiscountValue": 0.0901,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2008"
    },
@@ -11597,8 +11841,10 @@
     "cagr5y": -35.94,
     "cagr10y": -43.92,
     "siAnn": -36.54,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 7.2348,
+    "dividendYieldText": "7.23%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11638,6 +11884,7 @@
    "premiumDiscountValue": -0.0612,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2537"
    },
@@ -11734,8 +11981,10 @@
     "cagr5y": 5.77,
     "cagr10y": 4.51,
     "siAnn": 0.93,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.1059,
+    "dividendYieldText": "3.11%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11775,6 +12024,7 @@
    "premiumDiscountValue": -0.1271,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Mar 25 2026",
     "dividend": "0.0228"
    },
@@ -11871,8 +12121,10 @@
     "cagr5y": 20.65,
     "cagr10y": 38.39,
     "siAnn": 24.23,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.0609,
+    "dividendYieldText": "0.06%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -11912,6 +12164,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1395"
    },
@@ -12008,8 +12261,10 @@
     "cagr5y": -5.39,
     "cagr10y": -11.32,
     "siAnn": -12.01,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.9413,
+    "dividendYieldText": "3.94%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12049,6 +12304,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1449"
    },
@@ -12145,8 +12401,10 @@
     "cagr5y": -8.27,
     "cagr10y": -20.87,
     "siAnn": -23.08,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.835,
+    "dividendYieldText": "3.84%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12186,6 +12444,7 @@
    "premiumDiscountValue": -0.1881,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1768"
    },
@@ -12282,8 +12541,10 @@
     "cagr5y": 3.25,
     "cagr10y": 14.41,
     "siAnn": 15.16,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.2093,
+    "dividendYieldText": "1.21%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12323,6 +12584,7 @@
    "premiumDiscountValue": -0.091,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0338"
    },
@@ -12419,8 +12681,10 @@
     "cagr5y": 3.43,
     "cagr10y": 11.04,
     "siAnn": 9.25,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.4106,
+    "dividendYieldText": "0.41%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12460,6 +12724,7 @@
    "premiumDiscountValue": 0.0844,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2070"
    },
@@ -12556,8 +12821,10 @@
     "cagr5y": -5.26,
     "cagr10y": -11.4,
     "siAnn": -12.3,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.4931,
+    "dividendYieldText": "3.49%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12579,7 +12846,7 @@
    "isin": null,
    "ter": "0.97%",
    "terValue": 0.97,
-   "terGross": "—",
+   "terGross": "0.97%",
    "terGrossValue": 0.97,
    "terNet": "0.97%",
    "terNetValue": 0.97,
@@ -12597,6 +12864,7 @@
    "premiumDiscountValue": -0.0307,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.1628"
    },
@@ -12693,8 +12961,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -49.79,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 5.9987,
+    "dividendYieldText": "6.00%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12734,6 +13004,7 @@
    "premiumDiscountValue": -0.1241,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0945"
    },
@@ -12830,8 +13101,10 @@
     "cagr5y": -13.99,
     "cagr10y": -24.85,
     "siAnn": -25.83,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.3463,
+    "dividendYieldText": "2.35%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -12853,7 +13126,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -12871,6 +13144,7 @@
    "premiumDiscountValue": 0.1503,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -12969,6 +13243,8 @@
     "siAnn": -25.96,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13008,6 +13284,7 @@
    "premiumDiscountValue": 0.3268,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0995"
    },
@@ -13104,8 +13381,10 @@
     "cagr5y": -16.32,
     "cagr10y": -26.53,
     "siAnn": -27.97,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.3341,
+    "dividendYieldText": "4.33%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13145,6 +13424,7 @@
    "premiumDiscountValue": 0.0794,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2180"
    },
@@ -13241,8 +13521,10 @@
     "cagr5y": -25.34,
     "cagr10y": -37.95,
     "siAnn": -38.17,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.4638,
+    "dividendYieldText": "3.46%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13282,6 +13564,7 @@
    "premiumDiscountValue": -0.0759,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1714"
    },
@@ -13378,8 +13661,10 @@
     "cagr5y": -13.27,
     "cagr10y": -20.23,
     "siAnn": -20.98,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6026,
+    "dividendYieldText": "2.60%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13419,6 +13704,7 @@
    "premiumDiscountValue": 0.1451,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.6149"
    },
@@ -13515,8 +13801,10 @@
     "cagr5y": -20.08,
     "cagr10y": -27.29,
     "siAnn": -24.92,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.4597,
+    "dividendYieldText": "4.46%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13556,6 +13844,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2497"
    },
@@ -13652,8 +13941,10 @@
     "cagr5y": -6.96,
     "cagr10y": -12.05,
     "siAnn": -13.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.2843,
+    "dividendYieldText": "3.28%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13693,6 +13984,7 @@
    "premiumDiscountValue": -0.0326,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Sep 01 2026",
     "dividend": "0.0318"
    },
@@ -13789,8 +14081,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -37.21,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.2413,
+    "dividendYieldText": "1.24%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13830,6 +14124,7 @@
    "premiumDiscountValue": 0.0306,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3196"
    },
@@ -13926,8 +14221,10 @@
     "cagr5y": -8,
     "cagr10y": -12.65,
     "siAnn": -11.37,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.9134,
+    "dividendYieldText": "3.91%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -13967,6 +14264,7 @@
    "premiumDiscountValue": 0.0539,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1246"
    },
@@ -14063,8 +14361,10 @@
     "cagr5y": -17.8,
     "cagr10y": -27.03,
     "siAnn": -26.93,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6885,
+    "dividendYieldText": "2.69%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14104,6 +14404,7 @@
    "premiumDiscountValue": -0.0652,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1755"
    },
@@ -14200,8 +14501,10 @@
     "cagr5y": -0.09,
     "cagr10y": -3.37,
     "siAnn": -5.04,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.5782,
+    "dividendYieldText": "4.58%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14241,6 +14544,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2390"
    },
@@ -14337,8 +14641,10 @@
     "cagr5y": -18.35,
     "cagr10y": -26.87,
     "siAnn": -28.14,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.9476,
+    "dividendYieldText": "3.95%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14378,6 +14684,7 @@
    "premiumDiscountValue": 0.4762,
    "distributions": {
     "frequency": "Quarterly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -14458,6 +14765,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14497,6 +14806,7 @@
    "premiumDiscountValue": -0.0197,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0440"
    },
@@ -14593,8 +14903,10 @@
     "cagr5y": 2.05,
     "cagr10y": null,
     "siAnn": 5.44,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.3467,
+    "dividendYieldText": "0.35%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14616,7 +14928,7 @@
    "isin": null,
    "ter": "2.14%",
    "terValue": 2.14,
-   "terGross": "—",
+   "terGross": "2.14%",
    "terGrossValue": 2.14,
    "terNet": "2.14%",
    "terNetValue": 2.14,
@@ -14634,6 +14946,7 @@
    "premiumDiscountValue": -0.0508,
    "distributions": {
     "frequency": "Monthly",
+    "note": null,
     "exDate": "Oct 01 2025",
     "dividend": "4.0388"
    },
@@ -14730,8 +15043,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -79.18,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 123.0101,
+    "dividendYieldText": "123.01%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14771,6 +15086,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0715"
    },
@@ -14867,8 +15183,10 @@
     "cagr5y": -28.67,
     "cagr10y": -39.21,
     "siAnn": -42.22,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.2264,
+    "dividendYieldText": "3.23%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -14890,7 +15208,7 @@
    "isin": null,
    "ter": "0.40%",
    "terValue": 0.4,
-   "terGross": "—",
+   "terGross": "0.40%",
    "terGrossValue": 0.4,
    "terNet": "0.40%",
    "terNetValue": 0.4,
@@ -14908,6 +15226,7 @@
    "premiumDiscountValue": -0.0405,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.4134"
    },
@@ -15006,6 +15325,8 @@
     "siAnn": 8.09,
     "dividendYield": 2.32,
     "dividendYieldText": "2.32%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15045,6 +15366,7 @@
    "premiumDiscountValue": -0.1428,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1174"
    },
@@ -15141,8 +15463,10 @@
     "cagr5y": -16.36,
     "cagr10y": -24.85,
     "siAnn": -27.9,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.2353,
+    "dividendYieldText": "2.24%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15182,6 +15506,7 @@
    "premiumDiscountValue": -0.1153,
    "distributions": {
     "frequency": "Quarterly",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -15280,6 +15605,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15319,6 +15646,7 @@
    "premiumDiscountValue": -0.0731,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1859"
    },
@@ -15417,6 +15745,8 @@
     "siAnn": 15.38,
     "dividendYield": 0.92,
     "dividendYieldText": "0.92%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15456,6 +15786,7 @@
    "premiumDiscountValue": -0.0952,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1870"
    },
@@ -15554,6 +15885,8 @@
     "siAnn": 15.65,
     "dividendYield": 0.88,
     "dividendYieldText": "0.88%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15593,6 +15926,7 @@
    "premiumDiscountValue": 0.0275,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3463"
    },
@@ -15691,6 +16025,8 @@
     "siAnn": 11.68,
     "dividendYield": 1.33,
     "dividendYieldText": "1.33%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15730,6 +16066,7 @@
    "premiumDiscountValue": 0.2272,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3914"
    },
@@ -15826,8 +16163,10 @@
     "cagr5y": -32.56,
     "cagr10y": -41.44,
     "siAnn": -42.72,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.447,
+    "dividendYieldText": "4.45%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -15867,6 +16206,7 @@
    "premiumDiscountValue": -0.0478,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1905"
    },
@@ -15965,6 +16305,8 @@
     "siAnn": 15.8,
     "dividendYield": 0.91,
     "dividendYieldText": "0.91%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16004,6 +16346,7 @@
    "premiumDiscountValue": 0.1852,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.6376"
    },
@@ -16100,8 +16443,10 @@
     "cagr5y": -44.47,
     "cagr10y": -54.88,
     "siAnn": -52.84,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 6.7475,
+    "dividendYieldText": "6.75%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16141,6 +16486,7 @@
    "premiumDiscountValue": -0.0458,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2934"
    },
@@ -16237,8 +16583,10 @@
     "cagr5y": -3.88,
     "cagr10y": -15.85,
     "siAnn": -28.08,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6899,
+    "dividendYieldText": "2.69%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16278,6 +16626,7 @@
    "premiumDiscountValue": 0.0395,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2851"
    },
@@ -16374,8 +16723,10 @@
     "cagr5y": -31.26,
     "cagr10y": -42.7,
     "siAnn": -45.42,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.5057,
+    "dividendYieldText": "4.51%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16415,6 +16766,7 @@
    "premiumDiscountValue": 0.1724,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0829"
    },
@@ -16511,8 +16863,10 @@
     "cagr5y": -65.27,
     "cagr10y": -60.75,
     "siAnn": -48.74,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.8575,
+    "dividendYieldText": "2.86%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16552,6 +16906,7 @@
    "premiumDiscountValue": -0.1152,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1283"
    },
@@ -16648,8 +17003,10 @@
     "cagr5y": 16.94,
     "cagr10y": 23.58,
     "siAnn": 15.92,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.7386,
+    "dividendYieldText": "0.74%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16671,7 +17028,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -16689,6 +17046,7 @@
    "premiumDiscountValue": 0.3097,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1855"
    },
@@ -16787,6 +17145,8 @@
     "siAnn": 7.84,
     "dividendYield": 2.46,
     "dividendYieldText": "2.46%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16808,7 +17168,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -16826,6 +17186,7 @@
    "premiumDiscountValue": 0.0158,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -16924,6 +17285,8 @@
     "siAnn": 13.15,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -16963,6 +17326,7 @@
    "premiumDiscountValue": -0.1793,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1279"
    },
@@ -17059,8 +17423,10 @@
     "cagr5y": -3.6,
     "cagr10y": -16.07,
     "siAnn": -19.5,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.2934,
+    "dividendYieldText": "2.29%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17100,6 +17466,7 @@
    "premiumDiscountValue": 0.0776,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1520"
    },
@@ -17196,8 +17563,10 @@
     "cagr5y": 12.48,
     "cagr10y": 3.76,
     "siAnn": -2.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.3604,
+    "dividendYieldText": "2.36%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17237,6 +17606,7 @@
    "premiumDiscountValue": -0.1786,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2118"
    },
@@ -17333,8 +17703,10 @@
     "cagr5y": 20.51,
     "cagr10y": 4.04,
     "siAnn": -9.4,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.1617,
+    "dividendYieldText": "2.16%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17374,6 +17746,7 @@
    "premiumDiscountValue": -0.237,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1441"
    },
@@ -17470,8 +17843,10 @@
     "cagr5y": 6.97,
     "cagr10y": 2.33,
     "siAnn": -0.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.9522,
+    "dividendYieldText": "1.95%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17493,7 +17868,7 @@
    "isin": null,
    "ter": "0.45%",
    "terValue": 0.45,
-   "terGross": "—",
+   "terGross": "0.45%",
    "terGrossValue": 0.45,
    "terNet": "0.45%",
    "terNetValue": 0.45,
@@ -17511,6 +17886,7 @@
    "premiumDiscountValue": -0.1105,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2734"
    },
@@ -17609,6 +17985,8 @@
     "siAnn": 16.15,
     "dividendYield": 1.03,
     "dividendYieldText": "1.03%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17630,7 +18008,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -17648,6 +18026,7 @@
    "premiumDiscountValue": -0.1319,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3103"
    },
@@ -17746,6 +18125,8 @@
     "siAnn": 1.4,
     "dividendYield": 1.13,
     "dividendYieldText": "1.13%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17767,7 +18148,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -17785,6 +18166,7 @@
    "premiumDiscountValue": -0.2021,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0083"
    },
@@ -17883,6 +18265,8 @@
     "siAnn": 14.51,
     "dividendYield": 0.19,
     "dividendYieldText": "0.19%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -17904,7 +18288,7 @@
    "isin": null,
    "ter": "0.35%",
    "terValue": 0.35,
-   "terGross": "—",
+   "terGross": "0.35%",
    "terGrossValue": 0.35,
    "terNet": "0.35%",
    "terNetValue": 0.35,
@@ -17922,6 +18306,7 @@
    "premiumDiscountValue": -0.0981,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3343"
    },
@@ -18020,6 +18405,8 @@
     "siAnn": 6.75,
     "dividendYield": 2.46,
     "dividendYieldText": "2.46%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18039,12 +18426,12 @@
    "dataFile": "./funds/TOLZ/meta.json",
    "cusip": "74347B508",
    "isin": null,
-   "ter": "0.46%*",
-   "terValue": null,
-   "terGross": "—",
-   "terGrossValue": null,
-   "terNet": "0.46%*",
-   "terNetValue": null,
+   "ter": "0.46%",
+   "terValue": 0.46,
+   "terGross": "0.46%",
+   "terGrossValue": 0.46,
+   "terNet": "0.46%",
+   "terNetValue": 0.46,
    "nav": "$57.31",
    "navValue": 57.31,
    "aum": "$169,056,625",
@@ -18059,6 +18446,7 @@
    "premiumDiscountValue": -0.1047,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.7419"
    },
@@ -18157,6 +18545,8 @@
     "siAnn": 6.67,
     "dividendYield": 3.01,
     "dividendYieldText": "3.01%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18336,6 +18726,7 @@
    "premiumDiscountValue": -0.1116,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1039"
    },
@@ -18432,8 +18823,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.3201,
+    "dividendYieldText": "2.32%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18473,6 +18866,7 @@
    "premiumDiscountValue": -0.051,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.4001"
    },
@@ -18569,8 +18963,10 @@
     "cagr5y": 25.13,
     "cagr10y": 1.68,
     "siAnn": -9.04,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.0394,
+    "dividendYieldText": "2.04%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18610,6 +19006,7 @@
    "premiumDiscountValue": -0.043,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2381"
    },
@@ -18706,8 +19103,10 @@
     "cagr5y": -17.54,
     "cagr10y": -26.85,
     "siAnn": -27.96,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 4.0949,
+    "dividendYieldText": "4.09%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18747,6 +19146,7 @@
    "premiumDiscountValue": -0.1474,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1218"
    },
@@ -18843,8 +19243,10 @@
     "cagr5y": 1.21,
     "cagr10y": -5.14,
     "siAnn": -13.27,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.4363,
+    "dividendYieldText": "1.44%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -18884,6 +19286,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1182"
    },
@@ -18980,8 +19383,10 @@
     "cagr5y": -21.02,
     "cagr10y": -9.77,
     "siAnn": 0.41,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.2504,
+    "dividendYieldText": "3.25%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19021,6 +19426,7 @@
    "premiumDiscountValue": 0.095,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1544"
    },
@@ -19117,8 +19523,10 @@
     "cagr5y": -2.1,
     "cagr10y": 13.39,
     "siAnn": 13.19,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.4674,
+    "dividendYieldText": "1.47%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19140,7 +19548,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -19158,6 +19566,7 @@
    "premiumDiscountValue": -0.1506,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -19256,6 +19665,8 @@
     "siAnn": -24.29,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19295,6 +19706,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "—",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0527"
    },
@@ -19393,6 +19805,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19412,12 +19826,12 @@
    "dataFile": "./funds/UCYB/meta.json",
    "cusip": "74347G770",
    "isin": null,
-   "ter": "0.95%*",
-   "terValue": null,
+   "ter": "0.95%",
+   "terValue": 0.95,
    "terGross": "2.87%",
    "terGrossValue": 2.87,
-   "terNet": "0.95%*",
-   "terNetValue": null,
+   "terNet": "0.95%",
+   "terNetValue": 0.95,
    "nav": "$90.62",
    "navValue": 90.62,
    "aum": "$9,968,589",
@@ -19432,6 +19846,7 @@
    "premiumDiscountValue": -0.0441,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2503"
    },
@@ -19528,8 +19943,10 @@
     "cagr5y": 14.45,
     "cagr10y": null,
     "siAnn": 17.33,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.1048,
+    "dividendYieldText": "1.10%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19569,6 +19986,7 @@
    "premiumDiscountValue": -0.0605,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2092"
    },
@@ -19665,8 +20083,10 @@
     "cagr5y": 14.18,
     "cagr10y": 23.42,
     "siAnn": 26.33,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.2645,
+    "dividendYieldText": "1.26%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19706,6 +20126,7 @@
    "premiumDiscountValue": 0.11,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1185"
    },
@@ -19802,8 +20223,10 @@
     "cagr5y": -2.8,
     "cagr10y": 7.77,
     "siAnn": 11.24,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6054,
+    "dividendYieldText": "2.61%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19825,7 +20248,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -19843,6 +20266,7 @@
    "premiumDiscountValue": -0.4306,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -19941,6 +20365,8 @@
     "siAnn": 12.73,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -19980,6 +20406,7 @@
    "premiumDiscountValue": 0.1037,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2671"
    },
@@ -20076,8 +20503,10 @@
     "cagr5y": 2.56,
     "cagr10y": 5.65,
     "siAnn": 6.65,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.3843,
+    "dividendYieldText": "1.38%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20099,7 +20528,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -20117,6 +20546,7 @@
    "premiumDiscountValue": -0.16,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -20215,6 +20645,8 @@
     "siAnn": -3.71,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20254,6 +20686,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0380"
    },
@@ -20350,8 +20783,10 @@
     "cagr5y": 1.55,
     "cagr10y": 10.39,
     "siAnn": 19.01,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.4872,
+    "dividendYieldText": "0.49%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20391,6 +20826,7 @@
    "premiumDiscountValue": -0.589,
    "distributions": {
     "frequency": "—",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0622"
    },
@@ -20489,6 +20925,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20528,6 +20966,7 @@
    "premiumDiscountValue": -0.0782,
    "distributions": {
     "frequency": "—",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0621"
    },
@@ -20626,6 +21065,8 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20665,6 +21106,7 @@
    "premiumDiscountValue": -0.1831,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.2987"
    },
@@ -20761,8 +21203,10 @@
     "cagr5y": 18.79,
     "cagr10y": 29.05,
     "siAnn": 33.54,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.8103,
+    "dividendYieldText": "0.81%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20802,6 +21246,7 @@
    "premiumDiscountValue": 0.2063,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.5011"
    },
@@ -20898,8 +21343,10 @@
     "cagr5y": 9.15,
     "cagr10y": 12.01,
     "siAnn": 8.72,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.0676,
+    "dividendYieldText": "2.07%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -20939,6 +21386,7 @@
    "premiumDiscountValue": 0.0518,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0963"
    },
@@ -21035,8 +21483,10 @@
     "cagr5y": 5.9,
     "cagr10y": 9.32,
     "siAnn": 8.95,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.9971,
+    "dividendYieldText": "2.00%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21076,6 +21526,7 @@
    "premiumDiscountValue": -0.0634,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3434"
    },
@@ -21172,8 +21623,10 @@
     "cagr5y": -5.85,
     "cagr10y": 2.02,
     "siAnn": -3.17,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.1762,
+    "dividendYieldText": "2.18%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21213,6 +21666,7 @@
    "premiumDiscountValue": 0.2704,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1769"
    },
@@ -21309,8 +21763,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": 29.51,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 1.4716,
+    "dividendYieldText": "1.47%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21350,6 +21806,7 @@
    "premiumDiscountValue": 0.0139,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1699"
    },
@@ -21446,8 +21903,10 @@
     "cagr5y": -5.36,
     "cagr10y": 6.16,
     "siAnn": 13.66,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.9443,
+    "dividendYieldText": "0.94%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21487,6 +21946,7 @@
    "premiumDiscountValue": -0.2149,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1428"
    },
@@ -21583,8 +22043,10 @@
     "cagr5y": 55.28,
     "cagr10y": 53.66,
     "siAnn": 28.45,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.6459,
+    "dividendYieldText": "0.65%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21624,6 +22086,7 @@
    "premiumDiscountValue": 0.0761,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.3213"
    },
@@ -21720,8 +22183,10 @@
     "cagr5y": -7.95,
     "cagr10y": -2.56,
     "siAnn": 2.42,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 3.259,
+    "dividendYieldText": "3.26%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21743,7 +22208,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -21761,6 +22226,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -21859,6 +22325,8 @@
     "siAnn": -80.31,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -21898,6 +22366,7 @@
    "premiumDiscountValue": -0.0336,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0612"
    },
@@ -21994,8 +22463,10 @@
     "cagr5y": 2.7,
     "cagr10y": 11.1,
     "siAnn": 7.28,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.4113,
+    "dividendYieldText": "0.41%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22035,6 +22506,7 @@
    "premiumDiscountValue": -0.0954,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0261"
    },
@@ -22131,8 +22603,10 @@
     "cagr5y": 10.57,
     "cagr10y": 18.21,
     "siAnn": 13.04,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.1988,
+    "dividendYieldText": "0.20%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22154,7 +22628,7 @@
    "isin": null,
    "ter": "1.67%",
    "terValue": 1.67,
-   "terGross": "—",
+   "terGross": "1.67%",
    "terGrossValue": 1.67,
    "terNet": "1.67%",
    "terNetValue": 1.67,
@@ -22172,6 +22646,7 @@
    "premiumDiscountValue": -0.0635,
    "distributions": {
     "frequency": "Monthly",
+    "note": "This fund has not made any distributions.",
     "exDate": "Dec 24 2025",
     "dividend": "0.0019"
    },
@@ -22268,8 +22743,10 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": -89.23,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.1451,
+    "dividendYieldText": "0.15%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22309,6 +22786,7 @@
    "premiumDiscountValue": -0.2077,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1092"
    },
@@ -22405,8 +22883,10 @@
     "cagr5y": 11.87,
     "cagr10y": 17.11,
     "siAnn": 0.67,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.4772,
+    "dividendYieldText": "0.48%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22446,6 +22926,7 @@
    "premiumDiscountValue": 0.0709,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.0631"
    },
@@ -22542,8 +23023,10 @@
     "cagr5y": 6.08,
     "cagr10y": 11.68,
     "siAnn": 4.67,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 0.8952,
+    "dividendYieldText": "0.90%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22565,7 +23048,7 @@
    "isin": null,
    "ter": "0.58%",
    "terValue": 0.58,
-   "terGross": "—",
+   "terGross": "0.58%",
    "terGrossValue": 0.58,
    "terNet": "0.58%",
    "terNetValue": 0.58,
@@ -22583,6 +23066,7 @@
    "premiumDiscountValue": -0.0273,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Mar 25 2026",
     "dividend": "0.0092"
    },
@@ -22681,6 +23165,8 @@
     "siAnn": 14.03,
     "dividendYield": 0.13,
     "dividendYieldText": "0.13%",
+    "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22702,7 +23188,7 @@
    "isin": null,
    "ter": "0.85%",
    "terValue": 0.85,
-   "terGross": "—",
+   "terGross": "0.85%",
    "terGrossValue": 0.85,
    "terNet": "0.85%",
    "terNetValue": 0.85,
@@ -22720,6 +23206,7 @@
    "premiumDiscountValue": 0,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -22818,6 +23305,8 @@
     "siAnn": -18.31,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22839,7 +23328,7 @@
    "isin": null,
    "ter": "0.85%",
    "terValue": 0.85,
-   "terGross": "—",
+   "terGross": "0.85%",
    "terGrossValue": 0.85,
    "terNet": "0.85%",
    "terNetValue": 0.85,
@@ -22857,6 +23346,7 @@
    "premiumDiscountValue": 0.1758,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -22955,6 +23445,8 @@
     "siAnn": -48.58,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -22994,6 +23486,7 @@
    "premiumDiscountValue": 0.1017,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1318"
    },
@@ -23090,8 +23583,10 @@
     "cagr5y": -15.77,
     "cagr10y": -7.23,
     "siAnn": -5.09,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.6821,
+    "dividendYieldText": "2.68%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -23113,7 +23608,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -23131,6 +23626,7 @@
    "premiumDiscountValue": -0.2165,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -23229,6 +23725,8 @@
     "siAnn": -9.25,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -23250,7 +23748,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -23268,6 +23766,7 @@
    "premiumDiscountValue": -0.0751,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -23366,6 +23865,8 @@
     "siAnn": 6.27,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -23405,6 +23906,7 @@
    "premiumDiscountValue": -0.0442,
    "distributions": {
     "frequency": "Quarterly",
+    "note": null,
     "exDate": "Jun 24 2026",
     "dividend": "0.1246"
    },
@@ -23501,8 +24003,10 @@
     "cagr5y": -4.61,
     "cagr10y": -7.17,
     "siAnn": -8.11,
-    "dividendYield": null,
-    "dividendYieldText": "—",
+    "dividendYield": 2.2028,
+    "dividendYieldText": "2.20%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
@@ -23524,7 +24028,7 @@
    "isin": null,
    "ter": "0.95%",
    "terValue": 0.95,
-   "terGross": "—",
+   "terGross": "0.95%",
    "terGrossValue": 0.95,
    "terNet": "0.95%",
    "terNetValue": 0.95,
@@ -23542,6 +24046,7 @@
    "premiumDiscountValue": 0.7881,
    "distributions": {
     "frequency": "—",
+    "note": "This fund has not made any distributions.",
     "exDate": "—",
     "dividend": "—"
    },
@@ -23640,6 +24145,8 @@
     "siAnn": -42.17,
     "dividendYield": null,
     "dividendYieldText": "—",
+    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
