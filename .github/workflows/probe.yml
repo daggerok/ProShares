@@ -34,6 +34,11 @@ jobs:
             grep_pat=$(printf '%s' "$line" | sed -n 's/.*| *grep=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
             near_pat=$(printf '%s' "$line" | sed -n 's/.*| *near=\(.*\)$/\1/p' | sed 's/[[:space:]]*$//')
             cmd=$(printf '%s' "$line" | sed -n 's/.*| *cmd=\(.*\)$/\1/p')
+            if [ "${cmd:-}" = "HEAD" ]; then
+              code=$(curl -sI -L -A "$UA" --max-time 120 "$url" 2>&1 | tr -d '\r' | head -25)
+              printf 'URL: %s\nSTATUS: HEAD\n%s\n\n' "$url" "$code" >> /dev/null
+              echo "URL: $url"; echo "$code"; echo; continue
+            fi
             [ -n "${bytes:-}" ] || bytes=$MAX
             out=$(printf 'probe/out/%03d.txt' "$n")
             {
