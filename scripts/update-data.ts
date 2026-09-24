@@ -597,7 +597,7 @@ export async function fetchText(
       if (attempt === config.maxRetries) throw new Error(`${label}: ${message}`);
     }
     const backoff = 15_000 * (attempt + 1);
-    console.warn(`${label}: ${lastError}; retrying in ${Math.round(backoff / 1000)}s (attempt ${attempt + 1}/${config.maxRetries})`);
+    console.warn(formatRetry(label, lastError, Math.round(backoff / 1000), attempt + 1, config.maxRetries));
     await sleep(backoff);
   }
   throw new Error(`${label}: ${lastError}`);
@@ -1713,6 +1713,36 @@ export function buildFeed(inputs: {
 
 type Stats = { updated: number; unchanged: number; skipped: number; failed: number; filtered: number };
 
+/** Numbered before work starts, so concurrent workers and slow retries remain identifiable. */
+export function progressLabel(ticker: string, position: number, total: number): string {
+  return `[${String(position).padStart(Math.max(3, String(total).length) + 1)}/${total}] ${ticker}`;
+}
+
+export function formatElapsed(milliseconds: number): string {
+  return `${(Math.max(0, milliseconds) / 1000).toFixed(1)}s`;
+}
+
+export function formatRetry(label: string, error: string, backoffSeconds: number, attempt: number, maxRetries: number): string {
+  return `[retry] ${label} → ${error}, backoff ${backoffSeconds}s (attempt ${attempt}/${maxRetries})`;
+}
+
+/** Presentation only: never alter the entry/metadata written to the static feed. */
+export function formatFundProgress(label: string, entry: Record<string, unknown>, changed: boolean, milliseconds: number): string {
+  const visible = (value: unknown): value is string => typeof value === 'string' && value.trim() !== '' && value !== '—';
+  const metrics = entry.metrics as Record<string, unknown> | undefined;
+  const fields: string[] = [];
+  if (visible(entry.nav)) fields.push(`NAV ${entry.nav}`);
+  const aum = numberOrNull(entry.aumValue);
+  if (aum !== null) fields.push(`AUM ${formatMoneyText(aum)}`);
+  if (visible(entry.ter)) fields.push(`TER ${entry.ter}`);
+  if (visible(metrics?.dividendYieldText)) fields.push(`DivYld ${metrics.dividendYieldText}`);
+  if (visible(entry.distributionFrequency) && entry.distributionFrequency !== '00 - —') {
+    fields.push(`Freq ${entry.distributionFrequency}`);
+  }
+  fields.push(`holdings ${entry.holdings ?? 0}`, `history ${entry.history ?? 0}`, formatElapsed(milliseconds));
+  return `${label} ok${changed ? '' : ' (unchanged)'} · ${fields.join(' · ')}`;
+}
+
 const EXCHANGE_CODES: Record<string, string> = {
   A: 'NYSE American',
   N: 'NYSE',
@@ -1796,6 +1826,7 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
 }
 
 export async function main(config: UpdaterConfig = readConfig()): Promise<void> {
+  const runStartedAt = Date.now();
   await mkdir(path.join(API_ROOT, 'funds'), { recursive: true });
   const stats: Stats = { updated: 0, unchanged: 0, skipped: 0, failed: 0, filtered: 0 };
   const previousIndex = await readPreviousIndex();
@@ -1932,9 +1963,16 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
   console.log(`Funds: ${catalog.length} in catalog, ${beforeBatch} after filters, ${candidates.length} to process${cursor ? ` (after cursor ${cursor})` : ''}`);
 
   // --- per-fund processing --------------------------------------------------
-  const results = await mapWithConcurrency(candidates, config.concurrency, async fund => {
+  const results = await mapWithConcurrency(candidates, config.concurrency, async (fund, index) => {
+    const label = progressLabel(fund.ticker, index + 1, candidates.length);
+    const startedAt = Date.now();
+    console.log(`${label} …`);
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
     const previous = previousFunds[fund.ticker];
+    const filtered = (reason: string): void => {
+      stats.filtered++;
+      console.log(`${label} filtered (${reason}) · ${formatElapsed(Date.now() - startedAt)}`);
+    };
     try {
       let page: FundPageData | null = null;
       if (!config.offlineSeed) {
@@ -1979,18 +2017,18 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
 
       // Filter checks that need published fund-page values.
       if (config.terRange && !matchesRange(page.expenseRatio, config.terRange)) {
-        stats.filtered++;
+        filtered('TER');
         return;
       }
       // DIVIDEND_YIELD matches the official 12-Month Yield when the fund page
       // publishes one and the indicated yield (computed from the official
       // distribution rows) otherwise, i.e. the value the feed reports.
       if (config.dividendYieldRange && !matchesRange(page.twelveMonthYield, config.dividendYieldRange)) {
-        stats.filtered++;
+        filtered('DIVIDEND_YIELD');
         return;
       }
       if (config.secYieldRange) {
-        stats.filtered++;
+        filtered('SEC_YIELD');
         return;
       }
 
@@ -2002,7 +2040,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.performanceRanges['10Y'] && !matchesReturnRange(performanceNavMonth?.yr10, config.performanceRanges['10Y']) ||
         config.performanceRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.performanceRanges.YTD)
       ) {
-        stats.filtered++;
+        filtered('PERFORMANCE');
         return;
       }
       if (
@@ -2012,7 +2050,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.totalReturnRanges['10Y'] && !matchesReturnRange(cumulativeFromAnnualized(performanceNavMonth?.yr10 ?? null, 10), config.totalReturnRanges['10Y']) ||
         config.totalReturnRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.totalReturnRanges.YTD)
       ) {
-        stats.filtered++;
+        filtered('TOTAL_RETURN');
         return;
       }
 
@@ -2122,9 +2160,10 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       if (artifacts.changed) stats.updated++;
       else stats.unchanged++;
       previousFunds[fund.ticker] = artifacts.entry;
+      console.log(formatFundProgress(label, artifacts.entry, artifacts.changed, Date.now() - startedAt));
     } catch (error) {
       stats.failed++;
-      console.error(`${fund.ticker}: ${errorMessage(error)}`);
+      console.error(`${label} FAILED: ${errorMessage(error)} · ${formatElapsed(Date.now() - startedAt)}`);
       if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
     }
   });
@@ -2177,7 +2216,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
   await writeRawSamples(config);
 
   console.log(
-    `Done. updated=${stats.updated} unchanged=${stats.unchanged} filtered=${stats.filtered} skipped=${stats.skipped} failed=${stats.failed} · funds=${counts.funds} holdings=${counts.holdings} history=${counts.history}`,
+    `Done. updated=${stats.updated} unchanged=${stats.unchanged} filtered=${stats.filtered} skipped=${stats.skipped} failed=${stats.failed} · funds=${counts.funds} holdings=${counts.holdings} history=${counts.history} · ${formatElapsed(Date.now() - runStartedAt)}`,
   );
   if (stats.failed > 0) console.warn(`${stats.failed} step(s) failed; previously published files were kept for those funds.`);
 }

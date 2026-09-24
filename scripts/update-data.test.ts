@@ -21,8 +21,11 @@ import {
   decodeEntities,
   distributionRowsForCsv,
   formatAumDisplay,
+  formatElapsed,
+  formatFundProgress,
   formatMoneyText,
   formatPercentText,
+  formatRetry,
   formatUsDate,
   headerIndex,
   historyRangeDays,
@@ -55,6 +58,7 @@ import {
   parseSplitsFile,
   parseSymbolDirectory,
   paymentsPerYear,
+  progressLabel,
   readConfig,
   serialize,
   stripTags,
@@ -373,6 +377,30 @@ describe('configuration', () => {
     expect(config.aumRange).toEqual({ min: 300_000_000, max: undefined });
     expect(() => readConfig({ AUDIENCE_TYPE: 'Retail' })).toThrow(/Invalid AUDIENCE_TYPE/);
     expect(() => readConfig({ TER: 'x' })).toThrow(/Invalid TER range/);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Progress output (never changes the generated feed)
+// ---------------------------------------------------------------------------
+
+describe('per-fund progress', () => {
+  test('numbers concurrent work with a stable candidate position and elapsed time', () => {
+    expect(progressLabel('TQQQ', 37, 173)).toBe('[  37/173] TQQQ');
+    expect(progressLabel('NOBL', 1, 7)).toBe('[   1/7] NOBL');
+    expect(formatElapsed(2450)).toBe('2.5s');
+    expect(formatRetry('BIS fund page', 'HTTP 500 Internal Server Error', 15, 1, 3))
+      .toBe('[retry] BIS fund page → HTTP 500 Internal Server Error, backoff 15s (attempt 1/3)');
+  });
+
+  test('summarizes successful or unchanged funds but hides unavailable metrics', () => {
+    const before = { nav: '$55.66', aumValue: 11_270_728_460, ter: '0.35%', distributionFrequency: '04 - Quarterly', holdings: 71, history: 3220, metrics: { dividendYieldText: '2.01%' } };
+    const snapshot = JSON.stringify(before);
+    expect(formatFundProgress(progressLabel('NOBL', 1, 7), before, true, 2400))
+      .toBe('[   1/7] NOBL ok · NAV $55.66 · AUM $11.27B · TER 0.35% · DivYld 2.01% · Freq 04 - Quarterly · holdings 71 · history 3220 · 2.4s');
+    expect(formatFundProgress(progressLabel('BOIL', 2, 7), { nav: '—', ter: '—', aumValue: null, distributionFrequency: '00 - —', holdings: 0, history: 15, metrics: { dividendYieldText: '—' } }, false, 99))
+      .toBe('[   2/7] BOIL ok (unchanged) · holdings 0 · history 15 · 0.1s');
+    expect(JSON.stringify(before)).toBe(snapshot);
   });
 });
 

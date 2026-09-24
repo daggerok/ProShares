@@ -7319,3 +7319,9 @@ Implementation checkpoint 2/… — restored the c48ff83 official-source updater
 <!-- answer:
 Implementation checkpoint 3/… — restored the updater's executable bit after the historical-source checkout. c48ff83 stored the script as 100644, but the documented user command is `./scripts/update-data.ts` and the merged branch had 100755. `chmod +x` restores 100755; `./scripts/update-data.ts --help` executes successfully. No data or parsing behavior changed.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 4/… — per-ETF progress (plan step 3). Each candidate prints a numbered start line before network work, then an `ok`/`ok (unchanged)`, `filtered (reason)`, or `FAILED` line with elapsed seconds. Success lines show available NAV, AUM, TER, dividend yield, distribution frequency, holdings and history row counts; unavailable values are omitted rather than invented. HTTP retries print `[retry] <ticker> <source> → <error>, backoff <n>s (attempt n/N)`; the existing headers and Done summary remain, with total elapsed added. Formatting is pure and does not change the generated feed. `bun run test`: 55 pass / 0 fail / 226 assertions; tsc clean; `git diff --check` clean. Live proof will come from the bounded smoke run, not from a full-pass refresh.
+-->
