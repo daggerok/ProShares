@@ -5,6 +5,8 @@ name: Dev data refresh
 
 on:
   push:
+    branches-ignore:
+      - main
     paths:
       - 'dev-run/request.txt'
 

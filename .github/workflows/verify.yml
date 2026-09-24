@@ -5,6 +5,8 @@ name: Verify feed against the site
 
 on:
   push:
+    branches-ignore:
+      - main
     paths:
       - 'dev-run/verify-request.txt'
 

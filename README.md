@@ -7442,3 +7442,9 @@ Implementation checkpoint 22/… — reconciled the other visible README limitat
 <!-- answer:
 Implementation checkpoint 23/… — honored the user's decision to **keep** the dev/probe/verify tooling permanently. Removed the false "TEMPORARY / deleted before delivery" headers from `dev-update.yml`, `verify.yml` and `dev-run/verify-sources.ts` (no workflows removed). Corrected verifier sample URL categories for SPCF and ACQQ against the committed index and added a bounded `SEC 30-Day Yield block: <value or absent>` line to its existing sampled-page report; added IQMM as the special money-market example. `bun build dev-run/verify-sources.ts --target bun` and tsc clean; all 14 sample paths match the index. The verifier itself was not run against all pages (and no full updater pass was requested).
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 24/… — kept development workflows are now safe to merge without accidentally retriggering their last smoke requests on `main`. Added `branches-ignore: main` to the push triggers of `dev-update.yml`, `probe.yml` and `verify.yml`; all remain available on feature branches (and probe keeps its manual `workflow_dispatch`). The shipped `update-data.yml` remains the only main-branch data-update workflow and is still manually dispatched. YAML parsed and all three existing path gates remain intact; diff check clean. No refresh was triggered.
+-->
