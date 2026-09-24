@@ -7448,3 +7448,9 @@ Implementation checkpoint 23/… — honored the user's decision to **keep** the
 <!-- answer:
 Implementation checkpoint 24/… — kept development workflows are now safe to merge without accidentally retriggering their last smoke requests on `main`. Added `branches-ignore: main` to the push triggers of `dev-update.yml`, `probe.yml` and `verify.yml`; all remain available on feature branches (and probe keeps its manual `workflow_dispatch`). The shipped `update-data.yml` remains the only main-branch data-update workflow and is still manually dispatched. YAML parsed and all three existing path gates remain intact; diff check clean. No refresh was triggered.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 25/… — final validation before opening the PR. `bun install --frozen-lockfile`: no changes; `bun run test`: **62 pass / 0 fail / 272 assertions**; TypeScript no-emit check clean for the updater, tests and kept verifier; `bun build app.tsx --target browser`: clean; executable `./scripts/update-data.ts --help`: works; `python3 dev-run/check-feed.py`: **problems: 0** across 173 committed funds; `git diff --check`: clean. Two GitHub Actions bounded refreshes (7 + 4 tickers) and the seven-page HTML probe were successful; **no full 173-fund refresh was run**, per the user's request. GitHub API authentication now answers 200 for this sandbox (it was 401 in the earlier planning session), so I will attempt to create the PR rather than leave only the manual PR link. After merge, the user performs the full data run and rechecks the visible partial-feed counts.
+-->
