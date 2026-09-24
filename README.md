@@ -153,42 +153,51 @@ ProShares® and the fund names/tickers referenced here are trademarks of ProShar
 # Portable ETF-brand watchlist blueprint
 
 This is a construction recipe for a NEW issuer, not a backlog of changes to
-this repository. Instantiate the placeholders first; research the selected
-issuer before adapting a parser. Keep the shared static-site/user-interface
-contract consistent with sibling ETF watchlist applications, while treating
-sources, data availability and legal conditions as issuer-specific.
+this repository. Start with only the inputs below; research everything else.
+Keep the shared static-site/user-interface contract consistent with sibling
+ETF watchlist applications, while treating sources, data availability and
+legal conditions as issuer-specific.
 
-## 1. Inputs and decisions to record
+## 1. Only four inputs; the agent discovers everything else
 
-- {{BRAND_NAME}}: display name; {{BRAND_SLUG}}: lowercase URL/storage prefix;
-  {{REPOSITORY}}: repository and Pages path; {{MARKET}}/{{CURRENCY}}: market,
-  quote currency and date/number conventions. Do not assume a US issuer.
-- {{OFFICIAL_SITE}} and {{OFFICIAL_CATALOG_URLS}}: issuer site and all finder
-  pages/downloads defining the ETF universe. Record whether a fund is an ETF,
-  closed, duplicate share class or otherwise out of scope.
-- {{FUND_URL_PATTERN}}, {{OFFICIAL_HOLDINGS_URL_PATTERN}},
-  {{OFFICIAL_HOLDINGS_BULK_URL}}, {{OFFICIAL_HISTORY_URL_PATTERN}},
-  {{OFFICIAL_PERFORMANCE_URL}}, {{OFFICIAL_DISTRIBUTIONS_URL_PATTERN}},
-  {{OFFICIAL_SPLITS_URL}}: use only if that resource actually exists. A brand
-  may instead provide an XLSX, JSON, GraphQL endpoint or an authenticated
-  download with different rights; do not invent a URL from another brand.
-- {{OFFICIAL_EXCHANGE_SOURCE}} and {{SEC_REGISTRANT_IDS}}: optional independent
-  exchange and regulator lookups. Verify issuer-to-fund ownership before using
-  a regulatory filing. Record as-of dates, disclosure delay, units and licenses.
-- {{PUBLISH_ROOT}} = api/{{BRAND_SLUG}} and {{DEPLOY_URL}}: file paths and
-  deployment base. All browser fetches must be relative to the site, not to
-  the original issuer or to localhost.
-- Choose whether optional secondary public data is permitted. If used, label
-  each affected field and timestamp with its true source; never call a vendor
-  estimate or a calculation an issuer-published figure.
+- `{{BRAND_NAME}}` (required): the ETF issuer's display name.
+- `{{BRAND_OFFICIAL_WEB_SITE}}` (required): the issuer's official website.
+- `{{GITHUB_RePOSITORY}}` (optional): destination repository, if a specific
+  existing or new repository is requested. Otherwise use the current project
+  or derive a sensible repository name from the brand and confirm its owner.
+- `{{GITHUB_ACCESS_TOKEN}}` (optional): GitHub authorization only if needed to
+  push or open a pull request. Prefer an already authenticated environment;
+  never print, commit, embed in a Git remote URL or place the token in README,
+  generated data, build logs or workflow output.
+
+No catalog URL, slug, market, currency, fund URL, data endpoint, ticker list,
+filing ID, exchange source, feed path or Pages URL is another input. Starting
+with the name and official website, the agent uses web search and the issuer's
+own site, documentation, page source, links and downloadable files to find
+these facts. Verify each URL and identifier against the issuer or relevant
+authoritative source; do not copy another brand's endpoints. Derive a stable
+lowercase directory/storage prefix from the name and repository conventions.
+Determine market, currency, date conventions, fund universe, rights and
+availability through research; record the findings and any unresolved gaps in
+visible documentation. If a metric cannot be verified, keep it missing instead
+of asking the user to supply an undocumented source. If GitHub credentials
+are unavailable, complete and validate the local work without attempting an
+unauthorized push. All browser fetches must be relative to the static site.
+Secondary public sources or calculations can fill researched gaps only with
+explicit provenance; never call a vendor estimate an issuer-published figure.
 
 ## 2. Reconnaissance before implementation
 
-1. Inspect the issuer's live catalog and network requests: pagination,
-   category filters, fund-detail URLs, data downloads, server-rendered markup,
-   public JSON endpoints, required headers and crawl restrictions. Prefer
-   official structured downloads, then official pages; do not bypass logins,
-   paywalls or explicit usage restrictions. Respect rate limits and licenses.
+1. Use web search starting from the brand name and official site to locate
+   the issuer's ETF catalog, product pages, documentation and official data
+   downloads. Follow the site's own links and inspect its live catalog and
+   network requests: pagination, category filters, fund-detail URLs, data
+   downloads, server-rendered markup, public JSON endpoints, required headers
+   and crawl restrictions. Check any search result against the official site;
+   discover URL patterns and file formats rather than asking for them as
+   inputs. Prefer official structured downloads, then official pages; do not
+   bypass logins, paywalls or explicit restrictions. Respect rate limits and
+   licenses.
 2. Save small representative fixtures for equity, bond, commodity/derivative,
    accumulating/non-distributing, newly launched and unusual ticker funds.
    Include missing/empty fields, note rows, multiple share classes, footnote
@@ -215,12 +224,15 @@ format forces):
     app.tsx                           browser TypeScript, state and rendering
     scripts/update-data.ts            Bun CLI, parsers and feed generation
     scripts/update-data.test.ts       fixture-based deterministic tests
-    api/{{BRAND_SLUG}}/index.json      compact complete fund catalog
-    api/{{BRAND_SLUG}}/funds/{{TICKER}}/meta.json
-    api/{{BRAND_SLUG}}/funds/{{TICKER}}/holdings/001.json ...
-    api/{{BRAND_SLUG}}/funds/{{TICKER}}/history/001.json ...
+    api/examplebrand/index.json        compact complete fund catalog
+    api/examplebrand/funds/ABC/meta.json
+    api/examplebrand/funds/ABC/holdings/001.json ...
+    api/examplebrand/funds/ABC/history/001.json ...
     .github/workflows/update-data.yml manual, data-only updater
     README.md, LICENSE, package.json, lockfile
+
+`examplebrand` and `ABC` illustrate a derived slug and a discovered ticker;
+they are NOT extra inputs or literal names to ship.
 
 A single HTML/CSS shell plus `app.tsx` can run via Babel standalone without a
 browser bundler or tsconfig; Bun runs the updater and its tests. Mirror existing
@@ -353,9 +365,9 @@ Execution order:
 
 Recommended result shape (values and columns reflect actual available data):
 
-    Funds: {{CATALOG_COUNT}} in catalog, {{CANDIDATE_COUNT}} to process
-    [   2/{{CANDIDATE_COUNT}}] ABC ok · NAV $25.40 · AUM $24.3M · holdings 61 · history 900 · 2.1s
-    [   3/{{CANDIDATE_COUNT}}] XYZ FAILED: source returned HTTP 404 · 0.4s
+    Funds: 42 in catalog, 7 to process
+    [   2/7] ABC ok · NAV $25.40 · AUM $24.3M · holdings 61 · history 900 · 2.1s
+    [   3/7] XYZ FAILED: source returned HTTP 404 · 0.4s
     Done: updated=1 unchanged=0 skipped=0 filtered=0 failed=1
 
 ## 7. Browser catalog and detail experience
@@ -364,7 +376,8 @@ Recommended result shape (values and columns reflect actual available data):
   palette and keyboard/focus/reduced-motion behavior. Show issuer branding
   and an independent/unofficial disclaimer. Do not copy another brand's
   trademark artwork without permission.
-- Initialize by fetching `./api/{{BRAND_SLUG}}/index.json` once. Show loading,
+- Initialize by fetching the derived relative feed path (for example,
+  `./api/examplebrand/index.json`) once. Show loading,
   empty and failure states distinctly. The catalog has ETF counts, provider
   categories, sortable columns (ticker, name, AUM, NAV, TER gross/net, yield,
   SEC yield where defined, return tenors, frequency, distributions, dates,
@@ -378,9 +391,9 @@ Recommended result shape (values and columns reflect actual available data):
   concurrency. Render issuer-specific extra columns from manifest headers;
   show a truthful empty state when a file is not published.
 - Search, filters, sort direction, selected tickers, blacklist, active fund,
-  active tab and theme persist under {{BRAND_SLUG}}-namespaced localStorage
-  keys. Validate restored values against the current catalog, maintain
-  per-tab queries/sorts and make state resets predictable. The blacklist
+  active tab and theme persist under localStorage keys namespaced with the
+  internally derived brand slug. Validate restored values against the current
+  catalog, maintain per-tab queries/sorts and make state resets predictable. The blacklist
   manager removes funds from views, not from underlying data.
 - Every heading has a source/basis tooltip, especially ambiguous figures:
   expense ratio, NAV-vs-price returns, SEC versus dividend yield, identifier,
@@ -444,7 +457,8 @@ Recommended result shape (values and columns reflect actual available data):
   never use README comments as a conversation transcript.
 - Provide a manual `workflow_dispatch` updater with safe inputs, tests before
   generation, minimal `contents: write` permission and a commit restricted
-  to `api/{{BRAND_SLUG}}/**`. Keep any existing probe, bounded dev-run and
+  to the brand's derived `api/` subdirectory (for example,
+  `api/examplebrand/**`). Keep any existing probe, bounded dev-run and
   verification workflows as diagnostic tools; guard dev refreshes with an
   explicit ticker allowlist. Do not let data jobs rewrite application code.
 - Release only when the catalog matches the official in-scope universe,
