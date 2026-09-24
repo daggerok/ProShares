@@ -7166,3 +7166,132 @@ create a plan for what is still needs to be done and remove everything is not ac
 add that plan here as an answer with similar wrapped html comment so we will continue t odo what is left in a separate
 change or with separate agent
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+
+Continuation plan — appended by a fresh Arena session (2026-09-24). Everything below was re-verified
+against the repo at commit 293f4b2 (main tip), the git history and the committed feed in this session.
+Items that are already implemented or no longer actual were removed from the earlier plan.
+
+## Audit baseline (verified 2026-09-24, repo @ 293f4b2)
+
+- Feed: api/proshares generatedAt 2026-09-24T02:16:41Z, 173 funds / 20223 holdings / 540428 history rows, source.catalogReadAt 2026-09-24T02:00:23Z.
+- Baseline green: `bun run test` = 48 pass / 0 fail (144 expect calls) for main's current script; the c48ff83 script+tests also verified here: 53 pass / 0 fail (219 expect calls). tsc clean (`tsc --noEmit --target es2022 --module esnext --moduleResolution bundler --skipLibCheck --types bun,node scripts/update-data.ts scripts/update-data.test.ts` after `bun install`); `bun build app.tsx --target browser` OK.
+- Current "—" profile of the committed feed (173 funds): secYield 173 null; dividendYield 25 null; distributionFrequency "00 - —" 19; terGross/terNet 0 null in index; monthEnd yr1 16 / yr3 37 / yr5 48 / yr10 60 / sinceInception 16 null, mo1 3 / mo3 6 / mo6 10; quarterEnd asOfDate 5 null.
+- GitHub auth in the sandbox: git push/pull works with the token embedded in the remote; the REST API (api.github.com) returns 401 "Bad credentials" for the same token, so PRs and workflow runs cannot be created/cancelled from the sandbox via the API. PR must be opened from the URL (step 7) or after GitHub re-auth.
+
+## The three findings that drive this plan
+
+### Finding 1 — main's updater is NOT the script that produced the published feed
+- The committed feed is the output of the 2195-line updater at c48ff83. Markers only it emits: index source.catalogReadAt; fund rows carrying cusip/isin/benchmark/marketingCategory/dailyObjective/strategy/netAssetsAsOf; monthEnd mo1/mo3/mo6 + *Text fields + marketPrice; meta.identifiers.sedolNote; meta.yields.indicatedYield computed (NOBL 2.0485 vs dividendYield 2.01); meta.source fundFinder/holdingsAll/performanceFile/splitsFile/distributionsApi.
+- main's scripts/update-data.ts (2318 lines, introduced by c952998, merged via PR #1) is a from-scratch rewrite. Running it would: drop cusip/isin from index.json fund rows (CUSIP/ISIN search breaks — app.tsx line 464), set meta.yields.indicatedYield = dividendYield (not computed), drop source.catalogReadAt, sedolNote, distributions.note, monthEnd mo1/mo3/mo6/*Text/marketPrice, netAssetsAsOf, marketingCategory/strategy/dailyObjective/benchmark. Its Dev-data-refresh Actions run of 2026-09-24 01:33Z failed.
+- The user's pasted run output ("Catalog: 504 strategic funds from …", "BIS fund page: HTTP 500 … retrying in 15s (attempt 1/3)") matches c48ff83's log format exactly.
+- DECISION (user delegated: "You decide"): RESTORE the c48ff83 updater as the base. This reverts c952998's script change (already merged) — flagged on purpose: the published data must stay reproducible (same inputs byte-identical api tree) and app.tsx + README are documented against c48ff83's output shape.
+
+### Finding 2 — "SEC Yield not published" is a bug, not a data limitation
+- The live NOBL page publishes "SEC 30-Day Yield: 2.09%" in the Distributions block (checked via fetch_page 2026-09-24). NEITHER script version parses it: both hardcode secYield = null with a "not published" note (c48ff83 line 1655; main rewrite ~lines 1311/2068/2291).
+- Wrong claims to correct after the fix: README "Known value limitations" row 1 (≈line 50) and the SEC_YIELD env-var row (≈line 76); app.tsx tooltip line 157; the restored script's USAGE SEC_YIELD lines (≈454-456), its "Known limitations" bullet (≈line 1368) and the final "SEC Yield note: always —" console line (≈line 2309); index source.secYieldNote / meta source.secYield strings in main's rewrite.
+
+### Finding 3 — per-ETF progress is missing in both versions (user request #1)
+- c48ff83 prints only header summaries (Catalog/Holdings/Performance/Splits/Exchanges/Funds: … to process), retry warnings and one final Done line → minutes of silence (exactly the user's complaint). The main rewrite prints a per-fund [ok] line but without counter/total/timing.
+- Target style (user preference = VanEck): one counter line per fund, e.g. `[  12/173] TQQQ holdings=127 history=3220`, plus visible, ticker-attributed retries.
+
+## Remaining work (in order — commit + push after every step)
+
+### Step 0 — environment setup (once)
+- bun: `npm i -g bun --prefix /home/user/.local` → /home/user/.local/bin/bun (1.4.2); tsc: `npm i -g typescript --prefix /home/user/.local`. `bun install` in the repo (installs pinned @types/bun, @types/node).
+- Tests: `bun run test` (package.json script). Typecheck command: see baseline above.
+- The sandbox CANNOT reach proshares.com / accounts.profunds.com — all live fetches go through GitHub Actions: push a change to dev-run/request.txt (KEY=VALUE lines, e.g. TICKERS="…") → dev-update.yml runs the updater on the branch and commits api/** + dev-run/last-run.log; push a change to probe/urls.txt (`URL | cmd=…` lines) → probe.yml runs the commands and commits probe/out/NNN.txt.
+- Standing user instructions: (a) commit + push after every small completed step; (b) document every step in README.md by appending message/answer HTML-comment blocks at the end; (c) partial runs only (TICKERS="…") — the user performs the full 173-fund run themselves after the fixes.
+- Work on branch arena/plan-proshares-fixes (branched from 293f4b2) or a fresh branch from current main.
+
+### Step 1 — handle the "Dev data refresh" run on main (started 2026-09-24 02:21:34Z, using the rewritten updater)
+- User instruction: cancel the whole-feed fetch (they run the full pass themselves).
+- Check its status (GitHub UI, or the API once re-auth works). Still running → cancel. At audit time main tip = 293f4b2 with no new data commit, so nothing to repair yet. If a regressed feed commit lands on main later, restore the good feed: `git checkout 54b8b14 -- api/proshares` (last good data commit) and push, or regenerate with the restored updater.
+
+### Step 2 — restore the proven updater (base decision, Finding 1)
+- `git checkout c48ff83 -- scripts/update-data.ts scripts/update-data.test.ts`
+- Verify: `bun run test` → 53 pass / 0 fail (219 expect calls); tsc clean; env-var surface matches README "Update controls" (MAX_FETCHES, TICKERS, CATEGORY, AUM, TER, DIVIDEND_YIELD, SEC_YIELD, CONCURRENCY, REQUEST_SLEEP, HOLDINGS_PAGE_SIZE, HISTORY_PAGE_SIZE, HISTORY_RANGE, DISTRIBUTION_YEARS, MAX_RETRIES, SKIP_PROSHARES, SKIP_YAHOO, STORE_RAW_DOWNLOADS).
+- Commit + push, e.g. "fix: restore the verified official-source updater (generated the published feed; the c952998 rewrite emits a thinner feed that breaks CUSIP/ISIN search and indicated yield)".
+
+### Step 3 — per-ETF progress output (user request #1)
+- In the restored script's fund loop:
+  - start: `[  37/173] TQQQ …`
+  - success: `[  37/173] TQQQ ok · NAV $… · AUM $… · TER … · DivYld … · Freq … · holdings 127 · history 3220 · 2.4s` (drop fields that are "—" to keep the line short)
+  - failure: `[  37/173] TQQQ FAILED: <error>` and continue
+  - retries attributed to the ticker: `[retry] TQQQ fund page → HTTP 500, backoff 15s (attempt 1/3)`
+  - keep the existing header lines (Catalog / Holdings / Performance / Splits / Exchanges / "Funds: 173 in catalog, 173 after filters, 173 to process")
+  - final line keeps the current shape: `Done. updated=… unchanged=… filtered=… skipped=… failed=… · funds=173 holdings=… history=…` plus total elapsed time.
+- Logging only — the generated JSON must stay byte-identical to step 2 for the same inputs.
+- Unit-test any new pure formatting helpers; visually verify in the step 5 run log.
+- Commit + push.
+
+### Step 4 — parse and publish the SEC 30-Day Yield (user request #2 — the real fix)
+- 4a Probe the exact element id(s) via probe/urls.txt (one line per URL, format `URL | cmd=…`), e.g.:
+  - https://www.proshares.com/our-etfs/strategic/nobl (equity — verified published), /our-etfs/strategic/ighg and /our-etfs/strategic/hyhg (bond YTM case), /our-etfs/leveraged-and-inverse/tqqq (geared), /our-etfs/strategic/agq (commodity), /our-etfs/strategic/spcf and /our-etfs/leveraged-and-inverse/boil (never-distributed — confirm the block omits the SEC yield for them).
+  - cmd pattern: `UA='Mozilla/5.0'; curl -s -A "$UA" <url> -o /tmp/p.html; grep -oE '.{0,150}SEC 30-Day Yield.{0,150}' /tmp/p.html`
+  - push → probe.yml commits probe/out/NNN.txt. Expected id: `distributions-sec30DayYield` or similar (block uses distributions-distributionFrequency / distributions-12MonthYield).
+- 4b parseFundPage: read the element → sec30DayYield (number | null) + raw text; absent / empty / "—" → null.
+- 4c Emit (same conventions as the other yields):
+  - index.json fund metrics: secYield, secYieldText (e.g. "2.09%"), secYieldKind = "official ProShares SEC 30-Day Yield (page distributions block)" when published, "not published on this fund page (data limitation)" when the page omits it.
+  - meta.json yields: same trio (secYieldText "—" when null).
+  - Bond funds that print Weighted Average Yield to Maturity instead of a 30-day SEC yield (IGHG/HYHG — confirm from probe): keep null + honest kind note; Overview already reports the YTM verbatim.
+- 4d Correct every wrong "not published" claim: README "Known value limitations" row 1 + SEC_YIELD env row (the SEC_YIELD range filter becomes functional again); app.tsx:157 tooltip; the script USAGE SEC_YIELD lines + "Known limitations" bullet + final console note.
+- 4e Unit tests: fixture with the real NOBL distributions-block snippet (from the probe) → 2.09 parsed; fixture without the element → null + honest kind.
+- Commit + push.
+
+### Step 5 — smoke run with the problematic tickers (user: "Smoke test with Problematic tickers … later after your fix I will be doing full run on my side")
+- dev-run/request.txt content:
+  ```
+  TICKERS="NOBL IGHG HYHG TQQQ AGQ BOIL SPCF"
+  ```
+  (NOBL: SEC yield verified published; IGHG/HYHG: bond YTM case; TQQQ: geared; AGQ: commodity, no SEDOLs at source; BOIL/SPCF: never-distributed → honest "—"; optionally add EZJ to re-check ratio footnote stripping.)
+- push → dev-update.yml runs on the branch, commits api/proshares/** (only the touched funds; all others keep their published data) + dev-run/last-run.log.
+- Verify from the committed log + feed:
+  - progress lines render per the step 3 spec (counter, ticker, elapsed, attributed retries).
+  - NOBL/TQQQ secYield populated (NOBL was 2.09 at probe time — value may move with NAV); BOIL/SPCF secYield null + honest note.
+  - feed shape unchanged vs the committed feed: index source.catalogReadAt present; fund row cusip present (NOBL 74350U716); monthEnd.mo1/mo1Text present; meta.identifiers.sedolNote present; meta.yields.indicatedYield ≠ dividendYield (NOBL 2.0485 vs 2.01).
+  - `python3 dev-run/check-feed.py` → problems: 0 (weight sums −300%…+333% on geared funds are legitimate).
+- Commit + push (the Actions bot commits the data; follow-ups as separate commits).
+- Do NOT trigger a full 173-fund pass — the user runs it themselves.
+
+### Step 6 — final "—" audit after the fix (finishes user request #2)
+- Re-audit the committed + smoke-updated feed; confirm every remaining "—" cell belongs to a documented category, then update the README "Known value limitations" table numbers (final numbers after the user's full run):
+  - Dividend Yield: never-distributed funds (current feed: 25 nulls; README lists 28 — reconcile after the user's full run).
+  - Distribution Frequency "00 - —": 19 (same never-distributed funds).
+  - Return tenors: young funds only; blanks match the official etf_performance.csv (current feed: yr1 16, yr3 37, yr5 48, yr10 60, siAnn 16, mo1 3, mo3 6, mo6 10, quarterEnd asOfDate 5).
+  - SEC Yield: only the funds whose pages omit it (count confirmed by probe + the user's full run).
+  - Expense Ratio (Gross): strategic funds publishing only a net ratio (README says 60; the current feed's index shows 0 null terGross — reconcile against meta.expenseRatio.gross after the user's full run).
+  - ISIN / FIGI / position CUSIP: never published by ProShares (SEDOL only) — permanent, documented.
+  - Premium/Discount: computed from official NAV + market price — documented.
+  - Listing exchange: only when the Nasdaq Trader directory lacks the ticker.
+  - Holdings for brand-new funds: first holdings file not yet published.
+- Commit + push.
+
+### Step 7 — wrap-up and PR
+- Keep probe/, dev-run/, verify.yml, probe.yml, dev-update.yml permanently (user's decision) — update the "Deleted before the final delivery" comments in dev-update.yml (and probe.yml if it has a similar one).
+- Append each completed step to README.md as a message/answer block (user's standing PS).
+- PR: API is blocked with the current token (401) → after the final push, the user opens https://github.com/daggerok/ProShares/pull/new/<branch> with title "Restore verified updater, per-ETF progress, SEC 30-Day Yield fix" and a short body summarizing the three findings + steps + "full data run pending by the user". If GitHub gets re-authenticated with a working API token, create it via `gh pr create` / the API instead.
+- Pages auto-redeploys from main after the merge — nothing else to do.
+
+## Removed from the earlier plan (already implemented or no longer actual)
+- Catalog + per-fund page parsing and all official data sources (both finder pages, ByFund + bulk holdings CSVs, NAV history, etf_performance, etf_splits, distributionsummary API, Nasdaq Trader exchanges) — implemented (c48ff83).
+- Holdings weight math verified against live pages (including isWeightlessRow for Net-Other-Assets/cash rows) — implemented.
+- Gross/net expense ratio split + footnote stripping (cleanRatioText / ratioValue / expenseRatioFootnote; terValue 0 nulls) — implemented.
+- Official 12-Month Yield with computed indicated-yield fallback + basis recorded in meta.yields / metrics — implemented.
+- Browser holdings-file upload (dropzone in index.html/app.tsx) — implemented.
+- app.tsx (Overview/Holdings/History/Distributions tabs, Watchlist, CSV export, tooltips) + index.html + package.json scripts — implemented.
+- Shipped workflow .github/workflows/update-data.yml (workflow_dispatch on main) and the live Pages site — done.
+- "Delete temporary tooling before delivery" — superseded: user decided to keep the probe/dev-run/verify tooling permanently.
+- "Enable Pages", "chunk 3 UI fidelity pass" and similar scratchpad items — superseded by this audit.
+
+## Reference pointers
+- Proven updater: commit c48ff83 (scripts/update-data.ts = 2195 lines, 97 exports; scripts/update-data.test.ts = 795 lines, 53 tests / 219 expect calls — re-verified green in this session).
+- Regression to NOT build on: c952998 (2318 lines, 59 exports; 519-line test file, 48 tests) — currently on main.
+- Last good feed commit: 54b8b14 ("data update: Wed Sep 23 22:20:02 EDT 2026"; generatedAt 2026-09-24T02:16:41Z).
+- VanEck reference output style: `[  1/100] VNVCK holdings=123 history=456` … `Done. updated=100 unchanged=0 failed=0 · funds=100 …`.
+- Fund-page element-id conventions (see parseFundPage in c48ff83): snapshot-*, price-*, distributions-distributionFrequency, distributions-12MonthYield, #total-return-table, #holdings.
+- Dev refresh trigger: dev-run/request.txt (KEY=VALUE per line); probe trigger: probe/urls.txt (`URL | cmd=…` per line).
+-->
