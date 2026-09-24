@@ -7355,3 +7355,9 @@ Implementation checkpoint 8/… — the static feed now emits the **official** p
 <!-- answer:
 Implementation checkpoint 9/… — `SEC_YIELD=min:max` now filters against each fund page's **actual parsed** SEC 30-Day Yield. Missing official yield fails an active bound; published NOBL 2.09% matches `2:3` and fails `3:`. A necessary default-filter fix: `:` is genuinely unbounded even for a missing value (`matchesRange(null, {min:undefined,max:undefined})` now passes). Previously the shipped workflow's default `SEC_YIELD=":"` would have filtered **every** fund due to a truthy empty range object. The CLI help now explains the functional filter. `bun run test`: 58 pass / 0 fail / 252 assertions, tsc and diff check clean; no API data touched.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 10/… — corrected the browser's SEC Yield tooltip, null handling and Overview fallback. The catalog already reads `metrics.secYield` and can display parsed values without a layout change; when a page omits the element the table and Overview now show `—`, never the false universal claim "not published by ProShares for its ETFs". Bond YTM is identified as a **separate** characteristic. Auditing the same Overview revealed one more genuine `—` presentation bug: `Dividend Yield` used only `meta.yields.dividendYieldText` (raw 12-Month Yield) instead of the existing `effectiveYieldText` (official or indicated); it now shows the same honest computed fallback as the catalog, while the separate 12-Month and Indicated rows remain. Updated both tooltips. `bun build app.tsx --target browser` and diff check pass; no API data changed.
+-->
