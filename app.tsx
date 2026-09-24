@@ -177,7 +177,7 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Holdings: 'Rows in the fund\'s latest official daily holdings file (psdlyhld).',
   History: 'Rows in the fund\'s official daily NAV history file.',
   'As Of': 'As-of date of the NAV / net assets figures.',
-  Frequency: 'Distribution frequency — the declared schedule published in the ProShares fund page distributions block. Codes: 00 — / None / Unknown, 01 Monthly, 04 Quarterly, 06 Semi-annually, 12 Annually, 99 Irregular. The Overview tab shows the raw label.',
+  Frequency: 'Distribution frequency — the declared schedule on the ProShares fund page. 00 - None means no schedule was published, not necessarily no past distributions; some funds have paid without declaring a frequency. Codes: 01 Monthly, 04 Quarterly, 06 Semi-annually, 12 Annually, 99 Irregular. Overview keeps the provider\'s raw label.',
   'Ex-Date': 'Ex-dividend date of the latest distribution, from the official ProShares distribution summary API.',
   Dividend: 'Latest distribution per share, from the official ProShares distribution summary API. "—" if the fund has never made a distribution.',
   Coupon: 'Bond annual coupon rate (%), as published in the official ProShares daily holdings file (empty for non-bond positions).',
@@ -329,7 +329,7 @@ function formatPercent(value: unknown): string {
 function formatDividendFrequency(value: unknown): string {
   const raw = String(value ?? '').trim();
   const normalized = raw.toLowerCase().replace(/[‐‑‒–—]/g, '-').replace(/\s+/g, ' ');
-  if (!normalized || normalized === '-') return '00 - —';
+  if (!normalized || normalized === '-') return '00 - None';
   if (normalized === 'monthly') return '01 - Monthly';
   if (normalized === 'quarterly') return '04 - Quarterly';
   if (normalized === 'semi-annual' || normalized === 'semi-annually' || normalized === 'semiannual') return '06 - Semi-annually';
