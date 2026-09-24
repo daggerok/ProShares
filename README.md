@@ -7295,3 +7295,15 @@ Items that are already implemented or no longer actual were removed from the ear
 - Fund-page element-id conventions (see parseFundPage in c48ff83): snapshot-*, price-*, distributions-distributionFrequency, distributions-12MonthYield, #total-return-table, #holdings.
 - Dev refresh trigger: dev-run/request.txt (KEY=VALUE per line); probe trigger: probe/urls.txt (`URL | cmd=…` per line).
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- message:
+great, now please implement that plan and please do like I asked, each little complete code change or file refactoring - to not loose it with [arena.ai](http://arena.ai) rate limits - please commit it and push and only after the continue to next step, and then next little step is ready - repat and continue, so we will have everything before rate limits... please
+-->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 1/… — main-branch refresh safety (plan step 1). Checked the public GitHub Actions run 35946895372: "Dev data refresh" on main completed with **failure**, so there is no longer a running full-feed job to cancel. Fetched origin/main; it is still 293f4b2 and has no later generated-data commit. No restore of api/proshares is necessary. From here on, run only bounded `TICKERS=…` smoke tests; the full 173-fund run remains with the user. Each subsequent small change is documented here, committed and pushed before starting the next.
+-->
