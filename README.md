@@ -7416,3 +7416,9 @@ Implementation checkpoint 18/… — second bounded smoke succeeded (run 3595308
 <!-- answer:
 Implementation checkpoint 19/… — fixed another audited filter mismatch: `DIVIDEND_YIELD=min:max` used to reject every fund without a printed 12-Month Yield **before** it fetched distributions, even when the feed had a valid computed indicated yield (e.g. TQQQ 0.7938%, IQMM 3.6013%). It now checks the **same official-or-indicated value** as `buildFeed`, after fetching official payout rows but before fetching/writing holdings. A shared pure resolver prevents drift. `:` stays unbounded for nulls; an active range excludes genuinely missing values. CLI help, README controls and shipped workflow input all describe this accurately. `bun run test`: 60 pass / 0 fail / 266 assertions, tsc and diff check clean; no full refresh and no API artifacts changed in this checkpoint.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 20/… — bounded retry/failure behavior now matches the progress logs. The old `fetchText` accidentally retried non-retryable HTTP 404/400 because it prefixed the error with the source label before testing a regex anchored at `^HTTP`; on the **last** retryable HTTP 500 it even logged an impossible extra attempt and slept another 60 seconds before throwing. It now distinguishes an HTTP response status from a transport exception: permanent statuses fail immediately, retries/backoff occur only if a retry remains, and the final failure has the ticker-labelled source. Unit tests with mocked HTTP 404 and 500 (zero remaining retries) verify one request and no false retry warning. `bun run test`: 62 pass / 0 fail / 272 assertions; tsc and diff check clean. No API artifacts or full data runs in this step.
+-->

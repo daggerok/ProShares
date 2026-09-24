@@ -20,6 +20,7 @@ import {
   cumulativeFromAnnualized,
   decodeEntities,
   distributionRowsForCsv,
+  fetchText,
   formatAumDisplay,
   formatElapsed,
   formatFundProgress,
@@ -414,6 +415,48 @@ describe('per-fund progress', () => {
     expect(formatFundProgress(progressLabel('BOIL', 2, 7), { nav: '—', ter: '—', aumValue: null, distributionFrequency: '00 - —', holdings: 0, history: 15, metrics: { dividendYieldText: '—' } }, false, 99))
       .toBe('[   2/7] BOIL ok (unchanged) · holdings 0 · history 15 · 0.1s');
     expect(JSON.stringify(before)).toBe(snapshot);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// HTTP retry policy (no external requests)
+// ---------------------------------------------------------------------------
+
+describe('HTTP retry policy', () => {
+  test('a permanent HTTP 404 fails on the first try, even with retries available', async () => {
+    const originalFetch = globalThis.fetch;
+    const originalWarn = console.warn;
+    let calls = 0;
+    const warnings: string[] = [];
+    globalThis.fetch = (async () => { calls++; return new Response('missing', { status: 404, statusText: 'Not Found' }); }) as unknown as typeof fetch;
+    console.warn = (message: unknown) => { warnings.push(String(message)); };
+    try {
+      await expect(fetchText('https://example.test/missing', {}, readConfig({ MAX_RETRIES: '3', REQUEST_SLEEP: '0' }), 'SPCF fund page'))
+        .rejects.toThrow('SPCF fund page: HTTP 404 Not Found');
+      expect(calls).toBe(1);
+      expect(warnings).toEqual([]);
+    } finally {
+      globalThis.fetch = originalFetch;
+      console.warn = originalWarn;
+    }
+  });
+
+  test('an exhausted retryable HTTP 500 fails without a phantom retry', async () => {
+    const originalFetch = globalThis.fetch;
+    const originalWarn = console.warn;
+    let calls = 0;
+    const warnings: string[] = [];
+    globalThis.fetch = (async () => { calls++; return new Response('retryable', { status: 500, statusText: 'Internal Server Error' }); }) as unknown as typeof fetch;
+    console.warn = (message: unknown) => { warnings.push(String(message)); };
+    try {
+      await expect(fetchText('https://example.test/error', {}, readConfig({ MAX_RETRIES: '0', REQUEST_SLEEP: '0' }), 'BIS fund page'))
+        .rejects.toThrow('BIS fund page: HTTP 500 Internal Server Error');
+      expect(calls).toBe(1);
+      expect(warnings).toEqual([]);
+    } finally {
+      globalThis.fetch = originalFetch;
+      console.warn = originalWarn;
+    }
   });
 });
 

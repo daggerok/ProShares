@@ -582,6 +582,7 @@ export async function fetchText(
   let lastError = '';
   for (let attempt = 0; attempt <= config.maxRetries; attempt++) {
     await paceRequests(config);
+    let httpFailureStatus: number | null = null;
     try {
       const response = await fetch(url, { headers });
       if (response.ok) {
@@ -589,14 +590,15 @@ export async function fetchText(
         if (config.storeRawDownloads && rawName) recordRawSample(rawName, text);
         return text;
       }
+      httpFailureStatus = response.status;
       lastError = `HTTP ${response.status} ${response.statusText}`;
-      if (!RETRY_STATUS.has(response.status)) throw new Error(`${label}: ${lastError}`);
     } catch (error) {
-      const message = errorMessage(error);
-      lastError = message;
-      if (/^HTTP \d+/.test(message) && !RETRY_STATUS.has(Number(message.slice(5, 8)))) throw error;
-      if (attempt === config.maxRetries) throw new Error(`${label}: ${message}`);
+      lastError = errorMessage(error);
     }
+    // A 4xx not in the retry list is permanent. A terminal 5xx/network error
+    // must fail immediately too: never log a phantom retry or sleep again.
+    if (httpFailureStatus !== null && !RETRY_STATUS.has(httpFailureStatus)) throw new Error(`${label}: ${lastError}`);
+    if (attempt === config.maxRetries) throw new Error(`${label}: ${lastError}`);
     const backoff = 15_000 * (attempt + 1);
     console.warn(formatRetry(label, lastError, Math.round(backoff / 1000), attempt + 1, config.maxRetries));
     await sleep(backoff);
