@@ -38,6 +38,9 @@ jobs:
             export "$line"
           done < dev-run/request.txt
           set +a
+          # Never start an unbounded dev-run job by accident. The user will run
+          # the full catalog pass separately after the bounded smoke test.
+          bun -e 'import { readConfig } from "./scripts/update-data.ts"; if (!readConfig().tickers.length) { console.error("Refusing unbounded dev refresh: set TICKERS in dev-run/request.txt"); process.exit(2); }'
           mkdir -p dev-run
           set +e
           bun ./scripts/update-data.ts > dev-run/last-run.log 2>&1

@@ -7368,3 +7368,9 @@ Implementation checkpoint 10/… — corrected the browser's SEC Yield tooltip, 
 <!-- answer:
 Implementation checkpoint 11/… — corrected the visible README's source table, SEC-yield limitations and filter table, the updater's CLI help and the shipped workflow's SEC_YIELD description. The visible docs now distinguish official page yields from truthful `—` on pages that omit them, and warn that previously published funds retain old `—` until a bounded or user-run full refresh. Auditing the CLI exposed two more stale claims: this updater does **not** contact Yahoo (`SKIP_YAHOO` removed from the controls table), and `SKIP_PROSHARES` is parsed but **never used** (marked a legacy no-op in the README, CLI and workflow rather than claiming it skips requests). Historical conversation in README comments is preserved, with the correction documented here. `bun run test`: 58 pass / 0 fail; tsc and diff check clean.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 12/… — safety guard for the kept dev-refresh workflow. `.github/workflows/dev-update.yml` now calls `readConfig()` before any network work and **refuses to run unless TICKERS parses to a nonempty allowlist**; this prevents the old `MAX_FETCHES=0` request from accidentally starting a 173-fund pass. Local preflight with empty TICKERS exited 2; with the seven smoke tickers it passed. One audit correction to checkpoint 5: the **committed** SPCF index already has the correct `leveraged-and-inverse/spcf` URL; only the earlier written plan's `strategic/spcf` example was wrong (the strategic URL returned 404). No SPCF URL fix is required. Next, push a bounded seven-ticker trigger and wait for the bot's feed/log commit before further code pushes.
+-->
