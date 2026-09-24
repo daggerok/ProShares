@@ -1,0 +1,44 @@
+{
+ "ticker": "ACSP",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "S&P500 Futures 35% Autocall SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "99.8566870063",
+   "Market Value": "—",
+   "Shares Held": "2692",
+   "Exposure Value": "26692122.2"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "5005000",
+   "Shares Held": "50000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "21725430.38",
+   "Shares Held": "21725430.38",
+   "Exposure Value": "—"
+  }
+ ]
+}

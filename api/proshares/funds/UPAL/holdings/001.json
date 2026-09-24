@@ -1,0 +1,62 @@
+{
+ "ticker": "UPAL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "abrdn Physical Palladium Shares ETF (PALL) SWAP BOA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "111.8765466238",
+   "Market Value": "—",
+   "Shares Held": "3862",
+   "Exposure Value": "3190938.88"
+  },
+  {
+   "Name": "abrdn Physical Palladium Shares ETF (PALL) SWAP Goldman Sachs",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "41.8016200876",
+   "Market Value": "—",
+   "Shares Held": "1443",
+   "Exposure Value": "1192264.32"
+  },
+  {
+   "Name": "abrdn Physical Palladium Shares ETF (PALL) SWAP Citi",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.1400231325",
+   "Market Value": "—",
+   "Shares Held": "1144",
+   "Exposure Value": "945218.56"
+  },
+  {
+   "Name": "abrdn Physical Palladium Shares ETF (PALL) SWAP Nomura",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "13.0648168118",
+   "Market Value": "—",
+   "Shares Held": "451",
+   "Exposure Value": "372634.24"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "2852196.44",
+   "Shares Held": "2852196.44",
+   "Exposure Value": "—"
+  }
+ ]
+}

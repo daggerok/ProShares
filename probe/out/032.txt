@@ -1,0 +1,164 @@
+URL: import re
+STATUS: 000 0 bytes 000 0 -
+STDERR:
+curl: (3) URL rejected: Malformed input to a URL function
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+_iaq = [ ['client', 'fc24f936bf5a4115936905b661d32dc4'], ['track', 'consume'] ]; !function(d,s){var ia=d.createElement(s);ia.async=1,s=d.getElementsByTagName(s)[0],ia.src='//s.USEA01.idio.episerver.net/ia.js',s.parentNode.insertBefore(ia,s)}(document,'script');
+</script>
+
+
+            <meta name="title" content="IGHG | Investment Grade - Interest Rate Hedged ETF | ProShares" />
+            <meta name="description" content="ProShares Investment Grade—Interest Rate Hedged ETF (IGHG) targets zero interest rate risk with a portfolio of investment grade corporate bonds." />
+            <meta name="keywords" content="IGHG, ProShares" />
+            <meta property="og:url" content="https://www.proshares.com/our-etfs/strategic/ighg" />
+            <meta property="og:title" content="IGHG | Investment Grade - Interest Rate Hedged ETF | ProShares" />
+            <meta property="og:description" content="ProShares Investment Grade—Interest Rate Hedged ETF (IGHG) targets zero interest rate risk with a portfolio of investment grade corporate bonds." />
+            <meta property="og:image" content="https://www.proshares.com/globalassets/proshares/ps-logo_new.png" />
+            <meta property="og:type" content="StrategicFund" />
+            <meta itemprop="name" content="IGHG | Investment Grade - Interest Rate Hedged ETF | ProShares" />
+            <meta itemprop="description" content="ProShares Investment Grade—Interest Rate Hedged ETF (IGHG) targets zero interest rate risk with a portfolio of investment grade corporate bonds." />
+            <title>IGHG | Investment Grade - Interest Rate Hedged ETF | ProShares</title>
+            <link rel="canonical" href="https://www.proshares.com/our-etfs/strategic/ighg" />
+    <!-- Favicon -->
+        <link rel="shortcut icon" href="/contentassets/53d45dcd6816447eb9b1802a7690ca57/proshares-fav-icon.png" type="image/x-icon" />
+
+
+
+    <!-- <link rel="shortcut icon" href="/Static/favicon.ico" type="image/x-icon" />  -->
+    
+    
+
+    <!-- CSS here -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type='text/javascript'>
+        var zaius = window['zaius'] || (window['zaius'] = []); zaius.methods = ["initialize", "onload", "customer", "entity", "event", "subscribe", "unsubscribe", "consent", "identify", "anonymize", "dispatch"]; zaius.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); zaius.push(t); return zaius } }; (function () { for (var i = 0; i < zaius.methods.length; i++) { var method = zaius.methods[i]; zaius[method] = zaius.factory(method) } var e = document.createElement("script"); e.type = "text/javascript"; e.async = true; e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "d1igp3oop3iho5.cloudfront.net/v2/tkBR6uWRFV7L-S-7GJlOzw/zaius-min.js"; var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(e, t) })();
+        // Edits to this script should only be made below this line.
+        zaius.event('pageview');
+    </script>
+
+    <link rel="stylesheet" href="/areas/proshares/assets/style.css?17092026-091117">
+    <link rel="stylesheet" href="/areas/proshares/assets/content.css?17092026-091117">
+    <link rel="stylesheet" href="/areas/proshares/assets/chart.css?17092026-091117">
+    <link rel="stylesheet" href="/areas/proshares/assets/constituents.css?17092026-091117">
+    <link rel="stylesheet" href="/areas/proshares/assets/graph-exposures.css?17092026-091117">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet">
+            <!-- Google Tag Manager -->
+            <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MV5W5N6');</script>
+            <!-- End Google Tag Manager -->
+
+
+
+<script type="text/javascript">var appInsights=window.appInsights||function(config){function t(config){i[config]=function(){var t=arguments;i.queue.push(function(){i[config].apply(i,t)})}}var i={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",r,f;setTimeout(function(){var t=u.createElement(o);t.src=config.url||"https://js.monitor.azure.com/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(t)});try{i.cookie=u.cookie}catch(y){}for(i.queue=[],r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)t("track"+r.pop());return t("set"+s),t("clear"+s),t(h+a),t(c+a),t(h+v),t(c+v),t("flush"),config.disableExceptionTracking||(r="onerror",t("_"+r),f=e[r],e[r]=function(config,t,u,e,o){var s=f&&f(config,t,u,e,o);return s!==!0&&i["_"+r](config,t,u,e,o),s}),i}({instrumentationKey:"43ce0664-9b1e-4b17-8f9e-3dd03ae533d4",sdkExtension:"a"});window.appInsights=appInsights;appInsights.queue&&appInsights.queue.length===0&&appInsights.trackPageView();</script></head>
+
+
+<body>
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5W5N6"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager -->
+        <div id="root" class="root">
+
+
+
+<header class="site-header">
+    <div class="site-header__wrapper container">
+        <nav class="navbar navbar-expand-lg navbar-light site-header__navbar align-items-center">
+                <a class="navbar-brand" href="/"><img class="logo d-block" src="/globalassets/proshares/ps-logo_new.png" height="34" /></a>
+
+
+
+            <div class="collapse navbar-collapse desktop-menu">
+                <ul class="navbar-nav container">
+                        <li class="dropdown nav-item site-header__navbar-dropdown funds">
+                            <a class="position-relative nav-link text-util-sm" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" id="funds">
+                                Our ETFs
+                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-16 fa-md cta-link__icon align-middle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M13.49 5.24a.75.75 0 00-.54.22.75.75 0 000 1.06l4.73 4.71H4.48a.75.75 0 00-.75.75.75.75 0 00.75.75h13.24l-4.77 4.75a.75.75 0 000 1.06.75.75 0 001.06 0l6.04-6a.75.75 0 000-1.07L14 5.46a.75.75 0 00-.52-.22z"></path>
+                                </svg>
+                            </a>
+                                <div class="dropdown-menu w-100" aria-labelledby="#Our ETFs">
+                                    <div class="container d-block">
+                                        
+                                        <button class="site-header__mobile-sub-submenu-toggle site-header__mobile-sub-submenu-close" type="button">
+                                            <div class="site-header__mobile-menu-action-inner align-items-center mt-3 text-util-sm">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-16 fa-lg site-header__mobile-submenu-icon mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" d="M10.51 18.76a.75.75 0 00.54-.22.75.75 0 000-1.06l-4.73-4.71h13.2a.75.75 0 00.75-.75.75.75 0 00-.75-.75H6.28l4.77-4.75a.75.75 0 000-1.06.75.75 0 00-1.06 0l-6.04 6a.75.75 0 000 1.07L10 18.54a.75.75 0 00.52.22z"></path>
+                                                </svg>
+                                                <h4>Our ETFs</h4>
+                                            </div>
+                                        </button>
+                                                <div class="tabs etftabs">
+                                                    <div class="site-header__ouretfs d-lg-flex d-none">
+                                                        <div class="site-header__ouretfs-single">
+                                                            <div class="site-header__ouretfs-card" role="menuitem" id="view-etf">
+                                                                <div>
+                                                                        <h5>View ETFs</h5>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="site-header__ouretfs-card" role="menuitem" id="geared-etf">
+                                                                <div>
+                                                                        <h5>Geared ETFs</h5>
+                                                                                                                                            <div class="site-header__ouretfs-subheader">(Leveraged &amp; Inverse)</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="site-header__ouretfs-content">
+                                                            <div data-target="#view-etf" class="site-header__ouretfs-list">
+                                                                <div class="site-header__ouretfs-group-wrapper">
+                                                                    <div class="site-header__resources-group">
+                                                                        <p class="text-util-lg-semibold site-header__resources-header">EQUITY</p>
+                                                                        <ul class="site-header__resources-list">
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs?strategy=DividendGrowers&amp;product=Product+Overview&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">Dividend Growers</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs/?strategy=AutocallableIncome&amp;product=Product+Overview+&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">Autocallable Income</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs?strategy=HighIncome&amp;product=Product+Overview+&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">High Income</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs/?strategy=Ex-Sector&amp;product=Product+Overview+&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">Ex-Sector</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="site-header__resources-group">
+                                                                        <p class="text-util-lg-semibold site-header__resources-header">OTHER</p>
+                                                                        <ul class="site-header__resources-list">
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs?strategy=Crypto-Linked&amp;product=Product+Overview+&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">Crypto</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs/?strategy=MoneyMarket&amp;product=Product+Overview+&amp;search=">
+                                                                                            <div class="d-flex align-items-center"><h6 class="mb-0 pr-2">Money Market</h6></div>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li class="site-header__resources-list-item">
+                                                                                        <a class="site-header__resources-header-link" href="/our-etfs/find-proshares-etfs/?s

@@ -1,0 +1,53 @@
+{
+ "ticker": "SDD",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "S&P SmallCap 600 Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-102.0185596754",
+   "Market Value": "—",
+   "Shares Held": "-908",
+   "Exposure Value": "-1535328.12"
+  },
+  {
+   "Name": "S&P SmallCap 600 Index SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-69.7726052406",
+   "Market Value": "—",
+   "Shares Held": "-621",
+   "Exposure Value": "-1050042.69"
+  },
+  {
+   "Name": "S&P SmallCap 600 Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-28.2011657253",
+   "Market Value": "—",
+   "Shares Held": "-251",
+   "Exposure Value": "-424413.39"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1504949.81",
+   "Shares Held": "1504949.81",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+URL: https://accounts.profunds.com/etfdata/psdlyhld.csv
+STATUS: 200 1857021 bytes text/csv
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; python3 - <<'PY' > /tmp/w.txt
+bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `PY')

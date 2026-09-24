@@ -1,0 +1,320 @@
+{
+ "ticker": "TDV",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 38,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held"
+ ],
+ "rows": [
+  {
+   "Name": "HP INC",
+   "Ticker": "HPQ",
+   "Identifier": "BYX4D52",
+   "Weight": "3.5919784330",
+   "Market Value": "9653603.2",
+   "Shares Held": "280628"
+  },
+  {
+   "Name": "ACCENTURE PLC-CL A",
+   "Ticker": "ACN",
+   "Identifier": "B4BNMY3",
+   "Weight": "3.3917359304",
+   "Market Value": "9115442.49",
+   "Shares Held": "50281"
+  },
+  {
+   "Name": "MICROSOFT CORP",
+   "Ticker": "MSFT",
+   "Identifier": "2588173",
+   "Weight": "3.3157577272",
+   "Market Value": "8911247.66",
+   "Shares Held": "18047"
+  },
+  {
+   "Name": "SS&C TECHNOLOGIES HOLDINGS",
+   "Ticker": "SSNC",
+   "Identifier": "B58YSC6",
+   "Weight": "3.1257089856",
+   "Market Value": "8400483.14",
+   "Shares Held": "105098"
+  },
+  {
+   "Name": "DOLBY LABORATORIES INC-CL A",
+   "Ticker": "DLB",
+   "Identifier": "B04NJM9",
+   "Weight": "3.0754018664",
+   "Market Value": "8265280.5",
+   "Shares Held": "143370"
+  },
+  {
+   "Name": "ORACLE CORP",
+   "Ticker": "ORCL",
+   "Identifier": "2661568",
+   "Weight": "3.0744109471",
+   "Market Value": "8262617.36",
+   "Shares Held": "55976"
+  },
+  {
+   "Name": "GENPACT LTD",
+   "Ticker": "G",
+   "Identifier": "B23DBK6",
+   "Weight": "2.9815949115",
+   "Market Value": "8013170.1",
+   "Shares Held": "234715"
+  },
+  {
+   "Name": "MOTOROLA SOLUTIONS INC",
+   "Ticker": "MSI",
+   "Identifier": "B5BKPQ4",
+   "Weight": "2.9729853064",
+   "Market Value": "7990031.4",
+   "Shares Held": "17420"
+  },
+  {
+   "Name": "BROADRIDGE FINANCIAL SOLUTIO",
+   "Ticker": "BR",
+   "Identifier": "B1VP7R6",
+   "Weight": "2.9667009388",
+   "Market Value": "7973141.88",
+   "Shares Held": "48876"
+  },
+  {
+   "Name": "CDW CORP/DE",
+   "Ticker": "CDW",
+   "Identifier": "BBM5MD6",
+   "Weight": "2.9512208512",
+   "Market Value": "7931538.45",
+   "Shares Held": "54255"
+  },
+  {
+   "Name": "INTL BUSINESS MACHINES CORP",
+   "Ticker": "IBM",
+   "Identifier": "2005973",
+   "Weight": "2.9237562306",
+   "Market Value": "7857726.05",
+   "Shares Held": "34231"
+  },
+  {
+   "Name": "ROPER TECHNOLOGIES INC",
+   "Ticker": "ROP",
+   "Identifier": "2749602",
+   "Weight": "2.9014290685",
+   "Market Value": "7797720.8",
+   "Shares Held": "20920"
+  },
+  {
+   "Name": "AVNET INC",
+   "Ticker": "AVT",
+   "Identifier": "2066505",
+   "Weight": "2.7950692888",
+   "Market Value": "7511874.12",
+   "Shares Held": "78151"
+  },
+  {
+   "Name": "INTUIT INC",
+   "Ticker": "INTU",
+   "Identifier": "2459020",
+   "Weight": "2.7933627015",
+   "Market Value": "7507287.59",
+   "Shares Held": "24761"
+  },
+  {
+   "Name": "MASTERCARD INC - A",
+   "Ticker": "MA",
+   "Identifier": "B121557",
+   "Weight": "2.7846149443",
+   "Market Value": "7483777.6",
+   "Shares Held": "13240"
+  },
+  {
+   "Name": "JACK HENRY & ASSOCIATES INC",
+   "Ticker": "JKHY",
+   "Identifier": "2469193",
+   "Weight": "2.7768246743",
+   "Market Value": "7462840.9",
+   "Shares Held": "48194"
+  },
+  {
+   "Name": "BADGER METER INC",
+   "Ticker": "BMI",
+   "Identifier": "2069128",
+   "Weight": "2.7468882141",
+   "Market Value": "7382385.32",
+   "Shares Held": "55607"
+  },
+  {
+   "Name": "CASS INFORMATION SYSTEMS INC",
+   "Ticker": "CASS",
+   "Identifier": "2086558",
+   "Weight": "2.7316789871",
+   "Market Value": "7341509.84",
+   "Shares Held": "134116"
+  },
+  {
+   "Name": "VISA INC-CLASS A SHARES",
+   "Ticker": "V",
+   "Identifier": "B2PZN04",
+   "Weight": "2.7311245256",
+   "Market Value": "7340019.7",
+   "Shares Held": "19930"
+  },
+  {
+   "Name": "APPLE INC",
+   "Ticker": "AAPL",
+   "Identifier": "2046251",
+   "Weight": "2.7033781051",
+   "Market Value": "7265449.95",
+   "Shares Held": "21615"
+  },
+  {
+   "Name": "TE CONNECTIVITY PLC",
+   "Ticker": "TEL",
+   "Identifier": "BRC3N84",
+   "Weight": "2.6881863401",
+   "Market Value": "7224621.4",
+   "Shares Held": "35170"
+  },
+  {
+   "Name": "QUALCOMM INC",
+   "Ticker": "QCOM",
+   "Identifier": "2714923",
+   "Weight": "2.6521002152",
+   "Market Value": "7127638.32",
+   "Shares Held": "40106"
+  },
+  {
+   "Name": "AMPHENOL CORP-CL A",
+   "Ticker": "APH",
+   "Identifier": "2145084",
+   "Weight": "2.5808209140",
+   "Market Value": "6936072",
+   "Shares Held": "89440"
+  },
+  {
+   "Name": "COGNEX CORP",
+   "Ticker": "CGNX",
+   "Identifier": "2208288",
+   "Weight": "2.5798191372",
+   "Market Value": "6933379.68",
+   "Shares Held": "112628"
+  },
+  {
+   "Name": "LITTELFUSE INC",
+   "Ticker": "LFUS",
+   "Identifier": "2531832",
+   "Weight": "2.5692596261",
+   "Market Value": "6905000.52",
+   "Shares Held": "16929"
+  },
+  {
+   "Name": "CISCO SYSTEMS INC",
+   "Ticker": "CSCO",
+   "Identifier": "2198163",
+   "Weight": "2.5578664098",
+   "Market Value": "6874380.74",
+   "Shares Held": "62774"
+  },
+  {
+   "Name": "ANALOG DEVICES INC",
+   "Ticker": "ADI",
+   "Identifier": "2032067",
+   "Weight": "2.5463255196",
+   "Market Value": "6843364.08",
+   "Shares Held": "18214"
+  },
+  {
+   "Name": "UNIVERSAL DISPLAY CORP",
+   "Ticker": "OLED",
+   "Identifier": "2277880",
+   "Weight": "2.5152016560",
+   "Market Value": "6759717.3",
+   "Shares Held": "86331"
+  },
+  {
+   "Name": "TEXAS INSTRUMENTS INC",
+   "Ticker": "TXN",
+   "Identifier": "2885409",
+   "Weight": "2.3754623033",
+   "Market Value": "6384161.52",
+   "Shares Held": "23943"
+  },
+  {
+   "Name": "LAM RESEARCH CORP",
+   "Ticker": "LRCX",
+   "Identifier": "BSML4N7",
+   "Weight": "2.3649818048",
+   "Market Value": "6355994.71",
+   "Shares Held": "22061"
+  },
+  {
+   "Name": "BROADCOM INC",
+   "Ticker": "AVGO",
+   "Identifier": "BDZ78H9",
+   "Weight": "2.3578225606",
+   "Market Value": "6336753.92",
+   "Shares Held": "17752"
+  },
+  {
+   "Name": "MONOLITHIC POWER SYSTEMS INC",
+   "Ticker": "MPWR",
+   "Identifier": "B01Z7J1",
+   "Weight": "2.2828554326",
+   "Market Value": "6135276.4",
+   "Shares Held": "5038"
+  },
+  {
+   "Name": "MICROCHIP TECHNOLOGY INC",
+   "Ticker": "MCHP",
+   "Identifier": "2592174",
+   "Weight": "2.2586685099",
+   "Market Value": "6070272.96",
+   "Shares Held": "82848"
+  },
+  {
+   "Name": "KLA CORP",
+   "Ticker": "KLAC",
+   "Identifier": "2480138",
+   "Weight": "2.1607237041",
+   "Market Value": "5807041.9",
+   "Shares Held": "32810"
+  },
+  {
+   "Name": "APPLIED MATERIALS INC",
+   "Ticker": "AMAT",
+   "Identifier": "2046552",
+   "Weight": "2.1034633466",
+   "Market Value": "5653152.12",
+   "Shares Held": "12716"
+  },
+  {
+   "Name": "KULICKE & SOFFA INDUSTRIES",
+   "Ticker": "KLIC",
+   "Identifier": "2498001",
+   "Weight": "2.0634462137",
+   "Market Value": "5545604.28",
+   "Shares Held": "66702"
+  },
+  {
+   "Name": "POWER INTEGRATIONS INC",
+   "Ticker": "POWI",
+   "Identifier": "2133045",
+   "Weight": "1.8218657371",
+   "Market Value": "4896345.91",
+   "Shares Held": "97169"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "498560.89",
+   "Shares Held": "498560.89"
+  }
+ ]
+}

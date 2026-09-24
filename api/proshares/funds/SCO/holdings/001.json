@@ -1,0 +1,62 @@
+{
+ "ticker": "SCO",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "WTI CRUDE FUTURE Dec26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-68.5080922987",
+   "Market Value": "—",
+   "Shares Held": "-7822",
+   "Exposure Value": "-720015100"
+  },
+  {
+   "Name": "WTI CRUDE FUTURE Jun27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-66.5088559090",
+   "Market Value": "—",
+   "Shares Held": "-8883",
+   "Exposure Value": "-699003270"
+  },
+  {
+   "Name": "WTI CRUDE FUTURE DEC27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-64.9494341511",
+   "Market Value": "—",
+   "Shares Held": "-9286",
+   "Exposure Value": "-682613860"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "—",
+   "Shares Held": "3000000",
+   "Exposure Value": "300330000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1050992774.49",
+   "Shares Held": "1050992774.49",
+   "Exposure Value": "—"
+  }
+ ]
+}

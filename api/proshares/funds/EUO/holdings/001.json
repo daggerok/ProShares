@@ -1,0 +1,53 @@
+{
+ "ticker": "EUO",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "EURO/US DOLLAR FORWARD - UBS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-105.6778889145",
+   "Market Value": "—",
+   "Shares Held": "-31013199",
+   "Exposure Value": "-35652268.84"
+  },
+  {
+   "Name": "EURO/US DOLLAR FORWARD - GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-94.9103648770",
+   "Market Value": "—",
+   "Shares Held": "-27853263",
+   "Exposure Value": "-32019657.84"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "—",
+   "Shares Held": "100000",
+   "Exposure Value": "10010000"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "33736734.53",
+   "Shares Held": "33736734.53",
+   "Exposure Value": "—"
+  }
+ ]
+}

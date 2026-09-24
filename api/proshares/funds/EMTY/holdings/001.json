@@ -1,0 +1,62 @@
+{
+ "ticker": "EMTY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "Solactive-ProShares B&M Retail Index SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-58.9134000820",
+   "Market Value": "—",
+   "Shares Held": "-1055",
+   "Exposure Value": "-1843116.65"
+  },
+  {
+   "Name": "Solactive-ProShares B&M Retail Index SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-19.9356244827",
+   "Market Value": "—",
+   "Shares Held": "-357",
+   "Exposure Value": "-623689.71"
+  },
+  {
+   "Name": "Solactive-ProShares B&M Retail Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-14.7423105418",
+   "Market Value": "—",
+   "Shares Held": "-264",
+   "Exposure Value": "-461215.92"
+  },
+  {
+   "Name": "Solactive-ProShares B&M Retail Index SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-6.3101556486",
+   "Market Value": "—",
+   "Shares Held": "-113",
+   "Exposure Value": "-197414.39"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3128518.55",
+   "Shares Held": "3128518.55",
+   "Exposure Value": "—"
+  }
+ ]
+}

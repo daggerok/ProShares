@@ -1,0 +1,5 @@
+URL: https://www.proshares.com/our-etfs/strategic/ighg
+STATUS: 200 389022 bytes text/html; charset=utf-8
+CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/ighg -o /tmp/i.html; echo "=== site-rendered first holdings rows (Weight|Ticker|Description|MV):"; python3 - <<'PY'
+bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `PY')
+=== site-rendered first holdings rows (Weight|Ticker|Description|MV):

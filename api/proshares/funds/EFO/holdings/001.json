@@ -1,0 +1,80 @@
+{
+ "ticker": "EFO",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 7,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "98.4284755151",
+   "Market Value": "—",
+   "Shares Held": "12026",
+   "Exposure Value": "27076057.96"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "32.8858818077",
+   "Market Value": "—",
+   "Shares Held": "4018",
+   "Exposure Value": "9046366.28"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP BANK OF AMERICA NA BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "30.4769950732",
+   "Market Value": "—",
+   "Shares Held": "3723.68",
+   "Exposure Value": "8383721.08"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "28.9981780102",
+   "Market Value": "—",
+   "Shares Held": "3543",
+   "Exposure Value": "7976922.78"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "9.3304891142",
+   "Market Value": "—",
+   "Shares Held": "1140",
+   "Exposure Value": "2566664.4"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "15015000",
+   "Shares Held": "150000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "12493358.55",
+   "Shares Held": "12493358.55",
+   "Exposure Value": "—"
+  }
+ ]
+}

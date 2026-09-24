@@ -1,0 +1,522 @@
+{
+ "ticker": "EFO",
+ "name": "Ultra MSCI EAFE",
+ "category": "Equity",
+ "categoryPath": "Equity > International",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/efo",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/EFO-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/EFO-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=EFO&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/EFO-psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/EFO-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347X500",
+  "isin": null,
+  "indexTicker": "MXEA",
+  "indexName": "MSCI EAFE Index (MXEA)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "1.87%",
+   "value": 1.87
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
+ },
+ "nav": {
+  "display": "$73.36",
+  "value": 73.36,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$73.51",
+  "value": 73.51,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.20%",
+  "value": 0.2045,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$27,509,660",
+  "value": 27509662.5,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 1.5947,
+  "effectiveYieldText": "1.59%",
+  "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+  "effectiveYieldComputed": true,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 1.5947,
+  "indicatedYieldText": "1.59%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jun 04 2009",
+   "mo1": 3.05,
+   "mo3": 6.38,
+   "mo6": 2.38,
+   "ytd": 21.83,
+   "yr1": 35.85,
+   "yr3": 27.48,
+   "yr5": 8.99,
+   "yr10": 10.9,
+   "sinceInception": 8.6,
+   "mo1Text": "3.05%",
+   "ytdText": "21.83%",
+   "yr1Text": "35.85%",
+   "yr3Text": "27.48%",
+   "yr5Text": "8.99%",
+   "yr10Text": "10.90%",
+   "sinceInceptionText": "8.60%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jun 04 2009",
+    "mo1": 3.06,
+    "mo3": 6.52,
+    "mo6": 2.27,
+    "ytd": 21.84,
+    "yr1": 35.65,
+    "yr3": 27.78,
+    "yr5": 8.98,
+    "yr10": 10.94,
+    "sinceInception": 8.61,
+    "mo1Text": "3.06%",
+    "ytdText": "21.84%",
+    "yr1Text": "35.65%",
+    "yr3Text": "27.78%",
+    "yr5Text": "8.98%",
+    "yr10Text": "10.94%",
+    "sinceInceptionText": "8.61%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jun 04 2009",
+   "mo1": 0.65,
+   "mo3": 15.38,
+   "mo6": 15.27,
+   "ytd": 15.27,
+   "yr1": 32.72,
+   "yr3": 23.33,
+   "yr5": 8.64,
+   "yr10": 11.22,
+   "sinceInception": 8.34,
+   "mo1Text": "0.65%",
+   "ytdText": "15.27%",
+   "yr1Text": "32.72%",
+   "yr3Text": "23.33%",
+   "yr5Text": "8.64%",
+   "yr10Text": "11.22%",
+   "sinceInceptionText": "8.34%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jun 04 2009",
+    "mo1": 0.91,
+    "mo3": 15.52,
+    "mo6": 15.42,
+    "ytd": 15.42,
+    "yr1": 32.12,
+    "yr3": 23.15,
+    "yr5": 8.65,
+    "yr10": 11.26,
+    "sinceInception": 8.35,
+    "mo1Text": "0.91%",
+    "ytdText": "15.42%",
+    "yr1Text": "32.12%",
+    "yr3Text": "23.15%",
+    "yr5Text": "8.65%",
+    "yr10Text": "11.26%",
+    "sinceInceptionText": "8.35%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "22-Mar-2023",
+    "Record Date": "23-Mar-2023",
+    "Payable Date": "29-Mar-2023",
+    "Dividend": "0.086979",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2023",
+    "Record Date": "22-Jun-2023",
+    "Payable Date": "28-Jun-2023",
+    "Dividend": "0.258310",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Sep-2023",
+    "Record Date": "21-Sep-2023",
+    "Payable Date": "27-Sep-2023",
+    "Dividend": "0.226854",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.253842",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.157658",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.228264",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2024",
+    "Record Date": "25-Sep-2024",
+    "Payable Date": "02-Oct-2024",
+    "Dividend": "0.251424",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.281083",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.135986",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.217055",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.335860",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.367567",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.182967",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.292463",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 7,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/EFO-psdlyhld.csv, as of Sep 18 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 4352,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/EFO-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json",
+   "./history/005.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Total Number of Holdings": "673",
+   "Price/Earnings Ratio": "17.94",
+   "Price/Book Ratio": "2.32",
+   "Dividend Yield ( % )": "2.67",
+   "Avg. Index Market Capitalization": "$32.05 billion",
+   "": "2018"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "International",
+   "dailyObjective": "+2x",
+   "benchmark": "MSCI EAFE Index (MXEA)"
+  },
+  "splits": [
+   {
+    "date": "May 24 2018",
+    "splitType": "Forward",
+    "ratio": 3,
+    "preSplitCusip": "74347X500",
+    "postSplitCusip": "74347X500"
+   }
+  ],
+  "exposures": [
+   {
+    "label": "Index Holdings",
+    "rows": [
+     {
+      "Company": "ASML Holding NV",
+      "Weight": 3.5413
+     },
+     {
+      "Company": "HSBC Holdings plc",
+      "Weight": 1.512754
+     },
+     {
+      "Company": "Roche Holding AG",
+      "Weight": 1.343715
+     },
+     {
+      "Company": "Novartis AG",
+      "Weight": 1.332208
+     },
+     {
+      "Company": "AstraZeneca plc",
+      "Weight": 1.311918
+     },
+     {
+      "Company": "Nestle SA",
+      "Weight": 1.23018
+     },
+     {
+      "Company": "Siemens",
+      "Weight": 1.1070119999999999
+     },
+     {
+      "Company": "Shell plc",
+      "Weight": 1.01345
+     },
+     {
+      "Company": "Tokyo Electron Ltd.",
+      "Weight": 0.985978
+     },
+     {
+      "Company": "Mitsubishi UFJ Financial Group",
+      "Weight": 0.977039
+     }
+    ]
+   },
+   {
+    "label": "Index Country Weightings",
+    "rows": [
+     {
+      "Country": "Japan",
+      "Weight": 23.522961000000002
+     },
+     {
+      "Country": "United Kingdom",
+      "Weight": 14.25516
+     },
+     {
+      "Country": "France",
+      "Weight": 9.930316999999999
+     },
+     {
+      "Country": "Switzerland",
+      "Weight": 9.570911
+     },
+     {
+      "Country": "Germany",
+      "Weight": 8.751867
+     },
+     {
+      "Country": "Australia",
+      "Weight": 6.507987
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 6.405342999999999
+     },
+     {
+      "Country": "Spain",
+      "Weight": 3.98093
+     },
+     {
+      "Country": "Sweden",
+      "Weight": 3.4267899999999996
+     },
+     {
+      "Country": "Italy",
+      "Weight": 3.3118410000000003
+     },
+     {
+      "Country": "Hong Kong",
+      "Weight": 1.721235
+     },
+     {
+      "Country": "Denmark",
+      "Weight": 1.695311
+     },
+     {
+      "Country": "Singapore",
+      "Weight": 1.678315
+     },
+     {
+      "Country": "Finland",
+      "Weight": 1.221504
+     },
+     {
+      "Country": "Belgium",
+      "Weight": 1.156339
+     },
+     {
+      "Country": "Israel",
+      "Weight": 1.145711
+     },
+     {
+      "Country": "Norway",
+      "Weight": 0.576781
+     },
+     {
+      "Country": "Ireland",
+      "Weight": 0.39671
+     },
+     {
+      "Country": "Austria",
+      "Weight": 0.361113
+     },
+     {
+      "Country": "Portugal",
+      "Weight": 0.205081
+     },
+     {
+      "Country": "New Zealand",
+      "Weight": 0.177793
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetefo.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_efo.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EFO&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EFO&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EFO&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EFO&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=EFO&document-label=semi-annual-report"
+ }
+}

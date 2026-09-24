@@ -1,0 +1,340 @@
+{
+ "ticker": "QQDN",
+ "name": "UltraShort QQQ Mega",
+ "category": "Equity",
+ "categoryPath": "Equity > Broad Market",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/qqdn",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/QQDN-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/QQDN-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=QQDN&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/QQDN-psdlyhld.csv, as of Sep 18 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/QQDN-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74349Y688",
+  "isin": null,
+  "indexTicker": "NDXMEGA",
+  "indexName": "Nasdaq-100 Mega Index (NDXMEGA)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "1.12%",
+   "value": 1.12
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
+ },
+ "nav": {
+  "display": "$20.31",
+  "value": 20.31,
+  "asOfDate": "Sep 18 2026"
+ },
+ "marketPrice": {
+  "display": "$20.32",
+  "value": 20.32,
+  "asOfDate": "Sep 18 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.05%",
+  "value": 0.0492,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$1,015,751",
+  "value": 1015750.3146,
+  "asOfDate": "Sep 18 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 4.0604,
+  "effectiveYieldText": "4.06%",
+  "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+  "effectiveYieldComputed": true,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 4.0604,
+  "indicatedYieldText": "4.06%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jun 12 2025",
+   "mo1": -6.29,
+   "mo3": 2.86,
+   "mo6": -29.76,
+   "ytd": -18.29,
+   "yr1": -31.54,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -39.54,
+   "mo1Text": "-6.29%",
+   "ytdText": "-18.29%",
+   "yr1Text": "-31.54%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "-39.54%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jun 12 2025",
+    "mo1": -5.86,
+    "mo3": 2.88,
+    "mo6": -29.87,
+    "ytd": -18.27,
+    "yr1": -31.72,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": -39.59,
+    "mo1Text": "-5.86%",
+    "ytdText": "-18.27%",
+    "yr1Text": "-31.72%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "-39.59%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jun 12 2025",
+   "mo1": 19.06,
+   "mo3": -24.82,
+   "mo6": -5.42,
+   "ytd": -5.42,
+   "yr1": -31.89,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": -35.95,
+   "mo1Text": "19.06%",
+   "ytdText": "-5.42%",
+   "yr1Text": "-31.89%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "-35.95%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jun 12 2025",
+    "mo1": 19.03,
+    "mo3": -24.76,
+    "mo6": -5.45,
+    "ytd": -5.45,
+    "yr1": -31.84,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": -36.05,
+    "mo1Text": "19.03%",
+    "ytdText": "-5.45%",
+    "yr1Text": "-31.84%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "-36.05%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.248215",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.625716",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.159253",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.206168",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 4,
+  "asOfDate": "Sep 18 2026",
+  "asOf": "2026-09-18",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/QQDN-psdlyhld.csv, as of Sep 18 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 321,
+  "asOf": "Sep 18 2026",
+  "asOfDate": "Sep 18 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/QQDN-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Total Number of Holdings": "8",
+   "Price/Earnings Ratio": "32.75",
+   "Price/Book Ratio": "12.38",
+   "Dividend Yield ( % )": "0.32",
+   "Avg. Index Market Capitalization": "$2,729.21 billion",
+   "": "2025"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "Broad Market",
+   "dailyObjective": "-2x",
+   "benchmark": "Nasdaq-100 Mega Index (NDXMEGA)"
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Index Holdings",
+    "rows": [
+     {
+      "Company": "NVIDIA Corp.",
+      "Weight": 21.686458000000002
+     },
+     {
+      "Company": "Apple Inc.",
+      "Weight": 19.033997
+     },
+     {
+      "Company": "Microsoft Corp.",
+      "Weight": 12.410158000000001
+     },
+     {
+      "Company": "Amazon.com Inc.",
+      "Weight": 11.482604
+     },
+     {
+      "Company": "Tesla Inc.",
+      "Weight": 9.410085
+     },
+     {
+      "Company": "Alphabet Inc.-Class A",
+      "Weight": 9.321533
+     },
+     {
+      "Company": "Alphabet Inc.-Class C",
+      "Weight": 8.633815
+     },
+     {
+      "Company": "Broadcom Inc.",
+      "Weight": 8.021349
+     }
+    ]
+   },
+   {
+    "label": "Index Sector Weightings",
+    "rows": [
+     {
+      "Sector": "Information Technology",
+      "Weight": 61.151962000000005
+     },
+     {
+      "Sector": "Consumer Discretionary",
+      "Weight": 20.892689
+     },
+     {
+      "Sector": "Communication Services",
+      "Weight": 17.955347999999997
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetqqdn.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_qqdn.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QQDN&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QQDN&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QQDN&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QQDN&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=QQDN&document-label=semi-annual-report"
+ }
+}

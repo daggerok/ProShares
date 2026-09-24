@@ -1,0 +1,71 @@
+{
+ "ticker": "VIXM",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CBOE VIX FUTURE Mar27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.6823117586",
+   "Market Value": "—",
+   "Shares Held": "857",
+   "Exposure Value": "17547075"
+  },
+  {
+   "Name": "CBOE VIX FUTURE Feb27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.3944287521",
+   "Market Value": "—",
+   "Shares Held": "857",
+   "Exposure Value": "17397100"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "—",
+   "Shares Held": "170000",
+   "Exposure Value": "17017000"
+  },
+  {
+   "Name": "CBOE VIX FUTURE Jan27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "28.7876007841",
+   "Market Value": "—",
+   "Shares Held": "754",
+   "Exposure Value": "14997135.4"
+  },
+  {
+   "Name": "CBOE VIX FUTURE Apr27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "4.1074796089",
+   "Market Value": "—",
+   "Shares Held": "103",
+   "Exposure Value": "2139825"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "52095815.53",
+   "Shares Held": "52095815.53",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "ticker": "SBB",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "S&P SmallCap 600 Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-38.1975064506",
+   "Market Value": "—",
+   "Shares Held": "-813",
+   "Exposure Value": "-1374693.57"
+  },
+  {
+   "Name": "S&P SmallCap 600 Index SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-26.6395893696",
+   "Market Value": "—",
+   "Shares Held": "-567",
+   "Exposure Value": "-958734.63"
+  },
+  {
+   "Name": "S&P SmallCap 600 Index SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-23.1158341620",
+   "Market Value": "—",
+   "Shares Held": "-492",
+   "Exposure Value": "-831917.88"
+  },
+  {
+   "Name": "S&P SmallCap 600 Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-11.9807677059",
+   "Market Value": "—",
+   "Shares Held": "-255",
+   "Exposure Value": "-431176.95"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3598909.19",
+   "Shares Held": "3598909.19",
+   "Exposure Value": "—"
+  }
+ ]
+}

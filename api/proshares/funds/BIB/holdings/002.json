@@ -1,0 +1,71 @@
+{
+ "ticker": "BIB",
+ "page": 2,
+ "pageSize": 250,
+ "totalRows": 256,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "BLACK DIAMOND THERAPEUTICS I",
+   "Ticker": "BDTX",
+   "Identifier": "BKTV702",
+   "Weight": "0.0040301648",
+   "Market Value": "3757.32",
+   "Shares Held": "1917",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RANI THERAPEUTICS HOLDINGS-A",
+   "Ticker": "RANI",
+   "Identifier": "BNNXX18",
+   "Weight": "0.0035615385",
+   "Market Value": "3320.42",
+   "Shares Held": "3852",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GOSSAMER BIO INC",
+   "Ticker": "GOSS",
+   "Identifier": "C0BCTT5",
+   "Weight": "0.0023478725",
+   "Market Value": "2188.92",
+   "Shares Held": "204",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CARTESIAN THERAPEUTICS-CVR",
+   "Ticker": "2324462D",
+   "Identifier": "BM9HFX3",
+   "Weight": "0.0000000000",
+   "Market Value": "0",
+   "Shares Held": "9785",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "THIRD HARMONIC BIO INC",
+   "Ticker": "THRD",
+   "Identifier": "BNNPQY8",
+   "Weight": "0.0000000000",
+   "Market Value": "0",
+   "Shares Held": "1662",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "26313179.5",
+   "Shares Held": "26313179.5",
+   "Exposure Value": "—"
+  }
+ ]
+}

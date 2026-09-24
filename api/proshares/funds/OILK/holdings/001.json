@@ -1,0 +1,62 @@
+{
+ "ticker": "OILK",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "WTI CRUDE FUTURE CRUDE OIL 20/NOV/2026 CLZ6 COMDTY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "34.2595936915",
+   "Market Value": "—",
+   "Shares Held": "894",
+   "Exposure Value": "82292700"
+  },
+  {
+   "Name": "WTI CRUDE FUTURE CRUDE OIL 20/MAY/2027 CLM7 COMDTY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.2511357508",
+   "Market Value": "—",
+   "Shares Held": "1015",
+   "Exposure Value": "79870350"
+  },
+  {
+   "Name": "WTI CRUDE FUTURE CRUDE OIL 19/NOV/2027 CLZ7 COMDTY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "32.4700309861",
+   "Market Value": "—",
+   "Shares Held": "1061",
+   "Exposure Value": "77994110"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "165181500",
+   "Shares Held": "1650000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "75021874.1",
+   "Shares Held": "75021874.1",
+   "Exposure Value": "—"
+  }
+ ]
+}

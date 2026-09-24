@@ -1,0 +1,71 @@
+{
+ "ticker": "EPV",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "Vanguard FTSE Europe (VGK) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-70.2991132809",
+   "Market Value": "—",
+   "Shares Held": "-1782",
+   "Exposure Value": "-7229467.08"
+  },
+  {
+   "Name": "Vanguard FTSE Europe (VGK) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-66.1963591949",
+   "Market Value": "—",
+   "Shares Held": "-1678",
+   "Exposure Value": "-6807545.32"
+  },
+  {
+   "Name": "Vanguard FTSE Europe (VGK) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-37.9899248538",
+   "Market Value": "—",
+   "Shares Held": "-963",
+   "Exposure Value": "-3906833.22"
+  },
+  {
+   "Name": "Vanguard FTSE Europe (VGK) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-24.6196015686",
+   "Market Value": "—",
+   "Shares Held": "-624.08",
+   "Exposure Value": "-2531847"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "7507500",
+   "Shares Held": "75000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "2776366.67",
+   "Shares Held": "2776366.67",
+   "Exposure Value": "—"
+  }
+ ]
+}

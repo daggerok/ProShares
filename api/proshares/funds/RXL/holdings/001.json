@@ -1,0 +1,629 @@
+{
+ "ticker": "RXL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 68,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "44.3495829481",
+   "Market Value": "—",
+   "Shares Held": "25494",
+   "Exposure Value": "43300284.3"
+  },
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP BNP PARIBAS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "35.1703639404",
+   "Market Value": "—",
+   "Shares Held": "20217.4",
+   "Exposure Value": "34338243.03"
+  },
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "23.1402742754",
+   "Market Value": "—",
+   "Shares Held": "13302",
+   "Exposure Value": "22592781.9"
+  },
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "17.2151672101",
+   "Market Value": "—",
+   "Shares Held": "9896",
+   "Exposure Value": "16807861.2"
+  },
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "10.1697521736",
+   "Market Value": "—",
+   "Shares Held": "5846",
+   "Exposure Value": "9929138.7"
+  },
+  {
+   "Name": "HEALTH CARE SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "2.4963384142",
+   "Market Value": "—",
+   "Shares Held": "1435",
+   "Exposure Value": "2437275.75"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "15015000",
+   "Shares Held": "150000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ELI LILLY & CO",
+   "Ticker": "LLY",
+   "Identifier": "2516152",
+   "Weight": "10.3030822763",
+   "Market Value": "10059314.25",
+   "Shares Held": "8725",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "JOHNSON & JOHNSON",
+   "Ticker": "JNJ",
+   "Identifier": "2475833",
+   "Weight": "7.2664493767",
+   "Market Value": "7094527.23",
+   "Shares Held": "26277",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ABBVIE INC",
+   "Ticker": "ABBV",
+   "Identifier": "B92SR70",
+   "Weight": "5.2092302001",
+   "Market Value": "5085981.28",
+   "Shares Held": "19268",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MERCK & CO. INC.",
+   "Ticker": "MRK",
+   "Identifier": "2778844",
+   "Weight": "4.0466934990",
+   "Market Value": "3950949.87",
+   "Shares Held": "26901",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "UNITEDHEALTH GROUP INC",
+   "Ticker": "UNH",
+   "Identifier": "2917766",
+   "Weight": "3.7781093026",
+   "Market Value": "3688720.3",
+   "Shares Held": "9787",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "THERMO FISHER SCIENTIFIC INC",
+   "Ticker": "TMO",
+   "Identifier": "2886907",
+   "Weight": "2.6902980956",
+   "Market Value": "2626646.4",
+   "Shares Held": "4032",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AMGEN INC",
+   "Ticker": "AMGN",
+   "Identifier": "2023607",
+   "Weight": "2.3284983659",
+   "Market Value": "2273406.75",
+   "Shares Held": "5895",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GILEAD SCIENCES INC",
+   "Ticker": "GILD",
+   "Identifier": "2369174",
+   "Weight": "2.0786678973",
+   "Market Value": "2029487.2",
+   "Shares Held": "13520",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ABBOTT LABORATORIES",
+   "Ticker": "ABT",
+   "Identifier": "2002305",
+   "Weight": "1.9829617979",
+   "Market Value": "1936045.48",
+   "Shares Held": "18868",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PFIZER INC",
+   "Ticker": "PFE",
+   "Identifier": "2684703",
+   "Weight": "1.7606423217",
+   "Market Value": "1718986.02",
+   "Shares Held": "62147",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "INTUITIVE SURGICAL INC",
+   "Ticker": "ISRG",
+   "Identifier": "2871301",
+   "Weight": "1.5518228518",
+   "Market Value": "1515107.16",
+   "Shares Held": "3852",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DANAHER CORP",
+   "Ticker": "DHR",
+   "Identifier": "2250870",
+   "Weight": "1.4799838206",
+   "Market Value": "1444967.82",
+   "Shares Held": "6822",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VERTEX PHARMACEUTICALS INC",
+   "Ticker": "VRTX",
+   "Identifier": "2931034",
+   "Weight": "1.4391004721",
+   "Market Value": "1405051.76",
+   "Shares Held": "2764",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BRISTOL-MYERS SQUIBB CO",
+   "Ticker": "BMY",
+   "Identifier": "2126335",
+   "Weight": "1.4385715786",
+   "Market Value": "1404535.38",
+   "Shares Held": "22273",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MEDTRONIC PLC",
+   "Ticker": "MDT",
+   "Identifier": "BTN1Y11",
+   "Weight": "1.3171130643",
+   "Market Value": "1285950.54",
+   "Shares Held": "13958",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CVS HEALTH CORP",
+   "Ticker": "CVS",
+   "Identifier": "2577609",
+   "Weight": "1.2688955106",
+   "Market Value": "1238873.8",
+   "Shares Held": "13945",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MCKESSON CORP",
+   "Ticker": "MCK",
+   "Identifier": "2378534",
+   "Weight": "1.1386195685",
+   "Market Value": "1111680.15",
+   "Shares Held": "1271",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "STRYKER CORP",
+   "Ticker": "SYK",
+   "Identifier": "2853688",
+   "Weight": "1.0724813263",
+   "Market Value": "1047106.72",
+   "Shares Held": "3806",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ELEVANCE HEALTH INC",
+   "Ticker": "ELV",
+   "Identifier": "BSPHGL4",
+   "Weight": "0.9954487881",
+   "Market Value": "971896.75",
+   "Shares Held": "2365",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "REGENERON PHARMACEUTICALS",
+   "Ticker": "REGN",
+   "Identifier": "2730190",
+   "Weight": "0.8593363051",
+   "Market Value": "839004.65",
+   "Shares Held": "1069",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "THE CIGNA GROUP",
+   "Ticker": "CI",
+   "Identifier": "BHJ0775",
+   "Weight": "0.8123004807",
+   "Market Value": "793081.68",
+   "Shares Held": "2881",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HCA HEALTHCARE INC",
+   "Ticker": "HCA",
+   "Identifier": "B4MGBG6",
+   "Weight": "0.7031099331",
+   "Market Value": "686474.55",
+   "Shares Held": "1605",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BOSTON SCIENTIFIC CORP",
+   "Ticker": "BSX",
+   "Identifier": "2113434",
+   "Weight": "0.7014549056",
+   "Market Value": "684858.68",
+   "Shares Held": "15802",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CENCORA INC",
+   "Ticker": "COR",
+   "Identifier": "2795393",
+   "Weight": "0.6581426498",
+   "Market Value": "642571.18",
+   "Shares Held": "2081",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MODERNA INC",
+   "Ticker": "MRNA",
+   "Identifier": "BGSXTS3",
+   "Weight": "0.6386645433",
+   "Market Value": "623553.92",
+   "Shares Held": "4048",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CARDINAL HEALTH INC",
+   "Ticker": "CAH",
+   "Identifier": "2175672",
+   "Weight": "0.5856452620",
+   "Market Value": "571789.06",
+   "Shares Held": "2537",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "EDWARDS LIFESCIENCES CORP",
+   "Ticker": "EW",
+   "Identifier": "2567116",
+   "Weight": "0.5681565234",
+   "Market Value": "554714.1",
+   "Shares Held": "6285",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BECTON DICKINSON AND CO",
+   "Ticker": "BDX",
+   "Identifier": "2087807",
+   "Weight": "0.5504144510",
+   "Market Value": "537391.8",
+   "Shares Held": "2970",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HUMANA INC",
+   "Ticker": "HUM",
+   "Identifier": "2445063",
+   "Weight": "0.5178132968",
+   "Market Value": "505561.98",
+   "Shares Held": "1309",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AGILENT TECHNOLOGIES INC",
+   "Ticker": "A",
+   "Identifier": "2520153",
+   "Weight": "0.4936061833",
+   "Market Value": "481927.6",
+   "Shares Held": "3080",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "IQVIA HOLDINGS INC",
+   "Ticker": "IQV",
+   "Identifier": "BDR73G1",
+   "Weight": "0.4898127313",
+   "Market Value": "478223.9",
+   "Shares Held": "1795",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WATERS CORP",
+   "Ticker": "WAT",
+   "Identifier": "2937689",
+   "Weight": "0.4629403995",
+   "Market Value": "451987.36",
+   "Shares Held": "1072",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "IDEXX LABORATORIES INC",
+   "Ticker": "IDXX",
+   "Identifier": "2459202",
+   "Weight": "0.4501579606",
+   "Market Value": "439507.35",
+   "Shares Held": "859",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VEEVA SYSTEMS INC-CLASS A",
+   "Ticker": "VEEV",
+   "Identifier": "BFH3N85",
+   "Weight": "0.4344205684",
+   "Market Value": "424142.3",
+   "Shares Held": "1630",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ILLUMINA INC",
+   "Ticker": "ILMN",
+   "Identifier": "2613990",
+   "Weight": "0.4039723931",
+   "Market Value": "394414.52",
+   "Shares Held": "1646",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DEXCOM INC",
+   "Ticker": "DXCM",
+   "Identifier": "B0796X4",
+   "Weight": "0.3765851486",
+   "Market Value": "367675.25",
+   "Shares Held": "4115",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RESMED INC",
+   "Ticker": "RMD",
+   "Identifier": "2732903",
+   "Weight": "0.3624855767",
+   "Market Value": "353909.27",
+   "Shares Held": "1573",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CENTENE CORP",
+   "Ticker": "CNC",
+   "Identifier": "2807061",
+   "Weight": "0.3591805712",
+   "Market Value": "350682.46",
+   "Shares Held": "5386",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BIOGEN INC",
+   "Ticker": "BIIB",
+   "Identifier": "2455965",
+   "Weight": "0.3555835056",
+   "Market Value": "347170.5",
+   "Shares Held": "1611",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ZOETIS INC",
+   "Ticker": "ZTS",
+   "Identifier": "B95WG16",
+   "Weight": "0.3295248656",
+   "Market Value": "321728.4",
+   "Shares Held": "4506",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GE HEALTHCARE TECHNOLOGY",
+   "Ticker": "GEHC",
+   "Identifier": "BL6JPG8",
+   "Weight": "0.3234940276",
+   "Market Value": "315840.25",
+   "Shares Held": "4925",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "METTLER-TOLEDO INTERNATIONAL",
+   "Ticker": "MTD",
+   "Identifier": "2126249",
+   "Weight": "0.3108811198",
+   "Market Value": "303525.76",
+   "Shares Held": "218",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "QUEST DIAGNOSTICS INC",
+   "Ticker": "DGX",
+   "Identifier": "2702791",
+   "Weight": "0.3036639537",
+   "Market Value": "296479.35",
+   "Shares Held": "1203",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LABCORP HOLDINGS INC",
+   "Ticker": "LH",
+   "Identifier": "BSBK800",
+   "Weight": "0.2903778994",
+   "Market Value": "283507.64",
+   "Shares Held": "884",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WEST PHARMACEUTICAL SERVICES",
+   "Ticker": "WST",
+   "Identifier": "2950482",
+   "Weight": "0.2846259396",
+   "Market Value": "277891.77",
+   "Shares Held": "767",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "INCYTE CORP",
+   "Ticker": "INCY",
+   "Identifier": "2471950",
+   "Weight": "0.2383397207",
+   "Market Value": "232700.67",
+   "Shares Held": "1857",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "STERIS PLC",
+   "Ticker": "STE",
+   "Identifier": "BFY8C75",
+   "Weight": "0.2232392990",
+   "Market Value": "217957.52",
+   "Shares Held": "1063",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VIATRIS INC",
+   "Ticker": "VTRS",
+   "Identifier": "BMWS3X9",
+   "Weight": "0.2174260389",
+   "Market Value": "212281.8",
+   "Shares Held": "12524",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ZIMMER BIOMET HOLDINGS INC",
+   "Ticker": "ZBH",
+   "Identifier": "2783815",
+   "Weight": "0.2031553996",
+   "Market Value": "198348.8",
+   "Shares Held": "2080",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "REVVITY INC",
+   "Ticker": "RVTY",
+   "Identifier": "2305844",
+   "Weight": "0.1788092260",
+   "Market Value": "174578.65",
+   "Shares Held": "1217",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CHARLES RIVER LABORATORIES",
+   "Ticker": "CRL",
+   "Identifier": "2604336",
+   "Weight": "0.1483798863",
+   "Market Value": "144869.26",
+   "Shares Held": "521",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SOLVENTUM CORP",
+   "Ticker": "SOLV",
+   "Identifier": "BMTQB43",
+   "Weight": "0.1435867419",
+   "Market Value": "140189.52",
+   "Shares Held": "1578",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BAXTER INTERNATIONAL INC",
+   "Ticker": "BAX",
+   "Identifier": "2085102",
+   "Weight": "0.1316381209",
+   "Market Value": "128523.6",
+   "Shares Held": "5637",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BIO-TECHNE CORP",
+   "Ticker": "TECH",
+   "Identifier": "BSHZ3Q0",
+   "Weight": "0.1265292361",
+   "Market Value": "123535.59",
+   "Shares Held": "1707",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COOPER COS INC/THE",
+   "Ticker": "COO",
+   "Identifier": "BQPDXR3",
+   "Weight": "0.1204516829",
+   "Market Value": "117601.83",
+   "Shares Held": "2127",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "INSULET CORP",
+   "Ticker": "PODD",
+   "Identifier": "B1XGNW4",
+   "Weight": "0.1088694198",
+   "Market Value": "106293.6",
+   "Shares Held": "756",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ALIGN TECHNOLOGY INC",
+   "Ticker": "ALGN",
+   "Identifier": "2679204",
+   "Weight": "0.1088546709",
+   "Market Value": "106279.2",
+   "Shares Held": "720",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "UNIVERSAL HEALTH SERVICES-B",
+   "Ticker": "UHS",
+   "Identifier": "2923785",
+   "Weight": "0.1020680616",
+   "Market Value": "99653.16",
+   "Shares Held": "564",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HENRY SCHEIN INC",
+   "Ticker": "HSIC",
+   "Identifier": "2416962",
+   "Weight": "0.0908062503",
+   "Market Value": "88657.8",
+   "Shares Held": "1045",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DAVITA INC",
+   "Ticker": "DVA",
+   "Identifier": "2898087",
+   "Weight": "0.0694884164",
+   "Market Value": "67844.34",
+   "Shares Held": "369",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "16242862.67",
+   "Shares Held": "16242862.67",
+   "Exposure Value": "—"
+  }
+ ]
+}

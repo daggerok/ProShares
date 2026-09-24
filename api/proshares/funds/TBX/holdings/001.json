@@ -1,0 +1,62 @@
+{
+ "ticker": "TBX",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-37.3281202638",
+   "Market Value": "—",
+   "Shares Held": "-79357",
+   "Exposure Value": "-8819736.98"
+  },
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-32.6021902981",
+   "Market Value": "—",
+   "Shares Held": "-69310",
+   "Exposure Value": "-7703113.4"
+  },
+  {
+   "Name": "ICE 7-10 YEAR U.S. TREASURY INDEX SWAP CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-29.9986248198",
+   "Market Value": "—",
+   "Shares Held": "-63775",
+   "Exposure Value": "-7087953.5"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "9009000",
+   "Shares Held": "90000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "14618594.74",
+   "Shares Held": "14618594.74",
+   "Exposure Value": "—"
+  }
+ ]
+}

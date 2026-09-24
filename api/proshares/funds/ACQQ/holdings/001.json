@@ -1,0 +1,44 @@
+{
+ "ticker": "ACQQ",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "NDX100 35% VOLATILITY AUTOCALLABLE SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "100.0351860171",
+   "Market Value": "—",
+   "Shares Held": "21613",
+   "Exposure Value": "23390669.25"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "9009000",
+   "Shares Held": "90000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "14373441.9",
+   "Shares Held": "14373441.9",
+   "Exposure Value": "—"
+  }
+ ]
+}
