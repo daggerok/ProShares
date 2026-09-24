@@ -414,7 +414,7 @@ export function parseRanges(env: Record<string, string | undefined>, prefix: 'PE
 }
 
 export function matchesRange(value: number | null | undefined, range: Range | undefined): boolean {
-  if (!range) return true;
+  if (!range || (range.min === undefined && range.max === undefined)) return true;
   if (value === null || value === undefined || !Number.isFinite(value)) return false;
   if (range.min !== undefined && value < range.min) return false;
   if (range.max !== undefined && value > range.max) return false;
@@ -451,9 +451,9 @@ Environment variables
                                       large (>=$10B).
   TER                    ":"          Expense-ratio range in % (min:max).
   DIVIDEND_YIELD         ":"          Official 12-month yield range in %.
-  SEC_YIELD              ":"          Kept for parity with the sibling sites:
-                                      ProShares publishes no 30-day SEC yield, so
-                                      any bound matches no fund.
+  SEC_YIELD              ":"          Published SEC 30-Day Yield range in %;
+                                      only funds whose pages publish a value
+                                      match an active bound. ":" accepts all.
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y  ""    Annualized-return ranges (min:max).
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y ""    Cumulative-return ranges (min:max).
   CONCURRENCY            3            Parallel fund workers.
@@ -2041,7 +2041,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         filtered('DIVIDEND_YIELD');
         return;
       }
-      if (config.secYieldRange) {
+      if (config.secYieldRange && !matchesRange(page.sec30DayYield, config.secYieldRange)) {
         filtered('SEC_YIELD');
         return;
       }

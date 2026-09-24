@@ -7349,3 +7349,9 @@ Implementation checkpoint 7/… — `parseFundPage` now reads the **probed** `di
 <!-- answer:
 Implementation checkpoint 8/… — the static feed now emits the **official** parsed SEC 30-Day Yield, raw percent text, and per-fund provenance (`metrics.secYield/secYieldText/secYieldKind`, `meta.yields.secYield/secYieldText/secYieldKind`, `meta.source.secYield`). Published values (e.g. NOBL 2.09%) remain distinct from 12-Month Yield and from bond YTM; funds whose pages omit the element keep number `null`, text `—`, and `not published on this fund page (data limitation)`. No generated data was touched yet: this commit changes the updater and tests only. `bun run test` 57 pass / 0 fail / 246 assertions; tsc and diff check clean.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 9/… — `SEC_YIELD=min:max` now filters against each fund page's **actual parsed** SEC 30-Day Yield. Missing official yield fails an active bound; published NOBL 2.09% matches `2:3` and fails `3:`. A necessary default-filter fix: `:` is genuinely unbounded even for a missing value (`matchesRange(null, {min:undefined,max:undefined})` now passes). Previously the shipped workflow's default `SEC_YIELD=":"` would have filtered **every** fund due to a truthy empty range object. The CLI help now explains the functional filter. `bun run test`: 58 pass / 0 fail / 252 assertions, tsc and diff check clean; no API data touched.
+-->

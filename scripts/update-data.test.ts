@@ -347,6 +347,7 @@ describe('range parsing', () => {
 
   test('matchesRange and matchesReturnRange differ for young funds', () => {
     expect(matchesRange(null, { min: 1 })).toBe(false);
+    expect(matchesRange(null, { min: undefined, max: undefined })).toBe(true); // ':' is unbounded
     expect(matchesReturnRange(null, { min: 1 })).toBe(true);
     expect(matchesReturnRange(5, { min: 1, max: 4 })).toBe(false);
   });
@@ -378,6 +379,16 @@ describe('configuration', () => {
     expect(config.aumRange).toEqual({ min: 300_000_000, max: undefined });
     expect(() => readConfig({ AUDIENCE_TYPE: 'Retail' })).toThrow(/Invalid AUDIENCE_TYPE/);
     expect(() => readConfig({ TER: 'x' })).toThrow(/Invalid TER range/);
+  });
+
+  test('SEC_YIELD bounds match the official page value; colon never filters nulls', () => {
+    const published = parseFundPage(FUND_PAGE).sec30DayYield;
+    const absent = parseFundPage('<span id="snapshot-distributions">Quarterly</span>').sec30DayYield;
+    expect(matchesRange(published, readConfig({ SEC_YIELD: ':' }).secYieldRange)).toBe(true);
+    expect(matchesRange(absent, readConfig({ SEC_YIELD: ':' }).secYieldRange)).toBe(true);
+    expect(matchesRange(published, readConfig({ SEC_YIELD: '2:3' }).secYieldRange)).toBe(true);
+    expect(matchesRange(published, readConfig({ SEC_YIELD: '3:' }).secYieldRange)).toBe(false);
+    expect(matchesRange(absent, readConfig({ SEC_YIELD: '2:3' }).secYieldRange)).toBe(false);
   });
 });
 
