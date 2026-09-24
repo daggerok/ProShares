@@ -162,7 +162,7 @@ legal conditions as issuer-specific.
 
 - `{{BRAND_NAME}}` (required): the ETF issuer's display name.
 - `{{BRAND_OFFICIAL_WEB_SITE}}` (required): the issuer's official website.
-- `{{GITHUB_RePOSITORY}}` (optional): destination repository, if a specific
+- `{{GITHUB_REPOSITORY}}` (optional): destination repository, if a specific
   existing or new repository is requested. Otherwise use the current project
   or derive a sensible repository name from the brand and confirm its owner.
 - `{{GITHUB_ACCESS_TOKEN}}` (optional): GitHub authorization only if needed to
