@@ -1,7 +1,9 @@
-# Lines are exported as environment variables for scripts/update-data.ts.
-# Editing this file (and pushing) runs the dev data refresh on this branch.
+# Bounded smoke run: equivalent to TICKERS="NOBL IGHG HYHG TQQQ AGQ BOIL SPCF" ./scripts/update-data.ts.
+# The dev-update workflow refuses to run if TICKERS is missing or parses empty.
+# A full 173-fund pass is reserved for the user after the fixes are verified.
+TICKERS=NOBL,IGHG,HYHG,TQQQ,AGQ,BOIL,SPCF
 MAX_FETCHES=0
 CONCURRENCY=3
 REQUEST_SLEEP=1
 DISTRIBUTION_YEARS=10
-# trigger at 2026-09-24T01:33:02+00:00
+MAX_RETRIES=3

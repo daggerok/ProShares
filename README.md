@@ -7374,3 +7374,9 @@ Implementation checkpoint 11/… — corrected the visible README's source table
 <!-- answer:
 Implementation checkpoint 12/… — safety guard for the kept dev-refresh workflow. `.github/workflows/dev-update.yml` now calls `readConfig()` before any network work and **refuses to run unless TICKERS parses to a nonempty allowlist**; this prevents the old `MAX_FETCHES=0` request from accidentally starting a 173-fund pass. Local preflight with empty TICKERS exited 2; with the seven smoke tickers it passed. One audit correction to checkpoint 5: the **committed** SPCF index already has the correct `leveraged-and-inverse/spcf` URL; only the earlier written plan's `strategic/spcf` example was wrong (the strategic URL returned 404). No SPCF URL fix is required. Next, push a bounded seven-ticker trigger and wait for the bot's feed/log commit before further code pushes.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 13/… — pushed the bounded smoke trigger (plan step 5): `TICKERS=NOBL,IGHG,HYHG,TQQQ,AGQ,BOIL,SPCF` in `dev-run/request.txt`, equivalent to `TICKERS="NOBL IGHG HYHG TQQQ AGQ BOIL SPCF" ./scripts/update-data.ts`. Existing polite pacing (CONCURRENCY=3, REQUEST_SLEEP=1), 10 distribution years and three retries are retained; `MAX_FETCHES=0` is safe because the mandatory TICKERS allowlist is parsed before the updater starts. Local configuration parsed to exactly the seven requested symbols. The workflow will commit its `dev-run/last-run.log` and only the touched `api/proshares/**` artifacts on this branch. Pending: fetch bot commit, inspect progress/SEC values/feed shape and run `dev-run/check-feed.py`. No full pass was requested.
+-->
