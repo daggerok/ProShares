@@ -1,0 +1,485 @@
+{
+ "ticker": "UCC",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 52,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CONSUMER DISCRETIONARY SELECT SECTOR INDEX SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "36.0015357601",
+   "Market Value": "—",
+   "Shares Held": "1309",
+   "Exposure Value": "2928075.92"
+  },
+  {
+   "Name": "CONSUMER DISCRETIONARY SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "33.4712521162",
+   "Market Value": "—",
+   "Shares Held": "1217",
+   "Exposure Value": "2722282.96"
+  },
+  {
+   "Name": "CONSUMER DISCRETIONARY SELECT SECTOR INDEX SWAP BNP PARIBAS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "32.2611164604",
+   "Market Value": "—",
+   "Shares Held": "1173",
+   "Exposure Value": "2623860.24"
+  },
+  {
+   "Name": "CONSUMER DISCRETIONARY SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "30.6659376414",
+   "Market Value": "—",
+   "Shares Held": "1115",
+   "Exposure Value": "2494121.2"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "AMZN",
+   "Identifier": "2000019",
+   "Weight": "15.6184570396",
+   "Market Value": "1270279.92",
+   "Shares Held": "5096",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TESLA INC",
+   "Ticker": "TSLA",
+   "Identifier": "B616C79",
+   "Weight": "12.6329698783",
+   "Market Value": "1027464.36",
+   "Shares Held": "2703",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HOME DEPOT INC",
+   "Ticker": "HD",
+   "Identifier": "2434209",
+   "Weight": "3.4877344165",
+   "Market Value": "283664.32",
+   "Shares Held": "956",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MCDONALD'S CORP",
+   "Ticker": "MCD",
+   "Identifier": "2550707",
+   "Weight": "2.9097014671",
+   "Market Value": "236651.76",
+   "Shares Held": "993",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TJX COMPANIES INC",
+   "Ticker": "TJX",
+   "Identifier": "2989301",
+   "Weight": "2.7019546308",
+   "Market Value": "219755.3",
+   "Shares Held": "1670",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BOOKING HOLDINGS INC",
+   "Ticker": "BKNG",
+   "Identifier": "BDRXDB4",
+   "Weight": "2.1775249553",
+   "Market Value": "177102.4",
+   "Shares Held": "1136",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "STARBUCKS CORP",
+   "Ticker": "SBUX",
+   "Identifier": "2842255",
+   "Weight": "1.9954927295",
+   "Market Value": "162297.36",
+   "Shares Held": "1724",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LOWE'S COS INC",
+   "Ticker": "LOW",
+   "Identifier": "2536763",
+   "Weight": "1.9951966590",
+   "Market Value": "162273.28",
+   "Shares Held": "848",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MARRIOTT INTERNATIONAL -CL A",
+   "Ticker": "MAR",
+   "Identifier": "2210614",
+   "Weight": "1.3965747586",
+   "Market Value": "113586.18",
+   "Shares Held": "323",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ROSS STORES INC",
+   "Ticker": "ROST",
+   "Identifier": "2746711",
+   "Weight": "1.3952729335",
+   "Market Value": "113480.3",
+   "Shares Held": "485",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GENERAL MOTORS CO",
+   "Ticker": "GM",
+   "Identifier": "B665KZ5",
+   "Weight": "1.3667784814",
+   "Market Value": "111162.79",
+   "Shares Held": "1327",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DOORDASH INC - A",
+   "Ticker": "DASH",
+   "Identifier": "BN13P03",
+   "Weight": "1.3241364565",
+   "Market Value": "107694.63",
+   "Shares Held": "569",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "O'REILLY AUTOMOTIVE INC",
+   "Ticker": "ORLY",
+   "Identifier": "B65LWX6",
+   "Weight": "1.2916900530",
+   "Market Value": "105055.7",
+   "Shares Held": "1223",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HILTON WORLDWIDE HOLDINGS IN",
+   "Ticker": "HLT",
+   "Identifier": "BYVMW06",
+   "Weight": "1.2843018147",
+   "Market Value": "104454.8",
+   "Shares Held": "340",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AIRBNB INC-CLASS A",
+   "Ticker": "ABNB",
+   "Identifier": "BMGYYH4",
+   "Weight": "1.1660078683",
+   "Market Value": "94833.72",
+   "Shares Held": "634",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ROYAL CARIBBEAN CRUISES LTD",
+   "Ticker": "RCL",
+   "Identifier": "2754907",
+   "Weight": "1.0646833863",
+   "Market Value": "86592.8",
+   "Shares Held": "376",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FORD MOTOR CO",
+   "Ticker": "F",
+   "Identifier": "2615468",
+   "Weight": "0.9421962551",
+   "Market Value": "76630.68",
+   "Shares Held": "5922",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GARMIN LTD",
+   "Ticker": "GRMN",
+   "Identifier": "B3Z5T14",
+   "Weight": "0.8875055860",
+   "Market Value": "72182.58",
+   "Shares Held": "251",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AUTOZONE INC",
+   "Ticker": "AZO",
+   "Identifier": "2065955",
+   "Weight": "0.8739920812",
+   "Market Value": "71083.5",
+   "Shares Held": "25",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CARVANA CO",
+   "Ticker": "CVNA",
+   "Identifier": "BYQHPG3",
+   "Weight": "0.8554766075",
+   "Market Value": "69577.6",
+   "Shares Held": "1088",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "EBAY INC",
+   "Ticker": "EBAY",
+   "Identifier": "2293819",
+   "Weight": "0.8114822239",
+   "Market Value": "65999.45",
+   "Shares Held": "605",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NIKE INC -CL B",
+   "Ticker": "NKE",
+   "Identifier": "2640147",
+   "Weight": "0.8053763840",
+   "Market Value": "65502.85",
+   "Shares Held": "1817",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CHIPOTLE MEXICAN GRILL INC",
+   "Ticker": "CMG",
+   "Identifier": "B0X7DZ3",
+   "Weight": "0.7693681587",
+   "Market Value": "62574.23",
+   "Shares Held": "1913",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "YUM! BRANDS INC",
+   "Ticker": "YUM",
+   "Identifier": "2098876",
+   "Weight": "0.7141126441",
+   "Market Value": "58080.19",
+   "Shares Held": "413",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DR HORTON INC",
+   "Ticker": "DHI",
+   "Identifier": "2250687",
+   "Weight": "0.6635207321",
+   "Market Value": "53965.45",
+   "Shares Held": "385",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "EXPEDIA GROUP INC",
+   "Ticker": "EXPE",
+   "Identifier": "B748CK2",
+   "Weight": "0.5510000381",
+   "Market Value": "44813.92",
+   "Shares Held": "173",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CARNIVAL CORP LTD",
+   "Ticker": "CCL",
+   "Identifier": "BVV7RC7",
+   "Weight": "0.5162397844",
+   "Market Value": "41986.8",
+   "Shares Held": "1926",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WILLIAMS-SONOMA INC",
+   "Ticker": "WSM",
+   "Identifier": "2967589",
+   "Weight": "0.4986198995",
+   "Market Value": "40553.74",
+   "Shares Held": "178",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DARDEN RESTAURANTS INC",
+   "Ticker": "DRI",
+   "Identifier": "2289874",
+   "Weight": "0.4519093639",
+   "Market Value": "36754.68",
+   "Shares Held": "172",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ULTA BEAUTY INC",
+   "Ticker": "ULTA",
+   "Identifier": "B28TS42",
+   "Weight": "0.4346095253",
+   "Market Value": "35347.65",
+   "Shares Held": "65",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PULTEGROUP INC",
+   "Ticker": "PHM",
+   "Identifier": "2708841",
+   "Weight": "0.4130593287",
+   "Market Value": "33594.93",
+   "Shares Held": "283",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TAPESTRY INC",
+   "Ticker": "TPR",
+   "Identifier": "BF09HX3",
+   "Weight": "0.4089844244",
+   "Market Value": "33263.51",
+   "Shares Held": "301",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BEST BUY CO INC",
+   "Ticker": "BBY",
+   "Identifier": "2094670",
+   "Weight": "0.3349236362",
+   "Market Value": "27240",
+   "Shares Held": "300",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GENUINE PARTS CO",
+   "Ticker": "GPC",
+   "Identifier": "2367480",
+   "Weight": "0.3292933780",
+   "Market Value": "26782.08",
+   "Shares Held": "208",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TRACTOR SUPPLY COMPANY",
+   "Ticker": "TSCO",
+   "Identifier": "2900335",
+   "Weight": "0.3128476931",
+   "Market Value": "25444.52",
+   "Shares Held": "788",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NVR INC",
+   "Ticker": "NVR",
+   "Identifier": "2637785",
+   "Weight": "0.3069695619",
+   "Market Value": "24966.44",
+   "Shares Held": "4",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LENNAR CORP-A",
+   "Ticker": "LEN",
+   "Identifier": "2511920",
+   "Weight": "0.2936773723",
+   "Market Value": "23885.36",
+   "Shares Held": "293",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RALPH LAUREN CORP",
+   "Ticker": "RL",
+   "Identifier": "B4V9661",
+   "Weight": "0.2365095716",
+   "Market Value": "19235.79",
+   "Shares Held": "57",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HASBRO INC",
+   "Ticker": "HAS",
+   "Identifier": "2414580",
+   "Weight": "0.2265869056",
+   "Market Value": "18428.76",
+   "Shares Held": "213",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DECKERS OUTDOOR CORP",
+   "Ticker": "DECK",
+   "Identifier": "2267278",
+   "Weight": "0.1990550516",
+   "Market Value": "16189.54",
+   "Shares Held": "206",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LULULEMON ATHLETICA INC",
+   "Ticker": "LULU",
+   "Identifier": "B23FN39",
+   "Weight": "0.1986947996",
+   "Market Value": "16160.24",
+   "Shares Held": "158",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LAS VEGAS SANDS CORP",
+   "Ticker": "LVS",
+   "Identifier": "B02T2J7",
+   "Weight": "0.1888861109",
+   "Market Value": "15362.48",
+   "Shares Held": "392",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DOMINO'S PIZZA INC",
+   "Ticker": "DPZ",
+   "Identifier": "B01SD70",
+   "Weight": "0.1822346062",
+   "Market Value": "14821.5",
+   "Shares Held": "50",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "APTIV PLC",
+   "Ticker": "APTV",
+   "Identifier": "BTDN8H1",
+   "Weight": "0.1743887373",
+   "Market Value": "14183.38",
+   "Shares Held": "314",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MGM RESORTS INTERNATIONAL",
+   "Ticker": "MGM",
+   "Identifier": "2547419",
+   "Weight": "0.1237901858",
+   "Market Value": "10068.1",
+   "Shares Held": "266",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NORWEGIAN CRUISE LINE HOLDIN",
+   "Ticker": "NCLH",
+   "Identifier": "B9CGTC3",
+   "Weight": "0.1209969424",
+   "Market Value": "9840.92",
+   "Shares Held": "694",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WYNN RESORTS LTD",
+   "Ticker": "WYNN",
+   "Identifier": "2963811",
+   "Weight": "0.1101596299",
+   "Market Value": "8959.5",
+   "Shares Held": "110",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "2623367.27",
+   "Shares Held": "2623367.27",
+   "Exposure Value": "—"
+  }
+ ]
+}

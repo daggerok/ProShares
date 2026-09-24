@@ -1,0 +1,44 @@
+{
+ "ticker": "SLON",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "SOL FUTURES DIGITAL ASSETS 30/OCT/2026 QSOV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "155.7560758139",
+   "Market Value": "—",
+   "Shares Held": "848",
+   "Exposure Value": "48738800"
+  },
+  {
+   "Name": "SOLANA FUTURES DIGITAL ASSETS 30/OCT/2026 LSDV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "44.1739452912",
+   "Market Value": "—",
+   "Shares Held": "1200",
+   "Exposure Value": "13822800"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "31291748.81",
+   "Shares Held": "31291748.81",
+   "Exposure Value": "—"
+  }
+ ]
+}

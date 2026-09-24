@@ -1,0 +1,71 @@
+{
+ "ticker": "EEV",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-83.9500827246",
+   "Market Value": "—",
+   "Shares Held": "-1046",
+   "Exposure Value": "-1943175.12"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-67.8181834630",
+   "Market Value": "—",
+   "Shares Held": "-845",
+   "Exposure Value": "-1569773.4"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-40.3698772567",
+   "Market Value": "—",
+   "Shares Held": "-503",
+   "Exposure Value": "-934433.16"
+  },
+  {
+   "Name": "iShares MSCI Emerging Markets (EEM) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-7.8653041176",
+   "Market Value": "—",
+   "Shares Held": "-98",
+   "Exposure Value": "-182056.56"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "1900950",
+   "Shares Held": "19000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "413729.22",
+   "Shares Held": "413729.22",
+   "Exposure Value": "—"
+  }
+ ]
+}

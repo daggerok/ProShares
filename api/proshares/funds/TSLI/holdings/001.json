@@ -1,0 +1,71 @@
+{
+ "ticker": "TSLI",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "TESLA INC (TSLA) SWAP SOCIETE GENERALE SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "51.3948897988",
+   "Market Value": "—",
+   "Shares Held": "6025",
+   "Exposure Value": "2290223"
+  },
+  {
+   "Name": "TESLA INC (TSLA) SWAP NOMURA NOMURA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "50.1238792461",
+   "Market Value": "—",
+   "Shares Held": "5876",
+   "Exposure Value": "2233585.12"
+  },
+  {
+   "Name": "TESLA INC (TSLA) SWAP BANK OF AMERICA NA BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "44.2379914517",
+   "Market Value": "—",
+   "Shares Held": "5186",
+   "Exposure Value": "1971302.32"
+  },
+  {
+   "Name": "TESLA INC (TSLA) SWAP CITIBANK NA CITIBANK NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "30.0521488400",
+   "Market Value": "—",
+   "Shares Held": "3523",
+   "Exposure Value": "1339162.76"
+  },
+  {
+   "Name": "TESLA INC (TSLA) SWAP GOLDMAN SACHS GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "24.1321399570",
+   "Market Value": "—",
+   "Shares Held": "2829",
+   "Exposure Value": "1075359.48"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4456129.8",
+   "Shares Held": "4456129.8",
+   "Exposure Value": "—"
+  }
+ ]
+}

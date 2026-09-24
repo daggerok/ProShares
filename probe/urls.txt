@@ -1,0 +1,42 @@
+https://accounts.profunds.com/etfdata/psdlyhld.csv | cmd=UA='Mozilla/5.0'; curl -s -A "$UA" https://accounts.profunds.com/etfdata/psdlyhld.csv -o /tmp/a.csv; python3 - <<'PY' > /tmp/w.txt
+import csv
+def load(path, ticker):
+    rows=[]; started=False
+    with open(path, newline='', encoding='utf-8', errors='replace') as fh:
+        for line in fh:
+            line=line.rstrip('\n').rstrip('\r')
+            if not started:
+                if line.lower().startswith('"fund ticker"') or line.lower().startswith('fund ticker'):
+                    started=True
+                continue
+            cells=next(csv.reader([line]))
+            if not cells or not cells[0].strip(): continue
+            if cells[0].strip()!=ticker: continue
+            rows.append(cells)
+    return rows
+for ticker in ('NOBL','IGHG','TQQQ'):
+    rows=load('/tmp/a.csv', ticker)
+    mv=[abs(float(r[9])) for r in rows if r[9].strip()]
+    mv_no_net=[abs(float(r[9])) for r in rows if r[9].strip() and 'net other' not in r[4].lower()]
+    print(ticker, 'rows', len(rows), 'sum_mv %.2f' % sum(mv), 'sum_mv_without_netother %.2f' % sum(mv_no_net))
+    for r in rows[:3]:
+        v=float(r[9]) if r[9].strip() else 0
+        print('   ', r[2], r[4][:38], 'mv', r[9], 'w_all %.4f%%' % (v/sum(mv)*100), 'w_nonnet %.4f%%' % (v/sum(mv_no_net)*100))
+    for r in rows:
+        if 'net other' in r[4].lower():
+            v=float(r[9]) if r[9].strip() else 0
+            print('    NETOTHER mv', r[9], 'w_all %.4f%%' % (v/sum(mv)*100), 'w_nonnet %.4f%%' % (v/sum(mv_no_net)*100))
+PY
+cat /tmp/w.txt
+https://www.proshares.com/our-etfs/strategic/ighg | cmd=UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/strategic/ighg -o /tmp/i.html; echo "=== site-rendered first holdings rows (Weight|Ticker|Description|MV):"; python3 - <<'PY'
+import re
+html=open('/tmp/i.html',encoding='utf-8',errors='replace').read()
+start=html.find('Security Description')
+seg=html[start:start+6000]
+rows=re.findall(r'<tr>(.*?)</tr>', seg, re.S)[:6]
+for r in rows:
+    cells=[re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',c)).strip() for c in re.findall(r'<td[^>]*>(.*?)</td>', r, re.S)]
+    print(' | '.join(cells[:6]))
+PY
+https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt | bytes=400
+https://www.proshares.com/our-etfs/leveraged-and-inverse/ddm | cmd=UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/leveraged-and-inverse/ddm -o /tmp/d.html; echo "=== ExportToCSV context:"; grep -oE '.{0,200}ExportToCSV.{0,300}' /tmp/d.html | head -2; echo "=== csv links:"; grep -oE 'href="[^"]*\.csv[^"]*"' /tmp/d.html | head -5

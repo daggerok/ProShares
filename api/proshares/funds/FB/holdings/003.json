@@ -1,0 +1,62 @@
+{
+ "ticker": "FB",
+ "page": 3,
+ "pageSize": 250,
+ "totalRows": 505,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "HENRY SCHEIN INC",
+   "Ticker": "HSIC",
+   "Identifier": "2416962",
+   "Weight": "0.0062256716",
+   "Market Value": "170.1",
+   "Shares Held": "2",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "WYNN RESORTS LTD",
+   "Ticker": "WYNN",
+   "Identifier": "2963811",
+   "Weight": "0.0059621511",
+   "Market Value": "162.9",
+   "Shares Held": "2",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BROWN-FORMAN CORP-CLASS B",
+   "Ticker": "BF/B",
+   "Identifier": "2146838",
+   "Weight": "0.0048110790",
+   "Market Value": "131.45",
+   "Shares Held": "5",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NEWS CORP - CLASS B",
+   "Ticker": "NWS",
+   "Identifier": "BBGVT51",
+   "Weight": "0.0034279624",
+   "Market Value": "93.66",
+   "Shares Held": "3",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "402274.9",
+   "Shares Held": "402274.9",
+   "Exposure Value": "—"
+  }
+ ]
+}

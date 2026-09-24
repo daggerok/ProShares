@@ -1,0 +1,283 @@
+{
+ "ticker": "TSLI",
+ "name": "Ultra TSLA",
+ "category": "Equity",
+ "categoryPath": "Equity > Single Stock",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/tsli",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/TSLI-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/TSLI-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TSLI&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TSLI-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/TSLI-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74349Y373",
+  "isin": null,
+  "indexTicker": "TSLA",
+  "indexName": "Tesla, Inc. (TSLA)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "1.08%",
+   "value": 1.08
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
+ },
+ "nav": {
+  "display": "$19.37",
+  "value": 19.37,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$19.35",
+  "value": 19.35,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.10%",
+  "value": -0.1033,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$4,456,089",
+  "value": 4456085.3742,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 2.1312,
+  "effectiveYieldText": "2.13%",
+  "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+  "effectiveYieldComputed": true,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 2.1312,
+  "indicatedYieldText": "2.13%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Sep 10 2025",
+   "mo1": 36.48,
+   "mo3": -36.93,
+   "mo6": -31.23,
+   "ytd": -47.16,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "mo1Text": "36.48%",
+   "ytdText": "-47.16%",
+   "yr1Text": "—",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "—",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Sep 10 2025",
+    "mo1": 36.68,
+    "mo3": -36.86,
+    "mo6": -31.12,
+    "ytd": -46.89,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null,
+    "mo1Text": "36.68%",
+    "ytdText": "-46.89%",
+    "yr1Text": "—",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "—"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Sep 10 2025",
+   "mo1": -10.22,
+   "mo3": 17.5,
+   "mo6": -24.78,
+   "ytd": -24.78,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "mo1Text": "-10.22%",
+   "ytdText": "-24.78%",
+   "yr1Text": "—",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "—",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Sep 10 2025",
+    "mo1": -10.02,
+    "mo3": 18.1,
+    "mo6": -24.31,
+    "ytd": -24.31,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null,
+    "mo1Text": "-10.02%",
+    "ytdText": "-24.31%",
+    "yr1Text": "—",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "—"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "2.190728",
+    "ST Cap Gains": "2.051090",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.174023",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.103941",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.103205",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 6,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/TSLI-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 263,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/TSLI-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Price/Earnings Ratio": "323.41",
+   "Price/Book Ratio": "18.69",
+   "Market Capitalization": "$1,495.69 billion",
+   "": "2025"
+  },
+  "indexAsOf": "Dec 31 2025",
+  "geared": {
+   "strategy": "Single Stock",
+   "dailyObjective": "+2x",
+   "benchmark": "Tesla, Inc. (TSLA)"
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheettsli.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_tsli.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TSLI&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TSLI&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TSLI&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TSLI&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TSLI&document-label=semi-annual-report"
+ }
+}

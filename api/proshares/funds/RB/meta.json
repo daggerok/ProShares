@@ -1,0 +1,308 @@
+{
+ "ticker": "RB",
+ "name": "Russell 2000 Dynamic Buffer ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > DynamicBuffer",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/rb",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/RB-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/RB-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=RB&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/RB-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74349Y589",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$46.41",
+  "value": 46.41,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$46.41",
+  "value": 46.41,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.00%",
+  "value": 0,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$1,160,321",
+  "value": 1160321.411,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 1.2536,
+  "effectiveYieldText": "1.25%",
+  "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+  "effectiveYieldComputed": true,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": 1.2536,
+  "indicatedYieldText": "1.25%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jun 26 2025",
+   "mo1": 0.74,
+   "mo3": 0.94,
+   "mo6": 5.44,
+   "ytd": 8.03,
+   "yr1": 17.1,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 16.76,
+   "mo1Text": "0.74%",
+   "ytdText": "8.03%",
+   "yr1Text": "17.10%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "16.76%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jun 26 2025",
+    "mo1": 0.66,
+    "mo3": 0.91,
+    "mo6": 5.41,
+    "ytd": 7.99,
+    "yr1": 17.22,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 16.76,
+    "mo1Text": "0.66%",
+    "ytdText": "7.99%",
+    "yr1Text": "17.22%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "16.76%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jun 26 2025",
+   "mo1": 0.47,
+   "mo3": 3.78,
+   "mo6": 7.52,
+   "ytd": 7.52,
+   "yr1": 19.43,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 19.27,
+   "mo1Text": "0.47%",
+   "ytdText": "7.52%",
+   "yr1Text": "19.43%",
+   "yr3Text": "—",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "19.27%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jun 26 2025",
+    "mo1": 0.38,
+    "mo3": 3.62,
+    "mo6": 7.42,
+    "ytd": 7.42,
+    "yr1": 18.92,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 19.2,
+    "mo1Text": "0.38%",
+    "ytdText": "7.42%",
+    "yr1Text": "18.92%",
+    "yr3Text": "—",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "19.20%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.133944",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.643691",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.151042",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.136077",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.145449",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 1970,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json",
+   "./holdings/002.json",
+   "./holdings/003.json",
+   "./holdings/004.json",
+   "./holdings/005.json",
+   "./holdings/006.json",
+   "./holdings/007.json",
+   "./holdings/008.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 315,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/RB-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Expiration Date 9/24/": "2026",
+   "Strike Price - Short Call": "2,880",
+   "Strike Price - Long Put": "2,855",
+   "Strike Price - Short Put": "2,800",
+   "FIGI - Short Call BBG024X": "55005",
+   "FIGI - Long Put BBG024X561J": "2",
+   "FIGI - Short Put BBG024X4Z": "050",
+   "Total Number of Holdings": "1929",
+   "Price/Earnings Ratio": "16.25",
+   "Price/Book Ratio": "1.69",
+   "Dividend Yield ( % )": "2.59",
+   "Avg. Index Market Capitalization": "$1.28 billion",
+   "": "2025"
+  },
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetrb.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_rb.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=RB&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=RB&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=RB&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=RB&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=RB&document-label=semi-annual-report"
+ }
+}

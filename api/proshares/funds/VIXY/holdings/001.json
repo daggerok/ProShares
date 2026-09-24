@@ -1,0 +1,53 @@
+{
+ "ticker": "VIXY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 4,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CBOE VIX FUTURE Oct26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "75.2623631570",
+   "Market Value": "—",
+   "Shares Held": "9090",
+   "Exposure Value": "161231148"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "—",
+   "Shares Held": "700000",
+   "Exposure Value": "70035000"
+  },
+  {
+   "Name": "CBOE VIX FUTURE Nov26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "24.7421663045",
+   "Market Value": "—",
+   "Shares Held": "2870",
+   "Exposure Value": "53004021"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "214225465.74",
+   "Shares Held": "214225465.74",
+   "Exposure Value": "—"
+  }
+ ]
+}

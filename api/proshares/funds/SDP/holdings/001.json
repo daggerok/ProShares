@@ -1,0 +1,62 @@
+{
+ "ticker": "SDP",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "UTILITIES SELECT SECTOR INDEX SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-55.8377892742",
+   "Market Value": "—",
+   "Shares Held": "-3311",
+   "Exposure Value": "-2668268.68"
+  },
+  {
+   "Name": "UTILITIES SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-53.3755974186",
+   "Market Value": "—",
+   "Shares Held": "-3165",
+   "Exposure Value": "-2550610.2"
+  },
+  {
+   "Name": "UTILITIES SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-49.8003599296",
+   "Market Value": "—",
+   "Shares Held": "-2953",
+   "Exposure Value": "-2379763.64"
+  },
+  {
+   "Name": "UTILITIES SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-41.2670100737",
+   "Market Value": "—",
+   "Shares Held": "-2447",
+   "Exposure Value": "-1971988.36"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4778607.31",
+   "Shares Held": "4778607.31",
+   "Exposure Value": "—"
+  }
+ ]
+}

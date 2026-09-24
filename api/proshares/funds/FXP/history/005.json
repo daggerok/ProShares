@@ -1,0 +1,4514 @@
+{
+ "ticker": "FXP",
+ "page": 5,
+ "pageSize": 1000,
+ "totalRows": 4750,
+ "headers": [
+  "Date",
+  "NAV",
+  "Shares Outstanding",
+  "Total Net Assets"
+ ],
+ "rows": [
+  {
+   "Date": "Sep 27 2023",
+   "NAV": "70.2204",
+   "Shares Outstanding": "325970",
+   "Total Net Assets": "22889989.5594"
+  },
+  {
+   "Date": "Sep 28 2023",
+   "NAV": "71.0736",
+   "Shares Outstanding": "325970",
+   "Total Net Assets": "23168110.1496"
+  },
+  {
+   "Date": "Sep 29 2023",
+   "NAV": "69.6336",
+   "Shares Outstanding": "325970",
+   "Total Net Assets": "22698708.3096"
+  },
+  {
+   "Date": "Oct 02 2023",
+   "NAV": "70.5054",
+   "Shares Outstanding": "325970",
+   "Total Net Assets": "22982892.0069"
+  },
+  {
+   "Date": "Oct 03 2023",
+   "NAV": "73.8438",
+   "Shares Outstanding": "325970",
+   "Total Net Assets": "24071121.9393"
+  },
+  {
+   "Date": "Oct 04 2023",
+   "NAV": "75.1254",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22610754.5769"
+  },
+  {
+   "Date": "Oct 05 2023",
+   "NAV": "74.258",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22349690.163"
+  },
+  {
+   "Date": "Oct 06 2023",
+   "NAV": "71.1556",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21415949.9766"
+  },
+  {
+   "Date": "Oct 09 2023",
+   "NAV": "71.2228",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21436175.3958"
+  },
+  {
+   "Date": "Oct 10 2023",
+   "NAV": "67.607",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "20347915.4145"
+  },
+  {
+   "Date": "Oct 11 2023",
+   "NAV": "66.3184",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "19960080.9624"
+  },
+  {
+   "Date": "Oct 12 2023",
+   "NAV": "68.6626",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "20665623.0411"
+  },
+  {
+   "Date": "Oct 13 2023",
+   "NAV": "69.7096",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "20980742.2956"
+  },
+  {
+   "Date": "Oct 16 2023",
+   "NAV": "68.842",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "20719617.687"
+  },
+  {
+   "Date": "Oct 17 2023",
+   "NAV": "69.8934",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21036061.2249"
+  },
+  {
+   "Date": "Oct 18 2023",
+   "NAV": "72.2374",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21741543.1089"
+  },
+  {
+   "Date": "Oct 19 2023",
+   "NAV": "74.79",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22509808.065"
+  },
+  {
+   "Date": "Oct 20 2023",
+   "NAV": "77.9074",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "23448062.8539"
+  },
+  {
+   "Date": "Oct 23 2023",
+   "NAV": "76.569",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "23045239.9215"
+  },
+  {
+   "Date": "Oct 24 2023",
+   "NAV": "71.6808",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21574021.2588"
+  },
+  {
+   "Date": "Oct 25 2023",
+   "NAV": "74.609",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22455331.8615"
+  },
+  {
+   "Date": "Oct 26 2023",
+   "NAV": "74.3694",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22383218.6109"
+  },
+  {
+   "Date": "Oct 27 2023",
+   "NAV": "73.8676",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "22232190.1086"
+  },
+  {
+   "Date": "Oct 30 2023",
+   "NAV": "72.3398",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "21772362.7953"
+  },
+  {
+   "Date": "Oct 31 2023",
+   "NAV": "74.7034",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20616158.7599"
+  },
+  {
+   "Date": "Nov 01 2023",
+   "NAV": "74.9606",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20687139.1441"
+  },
+  {
+   "Date": "Nov 02 2023",
+   "NAV": "73.4188",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20261643.2018"
+  },
+  {
+   "Date": "Nov 03 2023",
+   "NAV": "70.0046",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19319414.4781"
+  },
+  {
+   "Date": "Nov 06 2023",
+   "NAV": "69.609",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19210239.3615"
+  },
+  {
+   "Date": "Nov 07 2023",
+   "NAV": "70.2606",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19390063.6941"
+  },
+  {
+   "Date": "Nov 08 2023",
+   "NAV": "71.295",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19675530.6825"
+  },
+  {
+   "Date": "Nov 09 2023",
+   "NAV": "73.3146",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20232886.7631"
+  },
+  {
+   "Date": "Nov 10 2023",
+   "NAV": "73.7912",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20364415.7332"
+  },
+  {
+   "Date": "Nov 13 2023",
+   "NAV": "71.872",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19834767.392"
+  },
+  {
+   "Date": "Nov 14 2023",
+   "NAV": "68.8054",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "18988467.0569"
+  },
+  {
+   "Date": "Nov 15 2023",
+   "NAV": "65.5734",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "18096520.7049"
+  },
+  {
+   "Date": "Nov 16 2023",
+   "NAV": "70.9688",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19585508.1268"
+  },
+  {
+   "Date": "Nov 17 2023",
+   "NAV": "70.8782",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19560504.9277"
+  },
+  {
+   "Date": "Nov 20 2023",
+   "NAV": "67.8148",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "18715087.7078"
+  },
+  {
+   "Date": "Nov 21 2023",
+   "NAV": "70.536",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19466066.796"
+  },
+  {
+   "Date": "Nov 22 2023",
+   "NAV": "69.8838",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19286076.8793"
+  },
+  {
+   "Date": "Nov 24 2023",
+   "NAV": "69.534",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19189541.349"
+  },
+  {
+   "Date": "Nov 27 2023",
+   "NAV": "71.3636",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "19694462.4646"
+  },
+  {
+   "Date": "Nov 28 2023",
+   "NAV": "73.0774",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "20167425.8489"
+  },
+  {
+   "Date": "Nov 29 2023",
+   "NAV": "76.7892",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "21191784.2862"
+  },
+  {
+   "Date": "Nov 30 2023",
+   "NAV": "76.2318",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "21037956.6573"
+  },
+  {
+   "Date": "Dec 01 2023",
+   "NAV": "77.888",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "21495023.968"
+  },
+  {
+   "Date": "Dec 04 2023",
+   "NAV": "81.5424",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "22503541.5264"
+  },
+  {
+   "Date": "Dec 05 2023",
+   "NAV": "84.0438",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23193861.6393"
+  },
+  {
+   "Date": "Dec 06 2023",
+   "NAV": "83.996",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23180670.106"
+  },
+  {
+   "Date": "Dec 07 2023",
+   "NAV": "83.4966",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23042848.9401"
+  },
+  {
+   "Date": "Dec 08 2023",
+   "NAV": "85.82",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23684045.77"
+  },
+  {
+   "Date": "Dec 11 2023",
+   "NAV": "85.199",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23512666.2265"
+  },
+  {
+   "Date": "Dec 12 2023",
+   "NAV": "84.0726",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23201809.6761"
+  },
+  {
+   "Date": "Dec 13 2023",
+   "NAV": "84.6604",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "23364026.8994"
+  },
+  {
+   "Date": "Dec 14 2023",
+   "NAV": "82.514",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20708827.379"
+  },
+  {
+   "Date": "Dec 15 2023",
+   "NAV": "82.8768",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20799880.5648"
+  },
+  {
+   "Date": "Dec 18 2023",
+   "NAV": "84.626",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21238883.411"
+  },
+  {
+   "Date": "Dec 19 2023",
+   "NAV": "82.3748",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20673891.8678"
+  },
+  {
+   "Date": "Dec 20 2023",
+   "NAV": "86.493",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21707450.9355"
+  },
+  {
+   "Date": "Dec 21 2023",
+   "NAV": "80.5632",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20219228.2752"
+  },
+  {
+   "Date": "Dec 22 2023",
+   "NAV": "85.0764",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21351921.8754"
+  },
+  {
+   "Date": "Dec 26 2023",
+   "NAV": "83.8548",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21045332.6478"
+  },
+  {
+   "Date": "Dec 27 2023",
+   "NAV": "83.662",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20996944.957"
+  },
+  {
+   "Date": "Dec 28 2023",
+   "NAV": "79.19",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "19874591.465"
+  },
+  {
+   "Date": "Dec 29 2023",
+   "NAV": "78.2166",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "19630293.8601"
+  },
+  {
+   "Date": "Jan 02 2024",
+   "NAV": "83.3926",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20929332.6961"
+  },
+  {
+   "Date": "Jan 03 2024",
+   "NAV": "80.3372",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20162508.2642"
+  },
+  {
+   "Date": "Jan 04 2024",
+   "NAV": "82.5042",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20706367.8387"
+  },
+  {
+   "Date": "Jan 05 2024",
+   "NAV": "83.4448",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "20942433.5128"
+  },
+  {
+   "Date": "Jan 08 2024",
+   "NAV": "85.554",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21471786.819"
+  },
+  {
+   "Date": "Jan 09 2024",
+   "NAV": "88.9996",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "22336541.1106"
+  },
+  {
+   "Date": "Jan 10 2024",
+   "NAV": "88.9424",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "22322185.4264"
+  },
+  {
+   "Date": "Jan 11 2024",
+   "NAV": "86.3412",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21669353.1582"
+  },
+  {
+   "Date": "Jan 12 2024",
+   "NAV": "87.1204",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "21864911.7094"
+  },
+  {
+   "Date": "Jan 16 2024",
+   "NAV": "92.597",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "23239393.1795"
+  },
+  {
+   "Date": "Jan 17 2024",
+   "NAV": "97.4178",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "24449286.2283"
+  },
+  {
+   "Date": "Jan 18 2024",
+   "NAV": "96.761",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "21865421.8335"
+  },
+  {
+   "Date": "Jan 19 2024",
+   "NAV": "95.441",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "21567136.8135"
+  },
+  {
+   "Date": "Jan 22 2024",
+   "NAV": "100.2308",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "22649504.6838"
+  },
+  {
+   "Date": "Jan 23 2024",
+   "NAV": "91.1004",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20586276.2394"
+  },
+  {
+   "Date": "Jan 24 2024",
+   "NAV": "85.6834",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19362177.7899"
+  },
+  {
+   "Date": "Jan 25 2024",
+   "NAV": "85.8958",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19410174.5613"
+  },
+  {
+   "Date": "Jan 26 2024",
+   "NAV": "87.052",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19671445.122"
+  },
+  {
+   "Date": "Jan 29 2024",
+   "NAV": "89.4696",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20217758.6556"
+  },
+  {
+   "Date": "Jan 30 2024",
+   "NAV": "92.3792",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20875251.1512"
+  },
+  {
+   "Date": "Jan 31 2024",
+   "NAV": "93.8348",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "21204178.1778"
+  },
+  {
+   "Date": "Feb 01 2024",
+   "NAV": "93.0456",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "21025839.8916"
+  },
+  {
+   "Date": "Feb 02 2024",
+   "NAV": "96.9108",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "21899272.6638"
+  },
+  {
+   "Date": "Feb 05 2024",
+   "NAV": "92.6978",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20947246.3083"
+  },
+  {
+   "Date": "Feb 06 2024",
+   "NAV": "82.1254",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "18558164.0769"
+  },
+  {
+   "Date": "Feb 07 2024",
+   "NAV": "85.766",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19380843.201"
+  },
+  {
+   "Date": "Feb 08 2024",
+   "NAV": "89.7654",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20284601.6169"
+  },
+  {
+   "Date": "Feb 09 2024",
+   "NAV": "87.6844",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19814350.7634"
+  },
+  {
+   "Date": "Feb 12 2024",
+   "NAV": "84.8834",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19181398.9899"
+  },
+  {
+   "Date": "Feb 13 2024",
+   "NAV": "88.7906",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "20064322.6491"
+  },
+  {
+   "Date": "Feb 14 2024",
+   "NAV": "85.0382",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19216379.6877"
+  },
+  {
+   "Date": "Feb 15 2024",
+   "NAV": "84.446",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "19082558.181"
+  },
+  {
+   "Date": "Feb 16 2024",
+   "NAV": "82.1594",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "18565847.1759"
+  },
+  {
+   "Date": "Feb 20 2024",
+   "NAV": "83.2598",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "18814508.4153"
+  },
+  {
+   "Date": "Feb 21 2024",
+   "NAV": "78.419",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17720615.8965"
+  },
+  {
+   "Date": "Feb 22 2024",
+   "NAV": "76.082",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17192515.827"
+  },
+  {
+   "Date": "Feb 23 2024",
+   "NAV": "75.0208",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16952712.7488"
+  },
+  {
+   "Date": "Feb 26 2024",
+   "NAV": "76.3578",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17254839.3183"
+  },
+  {
+   "Date": "Feb 27 2024",
+   "NAV": "73.767",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16669387.1745"
+  },
+  {
+   "Date": "Feb 28 2024",
+   "NAV": "79.0122",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17854663.3767"
+  },
+  {
+   "Date": "Feb 29 2024",
+   "NAV": "79.3356",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17927743.2066"
+  },
+  {
+   "Date": "Mar 01 2024",
+   "NAV": "75.9804",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17169556.9194"
+  },
+  {
+   "Date": "Mar 04 2024",
+   "NAV": "79.3882",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17939629.4127"
+  },
+  {
+   "Date": "Mar 05 2024",
+   "NAV": "81.8568",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "18497467.5948"
+  },
+  {
+   "Date": "Mar 06 2024",
+   "NAV": "78.3248",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17699329.1928"
+  },
+  {
+   "Date": "Mar 07 2024",
+   "NAV": "79.7114",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "18012664.0479"
+  },
+  {
+   "Date": "Mar 08 2024",
+   "NAV": "78.777",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17801514.4095"
+  },
+  {
+   "Date": "Mar 11 2024",
+   "NAV": "74.9674",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16940645.7639"
+  },
+  {
+   "Date": "Mar 12 2024",
+   "NAV": "71.743",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16212016.8105"
+  },
+  {
+   "Date": "Mar 13 2024",
+   "NAV": "71.2918",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16110057.5673"
+  },
+  {
+   "Date": "Mar 14 2024",
+   "NAV": "74.2386",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16775956.2771"
+  },
+  {
+   "Date": "Mar 15 2024",
+   "NAV": "75.1826",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16989275.2611"
+  },
+  {
+   "Date": "Mar 18 2024",
+   "NAV": "74.9582",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16938566.8077"
+  },
+  {
+   "Date": "Mar 19 2024",
+   "NAV": "75.7274",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17112385.6239"
+  },
+  {
+   "Date": "Mar 20 2024",
+   "NAV": "74.1106",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16747031.6691"
+  },
+  {
+   "Date": "Mar 21 2024",
+   "NAV": "74.8374",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16911269.2089"
+  },
+  {
+   "Date": "Mar 22 2024",
+   "NAV": "76.968",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17392728.348"
+  },
+  {
+   "Date": "Mar 25 2024",
+   "NAV": "76.7976",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17354222.4636"
+  },
+  {
+   "Date": "Mar 26 2024",
+   "NAV": "75.977",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17168788.6095"
+  },
+  {
+   "Date": "Mar 27 2024",
+   "NAV": "76.2376",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17227677.3036"
+  },
+  {
+   "Date": "Mar 28 2024",
+   "NAV": "74.5932",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16856086.4802"
+  },
+  {
+   "Date": "Apr 01 2024",
+   "NAV": "72.5704",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16398987.2844"
+  },
+  {
+   "Date": "Apr 02 2024",
+   "NAV": "71.3978",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16134010.7583"
+  },
+  {
+   "Date": "Apr 03 2024",
+   "NAV": "72.2872",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16334991.5892"
+  },
+  {
+   "Date": "Apr 04 2024",
+   "NAV": "73.1054",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16519883.1069"
+  },
+  {
+   "Date": "Apr 05 2024",
+   "NAV": "73.9052",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "18548246.7122"
+  },
+  {
+   "Date": "Apr 08 2024",
+   "NAV": "72.8912",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "18293759.5832"
+  },
+  {
+   "Date": "Apr 09 2024",
+   "NAV": "71.5334",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "17952987.7649"
+  },
+  {
+   "Date": "Apr 10 2024",
+   "NAV": "72.2508",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16326766.1538"
+  },
+  {
+   "Date": "Apr 11 2024",
+   "NAV": "70.9366",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16029791.7801"
+  },
+  {
+   "Date": "Apr 12 2024",
+   "NAV": "75.9004",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17151479.0394"
+  },
+  {
+   "Date": "Apr 15 2024",
+   "NAV": "75.4142",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17041610.7237"
+  },
+  {
+   "Date": "Apr 16 2024",
+   "NAV": "77.0058",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17401270.1463"
+  },
+  {
+   "Date": "Apr 17 2024",
+   "NAV": "77.1548",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "17434940.1978"
+  },
+  {
+   "Date": "Apr 18 2024",
+   "NAV": "74.4094",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16814552.5509"
+  },
+  {
+   "Date": "Apr 19 2024",
+   "NAV": "74.8636",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16917189.7146"
+  },
+  {
+   "Date": "Apr 22 2024",
+   "NAV": "72.3308",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "16344844.0338"
+  },
+  {
+   "Date": "Apr 23 2024",
+   "NAV": "70.0946",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "15839522.0931"
+  },
+  {
+   "Date": "Apr 24 2024",
+   "NAV": "67.4486",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "15241596.2121"
+  },
+  {
+   "Date": "Apr 25 2024",
+   "NAV": "66.5784",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "15044954.0724"
+  },
+  {
+   "Date": "Apr 26 2024",
+   "NAV": "64.34",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "14539134.99"
+  },
+  {
+   "Date": "Apr 29 2024",
+   "NAV": "63.1718",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "14275152.7473"
+  },
+  {
+   "Date": "Apr 30 2024",
+   "NAV": "66.1862",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16610982.2657"
+  },
+  {
+   "Date": "May 01 2024",
+   "NAV": "65.2152",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16367286.9972"
+  },
+  {
+   "Date": "May 02 2024",
+   "NAV": "57.789",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14503507.5915"
+  },
+  {
+   "Date": "May 03 2024",
+   "NAV": "57.0316",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14313420.2626"
+  },
+  {
+   "Date": "May 06 2024",
+   "NAV": "57.1332",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14338919.1702"
+  },
+  {
+   "Date": "May 07 2024",
+   "NAV": "58.7778",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14751670.1883"
+  },
+  {
+   "Date": "May 08 2024",
+   "NAV": "59.227",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "13383732.4845"
+  },
+  {
+   "Date": "May 09 2024",
+   "NAV": "56.6982",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "12812290.6977"
+  },
+  {
+   "Date": "May 10 2024",
+   "NAV": "55.1762",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "12468359.0307"
+  },
+  {
+   "Date": "May 13 2024",
+   "NAV": "52.8414",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "11940756.1029"
+  },
+  {
+   "Date": "May 14 2024",
+   "NAV": "54.1588",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "12238453.5918"
+  },
+  {
+   "Date": "May 15 2024",
+   "NAV": "52.9286",
+   "Shares Outstanding": "225970",
+   "Total Net Assets": "11960460.9921"
+  },
+  {
+   "Date": "May 16 2024",
+   "NAV": "49.8394",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "12508368.6559"
+  },
+  {
+   "Date": "May 17 2024",
+   "NAV": "49.268",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "12364962.398"
+  },
+  {
+   "Date": "May 20 2024",
+   "NAV": "50.3554",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "12637870.9819"
+  },
+  {
+   "Date": "May 21 2024",
+   "NAV": "51.923",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13031297.0405"
+  },
+  {
+   "Date": "May 22 2024",
+   "NAV": "53.24",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13361829.14"
+  },
+  {
+   "Date": "May 23 2024",
+   "NAV": "55.4258",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13910407.0163"
+  },
+  {
+   "Date": "May 24 2024",
+   "NAV": "55.6384",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13963763.9824"
+  },
+  {
+   "Date": "May 28 2024",
+   "NAV": "55.7382",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13988811.1377"
+  },
+  {
+   "Date": "May 29 2024",
+   "NAV": "57.5304",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14438605.8444"
+  },
+  {
+   "Date": "May 30 2024",
+   "NAV": "57.416",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14409894.476"
+  },
+  {
+   "Date": "May 31 2024",
+   "NAV": "59.6608",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14973279.7888"
+  },
+  {
+   "Date": "Jun 03 2024",
+   "NAV": "59.0916",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14830425.6726"
+  },
+  {
+   "Date": "Jun 04 2024",
+   "NAV": "58.1778",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14601086.0883"
+  },
+  {
+   "Date": "Jun 05 2024",
+   "NAV": "57.1946",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14354328.9431"
+  },
+  {
+   "Date": "Jun 06 2024",
+   "NAV": "57.2502",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14368283.0697"
+  },
+  {
+   "Date": "Jun 07 2024",
+   "NAV": "60.181",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15103836.2035"
+  },
+  {
+   "Date": "Jun 10 2024",
+   "NAV": "59.0576",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14821892.5736"
+  },
+  {
+   "Date": "Jun 11 2024",
+   "NAV": "59.9356",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15042247.3066"
+  },
+  {
+   "Date": "Jun 12 2024",
+   "NAV": "60.223",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15114377.0905"
+  },
+  {
+   "Date": "Jun 13 2024",
+   "NAV": "60.3294",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15141080.6709"
+  },
+  {
+   "Date": "Jun 14 2024",
+   "NAV": "61.3768",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15403950.3148"
+  },
+  {
+   "Date": "Jun 17 2024",
+   "NAV": "59.8388",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15017953.0718"
+  },
+  {
+   "Date": "Jun 18 2024",
+   "NAV": "59.5962",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14957066.9007"
+  },
+  {
+   "Date": "Jun 20 2024",
+   "NAV": "58.1718",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14599580.2473"
+  },
+  {
+   "Date": "Jun 21 2024",
+   "NAV": "60.2106",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15111265.0191"
+  },
+  {
+   "Date": "Jun 24 2024",
+   "NAV": "58.8568",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14771497.0948"
+  },
+  {
+   "Date": "Jun 25 2024",
+   "NAV": "59.7946",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15006860.0431"
+  },
+  {
+   "Date": "Jun 26 2024",
+   "NAV": "59.4872",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14929710.7892"
+  },
+  {
+   "Date": "Jun 27 2024",
+   "NAV": "62.3338",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15644131.9543"
+  },
+  {
+   "Date": "Jun 28 2024",
+   "NAV": "61.9004",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15535360.0394"
+  },
+  {
+   "Date": "Jul 01 2024",
+   "NAV": "61.4842",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15430904.8687"
+  },
+  {
+   "Date": "Jul 02 2024",
+   "NAV": "59.8488",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15020462.8068"
+  },
+  {
+   "Date": "Jul 03 2024",
+   "NAV": "57.7502",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14493769.8197"
+  },
+  {
+   "Date": "Jul 05 2024",
+   "NAV": "59.7724",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15001288.4314"
+  },
+  {
+   "Date": "Jul 08 2024",
+   "NAV": "60.7306",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15241771.2391"
+  },
+  {
+   "Date": "Jul 09 2024",
+   "NAV": "59.4898",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14930363.3203"
+  },
+  {
+   "Date": "Jul 10 2024",
+   "NAV": "60.0458",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15069904.5863"
+  },
+  {
+   "Date": "Jul 11 2024",
+   "NAV": "57.5196",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14435895.3306"
+  },
+  {
+   "Date": "Jul 12 2024",
+   "NAV": "56.368",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14146874.248"
+  },
+  {
+   "Date": "Jul 15 2024",
+   "NAV": "58.9218",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14787810.3723"
+  },
+  {
+   "Date": "Jul 16 2024",
+   "NAV": "58.935",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14791123.2225"
+  },
+  {
+   "Date": "Jul 17 2024",
+   "NAV": "60.5438",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15194889.3893"
+  },
+  {
+   "Date": "Jul 18 2024",
+   "NAV": "61.6686",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15477184.3821"
+  },
+  {
+   "Date": "Jul 19 2024",
+   "NAV": "62.6186",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15715609.2071"
+  },
+  {
+   "Date": "Jul 22 2024",
+   "NAV": "60.025",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15064684.3375"
+  },
+  {
+   "Date": "Jul 23 2024",
+   "NAV": "61.7248",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15491289.0928"
+  },
+  {
+   "Date": "Jul 24 2024",
+   "NAV": "63.1256",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15842852.7716"
+  },
+  {
+   "Date": "Jul 25 2024",
+   "NAV": "64.668",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16229954.298"
+  },
+  {
+   "Date": "Jul 26 2024",
+   "NAV": "64.0584",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16076960.8524"
+  },
+  {
+   "Date": "Jul 29 2024",
+   "NAV": "63.8822",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16032739.3217"
+  },
+  {
+   "Date": "Jul 30 2024",
+   "NAV": "65.046",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16324822.281"
+  },
+  {
+   "Date": "Jul 31 2024",
+   "NAV": "63.2722",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15879645.4867"
+  },
+  {
+   "Date": "Aug 01 2024",
+   "NAV": "65.072",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16331347.592"
+  },
+  {
+   "Date": "Aug 02 2024",
+   "NAV": "65.7652",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16505322.4222"
+  },
+  {
+   "Date": "Aug 05 2024",
+   "NAV": "66.6822",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16735465.1217"
+  },
+  {
+   "Date": "Aug 06 2024",
+   "NAV": "68.0304",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "17073827.5944"
+  },
+  {
+   "Date": "Aug 07 2024",
+   "NAV": "67.4506",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16928313.1591"
+  },
+  {
+   "Date": "Aug 08 2024",
+   "NAV": "64.2316",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16120429.4626"
+  },
+  {
+   "Date": "Aug 09 2024",
+   "NAV": "64.4982",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16187338.9977"
+  },
+  {
+   "Date": "Aug 12 2024",
+   "NAV": "63.512",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15939828.932"
+  },
+  {
+   "Date": "Aug 13 2024",
+   "NAV": "62.7914",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15758977.4279"
+  },
+  {
+   "Date": "Aug 14 2024",
+   "NAV": "65.1582",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16352981.5077"
+  },
+  {
+   "Date": "Aug 15 2024",
+   "NAV": "62.4988",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15685542.5818"
+  },
+  {
+   "Date": "Aug 16 2024",
+   "NAV": "60.04",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15068448.94"
+  },
+  {
+   "Date": "Aug 19 2024",
+   "NAV": "58.9766",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14801563.7201"
+  },
+  {
+   "Date": "Aug 20 2024",
+   "NAV": "61.6586",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15474674.6471"
+  },
+  {
+   "Date": "Aug 21 2024",
+   "NAV": "60.4048",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15160004.0728"
+  },
+  {
+   "Date": "Aug 22 2024",
+   "NAV": "61.3444",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15395818.7734"
+  },
+  {
+   "Date": "Aug 23 2024",
+   "NAV": "59.4782",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14927452.0277"
+  },
+  {
+   "Date": "Aug 26 2024",
+   "NAV": "60.4492",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15171147.2962"
+  },
+  {
+   "Date": "Aug 27 2024",
+   "NAV": "59.1376",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14841970.4536"
+  },
+  {
+   "Date": "Aug 28 2024",
+   "NAV": "61.0286",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15316561.3421"
+  },
+  {
+   "Date": "Aug 29 2024",
+   "NAV": "60.1642",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15099619.8487"
+  },
+  {
+   "Date": "Aug 30 2024",
+   "NAV": "59.6486",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14970217.9121"
+  },
+  {
+   "Date": "Sep 03 2024",
+   "NAV": "61.7538",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15498567.3243"
+  },
+  {
+   "Date": "Sep 04 2024",
+   "NAV": "61.8738",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15528684.1443"
+  },
+  {
+   "Date": "Sep 05 2024",
+   "NAV": "62.5156",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15689758.9366"
+  },
+  {
+   "Date": "Sep 06 2024",
+   "NAV": "64.2684",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16129665.2874"
+  },
+  {
+   "Date": "Sep 09 2024",
+   "NAV": "64.1992",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16112297.9212"
+  },
+  {
+   "Date": "Sep 10 2024",
+   "NAV": "64.5278",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "16194767.8133"
+  },
+  {
+   "Date": "Sep 11 2024",
+   "NAV": "63.2328",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15869757.1308"
+  },
+  {
+   "Date": "Sep 12 2024",
+   "NAV": "63.304",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15887626.444"
+  },
+  {
+   "Date": "Sep 13 2024",
+   "NAV": "62.6352",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15719775.3672"
+  },
+  {
+   "Date": "Sep 16 2024",
+   "NAV": "61.939",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15545047.6165"
+  },
+  {
+   "Date": "Sep 17 2024",
+   "NAV": "60.387",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15155536.7445"
+  },
+  {
+   "Date": "Sep 18 2024",
+   "NAV": "61.103",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "15335233.7705"
+  },
+  {
+   "Date": "Sep 19 2024",
+   "NAV": "56.7574",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14244603.3289"
+  },
+  {
+   "Date": "Sep 20 2024",
+   "NAV": "56.7232",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "14236020.0352"
+  },
+  {
+   "Date": "Sep 23 2024",
+   "NAV": "54.53",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "13685584.955"
+  },
+  {
+   "Date": "Sep 24 2024",
+   "NAV": "43.821",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "10997909.7435"
+  },
+  {
+   "Date": "Sep 25 2024",
+   "NAV": "45.5262",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "11425869.7557"
+  },
+  {
+   "Date": "Sep 26 2024",
+   "NAV": "38.269",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "9604504.8715"
+  },
+  {
+   "Date": "Sep 27 2024",
+   "NAV": "37.7004",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "9461801.3394"
+  },
+  {
+   "Date": "Sep 30 2024",
+   "NAV": "38.6242",
+   "Shares Outstanding": "250970",
+   "Total Net Assets": "9693650.6587"
+  },
+  {
+   "Date": "Oct 01 2024",
+   "NAV": "35.4384",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "9780059.2824"
+  },
+  {
+   "Date": "Oct 02 2024",
+   "NAV": "30.3326",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "9129308.7861"
+  },
+  {
+   "Date": "Oct 03 2024",
+   "NAV": "32.0156",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "12037017.1866"
+  },
+  {
+   "Date": "Oct 04 2024",
+   "NAV": "29.7942",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "11201829.6537"
+  },
+  {
+   "Date": "Oct 07 2024",
+   "NAV": "28.1688",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "10590722.3268"
+  },
+  {
+   "Date": "Oct 08 2024",
+   "NAV": "33.3352",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "12533151.8172"
+  },
+  {
+   "Date": "Oct 09 2024",
+   "NAV": "34.423",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "12942135.7905"
+  },
+  {
+   "Date": "Oct 10 2024",
+   "NAV": "33.5322",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "11265930.5967"
+  },
+  {
+   "Date": "Oct 11 2024",
+   "NAV": "33.2696",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "11177703.9556"
+  },
+  {
+   "Date": "Oct 14 2024",
+   "NAV": "34.5258",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "11599753.8663"
+  },
+  {
+   "Date": "Oct 15 2024",
+   "NAV": "37.9976",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "12766186.6636"
+  },
+  {
+   "Date": "Oct 16 2024",
+   "NAV": "36.6644",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "12318266.7934"
+  },
+  {
+   "Date": "Oct 17 2024",
+   "NAV": "38.5318",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11404391.7073"
+  },
+  {
+   "Date": "Oct 18 2024",
+   "NAV": "35.267",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10438097.4245"
+  },
+  {
+   "Date": "Oct 21 2024",
+   "NAV": "36.2166",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10719153.8601"
+  },
+  {
+   "Date": "Oct 22 2024",
+   "NAV": "35.6556",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10553112.7266"
+  },
+  {
+   "Date": "Oct 23 2024",
+   "NAV": "35.8234",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10602777.0799"
+  },
+  {
+   "Date": "Oct 24 2024",
+   "NAV": "36.261",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10732295.0835"
+  },
+  {
+   "Date": "Oct 25 2024",
+   "NAV": "36.3168",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10748810.4048"
+  },
+  {
+   "Date": "Oct 28 2024",
+   "NAV": "35.0706",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10379968.2291"
+  },
+  {
+   "Date": "Oct 29 2024",
+   "NAV": "35.5836",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10531802.6346"
+  },
+  {
+   "Date": "Oct 30 2024",
+   "NAV": "36.5092",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10805755.7062"
+  },
+  {
+   "Date": "Oct 31 2024",
+   "NAV": "36.684",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10857491.874"
+  },
+  {
+   "Date": "Nov 01 2024",
+   "NAV": "36.4388",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10784919.1718"
+  },
+  {
+   "Date": "Nov 04 2024",
+   "NAV": "36.0154",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10659603.9919"
+  },
+  {
+   "Date": "Nov 05 2024",
+   "NAV": "34.289",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10148635.3415"
+  },
+  {
+   "Date": "Nov 06 2024",
+   "NAV": "36.3166",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10748751.2101"
+  },
+  {
+   "Date": "Nov 07 2024",
+   "NAV": "32.353",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "9575630.6455"
+  },
+  {
+   "Date": "Nov 08 2024",
+   "NAV": "36.1754",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10706959.7519"
+  },
+  {
+   "Date": "Nov 11 2024",
+   "NAV": "36.1768",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10707374.1148"
+  },
+  {
+   "Date": "Nov 12 2024",
+   "NAV": "38.8508",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11498807.2538"
+  },
+  {
+   "Date": "Nov 13 2024",
+   "NAV": "38.964",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11532311.454"
+  },
+  {
+   "Date": "Nov 14 2024",
+   "NAV": "39.8012",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11780100.4682"
+  },
+  {
+   "Date": "Nov 15 2024",
+   "NAV": "39.3038",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11632883.2493"
+  },
+  {
+   "Date": "Nov 18 2024",
+   "NAV": "37.8338",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11197802.2043"
+  },
+  {
+   "Date": "Nov 19 2024",
+   "NAV": "38.6616",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11442809.0676"
+  },
+  {
+   "Date": "Nov 20 2024",
+   "NAV": "38.3186",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11341290.1571"
+  },
+  {
+   "Date": "Nov 21 2024",
+   "NAV": "38.7816",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11478325.8876"
+  },
+  {
+   "Date": "Nov 22 2024",
+   "NAV": "40.5026",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11987696.2811"
+  },
+  {
+   "Date": "Nov 25 2024",
+   "NAV": "40.4836",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11982072.7846"
+  },
+  {
+   "Date": "Nov 26 2024",
+   "NAV": "40.9846",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "12130355.5081"
+  },
+  {
+   "Date": "Nov 27 2024",
+   "NAV": "38.81",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11486731.535"
+  },
+  {
+   "Date": "Nov 29 2024",
+   "NAV": "38.839",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11495314.7665"
+  },
+  {
+   "Date": "Dec 02 2024",
+   "NAV": "38.6966",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11453168.1401"
+  },
+  {
+   "Date": "Dec 03 2024",
+   "NAV": "38.3784",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11358989.3724"
+  },
+  {
+   "Date": "Dec 04 2024",
+   "NAV": "38.9424",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11525918.4264"
+  },
+  {
+   "Date": "Dec 05 2024",
+   "NAV": "38.7206",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11460271.5041"
+  },
+  {
+   "Date": "Dec 06 2024",
+   "NAV": "37.7318",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "11167612.9073"
+  },
+  {
+   "Date": "Dec 09 2024",
+   "NAV": "31.542",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "9335596.137"
+  },
+  {
+   "Date": "Dec 10 2024",
+   "NAV": "34.429",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10190071.6315"
+  },
+  {
+   "Date": "Dec 11 2024",
+   "NAV": "35.088",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "10385118.168"
+  },
+  {
+   "Date": "Dec 12 2024",
+   "NAV": "35.0546",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9323594.6531"
+  },
+  {
+   "Date": "Dec 13 2024",
+   "NAV": "35.9682",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9566588.0427"
+  },
+  {
+   "Date": "Dec 16 2024",
+   "NAV": "37.1596",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9883468.8706"
+  },
+  {
+   "Date": "Dec 17 2024",
+   "NAV": "35.8596",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9537703.3206"
+  },
+  {
+   "Date": "Dec 18 2024",
+   "NAV": "37.3188",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9925811.8518"
+  },
+  {
+   "Date": "Dec 19 2024",
+   "NAV": "36.8614",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9804155.5729"
+  },
+  {
+   "Date": "Dec 20 2024",
+   "NAV": "36.453",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9695531.9955"
+  },
+  {
+   "Date": "Dec 23 2024",
+   "NAV": "35.7152",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9499296.7472"
+  },
+  {
+   "Date": "Dec 24 2024",
+   "NAV": "34.8262",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9262846.3057"
+  },
+  {
+   "Date": "Dec 26 2024",
+   "NAV": "34.7704",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9248004.9844"
+  },
+  {
+   "Date": "Dec 27 2024",
+   "NAV": "35.402",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9415993.847"
+  },
+  {
+   "Date": "Dec 30 2024",
+   "NAV": "36.242",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9639411.587"
+  },
+  {
+   "Date": "Dec 31 2024",
+   "NAV": "36.382",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9676647.877"
+  },
+  {
+   "Date": "Jan 02 2025",
+   "NAV": "37.7018",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10027679.7023"
+  },
+  {
+   "Date": "Jan 03 2025",
+   "NAV": "36.474",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9701117.439"
+  },
+  {
+   "Date": "Jan 06 2025",
+   "NAV": "37.4484",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9960282.0174"
+  },
+  {
+   "Date": "Jan 07 2025",
+   "NAV": "38.3796",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10207956.5406"
+  },
+  {
+   "Date": "Jan 08 2025",
+   "NAV": "38.6778",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10287269.8383"
+  },
+  {
+   "Date": "Jan 10 2025",
+   "NAV": "40.9768",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10898742.9148"
+  },
+  {
+   "Date": "Jan 13 2025",
+   "NAV": "40.592",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10796396.312"
+  },
+  {
+   "Date": "Jan 14 2025",
+   "NAV": "38.8304",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10327857.3944"
+  },
+  {
+   "Date": "Jan 15 2025",
+   "NAV": "37.7858",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10050021.4763"
+  },
+  {
+   "Date": "Jan 16 2025",
+   "NAV": "37.7714",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "10046191.4579"
+  },
+  {
+   "Date": "Jan 17 2025",
+   "NAV": "36.3444",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9666647.2734"
+  },
+  {
+   "Date": "Jan 21 2025",
+   "NAV": "35.5492",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9455145.1462"
+  },
+  {
+   "Date": "Jan 22 2025",
+   "NAV": "36.0664",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "9592706.6404"
+  },
+  {
+   "Date": "Jan 23 2025",
+   "NAV": "36.0068",
+   "Shares Outstanding": "245970",
+   "Total Net Assets": "8856718.6198"
+  },
+  {
+   "Date": "Jan 24 2025",
+   "NAV": "34.2392",
+   "Shares Outstanding": "245970",
+   "Total Net Assets": "8421935.8612"
+  },
+  {
+   "Date": "Jan 27 2025",
+   "NAV": "33.6408",
+   "Shares Outstanding": "245970",
+   "Total Net Assets": "8274745.3188"
+  },
+  {
+   "Date": "Jan 28 2025",
+   "NAV": "32.8832",
+   "Shares Outstanding": "245970",
+   "Total Net Assets": "8088395.7952"
+  },
+  {
+   "Date": "Jan 29 2025",
+   "NAV": "33.1618",
+   "Shares Outstanding": "245970",
+   "Total Net Assets": "8156924.0123"
+  },
+  {
+   "Date": "Jan 30 2025",
+   "NAV": "31.582",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8084155.077"
+  },
+  {
+   "Date": "Jan 31 2025",
+   "NAV": "32.9624",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8437500.8964"
+  },
+  {
+   "Date": "Feb 03 2025",
+   "NAV": "33.3264",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8530675.2504"
+  },
+  {
+   "Date": "Feb 04 2025",
+   "NAV": "31.763",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8130486.2805"
+  },
+  {
+   "Date": "Feb 05 2025",
+   "NAV": "32.8286",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8403251.6421"
+  },
+  {
+   "Date": "Feb 06 2025",
+   "NAV": "32.1174",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "8221203.2889"
+  },
+  {
+   "Date": "Feb 07 2025",
+   "NAV": "31.2456",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "7998045.5916"
+  },
+  {
+   "Date": "Feb 10 2025",
+   "NAV": "29.5546",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "7565194.4031"
+  },
+  {
+   "Date": "Feb 11 2025",
+   "NAV": "30.057",
+   "Shares Outstanding": "255970",
+   "Total Net Assets": "7693795.4895"
+  },
+  {
+   "Date": "Feb 12 2025",
+   "NAV": "28.5664",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "7597905.3904"
+  },
+  {
+   "Date": "Feb 13 2025",
+   "NAV": "28.5916",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "7604607.9226"
+  },
+  {
+   "Date": "Feb 14 2025",
+   "NAV": "27.1472",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "7220435.7992"
+  },
+  {
+   "Date": "Feb 18 2025",
+   "NAV": "26.7536",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "7115748.6296"
+  },
+  {
+   "Date": "Feb 19 2025",
+   "NAV": "27.141",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "7218786.7635"
+  },
+  {
+   "Date": "Feb 20 2025",
+   "NAV": "26.0966",
+   "Shares Outstanding": "265970",
+   "Total Net Assets": "6941004.0401"
+  },
+  {
+   "Date": "Feb 21 2025",
+   "NAV": "25.3738",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "7383103.3943"
+  },
+  {
+   "Date": "Feb 24 2025",
+   "NAV": "27.079",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "7879271.4065"
+  },
+  {
+   "Date": "Feb 25 2025",
+   "NAV": "26.546",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "7724182.531"
+  },
+  {
+   "Date": "Feb 26 2025",
+   "NAV": "24.966",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7514104.401"
+  },
+  {
+   "Date": "Feb 27 2025",
+   "NAV": "25.5074",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7677051.4539"
+  },
+  {
+   "Date": "Feb 28 2025",
+   "NAV": "26.6916",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "8033464.2726"
+  },
+  {
+   "Date": "Mar 03 2025",
+   "NAV": "27.7918",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "8364595.3173"
+  },
+  {
+   "Date": "Mar 04 2025",
+   "NAV": "26.9454",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "8109851.3469"
+  },
+  {
+   "Date": "Mar 05 2025",
+   "NAV": "24.2662",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7303483.1457"
+  },
+  {
+   "Date": "Mar 06 2025",
+   "NAV": "24.0366",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7234379.6301"
+  },
+  {
+   "Date": "Mar 07 2025",
+   "NAV": "24.084",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7248645.774"
+  },
+  {
+   "Date": "Mar 10 2025",
+   "NAV": "25.3764",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7637623.9254"
+  },
+  {
+   "Date": "Mar 11 2025",
+   "NAV": "24.7882",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7460591.3127"
+  },
+  {
+   "Date": "Mar 12 2025",
+   "NAV": "24.8502",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7479251.6697"
+  },
+  {
+   "Date": "Mar 13 2025",
+   "NAV": "24.5288",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7382518.7868"
+  },
+  {
+   "Date": "Mar 14 2025",
+   "NAV": "23.1182",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6957965.5677"
+  },
+  {
+   "Date": "Mar 17 2025",
+   "NAV": "22.0304",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6630566.5944"
+  },
+  {
+   "Date": "Mar 18 2025",
+   "NAV": "22.105",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6653019.2175"
+  },
+  {
+   "Date": "Mar 19 2025",
+   "NAV": "22.295",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6710204.1825"
+  },
+  {
+   "Date": "Mar 20 2025",
+   "NAV": "23.575",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7095450.2625"
+  },
+  {
+   "Date": "Mar 21 2025",
+   "NAV": "24.4402",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7355852.5347"
+  },
+  {
+   "Date": "Mar 24 2025",
+   "NAV": "24.3004",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7313776.4394"
+  },
+  {
+   "Date": "Mar 25 2025",
+   "NAV": "24.7982",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7463601.0477"
+  },
+  {
+   "Date": "Mar 26 2025",
+   "NAV": "23.8438",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7176351.9393"
+  },
+  {
+   "Date": "Mar 27 2025",
+   "NAV": "23.3112",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "7016053.4532"
+  },
+  {
+   "Date": "Mar 28 2025",
+   "NAV": "24.3938",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "7585825.3643"
+  },
+  {
+   "Date": "Mar 31 2025",
+   "NAV": "24.4024",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "7588499.7364"
+  },
+  {
+   "Date": "Apr 01 2025",
+   "NAV": "24.518",
+   "Shares Outstanding": "320970",
+   "Total Net Assets": "7869628.273"
+  },
+  {
+   "Date": "Apr 02 2025",
+   "NAV": "24.8262",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "8465076.3057"
+  },
+  {
+   "Date": "Apr 03 2025",
+   "NAV": "25.2786",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "9504083.7171"
+  },
+  {
+   "Date": "Apr 04 2025",
+   "NAV": "28.866",
+   "Shares Outstanding": "375970",
+   "Total Net Assets": "10852851.051"
+  },
+  {
+   "Date": "Apr 07 2025",
+   "NAV": "33.7052",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "10481424.0122"
+  },
+  {
+   "Date": "Apr 08 2025",
+   "NAV": "34.6356",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "10770753.7566"
+  },
+  {
+   "Date": "Apr 09 2025",
+   "NAV": "29.7394",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "9248165.3059"
+  },
+  {
+   "Date": "Apr 10 2025",
+   "NAV": "29.9716",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "9320373.3526"
+  },
+  {
+   "Date": "Apr 11 2025",
+   "NAV": "27.3642",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "8509541.0487"
+  },
+  {
+   "Date": "Apr 14 2025",
+   "NAV": "26.6554",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "8289123.0319"
+  },
+  {
+   "Date": "Apr 15 2025",
+   "NAV": "26.967",
+   "Shares Outstanding": "310970",
+   "Total Net Assets": "8386022.3745"
+  },
+  {
+   "Date": "Apr 16 2025",
+   "NAV": "28.211",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "8349708.4085"
+  },
+  {
+   "Date": "Apr 17 2025",
+   "NAV": "28.2782",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "8369597.8277"
+  },
+  {
+   "Date": "Apr 21 2025",
+   "NAV": "28.2342",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "8356574.9937"
+  },
+  {
+   "Date": "Apr 22 2025",
+   "NAV": "26.4484",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7828025.5174"
+  },
+  {
+   "Date": "Apr 23 2025",
+   "NAV": "25.8718",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7657367.1973"
+  },
+  {
+   "Date": "Apr 24 2025",
+   "NAV": "25.451",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7532821.5485"
+  },
+  {
+   "Date": "Apr 25 2025",
+   "NAV": "25.6666",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7596633.4351"
+  },
+  {
+   "Date": "Apr 28 2025",
+   "NAV": "25.6444",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7590062.8234"
+  },
+  {
+   "Date": "Apr 29 2025",
+   "NAV": "25.9538",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7681637.0243"
+  },
+  {
+   "Date": "Apr 30 2025",
+   "NAV": "25.869",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "7656538.4715"
+  },
+  {
+   "Date": "May 01 2025",
+   "NAV": "25.9832",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "7170674.6452"
+  },
+  {
+   "Date": "May 02 2025",
+   "NAV": "24.2874",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6702678.7839"
+  },
+  {
+   "Date": "May 05 2025",
+   "NAV": "24.3482",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6719457.9727"
+  },
+  {
+   "Date": "May 06 2025",
+   "NAV": "23.797",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6567341.3795"
+  },
+  {
+   "Date": "May 07 2025",
+   "NAV": "24.88",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6866220.68"
+  },
+  {
+   "Date": "May 08 2025",
+   "NAV": "24.1254",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6657971.0769"
+  },
+  {
+   "Date": "May 09 2025",
+   "NAV": "24.3816",
+   "Shares Outstanding": "275970",
+   "Total Net Assets": "6728675.4876"
+  },
+  {
+   "Date": "May 12 2025",
+   "NAV": "22.6968",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6377199.3348"
+  },
+  {
+   "Date": "May 13 2025",
+   "NAV": "23.0826",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6485598.9111"
+  },
+  {
+   "Date": "May 14 2025",
+   "NAV": "22.3544",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6280994.0084"
+  },
+  {
+   "Date": "May 15 2025",
+   "NAV": "23.0532",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6477338.2902"
+  },
+  {
+   "Date": "May 16 2025",
+   "NAV": "23.2144",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6522631.2184"
+  },
+  {
+   "Date": "May 19 2025",
+   "NAV": "22.936",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6444408.196"
+  },
+  {
+   "Date": "May 20 2025",
+   "NAV": "22.4288",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6301898.4368"
+  },
+  {
+   "Date": "May 21 2025",
+   "NAV": "22.6456",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6362813.4916"
+  },
+  {
+   "Date": "May 22 2025",
+   "NAV": "22.8782",
+   "Shares Outstanding": "280970",
+   "Total Net Assets": "6428167.9277"
+  },
+  {
+   "Date": "May 23 2025",
+   "NAV": "22.8272",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6642110.2792"
+  },
+  {
+   "Date": "May 27 2025",
+   "NAV": "23.3044",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6780962.8334"
+  },
+  {
+   "Date": "May 28 2025",
+   "NAV": "23.7818",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6919873.5823"
+  },
+  {
+   "Date": "May 29 2025",
+   "NAV": "23.2774",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6773106.5489"
+  },
+  {
+   "Date": "May 30 2025",
+   "NAV": "24.1072",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "7014556.3592"
+  },
+  {
+   "Date": "Jun 02 2025",
+   "NAV": "23.6336",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6876751.3096"
+  },
+  {
+   "Date": "Jun 03 2025",
+   "NAV": "23.172",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6742437.942"
+  },
+  {
+   "Date": "Jun 04 2025",
+   "NAV": "22.3092",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6491386.0062"
+  },
+  {
+   "Date": "Jun 05 2025",
+   "NAV": "21.9958",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6400194.9113"
+  },
+  {
+   "Date": "Jun 06 2025",
+   "NAV": "22.0612",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6419224.5782"
+  },
+  {
+   "Date": "Jun 09 2025",
+   "NAV": "21.5022",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6256570.3917"
+  },
+  {
+   "Date": "Jun 10 2025",
+   "NAV": "21.3224",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6204253.3564"
+  },
+  {
+   "Date": "Jun 11 2025",
+   "NAV": "21.1098",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6142392.3903"
+  },
+  {
+   "Date": "Jun 12 2025",
+   "NAV": "21.2856",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6193545.5316"
+  },
+  {
+   "Date": "Jun 13 2025",
+   "NAV": "22.0804",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6424811.2694"
+  },
+  {
+   "Date": "Jun 16 2025",
+   "NAV": "21.352",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6212866.172"
+  },
+  {
+   "Date": "Jun 17 2025",
+   "NAV": "21.8586",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6360273.3471"
+  },
+  {
+   "Date": "Jun 18 2025",
+   "NAV": "22.4608",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6535497.5888"
+  },
+  {
+   "Date": "Jun 20 2025",
+   "NAV": "22.766",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6624302.701"
+  },
+  {
+   "Date": "Jun 23 2025",
+   "NAV": "22.055",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6417420.5425"
+  },
+  {
+   "Date": "Jun 24 2025",
+   "NAV": "20.8118",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6055682.2873"
+  },
+  {
+   "Date": "Jun 25 2025",
+   "NAV": "20.5488",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "5979156.2568"
+  },
+  {
+   "Date": "Jun 26 2025",
+   "NAV": "20.4436",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "5948545.8446"
+  },
+  {
+   "Date": "Jun 27 2025",
+   "NAV": "20.8438",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6064993.4393"
+  },
+  {
+   "Date": "Jun 30 2025",
+   "NAV": "20.9072",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6083441.1592"
+  },
+  {
+   "Date": "Jul 01 2025",
+   "NAV": "20.8326",
+   "Shares Outstanding": "290970",
+   "Total Net Assets": "6061734.5361"
+  },
+  {
+   "Date": "Jul 02 2025",
+   "NAV": "20.996",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6319239.606"
+  },
+  {
+   "Date": "Jul 03 2025",
+   "NAV": "21.4988",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6470569.0818"
+  },
+  {
+   "Date": "Jul 07 2025",
+   "NAV": "21.458",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6458289.363"
+  },
+  {
+   "Date": "Jul 08 2025",
+   "NAV": "21.0168",
+   "Shares Outstanding": "300970",
+   "Total Net Assets": "6325499.8548"
+  },
+  {
+   "Date": "Jul 09 2025",
+   "NAV": "21.608",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "6179315.388"
+  },
+  {
+   "Date": "Jul 10 2025",
+   "NAV": "21.2076",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "6064811.5986"
+  },
+  {
+   "Date": "Jul 11 2025",
+   "NAV": "21.2686",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "6082255.9821"
+  },
+  {
+   "Date": "Jul 14 2025",
+   "NAV": "20.775",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5941099.4625"
+  },
+  {
+   "Date": "Jul 15 2025",
+   "NAV": "19.9578",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5707401.9183"
+  },
+  {
+   "Date": "Jul 16 2025",
+   "NAV": "20.1438",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5760592.9893"
+  },
+  {
+   "Date": "Jul 17 2025",
+   "NAV": "20.0204",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5725303.8594"
+  },
+  {
+   "Date": "Jul 18 2025",
+   "NAV": "19.5312",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5585405.6232"
+  },
+  {
+   "Date": "Jul 21 2025",
+   "NAV": "19.3848",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5543539.1028"
+  },
+  {
+   "Date": "Jul 22 2025",
+   "NAV": "18.8542",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5391801.5637"
+  },
+  {
+   "Date": "Jul 23 2025",
+   "NAV": "18.5268",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5298173.8398"
+  },
+  {
+   "Date": "Jul 24 2025",
+   "NAV": "18.703",
+   "Shares Outstanding": "285970",
+   "Total Net Assets": "5348562.3705"
+  },
+  {
+   "Date": "Jul 25 2025",
+   "NAV": "18.9544",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5610000.1084"
+  },
+  {
+   "Date": "Jul 28 2025",
+   "NAV": "19.1288",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5661617.8868"
+  },
+  {
+   "Date": "Jul 29 2025",
+   "NAV": "19.3942",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5740169.2537"
+  },
+  {
+   "Date": "Jul 30 2025",
+   "NAV": "19.846",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5873890.081"
+  },
+  {
+   "Date": "Jul 31 2025",
+   "NAV": "20.2086",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5981210.0721"
+  },
+  {
+   "Date": "Aug 01 2025",
+   "NAV": "20.8824",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "6180637.0164"
+  },
+  {
+   "Date": "Aug 04 2025",
+   "NAV": "20.1622",
+   "Shares Outstanding": "295970",
+   "Total Net Assets": "5967476.9017"
+  },
+  {
+   "Date": "Aug 05 2025",
+   "NAV": "19.9862",
+   "Shares Outstanding": "315970",
+   "Total Net Assets": "6315109.5657"
+  },
+  {
+   "Date": "Aug 06 2025",
+   "NAV": "19.8332",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6564263.6202"
+  },
+  {
+   "Date": "Aug 07 2025",
+   "NAV": "19.8914",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6583526.2779"
+  },
+  {
+   "Date": "Aug 08 2025",
+   "NAV": "19.9782",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6612254.7777"
+  },
+  {
+   "Date": "Aug 11 2025",
+   "NAV": "20.3482",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6734714.9727"
+  },
+  {
+   "Date": "Aug 12 2025",
+   "NAV": "19.6924",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6517662.5514"
+  },
+  {
+   "Date": "Aug 13 2025",
+   "NAV": "18.5074",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6125458.9539"
+  },
+  {
+   "Date": "Aug 14 2025",
+   "NAV": "19.2224",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6362105.0064"
+  },
+  {
+   "Date": "Aug 15 2025",
+   "NAV": "19.2348",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6366209.0778"
+  },
+  {
+   "Date": "Aug 18 2025",
+   "NAV": "19.0026",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6289357.0311"
+  },
+  {
+   "Date": "Aug 19 2025",
+   "NAV": "19.3642",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6409037.0487"
+  },
+  {
+   "Date": "Aug 20 2025",
+   "NAV": "19.156",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6340128.366"
+  },
+  {
+   "Date": "Aug 21 2025",
+   "NAV": "19.2212",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6361707.8382"
+  },
+  {
+   "Date": "Aug 22 2025",
+   "NAV": "18.3618",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6077269.2123"
+  },
+  {
+   "Date": "Aug 25 2025",
+   "NAV": "18.4632",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6110829.9252"
+  },
+  {
+   "Date": "Aug 26 2025",
+   "NAV": "18.3948",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6088191.3378"
+  },
+  {
+   "Date": "Aug 27 2025",
+   "NAV": "19.34",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6401027.49"
+  },
+  {
+   "Date": "Aug 28 2025",
+   "NAV": "19.0006",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6288695.0841"
+  },
+  {
+   "Date": "Aug 29 2025",
+   "NAV": "18.6714",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6179738.6079"
+  },
+  {
+   "Date": "Sep 02 2025",
+   "NAV": "18.3472",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6072436.9992"
+  },
+  {
+   "Date": "Sep 03 2025",
+   "NAV": "18.6812",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6182982.1482"
+  },
+  {
+   "Date": "Sep 04 2025",
+   "NAV": "19.2438",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6369187.8393"
+  },
+  {
+   "Date": "Sep 05 2025",
+   "NAV": "18.6838",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6183842.6793"
+  },
+  {
+   "Date": "Sep 08 2025",
+   "NAV": "18.1704",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "6013920.8844"
+  },
+  {
+   "Date": "Sep 09 2025",
+   "NAV": "17.6884",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "5854391.6574"
+  },
+  {
+   "Date": "Sep 10 2025",
+   "NAV": "17.915",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "5929390.2525"
+  },
+  {
+   "Date": "Sep 11 2025",
+   "NAV": "17.0016",
+   "Shares Outstanding": "330970",
+   "Total Net Assets": "5627079.0576"
+  },
+  {
+   "Date": "Sep 12 2025",
+   "NAV": "17.2208",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5785732.4488"
+  },
+  {
+   "Date": "Sep 15 2025",
+   "NAV": "16.9828",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5705770.7558"
+  },
+  {
+   "Date": "Sep 16 2025",
+   "NAV": "16.7636",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5632125.3646"
+  },
+  {
+   "Date": "Sep 17 2025",
+   "NAV": "16.3028",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5477308.7758"
+  },
+  {
+   "Date": "Sep 18 2025",
+   "NAV": "16.7306",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5621038.2391"
+  },
+  {
+   "Date": "Sep 19 2025",
+   "NAV": "16.8612",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5664916.3782"
+  },
+  {
+   "Date": "Sep 22 2025",
+   "NAV": "17.0976",
+   "Shares Outstanding": "335970",
+   "Total Net Assets": "5744340.5136"
+  },
+  {
+   "Date": "Sep 23 2025",
+   "NAV": "17.5668",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5989813.2798"
+  },
+  {
+   "Date": "Sep 24 2025",
+   "NAV": "16.9014",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5762929.5129"
+  },
+  {
+   "Date": "Sep 25 2025",
+   "NAV": "16.8226",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5736060.8011"
+  },
+  {
+   "Date": "Sep 26 2025",
+   "NAV": "17.1132",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5835147.7002"
+  },
+  {
+   "Date": "Sep 29 2025",
+   "NAV": "16.57",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5649930.895"
+  },
+  {
+   "Date": "Sep 30 2025",
+   "NAV": "16.446",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5607650.181"
+  },
+  {
+   "Date": "Oct 01 2025",
+   "NAV": "16.2588",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5543819.9418"
+  },
+  {
+   "Date": "Oct 02 2025",
+   "NAV": "15.9728",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5446301.5208"
+  },
+  {
+   "Date": "Oct 03 2025",
+   "NAV": "16.2338",
+   "Shares Outstanding": "340970",
+   "Total Net Assets": "5535295.6043"
+  },
+  {
+   "Date": "Oct 06 2025",
+   "NAV": "16.2558",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "5867913.0213"
+  },
+  {
+   "Date": "Oct 07 2025",
+   "NAV": "16.6282",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6002339.5527"
+  },
+  {
+   "Date": "Oct 08 2025",
+   "NAV": "16.5352",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "5968769.0172"
+  },
+  {
+   "Date": "Oct 09 2025",
+   "NAV": "16.9748",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6127452.9678"
+  },
+  {
+   "Date": "Oct 10 2025",
+   "NAV": "18.817",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6792438.3495"
+  },
+  {
+   "Date": "Oct 13 2025",
+   "NAV": "17.6418",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6368222.2923"
+  },
+  {
+   "Date": "Oct 14 2025",
+   "NAV": "17.7648",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6412622.0328"
+  },
+  {
+   "Date": "Oct 15 2025",
+   "NAV": "17.4096",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6284404.2456"
+  },
+  {
+   "Date": "Oct 16 2025",
+   "NAV": "17.2476",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6225926.5386"
+  },
+  {
+   "Date": "Oct 17 2025",
+   "NAV": "17.249",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6226431.9015"
+  },
+  {
+   "Date": "Oct 20 2025",
+   "NAV": "16.8328",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6076194.7308"
+  },
+  {
+   "Date": "Oct 21 2025",
+   "NAV": "17.2942",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6242747.9037"
+  },
+  {
+   "Date": "Oct 22 2025",
+   "NAV": "17.472",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6306928.992"
+  },
+  {
+   "Date": "Oct 23 2025",
+   "NAV": "16.887",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6095759.4945"
+  },
+  {
+   "Date": "Oct 24 2025",
+   "NAV": "16.7792",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "6056846.5512"
+  },
+  {
+   "Date": "Oct 27 2025",
+   "NAV": "16.3472",
+   "Shares Outstanding": "360970",
+   "Total Net Assets": "5900905.9992"
+  },
+  {
+   "Date": "Oct 28 2025",
+   "NAV": "16.5282",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6048883.2027"
+  },
+  {
+   "Date": "Oct 29 2025",
+   "NAV": "16.4438",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6017995.0393"
+  },
+  {
+   "Date": "Oct 30 2025",
+   "NAV": "17.1046",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6259830.3281"
+  },
+  {
+   "Date": "Oct 31 2025",
+   "NAV": "17.4888",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6400437.3468"
+  },
+  {
+   "Date": "Nov 03 2025",
+   "NAV": "17.389",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6363913.1915"
+  },
+  {
+   "Date": "Nov 04 2025",
+   "NAV": "17.7962",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6512937.6007"
+  },
+  {
+   "Date": "Nov 05 2025",
+   "NAV": "17.4402",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6382651.0347"
+  },
+  {
+   "Date": "Nov 06 2025",
+   "NAV": "17.1208",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6265759.0988"
+  },
+  {
+   "Date": "Nov 07 2025",
+   "NAV": "17.2994",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6331121.9659"
+  },
+  {
+   "Date": "Nov 10 2025",
+   "NAV": "16.5974",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6074208.5689"
+  },
+  {
+   "Date": "Nov 11 2025",
+   "NAV": "16.6002",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6075233.2947"
+  },
+  {
+   "Date": "Nov 12 2025",
+   "NAV": "16.4814",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6031755.6429"
+  },
+  {
+   "Date": "Nov 13 2025",
+   "NAV": "16.6948",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6109854.3878"
+  },
+  {
+   "Date": "Nov 14 2025",
+   "NAV": "17.1386",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6272273.4271"
+  },
+  {
+   "Date": "Nov 17 2025",
+   "NAV": "17.5286",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6415003.0921"
+  },
+  {
+   "Date": "Nov 18 2025",
+   "NAV": "17.6752",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6468654.8072"
+  },
+  {
+   "Date": "Nov 19 2025",
+   "NAV": "18.0356",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6600551.6566"
+  },
+  {
+   "Date": "Nov 20 2025",
+   "NAV": "18.5264",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6780171.4504"
+  },
+  {
+   "Date": "Nov 21 2025",
+   "NAV": "18.4021",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6734680.94435"
+  },
+  {
+   "Date": "Nov 24 2025",
+   "NAV": "17.8092",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6517695.2562"
+  },
+  {
+   "Date": "Nov 25 2025",
+   "NAV": "17.5878",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6436668.7233"
+  },
+  {
+   "Date": "Nov 26 2025",
+   "NAV": "17.7985",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6513779.33975"
+  },
+  {
+   "Date": "Nov 28 2025",
+   "NAV": "17.6655",
+   "Shares Outstanding": "365970",
+   "Total Net Assets": "6465104.86425"
+  },
+  {
+   "Date": "Dec 01 2025",
+   "NAV": "17.573",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6430250.6545"
+  },
+  {
+   "Date": "Dec 02 2025",
+   "NAV": "17.7113",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6480848.0508"
+  },
+  {
+   "Date": "Dec 03 2025",
+   "NAV": "17.9666",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6574266.4056"
+  },
+  {
+   "Date": "Dec 04 2025",
+   "NAV": "17.8793",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6542321.9388"
+  },
+  {
+   "Date": "Dec 05 2025",
+   "NAV": "17.3623",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6353143.3668"
+  },
+  {
+   "Date": "Dec 08 2025",
+   "NAV": "17.7343",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6489264.1188"
+  },
+  {
+   "Date": "Dec 09 2025",
+   "NAV": "18.3256",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6705630.2496"
+  },
+  {
+   "Date": "Dec 10 2025",
+   "NAV": "18.0743",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6613675.5588"
+  },
+  {
+   "Date": "Dec 11 2025",
+   "NAV": "17.9864",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6581511.5424"
+  },
+  {
+   "Date": "Dec 12 2025",
+   "NAV": "18.0963",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6621725.7108"
+  },
+  {
+   "Date": "Dec 15 2025",
+   "NAV": "18.4181",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6739477.4796"
+  },
+  {
+   "Date": "Dec 16 2025",
+   "NAV": "18.7718",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6868901.9688"
+  },
+  {
+   "Date": "Dec 17 2025",
+   "NAV": "18.8848",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6910250.4768"
+  },
+  {
+   "Date": "Dec 18 2025",
+   "NAV": "18.5307",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6780679.6212"
+  },
+  {
+   "Date": "Dec 19 2025",
+   "NAV": "18.1627",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6646022.5332"
+  },
+  {
+   "Date": "Dec 22 2025",
+   "NAV": "18.1402",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6637789.4232"
+  },
+  {
+   "Date": "Dec 23 2025",
+   "NAV": "18.24",
+   "Shares Outstanding": "365920",
+   "Total Net Assets": "6674307.84"
+  },
+  {
+   "Date": "Dec 24 2025",
+   "NAV": "18.0525",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "6425173.59"
+  },
+  {
+   "Date": "Dec 26 2025",
+   "NAV": "17.7073",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "6302311.3868"
+  },
+  {
+   "Date": "Dec 29 2025",
+   "NAV": "18.1313",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "6453219.7708"
+  },
+  {
+   "Date": "Dec 30 2025",
+   "NAV": "17.9476",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "6387838.0016"
+  },
+  {
+   "Date": "Dec 31 2025",
+   "NAV": "18.3058",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "6515327.1128"
+  },
+  {
+   "Date": "Jan 02 2026",
+   "NAV": "16.8512",
+   "Shares Outstanding": "355920",
+   "Total Net Assets": "5997611.6992"
+  },
+  {
+   "Date": "Jan 05 2026",
+   "NAV": "16.7636",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "5631161.4576"
+  },
+  {
+   "Date": "Jan 06 2026",
+   "NAV": "16.7853",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "5638450.8348"
+  },
+  {
+   "Date": "Jan 07 2026",
+   "NAV": "17.3172",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "5817124.5552"
+  },
+  {
+   "Date": "Jan 08 2026",
+   "NAV": "17.2154",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5266466.3064"
+  },
+  {
+   "Date": "Jan 09 2026",
+   "NAV": "17.2673",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5282343.3468"
+  },
+  {
+   "Date": "Jan 12 2026",
+   "NAV": "16.1418",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "4938034.8888"
+  },
+  {
+   "Date": "Jan 13 2026",
+   "NAV": "16.4564",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5034276.0624"
+  },
+  {
+   "Date": "Jan 14 2026",
+   "NAV": "16.6316",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5087872.5456"
+  },
+  {
+   "Date": "Jan 15 2026",
+   "NAV": "16.6685",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5099160.846"
+  },
+  {
+   "Date": "Jan 16 2026",
+   "NAV": "17.2616",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5280599.6256"
+  },
+  {
+   "Date": "Jan 20 2026",
+   "NAV": "17.6462",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5398254.9192"
+  },
+  {
+   "Date": "Jan 21 2026",
+   "NAV": "17.2245",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5269250.142"
+  },
+  {
+   "Date": "Jan 22 2026",
+   "NAV": "17.1054",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5232815.5464"
+  },
+  {
+   "Date": "Jan 23 2026",
+   "NAV": "17.1484",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5245969.9344"
+  },
+  {
+   "Date": "Jan 26 2026",
+   "NAV": "17.1449",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5244899.2284"
+  },
+  {
+   "Date": "Jan 27 2026",
+   "NAV": "16.7243",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5116230.9588"
+  },
+  {
+   "Date": "Jan 28 2026",
+   "NAV": "16.2576",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "4973459.9616"
+  },
+  {
+   "Date": "Jan 29 2026",
+   "NAV": "16.0366",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "4905852.5256"
+  },
+  {
+   "Date": "Jan 30 2026",
+   "NAV": "16.9665",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5190323.814"
+  },
+  {
+   "Date": "Feb 02 2026",
+   "NAV": "17.348",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5307030.768"
+  },
+  {
+   "Date": "Feb 03 2026",
+   "NAV": "17.7517",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5430529.0572"
+  },
+  {
+   "Date": "Feb 04 2026",
+   "NAV": "18.169",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5558187.804"
+  },
+  {
+   "Date": "Feb 05 2026",
+   "NAV": "18.2397",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5579816.0652"
+  },
+  {
+   "Date": "Feb 06 2026",
+   "NAV": "17.2774",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5285433.0984"
+  },
+  {
+   "Date": "Feb 09 2026",
+   "NAV": "17.1237",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5238413.8092"
+  },
+  {
+   "Date": "Feb 10 2026",
+   "NAV": "17.0155",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "5205313.698"
+  },
+  {
+   "Date": "Feb 11 2026",
+   "NAV": "17.071",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5393002.036"
+  },
+  {
+   "Date": "Feb 12 2026",
+   "NAV": "17.7776",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5616228.2816"
+  },
+  {
+   "Date": "Feb 13 2026",
+   "NAV": "18.0921",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5715583.8636"
+  },
+  {
+   "Date": "Feb 17 2026",
+   "NAV": "17.919",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5660898.804"
+  },
+  {
+   "Date": "Feb 18 2026",
+   "NAV": "17.7391",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5604065.5156"
+  },
+  {
+   "Date": "Feb 19 2026",
+   "NAV": "17.844",
+   "Shares Outstanding": "315920",
+   "Total Net Assets": "5637205.104"
+  },
+  {
+   "Date": "Feb 20 2026",
+   "NAV": "17.6682",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "5935031.0712"
+  },
+  {
+   "Date": "Feb 23 2026",
+   "NAV": "17.7918",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "5976550.2888"
+  },
+  {
+   "Date": "Feb 24 2026",
+   "NAV": "18.0819",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6073999.5204"
+  },
+  {
+   "Date": "Feb 25 2026",
+   "NAV": "18.0391",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6059622.3156"
+  },
+  {
+   "Date": "Feb 26 2026",
+   "NAV": "19.0073",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6384856.1868"
+  },
+  {
+   "Date": "Feb 27 2026",
+   "NAV": "19.1288",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6425669.9808"
+  },
+  {
+   "Date": "Mar 02 2026",
+   "NAV": "19.5231",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6558121.6596"
+  },
+  {
+   "Date": "Mar 03 2026",
+   "NAV": "20.4174",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6858531.3384"
+  },
+  {
+   "Date": "Mar 04 2026",
+   "NAV": "20.2509",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6802601.3244"
+  },
+  {
+   "Date": "Mar 05 2026",
+   "NAV": "20.9611",
+   "Shares Outstanding": "325920",
+   "Total Net Assets": "6831557.8676"
+  },
+  {
+   "Date": "Mar 06 2026",
+   "NAV": "20.6905",
+   "Shares Outstanding": "325920",
+   "Total Net Assets": "6743364.998"
+  },
+  {
+   "Date": "Mar 09 2026",
+   "NAV": "19.9368",
+   "Shares Outstanding": "325920",
+   "Total Net Assets": "6497722.1088"
+  },
+  {
+   "Date": "Mar 10 2026",
+   "NAV": "19.8229",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6658829.2764"
+  },
+  {
+   "Date": "Mar 11 2026",
+   "NAV": "20.0333",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6729506.0028"
+  },
+  {
+   "Date": "Mar 12 2026",
+   "NAV": "20.3034",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6820236.9144"
+  },
+  {
+   "Date": "Mar 13 2026",
+   "NAV": "20.2255",
+   "Shares Outstanding": "335920",
+   "Total Net Assets": "6794069.058"
+  },
+  {
+   "Date": "Mar 16 2026",
+   "NAV": "19.5162",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "6750965.8392"
+  },
+  {
+   "Date": "Mar 17 2026",
+   "NAV": "19.5115",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "6749340.034"
+  },
+  {
+   "Date": "Mar 18 2026",
+   "NAV": "20.2461",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7003449.9276"
+  },
+  {
+   "Date": "Mar 19 2026",
+   "NAV": "20.2616",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7008811.6256"
+  },
+  {
+   "Date": "Mar 20 2026",
+   "NAV": "21.425",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7411250.3"
+  },
+  {
+   "Date": "Mar 23 2026",
+   "NAV": "21.1632",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7320689.4912"
+  },
+  {
+   "Date": "Mar 24 2026",
+   "NAV": "21.2172",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7339368.9552"
+  },
+  {
+   "Date": "Mar 25 2026",
+   "NAV": "20.3339",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7033821.3524"
+  },
+  {
+   "Date": "Mar 26 2026",
+   "NAV": "21.5461",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7453140.7276"
+  },
+  {
+   "Date": "Mar 27 2026",
+   "NAV": "21.657",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7491502.812"
+  },
+  {
+   "Date": "Mar 30 2026",
+   "NAV": "21.4768",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7429168.7488"
+  },
+  {
+   "Date": "Mar 31 2026",
+   "NAV": "20.374",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7047692.584"
+  },
+  {
+   "Date": "Apr 01 2026",
+   "NAV": "20.7632",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7182323.0912"
+  },
+  {
+   "Date": "Apr 02 2026",
+   "NAV": "20.7791",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7187823.1556"
+  },
+  {
+   "Date": "Apr 06 2026",
+   "NAV": "20.7979",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7194326.3764"
+  },
+  {
+   "Date": "Apr 07 2026",
+   "NAV": "20.8864",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "7224939.9424"
+  },
+  {
+   "Date": "Apr 08 2026",
+   "NAV": "19.8621",
+   "Shares Outstanding": "345920",
+   "Total Net Assets": "6870618.1836"
+  },
+  {
+   "Date": "Apr 09 2026",
+   "NAV": "19.932",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "6097517.712"
+  },
+  {
+   "Date": "Apr 10 2026",
+   "NAV": "19.9878",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "6114587.8248"
+  },
+  {
+   "Date": "Apr 13 2026",
+   "NAV": "19.7623",
+   "Shares Outstanding": "305920",
+   "Total Net Assets": "6045603.7668"
+  },
+  {
+   "Date": "Apr 14 2026",
+   "NAV": "19.3022",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5518807.8152"
+  },
+  {
+   "Date": "Apr 15 2026",
+   "NAV": "19.3166",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5522925.0056"
+  },
+  {
+   "Date": "Apr 16 2026",
+   "NAV": "18.9552",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5419594.9632"
+  },
+  {
+   "Date": "Apr 17 2026",
+   "NAV": "18.5889",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5314863.9324"
+  },
+  {
+   "Date": "Apr 20 2026",
+   "NAV": "18.5349",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5299424.4684"
+  },
+  {
+   "Date": "Apr 21 2026",
+   "NAV": "19.0815",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5455706.154"
+  },
+  {
+   "Date": "Apr 22 2026",
+   "NAV": "19.2299",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5498136.0884"
+  },
+  {
+   "Date": "Apr 23 2026",
+   "NAV": "19.7327",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5641894.6532"
+  },
+  {
+   "Date": "Apr 24 2026",
+   "NAV": "19.3435",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5530616.146"
+  },
+  {
+   "Date": "Apr 27 2026",
+   "NAV": "19.7781",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5654875.2396"
+  },
+  {
+   "Date": "Apr 28 2026",
+   "NAV": "20.0003",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5718405.7748"
+  },
+  {
+   "Date": "Apr 29 2026",
+   "NAV": "19.9059",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5691415.3044"
+  },
+  {
+   "Date": "Apr 30 2026",
+   "NAV": "19.4185",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5552059.846"
+  },
+  {
+   "Date": "May 01 2026",
+   "NAV": "19.4088",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5549286.4608"
+  },
+  {
+   "Date": "May 04 2026",
+   "NAV": "19.6882",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5629171.3912"
+  },
+  {
+   "Date": "May 05 2026",
+   "NAV": "19.7586",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5649299.8776"
+  },
+  {
+   "Date": "May 06 2026",
+   "NAV": "18.6827",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5341682.8532"
+  },
+  {
+   "Date": "May 07 2026",
+   "NAV": "18.9865",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5618409.134"
+  },
+  {
+   "Date": "May 08 2026",
+   "NAV": "18.946",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5606424.536"
+  },
+  {
+   "Date": "May 11 2026",
+   "NAV": "18.7181",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5538985.2796"
+  },
+  {
+   "Date": "May 12 2026",
+   "NAV": "18.8638",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5582100.2408"
+  },
+  {
+   "Date": "May 13 2026",
+   "NAV": "17.9278",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5305122.8648"
+  },
+  {
+   "Date": "May 14 2026",
+   "NAV": "18.8872",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5589024.6752"
+  },
+  {
+   "Date": "May 15 2026",
+   "NAV": "19.9505",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5903672.158"
+  },
+  {
+   "Date": "May 18 2026",
+   "NAV": "19.9999",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5918290.4084"
+  },
+  {
+   "Date": "May 19 2026",
+   "NAV": "19.8736",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5880916.2176"
+  },
+  {
+   "Date": "May 20 2026",
+   "NAV": "19.9223",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5895327.3268"
+  },
+  {
+   "Date": "May 21 2026",
+   "NAV": "20.3114",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6010468.2424"
+  },
+  {
+   "Date": "May 22 2026",
+   "NAV": "20.7455",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6138925.378"
+  },
+  {
+   "Date": "May 26 2026",
+   "NAV": "20.4823",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6061040.2868"
+  },
+  {
+   "Date": "May 27 2026",
+   "NAV": "20.9831",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6209235.0196"
+  },
+  {
+   "Date": "May 28 2026",
+   "NAV": "21.3795",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6326536.122"
+  },
+  {
+   "Date": "May 29 2026",
+   "NAV": "21.319",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6308633.204"
+  },
+  {
+   "Date": "Jun 01 2026",
+   "NAV": "20.972",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6205950.352"
+  },
+  {
+   "Date": "Jun 02 2026",
+   "NAV": "19.7677",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5849578.7132"
+  },
+  {
+   "Date": "Jun 03 2026",
+   "NAV": "20.6666",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6115577.6056"
+  },
+  {
+   "Date": "Jun 04 2026",
+   "NAV": "20.7526",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6141026.3816"
+  },
+  {
+   "Date": "Jun 05 2026",
+   "NAV": "21.6077",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6394064.1532"
+  },
+  {
+   "Date": "Jun 08 2026",
+   "NAV": "21.7008",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6421613.9328"
+  },
+  {
+   "Date": "Jun 09 2026",
+   "NAV": "21.6946",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6419779.2536"
+  },
+  {
+   "Date": "Jun 10 2026",
+   "NAV": "21.6254",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6399301.8664"
+  },
+  {
+   "Date": "Jun 11 2026",
+   "NAV": "21.4313",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6341864.5708"
+  },
+  {
+   "Date": "Jun 12 2026",
+   "NAV": "20.9765",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6207281.974"
+  },
+  {
+   "Date": "Jun 15 2026",
+   "NAV": "20.8822",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6179377.0952"
+  },
+  {
+   "Date": "Jun 16 2026",
+   "NAV": "21.5446",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6375391.8536"
+  },
+  {
+   "Date": "Jun 17 2026",
+   "NAV": "22.6896",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6714215.6736"
+  },
+  {
+   "Date": "Jun 18 2026",
+   "NAV": "23.1792",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6859096.1472"
+  },
+  {
+   "Date": "Jun 22 2026",
+   "NAV": "23.0049",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6807517.9884"
+  },
+  {
+   "Date": "Jun 23 2026",
+   "NAV": "23.8368",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7053690.5088"
+  },
+  {
+   "Date": "Jun 24 2026",
+   "NAV": "24.4101",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7223339.1516"
+  },
+  {
+   "Date": "Jun 25 2026",
+   "NAV": "25.438",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7527511.208"
+  },
+  {
+   "Date": "Jun 26 2026",
+   "NAV": "25.5987",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7575064.9092"
+  },
+  {
+   "Date": "Jun 29 2026",
+   "NAV": "25.412",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7519817.392"
+  },
+  {
+   "Date": "Jun 30 2026",
+   "NAV": "25.6115",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7578852.634"
+  },
+  {
+   "Date": "Jul 01 2026",
+   "NAV": "25.0011",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7398225.5076"
+  },
+  {
+   "Date": "Jul 02 2026",
+   "NAV": "25.1151",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7431959.9316"
+  },
+  {
+   "Date": "Jul 06 2026",
+   "NAV": "24.2075",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7163386.57"
+  },
+  {
+   "Date": "Jul 07 2026",
+   "NAV": "24.215",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "7165605.94"
+  },
+  {
+   "Date": "Jul 08 2026",
+   "NAV": "22.8041",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6748098.0556"
+  },
+  {
+   "Date": "Jul 09 2026",
+   "NAV": "22.85",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6761680.6"
+  },
+  {
+   "Date": "Jul 10 2026",
+   "NAV": "22.7686",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6737593.0376"
+  },
+  {
+   "Date": "Jul 13 2026",
+   "NAV": "22.8295",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6755614.322"
+  },
+  {
+   "Date": "Jul 14 2026",
+   "NAV": "22.3843",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6623872.5188"
+  },
+  {
+   "Date": "Jul 15 2026",
+   "NAV": "21.7126",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6425105.7416"
+  },
+  {
+   "Date": "Jul 16 2026",
+   "NAV": "21.4009",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6332868.7244"
+  },
+  {
+   "Date": "Jul 17 2026",
+   "NAV": "21.9109",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6483785.8844"
+  },
+  {
+   "Date": "Jul 20 2026",
+   "NAV": "20.7456",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6138954.9696"
+  },
+  {
+   "Date": "Jul 21 2026",
+   "NAV": "21.2348",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6283717.0768"
+  },
+  {
+   "Date": "Jul 22 2026",
+   "NAV": "21.484",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6357459.344"
+  },
+  {
+   "Date": "Jul 23 2026",
+   "NAV": "21.4514",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6347812.4824"
+  },
+  {
+   "Date": "Jul 24 2026",
+   "NAV": "21.3147",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6307360.7652"
+  },
+  {
+   "Date": "Jul 27 2026",
+   "NAV": "20.4603",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6054530.1348"
+  },
+  {
+   "Date": "Jul 28 2026",
+   "NAV": "20.0363",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5929061.7508"
+  },
+  {
+   "Date": "Jul 29 2026",
+   "NAV": "19.5134",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5774327.2744"
+  },
+  {
+   "Date": "Jul 30 2026",
+   "NAV": "19.0851",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5647586.4516"
+  },
+  {
+   "Date": "Jul 31 2026",
+   "NAV": "19.1162",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5656789.4392"
+  },
+  {
+   "Date": "Aug 03 2026",
+   "NAV": "19.1638",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5670875.0408"
+  },
+  {
+   "Date": "Aug 04 2026",
+   "NAV": "19.327",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5719168.532"
+  },
+  {
+   "Date": "Aug 05 2026",
+   "NAV": "19.5758",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5792792.4328"
+  },
+  {
+   "Date": "Aug 06 2026",
+   "NAV": "19.7211",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5835789.0276"
+  },
+  {
+   "Date": "Aug 07 2026",
+   "NAV": "19.4905",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5767550.798"
+  },
+  {
+   "Date": "Aug 10 2026",
+   "NAV": "19.1515",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5667235.274"
+  },
+  {
+   "Date": "Aug 11 2026",
+   "NAV": "20.0281",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "5926635.2396"
+  },
+  {
+   "Date": "Aug 12 2026",
+   "NAV": "20.5148",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6070657.5568"
+  },
+  {
+   "Date": "Aug 13 2026",
+   "NAV": "20.9494",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6199262.6504"
+  },
+  {
+   "Date": "Aug 14 2026",
+   "NAV": "20.9253",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6192131.0748"
+  },
+  {
+   "Date": "Aug 17 2026",
+   "NAV": "20.6801",
+   "Shares Outstanding": "295920",
+   "Total Net Assets": "6119572.4716"
+  },
+  {
+   "Date": "Aug 18 2026",
+   "NAV": "20.7331",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5927925.0196"
+  },
+  {
+   "Date": "Aug 19 2026",
+   "NAV": "20.0061",
+   "Shares Outstanding": "285920",
+   "Total Net Assets": "5720064.0876"
+  },
+  {
+   "Date": "Aug 20 2026",
+   "NAV": "20.0218",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5324116.9688"
+  },
+  {
+   "Date": "Aug 21 2026",
+   "NAV": "19.8186",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5270082.8376"
+  },
+  {
+   "Date": "Aug 24 2026",
+   "NAV": "20.1665",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5362595.014"
+  },
+  {
+   "Date": "Aug 25 2026",
+   "NAV": "20.1604",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5360972.9264"
+  },
+  {
+   "Date": "Aug 26 2026",
+   "NAV": "20.1766",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5365280.7656"
+  },
+  {
+   "Date": "Aug 27 2026",
+   "NAV": "20.5318",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5459734.1288"
+  },
+  {
+   "Date": "Aug 28 2026",
+   "NAV": "20.2289",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5379188.1724"
+  },
+  {
+   "Date": "Aug 31 2026",
+   "NAV": "20.3944",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5423197.2704"
+  },
+  {
+   "Date": "Sep 01 2026",
+   "NAV": "20.4345",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5433860.502"
+  },
+  {
+   "Date": "Sep 02 2026",
+   "NAV": "20.2077",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5373550.7532"
+  },
+  {
+   "Date": "Sep 03 2026",
+   "NAV": "20.4399",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5435296.4484"
+  },
+  {
+   "Date": "Sep 04 2026",
+   "NAV": "19.8322",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5273699.2952"
+  },
+  {
+   "Date": "Sep 08 2026",
+   "NAV": "20.8129",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5534483.1164"
+  },
+  {
+   "Date": "Sep 09 2026",
+   "NAV": "21.354",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5678370.264"
+  },
+  {
+   "Date": "Sep 10 2026",
+   "NAV": "21.6057",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5745301.3212"
+  },
+  {
+   "Date": "Sep 11 2026",
+   "NAV": "21.4427",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5701957.0132"
+  },
+  {
+   "Date": "Sep 14 2026",
+   "NAV": "21.0136",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5587852.4576"
+  },
+  {
+   "Date": "Sep 15 2026",
+   "NAV": "21.5483",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5730037.7428"
+  },
+  {
+   "Date": "Sep 16 2026",
+   "NAV": "22.1517",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5890491.4572"
+  },
+  {
+   "Date": "Sep 17 2026",
+   "NAV": "21.8042",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5798085.6472"
+  },
+  {
+   "Date": "Sep 18 2026",
+   "NAV": "21.6515",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5757480.274"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "20.9142",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5561420.4072"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "20.8124",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5534350.1584"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "21.4534",
+   "Shares Outstanding": "265920",
+   "Total Net Assets": "5704802.3144"
+  }
+ ]
+}

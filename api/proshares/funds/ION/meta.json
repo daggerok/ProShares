@@ -1,0 +1,566 @@
+{
+ "ticker": "ION",
+ "name": "S&P Global Core Battery Metals ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/ion",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/ION-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/ION-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ION&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/ION-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347G267",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$48.00",
+  "value": 48,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$47.47",
+  "value": 47.47,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "-1.10%",
+  "value": -1.1042,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$12,000,383",
+  "value": 12000373.0013,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 1.42,
+  "dividendYieldText": "1.42%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 1.42,
+  "effectiveYieldText": "1.42%",
+  "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 1.42,
+  "yield12MText": "1.42%",
+  "indicatedYield": 2.3175,
+  "indicatedYieldText": "2.32%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 30 2022",
+   "mo1": 12.82,
+   "mo3": -10.91,
+   "mo6": -17.05,
+   "ytd": 4.21,
+   "yr1": 54.18,
+   "yr3": 18.2,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 10.07,
+   "mo1Text": "12.82%",
+   "ytdText": "4.21%",
+   "yr1Text": "54.18%",
+   "yr3Text": "18.20%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "10.07%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 30 2022",
+    "mo1": 12.52,
+    "mo3": -11.24,
+    "mo6": -17.3,
+    "ytd": 3.57,
+    "yr1": 52.61,
+    "yr3": 18.02,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 9.83,
+    "mo1Text": "12.52%",
+    "ytdText": "3.57%",
+    "yr1Text": "52.61%",
+    "yr3Text": "18.02%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "9.83%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 30 2022",
+   "mo1": -15.72,
+   "mo3": -7.84,
+   "mo6": -1.42,
+   "ytd": -1.42,
+   "yr1": 77.18,
+   "yr3": 13.27,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 8.87,
+   "mo1Text": "-15.72%",
+   "ytdText": "-1.42%",
+   "yr1Text": "77.18%",
+   "yr3Text": "13.27%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "8.87%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 30 2022",
+    "mo1": -15.32,
+    "mo3": -9.76,
+    "mo6": -1.19,
+    "ytd": -1.19,
+    "yr1": 78.17,
+    "yr3": 13.08,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 8.88,
+    "mo1Text": "-15.32%",
+    "ytdText": "-1.19%",
+    "yr1Text": "78.17%",
+    "yr3Text": "13.08%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "8.88%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "22-Dec-2022",
+    "Record Date": "23-Dec-2022",
+    "Payable Date": "30-Dec-2022",
+    "Dividend": "0.049700",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2023",
+    "Record Date": "22-Jun-2023",
+    "Payable Date": "28-Jun-2023",
+    "Dividend": "0.254994",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Sep-2023",
+    "Record Date": "21-Sep-2023",
+    "Payable Date": "27-Sep-2023",
+    "Dividend": "0.313216",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.150185",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.027511",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.185715",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2024",
+    "Record Date": "25-Sep-2024",
+    "Payable Date": "02-Oct-2024",
+    "Dividend": "0.158339",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.070080",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.019909",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.265329",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.218051",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.340190",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.206457",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.278104",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 59,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 958,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/ION-historical_nav.csv)",
+  "pages": [
+   "./history/001.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "55",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "51",
+   "Price/Book Ratio": "2.35",
+   "Dividend Yield ( % )": "1.36",
+   "Avg. Index Market Capitalization": "$22.90 billion",
+   "": "2022"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "PACIFIC METALS CO LTD",
+      "Weight": 4.764012
+     },
+     {
+      "Company": "IGO LTD",
+      "Weight": 3.783711
+     },
+     {
+      "Company": "VALE INDONESIA TBK",
+      "Weight": 3.540692
+     },
+     {
+      "Company": "SIGMA LITHIUM CORP",
+      "Weight": 3.398642
+     },
+     {
+      "Company": "PT TIMAH (PERSERO) TBK",
+      "Weight": 3.315873
+     },
+     {
+      "Company": "QUIMICA Y MINERA CHIL-SP ADR",
+      "Weight": 3.031689
+     },
+     {
+      "Company": "PLS GROUP LTD",
+      "Weight": 3.006241
+     },
+     {
+      "Company": "AFRICAN RAINBOW MINERALS LTD",
+      "Weight": 2.980826
+     },
+     {
+      "Company": "TIBET MINERAL DEVELOPMENT-A",
+      "Weight": 2.9428739999999998
+     },
+     {
+      "Company": "ERAMET",
+      "Weight": 2.89936
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "China",
+      "Weight": 29.504413000000003
+     },
+     {
+      "Country": "Australia",
+      "Weight": 14.792292000000002
+     },
+     {
+      "Country": "South Africa",
+      "Weight": 10.114136
+     },
+     {
+      "Country": "Canada",
+      "Weight": 9.586915999999999
+     },
+     {
+      "Country": "Indonesia",
+      "Weight": 9.398588
+     },
+     {
+      "Country": "Japan",
+      "Weight": 5.9306909999999995
+     },
+     {
+      "Country": "United Kingdom",
+      "Weight": 3.875236
+     },
+     {
+      "Country": "Chile",
+      "Weight": 3.036105
+     },
+     {
+      "Country": "France",
+      "Weight": 2.903584
+     },
+     {
+      "Country": "United States",
+      "Weight": 2.752013
+     },
+     {
+      "Country": "Hong Kong",
+      "Weight": 2.591795
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 1.9110930000000002
+     },
+     {
+      "Country": "Brazil",
+      "Weight": 1.866145
+     },
+     {
+      "Country": "Sweden",
+      "Weight": 1.183477
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 0.553516
+     }
+    ]
+   },
+   {
+    "label": "Fund Currency Weighting",
+    "rows": [
+     {
+      "Currency": "CNY",
+      "Weight": 22.228185895719786
+     },
+     {
+      "Currency": "AUD",
+      "Weight": 14.792292253944495
+     },
+     {
+      "Currency": "USD",
+      "Weight": 11.611371084093234
+     },
+     {
+      "Currency": "ZAR",
+      "Weight": 10.114135577924177
+     },
+     {
+      "Currency": "HKD",
+      "Weight": 9.868022341116392
+     },
+     {
+      "Currency": "IDR",
+      "Weight": 9.398587562275488
+     },
+     {
+      "Currency": "CAD",
+      "Weight": 6.183323843069022
+     },
+     {
+      "Currency": "JPY",
+      "Weight": 5.930691169132805
+     },
+     {
+      "Currency": "EUR",
+      "Weight": 4.814677317160024
+     },
+     {
+      "Currency": "GBP",
+      "Weight": 3.875235710102066
+     },
+     {
+      "Currency": "SEK",
+      "Weight": 1.183477245462511
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Metals & Mining",
+      "Weight": 76.91938985590299
+     },
+     {
+      "Sector": "Chemicals",
+      "Weight": 18.852385924038302
+     },
+     {
+      "Sector": "Electrical Equipment",
+      "Weight": 1.8576433348740338
+     },
+     {
+      "Sector": "Trading Companies & Distributors",
+      "Weight": 1.1580520253190567
+     },
+     {
+      "Sector": "Construction & Engineering",
+      "Weight": 0.6318124517758616
+     },
+     {
+      "Sector": "Broadline Retail",
+      "Weight": 0.43525069077019013
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetion.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_ion.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ION&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ION&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ION&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ION&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ION&document-label=semi-annual-report"
+ }
+}

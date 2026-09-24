@@ -1,0 +1,344 @@
+{
+ "ticker": "SUPL",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 41,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held"
+ ],
+ "rows": [
+  {
+   "Name": "DHL AG",
+   "Ticker": "DHL",
+   "Identifier": "4617859",
+   "Weight": "5.1312640029",
+   "Market Value": "114815.45",
+   "Shares Held": "1760"
+  },
+  {
+   "Name": "UNION PACIFIC CORP",
+   "Ticker": "UNP",
+   "Identifier": "2914734",
+   "Weight": "4.7531358184",
+   "Market Value": "106354.58",
+   "Shares Held": "386"
+  },
+  {
+   "Name": "CSX CORP",
+   "Ticker": "CSX",
+   "Identifier": "2160753",
+   "Weight": "4.7199140141",
+   "Market Value": "105611.22",
+   "Shares Held": "2238"
+  },
+  {
+   "Name": "NORFOLK SOUTHERN CORP",
+   "Ticker": "NSC",
+   "Identifier": "2641894",
+   "Weight": "4.7162104372",
+   "Market Value": "105528.35",
+   "Shares Held": "335"
+  },
+  {
+   "Name": "CANADIAN NATL RAILWAY CO",
+   "Ticker": "CNR",
+   "Identifier": "2180632",
+   "Weight": "4.6975571378",
+   "Market Value": "105110.97",
+   "Shares Held": "879"
+  },
+  {
+   "Name": "CANADIAN PACIFIC KANSAS CITY",
+   "Ticker": "CP",
+   "Identifier": "BMBQR09",
+   "Weight": "4.6482424047",
+   "Market Value": "104007.52",
+   "Shares Held": "1178"
+  },
+  {
+   "Name": "AMADEUS IT GROUP SA",
+   "Ticker": "AMS",
+   "Identifier": "B3MSM28",
+   "Weight": "4.4852184311",
+   "Market Value": "100359.75",
+   "Shares Held": "1627"
+  },
+  {
+   "Name": "EXPEDITORS INTL WASH INC",
+   "Ticker": "EXPD",
+   "Identifier": "2325507",
+   "Weight": "4.1512426752",
+   "Market Value": "92886.82",
+   "Shares Held": "494"
+  },
+  {
+   "Name": "UNITED PARCEL SERVICE-CL B",
+   "Ticker": "UPS",
+   "Identifier": "2517382",
+   "Weight": "4.1495783672",
+   "Market Value": "92849.58",
+   "Shares Held": "969"
+  },
+  {
+   "Name": "FEDEX CORP",
+   "Ticker": "FDX",
+   "Identifier": "2142784",
+   "Weight": "4.1427593523",
+   "Market Value": "92697",
+   "Shares Held": "318"
+  },
+  {
+   "Name": "DSV A/S",
+   "Ticker": "DSV",
+   "Identifier": "B1WT5G2",
+   "Weight": "3.5807711664",
+   "Market Value": "80122.14",
+   "Shares Held": "426"
+  },
+  {
+   "Name": "XPO INC",
+   "Ticker": "XPO",
+   "Identifier": "B6Z1355",
+   "Weight": "3.4736592713",
+   "Market Value": "77725.44",
+   "Shares Held": "432"
+  },
+  {
+   "Name": "OLD DOMINION FREIGHT LINE",
+   "Ticker": "ODFL",
+   "Identifier": "2656423",
+   "Weight": "3.4391271150",
+   "Market Value": "76952.76",
+   "Shares Held": "433"
+  },
+  {
+   "Name": "BRAMBLES LTD",
+   "Ticker": "BXB",
+   "Identifier": "B1FJ0C0",
+   "Weight": "3.0062193322",
+   "Market Value": "67266.16",
+   "Shares Held": "5101"
+  },
+  {
+   "Name": "C.H. ROBINSON WORLDWIDE INC",
+   "Ticker": "CHRW",
+   "Identifier": "2116228",
+   "Weight": "2.9966553711",
+   "Market Value": "67052.16",
+   "Shares Held": "448"
+  },
+  {
+   "Name": "HUNT (JB) TRANSPRT SVCS INC",
+   "Ticker": "JBHT",
+   "Identifier": "2445416",
+   "Weight": "2.9570364388",
+   "Market Value": "66165.66",
+   "Shares Held": "282"
+  },
+  {
+   "Name": "BROOKFIELD INFRASTRUCTURE PA",
+   "Ticker": "BIP",
+   "Identifier": "B2NHY98",
+   "Weight": "2.7388145553",
+   "Market Value": "61282.8",
+   "Shares Held": "1740"
+  },
+  {
+   "Name": "EVERGREEN MARINE CORP LTD",
+   "Ticker": "2603",
+   "Identifier": "6324500",
+   "Weight": "2.5423135895",
+   "Market Value": "56885.96",
+   "Shares Held": "7418"
+  },
+  {
+   "Name": "KUEHNE + NAGEL INTL AG-REG",
+   "Ticker": "KNIN",
+   "Identifier": "B142S60",
+   "Weight": "2.5173891918",
+   "Market Value": "56328.26",
+   "Shares Held": "201"
+  },
+  {
+   "Name": "FEDEX FREIGHT HOLDING CO",
+   "Ticker": "FDXF",
+   "Identifier": "BVSVT37",
+   "Weight": "2.2431341161",
+   "Market Value": "50191.62",
+   "Shares Held": "421"
+  },
+  {
+   "Name": "KAWASAKI KISEN KAISHA LTD",
+   "Ticker": "9107",
+   "Identifier": "6484686",
+   "Weight": "2.1375627338",
+   "Market Value": "47829.39",
+   "Shares Held": "2166"
+  },
+  {
+   "Name": "KNIGHT-SWIFT TRANSPORTATION",
+   "Ticker": "KNX",
+   "Identifier": "BF0LKD0",
+   "Weight": "1.8101588493",
+   "Market Value": "40503.51",
+   "Shares Held": "603"
+  },
+  {
+   "Name": "AP MOLLER-MAERSK A/S-B",
+   "Ticker": "MAERSKB",
+   "Identifier": "4253048",
+   "Weight": "1.7264420119",
+   "Market Value": "38630.29",
+   "Shares Held": "11"
+  },
+  {
+   "Name": "TFI INTERNATIONAL INC",
+   "Ticker": "TFII",
+   "Identifier": "BDRXBF4",
+   "Weight": "1.6409880196",
+   "Market Value": "36718.2",
+   "Shares Held": "294"
+  },
+  {
+   "Name": "HMM CO LTD",
+   "Ticker": "011200",
+   "Identifier": "6405869",
+   "Weight": "1.6030329484",
+   "Market Value": "35868.93",
+   "Shares Held": "2342"
+  },
+  {
+   "Name": "SAIA INC",
+   "Ticker": "SAIA",
+   "Identifier": "2982399",
+   "Weight": "1.5520811691",
+   "Market Value": "34728.85",
+   "Shares Held": "101"
+  },
+  {
+   "Name": "WAN HAI LINES LTD",
+   "Ticker": "2615",
+   "Identifier": "6932334",
+   "Weight": "1.4246950172",
+   "Market Value": "31878.5",
+   "Shares Held": "8900"
+  },
+  {
+   "Name": "ZTO EXPRESS CAYMAN INC",
+   "Ticker": "2057",
+   "Identifier": "BMZ1C83",
+   "Weight": "1.3830122358",
+   "Market Value": "30945.82",
+   "Shares Held": "1570"
+  },
+  {
+   "Name": "SITC INTERNATIONAL HOLDINGS",
+   "Ticker": "1308",
+   "Identifier": "B61X7R5",
+   "Weight": "1.3705200937",
+   "Market Value": "30666.3",
+   "Shares Held": "5032"
+  },
+  {
+   "Name": "FULL TRUCK ALLIANCE -SPN ADR",
+   "Ticker": "YMM",
+   "Identifier": "BMD2L36",
+   "Weight": "1.2501241248",
+   "Market Value": "27972.36",
+   "Shares Held": "3354"
+  },
+  {
+   "Name": "MATSON INC",
+   "Ticker": "MATX",
+   "Identifier": "B8GNC91",
+   "Weight": "1.1206741238",
+   "Market Value": "25075.83",
+   "Shares Held": "113"
+  },
+  {
+   "Name": "J&T GLOBAL EXPRESS LTD",
+   "Ticker": "1519",
+   "Identifier": "BRBTW19",
+   "Weight": "1.1192681321",
+   "Market Value": "25044.37",
+   "Shares Held": "22424"
+  },
+  {
+   "Name": "LANDSTAR SYSTEM INC",
+   "Ticker": "LSTR",
+   "Identifier": "2503994",
+   "Weight": "0.9626716766",
+   "Market Value": "21540.42",
+   "Shares Held": "129"
+  },
+  {
+   "Name": "GXO LOGISTICS INC",
+   "Ticker": "GXO",
+   "Identifier": "BNNTGF1",
+   "Weight": "0.8712200974",
+   "Market Value": "19494.13",
+   "Shares Held": "431"
+  },
+  {
+   "Name": "COSCO SHIPPING HOLDINGS CO-H",
+   "Ticker": "1919",
+   "Identifier": "B0B8Z18",
+   "Weight": "0.8443377692",
+   "Market Value": "18892.62",
+   "Shares Held": "9091"
+  },
+  {
+   "Name": "INPOST SA",
+   "Ticker": "INPST",
+   "Identifier": "BN4N9C0",
+   "Weight": "0.7922199912",
+   "Market Value": "17726.45",
+   "Shares Held": "1000"
+  },
+  {
+   "Name": "YANG MING MARINE TRANSPORT",
+   "Ticker": "2609",
+   "Identifier": "6987583",
+   "Weight": "0.7648134327",
+   "Market Value": "17113.21",
+   "Shares Held": "9053"
+  },
+  {
+   "Name": "AURIZON HOLDINGS LTD",
+   "Ticker": "AZJ",
+   "Identifier": "B87CVM3",
+   "Weight": "0.7423805810",
+   "Market Value": "16611.26",
+   "Shares Held": "6394"
+  },
+  {
+   "Name": "ONDAS INC",
+   "Ticker": "ONDS",
+   "Identifier": "BMD2S79",
+   "Weight": "0.6286918985",
+   "Market Value": "14067.4",
+   "Shares Held": "1901"
+  },
+  {
+   "Name": "RXO INC",
+   "Ticker": "RXO",
+   "Identifier": "BN6QSL9",
+   "Weight": "0.5561791968",
+   "Market Value": "12444.88",
+   "Shares Held": "626"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "13619.69",
+   "Shares Held": "13619.69"
+  }
+ ]
+}

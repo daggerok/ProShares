@@ -1,0 +1,299 @@
+{
+ "ticker": "UCO",
+ "name": "Ultra Bloomberg Crude Oil",
+ "category": "Commodity",
+ "categoryPath": "Commodity > Commodity",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/uco",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/UCO-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/UCO-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UCO&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UCO-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/UCO-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347Y888",
+  "isin": null,
+  "indexTicker": "BCBCLI",
+  "indexName": "Bloomberg Commodity Balanced WTI Crude Oil Index SM (BCBCLI)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$52.14",
+  "value": 52.14,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$52.16",
+  "value": 52.16,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.04%",
+  "value": 0.0384,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$416,787,415",
+  "value": 416787415.06233937,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": null,
+  "effectiveYieldText": "—",
+  "effectiveYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": 10.47,
+   "mo3": 3.5,
+   "mo6": 75.16,
+   "ytd": 130.84,
+   "yr1": 91.24,
+   "yr3": 11.65,
+   "yr5": 19.83,
+   "yr10": -9.27,
+   "sinceInception": -24.29,
+   "mo1Text": "10.47%",
+   "ytdText": "130.84%",
+   "yr1Text": "91.24%",
+   "yr3Text": "11.65%",
+   "yr5Text": "19.83%",
+   "yr10Text": "-9.27%",
+   "sinceInceptionText": "-24.29%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": 10.37,
+    "mo3": 2.53,
+    "mo6": 74.67,
+    "ytd": 130.9,
+    "yr1": 91.71,
+    "yr3": 11.76,
+    "yr5": 19.9,
+    "yr10": -9.3,
+    "sinceInception": -24.28,
+    "mo1Text": "10.37%",
+    "ytdText": "130.90%",
+    "yr1Text": "91.71%",
+    "yr3Text": "11.76%",
+    "yr5Text": "19.90%",
+    "yr10Text": "-9.30%",
+    "sinceInceptionText": "-24.28%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": -24.46,
+   "mo3": -16.16,
+   "mo6": 68.48,
+   "ytd": 68.48,
+   "yr1": 44.57,
+   "yr3": 11.06,
+   "yr5": 10.7,
+   "yr10": -14.29,
+   "sinceInception": -25.83,
+   "mo1Text": "-24.46%",
+   "ytdText": "68.48%",
+   "yr1Text": "44.57%",
+   "yr3Text": "11.06%",
+   "yr5Text": "10.70%",
+   "yr10Text": "-14.29%",
+   "sinceInceptionText": "-25.83%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": -24.27,
+    "mo3": -16.16,
+    "mo6": 70.55,
+    "ytd": 70.55,
+    "yr1": 47.03,
+    "yr3": 11.69,
+    "yr5": 11,
+    "yr10": -14.22,
+    "sinceInception": -25.78,
+    "mo1Text": "-24.27%",
+    "ytdText": "70.55%",
+    "yr1Text": "47.03%",
+    "yr3Text": "11.69%",
+    "yr5Text": "11.00%",
+    "yr10Text": "-14.22%",
+    "sinceInceptionText": "-25.78%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 9,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/UCO-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 4484,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/UCO-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json",
+   "./history/005.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Commodity",
+   "dailyObjective": "+2x",
+   "benchmark": "Bloomberg Commodity Balanced WTI Crude Oil Index SM (BCBCLI)"
+  },
+  "splits": [
+   {
+    "date": "May 26 2022",
+    "splitType": "Forward",
+    "ratio": 4,
+    "preSplitCusip": "74347Y888",
+    "postSplitCusip": ""
+   },
+   {
+    "date": "Apr 21 2020",
+    "splitType": "Reverse",
+    "ratio": 25,
+    "preSplitCusip": "74347W247",
+    "postSplitCusip": "74347Y888"
+   },
+   {
+    "date": "Jan 12 2017",
+    "splitType": "Reverse",
+    "ratio": 2,
+    "preSplitCusip": "74347W320",
+    "postSplitCusip": "74347W247"
+   },
+   {
+    "date": "May 20 2015",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347W650",
+    "postSplitCusip": "74347W320"
+   },
+   {
+    "date": "Feb 25 2011",
+    "splitType": "Reverse",
+    "ratio": 4,
+    "preSplitCusip": "74347W502",
+    "postSplitCusip": "74347W650"
+   }
+  ],
+  "exposures": [
+   {
+    "label": "Index Contract Weightings",
+    "rows": [
+     {
+      "Contract": "Crude Oil Futures, Dec26",
+      "Weight": 34.697778
+     },
+     {
+      "Contract": "Crude Oil Futures, Nov26",
+      "Weight": 32.978426
+     },
+     {
+      "Contract": "Crude Oil Futures, Jun27",
+      "Weight": 32.323796
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetuco.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_uco.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UCO&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UCO&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UCO&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UCO&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=UCO&document-label=semi-annual-report"
+ }
+}

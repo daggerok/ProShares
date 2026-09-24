@@ -1,0 +1,71 @@
+{
+ "ticker": "ETHD",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ETHEREUM TRUST (ETHA) SWAP MAREX",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-56.6858892360",
+   "Market Value": "—",
+   "Shares Held": "-1638598",
+   "Exposure Value": "-33116065.58"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 30/OCT/2026 DCRV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-51.8976295696",
+   "Market Value": "—",
+   "Shares Held": "-225",
+   "Exposure Value": "-30318750"
+  },
+  {
+   "Name": "ETHEREUM TRUST (ETHA) SWAP GOLDMAN",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-37.9268706743",
+   "Market Value": "—",
+   "Shares Held": "-1096338",
+   "Exposure Value": "-22156990.98"
+  },
+  {
+   "Name": "ETHEREUM TRUST (ETHA) SWAP Nomura",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-33.0027753270",
+   "Market Value": "—",
+   "Shares Held": "-953999",
+   "Exposure Value": "-19280319.79"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 25/SEP/2026 DCRU6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-21.3117278830",
+   "Market Value": "—",
+   "Shares Held": "-93",
+   "Exposure Value": "-12450375"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "58420298.29",
+   "Shares Held": "58420298.29",
+   "Exposure Value": "—"
+  }
+ ]
+}

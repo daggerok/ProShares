@@ -1,0 +1,44 @@
+{
+ "ticker": "ACRT",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "RU2K LADDERED AUTOCALL SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "99.9926325303",
+   "Market Value": "—",
+   "Shares Held": "2278",
+   "Exposure Value": "1513298.18"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "1350675",
+   "Shares Held": "13500",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "162734.68",
+   "Shares Held": "162734.68",
+   "Exposure Value": "—"
+  }
+ ]
+}

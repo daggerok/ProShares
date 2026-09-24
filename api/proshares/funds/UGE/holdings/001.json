@@ -1,0 +1,359 @@
+{
+ "ticker": "UGE",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 38,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "41.3380167591",
+   "Market Value": "—",
+   "Shares Held": "4310",
+   "Exposure Value": "3599281"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "38.2688368605",
+   "Market Value": "—",
+   "Shares Held": "3990",
+   "Exposure Value": "3332049"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "36.9836177780",
+   "Market Value": "—",
+   "Shares Held": "3856",
+   "Exposure Value": "3220145.6"
+  },
+  {
+   "Name": "CONSUMER STAPLES SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "32.2935272454",
+   "Market Value": "—",
+   "Shares Held": "3367",
+   "Exposure Value": "2811781.7"
+  },
+  {
+   "Name": "WALMART INC",
+   "Ticker": "WMT",
+   "Identifier": "2936921",
+   "Weight": "5.5855601067",
+   "Market Value": "486332",
+   "Shares Held": "4400",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COSTCO WHOLESALE CORP",
+   "Ticker": "COST",
+   "Identifier": "2701271",
+   "Weight": "4.5510602389",
+   "Market Value": "396258.6",
+   "Shares Held": "438",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PROCTER & GAMBLE CO/THE",
+   "Ticker": "PG",
+   "Identifier": "2704407",
+   "Weight": "3.8849424693",
+   "Market Value": "338260.05",
+   "Shares Held": "2295",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COCA-COLA CO/THE",
+   "Ticker": "KO",
+   "Identifier": "2206657",
+   "Weight": "3.8678069652",
+   "Market Value": "336768.07",
+   "Shares Held": "3823",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PHILIP MORRIS INTERNATIONAL",
+   "Ticker": "PM",
+   "Identifier": "B2PKRQ3",
+   "Weight": "3.3731985958",
+   "Market Value": "293702.76",
+   "Shares Held": "1539",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ALTRIA GROUP INC",
+   "Ticker": "MO",
+   "Identifier": "2692632",
+   "Weight": "2.3242147835",
+   "Market Value": "202368.25",
+   "Shares Held": "2935",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TARGET CORP",
+   "Ticker": "TGT",
+   "Identifier": "2259101",
+   "Weight": "2.2702423903",
+   "Market Value": "197668.9",
+   "Shares Held": "1265",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MONDELEZ INTERNATIONAL INC-A",
+   "Ticker": "MDLZ",
+   "Identifier": "B8CKK03",
+   "Weight": "2.2531183713",
+   "Market Value": "196177.92",
+   "Shares Held": "3193",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COLGATE-PALMOLIVE CO",
+   "Ticker": "CL",
+   "Identifier": "2209106",
+   "Weight": "2.2343701329",
+   "Market Value": "194545.52",
+   "Shares Held": "2264",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PEPSICO INC",
+   "Ticker": "PEP",
+   "Identifier": "2681511",
+   "Weight": "2.1798954974",
+   "Market Value": "189802.44",
+   "Shares Held": "1458",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MONSTER BEVERAGE CORP",
+   "Ticker": "MNST",
+   "Identifier": "BZ07BW4",
+   "Weight": "2.0480016856",
+   "Market Value": "178318.51",
+   "Shares Held": "4061",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KEURIG DR PEPPER INC",
+   "Ticker": "KDP",
+   "Identifier": "BD3W133",
+   "Weight": "1.4094559088",
+   "Market Value": "122720.64",
+   "Shares Held": "3864",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ARCHER-DANIELS-MIDLAND CO",
+   "Ticker": "ADM",
+   "Identifier": "2047317",
+   "Weight": "1.2916501510",
+   "Market Value": "112463.35",
+   "Shares Held": "1369",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SYSCO CORP",
+   "Ticker": "SYY",
+   "Identifier": "2868165",
+   "Weight": "1.2040179855",
+   "Market Value": "104833.26",
+   "Shares Held": "1359",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KENVUE INC",
+   "Ticker": "KVUE",
+   "Identifier": "BQ84ZQ6",
+   "Weight": "1.1068418365",
+   "Market Value": "96372.18",
+   "Shares Held": "5454",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KROGER CO",
+   "Ticker": "KR",
+   "Identifier": "2497406",
+   "Weight": "1.0711156691",
+   "Market Value": "93261.52",
+   "Shares Held": "1618",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KIMBERLY-CLARK CORP",
+   "Ticker": "KMB",
+   "Identifier": "2491839",
+   "Weight": "1.0592548012",
+   "Market Value": "92228.8",
+   "Shares Held": "944",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DOLLAR GENERAL CORP",
+   "Ticker": "DG",
+   "Identifier": "B5B1S13",
+   "Weight": "0.8670727231",
+   "Market Value": "75495.6",
+   "Shares Held": "626",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HERSHEY CO/THE",
+   "Ticker": "HSY",
+   "Identifier": "2422806",
+   "Weight": "0.8028843547",
+   "Market Value": "69906.75",
+   "Shares Held": "415",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ESTEE LAUDER COMPANIES-CL A",
+   "Ticker": "EL",
+   "Identifier": "2320524",
+   "Weight": "0.7968192008",
+   "Market Value": "69378.66",
+   "Shares Held": "702",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CHURCH & DWIGHT CO INC",
+   "Ticker": "CHD",
+   "Identifier": "2195841",
+   "Weight": "0.7432851930",
+   "Market Value": "64717.48",
+   "Shares Held": "674",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CASEY'S GENERAL STORES INC",
+   "Ticker": "CASY",
+   "Identifier": "2179414",
+   "Weight": "0.7203158445",
+   "Market Value": "62717.55",
+   "Shares Held": "105",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DOLLAR TREE INC",
+   "Ticker": "DLTR",
+   "Identifier": "2272476",
+   "Weight": "0.7096095712",
+   "Market Value": "61785.36",
+   "Shares Held": "546",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KRAFT HEINZ CO/THE",
+   "Ticker": "KHC",
+   "Identifier": "BYRY499",
+   "Weight": "0.6715992520",
+   "Market Value": "58475.82",
+   "Shares Held": "2458",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GENERAL MILLS INC",
+   "Ticker": "GIS",
+   "Identifier": "2367026",
+   "Weight": "0.6244982651",
+   "Market Value": "54374.76",
+   "Shares Held": "1518",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BUNGE GLOBAL SA",
+   "Ticker": "BG",
+   "Identifier": "BQ6BPG9",
+   "Weight": "0.5723192667",
+   "Market Value": "49831.56",
+   "Shares Held": "447",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CONSTELLATION BRANDS INC-A",
+   "Ticker": "STZ",
+   "Identifier": "2170473",
+   "Weight": "0.5716741499",
+   "Market Value": "49775.39",
+   "Shares Held": "427",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "TYSON FOODS INC-CL A",
+   "Ticker": "TSN",
+   "Identifier": "2909730",
+   "Weight": "0.4718988133",
+   "Market Value": "41088",
+   "Shares Held": "800",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "JM SMUCKER CO/THE",
+   "Ticker": "SJM",
+   "Identifier": "2951452",
+   "Weight": "0.4273900082",
+   "Market Value": "37212.64",
+   "Shares Held": "304",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MCCORMICK & CO-NON VTG SHRS",
+   "Ticker": "MKC",
+   "Identifier": "2550161",
+   "Weight": "0.4065015257",
+   "Market Value": "35393.89",
+   "Shares Held": "721",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CLOROX COMPANY",
+   "Ticker": "CLX",
+   "Identifier": "2204026",
+   "Weight": "0.3306716543",
+   "Market Value": "28791.42",
+   "Shares Held": "343",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HORMEL FOODS CORP",
+   "Ticker": "HRL",
+   "Identifier": "2437264",
+   "Weight": "0.1894320914",
+   "Market Value": "16493.76",
+   "Shares Held": "828",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BROWN-FORMAN CORP-CLASS B",
+   "Ticker": "BF/B",
+   "Identifier": "2146838",
+   "Weight": "0.1518771554",
+   "Market Value": "13223.87",
+   "Shares Held": "503",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4286206.05",
+   "Shares Held": "4286206.05",
+   "Exposure Value": "—"
+  }
+ ]
+}

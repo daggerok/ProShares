@@ -1,0 +1,864 @@
+{
+ "ticker": "TOLZ",
+ "name": "DJ Brookfield Global Infrastructure ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/tolz",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/TOLZ-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/TOLZ-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TOLZ&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347B508",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.46%",
+  "value": 0.46,
+  "gross": {
+   "display": "0.46%",
+   "value": 0.46
+  },
+  "net": {
+   "display": "0.46%",
+   "value": 0.46
+  },
+  "footnote": "*",
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$55.77",
+  "value": 55.77,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$55.69",
+  "value": 55.69,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.14%",
+  "value": -0.1434,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$164,519,615",
+  "value": 164519490.7693,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 3.01,
+  "dividendYieldText": "3.01%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 3.01,
+  "effectiveYieldText": "3.01%",
+  "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 3.01,
+  "yield12MText": "3.01%",
+  "indicatedYield": 3.0729,
+  "indicatedYieldText": "3.07%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Mar 27 2014",
+   "mo1": -1.49,
+   "mo3": -0.44,
+   "mo6": -3.46,
+   "ytd": 10.76,
+   "yr1": 12.73,
+   "yr3": 14.76,
+   "yr5": 8.35,
+   "yr10": 7.37,
+   "sinceInception": 6.67,
+   "mo1Text": "-1.49%",
+   "ytdText": "10.76%",
+   "yr1Text": "12.73%",
+   "yr3Text": "14.76%",
+   "yr5Text": "8.35%",
+   "yr10Text": "7.37%",
+   "sinceInceptionText": "6.67%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Mar 27 2014",
+    "mo1": -1.72,
+    "mo3": -0.8,
+    "mo6": -3.7,
+    "ytd": 10.33,
+    "yr1": 12.31,
+    "yr3": 14.68,
+    "yr5": 8.3,
+    "yr10": 7.4,
+    "sinceInception": 6.65,
+    "mo1Text": "-1.72%",
+    "ytdText": "10.33%",
+    "yr1Text": "12.31%",
+    "yr3Text": "14.68%",
+    "yr5Text": "8.30%",
+    "yr10Text": "7.40%",
+    "sinceInceptionText": "6.65%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Mar 27 2014",
+   "mo1": -0.13,
+   "mo3": -0.25,
+   "mo6": 11.1,
+   "ytd": 11.1,
+   "yr1": 13.34,
+   "yr3": 13.74,
+   "yr5": 8.73,
+   "yr10": 7.36,
+   "sinceInception": 6.8,
+   "mo1Text": "-0.13%",
+   "ytdText": "11.10%",
+   "yr1Text": "13.34%",
+   "yr3Text": "13.74%",
+   "yr5Text": "8.73%",
+   "yr10Text": "7.36%",
+   "sinceInceptionText": "6.80%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Mar 27 2014",
+    "mo1": 0.1,
+    "mo3": 0.05,
+    "mo6": 11.32,
+    "ytd": 11.32,
+    "yr1": 13.53,
+    "yr3": 13.85,
+    "yr5": 8.79,
+    "yr10": 7.46,
+    "sinceInception": 6.82,
+    "mo1Text": "0.10%",
+    "ytdText": "11.32%",
+    "yr1Text": "13.53%",
+    "yr3Text": "13.85%",
+    "yr5Text": "8.79%",
+    "yr10Text": "7.46%",
+    "sinceInceptionText": "6.82%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "23-Mar-2016",
+    "Record Date": "28-Mar-2016",
+    "Payable Date": "01-Apr-2016",
+    "Dividend": "0.226580",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "0.040087"
+   },
+   {
+    "Ex-Date": "22-Jun-2016",
+    "Record Date": "24-Jun-2016",
+    "Payable Date": "30-Jun-2016",
+    "Dividend": "0.332335",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "0.058798"
+   },
+   {
+    "Ex-Date": "21-Sep-2016",
+    "Record Date": "23-Sep-2016",
+    "Payable Date": "29-Sep-2016",
+    "Dividend": "0.199067",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "0.035220"
+   },
+   {
+    "Ex-Date": "21-Dec-2016",
+    "Record Date": "23-Dec-2016",
+    "Payable Date": "30-Dec-2016",
+    "Dividend": "0.266862",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Mar-2017",
+    "Record Date": "24-Mar-2017",
+    "Payable Date": "30-Mar-2017",
+    "Dividend": "0.192273",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2017",
+    "Record Date": "23-Jun-2017",
+    "Payable Date": "29-Jun-2017",
+    "Dividend": "0.434477",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "27-Sep-2017",
+    "Record Date": "28-Sep-2017",
+    "Payable Date": "05-Oct-2017",
+    "Dividend": "0.457644",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Dec-2017",
+    "Record Date": "27-Dec-2017",
+    "Payable Date": "04-Jan-2018",
+    "Dividend": "0.329973",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Mar-2018",
+    "Record Date": "22-Mar-2018",
+    "Payable Date": "28-Mar-2018",
+    "Dividend": "0.204867",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Jun-2018",
+    "Record Date": "21-Jun-2018",
+    "Payable Date": "27-Jun-2018",
+    "Dividend": "0.494504",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Sep-2018",
+    "Record Date": "27-Sep-2018",
+    "Payable Date": "03-Oct-2018",
+    "Dividend": "0.366747",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Dec-2018",
+    "Record Date": "27-Dec-2018",
+    "Payable Date": "03-Jan-2019",
+    "Dividend": "0.318412",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2019",
+    "Record Date": "21-Mar-2019",
+    "Payable Date": "27-Mar-2019",
+    "Dividend": "0.237144",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2019",
+    "Record Date": "26-Jun-2019",
+    "Payable Date": "02-Jul-2019",
+    "Dividend": "0.497112",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2019",
+    "Record Date": "26-Sep-2019",
+    "Payable Date": "02-Oct-2019",
+    "Dividend": "0.346398",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2019",
+    "Record Date": "26-Dec-2019",
+    "Payable Date": "02-Jan-2020",
+    "Dividend": "0.309444",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2020",
+    "Record Date": "26-Mar-2020",
+    "Payable Date": "01-Apr-2020",
+    "Dividend": "0.238478",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2020",
+    "Record Date": "25-Jun-2020",
+    "Payable Date": "01-Jul-2020",
+    "Dividend": "0.326643",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2020",
+    "Record Date": "24-Sep-2020",
+    "Payable Date": "30-Sep-2020",
+    "Dividend": "0.463832",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2020",
+    "Record Date": "24-Dec-2020",
+    "Payable Date": "31-Dec-2020",
+    "Dividend": "0.270785",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Mar-2021",
+    "Record Date": "24-Mar-2021",
+    "Payable Date": "30-Mar-2021",
+    "Dividend": "0.213129",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Jun-2021",
+    "Record Date": "23-Jun-2021",
+    "Payable Date": "29-Jun-2021",
+    "Dividend": "0.655428",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Sep-2021",
+    "Record Date": "23-Sep-2021",
+    "Payable Date": "29-Sep-2021",
+    "Dividend": "0.389320",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2021",
+    "Record Date": "27-Dec-2021",
+    "Payable Date": "31-Dec-2021",
+    "Dividend": "0.310063",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Mar-2022",
+    "Record Date": "24-Mar-2022",
+    "Payable Date": "30-Mar-2022",
+    "Dividend": "0.210366",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Jun-2022",
+    "Record Date": "23-Jun-2022",
+    "Payable Date": "29-Jun-2022",
+    "Dividend": "0.450387",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Sep-2022",
+    "Record Date": "22-Sep-2022",
+    "Payable Date": "28-Sep-2022",
+    "Dividend": "0.345224",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Dec-2022",
+    "Record Date": "23-Dec-2022",
+    "Payable Date": "30-Dec-2022",
+    "Dividend": "0.330443",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Mar-2023",
+    "Record Date": "23-Mar-2023",
+    "Payable Date": "29-Mar-2023",
+    "Dividend": "0.256993",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2023",
+    "Record Date": "22-Jun-2023",
+    "Payable Date": "28-Jun-2023",
+    "Dividend": "0.501183",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Sep-2023",
+    "Record Date": "21-Sep-2023",
+    "Payable Date": "27-Sep-2023",
+    "Dividend": "0.415785",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.350686",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.212631",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.797896",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2024",
+    "Record Date": "25-Sep-2024",
+    "Payable Date": "02-Oct-2024",
+    "Dividend": "0.369600",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "0.353675",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.233704",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "1.163140",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.394190",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.367135",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.271443",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.741948",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.428442",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 122,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 3144,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "116",
+   "Price/Book Ratio": "2.424",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "114",
+   "Price/Earnings Ratio": "18.51",
+   "Price/Book Ratio": "2.48",
+   "Dividend Yield ( % )": "3.85",
+   "Avg. Index Market Capitalization": "$19.52 billion",
+   "": "2017"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "ENBRIDGE INC",
+      "Weight": 5.829515
+     },
+     {
+      "Company": "NATIONAL GRID PLC",
+      "Weight": 5.393214
+     },
+     {
+      "Company": "VINCI SA",
+      "Weight": 4.422281
+     },
+     {
+      "Company": "WILLIAMS COS INC",
+      "Weight": 4.266217
+     },
+     {
+      "Company": "AMERICAN TOWER CORP",
+      "Weight": 4.012656
+     },
+     {
+      "Company": "TC ENERGY CORP",
+      "Weight": 3.470442
+     },
+     {
+      "Company": "ENERGY TRANSFER LP",
+      "Weight": 3.1064689999999997
+     },
+     {
+      "Company": "E.ON SE",
+      "Weight": 3.1014239999999997
+     },
+     {
+      "Company": "KINDER MORGAN INC",
+      "Weight": 3.011015
+     },
+     {
+      "Company": "TARGA RESOURCES CORP",
+      "Weight": 2.972909
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 46.796082
+     },
+     {
+      "Country": "Canada",
+      "Weight": 15.474856
+     },
+     {
+      "Country": "United Kingdom",
+      "Weight": 7.981939000000001
+     },
+     {
+      "Country": "Spain",
+      "Weight": 6.20469
+     },
+     {
+      "Country": "France",
+      "Weight": 5.261827
+     },
+     {
+      "Country": "Germany",
+      "Weight": 3.27494
+     },
+     {
+      "Country": "Other",
+      "Weight": 2.7807399999999998
+     },
+     {
+      "Country": "Australia",
+      "Weight": 2.71507
+     },
+     {
+      "Country": "Italy",
+      "Weight": 2.388964
+     },
+     {
+      "Country": "China",
+      "Weight": 1.315436
+     },
+     {
+      "Country": "Mexico",
+      "Weight": 1.1340970000000001
+     },
+     {
+      "Country": "Japan",
+      "Weight": 1.044384
+     },
+     {
+      "Country": "Hong Kong",
+      "Weight": 0.9002080000000001
+     },
+     {
+      "Country": "Brazil",
+      "Weight": 0.886405
+     },
+     {
+      "Country": "New Zealand",
+      "Weight": 0.5671609999999999
+     },
+     {
+      "Country": "Belgium",
+      "Weight": 0.492534
+     },
+     {
+      "Country": "Switzerland",
+      "Weight": 0.332494
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 0.171553
+     },
+     {
+      "Country": "Luxembourg",
+      "Weight": 0.11554899999999999
+     },
+     {
+      "Country": "Portugal",
+      "Weight": 0.09201100000000001
+     },
+     {
+      "Country": "Singapore",
+      "Weight": 0.06906
+     }
+    ]
+   },
+   {
+    "label": "Fund Currency Weighting",
+    "rows": [
+     {
+      "Currency": "USD",
+      "Weight": 49.585749647712454
+     },
+     {
+      "Currency": "EUR",
+      "Weight": 18.00206805452624
+     },
+     {
+      "Currency": "CAD",
+      "Weight": 14.774750791509316
+     },
+     {
+      "Currency": "GBP",
+      "Weight": 7.981938617357779
+     },
+     {
+      "Currency": "Other",
+      "Weight": 2.780739939711385
+     },
+     {
+      "Currency": "AUD",
+      "Weight": 2.715070468006699
+     },
+     {
+      "Currency": "HKD",
+      "Weight": 2.215643818296456
+     },
+     {
+      "Currency": "JPY",
+      "Weight": 1.0443836768425805
+     },
+     {
+      "Currency": "NZD",
+      "Weight": 0.5671609477229812
+     },
+     {
+      "Currency": "CHF",
+      "Weight": 0.332494038314104
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Oil & Gas Storage & Transportation",
+      "Weight": 37.68639565907633
+     },
+     {
+      "Sector": "Electricity Transmission & Distribution",
+      "Weight": 21.252944764131243
+     },
+     {
+      "Sector": "Master Limited Partnerships",
+      "Weight": 9.204107380528862
+     },
+     {
+      "Sector": "Communications",
+      "Weight": 8.446331228198067
+     },
+     {
+      "Sector": "Diversified",
+      "Weight": 8.107256720937073
+     },
+     {
+      "Sector": "Water",
+      "Weight": 5.324098226923247
+     },
+     {
+      "Sector": "Airports",
+      "Weight": 4.3890853324033685
+     },
+     {
+      "Sector": "Toll Roads",
+      "Weight": 2.784887950079153
+     },
+     {
+      "Sector": "Ports",
+      "Weight": 0.36800194428141586
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheettolz.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_tolz.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TOLZ&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TOLZ&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TOLZ&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TOLZ&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=TOLZ&document-label=semi-annual-report"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "ticker": "SJB",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "High Yield Index (HYG) SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-55.2183036366",
+   "Market Value": "—",
+   "Shares Held": "-13952",
+   "Exposure Value": "-28298423.04"
+  },
+  {
+   "Name": "Markit iBoxx $ Liquid High Yield Index (HYG) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-33.3320350650",
+   "Market Value": "—",
+   "Shares Held": "-8422",
+   "Exposure Value": "-17082089.94"
+  },
+  {
+   "Name": "Markit iBoxx $ Liquid High Yield Index (HYG) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-6.8508374136",
+   "Market Value": "—",
+   "Shares Held": "-1731",
+   "Exposure Value": "-3510935.37"
+  },
+  {
+   "Name": "Markit iBoxx $ Liquid High Yield Index (HYG) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-4.5316053371",
+   "Market Value": "—",
+   "Shares Held": "-1145",
+   "Exposure Value": "-2322369.15"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "43721850",
+   "Shares Held": "437000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "7526415.84",
+   "Shares Held": "7526415.84",
+   "Exposure Value": "—"
+  }
+ ]
+}

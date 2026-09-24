@@ -1,0 +1,584 @@
+{
+ "ticker": "SUPL",
+ "name": "Supply Chain Logistics ETF",
+ "category": "Equity",
+ "categoryPath": "Equity > Thematic",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/supl",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/SUPL-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/SUPL-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SUPL&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SUPL-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/SUPL-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347G317",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.58%",
+  "value": 0.58,
+  "gross": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "net": {
+   "display": "0.58%",
+   "value": 0.58
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$44.75",
+  "value": 44.75,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$44.87",
+  "value": 44.87,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.27%",
+  "value": 0.2682,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$2,237,603",
+  "value": 2237604.7512,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": 2.46,
+  "dividendYieldText": "2.46%",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": 2.46,
+  "effectiveYieldText": "2.46%",
+  "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": 2.46,
+  "yield12MText": "2.46%",
+  "indicatedYield": 1.8408,
+  "indicatedYieldText": "1.84%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Apr 05 2022",
+   "mo1": 2.32,
+   "mo3": 2.71,
+   "mo6": 4.58,
+   "ytd": 19.42,
+   "yr1": 27.25,
+   "yr3": 10.22,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 7.84,
+   "mo1Text": "2.32%",
+   "ytdText": "19.42%",
+   "yr1Text": "27.25%",
+   "yr3Text": "10.22%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "7.84%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Apr 05 2022",
+    "mo1": 2.3,
+    "mo3": 2.79,
+    "mo6": 4.74,
+    "ytd": 20.03,
+    "yr1": 28.07,
+    "yr3": 10.43,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 7.92,
+    "mo1Text": "2.30%",
+    "ytdText": "20.03%",
+    "yr1Text": "28.07%",
+    "yr3Text": "10.43%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "7.92%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Apr 05 2022",
+   "mo1": -1.15,
+   "mo3": 8.49,
+   "mo6": 14.92,
+   "ytd": 14.92,
+   "yr1": 23.29,
+   "yr3": 9.3,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": 7.19,
+   "mo1Text": "-1.15%",
+   "ytdText": "14.92%",
+   "yr1Text": "23.29%",
+   "yr3Text": "9.30%",
+   "yr5Text": "—",
+   "yr10Text": "—",
+   "sinceInceptionText": "7.19%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Apr 05 2022",
+    "mo1": -1.08,
+    "mo3": 8.07,
+    "mo6": 15.51,
+    "ytd": 15.51,
+    "yr1": 23.99,
+    "yr3": 9.46,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": 7.27,
+    "mo1Text": "-1.08%",
+    "ytdText": "15.51%",
+    "yr1Text": "23.99%",
+    "yr3Text": "9.46%",
+    "yr5Text": "—",
+    "yr10Text": "—",
+    "sinceInceptionText": "7.27%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [
+   {
+    "Ex-Date": "22-Jun-2022",
+    "Record Date": "23-Jun-2022",
+    "Payable Date": "29-Jun-2022",
+    "Dividend": "0.146589",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Sep-2022",
+    "Record Date": "22-Sep-2022",
+    "Payable Date": "28-Sep-2022",
+    "Dividend": "0.633177",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Dec-2022",
+    "Record Date": "23-Dec-2022",
+    "Payable Date": "30-Dec-2022",
+    "Dividend": "0.248596",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "22-Mar-2023",
+    "Record Date": "23-Mar-2023",
+    "Payable Date": "29-Mar-2023",
+    "Dividend": "0.045231",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "21-Jun-2023",
+    "Record Date": "22-Jun-2023",
+    "Payable Date": "28-Jun-2023",
+    "Dividend": "0.660824",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Sep-2023",
+    "Record Date": "21-Sep-2023",
+    "Payable Date": "27-Sep-2023",
+    "Dividend": "0.633105",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Dec-2023",
+    "Record Date": "21-Dec-2023",
+    "Payable Date": "28-Dec-2023",
+    "Dividend": "0.563009",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "20-Mar-2024",
+    "Record Date": "21-Mar-2024",
+    "Payable Date": "27-Mar-2024",
+    "Dividend": "0.045592",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Jun-2024",
+    "Record Date": "26-Jun-2024",
+    "Payable Date": "03-Jul-2024",
+    "Dividend": "0.256694",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Sep-2024",
+    "Record Date": "25-Sep-2024",
+    "Payable Date": "02-Oct-2024",
+    "Dividend": "0.199647",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Dec-2024",
+    "Record Date": "23-Dec-2024",
+    "Payable Date": "31-Dec-2024",
+    "Dividend": "1.297989",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "26-Mar-2025",
+    "Record Date": "26-Mar-2025",
+    "Payable Date": "01-Apr-2025",
+    "Dividend": "0.071356",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Jun-2025",
+    "Record Date": "25-Jun-2025",
+    "Payable Date": "01-Jul-2025",
+    "Dividend": "0.268912",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Sep-2025",
+    "Record Date": "24-Sep-2025",
+    "Payable Date": "30-Sep-2025",
+    "Dividend": "0.351667",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Dec-2025",
+    "Record Date": "24-Dec-2025",
+    "Payable Date": "31-Dec-2025",
+    "Dividend": "0.514630",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "25-Mar-2026",
+    "Record Date": "25-Mar-2026",
+    "Payable Date": "31-Mar-2026",
+    "Dividend": "0.111973",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "24-Jun-2026",
+    "Record Date": "24-Jun-2026",
+    "Payable Date": "30-Jun-2026",
+    "Dividend": "0.185470",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.205945",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
+   }
+  ],
+  "asOfDate": "Aug 31 2026",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 41,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/SUPL-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 1122,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/SUPL-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {
+   "Number of Holdings": "42",
+   "Price/Book Ratio": "2.989",
+   "Avg. Market Cap": "$0.00 billion"
+  },
+  "characteristicsAsOf": "Aug 31 2026",
+  "index": {
+   "Total Number of Holdings": "40",
+   "Price/Earnings Ratio": "21.05",
+   "Price/Book Ratio": "2.91",
+   "Dividend Yield ( % )": "2.23",
+   "Avg. Index Market Capitalization": "$29.58 billion",
+   "": "2022"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [],
+  "exposures": [
+   {
+    "label": "Top 10 Index Holdings",
+    "rows": [
+     {
+      "Company": "DHL AG",
+      "Weight": 5.25636
+     },
+     {
+      "Company": "UNION PACIFIC CORP",
+      "Weight": 4.762375
+     },
+     {
+      "Company": "NORFOLK SOUTHERN CORP",
+      "Weight": 4.722864
+     },
+     {
+      "Company": "CSX CORP",
+      "Weight": 4.6814
+     },
+     {
+      "Company": "CANADIAN NATL RAILWAY CO",
+      "Weight": 4.679721
+     },
+     {
+      "Company": "CANADIAN PACIFIC KANSAS CITY",
+      "Weight": 4.613664
+     },
+     {
+      "Company": "AMADEUS IT GROUP SA",
+      "Weight": 4.5557609999999995
+     },
+     {
+      "Company": "FEDEX CORP",
+      "Weight": 4.227346
+     },
+     {
+      "Company": "UNITED PARCEL SERVICE-CL B",
+      "Weight": 4.168083
+     },
+     {
+      "Company": "EXPEDITORS INTL WASH INC",
+      "Weight": 4.147056
+     }
+    ]
+   },
+   {
+    "label": "Fund Country Weighting",
+    "rows": [
+     {
+      "Country": "United States",
+      "Weight": 53.557123
+     },
+     {
+      "Country": "Canada",
+      "Weight": 10.964641
+     },
+     {
+      "Country": "Germany",
+      "Weight": 5.272363
+     },
+     {
+      "Country": "Denmark",
+      "Weight": 5.249799
+     },
+     {
+      "Country": "Taiwan",
+      "Weight": 4.773293
+     },
+     {
+      "Country": "China",
+      "Weight": 4.747937
+     },
+     {
+      "Country": "Spain",
+      "Weight": 4.569630999999999
+     },
+     {
+      "Country": "Australia",
+      "Weight": 3.763926
+     },
+     {
+      "Country": "Switzerland",
+      "Weight": 2.5281979999999997
+     },
+     {
+      "Country": "Japan",
+      "Weight": 2.147767
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 1.631692
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 0.7936300000000001
+     }
+    ]
+   },
+   {
+    "label": "Fund Currency Weighting",
+    "rows": [
+     {
+      "Currency": "USD",
+      "Weight": 53.557122788118775
+     },
+     {
+      "Currency": "CAD",
+      "Weight": 10.964641345892451
+     },
+     {
+      "Currency": "EUR",
+      "Weight": 10.635624127503824
+     },
+     {
+      "Currency": "DKK",
+      "Weight": 5.249799347220933
+     },
+     {
+      "Currency": "TWD",
+      "Weight": 4.773292544331247
+     },
+     {
+      "Currency": "HKD",
+      "Weight": 4.747936969395505
+     },
+     {
+      "Currency": "AUD",
+      "Weight": 3.763925876431901
+     },
+     {
+      "Currency": "CHF",
+      "Weight": 2.52819756548362
+     },
+     {
+      "Currency": "JPY",
+      "Weight": 2.147767082669168
+     },
+     {
+      "Currency": "KRW",
+      "Weight": 1.6316923529525846
+     }
+    ]
+   },
+   {
+    "label": "Fund Sector Weighting",
+    "rows": [
+     {
+      "Sector": "Transportation",
+      "Weight": 88.71396629142923
+     },
+     {
+      "Sector": "Consumer Services",
+      "Weight": 4.555760925580923
+     },
+     {
+      "Sector": "Commercial & Professional Services",
+      "Weight": 3.003245146626829
+     },
+     {
+      "Sector": "Utilities",
+      "Weight": 2.7704394468797164
+     },
+     {
+      "Sector": "Technology Hardware & Equipment",
+      "Weight": 0.6530681366871879
+     }
+    ]
+   }
+  ]
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetsupl.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_supl.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=SUPL&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=SUPL&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=SUPL&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=SUPL&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=SUPL&document-label=semi-annual-report"
+ }
+}

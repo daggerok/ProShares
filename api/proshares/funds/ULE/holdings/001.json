@@ -1,0 +1,44 @@
+{
+ "ticker": "ULE",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 3,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "EURO/US DOLLAR FORWARD - GOLDMAN SACHS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "107.7408914898",
+   "Market Value": "—",
+   "Shares Held": "3481921",
+   "Exposure Value": "3966654.48"
+  },
+  {
+   "Name": "EURO/US DOLLAR FORWARD - UBS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "92.2873968283",
+   "Market Value": "—",
+   "Shares Held": "2982502",
+   "Exposure Value": "3397709.18"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "3681661.09",
+   "Shares Held": "3681661.09",
+   "Exposure Value": "—"
+  }
+ ]
+}

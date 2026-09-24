@@ -1,0 +1,289 @@
+{
+ "ticker": "VIXY",
+ "name": "VIX Short-Term Futures ETF",
+ "category": "Volatility",
+ "categoryPath": "Volatility > Volatility",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/strategic/vixy",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-proshares-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/VIXY-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/VIXY-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=VIXY&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/VIXY-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/VIXY-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347Y730",
+  "isin": null,
+  "indexTicker": null,
+  "indexName": null,
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.85%",
+  "value": 0.85,
+  "gross": {
+   "display": "0.85%",
+   "value": 0.85
+  },
+  "net": {
+   "display": "0.85%",
+   "value": 0.85
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$16.78",
+  "value": 16.78,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$16.79",
+  "value": 16.79,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "0.06%",
+  "value": 0.0596,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$213,802,206",
+  "value": 214221713.71623996,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": null,
+  "effectiveYieldText": "—",
+  "effectiveYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Jan 04 2011",
+   "mo1": -15.34,
+   "mo3": -25.5,
+   "mo6": -38.04,
+   "ytd": -32.75,
+   "yr1": -51.09,
+   "yr3": -41.39,
+   "yr5": -47.07,
+   "yr10": -46.82,
+   "sinceInception": -48.58,
+   "mo1Text": "-15.34%",
+   "ytdText": "-32.75%",
+   "yr1Text": "-51.09%",
+   "yr3Text": "-41.39%",
+   "yr5Text": "-47.07%",
+   "yr10Text": "-46.82%",
+   "sinceInceptionText": "-48.58%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Jan 04 2011",
+    "mo1": -15.75,
+    "mo3": -25.81,
+    "mo6": -37.98,
+    "ytd": -32.61,
+    "yr1": -50.99,
+    "yr3": -41.45,
+    "yr5": -47.1,
+    "yr10": -46.88,
+    "sinceInception": -48.58,
+    "mo1Text": "-15.75%",
+    "ytdText": "-32.61%",
+    "yr1Text": "-50.99%",
+    "yr3Text": "-41.45%",
+    "yr5Text": "-47.10%",
+    "yr10Text": "-46.88%",
+    "sinceInceptionText": "-48.58%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Jan 04 2011",
+   "mo1": -8.42,
+   "mo3": -37.97,
+   "mo6": -17.34,
+   "ytd": -17.34,
+   "yr1": -54.55,
+   "yr3": -40.27,
+   "yr5": -46.42,
+   "yr10": -47.91,
+   "sinceInception": -48.95,
+   "mo1Text": "-8.42%",
+   "ytdText": "-17.34%",
+   "yr1Text": "-54.55%",
+   "yr3Text": "-40.27%",
+   "yr5Text": "-46.42%",
+   "yr10Text": "-47.91%",
+   "sinceInceptionText": "-48.95%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Jan 04 2011",
+    "mo1": -8.59,
+    "mo3": -38.02,
+    "mo6": -16.97,
+    "ytd": -16.97,
+    "yr1": -54.59,
+    "yr3": -40.26,
+    "yr5": -46.41,
+    "yr10": -47.98,
+    "sinceInception": -48.95,
+    "mo1Text": "-8.59%",
+    "ytdText": "-16.97%",
+    "yr1Text": "-54.59%",
+    "yr3Text": "-40.26%",
+    "yr5Text": "-46.41%",
+    "yr10Text": "-47.98%",
+    "sinceInceptionText": "-48.95%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 4,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/VIXY-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 3954,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/VIXY-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {
+   "Total Number of Contracts": "2"
+  },
+  "indexAsOf": "Jun 30 2026",
+  "geared": {
+   "strategy": "",
+   "dailyObjective": "",
+   "benchmark": ""
+  },
+  "splits": [
+   {
+    "date": "Nov 07 2024",
+    "splitType": "Reverse",
+    "ratio": 4,
+    "preSplitCusip": "74347Y789",
+    "postSplitCusip": "74347Y730"
+   },
+   {
+    "date": "Jun 23 2023",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347Y854",
+    "postSplitCusip": "74347Y789"
+   },
+   {
+    "date": "May 26 2021",
+    "splitType": "Reverse",
+    "ratio": 4,
+    "preSplitCusip": "74347W171",
+    "postSplitCusip": "74347Y854"
+   },
+   {
+    "date": "Jul 17 2017",
+    "splitType": "Reverse",
+    "ratio": 4,
+    "preSplitCusip": "74347W262",
+    "postSplitCusip": "74347W171"
+   },
+   {
+    "date": "Jul 25 2016",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347W361",
+    "postSplitCusip": "74347W262"
+   },
+   {
+    "date": "Jun 10 2013",
+    "splitType": "Reverse",
+    "ratio": 5,
+    "preSplitCusip": "74347W692",
+    "postSplitCusip": "74347W361"
+   }
+  ],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetvixy.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_vixy.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=VIXY&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=VIXY&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=VIXY&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=VIXY&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=VIXY&document-label=semi-annual-report"
+ }
+}

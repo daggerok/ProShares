@@ -1,0 +1,62 @@
+{
+ "ticker": "MZZ",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "S&P MidCap 400 Index SWAP BNP Paribas",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-76.5998614965",
+   "Market Value": "—",
+   "Shares Held": "-962",
+   "Exposure Value": "-3513935.88"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-55.2601911419",
+   "Market Value": "—",
+   "Shares Held": "-694",
+   "Exposure Value": "-2535001.56"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-35.1945309578",
+   "Market Value": "—",
+   "Shares Held": "-442",
+   "Exposure Value": "-1614511.08"
+  },
+  {
+   "Name": "S&P MidCap 400 Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-32.9650131596",
+   "Market Value": "—",
+   "Shares Held": "-414",
+   "Exposure Value": "-1512234.36"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4587391.95",
+   "Shares Held": "4587391.95",
+   "Exposure Value": "—"
+  }
+ ]
+}

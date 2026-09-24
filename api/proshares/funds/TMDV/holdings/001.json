@@ -1,0 +1,544 @@
+{
+ "ticker": "TMDV",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 66,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held"
+ ],
+ "rows": [
+  {
+   "Name": "ABM INDUSTRIES INC",
+   "Ticker": "ABM",
+   "Identifier": "2024901",
+   "Weight": "1.6890269551",
+   "Market Value": "76721.36",
+   "Shares Held": "1544"
+  },
+  {
+   "Name": "STEPAN CO",
+   "Ticker": "SCL",
+   "Identifier": "2845005",
+   "Weight": "1.6694702982",
+   "Market Value": "75833.03",
+   "Shares Held": "1169"
+  },
+  {
+   "Name": "MCGRATH RENTCORP",
+   "Ticker": "MGRC",
+   "Identifier": "2551551",
+   "Weight": "1.6528508934",
+   "Market Value": "75078.12",
+   "Shares Held": "663"
+  },
+  {
+   "Name": "EMERSON ELECTRIC CO",
+   "Ticker": "EMR",
+   "Identifier": "2313405",
+   "Weight": "1.6506060156",
+   "Market Value": "74976.15",
+   "Shares Held": "485"
+  },
+  {
+   "Name": "WALMART INC",
+   "Ticker": "WMT",
+   "Identifier": "2936921",
+   "Weight": "1.6351956791",
+   "Market Value": "74276.16",
+   "Shares Held": "672"
+  },
+  {
+   "Name": "NORDSON CORP",
+   "Ticker": "NDSN",
+   "Identifier": "2641838",
+   "Weight": "1.6275000874",
+   "Market Value": "73926.6",
+   "Shares Held": "230"
+  },
+  {
+   "Name": "ILLINOIS TOOL WORKS",
+   "Ticker": "ITW",
+   "Identifier": "2457552",
+   "Weight": "1.6192087676",
+   "Market Value": "73549.98",
+   "Shares Held": "269"
+  },
+  {
+   "Name": "PROCTER & GAMBLE CO/THE",
+   "Ticker": "PG",
+   "Identifier": "2704407",
+   "Weight": "1.6094221834",
+   "Market Value": "73105.44",
+   "Shares Held": "496"
+  },
+  {
+   "Name": "GORMAN-RUPP CO",
+   "Ticker": "GRC",
+   "Identifier": "2379281",
+   "Weight": "1.6085924350",
+   "Market Value": "73067.75",
+   "Shares Held": "971"
+  },
+  {
+   "Name": "COCA-COLA CO/THE",
+   "Ticker": "KO",
+   "Identifier": "2206657",
+   "Weight": "1.5921722667",
+   "Market Value": "72321.89",
+   "Shares Held": "821"
+  },
+  {
+   "Name": "DOVER CORP",
+   "Ticker": "DOV",
+   "Identifier": "2278407",
+   "Weight": "1.5896971112",
+   "Market Value": "72209.46",
+   "Shares Held": "382"
+  },
+  {
+   "Name": "SHERWIN-WILLIAMS CO/THE",
+   "Ticker": "SHW",
+   "Identifier": "2804211",
+   "Weight": "1.5811495358",
+   "Market Value": "71821.2",
+   "Shares Held": "220"
+  },
+  {
+   "Name": "WW GRAINGER INC",
+   "Ticker": "GWW",
+   "Identifier": "2380863",
+   "Weight": "1.5665385669",
+   "Market Value": "71157.52",
+   "Shares Held": "56"
+  },
+  {
+   "Name": "MSA SAFETY INC",
+   "Ticker": "MSA",
+   "Identifier": "BKM4S16",
+   "Weight": "1.5658173528",
+   "Market Value": "71124.76",
+   "Shares Held": "389"
+  },
+  {
+   "Name": "FRANKLIN TEMPLETON INC",
+   "Ticker": "BEN",
+   "Identifier": "2350684",
+   "Weight": "1.5655263134",
+   "Market Value": "71111.54",
+   "Shares Held": "2174"
+  },
+  {
+   "Name": "AFLAC INC",
+   "Ticker": "AFL",
+   "Identifier": "2026361",
+   "Weight": "1.5652042328",
+   "Market Value": "71096.91",
+   "Shares Held": "617"
+  },
+  {
+   "Name": "BECTON DICKINSON AND CO",
+   "Ticker": "BDX",
+   "Identifier": "2087807",
+   "Weight": "1.5630769155",
+   "Market Value": "71000.28",
+   "Shares Held": "389"
+  },
+  {
+   "Name": "ARCHER-DANIELS-MIDLAND CO",
+   "Ticker": "ADM",
+   "Identifier": "2047317",
+   "Weight": "1.5625776135",
+   "Market Value": "70977.6",
+   "Shares Held": "864"
+  },
+  {
+   "Name": "CHEVRON CORP",
+   "Ticker": "CVX",
+   "Identifier": "2838555",
+   "Weight": "1.5608901575",
+   "Market Value": "70900.95",
+   "Shares Held": "345"
+  },
+  {
+   "Name": "UNITED BANKSHARES INC",
+   "Ticker": "UBSI",
+   "Identifier": "2905794",
+   "Weight": "1.5588667514",
+   "Market Value": "70809.04",
+   "Shares Held": "1532"
+  },
+  {
+   "Name": "RPM INTERNATIONAL INC",
+   "Ticker": "RPM",
+   "Identifier": "2756174",
+   "Weight": "1.5529944487",
+   "Market Value": "70542.3",
+   "Shares Held": "705"
+  },
+  {
+   "Name": "PPG INDUSTRIES INC",
+   "Ticker": "PPG",
+   "Identifier": "2698470",
+   "Weight": "1.5528909778",
+   "Market Value": "70537.6",
+   "Shares Held": "658"
+  },
+  {
+   "Name": "JOHNSON & JOHNSON",
+   "Ticker": "JNJ",
+   "Identifier": "2475833",
+   "Weight": "1.5525594307",
+   "Market Value": "70522.54",
+   "Shares Held": "262"
+  },
+  {
+   "Name": "MARZETTI COMPANY/THE",
+   "Ticker": "MZTI",
+   "Identifier": "2503206",
+   "Weight": "1.5512442498",
+   "Market Value": "70462.8",
+   "Shares Held": "690"
+  },
+  {
+   "Name": "H2O AMERICA",
+   "Ticker": "HTO",
+   "Identifier": "2811932",
+   "Weight": "1.5473519835",
+   "Market Value": "70286",
+   "Shares Held": "1130"
+  },
+  {
+   "Name": "BLACK HILLS CORP",
+   "Ticker": "BKH",
+   "Identifier": "2101741",
+   "Weight": "1.5429696614",
+   "Market Value": "70086.94",
+   "Shares Held": "994"
+  },
+  {
+   "Name": "SONOCO PRODUCTS CO",
+   "Ticker": "SON",
+   "Identifier": "2821395",
+   "Weight": "1.5426389949",
+   "Market Value": "70071.92",
+   "Shares Held": "1384"
+  },
+  {
+   "Name": "MEDTRONIC PLC",
+   "Ticker": "MDT",
+   "Identifier": "BTN1Y11",
+   "Weight": "1.5413022392",
+   "Market Value": "70011.2",
+   "Shares Held": "784"
+  },
+  {
+   "Name": "COMMUNITY TRUST BANCORP INC",
+   "Ticker": "CTBI",
+   "Identifier": "2706470",
+   "Weight": "1.5412846271",
+   "Market Value": "70010.4",
+   "Shares Held": "941"
+  },
+  {
+   "Name": "NORTHWEST NATURAL HOLDING CO",
+   "Ticker": "NWN",
+   "Identifier": "BFNR303",
+   "Weight": "1.5347038791",
+   "Market Value": "69711.48",
+   "Shares Held": "1476"
+  },
+  {
+   "Name": "BROWN-FORMAN CORP-CLASS B",
+   "Ticker": "BF/B",
+   "Identifier": "2146838",
+   "Weight": "1.5343364474",
+   "Market Value": "69694.79",
+   "Shares Held": "2651"
+  },
+  {
+   "Name": "TARGET CORP",
+   "Ticker": "TGT",
+   "Identifier": "2259101",
+   "Weight": "1.5308340682",
+   "Market Value": "69535.7",
+   "Shares Held": "445"
+  },
+  {
+   "Name": "COLGATE-PALMOLIVE CO",
+   "Ticker": "CL",
+   "Identifier": "2209106",
+   "Weight": "1.5304305317",
+   "Market Value": "69517.37",
+   "Shares Held": "809"
+  },
+  {
+   "Name": "COMMERCE BANCSHARES INC",
+   "Ticker": "CBSH",
+   "Identifier": "2213204",
+   "Weight": "1.5285491229",
+   "Market Value": "69431.91",
+   "Shares Held": "1249"
+  },
+  {
+   "Name": "STANLEY BLACK & DECKER INC",
+   "Ticker": "SWK",
+   "Identifier": "B3Q2FJ4",
+   "Weight": "1.5271984977",
+   "Market Value": "69370.56",
+   "Shares Held": "756"
+  },
+  {
+   "Name": "SYSCO CORP",
+   "Ticker": "SYY",
+   "Identifier": "2868165",
+   "Weight": "1.5267207704",
+   "Market Value": "69348.86",
+   "Shares Held": "899"
+  },
+  {
+   "Name": "ABBOTT LABORATORIES",
+   "Ticker": "ABT",
+   "Identifier": "2002305",
+   "Weight": "1.5264882912",
+   "Market Value": "69338.3",
+   "Shares Held": "670"
+  },
+  {
+   "Name": "LOWE'S COS INC",
+   "Ticker": "LOW",
+   "Identifier": "2536763",
+   "Weight": "1.5208229302",
+   "Market Value": "69080.96",
+   "Shares Held": "361"
+  },
+  {
+   "Name": "AIR PRODUCTS & CHEMICALS INC",
+   "Ticker": "APD",
+   "Identifier": "2011602",
+   "Weight": "1.5162402710",
+   "Market Value": "68872.8",
+   "Shares Held": "240"
+  },
+  {
+   "Name": "CONSOLIDATED EDISON INC",
+   "Ticker": "ED",
+   "Identifier": "2216850",
+   "Weight": "1.5135081994",
+   "Market Value": "68748.7",
+   "Shares Held": "670"
+  },
+  {
+   "Name": "T ROWE PRICE GROUP INC",
+   "Ticker": "TROW",
+   "Identifier": "2702337",
+   "Weight": "1.5124908825",
+   "Market Value": "68702.49",
+   "Shares Held": "657"
+  },
+  {
+   "Name": "CARLISLE COS INC",
+   "Ticker": "CSL",
+   "Identifier": "2176318",
+   "Weight": "1.5119851961",
+   "Market Value": "68679.52",
+   "Shares Held": "212"
+  },
+  {
+   "Name": "NATIONAL FUEL GAS CO",
+   "Ticker": "NFG",
+   "Identifier": "2626103",
+   "Weight": "1.5108186170",
+   "Market Value": "68626.53",
+   "Shares Held": "873"
+  },
+  {
+   "Name": "NUCOR CORP",
+   "Ticker": "NUE",
+   "Identifier": "2651086",
+   "Weight": "1.5061278637",
+   "Market Value": "68413.46",
+   "Shares Held": "277"
+  },
+  {
+   "Name": "GENUINE PARTS CO",
+   "Ticker": "GPC",
+   "Identifier": "2367480",
+   "Weight": "1.5023707699",
+   "Market Value": "68242.8",
+   "Shares Held": "530"
+  },
+  {
+   "Name": "H.B. FULLER CO.",
+   "Ticker": "FUL",
+   "Identifier": "2354664",
+   "Weight": "1.5011022610",
+   "Market Value": "68185.18",
+   "Shares Held": "1358"
+  },
+  {
+   "Name": "FEDERAL REALTY INVS TRUST",
+   "Ticker": "FRT",
+   "Identifier": "BN7P9B2",
+   "Weight": "1.5003271100",
+   "Market Value": "68149.97",
+   "Shares Held": "623"
+  },
+  {
+   "Name": "MCCORMICK & CO-NON VTG SHRS",
+   "Ticker": "MKC",
+   "Identifier": "2550161",
+   "Weight": "1.4989590928",
+   "Market Value": "68087.83",
+   "Shares Held": "1387"
+  },
+  {
+   "Name": "AUTOMATIC DATA PROCESSING",
+   "Ticker": "ADP",
+   "Identifier": "2065308",
+   "Weight": "1.4976736323",
+   "Market Value": "68029.44",
+   "Shares Held": "258"
+  },
+  {
+   "Name": "CINCINNATI FINANCIAL CORP",
+   "Ticker": "CINF",
+   "Identifier": "2196888",
+   "Weight": "1.4960185385",
+   "Market Value": "67954.26",
+   "Shares Held": "418"
+  },
+  {
+   "Name": "PEPSICO INC",
+   "Ticker": "PEP",
+   "Identifier": "2681511",
+   "Weight": "1.4931460107",
+   "Market Value": "67823.78",
+   "Shares Held": "521"
+  },
+  {
+   "Name": "UNIVERSAL CORP/VA",
+   "Ticker": "UVV",
+   "Identifier": "2923804",
+   "Weight": "1.4928655386",
+   "Market Value": "67811.04",
+   "Shares Held": "1584"
+  },
+  {
+   "Name": "AMERICAN STATES WATER CO",
+   "Ticker": "AWR",
+   "Identifier": "2267171",
+   "Weight": "1.4898512337",
+   "Market Value": "67674.12",
+   "Shares Held": "813"
+  },
+  {
+   "Name": "ATMOS ENERGY CORP",
+   "Ticker": "ATO",
+   "Identifier": "2315359",
+   "Weight": "1.4859228626",
+   "Market Value": "67495.68",
+   "Shares Held": "432"
+  },
+  {
+   "Name": "MOBILITY GLOBAL INC",
+   "Ticker": "MBGL",
+   "Identifier": "BWM34D1",
+   "Weight": "1.4809421707",
+   "Market Value": "67269.44",
+   "Shares Held": "3563"
+  },
+  {
+   "Name": "HORMEL FOODS CORP",
+   "Ticker": "HRL",
+   "Identifier": "2437264",
+   "Weight": "1.4748114109",
+   "Market Value": "66990.96",
+   "Shares Held": "3363"
+  },
+  {
+   "Name": "MIDDLESEX WATER CO",
+   "Ticker": "MSEX",
+   "Identifier": "2589466",
+   "Weight": "1.4728430426",
+   "Market Value": "66901.55",
+   "Shares Held": "1247"
+  },
+  {
+   "Name": "MCDONALD'S CORP",
+   "Ticker": "MCD",
+   "Identifier": "2550707",
+   "Weight": "1.4690575494",
+   "Market Value": "66729.6",
+   "Shares Held": "280"
+  },
+  {
+   "Name": "NNN REIT INC",
+   "Ticker": "NNN",
+   "Identifier": "2211811",
+   "Weight": "1.4676417595",
+   "Market Value": "66665.29",
+   "Shares Held": "1613"
+  },
+  {
+   "Name": "CALIFORNIA WATER SERVICE GRP",
+   "Ticker": "CWT",
+   "Identifier": "2165383",
+   "Weight": "1.4635407902",
+   "Market Value": "66479.01",
+   "Shares Held": "1443"
+  },
+  {
+   "Name": "KIMBERLY-CLARK CORP",
+   "Ticker": "KMB",
+   "Identifier": "2491839",
+   "Weight": "1.4518395545",
+   "Market Value": "65947.5",
+   "Shares Held": "675"
+  },
+  {
+   "Name": "S&P GLOBAL INC",
+   "Ticker": "SPGI",
+   "Identifier": "BYV2325",
+   "Weight": "1.4497591294",
+   "Market Value": "65853",
+   "Shares Held": "162"
+  },
+  {
+   "Name": "OLD REPUBLIC INTL CORP",
+   "Ticker": "ORI",
+   "Identifier": "2659109",
+   "Weight": "1.4428547597",
+   "Market Value": "65539.38",
+   "Shares Held": "1713"
+  },
+  {
+   "Name": "CLOROX COMPANY",
+   "Ticker": "CLX",
+   "Identifier": "2204026",
+   "Weight": "1.4303101262",
+   "Market Value": "64969.56",
+   "Shares Held": "774"
+  },
+  {
+   "Name": "RLI CORP",
+   "Ticker": "RLI",
+   "Identifier": "2719070",
+   "Weight": "1.4242722701",
+   "Market Value": "64695.3",
+   "Shares Held": "1138"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "10175.21",
+   "Shares Held": "10175.21"
+  }
+ ]
+}

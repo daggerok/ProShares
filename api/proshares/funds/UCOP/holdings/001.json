@@ -1,0 +1,62 @@
+{
+ "ticker": "UCOP",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "United States Copper Index Fund (CPER) SWAP BOA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "92.5048068402",
+   "Market Value": "—",
+   "Shares Held": "4001",
+   "Exposure Value": "4416423.83"
+  },
+  {
+   "Name": "United States Copper Index Fund (CPER) SWAP Citi",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "63.9973270017",
+   "Market Value": "—",
+   "Shares Held": "2768",
+   "Exposure Value": "3055401.44"
+  },
+  {
+   "Name": "United States Copper Index Fund (CPER) SWAP Goldman Sachs",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "23.6753117232",
+   "Market Value": "—",
+   "Shares Held": "1024",
+   "Exposure Value": "1130321.92"
+  },
+  {
+   "Name": "United States Copper Index Fund (CPER) SWAP Nomura",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "19.8142013152",
+   "Market Value": "—",
+   "Shares Held": "857",
+   "Exposure Value": "945982.31"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "4774264.15",
+   "Shares Held": "4774264.15",
+   "Exposure Value": "—"
+  }
+ ]
+}

@@ -1,0 +1,267 @@
+{
+ "ticker": "YCS",
+ "name": "UltraShort Yen",
+ "category": "Currency",
+ "categoryPath": "Currency > Currency",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/ycs",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/YCS-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/YCS-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=YCS&year=2026",
+  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/YCS-psdlyhld.csv, as of Sep 23 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/YCS-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
+  "secYield": "not published by ProShares for its ETFs"
+ },
+ "identifiers": {
+  "cusip": "74347W569",
+  "isin": null,
+  "indexTicker": "YEN",
+  "indexName": "Yen/US Dollar (YEN)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a single expense ratio for this fund"
+ },
+ "nav": {
+  "display": "$54.45",
+  "value": 54.45,
+  "asOfDate": "Sep 23 2026"
+ },
+ "marketPrice": {
+  "display": "$54.35",
+  "value": 54.35,
+  "asOfDate": "Sep 23 2026"
+ },
+ "premiumDiscount": {
+  "display": "-0.18%",
+  "value": -0.1837,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "$27,072,479",
+  "value": 27072479.03157,
+  "asOfDate": "Sep 23 2026",
+  "source": "official ProShares NAV history file (Assets Under Management)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": null,
+  "effectiveYieldText": "—",
+  "effectiveYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "Aug 31 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": 1.38,
+   "mo3": 2.3,
+   "mo6": 8.23,
+   "ytd": 8.52,
+   "yr1": 26.65,
+   "yr3": 16.24,
+   "yr5": 23.73,
+   "yr10": 13.34,
+   "sinceInception": 6.27,
+   "mo1Text": "1.38%",
+   "ytdText": "8.52%",
+   "yr1Text": "26.65%",
+   "yr3Text": "16.24%",
+   "yr5Text": "23.73%",
+   "yr10Text": "13.34%",
+   "sinceInceptionText": "6.27%",
+   "marketPrice": {
+    "asOfDate": "Aug 31 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": 1.17,
+    "mo3": 2.32,
+    "mo6": 8.02,
+    "ytd": 8.55,
+    "yr1": 26.72,
+    "yr3": 16.21,
+    "yr5": 23.73,
+    "yr10": 13.33,
+    "sinceInception": 6.27,
+    "mo1Text": "1.17%",
+    "ytdText": "8.55%",
+    "yr1Text": "26.72%",
+    "yr3Text": "16.21%",
+    "yr5Text": "23.73%",
+    "yr10Text": "13.33%",
+    "sinceInceptionText": "6.27%"
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "Jun 30 2026",
+   "inceptionDate": "Nov 26 2008",
+   "mo1": 4.92,
+   "mo3": 6.91,
+   "mo6": 11.29,
+   "ytd": 11.29,
+   "yr1": 37.1,
+   "yr3": 18.62,
+   "yr5": 23.81,
+   "yr10": 13.57,
+   "sinceInception": 6.49,
+   "mo1Text": "4.92%",
+   "ytdText": "11.29%",
+   "yr1Text": "37.10%",
+   "yr3Text": "18.62%",
+   "yr5Text": "23.81%",
+   "yr10Text": "13.57%",
+   "sinceInceptionText": "6.49%",
+   "marketPrice": {
+    "asOfDate": "Jun 30 2026",
+    "inceptionDate": "Nov 26 2008",
+    "mo1": 4.85,
+    "mo3": 6.87,
+    "mo6": 11.24,
+    "ytd": 11.24,
+    "yr1": 36.83,
+    "yr3": 18.56,
+    "yr5": 23.77,
+    "yr10": 13.55,
+    "sinceInception": 6.48,
+    "mo1Text": "4.85%",
+    "ytdText": "11.24%",
+    "yr1Text": "36.83%",
+    "yr3Text": "18.56%",
+    "yr5Text": "23.77%",
+    "yr10Text": "13.55%",
+    "sinceInceptionText": "6.48%"
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "—",
+  "paymentsPerYear": null,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 4,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held",
+   "Exposure Value"
+  ],
+  "source": "official ProShares daily holdings download (ByFund/YCS-psdlyhld.csv, as of Sep 23 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": [
+   "./holdings/001.json"
+  ]
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 4484,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/YCS-historical_nav.csv)",
+  "pages": [
+   "./history/001.json",
+   "./history/002.json",
+   "./history/003.json",
+   "./history/004.json",
+   "./history/005.json"
+  ]
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Currency",
+   "dailyObjective": "-2x",
+   "benchmark": "Yen/US Dollar (YEN)"
+  },
+  "splits": [
+   {
+    "date": "Nov 07 2024",
+    "splitType": "Forward",
+    "ratio": 2,
+    "preSplitCusip": "74347W569",
+    "postSplitCusip": ""
+   },
+   {
+    "date": "May 26 2022",
+    "splitType": "Forward",
+    "ratio": 2,
+    "preSplitCusip": "74347W569",
+    "postSplitCusip": ""
+   },
+   {
+    "date": "Oct 13 2011",
+    "splitType": "Reverse",
+    "ratio": 3,
+    "preSplitCusip": "74347W858",
+    "postSplitCusip": "74347W569"
+   }
+  ],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetycs.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_ycs.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=YCS&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=YCS&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=YCS&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=YCS&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=YCS&document-label=semi-annual-report"
+ }
+}

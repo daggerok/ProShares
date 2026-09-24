@@ -1,0 +1,71 @@
+{
+ "ticker": "EFZ",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP UBS AG",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-33.2735849516",
+   "Market Value": "—",
+   "Shares Held": "-1525",
+   "Exposure Value": "-3427925.5"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Goldman Sachs International",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-23.3896938152",
+   "Market Value": "—",
+   "Shares Held": "-1072",
+   "Exposure Value": "-2409663.04"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-21.9060192075",
+   "Market Value": "—",
+   "Shares Held": "-1004",
+   "Exposure Value": "-2256811.28"
+  },
+  {
+   "Name": "iShares MSCI EAFE (EFA) SWAP Citibank NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-21.4478255787",
+   "Market Value": "—",
+   "Shares Held": "-983",
+   "Exposure Value": "-2209607.06"
+  },
+  {
+   "Name": "PROSHARES GENIUS MNY MKT ETF",
+   "Ticker": "IQMM",
+   "Identifier": "BTGTPK8",
+   "Weight": "—",
+   "Market Value": "9004500",
+   "Shares Held": "90000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "1297742.77",
+   "Shares Held": "1297742.77",
+   "Exposure Value": "—"
+  }
+ ]
+}
