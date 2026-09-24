@@ -2,7 +2,7 @@
  "ticker": "BIB",
  "page": 2,
  "pageSize": 250,
- "totalRows": 256,
+ "totalRows": 255,
  "headers": [
   "Name",
   "Ticker",
@@ -14,20 +14,11 @@
  ],
  "rows": [
   {
-   "Name": "BLACK DIAMOND THERAPEUTICS I",
-   "Ticker": "BDTX",
-   "Identifier": "BKTV702",
-   "Weight": "0.0040301648",
-   "Market Value": "3757.32",
-   "Shares Held": "1917",
-   "Exposure Value": "—"
-  },
-  {
    "Name": "RANI THERAPEUTICS HOLDINGS-A",
    "Ticker": "RANI",
    "Identifier": "BNNXX18",
-   "Weight": "0.0035615385",
-   "Market Value": "3320.42",
+   "Weight": "0.0031351716",
+   "Market Value": "2954.48",
    "Shares Held": "3852",
    "Exposure Value": "—"
   },
@@ -35,8 +26,8 @@
    "Name": "GOSSAMER BIO INC",
    "Ticker": "GOSS",
    "Identifier": "C0BCTT5",
-   "Weight": "0.0023478725",
-   "Market Value": "2188.92",
+   "Weight": "0.0023790750",
+   "Market Value": "2241.96",
    "Shares Held": "204",
    "Exposure Value": "—"
   },
@@ -63,8 +54,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "26313179.5",
-   "Shares Held": "26313179.5",
+   "Market Value": "27035248.97",
+   "Shares Held": "27035248.97",
    "Exposure Value": "—"
   }
  ]

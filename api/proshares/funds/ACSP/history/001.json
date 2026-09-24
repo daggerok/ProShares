@@ -2,7 +2,7 @@
  "ticker": "ACSP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 26,
+ "totalRows": 29,
  "headers": [
   "Date",
   "NAV",
@@ -165,6 +165,24 @@
    "NAV": "23.9749",
    "Shares Outstanding": "1115000",
    "Total Net Assets": "26732037.4749"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "24.5906",
+   "Shares Outstanding": "1115000",
+   "Total Net Assets": "27418543.5906"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "24.5836",
+   "Shares Outstanding": "1115000",
+   "Total Net Assets": "27410738.5836"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "24.2655",
+   "Shares Outstanding": "1115000",
+   "Total Net Assets": "27056056.7655"
   }
  ]
 }

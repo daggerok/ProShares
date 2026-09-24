@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UPLT&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/UPLT-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UPLT-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/UPLT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$25.57",
-  "value": 25.57,
-  "asOfDate": "Sep 18 2026"
+  "display": "$24.03",
+  "value": 24.03,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$25.55",
-  "value": 25.55,
-  "asOfDate": "Sep 18 2026"
+  "display": "$23.95",
+  "value": 23.95,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "-0.08%",
-  "value": -0.0782,
+  "display": "-0.33%",
+  "value": -0.3329,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$3,068,727",
-  "value": 3068725.5725,
-  "asOfDate": "Sep 18 2026",
+  "display": "$2,883,597",
+  "value": 2883600.0298,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -185,6 +185,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.166721",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "—",
@@ -193,8 +202,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -204,7 +213,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/UPLT-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/UPLT-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -212,9 +221,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 106,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 109,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",

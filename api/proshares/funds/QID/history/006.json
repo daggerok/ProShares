@@ -2,7 +2,7 @@
  "ticker": "QID",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5080,
+ "totalRows": 5083,
  "headers": [
   "Date",
   "NAV",
@@ -489,6 +489,24 @@
    "NAV": "14.0746",
    "Shares Outstanding": "16798900",
    "Total Net Assets": "236437840.1638"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "13.279",
+   "Shares Outstanding": "16748900",
+   "Total Net Assets": "222408682.937"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "13.0655",
+   "Shares Outstanding": "16048900",
+   "Total Net Assets": "209686942.1465"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "13.1134",
+   "Shares Outstanding": "20748900",
+   "Total Net Assets": "272088664.6002"
   }
  ]
 }

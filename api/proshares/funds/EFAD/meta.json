@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=EFAD&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/EFAD-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/EFAD-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EFAD-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$43.66",
-  "value": 43.66,
-  "asOfDate": "Sep 18 2026"
+  "display": "$43.54",
+  "value": 43.54,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$43.67",
-  "value": 43.67,
-  "asOfDate": "Sep 18 2026"
+  "display": "$43.36",
+  "value": 43.36,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.02%",
-  "value": 0.0229,
+  "display": "-0.41%",
+  "value": -0.4134,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$62,434,218",
-  "value": 62434272.6603,
-  "asOfDate": "Sep 18 2026",
+  "display": "$62,262,586",
+  "value": 62262529.5402,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -75,8 +75,8 @@
   "distributionYieldText": null,
   "yield12M": 2.51,
   "yield12MText": "2.51%",
-  "indicatedYield": 3.4094,
-  "indicatedYieldText": "3.41%",
+  "indicatedYield": 1.4925,
+  "indicatedYieldText": "1.49%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -554,6 +554,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.162456",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "Aug 31 2026",
@@ -561,18 +570,19 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 74,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "totalRows": 83,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
    "Identifier",
    "Weight",
    "Market Value",
-   "Shares Held"
+   "Shares Held",
+   "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/EFAD-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/EFAD-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -580,9 +590,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3039,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 3042,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -788,71 +798,71 @@
     "rows": [
      {
       "Country": "Japan",
-      "Weight": 25.98434
-     },
-     {
-      "Country": "United Kingdom",
-      "Weight": 13.354167
+      "Weight": 25.783554
      },
      {
       "Country": "Switzerland",
-      "Weight": 13.118489
+      "Weight": 13.352857000000002
+     },
+     {
+      "Country": "United Kingdom",
+      "Weight": 13.33967
      },
      {
       "Country": "Australia",
-      "Weight": 8.406433
+      "Weight": 8.360544
      },
      {
       "Country": "Belgium",
-      "Weight": 6.664504
+      "Weight": 6.736354
      },
      {
       "Country": "Germany",
-      "Weight": 5.475167
+      "Weight": 5.51527
      },
      {
       "Country": "Hong Kong",
-      "Weight": 4.297002
+      "Weight": 4.265088
      },
      {
       "Country": "France",
-      "Weight": 3.9880020000000003
+      "Weight": 4.029549
      },
      {
       "Country": "Italy",
-      "Weight": 3.968329
+      "Weight": 3.941708
      },
      {
       "Country": "Netherlands",
-      "Weight": 2.652316
+      "Weight": 2.654498
      },
      {
       "Country": "Spain",
-      "Weight": 2.605985
+      "Weight": 2.617133
      },
      {
       "Country": "Denmark",
-      "Weight": 2.596042
-     },
-     {
-      "Country": "Finland",
-      "Weight": 1.421092
-     },
-     {
-      "Country": "New Zealand",
-      "Weight": 1.4036710000000001
+      "Weight": 2.471918
      },
      {
       "Country": "Ireland",
-      "Weight": 1.395452
+      "Weight": 1.420953
      },
      {
-      "Country": "Norway",
-      "Weight": 1.3546070000000001
+      "Country": "New Zealand",
+      "Weight": 1.420139
+     },
+     {
+      "Country": "Finland",
+      "Weight": 1.411721
      },
      {
       "Country": "Sweden",
-      "Weight": 1.314403
+      "Weight": 1.345971
+     },
+     {
+      "Country": "Norway",
+      "Weight": 1.333075
      }
     ]
    },
@@ -861,43 +871,43 @@
     "rows": [
      {
       "Currency": "EUR",
-      "Weight": 28.170846387376002
+      "Weight": 28.3271850424082
      },
      {
       "Currency": "JPY",
-      "Weight": 25.984339964733717
-     },
-     {
-      "Currency": "GBP",
-      "Weight": 13.354167266484772
+      "Weight": 25.7835537590839
      },
      {
       "Currency": "CHF",
-      "Weight": 13.11848930803103
+      "Weight": 13.35285733729342
+     },
+     {
+      "Currency": "GBP",
+      "Weight": 13.339669707371012
      },
      {
       "Currency": "AUD",
-      "Weight": 8.406432540406225
+      "Weight": 8.36054435582946
      },
      {
       "Currency": "HKD",
-      "Weight": 4.297002380528124
+      "Weight": 4.265087870172536
      },
      {
       "Currency": "DKK",
-      "Weight": 2.5960415004184645
+      "Weight": 2.4719175951506456
      },
      {
       "Currency": "NZD",
-      "Weight": 1.4036710679817626
-     },
-     {
-      "Currency": "NOK",
-      "Weight": 1.3546067535672714
+      "Weight": 1.4201391257311593
      },
      {
       "Currency": "SEK",
-      "Weight": 1.3144028304726314
+      "Weight": 1.345970664485824
+     },
+     {
+      "Currency": "NOK",
+      "Weight": 1.3330745424738484
      }
     ]
    },
@@ -906,43 +916,43 @@
     "rows": [
      {
       "Sector": "Health Care",
-      "Weight": 18.530854314635604
+      "Weight": 18.48470582145825
      },
      {
       "Sector": "Information Technology",
-      "Weight": 15.545359757939087
+      "Weight": 15.62981003471198
      },
      {
       "Sector": "Industrials",
-      "Weight": 14.521404383125322
+      "Weight": 14.640643819419907
      },
      {
       "Sector": "Financials",
-      "Weight": 12.344354321102736
+      "Weight": 12.315396859307077
      },
      {
       "Sector": "Materials",
-      "Weight": 9.435119694111977
+      "Weight": 9.620451305956603
      },
      {
       "Sector": "Utilities",
-      "Weight": 8.207670729286239
+      "Weight": 8.209446390932873
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 8.012911112382033
+      "Weight": 8.11144886841775
      },
      {
       "Sector": "Communication Services",
-      "Weight": 5.69755079229248
+      "Weight": 5.672692147176657
      },
      {
       "Sector": "Real Estate",
-      "Weight": 4.100391306432375
+      "Weight": 4.098694264129734
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 2.624318567956281
+      "Weight": 2.613962676555374
      }
     ]
    }

@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=DAT&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/DAT-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/DAT-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/DAT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$49.37",
-  "value": 49.37,
-  "asOfDate": "Sep 18 2026"
+  "display": "$52.19",
+  "value": 52.19,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$49.18",
-  "value": 49.18,
-  "asOfDate": "Sep 18 2026"
+  "display": "$52.01",
+  "value": 52.01,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "-0.38%",
-  "value": -0.3848,
+  "display": "-0.34%",
+  "value": -0.3449,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$4,937,236",
-  "value": 4937239.3719,
-  "asOfDate": "Sep 18 2026",
+  "display": "$5,219,113",
+  "value": 5219112.1906,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -183,8 +183,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 26,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -193,7 +193,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/DAT-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/DAT-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -201,9 +201,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1249,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 1252,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -241,44 +241,44 @@
     "label": "Top 10 Index Holdings",
     "rows": [
      {
+      "Company": "FIVE9 INC",
+      "Weight": 6.111193999999999
+     },
+     {
       "Company": "ZEBRA TECHNOLOGIES CORP-CL A",
-      "Weight": 5.834505
+      "Weight": 5.794343
      },
      {
       "Company": "ELASTIC NV",
-      "Weight": 5.4973090000000004
+      "Weight": 5.369313
      },
      {
       "Company": "SNOWFLAKE INC",
-      "Weight": 5.447354
-     },
-     {
-      "Company": "FIVE9 INC",
-      "Weight": 5.393032
-     },
-     {
-      "Company": "PALANTIR TECHNOLOGIES INC-A",
-      "Weight": 5.120148
-     },
-     {
-      "Company": "DYNATRACE INC",
-      "Weight": 5.105225
-     },
-     {
-      "Company": "NUTANIX INC - A",
-      "Weight": 5.082661
+      "Weight": 5.250643
      },
      {
       "Company": "STRATEGY INC",
-      "Weight": 4.99141
+      "Weight": 5.165685
+     },
+     {
+      "Company": "PALANTIR TECHNOLOGIES INC-A",
+      "Weight": 5.075933
+     },
+     {
+      "Company": "DYNATRACE INC",
+      "Weight": 5.041619
+     },
+     {
+      "Company": "NICE LTD",
+      "Weight": 4.804639
+     },
+     {
+      "Company": "NUTANIX INC - A",
+      "Weight": 4.800444000000001
      },
      {
       "Company": "INTERDIGITAL INC",
-      "Weight": 4.842151
-     },
-     {
-      "Company": "COMMVAULT SYSTEMS INC",
-      "Weight": 4.757494
+      "Weight": 4.7624319999999996
      }
     ]
    },
@@ -287,23 +287,23 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 83.281243
+      "Weight": 83.024542
      },
      {
       "Country": "Israel",
-      "Weight": 9.092078
+      "Weight": 9.143642999999999
      },
      {
       "Country": "France",
-      "Weight": 3.2577559999999997
+      "Weight": 3.4541549999999996
      },
      {
       "Country": "United Kingdom",
-      "Weight": 3.1419870000000003
+      "Weight": 3.2240770000000003
      },
      {
       "Country": "Canada",
-      "Weight": 1.226935
+      "Weight": 1.153583
      }
     ]
    },
@@ -312,19 +312,19 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 90.92825932561162
+      "Weight": 90.57774788415973
      },
      {
       "Currency": "ILS",
-      "Weight": 4.587049780108611
+      "Weight": 4.814514497747799
      },
      {
       "Currency": "EUR",
-      "Weight": 3.2577556751215377
+      "Weight": 3.4541546997129724
      },
      {
       "Currency": "CAD",
-      "Weight": 1.226935219158224
+      "Weight": 1.1535829183794941
      }
     ]
    },
@@ -333,19 +333,19 @@
     "rows": [
      {
       "Sector": "Software & Services",
-      "Weight": 85.37338407335007
+      "Weight": 84.78332873256721
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 9.08520949426438
+      "Weight": 9.241412690567701
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 3.1351864997336603
+      "Weight": 3.2174643247287213
      },
      {
       "Sector": "Commercial & Professional Services",
-      "Weight": 2.189768649953111
+      "Weight": 2.5526763584840726
      }
     ]
    }

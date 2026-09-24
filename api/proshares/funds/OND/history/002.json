@@ -2,7 +2,7 @@
  "ticker": "OND",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1230,
+ "totalRows": 1233,
  "headers": [
   "Date",
   "NAV",
@@ -1389,6 +1389,24 @@
    "NAV": "33.1124",
    "Shares Outstanding": "75000",
    "Total Net Assets": "2483463.1124"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "33.7374",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "2530338.7374"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "33.773",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "2533008.773"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "33.4944",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "2512113.4944"
   }
  ]
 }

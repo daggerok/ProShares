@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TINT&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/TINT-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TINT-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TINT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$37.90",
-  "value": 37.9,
-  "asOfDate": "Sep 18 2026"
+  "display": "$38.52",
+  "value": 38.52,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$37.85",
-  "value": 37.85,
-  "asOfDate": "Sep 18 2026"
+  "display": "$38.35",
+  "value": 38.35,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "-0.13%",
-  "value": -0.1319,
+  "display": "-0.44%",
+  "value": -0.4413,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1,895,209",
-  "value": 1895207.9034,
-  "asOfDate": "Sep 18 2026",
+  "display": "$1,925,834",
+  "value": 1925833.5159,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -75,8 +75,8 @@
   "distributionYieldText": null,
   "yield12M": 1.13,
   "yield12MText": "1.13%",
-  "indicatedYield": 3.2745,
-  "indicatedYieldText": "3.27%",
+  "indicatedYield": 0.4366,
+  "indicatedYieldText": "0.44%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -347,6 +347,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.042041",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "Aug 31 2026",
@@ -354,9 +363,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 34,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "totalRows": 32,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -366,7 +375,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/TINT-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/TINT-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -374,9 +383,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1230,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 1233,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -417,43 +426,43 @@
     "rows": [
      {
       "Company": "ZEON CORP",
-      "Weight": 6.785694
+      "Weight": 6.632687
      },
      {
       "Company": "SYENSQO SA",
-      "Weight": 6.610993
+      "Weight": 6.610580000000001
      },
      {
       "Company": "SIKA AG-REG",
-      "Weight": 5.845390999999999
+      "Weight": 5.951568
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 5.148813
+      "Weight": 5.204803999999999
      },
      {
       "Company": "AKZO NOBEL N.V.",
-      "Weight": 5.099018
+      "Weight": 5.1153770000000005
      },
      {
       "Company": "CABOT CORP",
-      "Weight": 4.883093000000001
-     },
-     {
-      "Company": "HEXCEL CORP",
-      "Weight": 4.758386
+      "Weight": 4.919512999999999
      },
      {
       "Company": "PPG INDUSTRIES INC",
-      "Weight": 4.59416
+      "Weight": 4.650437999999999
      },
      {
       "Company": "RPM INTERNATIONAL INC",
-      "Weight": 4.521084
+      "Weight": 4.5584739999999995
      },
      {
-      "Company": "SOLVAY SA",
-      "Weight": 4.3476479999999995
+      "Company": "HEXCEL CORP",
+      "Weight": 4.556423
+     },
+     {
+      "Company": "INGEVITY CORP",
+      "Weight": 4.419283999999999
      }
     ]
    },
@@ -462,35 +471,35 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 39.082626999999995
+      "Weight": 39.166609
      },
      {
       "Country": "South Korea",
-      "Weight": 15.269874
+      "Weight": 15.151110000000001
      },
      {
       "Country": "Japan",
-      "Weight": 11.646688
+      "Weight": 11.370453
      },
      {
       "Country": "Belgium",
-      "Weight": 11.000350000000001
+      "Weight": 10.930088
      },
      {
       "Country": "France",
-      "Weight": 6.903302
+      "Weight": 7.139208
      },
      {
       "Country": "Switzerland",
-      "Weight": 5.8676390000000005
-     },
-     {
-      "Country": "Netherlands",
-      "Weight": 5.118425
+      "Weight": 5.967071
      },
      {
       "Country": "Canada",
-      "Weight": 5.111096
+      "Weight": 5.146757
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 5.128703
      }
     ]
    },
@@ -499,27 +508,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 39.082626711297365
+      "Weight": 39.166609461862755
      },
      {
       "Currency": "EUR",
-      "Weight": 23.022076477097006
+      "Weight": 23.19799868692707
      },
      {
       "Currency": "KRW",
-      "Weight": 15.269874113715101
+      "Weight": 15.151109677198136
      },
      {
       "Currency": "JPY",
-      "Weight": 11.64668812217279
+      "Weight": 11.370453405509531
      },
      {
       "Currency": "CHF",
-      "Weight": 5.867638873514263
+      "Weight": 5.967071400024736
      },
      {
       "Currency": "CAD",
-      "Weight": 5.111095702203475
+      "Weight": 5.146757368477776
      }
     ]
    },
@@ -528,23 +537,23 @@
     "rows": [
      {
       "Sector": "Materials",
-      "Weight": 72.879302476188
+      "Weight": 72.98835056876979
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 14.091733813892231
+      "Weight": 14.122982993927888
      },
      {
       "Sector": "Capital Goods",
-      "Weight": 7.317714958055312
+      "Weight": 7.339241912931806
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 4.435406350403907
+      "Weight": 4.413136490271186
      },
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 0.8966841108829294
+      "Weight": 0.8764651795938118
      }
     ]
    }

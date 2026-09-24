@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SDD&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/SDD-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SDD-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SDD-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,41 +42,41 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$9.18",
-  "value": 9.18,
-  "asOfDate": "Sep 18 2026"
+  "display": "$9.22",
+  "value": 9.22,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$9.21",
-  "value": 9.21,
-  "asOfDate": "Sep 18 2026"
+  "display": "$9.22",
+  "value": 9.22,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.33%",
-  "value": 0.3268,
+  "display": "0.00%",
+  "value": 0,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1,504,792",
-  "value": 1504794.7556,
-  "asOfDate": "Sep 18 2026",
+  "display": "$1,603,653",
+  "value": 1603660.3578,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 4.3341,
-  "effectiveYieldText": "4.33%",
+  "effectiveYield": 2.6976,
+  "effectiveYieldText": "2.70%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldComputed": true,
   "distributionYield": null,
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 4.3341,
-  "indicatedYieldText": "4.33%",
+  "indicatedYield": 2.6976,
+  "indicatedYieldText": "2.70%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -311,6 +311,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.062180",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "—",
@@ -319,8 +328,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 4,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -330,7 +339,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/SDD-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/SDD-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -338,9 +347,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4946,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 4949,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",

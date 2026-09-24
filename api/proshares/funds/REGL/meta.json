@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=REGL&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/REGL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$89.39",
-  "value": 89.39,
-  "asOfDate": "Sep 18 2026"
+  "display": "$88.49",
+  "value": 88.49,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$89.37",
-  "value": 89.37,
-  "asOfDate": "Sep 18 2026"
+  "display": "$88.53",
+  "value": 88.53,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "-0.02%",
-  "value": -0.0224,
+  "display": "0.05%",
+  "value": 0.0452,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1,695,789,639",
-  "value": 1693107297.3932,
-  "asOfDate": "Sep 18 2026",
+  "display": "$1,676,077,557",
+  "value": 1675193401.4941,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -75,8 +75,8 @@
   "distributionYieldText": null,
   "yield12M": 2.19,
   "yield12MText": "2.19%",
-  "indicatedYield": 2.0794,
-  "indicatedYieldText": "2.08%",
+  "indicatedYield": 1.7939,
+  "indicatedYieldText": "1.79%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -554,6 +554,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.396857",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "Aug 31 2026",
@@ -562,8 +571,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 66,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -572,7 +581,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -580,9 +589,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2924,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 2927,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -624,11 +633,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.35305699999999
+      "Weight": 98.358784
      },
      {
       "Country": "Bermuda",
-      "Weight": 1.646943
+      "Weight": 1.6412159999999998
      }
     ]
    },
@@ -646,43 +655,43 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 31.536514518059377
+      "Weight": 31.01443378495081
      },
      {
       "Sector": "Industrials",
-      "Weight": 15.34249333343265
+      "Weight": 15.55916576647548
      },
      {
       "Sector": "Utilities",
-      "Weight": 15.115820987075482
+      "Weight": 15.049013009166046
      },
      {
       "Sector": "Materials",
-      "Weight": 13.93339049604708
-     },
-     {
-      "Sector": "Real Estate",
-      "Weight": 7.354970626315785
+      "Weight": 14.177104384630171
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 7.284866762008038
+      "Weight": 7.350914413741913
+     },
+     {
+      "Sector": "Real Estate",
+      "Weight": 7.313652843407695
      },
      {
       "Sector": "Health Care",
-      "Weight": 3.260129720017452
+      "Weight": 3.260223302051334
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 3.003521392005725
+      "Weight": 3.0673165813017196
      },
      {
       "Sector": "Information Technology",
-      "Weight": 1.5747584017258978
+      "Weight": 1.617680738490353
      },
      {
       "Sector": "Energy",
-      "Weight": 1.4014896209231031
+      "Weight": 1.401667587963322
      }
     ]
    }

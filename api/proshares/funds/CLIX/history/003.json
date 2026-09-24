@@ -2,7 +2,7 @@
  "ticker": "CLIX",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2222,
+ "totalRows": 2225,
  "headers": [
   "Date",
   "NAV",
@@ -1341,6 +1341,24 @@
    "NAV": "58.0001",
    "Shares Outstanding": "105000",
    "Total Net Assets": "6090068.5001"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "58.598",
+   "Shares Outstanding": "105000",
+   "Total Net Assets": "6152848.598"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "58.2322",
+   "Shares Outstanding": "105000",
+   "Total Net Assets": "6114439.2322"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "56.9934",
+   "Shares Outstanding": "105000",
+   "Total Net Assets": "5984363.9934"
   }
  ]
 }

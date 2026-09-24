@@ -2,7 +2,7 @@
  "ticker": "IQQQ",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 629,
+ "totalRows": 632,
  "headers": [
   "Date",
   "NAV",
@@ -3783,6 +3783,24 @@
    "NAV": "48.4859",
    "Shares Outstanding": "8360000",
    "Total Net Assets": "405342172.4859"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "48.8981",
+   "Shares Outstanding": "8360000",
+   "Total Net Assets": "408788164.8981"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "49.3033",
+   "Shares Outstanding": "8390000",
+   "Total Net Assets": "413654736.3033"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "48.8893",
+   "Shares Outstanding": "8390000",
+   "Total Net Assets": "410181275.8893"
   }
  ]
 }

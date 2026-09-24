@@ -2,7 +2,7 @@
  "ticker": "TBX",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3888,
+ "totalRows": 3891,
  "headers": [
   "Date",
   "NAV",
@@ -5337,6 +5337,24 @@
    "NAV": "29.5321",
    "Shares Outstanding": "800000",
    "Total Net Assets": "23625680"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "29.4226",
+   "Shares Outstanding": "700000",
+   "Total Net Assets": "20595820"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "29.4279",
+   "Shares Outstanding": "700000",
+   "Total Net Assets": "20599530"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "29.5581",
+   "Shares Outstanding": "700000",
+   "Total Net Assets": "20690670"
   }
  ]
 }

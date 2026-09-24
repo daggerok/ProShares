@@ -2,7 +2,7 @@
  "ticker": "SDS",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5080,
+ "totalRows": 5083,
  "headers": [
   "Date",
   "NAV",
@@ -489,6 +489,24 @@
    "NAV": "55.1533",
    "Shares Outstanding": "6910970",
    "Total Net Assets": "381162856.8543"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "53.5062",
+   "Shares Outstanding": "7110970",
+   "Total Net Assets": "380481036.5202"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "53.5239",
+   "Shares Outstanding": "6810970",
+   "Total Net Assets": "364549730.7069"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "53.701",
+   "Shares Outstanding": "6810970",
+   "Total Net Assets": "365755953.671"
   }
  ]
 }

@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=HDG&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/HDG-psdlyhld.csv, as of Sep 18 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/HDG-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/HDG-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-21T14:14:57Z",
+  "catalogReadAt": "2026-09-24T02:00:23Z",
   "secYield": "not published by ProShares for its ETFs"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$54.50",
-  "value": 54.5,
-  "asOfDate": "Sep 18 2026"
+  "display": "$54.22",
+  "value": 54.22,
+  "asOfDate": "Sep 23 2026"
  },
  "marketPrice": {
-  "display": "$54.56",
-  "value": 54.56,
-  "asOfDate": "Sep 18 2026"
+  "display": "$54.16",
+  "value": 54.16,
+  "asOfDate": "Sep 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.11%",
-  "value": 0.1101,
+  "display": "-0.11%",
+  "value": -0.1107,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$22,617,574",
-  "value": 22617583,
-  "asOfDate": "Sep 18 2026",
+  "display": "$22,500,951",
+  "value": 22500968,
+  "asOfDate": "Sep 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -75,8 +75,8 @@
   "distributionYieldText": null,
   "yield12M": 2.36,
   "yield12MText": "2.36%",
-  "indicatedYield": 2.1477,
-  "indicatedYieldText": "2.15%",
+  "indicatedYield": 2.2159,
+  "indicatedYieldText": "2.22%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
@@ -392,6 +392,15 @@
     "ST Cap Gains": "—",
     "LT Cap Gains": "—",
     "Return of Capital": "—"
+   },
+   {
+    "Ex-Date": "23-Sep-2026",
+    "Record Date": "23-Sep-2026",
+    "Payable Date": "29-Sep-2026",
+    "Dividend": "0.300363",
+    "ST Cap Gains": "—",
+    "LT Cap Gains": "—",
+    "Return of Capital": "—"
    }
   ],
   "asOfDate": "Aug 31 2026",
@@ -399,9 +408,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 1989,
-  "asOfDate": "Sep 18 2026",
-  "asOf": "2026-09-18",
+  "totalRows": 1988,
+  "asOfDate": "Sep 23 2026",
+  "asOf": "2026-09-23",
   "headers": [
    "Name",
    "Ticker",
@@ -413,7 +422,7 @@
    "Coupon",
    "Maturity Date"
   ],
-  "source": "official ProShares daily holdings download (ByFund/HDG-psdlyhld.csv, as of Sep 18 2026)",
+  "source": "official ProShares daily holdings download (ByFund/HDG-psdlyhld.csv, as of Sep 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -428,9 +437,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3820,
-  "asOf": "Sep 18 2026",
-  "asOfDate": "Sep 18 2026",
+  "totalRows": 3823,
+  "asOf": "Sep 23 2026",
+  "asOfDate": "Sep 23 2026",
   "headers": [
    "Date",
    "NAV",

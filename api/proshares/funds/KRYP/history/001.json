@@ -2,7 +2,7 @@
  "ticker": "KRYP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 159,
+ "totalRows": 162,
  "headers": [
   "Date",
   "NAV",
@@ -963,6 +963,24 @@
    "NAV": "23.3347",
    "Shares Outstanding": "60000",
    "Total Net Assets": "1400105.3347"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "24.7331",
+   "Shares Outstanding": "60000",
+   "Total Net Assets": "1484010.7331"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "24.9837",
+   "Shares Outstanding": "60000",
+   "Total Net Assets": "1499046.9837"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "24.1423",
+   "Shares Outstanding": "60000",
+   "Total Net Assets": "1448562.1423"
   }
  ]
 }

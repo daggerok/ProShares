@@ -2,607 +2,763 @@
  "ticker": "EFAD",
  "page": 1,
  "pageSize": 250,
- "totalRows": 74,
+ "totalRows": 83,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held"
+  "Shares Held",
+  "Exposure Value"
  ],
  "rows": [
+  {
+   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "EUR/USD",
+   "Weight": "-0.1171982509",
+   "Market Value": "—",
+   "Shares Held": "-64000",
+   "Exposure Value": "-72969.6"
+  },
+  {
+   "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "GBP/USD",
+   "Weight": "-0.0852145332",
+   "Market Value": "—",
+   "Shares Held": "-40000",
+   "Exposure Value": "-53056"
+  },
+  {
+   "Name": "SWITZERLAND FRANC CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "CHF/USD",
+   "Weight": "-0.0467661328",
+   "Market Value": "—",
+   "Shares Held": "-24000",
+   "Exposure Value": "-29117.38"
+  },
+  {
+   "Name": "AUSTRALIA DOLLAR CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "AUD/USD",
+   "Weight": "-0.0381994511",
+   "Market Value": "—",
+   "Shares Held": "-33750",
+   "Exposure Value": "-23783.62"
+  },
+  {
+   "Name": "HONG KONG DOLLAR CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "HKD/USD",
+   "Weight": "-0.0313288205",
+   "Market Value": "—",
+   "Shares Held": "-153000",
+   "Exposure Value": "-19505.85"
+  },
+  {
+   "Name": "NORWAY KRONE CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "NOK/USD",
+   "Weight": "-0.0096553932",
+   "Market Value": "—",
+   "Shares Held": "-57000",
+   "Exposure Value": "-6011.61"
+  },
+  {
+   "Name": "NEW ZEALAND DOLLAR CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "NZD/USD",
+   "Weight": "-0.0078449056",
+   "Market Value": "—",
+   "Shares Held": "-8600",
+   "Exposure Value": "-4884.37"
+  },
+  {
+   "Name": "SWEDEN KRONA CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "SEK/USD",
+   "Weight": "-0.0068138540",
+   "Market Value": "—",
+   "Shares Held": "-42000",
+   "Exposure Value": "-4242.42"
+  },
+  {
+   "Name": "DENMARK KRONE CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "DKK/USD",
+   "Weight": "-0.0061238951",
+   "Market Value": "—",
+   "Shares Held": "-25000",
+   "Exposure Value": "-3812.84"
+  },
   {
    "Name": "TOKIO MARINE HOLDINGS INC",
    "Ticker": "8766",
    "Identifier": "6513126",
-   "Weight": "1.5825177814",
-   "Market Value": "987958.71",
-   "Shares Held": "18967"
+   "Weight": "1.5788613944",
+   "Market Value": "983025.63",
+   "Shares Held": "18967",
+   "Exposure Value": "—"
   },
   {
    "Name": "NTT INC",
    "Ticker": "9432",
    "Identifier": "6641373",
-   "Weight": "1.5543290626",
-   "Market Value": "970360.62",
-   "Shares Held": "861585"
+   "Weight": "1.5507378038",
+   "Market Value": "965515.41",
+   "Shares Held": "861585",
+   "Exposure Value": "—"
   },
   {
    "Name": "LASERTEC CORP",
    "Ticker": "6920",
    "Identifier": "6506267",
-   "Weight": "1.5515926821",
-   "Market Value": "968652.31",
-   "Shares Held": "3901"
+   "Weight": "1.5480077458",
+   "Market Value": "963815.63",
+   "Shares Held": "3901",
+   "Exposure Value": "—"
   },
   {
    "Name": "OBIC CO LTD",
    "Ticker": "4684",
    "Identifier": "6136749",
-   "Weight": "1.5472846740",
-   "Market Value": "965962.84",
-   "Shares Held": "29817"
-  },
-  {
-   "Name": "APA GROUP",
-   "Ticker": "APA",
-   "Identifier": "6247306",
-   "Weight": "1.5007437962",
-   "Market Value": "936907.58",
-   "Shares Held": "120578"
+   "Weight": "1.5437096928",
+   "Market Value": "961139.59",
+   "Shares Held": "29817",
+   "Exposure Value": "—"
   },
   {
    "Name": "OTSUKA CORP",
    "Ticker": "4768",
    "Identifier": "6267058",
-   "Weight": "1.4875633709",
-   "Market Value": "928679.1",
-   "Shares Held": "40098"
-  },
-  {
-   "Name": "FUJIFILM HOLDINGS CORP",
-   "Ticker": "4901",
-   "Identifier": "6356525",
-   "Weight": "1.4802462590",
-   "Market Value": "924111.06",
-   "Shares Held": "43766"
-  },
-  {
-   "Name": "MURATA MANUFACTURING CO LTD",
-   "Ticker": "6981",
-   "Identifier": "6610403",
-   "Weight": "1.4797767697",
-   "Market Value": "923817.96",
-   "Shares Held": "18734"
-  },
-  {
-   "Name": "CSL LTD",
-   "Ticker": "CSL",
-   "Identifier": "6185495",
-   "Weight": "1.4626230978",
-   "Market Value": "913109",
-   "Shares Held": "7315"
-  },
-  {
-   "Name": "AIA GROUP LTD",
-   "Ticker": "1299",
-   "Identifier": "B4TX8S1",
-   "Weight": "1.4593066074",
-   "Market Value": "911038.53",
-   "Shares Held": "93139"
-  },
-  {
-   "Name": "SHIONOGI & CO LTD",
-   "Ticker": "4507",
-   "Identifier": "6804682",
-   "Weight": "1.4440957013",
-   "Market Value": "901542.43",
-   "Shares Held": "48037"
-  },
-  {
-   "Name": "COMPUTERSHARE LTD",
-   "Ticker": "CPU",
-   "Identifier": "6180412",
-   "Weight": "1.4279991249",
-   "Market Value": "891493.41",
-   "Shares Held": "30661"
-  },
-  {
-   "Name": "ASTELLAS PHARMA INC",
-   "Ticker": "4503",
-   "Identifier": "6985383",
-   "Weight": "1.4252051755",
-   "Market Value": "889749.16",
-   "Shares Held": "58766"
-  },
-  {
-   "Name": "HIKARI TSUSHIN INC",
-   "Ticker": "9435",
-   "Identifier": "6416322",
-   "Weight": "1.4129021073",
-   "Market Value": "882068.41",
-   "Shares Held": "3603"
-  },
-  {
-   "Name": "HULIC CO LTD",
-   "Ticker": "3003",
-   "Identifier": "6805317",
-   "Weight": "1.4091420289",
-   "Market Value": "879721.01",
-   "Shares Held": "79592"
-  },
-  {
-   "Name": "ELISA OYJ",
-   "Ticker": "ELISA",
-   "Identifier": "5701513",
-   "Weight": "1.4071640873",
-   "Market Value": "878486.19",
-   "Shares Held": "20827"
-  },
-  {
-   "Name": "CK INFRASTRUCTURE HOLDINGS L",
-   "Ticker": "1038",
-   "Identifier": "BYVS6J1",
-   "Weight": "1.4008554400",
-   "Market Value": "874547.73",
-   "Shares Held": "104925"
-  },
-  {
-   "Name": "SONY GROUP CORP",
-   "Ticker": "6758",
-   "Identifier": "6821506",
-   "Weight": "1.4004477965",
-   "Market Value": "874293.24",
-   "Shares Held": "37229"
-  },
-  {
-   "Name": "KAO CORP",
-   "Ticker": "4452",
-   "Identifier": "6483809",
-   "Weight": "1.3954152758",
-   "Market Value": "871151.46",
-   "Shares Held": "39431"
-  },
-  {
-   "Name": "HKT TRUST AND HKT LTD-SS",
-   "Ticker": "6823",
-   "Identifier": "B4TXDZ3",
-   "Weight": "1.3947269159",
-   "Market Value": "870721.72",
-   "Shares Held": "548761"
-  },
-  {
-   "Name": "FISHER & PAYKEL HEALTHCARE C",
-   "Ticker": "FPH",
-   "Identifier": "6340250",
-   "Weight": "1.3899141788",
-   "Market Value": "867717.15",
-   "Shares Held": "34411"
-  },
-  {
-   "Name": "SYMRISE AG",
-   "Ticker": "SY1",
-   "Identifier": "B1JB4K8",
-   "Weight": "1.3877672628",
-   "Market Value": "866376.84",
-   "Shares Held": "8491"
-  },
-  {
-   "Name": "WASHINGTON H SOUL PATTINSON",
-   "Ticker": "SOL",
-   "Identifier": "6821807",
-   "Weight": "1.3836987887",
-   "Market Value": "863836.91",
-   "Shares Held": "26955"
-  },
-  {
-   "Name": "IBERDROLA SA",
-   "Ticker": "IBE",
-   "Identifier": "B288C92",
-   "Weight": "1.3821321748",
-   "Market Value": "862858.88",
-   "Shares Held": "37102"
-  },
-  {
-   "Name": "KERRY GROUP PLC-A",
-   "Ticker": "KYGA",
-   "Identifier": "4519579",
-   "Weight": "1.3817755648",
-   "Market Value": "862636.25",
-   "Shares Held": "9073"
-  },
-  {
-   "Name": "GIVAUDAN-REG",
-   "Ticker": "GIVN",
-   "Identifier": "5980613",
-   "Weight": "1.3767733342",
-   "Market Value": "859513.38",
-   "Shares Held": "218"
-  },
-  {
-   "Name": "SOFINA",
-   "Ticker": "SOF",
-   "Identifier": "4820301",
-   "Weight": "1.3761637671",
-   "Market Value": "859132.83",
-   "Shares Held": "3042"
+   "Weight": "1.4841263826",
+   "Market Value": "924042.02",
+   "Shares Held": "40098",
+   "Exposure Value": "—"
   },
   {
    "Name": "LOGITECH INTERNATIONAL-REG",
    "Ticker": "LOGN",
    "Identifier": "B18ZRK2",
-   "Weight": "1.3746607929",
-   "Market Value": "858194.53",
-   "Shares Held": "8656"
+   "Weight": "1.4770926822",
+   "Market Value": "919662.72",
+   "Shares Held": "8614",
+   "Exposure Value": "—"
   },
   {
-   "Name": "UNICHARM CORP",
-   "Ticker": "8113",
-   "Identifier": "6911485",
-   "Weight": "1.3686113499",
-   "Market Value": "854417.89",
-   "Shares Held": "140082"
+   "Name": "CSL LTD",
+   "Ticker": "CSL",
+   "Identifier": "6185495",
+   "Weight": "1.4768954502",
+   "Market Value": "919539.92",
+   "Shares Held": "7280",
+   "Exposure Value": "—"
   },
   {
-   "Name": "NORTHERN STAR RESOURCES LTD",
-   "Ticker": "NST",
-   "Identifier": "6717456",
-   "Weight": "1.3664754863",
-   "Market Value": "853084.48",
-   "Shares Held": "54030"
+   "Name": "FUJIFILM HOLDINGS CORP",
+   "Ticker": "4901",
+   "Identifier": "6356525",
+   "Weight": "1.4768261780",
+   "Market Value": "919496.79",
+   "Shares Held": "43766",
+   "Exposure Value": "—"
   },
   {
-   "Name": "DEUTSCHE BOERSE AG",
-   "Ticker": "DB1",
-   "Identifier": "7021963",
-   "Weight": "1.3653336392",
-   "Market Value": "852371.63",
-   "Shares Held": "2675"
+   "Name": "MURATA MANUFACTURING CO LTD",
+   "Ticker": "6981",
+   "Identifier": "6610403",
+   "Weight": "1.4763577519",
+   "Market Value": "919205.14",
+   "Shares Held": "18734",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "APA GROUP",
+   "Ticker": "APA",
+   "Identifier": "6247306",
+   "Weight": "1.4653911188",
+   "Market Value": "912377.13",
+   "Shares Held": "119991",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GIVAUDAN-REG",
+   "Ticker": "GIVN",
+   "Identifier": "5980613",
+   "Weight": "1.4457028772",
+   "Market Value": "900118.9",
+   "Shares Held": "217",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SHIONOGI & CO LTD",
+   "Ticker": "4507",
+   "Identifier": "6804682",
+   "Weight": "1.4407591301",
+   "Market Value": "897040.84",
+   "Shares Held": "48037",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SYMRISE AG",
+   "Ticker": "SY1",
+   "Identifier": "B1JB4K8",
+   "Weight": "1.4300915092",
+   "Market Value": "890399",
+   "Shares Held": "8450",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AIA GROUP LTD",
+   "Ticker": "1299",
+   "Identifier": "B4TX8S1",
+   "Weight": "1.4300307174",
+   "Market Value": "890361.15",
+   "Shares Held": "92685",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ELISA OYJ",
+   "Ticker": "ELISA",
+   "Identifier": "5701513",
+   "Weight": "1.4262395411",
+   "Market Value": "888000.7",
+   "Shares Held": "20725",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ASTELLAS PHARMA INC",
+   "Ticker": "4503",
+   "Identifier": "6985383",
+   "Weight": "1.4219122567",
+   "Market Value": "885306.46",
+   "Shares Held": "58766",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "COMPUTERSHARE LTD",
+   "Ticker": "CPU",
+   "Identifier": "6180412",
+   "Weight": "1.4155258245",
+   "Market Value": "881330.16",
+   "Shares Held": "30511",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HIKARI TSUSHIN INC",
+   "Ticker": "9435",
+   "Identifier": "6416322",
+   "Weight": "1.4096376120",
+   "Market Value": "877664.06",
+   "Shares Held": "3603",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HULIC CO LTD",
+   "Ticker": "3003",
+   "Identifier": "6805317",
+   "Weight": "1.4058862195",
+   "Market Value": "875328.38",
+   "Shares Held": "79592",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FISHER & PAYKEL HEALTHCARE C",
+   "Ticker": "FPH",
+   "Identifier": "6340250",
+   "Weight": "1.4053259552",
+   "Market Value": "874979.55",
+   "Shares Held": "34243",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KERRY GROUP PLC-A",
+   "Ticker": "KYGA",
+   "Identifier": "4519579",
+   "Weight": "1.4045726025",
+   "Market Value": "874510.5",
+   "Shares Held": "9029",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SONY GROUP CORP",
+   "Ticker": "6758",
+   "Identifier": "6821506",
+   "Weight": "1.3972120720",
+   "Market Value": "869927.71",
+   "Shares Held": "37229",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CK INFRASTRUCTURE HOLDINGS L",
+   "Ticker": "1038",
+   "Identifier": "BYVS6J1",
+   "Weight": "1.3950568458",
+   "Market Value": "868585.83",
+   "Shares Held": "104414",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KAO CORP",
+   "Ticker": "4452",
+   "Identifier": "6483809",
+   "Weight": "1.3921911827",
+   "Market Value": "866801.62",
+   "Shares Held": "39431",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HKT TRUST AND HKT LTD-SS",
+   "Ticker": "6823",
+   "Identifier": "B4TXDZ3",
+   "Weight": "1.3887909693",
+   "Market Value": "864684.59",
+   "Shares Held": "546088",
+   "Exposure Value": "—"
   },
   {
    "Name": "HALMA PLC",
    "Ticker": "HLMA",
    "Identifier": "0405207",
-   "Weight": "1.3648983325",
-   "Market Value": "852099.87",
-   "Shares Held": "18273"
+   "Weight": "1.3880833912",
+   "Market Value": "864244.04",
+   "Shares Held": "18180",
+   "Exposure Value": "—"
   },
   {
-   "Name": "SWISS LIFE HOLDING AG-REG",
-   "Ticker": "SLHN",
-   "Identifier": "7437805",
-   "Weight": "1.3635277475",
-   "Market Value": "851244.22",
-   "Shares Held": "759"
+   "Name": "NORTHERN STAR RESOURCES LTD",
+   "Ticker": "NST",
+   "Identifier": "6717456",
+   "Weight": "1.3875035000",
+   "Market Value": "863882.99",
+   "Shares Held": "53767",
+   "Exposure Value": "—"
   },
   {
-   "Name": "SUMITOMO REALTY & DEVELOPMEN",
-   "Ticker": "8830",
-   "Identifier": "6858902",
-   "Weight": "1.3598566654",
-   "Market Value": "848952.38",
-   "Shares Held": "41948"
+   "Name": "WASHINGTON H SOUL PATTINSON",
+   "Ticker": "SOL",
+   "Identifier": "6821807",
+   "Weight": "1.3817001712",
+   "Market Value": "860269.74",
+   "Shares Held": "26824",
+   "Exposure Value": "—"
   },
   {
-   "Name": "RECORDATI INDUSTRIA CHIMICA",
-   "Ticker": "REC",
-   "Identifier": "B07DRZ5",
-   "Weight": "1.3560444482",
-   "Market Value": "846572.43",
-   "Shares Held": "14015"
+   "Name": "DEUTSCHE BOERSE AG",
+   "Ticker": "DB1",
+   "Identifier": "7021963",
+   "Weight": "1.3761319791",
+   "Market Value": "856802.89",
+   "Shares Held": "2662",
+   "Exposure Value": "—"
   },
   {
    "Name": "SPIRAX GROUP PLC",
    "Ticker": "SPX",
    "Identifier": "BWFGQN1",
-   "Weight": "1.3455773054",
-   "Market Value": "840037.84",
-   "Shares Held": "9105"
-  },
-  {
-   "Name": "SAP SE",
-   "Ticker": "SAP",
-   "Identifier": "4846288",
-   "Weight": "1.3448256421",
-   "Market Value": "839568.58",
-   "Shares Held": "4000"
-  },
-  {
-   "Name": "LEGAL & GENERAL GROUP PLC",
-   "Ticker": "LGEN",
-   "Identifier": "0560399",
-   "Weight": "1.3434860201",
-   "Market Value": "838732.26",
-   "Shares Held": "213875"
-  },
-  {
-   "Name": "NIPPON SANSO HOLDINGS CORP",
-   "Ticker": "4091",
-   "Identifier": "6640541",
-   "Weight": "1.3416895951",
-   "Market Value": "837610.76",
-   "Shares Held": "24014"
-  },
-  {
-   "Name": "TELENOR ASA",
-   "Ticker": "TEL",
-   "Identifier": "4732495",
-   "Weight": "1.3413307266",
-   "Market Value": "837386.72",
-   "Shares Held": "59863"
-  },
-  {
-   "Name": "AIR LIQUIDE SA",
-   "Ticker": "AI",
-   "Identifier": "B1YXBJ7",
-   "Weight": "1.3354387410",
-   "Market Value": "833708.38",
-   "Shares Held": "4458"
-  },
-  {
-   "Name": "RELX PLC",
-   "Ticker": "REL",
-   "Identifier": "B2B0DG9",
-   "Weight": "1.3315603372",
-   "Market Value": "831287.11",
-   "Shares Held": "24896"
-  },
-  {
-   "Name": "SEGRO PLC",
-   "Ticker": "SGRO",
-   "Identifier": "B5ZN1N8",
-   "Weight": "1.3313926122",
-   "Market Value": "831182.4",
-   "Shares Held": "66404"
-  },
-  {
-   "Name": "SIKA AG-REG",
-   "Ticker": "SIKA",
-   "Identifier": "BF2DSG3",
-   "Weight": "1.3313565395",
-   "Market Value": "831159.88",
-   "Shares Held": "3754"
-  },
-  {
-   "Name": "UNITED UTILITIES GROUP PLC",
-   "Ticker": "UU/",
-   "Identifier": "B39J2M4",
-   "Weight": "1.3311675264",
-   "Market Value": "831041.88",
-   "Shares Held": "45234"
-  },
-  {
-   "Name": "SCHNEIDER ELECTRIC SE",
-   "Ticker": "SU",
-   "Identifier": "4834108",
-   "Weight": "1.3267994346",
-   "Market Value": "828314.9",
-   "Shares Held": "2529"
-  },
-  {
-   "Name": "NEMETSCHEK SE",
-   "Ticker": "NEM",
-   "Identifier": "5633962",
-   "Weight": "1.3235801098",
-   "Market Value": "826305.09",
-   "Shares Held": "11906"
-  },
-  {
-   "Name": "LONDON STOCK EXCHANGE GROUP",
-   "Ticker": "LSEG",
-   "Identifier": "B0SWJX3",
-   "Weight": "1.3204624515",
-   "Market Value": "824358.75",
-   "Shares Held": "7482"
-  },
-  {
-   "Name": "WOLTERS KLUWER",
-   "Ticker": "WKL",
-   "Identifier": "5671519",
-   "Weight": "1.3174849672",
-   "Market Value": "822499.92",
-   "Shares Held": "10528"
-  },
-  {
-   "Name": "ELIA GROUP SA/NV",
-   "Ticker": "ELI",
-   "Identifier": "B09M9F4",
-   "Weight": "1.3149977796",
-   "Market Value": "820947.18",
-   "Shares Held": "5934"
-  },
-  {
-   "Name": "ROCHE HOLDING AG",
-   "Ticker": "ROP",
-   "Identifier": "BTMJD19",
-   "Weight": "1.3122066013",
-   "Market Value": "819204.66",
-   "Shares Held": "1892"
+   "Weight": "1.3721561628",
+   "Market Value": "854327.48",
+   "Shares Held": "9059",
+   "Exposure Value": "—"
   },
   {
    "Name": "ASML HOLDING NV",
    "Ticker": "ASML",
    "Identifier": "B929F46",
-   "Weight": "1.3088365625",
-   "Market Value": "817100.76",
-   "Shares Held": "493"
+   "Weight": "1.3684532913",
+   "Market Value": "852022.01",
+   "Shares Held": "493",
+   "Exposure Value": "—"
   },
   {
-   "Name": "FINANCIERE DE TUBIZE",
-   "Ticker": "TUB",
-   "Identifier": "B0BN7W8",
-   "Weight": "1.3080935490",
-   "Market Value": "816636.9",
-   "Shares Held": "4023"
+   "Name": "SOFINA",
+   "Ticker": "SOF",
+   "Identifier": "4820301",
+   "Weight": "1.3669311833",
+   "Market Value": "851074.32",
+   "Shares Held": "3027",
+   "Exposure Value": "—"
   },
   {
-   "Name": "UCB SA",
-   "Ticker": "UCB",
-   "Identifier": "5596991",
-   "Weight": "1.3043850327",
-   "Market Value": "814321.69",
-   "Shares Held": "3414"
+   "Name": "AIR LIQUIDE SA",
+   "Ticker": "AI",
+   "Identifier": "B1YXBJ7",
+   "Weight": "1.3661772204",
+   "Market Value": "850604.89",
+   "Shares Held": "4436",
+   "Exposure Value": "—"
   },
   {
-   "Name": "LIFCO AB-B SHS",
-   "Ticker": "LIFCOB",
-   "Identifier": "BL6K7K9",
-   "Weight": "1.3015208281",
-   "Market Value": "812533.58",
-   "Shares Held": "26152"
+   "Name": "UNICHARM CORP",
+   "Ticker": "8113",
+   "Identifier": "6911485",
+   "Weight": "1.3654491803",
+   "Market Value": "850151.6",
+   "Shares Held": "140082",
+   "Exposure Value": "—"
   },
   {
-   "Name": "NESTLE SA-REG",
-   "Ticker": "NESN",
-   "Identifier": "7123870",
-   "Weight": "1.2988639612",
-   "Market Value": "810874.91",
-   "Shares Held": "8761"
+   "Name": "IBERDROLA SA",
+   "Ticker": "IBE",
+   "Identifier": "B288C92",
+   "Weight": "1.3603247121",
+   "Market Value": "846961.02",
+   "Shares Held": "36921",
+   "Exposure Value": "—"
   },
   {
-   "Name": "BUZZI SPA",
-   "Ticker": "BZU",
-   "Identifier": "5782206",
-   "Weight": "1.2956187351",
-   "Market Value": "808848.93",
-   "Shares Held": "18919"
+   "Name": "SAP SE",
+   "Ticker": "SAP",
+   "Identifier": "4846288",
+   "Weight": "1.3589701229",
+   "Market Value": "846117.63",
+   "Shares Held": "3980",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SUMITOMO REALTY & DEVELOPMEN",
+   "Ticker": "8830",
+   "Identifier": "6858902",
+   "Weight": "1.3567147227",
+   "Market Value": "844713.38",
+   "Shares Held": "41948",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NEMETSCHEK SE",
+   "Ticker": "NEM",
+   "Identifier": "5633962",
+   "Weight": "1.3549355706",
+   "Market Value": "843605.65",
+   "Shares Held": "11848",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SCHNEIDER ELECTRIC SE",
+   "Ticker": "SU",
+   "Identifier": "4834108",
+   "Weight": "1.3521051459",
+   "Market Value": "841843.38",
+   "Shares Held": "2517",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RECORDATI INDUSTRIA CHIMICA",
+   "Ticker": "REC",
+   "Identifier": "B07DRZ5",
+   "Weight": "1.3510693081",
+   "Market Value": "841198.45",
+   "Shares Held": "13947",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SIKA AG-REG",
+   "Ticker": "SIKA",
+   "Identifier": "BF2DSG3",
+   "Weight": "1.3467866578",
+   "Market Value": "838532",
+   "Shares Held": "3736",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NIPPON SANSO HOLDINGS CORP",
+   "Ticker": "4091",
+   "Identifier": "6640541",
+   "Weight": "1.3385896416",
+   "Market Value": "833428.4",
+   "Shares Held": "24014",
+   "Exposure Value": "—"
   },
   {
    "Name": "LOTUS BAKERIES",
    "Ticker": "LOTB",
    "Identifier": "4224992",
-   "Weight": "1.2955476790",
-   "Market Value": "808804.57",
-   "Shares Held": "59"
+   "Weight": "1.3375616578",
+   "Market Value": "832788.36",
+   "Shares Held": "59",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SEGRO PLC",
+   "Ticker": "SGRO",
+   "Identifier": "B5ZN1N8",
+   "Weight": "1.3371140149",
+   "Market Value": "832509.65",
+   "Shares Held": "66068",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LEGAL & GENERAL GROUP PLC",
+   "Ticker": "LGEN",
+   "Identifier": "0560399",
+   "Weight": "1.3359403556",
+   "Market Value": "831778.91",
+   "Shares Held": "212791",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LIFCO AB-B SHS",
+   "Ticker": "LIFCOB",
+   "Identifier": "BL6K7K9",
+   "Weight": "1.3349957618",
+   "Market Value": "831190.79",
+   "Shares Held": "26024",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ROCHE HOLDING AG",
+   "Ticker": "ROP",
+   "Identifier": "BTMJD19",
+   "Weight": "1.3326508202",
+   "Market Value": "829730.79",
+   "Shares Held": "1883",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SWISS LIFE HOLDING AG-REG",
+   "Ticker": "SLHN",
+   "Identifier": "7437805",
+   "Weight": "1.3317162646",
+   "Market Value": "829148.92",
+   "Shares Held": "755",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "UNITED UTILITIES GROUP PLC",
+   "Ticker": "UU/",
+   "Identifier": "B39J2M4",
+   "Weight": "1.3278964673",
+   "Market Value": "826770.65",
+   "Shares Held": "45005",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RELX PLC",
+   "Ticker": "REL",
+   "Identifier": "B2B0DG9",
+   "Weight": "1.3250320891",
+   "Market Value": "824987.24",
+   "Shares Held": "24770",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "UCB SA",
+   "Ticker": "UCB",
+   "Identifier": "5596991",
+   "Weight": "1.3162923795",
+   "Market Value": "819545.75",
+   "Shares Held": "3397",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LONDON STOCK EXCHANGE GROUP",
+   "Ticker": "LSEG",
+   "Identifier": "B0SWJX3",
+   "Weight": "1.3152977389",
+   "Market Value": "818926.47",
+   "Shares Held": "7444",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NESTLE SA-REG",
+   "Ticker": "NESN",
+   "Identifier": "7123870",
+   "Weight": "1.3097591797",
+   "Market Value": "815478.07",
+   "Shares Held": "8718",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FINANCIERE DE TUBIZE",
+   "Ticker": "TUB",
+   "Identifier": "B0BN7W8",
+   "Weight": "1.3066008165",
+   "Market Value": "813511.62",
+   "Shares Held": "4004",
+   "Exposure Value": "—"
   },
   {
    "Name": "BUNZL PLC",
    "Ticker": "BNZL",
    "Identifier": "B0744B3",
-   "Weight": "1.2938118504",
-   "Market Value": "807720.9",
-   "Shares Held": "23126"
+   "Weight": "1.2999448926",
+   "Market Value": "809367.53",
+   "Shares Held": "23009",
+   "Exposure Value": "—"
   },
   {
-   "Name": "COLOPLAST-B",
-   "Ticker": "COLOB",
-   "Identifier": "B8FMRX8",
-   "Weight": "1.2870588943",
-   "Market Value": "803505.06",
-   "Shares Held": "12525"
-  },
-  {
-   "Name": "SANOFI",
-   "Ticker": "SAN",
-   "Identifier": "5671735",
-   "Weight": "1.2866783854",
-   "Market Value": "803267.51",
-   "Shares Held": "9464"
+   "Name": "WOLTERS KLUWER",
+   "Ticker": "WKL",
+   "Identifier": "5671519",
+   "Weight": "1.2950360948",
+   "Market Value": "806311.23",
+   "Shares Held": "10477",
+   "Exposure Value": "—"
   },
   {
    "Name": "GEBERIT AG-REG",
    "Ticker": "GEBN",
    "Identifier": "B1WGG93",
-   "Weight": "1.2865994805",
-   "Market Value": "803218.25",
-   "Shares Held": "1228"
+   "Weight": "1.2915496164",
+   "Market Value": "804140.49",
+   "Shares Held": "1222",
+   "Exposure Value": "—"
   },
   {
-   "Name": "NOVO NORDISK A/S-B",
-   "Ticker": "NOVOB",
-   "Identifier": "BP6KMJ1",
-   "Weight": "1.2835397114",
-   "Market Value": "801308.05",
-   "Shares Held": "18562"
+   "Name": "TELENOR ASA",
+   "Ticker": "TEL",
+   "Identifier": "4732495",
+   "Weight": "1.2845938292",
+   "Market Value": "799809.7",
+   "Shares Held": "59572",
+   "Exposure Value": "—"
   },
   {
-   "Name": "SAGE GROUP PLC/THE",
-   "Ticker": "SGE",
-   "Identifier": "B8C3BL0",
-   "Weight": "1.2820945624",
-   "Market Value": "800405.85",
-   "Shares Held": "59399"
+   "Name": "COLOPLAST-B",
+   "Ticker": "COLOB",
+   "Identifier": "B8FMRX8",
+   "Weight": "1.2810914984",
+   "Market Value": "797629.09",
+   "Shares Held": "12464",
+   "Exposure Value": "—"
   },
   {
-   "Name": "BAE SYSTEMS PLC",
-   "Ticker": "BA/",
-   "Identifier": "0263494",
-   "Weight": "1.2788367462",
-   "Market Value": "798372.01",
-   "Shares Held": "29507"
+   "Name": "BUZZI SPA",
+   "Ticker": "BZU",
+   "Identifier": "5782206",
+   "Weight": "1.2787307526",
+   "Market Value": "796159.25",
+   "Shares Held": "18827",
+   "Exposure Value": "—"
   },
   {
-   "Name": "ENEL SPA",
-   "Ticker": "ENEL",
-   "Identifier": "7144569",
-   "Weight": "1.2777740122",
-   "Market Value": "797708.55",
-   "Shares Held": "78471"
+   "Name": "ELIA GROUP SA/NV",
+   "Ticker": "ELI",
+   "Identifier": "B09M9F4",
+   "Weight": "1.2781403252",
+   "Market Value": "795791.64",
+   "Shares Held": "5905",
+   "Exposure Value": "—"
   },
   {
    "Name": "CHOCOLADEFABRIKEN LINDT-PC",
    "Ticker": "LISP",
    "Identifier": "5962280",
-   "Weight": "1.2726972816",
-   "Market Value": "794539.17",
-   "Shares Held": "76"
+   "Weight": "1.2735976595",
+   "Market Value": "792963.3",
+   "Shares Held": "76",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BAE SYSTEMS PLC",
+   "Ticker": "BA/",
+   "Identifier": "0263494",
+   "Weight": "1.2652059650",
+   "Market Value": "787738.49",
+   "Shares Held": "29357",
+   "Exposure Value": "—"
   },
   {
    "Name": "TERUMO CORP",
    "Ticker": "4543",
    "Identifier": "6885074",
-   "Weight": "1.2651294710",
-   "Market Value": "789814.62",
-   "Shares Held": "55557"
+   "Weight": "1.2622063993",
+   "Market Value": "785870.91",
+   "Shares Held": "55557",
+   "Exposure Value": "—"
   },
   {
-   "Name": "PAN PACIFIC INTERNATIONAL HO",
-   "Ticker": "7532",
-   "Identifier": "6269861",
-   "Weight": "1.2238707714",
-   "Market Value": "764057",
-   "Shares Held": "168698"
+   "Name": "ENEL SPA",
+   "Ticker": "ENEL",
+   "Identifier": "7144569",
+   "Weight": "1.2621033985",
+   "Market Value": "785806.78",
+   "Shares Held": "78089",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SANOFI",
+   "Ticker": "SAN",
+   "Identifier": "5671735",
+   "Weight": "1.2608883333",
+   "Market Value": "785050.26",
+   "Shares Held": "9418",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SAGE GROUP PLC/THE",
+   "Ticker": "SGE",
+   "Identifier": "B8C3BL0",
+   "Weight": "1.2590021169",
+   "Market Value": "783875.87",
+   "Shares Held": "59098",
+   "Exposure Value": "—"
   },
   {
    "Name": "NOVARTIS AG-REG",
    "Ticker": "NOVN",
    "Identifier": "7103065",
-   "Weight": "1.2233763261",
-   "Market Value": "763748.32",
-   "Shares Held": "5468"
+   "Weight": "1.2530143248",
+   "Market Value": "780147.77",
+   "Shares Held": "5468",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PAN PACIFIC INTERNATIONAL HO",
+   "Ticker": "7532",
+   "Identifier": "6269861",
+   "Weight": "1.2210430385",
+   "Market Value": "760241.91",
+   "Shares Held": "168698",
+   "Exposure Value": "—"
   },
   {
    "Name": "ACS ACTIVIDADES CONS Y SERV",
    "Ticker": "ACS",
    "Identifier": "B01FLQ6",
-   "Weight": "1.1983122013",
-   "Market Value": "748100.9",
-   "Shares Held": "6988"
-  },
-  {
-   "Name": "PRO MEDICUS LTD",
-   "Ticker": "PME",
-   "Identifier": "6292782",
-   "Weight": "1.1825037417",
-   "Market Value": "738231.75",
-   "Shares Held": "6124"
+   "Weight": "1.1881628303",
+   "Market Value": "739770.14",
+   "Shares Held": "6988",
+   "Exposure Value": "—"
   },
   {
    "Name": "PARTNERS GROUP HOLDING AG",
    "Ticker": "PGHN",
    "Identifier": "B119QG0",
-   "Weight": "1.1498575182",
-   "Market Value": "717850.86",
-   "Shares Held": "965"
+   "Weight": "1.1741143980",
+   "Market Value": "731023.35",
+   "Shares Held": "965",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NOVO NORDISK A/S-B",
+   "Ticker": "NOVOB",
+   "Identifier": "BP6KMJ1",
+   "Weight": "1.1469465317",
+   "Market Value": "714108.18",
+   "Shares Held": "18562",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PRO MEDICUS LTD",
+   "Ticker": "PME",
+   "Identifier": "6292782",
+   "Weight": "1.1180980971",
+   "Market Value": "696146.66",
+   "Shares Held": "6124",
+   "Exposure Value": "—"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "611850.17",
-   "Shares Held": "611850.17"
+   "Market Value": "570720.99",
+   "Shares Held": "570720.99",
+   "Exposure Value": "—"
   }
  ]
 }

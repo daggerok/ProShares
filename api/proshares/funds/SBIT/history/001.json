@@ -2,7 +2,7 @@
  "ticker": "SBIT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 620,
+ "totalRows": 623,
  "headers": [
   "Date",
   "NAV",
@@ -3729,6 +3729,24 @@
    "NAV": "32.5628",
    "Shares Outstanding": "4051940",
    "Total Net Assets": "131942576.9576"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "28.3256",
+   "Shares Outstanding": "4121940",
+   "Total Net Assets": "116756480.3152"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "28.5452",
+   "Shares Outstanding": "4211940",
+   "Total Net Assets": "120230726.7784"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "29.6706",
+   "Shares Outstanding": "4251940",
+   "Total Net Assets": "126157670.3052"
   }
  ]
 }

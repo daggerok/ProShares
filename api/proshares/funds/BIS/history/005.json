@@ -2,7 +2,7 @@
  "ticker": "BIS",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4139,
+ "totalRows": 4142,
  "headers": [
   "Date",
   "NAV",
@@ -843,6 +843,24 @@
    "NAV": "11.7916",
    "Shares Outstanding": "165520",
    "Total Net Assets": "1951733.8404"
+  },
+  {
+   "Date": "Sep 21 2026",
+   "NAV": "11.5362",
+   "Shares Outstanding": "165520",
+   "Total Net Assets": "1909460.2878"
+  },
+  {
+   "Date": "Sep 22 2026",
+   "NAV": "11.1551",
+   "Shares Outstanding": "165520",
+   "Total Net Assets": "1846380.9969"
+  },
+  {
+   "Date": "Sep 23 2026",
+   "NAV": "11.4793",
+   "Shares Outstanding": "165520",
+   "Total Net Assets": "1900042.2567"
   }
  ]
 }
