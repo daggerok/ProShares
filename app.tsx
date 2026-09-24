@@ -1540,7 +1540,7 @@ function renderOverviewTable(fund: FundRow): void {
     { section: 'Distributions', metric: '12-Month Yield', value: meta && meta.yields ? meta.yields.yield12MText : null },
     { section: 'Distributions', metric: 'Indicated Yield', value: meta && meta.yields ? meta.yields.indicatedYieldText : null },
     { section: 'Distributions', metric: 'SEC Yield (30-day)', value: meta && meta.yields ? (meta.yields.secYieldText || '—') : (fund.secYield === null || fund.secYield === undefined ? '—' : `${fund.secYield.toFixed(2)}%`) },
-    { section: 'Distributions', metric: 'Dividend Yield Basis', value: meta && meta.yields ? meta.yields.dividendYieldKind : null },
+    { section: 'Distributions', metric: 'Dividend Yield Basis', value: meta && meta.yields ? (meta.yields.effectiveYieldBasis || meta.yields.dividendYieldKind) : null },
     { section: 'Distributions', metric: 'SEC Yield Basis', value: meta && meta.yields ? meta.yields.secYieldKind : null },
     { section: 'Holdings', metric: 'Holdings Rows', value: fund.holdings },
     { section: 'Holdings', metric: 'Holdings As Of', value: meta && meta.holdings ? meta.holdings.asOfDate : null },

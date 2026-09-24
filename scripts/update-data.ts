@@ -1508,7 +1508,11 @@ export function buildFeed(inputs: {
     ? 'official ProShares 12-Month Yield (page distributions block)'
     : indicated !== null
       ? 'indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)'
-      : 'not published by ProShares and no distributions yet (data limitation)';
+      : distributions.length
+        ? payments === null
+          ? 'not published by ProShares; official distributions exist but no payment frequency is published (cannot annualize without guessing)'
+          : 'not published by ProShares; no usable recent dividend amount to annualize (data limitation)'
+        : 'not published by ProShares and no distributions yet (data limitation)';
   const secYieldKind = page.sec30DayYield === null
     ? 'not published on this fund page (data limitation)'
     : 'official ProShares SEC 30-Day Yield (page distributions block)';

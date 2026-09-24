@@ -817,6 +817,19 @@ describe('feed assembly', () => {
     expect(meta.officialMetrics.splits).toHaveLength(1);
   });
 
+  test('distribution-history gaps distinguish missing frequency from never distributed', () => {
+    const noPublishedYield = { ...inputs.page, distributionFrequency: '', twelveMonthYield: null, twelveMonthYieldText: '—' };
+    const hasPayouts = buildFeed({ ...inputs, page: noPublishedYield });
+    const payoutEntry = hasPayouts.entry as Record<string, any>;
+    const payoutMeta = hasPayouts.meta as Record<string, any>;
+    expect(payoutEntry.metrics.dividendYield).toBeNull();
+    expect(payoutEntry.metrics.dividendYieldBasis).toContain('official distributions exist but no payment frequency is published');
+    expect(payoutMeta.yields.effectiveYieldBasis).toBe(payoutEntry.metrics.dividendYieldBasis);
+    expect(payoutMeta.distributions.rows).toHaveLength(2);
+    const noPayouts = buildFeed({ ...inputs, page: noPublishedYield, distributions: [] });
+    expect((noPayouts.entry as Record<string, any>).metrics.dividendYieldBasis).toContain('no distributions yet');
+  });
+
   test('pages without an SEC-yield element keep honest nulls and explicit provenance', () => {
     const missing = buildFeed({ ...inputs, page: { ...inputs.page, sec30DayYield: null, sec30DayYieldText: '—' } });
     const entryWithout = missing.entry as Record<string, any>;
