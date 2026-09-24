@@ -468,8 +468,8 @@ Environment variables
                                       fetched per fund (the endpoint is
                                       year-scoped); a year column is skipped
                                       after two empty years.
-  SKIP_PROSHARES         ""           Rebuild the feed from the previous catalog
-                                      and the bulk official files only.
+  SKIP_PROSHARES         ""           Legacy no-op; use TICKERS for bounded
+                                      updates (official sources are required).
   STORE_RAW_DOWNLOADS    ""           Keep one raw sample of each source under
                                       api/proshares/raw (1/true/yes/on).
   OFFLINE_SEED           ""           Replay the previously published catalog and
