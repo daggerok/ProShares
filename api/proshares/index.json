@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-24T03:47:25Z",
+ "generatedAt": "2026-09-24T03:50:28Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-09-24T03:46:47Z"
+  "catalogReadAt": "2026-09-24T03:50:11Z"
  },
  "counts": {
   "funds": 173,
@@ -7365,12 +7365,13 @@
     "cagr5y": null,
     "cagr10y": null,
     "siAnn": null,
-    "dividendYield": null,
-    "dividendYieldText": "—",
-    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
-    "dividendYieldComputed": false,
+    "dividendYield": 3.6013,
+    "dividendYieldText": "3.60%",
+    "dividendYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
+    "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 15,
@@ -19812,10 +19813,11 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
-    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldBasis": "not published by ProShares; official distributions exist but no payment frequency is published (cannot annualize without guessing)",
     "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 5,
@@ -20932,10 +20934,11 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
-    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldBasis": "not published by ProShares; official distributions exist but no payment frequency is published (cannot annualize without guessing)",
     "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 5,
@@ -21072,10 +21075,11 @@
     "siAnn": null,
     "dividendYield": null,
     "dividendYieldText": "—",
-    "dividendYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+    "dividendYieldBasis": "not published by ProShares; official distributions exist but no payment frequency is published (cannot annualize without guessing)",
     "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 5,
