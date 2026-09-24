@@ -7307,3 +7307,9 @@ great, now please implement that plan and please do like I asked, each little co
 <!-- answer:
 Implementation checkpoint 1/… — main-branch refresh safety (plan step 1). Checked the public GitHub Actions run 35946895372: "Dev data refresh" on main completed with **failure**, so there is no longer a running full-feed job to cancel. Fetched origin/main; it is still 293f4b2 and has no later generated-data commit. No restore of api/proshares is necessary. From here on, run only bounded `TICKERS=…` smoke tests; the full 173-fund run remains with the user. Each subsequent small change is documented here, committed and pushed before starting the next.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 2/… — restored the c48ff83 official-source updater and its paired tests (plan step 2). The script that produced the published feed is now back on this branch; unlike the merged rewrite it preserves index CUSIP/ISIN, catalogReadAt, complete return tenors and the independently computed indicated yield. `bun run test`: 53 pass / 0 fail / 219 assertions; `tsc --noEmit --target es2022 --module esnext --moduleResolution bundler --skipLibCheck --types bun,node scripts/update-data.ts scripts/update-data.test.ts`: clean; `bun build app.tsx --target browser`: clean; no api files changed. Audit correction: the restored script does NOT read SKIP_YAHOO (there is no Yahoo data path); the current visible README row asserting it is an optional fallback is stale and will be corrected in a separate small documentation step. SEC_YIELD still matches nothing until the later parser fix.
+-->
