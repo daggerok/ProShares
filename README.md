@@ -7337,3 +7337,9 @@ Implementation checkpoint 5/… — triggered a **seven-page** (not full-feed) S
 <!-- answer:
 Implementation checkpoint 6/… — fetched and inspected the GitHub Actions probe results (`4fa10a3`, `probe/out/001.txt`–`007.txt`; run 35952447973 succeeded). Exact id is **`distributions-sec30DayYield`**. Official server-rendered HTML prints NOBL **2.09%**, IGHG **5.42%**, HYHG **6.85%**, beside `distributions-12MonthYield` (NOBL 2.01%, IGHG 5.10%, HYHG 6.66%). TQQQ, AGQ, BOIL and SPCF all returned HTTP 200 but did **not** contain a SEC-yield element; their SEC yield must remain `null`/`—`. Critical correction to the earlier plan: do **not** require TQQQ to have a SEC yield and do **not** replace IGHG/HYHG SEC yields with their separate Weighted Average Yield to Maturity. The saved probes are small HTML snippets with provenance, not inferred yields or a full data refresh. Proceed to parse the exact id and retain honest nulls when omitted.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 7/… — `parseFundPage` now reads the **probed** `distributions-sec30DayYield` element into `sec30DayYield` (number or null) and `sec30DayYieldText` (raw official percent or `—`). Offline/previous-metadata fallback preserves the same fields. Unit fixtures contain the NOBL provider HTML with 2.09%, a bond with both SEC yield and a different YTM, a geared page with no element, and an explicit `—` value; no guesswork or YTM substitution. This checkpoint isolates parsing from feed-output changes: `bun run test` 56 pass / 0 fail / 236 assertions, tsc clean, diff check clean. Next checkpoint wires the parsed value into output and filtering.
+-->

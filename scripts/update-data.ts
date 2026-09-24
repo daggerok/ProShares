@@ -720,6 +720,8 @@ export type FundPageData = {
   distributionFrequency: string;
   twelveMonthYield: number | null;
   twelveMonthYieldText: string;
+  sec30DayYield: number | null;
+  sec30DayYieldText: string;
   distributionsAsOf: string;
   distributionsNote?: string;
   characteristics: Record<string, string>;
@@ -855,6 +857,10 @@ export function parseFundPage(html: string): FundPageData {
     || netExpenseRatioText
     || cleanText(snapshot['Expense Ratio'] || '');
   const twelveMonthYieldText = extractIdText(html, 'distributions-12MonthYield');
+  // Present on some strategic fund pages, including equity and bond funds;
+  // geared pages can omit this id even when they pay distributions.
+  const sec30DayYieldText = extractIdText(html, 'distributions-sec30DayYield');
+  const sec30DayYield = ratioValue(sec30DayYieldText);
   const indexStats: Record<string, string> = {};
   const indexStart = html.search(/id="index"/i);
   if (indexStart >= 0) {
@@ -888,6 +894,8 @@ export function parseFundPage(html: string): FundPageData {
     distributionFrequency: extractIdText(html, 'distributions-distributionFrequency') || extractIdText(html, 'snapshot-distributions'),
     twelveMonthYield: ratioValue(twelveMonthYieldText),
     twelveMonthYieldText: twelveMonthYieldText || '—',
+    sec30DayYield,
+    sec30DayYieldText: sec30DayYield === null ? '—' : sec30DayYieldText,
     distributionsAsOf: formatUsDate((extractIdText(html, 'distributions-asOfDate') || '').replace(/^as of\s*/i, '')),
     // The fund page states this itself when a fund never distributed.
     distributionsNote: /This fund has not made any distributions\s*\./i.test(html) ? 'This fund has not made any distributions.' : '',
@@ -2004,6 +2012,8 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           distributionFrequency: String(previousMeta.distributions?.frequency || ''),
           twelveMonthYield: numberOrNull(previousMeta.yields?.dividendYield),
           twelveMonthYieldText: String(previousMeta.yields?.dividendYieldText || '—'),
+          sec30DayYield: numberOrNull(previousMeta.yields?.secYield),
+          sec30DayYieldText: String(previousMeta.yields?.secYieldText || '—'),
           distributionsAsOf: String(previousMeta.distributions?.asOfDate || '—'),
           distributionsNote: String(previousMeta.distributions?.note || ''),
           characteristics: (previousMeta.officialMetrics?.characteristics || {}) as Record<string, string>,

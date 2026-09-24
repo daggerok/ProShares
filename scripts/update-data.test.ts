@@ -117,6 +117,7 @@ const FUND_PAGE = `
 <span id="characteristics-avgMarketCap" class="about-fund__list-value d-inline-block">$0.16 billion</span>
 <span id="distributions-asOfDate" class="about-fund__list-subheader">as of 8/31/2026</span>
 <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distribution Frequency</span> <div><span id="distributions-distributionFrequency" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>
+<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">SEC 30-Day Yield</span> <div><span id="distributions-sec30DayYield" class="about-fund__list-value d-inline-block">2.09%</span></div><div class="about-fund__popover-content"><p><strong data-renderer-mark="true">SEC 30-Day Yield&nbsp;</strong>is a standard yield calculation developed by the Securities and Exchange Commission (SEC).</p></div></li>
 <li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">12-Month Yield</span> <div><span id="distributions-12MonthYield" class="about-fund__list-value d-inline-block">2.01%</span></div></li>
 <div id="index">
 <span class="about-fund__list-subheader">as of 6/30/2026</span>
@@ -456,6 +457,8 @@ describe('fund page parsing', () => {
     expect(page.priceAsOf).toBe('Sep 18 2026');
     expect(page.distributionFrequency).toBe('Quarterly');
     expect(page.twelveMonthYield).toBe(2.01);
+    expect(page.sec30DayYield).toBe(2.09);
+    expect(page.sec30DayYieldText).toBe('2.09%');
     expect(page.inceptionDate).toBe('Oct 09 2013');
     expect(page.expenseRatio).toBe(0.35);
     expect(page.netExpenseRatio).toBe(0.35);
@@ -467,7 +470,21 @@ describe('fund page parsing', () => {
   test('a fund that never distributed says so on its own page', () => {
     const never = parseFundPage('<div id="distributionTab"><p>This fund has not made any distributions.</p></div>');
     expect(never.distributionsNote).toBe('This fund has not made any distributions.');
+    expect(never.sec30DayYield).toBeNull();
+    expect(never.sec30DayYieldText).toBe('—');
     expect(parseFundPage(FUND_PAGE).distributionsNote).toBe('');
+  });
+
+  test('SEC yield is absent on a geared page, but distinct from bond yield to maturity', () => {
+    const geared = parseFundPage('<span id="snapshot-distributions">Quarterly</span>');
+    expect(geared.sec30DayYield).toBeNull();
+    expect(geared.sec30DayYieldText).toBe('—');
+    const bond = parseFundPage('<span id="characteristics-weightedAverageYieldMaturity">5.63%</span><span id="distributions-sec30DayYield">5.42%</span>');
+    expect(bond.sec30DayYield).toBe(5.42);
+    expect(bond.characteristics['Weighted Average Yield to Maturity']).toBe('5.63%');
+    const unavailable = parseFundPage('<span id="distributions-sec30DayYield">—</span>');
+    expect(unavailable.sec30DayYield).toBeNull();
+    expect(unavailable.sec30DayYieldText).toBe('—');
   });
 
   test('geared pages publish gross and net ratios plus a snapshot frequency', () => {
