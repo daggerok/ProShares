@@ -7313,3 +7313,9 @@ Implementation checkpoint 1/… — main-branch refresh safety (plan step 1). Ch
 <!-- answer:
 Implementation checkpoint 2/… — restored the c48ff83 official-source updater and its paired tests (plan step 2). The script that produced the published feed is now back on this branch; unlike the merged rewrite it preserves index CUSIP/ISIN, catalogReadAt, complete return tenors and the independently computed indicated yield. `bun run test`: 53 pass / 0 fail / 219 assertions; `tsc --noEmit --target es2022 --module esnext --moduleResolution bundler --skipLibCheck --types bun,node scripts/update-data.ts scripts/update-data.test.ts`: clean; `bun build app.tsx --target browser`: clean; no api files changed. Audit correction: the restored script does NOT read SKIP_YAHOO (there is no Yahoo data path); the current visible README row asserting it is an optional fallback is stale and will be corrected in a separate small documentation step. SEC_YIELD still matches nothing until the later parser fix.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 3/… — restored the updater's executable bit after the historical-source checkout. c48ff83 stored the script as 100644, but the documented user command is `./scripts/update-data.ts` and the merged branch had 100755. `chmod +x` restores 100755; `./scripts/update-data.ts --help` executes successfully. No data or parsing behavior changed.
+-->
