@@ -1739,7 +1739,7 @@ export function buildFeed(inputs: {
 
 type Stats = { updated: number; unchanged: number; skipped: number; failed: number; filtered: number };
 
-/** Numbered before work starts, so concurrent workers and slow retries remain identifiable. */
+/** Stable catalog position, even when concurrent workers finish out of order. */
 export function progressLabel(ticker: string, position: number, total: number): string {
   return `[${String(position).padStart(Math.max(3, String(total).length) + 1)}/${total}] ${ticker}`;
 }
@@ -1762,7 +1762,7 @@ export function formatFundProgress(label: string, entry: Record<string, unknown>
   if (aum !== null) fields.push(`AUM ${formatMoneyText(aum)}`);
   if (visible(entry.ter)) fields.push(`TER ${entry.ter}`);
   if (visible(metrics?.dividendYieldText)) fields.push(`DivYld ${metrics.dividendYieldText}`);
-  if (visible(entry.distributionFrequency) && entry.distributionFrequency !== '00 - —') {
+  if (visible(entry.distributionFrequency) && entry.distributionFrequency !== '00 - None') {
     fields.push(`Freq ${entry.distributionFrequency}`);
   }
   fields.push(`holdings ${entry.holdings ?? 0}`, `history ${entry.history ?? 0}`, formatElapsed(milliseconds));
@@ -1992,13 +1992,8 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
   const results = await mapWithConcurrency(candidates, config.concurrency, async (fund, index) => {
     const label = progressLabel(fund.ticker, index + 1, candidates.length);
     const startedAt = Date.now();
-    console.log(`${label} …`);
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
     const previous = previousFunds[fund.ticker];
-    const filtered = (reason: string): void => {
-      stats.filtered++;
-      console.log(`${label} filtered (${reason}) · ${formatElapsed(Date.now() - startedAt)}`);
-    };
     try {
       let page: FundPageData | null = null;
       if (!config.offlineSeed) {
@@ -2045,11 +2040,11 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
 
       // Filter checks that need published fund-page values.
       if (config.terRange && !matchesRange(page.expenseRatio, config.terRange)) {
-        filtered('TER');
+        stats.filtered++;
         return;
       }
       if (config.secYieldRange && !matchesRange(page.sec30DayYield, config.secYieldRange)) {
-        filtered('SEC_YIELD');
+        stats.filtered++;
         return;
       }
 
@@ -2061,7 +2056,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.performanceRanges['10Y'] && !matchesReturnRange(performanceNavMonth?.yr10, config.performanceRanges['10Y']) ||
         config.performanceRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.performanceRanges.YTD)
       ) {
-        filtered('PERFORMANCE');
+        stats.filtered++;
         return;
       }
       if (
@@ -2071,7 +2066,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.totalReturnRanges['10Y'] && !matchesReturnRange(cumulativeFromAnnualized(performanceNavMonth?.yr10 ?? null, 10), config.totalReturnRanges['10Y']) ||
         config.totalReturnRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.totalReturnRanges.YTD)
       ) {
-        filtered('TOTAL_RETURN');
+        stats.filtered++;
         return;
       }
 
@@ -2132,7 +2127,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         const latestDividend = distributions[distributions.length - 1]?.dividend ?? null;
         const effective = resolveDividendYield(page.twelveMonthYield, latestDividend, normalizeDistributionFrequency(page.distributionFrequency), nav).effective;
         if (!matchesRange(effective, config.dividendYieldRange)) {
-          filtered('DIVIDEND_YIELD');
+          stats.filtered++;
           return;
         }
       }

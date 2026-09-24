@@ -412,8 +412,10 @@ describe('per-fund progress', () => {
     const snapshot = JSON.stringify(before);
     expect(formatFundProgress(progressLabel('NOBL', 1, 7), before, true, 2400))
       .toBe('[   1/7] NOBL ok · NAV $55.66 · AUM $11.27B · TER 0.35% · DivYld 2.01% · Freq 04 - Quarterly · holdings 71 · history 3220 · 2.4s');
-    expect(formatFundProgress(progressLabel('BOIL', 2, 7), { nav: '—', ter: '—', aumValue: null, distributionFrequency: '00 - —', holdings: 0, history: 15, metrics: { dividendYieldText: '—' } }, false, 99))
-      .toBe('[   2/7] BOIL ok (unchanged) · holdings 0 · history 15 · 0.1s');
+    for (const missingFrequency of ['—', '00 - None']) {
+      expect(formatFundProgress(progressLabel('BOIL', 2, 7), { nav: '—', ter: '—', aumValue: null, distributionFrequency: missingFrequency, holdings: 0, history: 15, metrics: { dividendYieldText: '—' } }, false, 99))
+        .toBe('[   2/7] BOIL ok (unchanged) · holdings 0 · history 15 · 0.1s');
+    }
     expect(JSON.stringify(before)).toBe(snapshot);
   });
 });
