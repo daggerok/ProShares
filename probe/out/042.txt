@@ -1,5 +1,5 @@
 URL: https://www.proshares.com/our-etfs/leveraged-and-inverse/ddm
-STATUS: 200 296104 bytes text/html; charset=utf-8
+STATUS: 200 295158 bytes text/html; charset=utf-8
 CMD: UA='Mozilla/5.0'; curl -s -A "$UA" https://www.proshares.com/our-etfs/leveraged-and-inverse/ddm -o /tmp/d.html; echo "=== ExportToCSV context:"; grep -oE '.{0,200}ExportToCSV.{0,300}' /tmp/d.html | head -2; echo "=== csv links:"; grep -oE 'href="[^"]*\.csv[^"]*"' /tmp/d.html | head -5
 === ExportToCSV context:
                     <a class="btn btn-secondary btn-blue" onclick="ExportToCSV()">
