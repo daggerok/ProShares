@@ -7398,3 +7398,9 @@ Implementation checkpoint 15/… — targeted `—` audit found a real second fi
 <!-- answer:
 Implementation checkpoint 16/… — corrected the meaning of an empty Dividend Yield when payouts **do** exist. UCOP/UPAL/UPLT each have two actual official distributions (June and September 2026) but their pages give no payment frequency and no official 12-Month Yield; inventing a quarterly schedule would be misleading. The feed's `effectiveYieldBasis` now says "official distributions exist but no payment frequency is published (cannot annualize without guessing)" instead of the false "no distributions yet". The UI's Overview "Dividend Yield Basis" now shows that **effective** basis (or the computed indicated-yield basis) rather than the raw 12-month-yield label for all funds. Unit tests cover payout-history vs no-payout branches: 59 pass / 0 fail / 260 assertions; tsc, app browser build and diff check pass. Next bounded refresh targets IQMM plus UCOP/UPAL/UPLT (no full run).
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 17/… — pushed the second bounded smoke trigger: only `TICKERS=IQMM,UCOP,UPAL,UPLT`. Local preflight confirms exactly those four symbols; the dev-run guard rejects an empty allowlist. The run should set IQMM's labelled, computed indicated yield from its official weekly payout; UCOP/UPAL/UPLT must remain `null` for Dividend Yield, with an accurate explanation that they did pay twice but their pages omit a cadence. It should not fill SEC 30-Day Yield with IQMM's different SEC 7-Day Yield. Pending GitHub Actions bot log/data commit; the user still owns the full 173-fund refresh.
+-->

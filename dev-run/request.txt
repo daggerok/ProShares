@@ -1,7 +1,7 @@
-# Bounded smoke run: equivalent to TICKERS="NOBL IGHG HYHG TQQQ AGQ BOIL SPCF" ./scripts/update-data.ts.
-# The dev-update workflow refuses to run if TICKERS is missing or parses empty.
-# A full 173-fund pass is reserved for the user after the fixes are verified.
-TICKERS=NOBL,IGHG,HYHG,TQQQ,AGQ,BOIL,SPCF
+# Follow-up bounded smoke: four remaining dividend-yield cases, not the full feed.
+# IQMM: published Weekly cadence and actual payouts; compute indicated yield.
+# UCOP/UPAL/UPLT: payouts exist but no published cadence; keep null with honest reason.
+TICKERS=IQMM,UCOP,UPAL,UPLT
 MAX_FETCHES=0
 CONCURRENCY=3
 REQUEST_SLEEP=1
