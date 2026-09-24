@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/VERS-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G325",
@@ -77,9 +77,9 @@
   "yield12MText": "0.13%",
   "indicatedYield": 0.2789,
   "indicatedYieldText": "0.28%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": -0.11,
+  "secYieldText": "-0.11%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -388,43 +388,43 @@
     "rows": [
      {
       "Company": "META PLATFORMS INC-CLASS A",
-      "Weight": 4.991475
+      "Weight": 5.125445
      },
      {
       "Company": "QORVO INC",
-      "Weight": 4.817823000000001
-     },
-     {
-      "Company": "SANDISK CORP",
-      "Weight": 4.546621
-     },
-     {
-      "Company": "KOPIN CORP",
-      "Weight": 4.468701
+      "Weight": 4.944785
      },
      {
       "Company": "APPLE INC",
-      "Weight": 4.444695
+      "Weight": 4.481653
      },
      {
-      "Company": "ALPHABET INC-CL A",
-      "Weight": 4.342782
+      "Company": "KOPIN CORP",
+      "Weight": 4.477993000000001
+     },
+     {
+      "Company": "SANDISK CORP",
+      "Weight": 4.448974
      },
      {
       "Company": "MICROSOFT CORP",
-      "Weight": 4.17145
+      "Weight": 4.2622599999999995
+     },
+     {
+      "Company": "ALPHABET INC-CL A",
+      "Weight": 4.246796
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 4.157324
+      "Weight": 4.16381
      },
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 4.108446000000001
+      "Weight": 4.082645
      },
      {
-      "Company": "SNAP INC - A",
-      "Weight": 4.087414000000001
+      "Company": "ROBLOX CORP -CLASS A",
+      "Weight": 4.048447
      }
     ]
    },
@@ -433,19 +433,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 60.95395
+      "Weight": 61.096131
      },
      {
       "Country": "Other",
-      "Weight": 34.336225
+      "Weight": 34.235999
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.996679
+      "Weight": 2.957052
      },
      {
       "Country": "Finland",
-      "Weight": 1.713147
+      "Weight": 1.7108180000000002
      }
     ]
    },
@@ -454,27 +454,27 @@
     "rows": [
      {
       "Sector": "Media & Entertainment",
-      "Weight": 21.32342672052867
+      "Weight": 21.241798933162478
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 21.037172212900497
+      "Weight": 21.113153464395907
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 12.454779484110851
+      "Weight": 12.458183769827887
      },
      {
       "Sector": "Software & Services",
-      "Weight": 6.217979462926264
+      "Weight": 6.373759870984716
      },
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 4.10844551549654
+      "Weight": 4.082644557541868
      },
      {
       "Sector": "Real Estate Management & Devel",
-      "Weight": 0.46399410171591177
+      "Weight": 0.4359303339493456
      }
     ]
    }

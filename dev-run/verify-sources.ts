@@ -1,5 +1,5 @@
 /**
- * TEMPORARY verification script (dev only, deleted before delivery).
+ * Kept source-verification script for bounded comparisons on a feature branch.
  *
  * Compares the generated feed against the live ProShares fund pages:
  *  - the "Exposure Weight" column of the rendered holdings table vs the Weight
@@ -26,8 +26,9 @@ const SAMPLE: Array<[string, string]> = [
   ['UCO', 'leveraged-and-inverse'],
   ['TOLZ', 'strategic'],
   ['EZJ', 'leveraged-and-inverse'],
-  ['SPCF', 'strategic'],
-  ['ACQQ', 'leveraged-and-inverse'],
+  ['SPCF', 'leveraged-and-inverse'],
+  ['ACQQ', 'strategic'],
+  ['IQMM', 'strategic'],
 ];
 
 const lines: string[] = [];
@@ -180,6 +181,8 @@ for (const [ticker, audience] of SAMPLE) {
     log(`  footnote context: ${footnote.slice(0, 220)}`);
   }
   log(`  frequency block: ${frequency ? clean(frequency[1]) : '—'}`);
+  const sec30YieldText = /id="distributions-sec30DayYield"[^>]*>([^<]*)</i.exec(html);
+  log(`  SEC 30-Day Yield block: ${sec30YieldText ? clean(sec30YieldText[1]) : '— (element absent)'}`);
   const yieldText = /id="distributions-12MonthYield"[^>]*>([^<]*)</i.exec(html);
   log(`  12-month yield block: ${yieldText ? clean(yieldText[1]) : '— (element absent)'}`);
   log();

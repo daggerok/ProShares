@@ -153,8 +153,8 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   ETFs: 'Selected ETFs holding this security.',
   Type: 'Category — the asset-class part of the proshares.com classification (see the Category column). Same source as the category tabs.',
   Expense: 'Expense Ratio — Total annual fund operating expenses as a % of assets, as published in the ProShares fund page snapshot.',
-  'Dividend Yield': 'Dividend Yield — the official 12-Month Yield published in the ProShares fund page distributions block: the last 12 months\' distributions divided by the latest NAV plus any capital-gain distributions. "—" for funds with no distribution history yet.',
-  'SEC Yield': 'SEC Yield (30-Day) — Not published by ProShares on its fund pages; shown as "—" (data limitation). ProShares prints a Weighted Average Yield to Maturity for its interest rate hedged bond funds instead, which the Overview tab reports.',
+  'Dividend Yield': 'Dividend Yield — the official 12-Month Yield from the ProShares fund page where published; otherwise indicated yield, calculated from the latest official distribution × payments per year ÷ NAV (labelled in the feed). "—" when neither is available.',
+  'SEC Yield': 'SEC Yield (30-Day) — the official 30-day SEC yield from the ProShares fund page distributions block, when published. "—" when that fund page omits it. Bond funds may also publish a separate Weighted Average Yield to Maturity in the Overview tab; it is not an SEC yield.',
   'YTD Return': 'YTD Return — Year-To-Date return from the official ProShares performance file (etf_performance.csv, NAV total return, month-end period), as of the date shown in the Return As Of column.',
   'TR 1Y': 'TR 1Y (1-Year Total Return) — from the official ProShares performance file (NAV total return).',
   'TR 3Y': 'TR 3Y (3-Year Total Return) — cumulative 3-year return derived from the annualized 3-Year figure in the official ProShares performance file as (1 + 3Y)^3 − 1 (NAV basis). "—" for a fund younger than 3 years.',
@@ -177,7 +177,7 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Holdings: 'Rows in the fund\'s latest official daily holdings file (psdlyhld).',
   History: 'Rows in the fund\'s official daily NAV history file.',
   'As Of': 'As-of date of the NAV / net assets figures.',
-  Frequency: 'Distribution frequency — the declared schedule published in the ProShares fund page distributions block. Codes: 00 — / None / Unknown, 01 Monthly, 04 Quarterly, 06 Semi-annually, 12 Annually, 99 Irregular. The Overview tab shows the raw label.',
+  Frequency: 'Distribution frequency — the declared schedule on the ProShares fund page. 00 - None means no schedule was published, not necessarily no past distributions; some funds have paid without declaring a frequency. Codes: 01 Monthly, 04 Quarterly, 06 Semi-annually, 12 Annually, 99 Irregular. Overview keeps the provider\'s raw label.',
   'Ex-Date': 'Ex-dividend date of the latest distribution, from the official ProShares distribution summary API.',
   Dividend: 'Latest distribution per share, from the official ProShares distribution summary API. "—" if the fund has never made a distribution.',
   Coupon: 'Bond annual coupon rate (%), as published in the official ProShares daily holdings file (empty for non-bond positions).',
@@ -329,7 +329,7 @@ function formatPercent(value: unknown): string {
 function formatDividendFrequency(value: unknown): string {
   const raw = String(value ?? '').trim();
   const normalized = raw.toLowerCase().replace(/[‐‑‒–—]/g, '-').replace(/\s+/g, ' ');
-  if (!normalized || normalized === '-') return '00 - —';
+  if (!normalized || normalized === '-') return '00 - None';
   if (normalized === 'monthly') return '01 - Monthly';
   if (normalized === 'quarterly') return '04 - Quarterly';
   if (normalized === 'semi-annual' || normalized === 'semi-annually' || normalized === 'semiannual') return '06 - Semi-annually';
@@ -453,7 +453,7 @@ function normalizeFundRow(fund: IndexFund): FundRow {
     cagr10y: metrics.cagr10y ?? monthEnd.yr10 ?? null,
     dividendYield: metrics.dividendYield ?? null,
     dividendFrequency: formatDividendFrequency(fund.distributions && fund.distributions.frequency ? fund.distributions.frequency : '—'),
-    secYield: metrics.secYield ?? null, // ProShares publishes no 30-day SEC yield: null renders as "—".
+    secYield: metrics.secYield ?? null, // Missing on this fund's page: null renders as "—".
     returnAsOf: monthEnd.asOfDate ?? null,
     searchIndex: '',
   };
@@ -1535,12 +1535,12 @@ function renderOverviewTable(fund: FundRow): void {
     { section: 'Distributions', metric: 'Frequency', value: fund.distributions ? fund.distributions.frequency : null },
     { section: 'Distributions', metric: 'Ex-Date', value: fund.distributions ? fund.distributions.exDate : null },
     { section: 'Distributions', metric: 'Latest Dividend', value: fund.distributions ? fund.distributions.dividend : null },
-    { section: 'Distributions', metric: 'Dividend Yield', value: meta && meta.yields && meta.yields.dividendYieldText ? meta.yields.dividendYieldText : (fund.dividendYield === null || fund.dividendYield === undefined ? null : `${fund.dividendYield.toFixed(2)}%`) },
+    { section: 'Distributions', metric: 'Dividend Yield', value: meta && meta.yields && meta.yields.effectiveYieldText ? meta.yields.effectiveYieldText : (fund.dividendYield === null || fund.dividendYield === undefined ? null : `${fund.dividendYield.toFixed(2)}%`) },
     { section: 'Distributions', metric: 'Distribution Yield (official)', value: meta && meta.yields ? meta.yields.distributionYieldText : null },
     { section: 'Distributions', metric: '12-Month Yield', value: meta && meta.yields ? meta.yields.yield12MText : null },
     { section: 'Distributions', metric: 'Indicated Yield', value: meta && meta.yields ? meta.yields.indicatedYieldText : null },
-    { section: 'Distributions', metric: 'SEC Yield (30-day)', value: meta && meta.yields ? (meta.yields.secYieldText || '—') : (fund.secYield === null || fund.secYield === undefined ? 'not published by ProShares for its ETFs' : `${fund.secYield.toFixed(2)}%`) },
-    { section: 'Distributions', metric: 'Dividend Yield Basis', value: meta && meta.yields ? meta.yields.dividendYieldKind : null },
+    { section: 'Distributions', metric: 'SEC Yield (30-day)', value: meta && meta.yields ? (meta.yields.secYieldText || '—') : (fund.secYield === null || fund.secYield === undefined ? '—' : `${fund.secYield.toFixed(2)}%`) },
+    { section: 'Distributions', metric: 'Dividend Yield Basis', value: meta && meta.yields ? (meta.yields.effectiveYieldBasis || meta.yields.dividendYieldKind) : null },
     { section: 'Distributions', metric: 'SEC Yield Basis', value: meta && meta.yields ? meta.yields.secYieldKind : null },
     { section: 'Holdings', metric: 'Holdings Rows', value: fund.holdings },
     { section: 'Holdings', metric: 'Holdings As Of', value: meta && meta.holdings ? meta.holdings.asOfDate : null },

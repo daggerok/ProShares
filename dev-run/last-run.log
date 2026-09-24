@@ -1,9 +1,17 @@
 Catalog: 504 strategic funds from https://www.proshares.com/our-etfs/find-proshares-etfs
 Catalog: 1053 geared funds from https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs
-Holdings: 173 funds as of Sep 18 2026 from https://accounts.profunds.com/etfdata/psdlyhld.csv
+Holdings: 173 funds as of Sep 23 2026 from https://accounts.profunds.com/etfdata/psdlyhld.csv
 Performance: 942 rows from https://accounts.profunds.com/etfdata/etf_performance.csv
 Splits: 125 symbols from https://accounts.profunds.com/etfdata/etf_splits.csv
-Exchanges: 13262 symbols resolved
-Funds: 173 in catalog, 173 after filters, 173 to process
-Done. updated=173 unchanged=0 filtered=0 skipped=0 failed=0 · funds=173 holdings=20233 history=539909
+Exchanges: 13278 symbols resolved
+Funds: 173 in catalog, 4 after filters, 4 to process
+[   1/4] IQMM …
+[   2/4] UCOP …
+[   3/4] UPAL …
+[   3/4] UPAL ok · NAV $22.10 · AUM $2.65M · TER 0.95% · holdings 5 · history 109 · 5.8s
+[   4/4] UPLT …
+[   1/4] IQMM ok · NAV $100.06 · AUM $20.22B · TER 0.15% · DivYld 3.60% · Freq Weekly · holdings 15 · history 152 · 5.8s
+[   2/4] UCOP ok · NAV $43.40 · AUM $4.77M · TER 0.95% · holdings 5 · history 109 · 5.8s
+[   4/4] UPLT ok · NAV $24.03 · AUM $2.88M · TER 0.95% · holdings 5 · history 109 · 6.0s
+Done. updated=4 unchanged=0 filtered=0 skipped=0 failed=0 · funds=173 holdings=20223 history=540428 · 17.5s
 updater exit status: 0

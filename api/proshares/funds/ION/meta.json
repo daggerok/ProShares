@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ION-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G267",
@@ -77,9 +77,9 @@
   "yield12MText": "1.42%",
   "indicatedYield": 2.3175,
   "indicatedYieldText": "2.32%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": 1.11,
+  "secYieldText": "1.11%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -369,43 +369,43 @@
     "rows": [
      {
       "Company": "PACIFIC METALS CO LTD",
-      "Weight": 4.764012
+      "Weight": 4.802026000000001
      },
      {
       "Company": "IGO LTD",
-      "Weight": 3.783711
+      "Weight": 3.863364
      },
      {
       "Company": "VALE INDONESIA TBK",
-      "Weight": 3.540692
-     },
-     {
-      "Company": "SIGMA LITHIUM CORP",
-      "Weight": 3.398642
+      "Weight": 3.6862310000000003
      },
      {
       "Company": "PT TIMAH (PERSERO) TBK",
-      "Weight": 3.315873
+      "Weight": 3.511906
      },
      {
-      "Company": "QUIMICA Y MINERA CHIL-SP ADR",
-      "Weight": 3.031689
+      "Company": "SIGMA LITHIUM CORP",
+      "Weight": 3.2777550000000004
      },
      {
       "Company": "PLS GROUP LTD",
-      "Weight": 3.006241
+      "Weight": 3.036049
      },
      {
-      "Company": "AFRICAN RAINBOW MINERALS LTD",
-      "Weight": 2.980826
+      "Company": "QUIMICA Y MINERA CHIL-SP ADR",
+      "Weight": 2.926114
      },
      {
       "Company": "TIBET MINERAL DEVELOPMENT-A",
-      "Weight": 2.9428739999999998
+      "Weight": 2.895793
      },
      {
       "Company": "ERAMET",
-      "Weight": 2.89936
+      "Weight": 2.865201
+     },
+     {
+      "Company": "AFRICAN RAINBOW MINERALS LTD",
+      "Weight": 2.810947
      }
     ]
    },
@@ -414,63 +414,63 @@
     "rows": [
      {
       "Country": "China",
-      "Weight": 29.504413000000003
+      "Weight": 29.521572000000003
      },
      {
       "Country": "Australia",
-      "Weight": 14.792292000000002
-     },
-     {
-      "Country": "South Africa",
-      "Weight": 10.114136
-     },
-     {
-      "Country": "Canada",
-      "Weight": 9.586915999999999
+      "Weight": 15.122588
      },
      {
       "Country": "Indonesia",
-      "Weight": 9.398588
+      "Weight": 9.920873
+     },
+     {
+      "Country": "South Africa",
+      "Weight": 9.629582000000001
+     },
+     {
+      "Country": "Canada",
+      "Weight": 9.372672
      },
      {
       "Country": "Japan",
-      "Weight": 5.9306909999999995
+      "Weight": 6.006655
      },
      {
       "Country": "United Kingdom",
-      "Weight": 3.875236
+      "Weight": 3.862043
      },
      {
       "Country": "Chile",
-      "Weight": 3.036105
+      "Weight": 2.944416
      },
      {
       "Country": "France",
-      "Weight": 2.903584
+      "Weight": 2.883121
      },
      {
       "Country": "United States",
-      "Weight": 2.752013
+      "Weight": 2.697496
      },
      {
       "Country": "Hong Kong",
-      "Weight": 2.591795
+      "Weight": 2.618563
      },
      {
       "Country": "Netherlands",
-      "Weight": 1.9110930000000002
+      "Weight": 1.901005
      },
      {
       "Country": "Brazil",
-      "Weight": 1.866145
+      "Weight": 1.8518739999999998
      },
      {
       "Country": "Sweden",
-      "Weight": 1.183477
+      "Weight": 1.172569
      },
      {
       "Country": "South Korea",
-      "Weight": 0.553516
+      "Weight": 0.49496999999999997
      }
     ]
    },
@@ -479,47 +479,47 @@
     "rows": [
      {
       "Currency": "CNY",
-      "Weight": 22.228185895719786
+      "Weight": 22.17113318668579
      },
      {
       "Currency": "AUD",
-      "Weight": 14.792292253944495
+      "Weight": 15.122587774227398
      },
      {
       "Currency": "USD",
-      "Weight": 11.611371084093234
-     },
-     {
-      "Currency": "ZAR",
-      "Weight": 10.114135577924177
+      "Weight": 11.287013052023143
      },
      {
       "Currency": "HKD",
-      "Weight": 9.868022341116392
+      "Weight": 9.969001366212211
      },
      {
       "Currency": "IDR",
-      "Weight": 9.398587562275488
+      "Weight": 9.920873123497552
+     },
+     {
+      "Currency": "ZAR",
+      "Weight": 9.629581992783972
      },
      {
       "Currency": "CAD",
-      "Weight": 6.183323843069022
+      "Weight": 6.074415252949168
      },
      {
       "Currency": "JPY",
-      "Weight": 5.930691169132805
+      "Weight": 6.006655147598857
      },
      {
       "Currency": "EUR",
-      "Weight": 4.814677317160024
+      "Weight": 4.784126808144207
      },
      {
       "Currency": "GBP",
-      "Weight": 3.875235710102066
+      "Weight": 3.8620433312350912
      },
      {
       "Currency": "SEK",
-      "Weight": 1.183477245462511
+      "Weight": 1.1725689646426094
      }
     ]
    },
@@ -528,27 +528,27 @@
     "rows": [
      {
       "Sector": "Metals & Mining",
-      "Weight": 76.91938985590299
+      "Weight": 76.59503057437882
      },
      {
       "Sector": "Chemicals",
-      "Weight": 18.852385924038302
+      "Weight": 18.670629917162074
      },
      {
       "Sector": "Electrical Equipment",
-      "Weight": 1.8576433348740338
+      "Weight": 1.8582603156158728
      },
      {
       "Sector": "Trading Companies & Distributors",
-      "Weight": 1.1580520253190567
+      "Weight": 1.1672928125782682
      },
      {
       "Sector": "Construction & Engineering",
-      "Weight": 0.6318124517758616
+      "Weight": 0.6477846643064163
      },
      {
       "Sector": "Broadline Retail",
-      "Weight": 0.43525069077019013
+      "Weight": 0.43942613826160065
      }
     ]
    }

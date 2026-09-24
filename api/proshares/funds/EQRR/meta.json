@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/EQRR-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EQRR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347B391",
@@ -77,9 +77,9 @@
   "yield12MText": "1.01%",
   "indicatedYield": 0.9939,
   "indicatedYieldText": "0.99%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": 1.06,
+  "secYieldText": "1.06%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -597,23 +597,23 @@
     "rows": [
      {
       "Sector": "Energy",
-      "Weight": 31.795496894188158
+      "Weight": 32.08424006617487
      },
      {
       "Sector": "Technology",
-      "Weight": 26.057429726643242
+      "Weight": 26.26077410414424
      },
      {
       "Sector": "Financials",
-      "Weight": 19.32373790658992
+      "Weight": 19.10748797705928
      },
      {
       "Sector": "Telecommunications",
-      "Weight": 13.474541836714222
+      "Weight": 13.383778003586212
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 9.088750515415636
+      "Weight": 8.904976303868443
      }
     ]
    }

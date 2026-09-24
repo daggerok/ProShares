@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ANEW-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ANEW-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G796",
@@ -77,9 +77,9 @@
   "yield12MText": "0.50%",
   "indicatedYield": 0.2193,
   "indicatedYieldText": "0.22%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": 0.44,
+  "secYieldText": "0.44%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -425,23 +425,23 @@
     "rows": [
      {
       "Company - Digital Consumer": "META PLATFORMS INC-CLASS A",
-      "Weight": 2.2337320000000003
+      "Weight": 2.275678
      },
      {
       "Company - Digital Consumer": "AMAZON.COM INC",
-      "Weight": 1.799068
+      "Weight": 1.7737349999999998
      },
      {
       "Company - Digital Consumer": "TENCENT HOLDINGS LTD",
-      "Weight": 1.794656
+      "Weight": 1.76749
      },
      {
       "Company - Digital Consumer": "NINTENDO CO LTD",
-      "Weight": 1.758147
+      "Weight": 1.7624600000000001
      },
      {
       "Company - Digital Consumer": "ALIBABA GROUP HOLDING LTD",
-      "Weight": 1.574294
+      "Weight": 1.518579
      }
     ]
    },
@@ -450,23 +450,23 @@
     "rows": [
      {
       "Company - Food Revolution": "DEERE & CO",
-      "Weight": 2.302117
+      "Weight": 2.342692
      },
      {
       "Company - Food Revolution": "DOORDASH INC - A",
-      "Weight": 2.275782
+      "Weight": 2.260027
      },
      {
       "Company - Food Revolution": "SYMRISE AG",
-      "Weight": 2.2143889999999997
+      "Weight": 2.197433
      },
      {
       "Company - Food Revolution": "INTL FLAVORS & FRAGRANCES",
-      "Weight": 2.180776
+      "Weight": 2.197268
      },
      {
       "Company - Food Revolution": "KERRY GROUP PLC-A",
-      "Weight": 2.0400620000000003
+      "Weight": 2.0363200000000004
      }
     ]
    },
@@ -475,23 +475,23 @@
     "rows": [
      {
       "Company - Future of Work": "MICROSOFT CORP",
-      "Weight": 2.18406
+      "Weight": 2.214087
      },
      {
       "Company - Future of Work": "APPLE INC",
-      "Weight": 2.081115
+      "Weight": 2.0819460000000003
      },
      {
       "Company - Future of Work": "NVIDIA CORP",
-      "Weight": 1.899653
+      "Weight": 1.88768
      },
      {
       "Company - Future of Work": "ADOBE INC",
-      "Weight": 1.70981
+      "Weight": 1.742009
      },
      {
       "Company - Future of Work": "ALPHABET INC-CL A",
-      "Weight": 1.6588619999999998
+      "Weight": 1.609462
      }
     ]
    },
@@ -500,23 +500,23 @@
     "rows": [
      {
       "Company - Genomics & Telehealth": "DANAHER CORP",
-      "Weight": 2.42273
+      "Weight": 2.448524
      },
      {
       "Company - Genomics & Telehealth": "ABBVIE INC",
-      "Weight": 2.271772
+      "Weight": 2.2899659999999997
      },
      {
       "Company - Genomics & Telehealth": "MODERNA INC",
-      "Weight": 2.148291
+      "Weight": 2.1612180000000003
      },
      {
       "Company - Genomics & Telehealth": "ABBOTT LABORATORIES",
-      "Weight": 2.137197
+      "Weight": 2.151212
      },
      {
       "Company - Genomics & Telehealth": "EDWARDS LIFESCIENCES CORP",
-      "Weight": 1.823445
+      "Weight": 1.798351
      }
     ]
    },
@@ -525,59 +525,59 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 75.82875999999999
+      "Weight": 75.995249
      },
      {
       "Country": "Switzerland",
-      "Weight": 4.157149
+      "Weight": 4.137633999999999
      },
      {
       "Country": "China",
-      "Weight": 4.151734
+      "Weight": 4.068898
      },
      {
       "Country": "Germany",
-      "Weight": 3.803974
+      "Weight": 3.786359
      },
      {
       "Country": "Japan",
-      "Weight": 2.804292
+      "Weight": 2.811204
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.625075
+      "Weight": 2.680071
      },
      {
       "Country": "Ireland",
-      "Weight": 2.048662
+      "Weight": 2.044927
      },
      {
       "Country": "South Africa",
-      "Weight": 1.586767
+      "Weight": 1.504129
      },
      {
       "Country": "South Korea",
-      "Weight": 1.1877520000000001
+      "Weight": 1.1944460000000001
      },
      {
       "Country": "France",
-      "Weight": 0.669686
+      "Weight": 0.6514019999999999
      },
      {
       "Country": "Singapore",
-      "Weight": 0.552413
+      "Weight": 0.555567
      },
      {
       "Country": "Australia",
-      "Weight": 0.35014
+      "Weight": 0.33850199999999997
      },
      {
       "Country": "Canada",
-      "Weight": 0.118364
+      "Weight": 0.119721
      },
      {
       "Country": "Israel",
-      "Weight": 0.11523099999999999
+      "Weight": 0.111892
      }
     ]
    },
@@ -586,55 +586,55 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 76.64276122641034
+      "Weight": 76.81234225207952
      },
      {
       "Currency": "EUR",
-      "Weight": 6.522322022274841
+      "Weight": 6.482687808973851
      },
      {
       "Currency": "CHF",
-      "Weight": 4.157148975514523
+      "Weight": 4.137633782774141
      },
      {
       "Currency": "HKD",
-      "Weight": 4.030189699962437
+      "Weight": 3.9464635967672934
      },
      {
       "Currency": "JPY",
-      "Weight": 2.8042920596227745
+      "Weight": 2.811203552632445
      },
      {
       "Currency": "TWD",
-      "Weight": 2.6250752971678826
+      "Weight": 2.6800708862302027
      },
      {
       "Currency": "ZAR",
-      "Weight": 1.5867674004126122
+      "Weight": 1.50412863619997
      },
      {
       "Currency": "KRW",
-      "Weight": 0.8164934168806858
+      "Weight": 0.822228615070566
      },
      {
       "Currency": "AUD",
-      "Weight": 0.35014013393302296
+      "Weight": 0.33850165833145046
      },
      {
       "Currency": "CNY",
-      "Weight": 0.12154399067794512
+      "Weight": 0.12243449727232124
      },
      {
       "Currency": "CAD",
-      "Weight": 0.11836438834123793
+      "Weight": 0.11972117556151624
      },
      {
       "Currency": "ILS",
-      "Weight": 0.11523052607706626
+      "Weight": 0.11189175881701659
      },
      {
       "Currency": "SGD",
-      "Weight": 0.10967086272463103
+      "Weight": 0.11069177928971717
      }
     ]
    }

@@ -1,7 +1,9 @@
-# Lines are exported as environment variables for scripts/update-data.ts.
-# Editing this file (and pushing) runs the dev data refresh on this branch.
+# Follow-up bounded smoke: four remaining dividend-yield cases, not the full feed.
+# IQMM: published Weekly cadence and actual payouts; compute indicated yield.
+# UCOP/UPAL/UPLT: payouts exist but no published cadence; keep null with honest reason.
+TICKERS=IQMM,UCOP,UPAL,UPLT
 MAX_FETCHES=0
 CONCURRENCY=3
 REQUEST_SLEEP=1
 DISTRIBUTION_YEARS=10
-# trigger at 2026-09-24T01:33:02+00:00
+MAX_RETRIES=3

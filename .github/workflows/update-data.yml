@@ -59,12 +59,12 @@ on:
         default: ""
         type: string
       dividend_yield:
-        description: "Catalog dividend-yield percentage range; colon required"
+        description: "Published 12-Month or indicated dividend-yield percentage range; colon required"
         required: false
         default: ":"
         type: string
       sec_yield:
-        description: "Catalog 30-day SEC yield percentage range; ProShares publishes none, so this filter is parity-only"
+        description: "Official page SEC 30-Day Yield min:max percentage; an active bound excludes pages without a published value"
         required: false
         default: ":"
         type: string
@@ -79,7 +79,7 @@ on:
         default: "10"
         type: string
       skip_proshares:
-        description: "Keep the previously published official catalog"
+        description: "Legacy no-op retained for older dispatch forms; use tickers for a bounded update"
         required: false
         default: ""
         type: string

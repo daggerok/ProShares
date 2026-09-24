@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G523",
@@ -77,9 +77,9 @@
   "yield12MText": "—",
   "indicatedYield": null,
   "indicatedYieldText": "—",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": 0.32,
+  "secYieldText": "0.32%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -243,43 +243,43 @@
     "rows": [
      {
       "Company": "DOORDASH INC - A",
-      "Weight": 5.8506
+      "Weight": 5.809034
      },
      {
       "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 5.691904
+      "Weight": 5.637977
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 5.321992
+      "Weight": 5.287482000000001
      },
      {
       "Company": "CAPCOM CO LTD",
-      "Weight": 5.120566
+      "Weight": 5.132188
      },
      {
       "Company": "SPOTIFY TECHNOLOGY SA",
-      "Weight": 4.829005
+      "Weight": 4.957563
      },
      {
       "Company": "UBER TECHNOLOGIES INC",
-      "Weight": 4.718253
+      "Weight": 4.725508
      },
      {
       "Company": "NETEASE INC",
-      "Weight": 4.687829000000001
-     },
-     {
-      "Company": "NEXON CO LTD",
-      "Weight": 4.590606
+      "Weight": 4.704002999999999
      },
      {
       "Company": "TAKE-TWO INTERACTIVE SOFTWRE",
-      "Weight": 4.576405
+      "Weight": 4.63221
      },
      {
       "Company": "GRAB HOLDINGS LTD - CL A",
-      "Weight": 4.530665
+      "Weight": 4.611586
+     },
+     {
+      "Company": "NEXON CO LTD",
+      "Weight": 4.601025
      }
     ]
    },
@@ -288,43 +288,43 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 42.692116
+      "Weight": 42.539362
      },
      {
       "Country": "Hong Kong",
-      "Weight": 14.49608
+      "Weight": 14.451388000000001
      },
      {
       "Country": "Japan",
-      "Weight": 9.750077
+      "Weight": 9.772454
      },
      {
       "Country": "China",
-      "Weight": 7.519742
-     },
-     {
-      "Country": "South Korea",
-      "Weight": 5.067573
+      "Weight": 7.566934
      },
      {
       "Country": "Luxembourg",
-      "Weight": 4.848351
+      "Weight": 4.97755
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 4.944515
      },
      {
       "Country": "Singapore",
-      "Weight": 4.548814999999999
+      "Weight": 4.630178
      },
      {
       "Country": "Germany",
-      "Weight": 4.468745999999999
+      "Weight": 4.460229
      },
      {
       "Country": "Taiwan",
-      "Weight": 3.638462
+      "Weight": 3.676186
      },
      {
       "Country": "Poland",
-      "Weight": 2.970036
+      "Weight": 2.981202
      }
     ]
    },
@@ -333,31 +333,31 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 52.08928205821983
+      "Weight": 52.147090991390634
      },
      {
       "Currency": "HKD",
-      "Weight": 22.015822513707043
+      "Weight": 22.01832231080839
      },
      {
       "Currency": "JPY",
-      "Weight": 9.750077143535025
+      "Weight": 9.772453857170696
      },
      {
       "Currency": "KRW",
-      "Weight": 5.067573471683503
+      "Weight": 4.944515031045022
      },
      {
       "Currency": "EUR",
-      "Weight": 4.468746446620077
+      "Weight": 4.460228893712471
      },
      {
       "Currency": "TWD",
-      "Weight": 3.6384624575336977
+      "Weight": 3.6761864492176235
      },
      {
       "Currency": "PLN",
-      "Weight": 2.97003590870082
+      "Weight": 2.9812024666551653
      }
     ]
    },
@@ -366,27 +366,27 @@
     "rows": [
      {
       "Sector": "Media & Entertainment",
-      "Weight": 53.419313743499366
+      "Weight": 53.68782149695519
      },
      {
       "Sector": "Transportation",
-      "Weight": 15.846220919154236
+      "Weight": 15.871929076831922
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 14.6670948703155
+      "Weight": 14.632339991359643
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 10.928387393004375
+      "Weight": 10.720884050182654
      },
      {
       "Sector": "Software & Services",
-      "Weight": 3.3397729035974115
+      "Weight": 3.335521194573033
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 1.4001867681590432
+      "Weight": 1.3499608876777847
      }
     ]
    }

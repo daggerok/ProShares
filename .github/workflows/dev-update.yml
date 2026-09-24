@@ -1,11 +1,12 @@
-# TEMPORARY development helper: dispatches the real updater from a feature
-# branch (workflow_dispatch only reaches the default branch), captures its log
-# in the repo and commits generated api/proshares/** data. Deleted before the
-# final delivery; .github/workflows/update-data.yml is the shipped workflow.
+# Kept development helper: runs the updater from a feature branch with a
+# mandatory TICKERS allowlist, captures its log and commits api/proshares/**.
+# For a full refresh on main, use the shipped update-data.yml workflow instead.
 name: Dev data refresh
 
 on:
   push:
+    branches-ignore:
+      - main
     paths:
       - 'dev-run/request.txt'
 
@@ -38,6 +39,9 @@ jobs:
             export "$line"
           done < dev-run/request.txt
           set +a
+          # Never start an unbounded dev-run job by accident. The user will run
+          # the full catalog pass separately after the bounded smoke test.
+          bun -e 'import { readConfig } from "./scripts/update-data.ts"; if (!readConfig().tickers.length) { console.error("Refusing unbounded dev refresh: set TICKERS in dev-run/request.txt"); process.exit(2); }'
           mkdir -p dev-run
           set +e
           bun ./scripts/update-data.ts > dev-run/last-run.log 2>&1

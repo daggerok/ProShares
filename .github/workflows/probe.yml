@@ -2,6 +2,8 @@ name: Probe external data source
 
 on:
   push:
+    branches-ignore:
+      - main
     paths:
       - 'probe/urls.txt'
   workflow_dispatch:
