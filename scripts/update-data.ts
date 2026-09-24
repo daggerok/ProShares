@@ -450,7 +450,8 @@ Environment variables
                                       small ($300M-$2B), mid ($2B-$10B),
                                       large (>=$10B).
   TER                    ":"          Expense-ratio range in % (min:max).
-  DIVIDEND_YIELD         ":"          Official 12-month yield range in %.
+  DIVIDEND_YIELD         ":"          Official 12-Month Yield or computed indicated
+                                      yield range in %, matching the feed.
   SEC_YIELD              ":"          Published SEC 30-Day Yield range in %;
                                       only funds whose pages publish a value
                                       match an active bound. ":" accepts all.
@@ -1324,6 +1325,12 @@ export function indicatedYield(latest: number | null, frequency: string, nav: nu
   return round(((latest * payments) / nav) * 100, 4);
 }
 
+/** Same published-or-indicated basis for the feed AND its DIVIDEND_YIELD filter. */
+export function resolveDividendYield(published: number | null, latest: number | null, frequency: string, nav: number | null): { indicated: number | null; effective: number | null } {
+  const indicated = indicatedYield(latest, frequency, nav);
+  return { indicated, effective: published ?? indicated };
+}
+
 // ---------------------------------------------------------------------------
 // (h) Nasdaq Trader symbol directory (listing exchange, Overview only)
 // ---------------------------------------------------------------------------
@@ -1498,12 +1505,11 @@ export function buildFeed(inputs: {
   const frequency = normalizeDistributionFrequency(page.distributionFrequency);
   const latestDistribution = distributions.length ? distributions[distributions.length - 1] : null;
   const payments = paymentsPerYear(frequency);
-  const indicated = indicatedYield(latestDistribution?.dividend ?? null, frequency, nav);
   // The Yield the site publishes: the official 12-Month Yield where ProShares
   // prints one (strategic pages), otherwise the indicated yield computed from
   // the latest official distribution. Funds that never distributed keep '—'.
   const publishedYield = page.twelveMonthYield;
-  const effectiveYield = publishedYield ?? indicated;
+  const { indicated, effective: effectiveYield } = resolveDividendYield(publishedYield, latestDistribution?.dividend ?? null, frequency, nav);
   const effectiveYieldBasis = publishedYield !== null
     ? 'official ProShares 12-Month Yield (page distributions block)'
     : indicated !== null
@@ -2040,13 +2046,6 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         filtered('TER');
         return;
       }
-      // DIVIDEND_YIELD matches the official 12-Month Yield when the fund page
-      // publishes one and the indicated yield (computed from the official
-      // distribution rows) otherwise, i.e. the value the feed reports.
-      if (config.dividendYieldRange && !matchesRange(page.twelveMonthYield, config.dividendYieldRange)) {
-        filtered('DIVIDEND_YIELD');
-        return;
-      }
       if (config.secYieldRange && !matchesRange(page.sec30DayYield, config.secYieldRange)) {
         filtered('SEC_YIELD');
         return;
@@ -2121,6 +2120,19 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           if (emptyYears >= 2) break;
         }
         distributions.sort((a, b) => compareDisplayDates(a.exDate, b.exDate));
+      }
+
+      // DIVIDEND_YIELD filters the same official-or-indicated value the feed
+      // writes. An unpublished 12-Month Yield can still have a real indicated
+      // yield, but that value is only known after fetching official payouts.
+      if (config.dividendYieldRange) {
+        const nav = numberOrNull(page.navText) ?? navRows[navRows.length - 1]?.nav ?? null;
+        const latestDividend = distributions[distributions.length - 1]?.dividend ?? null;
+        const effective = resolveDividendYield(page.twelveMonthYield, latestDividend, normalizeDistributionFrequency(page.distributionFrequency), nav).effective;
+        if (!matchesRange(effective, config.dividendYieldRange)) {
+          filtered('DIVIDEND_YIELD');
+          return;
+        }
       }
 
       // The per-fund download is what the fund page itself offers and the only

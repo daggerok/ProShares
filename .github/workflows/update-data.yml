@@ -59,7 +59,7 @@ on:
         default: ""
         type: string
       dividend_yield:
-        description: "Catalog dividend-yield percentage range; colon required"
+        description: "Published 12-Month or indicated dividend-yield percentage range; colon required"
         required: false
         default: ":"
         type: string

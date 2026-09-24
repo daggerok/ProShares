@@ -60,6 +60,7 @@ import {
   paymentsPerYear,
   progressLabel,
   readConfig,
+  resolveDividendYield,
   serialize,
   stripTags,
   toIsoDate,
@@ -713,6 +714,19 @@ describe('distribution summary', () => {
     expect(paymentsPerYear('Monthly')).toBe(12);
     expect(paymentsPerYear('Irregular')).toBe(1);
     expect(paymentsPerYear('—')).toBeNull();
+  });
+
+  test('the dividend-yield filter resolves the same official-or-indicated basis as the feed', () => {
+    const bounded = readConfig({ DIVIDEND_YIELD: '0.5:1' }).dividendYieldRange;
+    const unbounded = readConfig({ DIVIDEND_YIELD: ':' }).dividendYieldRange;
+    const indicated = resolveDividendYield(null, 0.15596, 'Quarterly', 78.62); // TQQQ: no official 12-Month Yield
+    expect(indicated.effective).toBe(indicated.indicated);
+    expect(matchesRange(indicated.effective, bounded)).toBe(true);
+    expect(matchesRange(null, bounded)).toBe(false);
+    expect(matchesRange(null, unbounded)).toBe(true);
+    const official = resolveDividendYield(2.01, 0.303711, 'Quarterly', 55.66); // NOBL
+    expect(official.effective).toBe(2.01);
+    expect(official.indicated).not.toBe(2.01);
   });
 
   test('indicated yield is annualised from the latest payout only', () => {
