@@ -7404,3 +7404,9 @@ Implementation checkpoint 16/… — corrected the meaning of an empty Dividend 
 <!-- answer:
 Implementation checkpoint 17/… — pushed the second bounded smoke trigger: only `TICKERS=IQMM,UCOP,UPAL,UPLT`. Local preflight confirms exactly those four symbols; the dev-run guard rejects an empty allowlist. The run should set IQMM's labelled, computed indicated yield from its official weekly payout; UCOP/UPAL/UPLT must remain `null` for Dividend Yield, with an accurate explanation that they did pay twice but their pages omit a cadence. It should not fill SEC 30-Day Yield with IQMM's different SEC 7-Day Yield. Pending GitHub Actions bot log/data commit; the user still owns the full 173-fund refresh.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 18/… — second bounded smoke succeeded (run 35953089761, bot commit c85ac65). Exactly four funds processed; numbered progress for all four; `Done. updated=4 unchanged=0 filtered=0 skipped=0 failed=0 · funds=173 holdings=20223 history=540428 · 17.5s`. IQMM now shows **3.6013% indicated** Dividend Yield (0.069297 × 52 ÷ 100.06 × 100, labelled computed); its SEC **30-day** field correctly stays null because the page instead publishes SEC **7-day**. UCOP/UPAL/UPLT still show Dividend Yield `null` but each retains two official distributions and the corrected "cadence not published; cannot annualize without guessing" note. `python3 dev-run/check-feed.py`: **problems: 0**. The combined 11-fund partial feed has 24 null Dividend Yields (21 never paid, 3 with payouts but no published cadence) and 170 null SEC 30-day yields (162 entries not yet refreshed by this fix, 8 sampled pages with no field). These counts describe only the mixed-age committed feed; the user will run the complete refresh separately.
+-->
