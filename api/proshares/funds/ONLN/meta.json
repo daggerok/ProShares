@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ONLN-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347B169",
@@ -77,9 +77,9 @@
   "yield12MText": "0.29%",
   "indicatedYield": 0.3449,
   "indicatedYieldText": "0.34%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": -0.3,
+  "secYieldText": "-0.30%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -308,43 +308,43 @@
     "rows": [
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 24.582059
+      "Weight": 24.731866999999998
      },
      {
       "Company": "ALIBABA GROUP HOLDING-SP ADR",
-      "Weight": 8.842924
+      "Weight": 8.669486
      },
      {
       "Company": "EBAY INC",
-      "Weight": 8.38387
+      "Weight": 8.61318
      },
      {
       "Company": "CARVANA CO",
-      "Weight": 4.600149
+      "Weight": 4.629237
      },
      {
       "Company": "PDD HOLDINGS INC",
-      "Weight": 4.518826
+      "Weight": 4.583948
      },
      {
       "Company": "MERCADOLIBRE INC",
-      "Weight": 3.93608
+      "Weight": 3.9901489999999997
      },
      {
       "Company": "WILLIAMS-SONOMA INC",
-      "Weight": 3.787691
-     },
-     {
-      "Company": "WAYFAIR INC- CLASS A",
-      "Weight": 3.610878
+      "Weight": 3.8166520000000004
      },
      {
       "Company": "COUPANG INC",
-      "Weight": 3.4575910000000003
+      "Weight": 3.4779740000000006
+     },
+     {
+      "Company": "WAYFAIR INC- CLASS A",
+      "Weight": 3.444361
      },
      {
       "Company": "LIQUIDITY SERVICES INC",
-      "Weight": 3.233061
+      "Weight": 3.310999
      }
     ]
    },
@@ -353,31 +353,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 59.44269800000001
+      "Weight": 59.549211
      },
      {
       "Country": "Other",
-      "Weight": 15.780686999999999
+      "Weight": 15.557662
      },
      {
       "Country": "China",
-      "Weight": 11.37698
+      "Weight": 11.256241
      },
      {
       "Country": "Ireland",
-      "Weight": 4.520681
+      "Weight": 4.585812000000001
      },
      {
       "Country": "Uruguay",
-      "Weight": 3.9376960000000003
+      "Weight": 3.9917719999999997
      },
      {
       "Country": "Singapore",
-      "Weight": 3.075421
+      "Weight": 3.153428
      },
      {
       "Country": "Israel",
-      "Weight": 1.8658359999999998
+      "Weight": 1.905874
      },
      {
       "Country": "Russian Federation",
@@ -390,15 +390,15 @@
     "rows": [
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 78.40078535223482
+      "Weight": 78.67813445528586
      },
      {
       "Sector": "Media & Entertainment",
-      "Weight": 3.0741594108479178
+      "Weight": 3.1521459257018494
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 2.709809248578135
+      "Weight": 2.5777325418541404
      }
     ]
    }

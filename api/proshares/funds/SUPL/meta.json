@@ -17,8 +17,8 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/SUPL-psdlyhld.csv, as of Sep 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SUPL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-24T02:00:23Z",
-  "secYield": "not published by ProShares for its ETFs"
+  "catalogReadAt": "2026-09-24T04:09:14Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G317",
@@ -77,9 +77,9 @@
   "yield12MText": "2.46%",
   "indicatedYield": 1.8408,
   "indicatedYieldText": "1.84%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead"
+  "secYield": 1.51,
+  "secYieldText": "1.51%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -407,43 +407,43 @@
     "rows": [
      {
       "Company": "DHL AG",
-      "Weight": 5.25636
+      "Weight": 5.131264
      },
      {
       "Company": "UNION PACIFIC CORP",
-      "Weight": 4.762375
-     },
-     {
-      "Company": "NORFOLK SOUTHERN CORP",
-      "Weight": 4.722864
+      "Weight": 4.7531360000000005
      },
      {
       "Company": "CSX CORP",
-      "Weight": 4.6814
+      "Weight": 4.719914
+     },
+     {
+      "Company": "NORFOLK SOUTHERN CORP",
+      "Weight": 4.71621
      },
      {
       "Company": "CANADIAN NATL RAILWAY CO",
-      "Weight": 4.679721
+      "Weight": 4.697557
      },
      {
       "Company": "CANADIAN PACIFIC KANSAS CITY",
-      "Weight": 4.613664
+      "Weight": 4.648242000000001
      },
      {
       "Company": "AMADEUS IT GROUP SA",
-      "Weight": 4.5557609999999995
-     },
-     {
-      "Company": "FEDEX CORP",
-      "Weight": 4.227346
-     },
-     {
-      "Company": "UNITED PARCEL SERVICE-CL B",
-      "Weight": 4.168083
+      "Weight": 4.485218
      },
      {
       "Company": "EXPEDITORS INTL WASH INC",
-      "Weight": 4.147056
+      "Weight": 4.151243
+     },
+     {
+      "Company": "UNITED PARCEL SERVICE-CL B",
+      "Weight": 4.149578
+     },
+     {
+      "Company": "FEDEX CORP",
+      "Weight": 4.142759
      }
     ]
    },
@@ -452,51 +452,51 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 53.557123
+      "Weight": 53.559073999999995
      },
      {
       "Country": "Canada",
-      "Weight": 10.964641
-     },
-     {
-      "Country": "Germany",
-      "Weight": 5.272363
+      "Weight": 11.054072
      },
      {
       "Country": "Denmark",
-      "Weight": 5.249799
+      "Weight": 5.339715
+     },
+     {
+      "Country": "Germany",
+      "Weight": 5.162688
      },
      {
       "Country": "Taiwan",
-      "Weight": 4.773293
+      "Weight": 4.7608
      },
      {
       "Country": "China",
-      "Weight": 4.747937
+      "Weight": 4.746026
      },
      {
       "Country": "Spain",
-      "Weight": 4.569630999999999
+      "Weight": 4.5126859999999995
      },
      {
       "Country": "Australia",
-      "Weight": 3.763926
+      "Weight": 3.7715569999999996
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.5281979999999997
+      "Weight": 2.532806
      },
      {
       "Country": "Japan",
-      "Weight": 2.147767
+      "Weight": 2.150653
      },
      {
       "Country": "South Korea",
-      "Weight": 1.631692
+      "Weight": 1.6128500000000001
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.7936300000000001
+      "Weight": 0.797072
      }
     ]
    },
@@ -505,43 +505,43 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 53.557122788118775
+      "Weight": 53.559073703072016
      },
      {
       "Currency": "CAD",
-      "Weight": 10.964641345892451
+      "Weight": 11.054071830095658
      },
      {
       "Currency": "EUR",
-      "Weight": 10.635624127503824
+      "Weight": 10.472446437705447
      },
      {
       "Currency": "DKK",
-      "Weight": 5.249799347220933
+      "Weight": 5.339715122337542
      },
      {
       "Currency": "TWD",
-      "Weight": 4.773292544331247
+      "Weight": 4.760800226293171
      },
      {
       "Currency": "HKD",
-      "Weight": 4.747936969395505
+      "Weight": 4.746026492394882
      },
      {
       "Currency": "AUD",
-      "Weight": 3.763925876431901
+      "Weight": 3.771556742010731
      },
      {
       "Currency": "CHF",
-      "Weight": 2.52819756548362
+      "Weight": 2.5328059538399414
      },
      {
       "Currency": "JPY",
-      "Weight": 2.147767082669168
+      "Weight": 2.1506533977888287
      },
      {
       "Currency": "KRW",
-      "Weight": 1.6316923529525846
+      "Weight": 1.612850094461787
      }
     ]
    },
@@ -550,23 +550,23 @@
     "rows": [
      {
       "Sector": "Transportation",
-      "Weight": 88.71396629142923
+      "Weight": 88.53237267425975
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 4.555760925580923
+      "Weight": 4.485218431106281
      },
      {
       "Sector": "Commercial & Professional Services",
-      "Weight": 3.003245146626829
+      "Weight": 3.0062193321699593
      },
      {
       "Sector": "Utilities",
-      "Weight": 2.7704394468797164
+      "Weight": 2.738814555335182
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 0.6530681366871879
+      "Weight": 0.6286918984726895
      }
     ]
    }
