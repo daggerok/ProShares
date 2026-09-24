@@ -7343,3 +7343,9 @@ Implementation checkpoint 6/… — fetched and inspected the GitHub Actions pro
 <!-- answer:
 Implementation checkpoint 7/… — `parseFundPage` now reads the **probed** `distributions-sec30DayYield` element into `sec30DayYield` (number or null) and `sec30DayYieldText` (raw official percent or `—`). Offline/previous-metadata fallback preserves the same fields. Unit fixtures contain the NOBL provider HTML with 2.09%, a bond with both SEC yield and a different YTM, a geared page with no element, and an explicit `—` value; no guesswork or YTM substitution. This checkpoint isolates parsing from feed-output changes: `bun run test` 56 pass / 0 fail / 236 assertions, tsc clean, diff check clean. Next checkpoint wires the parsed value into output and filtering.
 -->
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- answer:
+Implementation checkpoint 8/… — the static feed now emits the **official** parsed SEC 30-Day Yield, raw percent text, and per-fund provenance (`metrics.secYield/secYieldText/secYieldKind`, `meta.yields.secYield/secYieldText/secYieldKind`, `meta.source.secYield`). Published values (e.g. NOBL 2.09%) remain distinct from 12-Month Yield and from bond YTM; funds whose pages omit the element keep number `null`, text `—`, and `not published on this fund page (data limitation)`. No generated data was touched yet: this commit changes the updater and tests only. `bun run test` 57 pass / 0 fail / 246 assertions; tsc and diff check clean.
+-->

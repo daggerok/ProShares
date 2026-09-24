@@ -1507,6 +1507,9 @@ export function buildFeed(inputs: {
     : indicated !== null
       ? 'indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)'
       : 'not published by ProShares and no distributions yet (data limitation)';
+  const secYieldKind = page.sec30DayYield === null
+    ? 'not published on this fund page (data limitation)'
+    : 'official ProShares SEC 30-Day Yield (page distributions block)';
   const holdingsCsvHeaders = holdingsHeaders(holdingsRows);
   const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders);
 
@@ -1538,8 +1541,9 @@ export function buildFeed(inputs: {
     dividendYieldText: formatPercentText(effectiveYield),
     dividendYieldBasis: effectiveYieldBasis,
     dividendYieldComputed: publishedYield === null && indicated !== null,
-    secYield: null,
-    secYieldText: '—',
+    secYield: page.sec30DayYield,
+    secYieldText: page.sec30DayYieldText,
+    secYieldKind,
     returnsBasis: 'official ProShares performance file (etf_performance.csv, NAV total return, month-end)',
   };
 
@@ -1611,7 +1615,7 @@ export function buildFeed(inputs: {
       historySource: `official ProShares NAV history file (ByFund/${fund.ticker}-historical_nav.csv)`,
       provider: 'ProShares public fund pages and the official ProShares/ProFunds data host',
       catalogReadAt,
-      secYield: 'not published by ProShares for its ETFs',
+      secYield: secYieldKind,
     },
     identifiers: {
       cusip: page.cusip || null,
@@ -1658,9 +1662,9 @@ export function buildFeed(inputs: {
       yield12MText: page.twelveMonthYieldText,
       indicatedYield: indicated,
       indicatedYieldText: formatPercentText(indicated),
-      secYield: null,
-      secYieldText: '—',
-      secYieldKind: 'ProShares publishes no 30-day SEC yield on its fund pages (data limitation); fixed-income funds publish a Weighted Average Yield to Maturity instead',
+      secYield: page.sec30DayYield,
+      secYieldText: page.sec30DayYieldText,
+      secYieldKind,
     },
     returns: {
       derivedFrom: 'official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside',

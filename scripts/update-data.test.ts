@@ -734,7 +734,7 @@ describe('nasdaq symbol directory', () => {
 // ---------------------------------------------------------------------------
 
 describe('feed assembly', () => {
-  const artifacts = buildFeed({
+  const inputs = {
     fund: parseFinderCatalogPage(STRATEGIC_ROW, 'strategic')[0],
     page: parseFundPage(FUND_PAGE),
     performanceNavMonth: parsePerformanceFile(PERFORMANCE_CSV).get('NOBL|NAV|MONTH'),
@@ -751,7 +751,8 @@ describe('feed assembly', () => {
     splits: parseSplitsFile(SPLITS_CSV).get('NOBL') || [],
     config: testConfig,
     catalogReadAt: '2026-09-21T00:00:00Z',
-  });
+  };
+  const artifacts = buildFeed(inputs);
 
   const entry = artifacts.entry as Record<string, any>;
   const meta = artifacts.meta as Record<string, any>;
@@ -771,8 +772,9 @@ describe('feed assembly', () => {
     expect(entry.distributionFrequency).toBe('Quarterly');
     expect(entry.distributions).toMatchObject({ frequency: 'Quarterly', exDate: 'Jun 24 2026', dividend: '0.3037' });
     expect(entry.metrics.ytd).toBe(12.35);
-    expect(entry.metrics.secYield).toBeNull();
-    expect(entry.metrics.secYieldText).toBe('—');
+    expect(entry.metrics.secYield).toBe(2.09);
+    expect(entry.metrics.secYieldText).toBe('2.09%');
+    expect(entry.metrics.secYieldKind).toContain('official ProShares SEC 30-Day Yield');
     expect(entry.holdings).toBe(3);
     expect(entry.history).toBe(2);
   });
@@ -789,12 +791,27 @@ describe('feed assembly', () => {
     expect(meta.identifiers.isin).toBeNull();
     expect(meta.source.holdingsSource).toContain('psdlyhld.csv');
     expect(meta.source.historySource).toContain('ByFund/NOBL-historical_nav.csv');
-    expect(meta.yields.secYield).toBeNull();
-    expect(meta.yields.secYieldKind).toContain('no 30-day SEC yield');
+    expect(meta.yields.secYield).toBe(2.09);
+    expect(meta.yields.secYieldText).toBe('2.09%');
+    expect(meta.yields.secYieldKind).toContain('official ProShares SEC 30-Day Yield');
+    expect(meta.source.secYield).toBe(meta.yields.secYieldKind);
     expect(meta.distributions.headers).toContain('Record Date');
     expect(meta.holdings.asOf).toBe('2026-09-18');
     expect(meta.documents.summaryProspectus).toContain('ticker=NOBL');
     expect(meta.officialMetrics.splits).toHaveLength(1);
+  });
+
+  test('pages without an SEC-yield element keep honest nulls and explicit provenance', () => {
+    const missing = buildFeed({ ...inputs, page: { ...inputs.page, sec30DayYield: null, sec30DayYieldText: '—' } });
+    const entryWithout = missing.entry as Record<string, any>;
+    const metaWithout = missing.meta as Record<string, any>;
+    expect(entryWithout.metrics.secYield).toBeNull();
+    expect(entryWithout.metrics.secYieldText).toBe('—');
+    expect(entryWithout.metrics.secYieldKind).toBe('not published on this fund page (data limitation)');
+    expect(metaWithout.yields.secYield).toBeNull();
+    expect(metaWithout.yields.secYieldText).toBe('—');
+    expect(metaWithout.yields.secYieldKind).toBe(entryWithout.metrics.secYieldKind);
+    expect(metaWithout.source.secYield).toBe(entryWithout.metrics.secYieldKind);
   });
 
   test('holdings and history rows are keyed by their page headers', () => {
