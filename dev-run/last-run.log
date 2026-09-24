@@ -1,9 +1,23 @@
 Catalog: 504 strategic funds from https://www.proshares.com/our-etfs/find-proshares-etfs
 Catalog: 1053 geared funds from https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs
-Holdings: 173 funds as of Sep 18 2026 from https://accounts.profunds.com/etfdata/psdlyhld.csv
+Holdings: 173 funds as of Sep 23 2026 from https://accounts.profunds.com/etfdata/psdlyhld.csv
 Performance: 942 rows from https://accounts.profunds.com/etfdata/etf_performance.csv
 Splits: 125 symbols from https://accounts.profunds.com/etfdata/etf_splits.csv
-Exchanges: 13262 symbols resolved
-Funds: 173 in catalog, 173 after filters, 173 to process
-Done. updated=173 unchanged=0 filtered=0 skipped=0 failed=0 · funds=173 holdings=20233 history=539909
+Exchanges: 13278 symbols resolved
+Funds: 173 in catalog, 7 after filters, 7 to process
+[   1/7] AGQ …
+[   2/7] BOIL …
+[   3/7] HYHG …
+[   1/7] AGQ ok · NAV $76.85 · AUM $1.39B · TER 0.95% · holdings 6 · history 4480 · 4.4s
+[   4/7] IGHG …
+[   2/7] BOIL ok · NAV $21.61 · AUM $364.37M · TER 0.95% · holdings 3 · history 3764 · 4.4s
+[   5/7] NOBL …
+[   3/7] HYHG ok · NAV $64.71 · AUM $270.18M · TER 0.50% · DivYld 6.66% · Freq Monthly · holdings 244 · history 3356 · 13.6s
+[   6/7] SPCF …
+[   4/7] IGHG ok · NAV $77.84 · AUM $379.48M · TER 0.30% · DivYld 5.10% · Freq Monthly · holdings 187 · history 3239 · 14.1s
+[   7/7] TQQQ …
+[   5/7] NOBL ok · NAV $55.17 · AUM $11.15B · TER 0.35% · DivYld 2.01% · Freq Quarterly · holdings 70 · history 3258 · 14.1s
+[   6/7] SPCF ok · NAV $16.24 · AUM $90.60M · TER 0.95% · DivYld 1.87% · Freq Quarterly · holdings 8 · history 71 · 5.8s
+[   7/7] TQQQ ok · NAV $78.62 · AUM $38.43B · TER 0.82% · DivYld 0.79% · Freq Quarterly · holdings 126 · history 4181 · 14.2s
+Done. updated=7 unchanged=0 filtered=0 skipped=0 failed=0 · funds=173 holdings=20223 history=540428 · 38.4s
 updater exit status: 0

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-24T02:16:41Z",
+ "generatedAt": "2026-09-24T03:47:25Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-09-24T02:00:23Z"
+  "catalogReadAt": "2026-09-24T03:46:47Z"
  },
  "counts": {
   "funds": 173,
@@ -525,6 +525,7 @@
     "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 6,
@@ -1785,6 +1786,7 @@
     "dividendYieldComputed": false,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 3,
@@ -6945,8 +6947,9 @@
     "dividendYieldText": "6.66%",
     "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
     "dividendYieldComputed": false,
-    "secYield": null,
-    "secYieldText": "—",
+    "secYield": 6.85,
+    "secYieldText": "6.85%",
+    "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 244,
@@ -7085,8 +7088,9 @@
     "dividendYieldText": "5.10%",
     "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
     "dividendYieldComputed": false,
-    "secYield": null,
-    "secYieldText": "—",
+    "secYield": 5.42,
+    "secYieldText": "5.42%",
+    "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 187,
@@ -9045,8 +9049,9 @@
     "dividendYieldText": "2.01%",
     "dividendYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
     "dividendYieldComputed": false,
-    "secYield": null,
-    "secYieldText": "—",
+    "secYield": 2.09,
+    "secYieldText": "2.09%",
+    "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 70,
@@ -15609,6 +15614,7 @@
     "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 8,
@@ -18689,6 +18695,7 @@
     "dividendYieldComputed": true,
     "secYield": null,
     "secYieldText": "—",
+    "secYieldKind": "not published on this fund page (data limitation)",
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 126,
