@@ -706,8 +706,10 @@ describe('distribution summary', () => {
 
   test('frequency labels and payment counts', () => {
     expect(normalizeDistributionFrequency('Quarterly')).toBe('Quarterly');
+    expect(normalizeDistributionFrequency('wEEKLy')).toBe('Weekly');
     expect(normalizeDistributionFrequency('Semi-Annual')).toBe('Semi-annually');
     expect(normalizeDistributionFrequency('')).toBe('—');
+    expect(paymentsPerYear('Weekly')).toBe(52);
     expect(paymentsPerYear('Monthly')).toBe(12);
     expect(paymentsPerYear('Irregular')).toBe(1);
     expect(paymentsPerYear('—')).toBeNull();
@@ -715,6 +717,9 @@ describe('distribution summary', () => {
 
   test('indicated yield is annualised from the latest payout only', () => {
     expect(indicatedYield(0.303711, 'Quarterly', 55.66)).toBeCloseTo(2.1825, 3);
+    // IQMM publishes Weekly and the official API records weekly payouts;
+    // its recent $0.069297 distribution is not evidence of a 12-Month Yield.
+    expect(indicatedYield(0.069297, 'Weekly', 100.06)).toBe(3.6013);
     expect(indicatedYield(null, 'Quarterly', 55.66)).toBeNull();
     expect(indicatedYield(0.303711, 'Quarterly', null)).toBeNull();
   });

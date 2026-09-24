@@ -1285,6 +1285,7 @@ export function distributionRowsForCsv(rows: DistributionRow[]): Record<string, 
 }
 
 const FREQUENCY_PAYMENTS: Record<string, number> = {
+  weekly: 52,
   monthly: 12,
   quarterly: 4,
   'semi-annual': 2,
@@ -1300,6 +1301,7 @@ export function normalizeDistributionFrequency(label: unknown): string {
   const raw = cleanText(label);
   const normalized = raw.toLowerCase().replace(/[‐‑‒–—]/g, '-').replace(/\s+/g, ' ');
   if (!normalized) return '—';
+  if (normalized === 'weekly') return 'Weekly';
   if (normalized === 'monthly') return 'Monthly';
   if (normalized === 'quarterly') return 'Quarterly';
   if (['semi-annual', 'semi-annually', 'semiannual'].includes(normalized)) return 'Semi-annually';
