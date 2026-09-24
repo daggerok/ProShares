@@ -1,6 +1,6 @@
-# TEMPORARY development helper: compares the generated feed with the live
+# Kept development helper: compares a sampled generated feed with live
 # ProShares pages (weights, expense ratios, distribution blocks, blank tenors)
-# and commits the report. Deleted before the final delivery.
+# and commits the report. The shipped updater workflow is update-data.yml.
 name: Verify feed against the site
 
 on:

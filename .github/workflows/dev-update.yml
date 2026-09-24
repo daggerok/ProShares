@@ -1,7 +1,6 @@
-# TEMPORARY development helper: dispatches the real updater from a feature
-# branch (workflow_dispatch only reaches the default branch), captures its log
-# in the repo and commits generated api/proshares/** data. Deleted before the
-# final delivery; .github/workflows/update-data.yml is the shipped workflow.
+# Kept development helper: runs the updater from a feature branch with a
+# mandatory TICKERS allowlist, captures its log and commits api/proshares/**.
+# For a full refresh on main, use the shipped update-data.yml workflow instead.
 name: Dev data refresh
 
 on:
