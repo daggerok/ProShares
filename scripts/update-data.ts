@@ -1128,7 +1128,7 @@ export function isOtherAssetsRow(row: HoldingsRow): boolean {
 
 /**
  * Rows the fund pages render without a weight: the residual net-other-assets
- * line and its cash equivalents (Treasury bills and the ProShares outputMoney-market
+ * line and its cash equivalents (Treasury bills and the ProShares money-market
  * fund it holds). Every other position — equities, bonds, futures and swaps —
  * carries the page's own number.
  */
@@ -1814,7 +1814,7 @@ export function buildFeed(inputs: {
       asOf: holdingsAsOf ? toIsoDate(holdingsAsOf) : '—',
       headers: holdingsCsvHeaders,
       source: holdingsSourceLabel,
-      weightNote: 'Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares outputMoney-market fund) carry no weight on the fund pages and stay blank.',
+      weightNote: 'Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.',
     },
     history: {
       pageSize: config.historyPageSize,
