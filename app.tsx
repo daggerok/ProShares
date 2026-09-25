@@ -1116,11 +1116,11 @@ function renderFundsTable(): void {
     el.tableBody.innerHTML = rows.map((fund, index) => {
       const selected = state.selected.has(fund.ticker);
       return `
-        <tr data-ticker="${escapeHtml(fund.ticker)}" class="cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/30 transition border-b border-slate-100 dark:border-slate-700/30 ${selected ? 'selected-row' : ''}">
+        <tr data-ticker="${escapeHtml(fund.ticker)}" class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition border-b border-slate-100 dark:border-slate-700/30 ${selected ? 'selected-row' : ''}">
           <td class="py-2.5 px-4 text-slate-400 dark:text-slate-500 text-xs text-center font-mono">${index + 1}</td>
           <td class="catalog-sticky-col catalog-sticky-use py-2.5 px-4 text-center">
             <div class="inline-flex items-center justify-center gap-1.5">
-              <input data-checkbox="${escapeHtml(fund.ticker)}" type="checkbox" ${selected ? 'checked' : ''} class="w-4 h-4 accent-blue-600" aria-label="Use ${escapeHtml(fund.ticker)}" />
+              <input data-checkbox="${escapeHtml(fund.ticker)}" type="checkbox" ${selected ? 'checked' : ''} class="w-4 h-4 accent-blue-600 cursor-pointer" aria-label="Use ${escapeHtml(fund.ticker)}" />
               <button data-blacklist="${escapeHtml(fund.ticker)}" class="w-4 h-4 rounded text-slate-300 dark:text-slate-600 hover:text-rose-500 dark:hover:text-rose-400 leading-none transition" title="Blacklist ${escapeHtml(fund.ticker)} — hide it from All ETFs">✕</button>
             </div>
           </td>
@@ -1152,13 +1152,13 @@ function renderFundsTable(): void {
     }).join('');
   }
 
-  el.tableBody.querySelectorAll('tr[data-ticker]').forEach((row: any) => {
-    row.addEventListener('click', (event: any) => {
-      const target: any = event.target;
-      if (target.closest('a')) return;
-      if (target.closest('button[data-blacklist]')) return;
-      toggleFund(row.dataset.ticker || '');
+  el.tableBody.querySelectorAll('input[data-checkbox]').forEach((checkbox: any) => {
+    checkbox.addEventListener('change', (event: any) => {
+      event.stopPropagation();
+      const ticker = (checkbox as any).dataset.checkbox || '';
+      toggleFund(ticker);
     });
+    checkbox.addEventListener('click', (event: any) => event.stopPropagation());
   });
 
   el.tableBody.querySelectorAll('button[data-blacklist]').forEach((button: any) => {
@@ -1171,7 +1171,7 @@ function renderFundsTable(): void {
   const selected = state.selected.size;
   const queryText = currentQuery() ? ` matching “${currentQuery()}”` : '';
   const activeText = state.activeFundTicker ? ` Active ETF detail tabs are for ${state.activeFundTicker}.` : '';
-  setStatus(`Showing ${rows.length} ETF${rows.length === 1 ? '' : 's'}${queryText}. Click rows to select ETFs.${selected ? ` ${selected} selected.` : ' No ETFs selected yet.'}${activeText}`, selected ? 'success' : 'info');
+  setStatus(`Showing ${rows.length} ETF${rows.length === 1 ? '' : 's'}${queryText}. Use the checkboxes in the “Use” column to select ETFs.${selected ? ` ${selected} selected.` : ' No ETFs selected yet.'}${activeText}`, selected ? 'success' : 'info');
   el.tickerCount.textContent = `${rows.length} ETFs`;
   renderSubtitle();
 }
