@@ -1,4 +1,5 @@
 #!/usr/bin/env bun
+import { hasOutputFilters, printConfig, printFilter, createReporter } from './update-output.ts';
 /// <reference types="bun" />
 /**
  * @file ProShares static feed updater.
@@ -1852,6 +1853,7 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
 }
 
 export async function main(config: UpdaterConfig = readConfig()): Promise<void> {
+  printConfig('ProShares', config);
   const runStartedAt = Date.now();
   await mkdir(path.join(API_ROOT, 'funds'), { recursive: true });
   const stats: Stats = { updated: 0, unchanged: 0, skipped: 0, failed: 0, filtered: 0 };
@@ -1986,11 +1988,12 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
   if (cursor) candidates = candidates.filter(fund => fund.ticker > cursor);
   if (config.maxFetches > 0) candidates = candidates.slice(0, config.maxFetches);
   stats.skipped += beforeBatch - candidates.length;
-  console.log(`Funds: ${catalog.length} in catalog, ${beforeBatch} after filters, ${candidates.length} to process${cursor ? ` (after cursor ${cursor})` : ''}`);
+  printFilter(beforeBatch, catalog.length, hasOutputFilters(config));
+  const output = createReporter(API_ROOT, candidates.length);
 
   // --- per-fund processing --------------------------------------------------
   const results = await mapWithConcurrency(candidates, config.concurrency, async (fund, index) => {
-    const label = progressLabel(fund.ticker, index + 1, candidates.length);
+    const before = await output.before(fund.ticker);
     const startedAt = Date.now();
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
     const previous = previousFunds[fund.ticker];
@@ -2041,10 +2044,12 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       // Filter checks that need published fund-page values.
       if (config.terRange && !matchesRange(page.expenseRatio, config.terRange)) {
         stats.filtered++;
+        await output.result(fund.ticker, before, 'skipped', 'data filter');
         return;
       }
       if (config.secYieldRange && !matchesRange(page.sec30DayYield, config.secYieldRange)) {
         stats.filtered++;
+        await output.result(fund.ticker, before, 'skipped', 'data filter');
         return;
       }
 
@@ -2057,6 +2062,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.performanceRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.performanceRanges.YTD)
       ) {
         stats.filtered++;
+        await output.result(fund.ticker, before, 'skipped', 'data filter');
         return;
       }
       if (
@@ -2067,6 +2073,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         config.totalReturnRanges.YTD && !matchesReturnRange(performanceNavMonth?.ytd, config.totalReturnRanges.YTD)
       ) {
         stats.filtered++;
+        await output.result(fund.ticker, before, 'skipped', 'data filter');
         return;
       }
 
@@ -2128,6 +2135,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         const effective = resolveDividendYield(page.twelveMonthYield, latestDividend, normalizeDistributionFrequency(page.distributionFrequency), nav).effective;
         if (!matchesRange(effective, config.dividendYieldRange)) {
           stats.filtered++;
+          await output.result(fund.ticker, before, 'skipped', 'data filter');
           return;
         }
       }
@@ -2189,10 +2197,10 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       if (artifacts.changed) stats.updated++;
       else stats.unchanged++;
       previousFunds[fund.ticker] = artifacts.entry;
-      console.log(formatFundProgress(label, artifacts.entry, artifacts.changed, Date.now() - startedAt));
+      await output.result(fund.ticker, before);
     } catch (error) {
       stats.failed++;
-      console.error(`${label} FAILED: ${errorMessage(error)} · ${formatElapsed(Date.now() - startedAt)}`);
+      await output.result(fund.ticker, before, 'failed', errorMessage(error));
       if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
     }
   });
