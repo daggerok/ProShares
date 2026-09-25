@@ -2,7 +2,7 @@
  "ticker": "EQRR",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2305,
+ "totalRows": 2306,
  "headers": [
   "Date",
   "NAV",
@@ -1839,6 +1839,12 @@
    "NAV": "85.09",
    "Shares Outstanding": "440000",
    "Total Net Assets": "37439685.09"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "85.1351",
+   "Shares Outstanding": "440000",
+   "Total Net Assets": "37459529.1351"
   }
  ]
 }

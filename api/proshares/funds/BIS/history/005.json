@@ -2,7 +2,7 @@
  "ticker": "BIS",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4142,
+ "totalRows": 4143,
  "headers": [
   "Date",
   "NAV",
@@ -861,6 +861,12 @@
    "NAV": "11.4793",
    "Shares Outstanding": "165520",
    "Total Net Assets": "1900042.2567"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "11.2732",
+   "Shares Outstanding": "165520",
+   "Total Net Assets": "1865928.7908"
   }
  ]
 }

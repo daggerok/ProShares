@@ -2,7 +2,7 @@
  "ticker": "SAA",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4949,
+ "totalRows": 4950,
  "headers": [
   "Date",
   "NAV",
@@ -5703,6 +5703,12 @@
    "NAV": "32.5383",
    "Shares Outstanding": "795000",
    "Total Net Assets": "25867948.5"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "32.3713",
+   "Shares Outstanding": "795000",
+   "Total Net Assets": "25735183.5"
   }
  ]
 }

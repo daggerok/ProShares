@@ -2,7 +2,7 @@
  "ticker": "UST",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4196,
+ "totalRows": 4197,
  "headers": [
   "Date",
   "NAV",
@@ -1185,6 +1185,12 @@
    "NAV": "38.5824",
    "Shares Outstanding": "355000",
    "Total Net Assets": "13696752"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "38.1567",
+   "Shares Outstanding": "385000",
+   "Total Net Assets": "14690329.5"
   }
  ]
 }

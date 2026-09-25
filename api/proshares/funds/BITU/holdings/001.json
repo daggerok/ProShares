@@ -2,7 +2,7 @@
  "ticker": "BITU",
  "page": 1,
  "pageSize": 250,
- "totalRows": 10,
+ "totalRows": 9,
  "headers": [
   "Name",
   "Ticker",
@@ -14,93 +14,84 @@
  ],
  "rows": [
   {
-   "Name": "BITCOIN TRUST (IBIT) SWAP BARCLAYS CAPITAL",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "41.0438923512",
-   "Market Value": "—",
-   "Shares Held": "5270302",
-   "Exposure Value": "252342059.76"
-  },
-  {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "36.0088210519",
+   "Weight": "46.9752020201",
    "Market Value": "—",
-   "Shares Held": "521",
-   "Exposure Value": "221385925"
+   "Shares Held": "678",
+   "Exposure Value": "287844900"
+  },
+  {
+   "Name": "BITCOIN TRUST (IBIT) SWAP BARCLAYS CAPITAL",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "41.1210658598",
+   "Market Value": "—",
+   "Shares Held": "5270302",
+   "Exposure Value": "251973138.62"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP JPMORGAN",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "26.9992669411",
+   "Weight": "27.0500327930",
    "Market Value": "—",
    "Shares Held": "3466881",
-   "Exposure Value": "165994262.28"
+   "Exposure Value": "165751580.61"
   },
   {
    "Name": "BITCOIN TRUST SWAP (FBTC) CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "24.0445327717",
+   "Weight": "24.0692747368",
    "Market Value": "—",
    "Shares Held": "2009082",
-   "Exposure Value": "147828253.56"
+   "Exposure Value": "147486709.62"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP GOLDMAN",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "19.0318656855",
+   "Weight": "19.0676506895",
    "Market Value": "—",
    "Shares Held": "2443815",
-   "Exposure Value": "117009862.2"
+   "Exposure Value": "116838795.15"
   },
   {
    "Name": "BITCOIN TRUST (FBTC) SWAP Cantor Fitzgerald",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "15.3300798115",
+   "Weight": "15.3458545534",
    "Market Value": "—",
    "Shares Held": "1280931",
-   "Exposure Value": "94250902.98"
+   "Exposure Value": "94033144.71"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP MAREX",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "14.5516169327",
+   "Weight": "14.5789778693",
    "Market Value": "—",
    "Shares Held": "1868522",
-   "Exposure Value": "89464833.36"
+   "Exposure Value": "89334036.82"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP Nomura",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "11.8248777302",
+   "Weight": "11.8471116668",
    "Market Value": "—",
    "Shares Held": "1518391",
-   "Exposure Value": "72700561.08"
-  },
-  {
-   "Name": "CME BITCOIN FUT DIGITAL ASSETS 25/SEP/2026 BTCU6 CURNCY",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "10.9946116395",
-   "Market Value": "—",
-   "Shares Held": "160",
-   "Exposure Value": "67596000"
+   "Exposure Value": "72594273.71"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "614810256.3",
-   "Shares Held": "614810256.3",
+   "Market Value": "612759259.4",
+   "Shares Held": "612759259.4",
    "Exposure Value": "—"
   }
  ]

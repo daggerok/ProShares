@@ -2,7 +2,7 @@
  "ticker": "ETHD",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 5,
  "headers": [
   "Name",
   "Ticker",
@@ -14,57 +14,48 @@
  ],
  "rows": [
   {
-   "Name": "ETHEREUM TRUST (ETHA) SWAP MAREX",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "-56.6858892360",
-   "Market Value": "—",
-   "Shares Held": "-1638598",
-   "Exposure Value": "-33116065.58"
-  },
-  {
    "Name": "CME ETHER FUTURE DIGITAL ASSETS 30/OCT/2026 DCRV6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-51.8976295696",
+   "Weight": "-69.0371197873",
    "Market Value": "—",
-   "Shares Held": "-225",
-   "Exposure Value": "-30318750"
+   "Shares Held": "-294",
+   "Exposure Value": "-39851700"
+  },
+  {
+   "Name": "ETHEREUM TRUST (ETHA) SWAP MAREX",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-57.7092740511",
+   "Market Value": "—",
+   "Shares Held": "-1638598",
+   "Exposure Value": "-33312697.34"
   },
   {
    "Name": "ETHEREUM TRUST (ETHA) SWAP GOLDMAN",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-37.9268706743",
+   "Weight": "-38.6115875246",
    "Market Value": "—",
    "Shares Held": "-1096338",
-   "Exposure Value": "-22156990.98"
+   "Exposure Value": "-22288551.54"
   },
   {
    "Name": "ETHEREUM TRUST (ETHA) SWAP Nomura",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-33.0027753270",
+   "Weight": "-33.5985944908",
    "Market Value": "—",
    "Shares Held": "-953999",
-   "Exposure Value": "-19280319.79"
-  },
-  {
-   "Name": "CME ETHER FUTURE DIGITAL ASSETS 25/SEP/2026 DCRU6 CURNCY",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "-21.3117278830",
-   "Market Value": "—",
-   "Shares Held": "-93",
-   "Exposure Value": "-12450375"
+   "Exposure Value": "-19394799.67"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "58420298.29",
-   "Shares Held": "58420298.29",
+   "Market Value": "57725032.74",
+   "Shares Held": "57725032.74",
    "Exposure Value": "—"
   }
  ]

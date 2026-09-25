@@ -2,7 +2,7 @@
  "ticker": "FXP",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4750,
+ "totalRows": 4751,
  "headers": [
   "Date",
   "NAV",
@@ -4509,6 +4509,12 @@
    "NAV": "21.4534",
    "Shares Outstanding": "265920",
    "Total Net Assets": "5704802.3144"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "21.6083",
+   "Shares Outstanding": "255920",
+   "Total Net Assets": "5529909.7028"
   }
  ]
 }
