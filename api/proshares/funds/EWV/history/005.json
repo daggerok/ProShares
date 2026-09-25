@@ -2,7 +2,7 @@
  "ticker": "EWV",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4750,
+ "totalRows": 4751,
  "headers": [
   "Date",
   "NAV",
@@ -4509,6 +4509,12 @@
    "NAV": "16.0186",
    "Shares Outstanding": "269930",
    "Total Net Assets": "4323852.6422"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "16.4311",
+   "Shares Outstanding": "249930",
+   "Total Net Assets": "4106575.5297"
   }
  ]
 }

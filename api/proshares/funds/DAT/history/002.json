@@ -2,7 +2,7 @@
  "ticker": "DAT",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1252,
+ "totalRows": 1253,
  "headers": [
   "Date",
   "NAV",
@@ -1521,6 +1521,12 @@
    "NAV": "52.1906",
    "Shares Outstanding": "100000",
    "Total Net Assets": "5219112.1906"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "51.6972",
+   "Shares Outstanding": "100000",
+   "Total Net Assets": "5169771.6972"
   }
  ]
 }

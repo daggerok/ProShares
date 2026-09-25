@@ -2,7 +2,7 @@
  "ticker": "TOLZ",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3144,
+ "totalRows": 3145,
  "headers": [
   "Date",
   "NAV",
@@ -873,6 +873,12 @@
    "NAV": "55.7693",
    "Shares Outstanding": "2950000",
    "Total Net Assets": "164519490.7693"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "55.419",
+   "Shares Outstanding": "2900000",
+   "Total Net Assets": "160715155.419"
   }
  ]
 }

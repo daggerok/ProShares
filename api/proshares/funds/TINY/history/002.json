@@ -2,7 +2,7 @@
  "ticker": "TINY",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1233,
+ "totalRows": 1234,
  "headers": [
   "Date",
   "NAV",
@@ -1407,6 +1407,12 @@
    "NAV": "76.3198",
    "Shares Outstanding": "175000",
    "Total Net Assets": "13356041.3198"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "76.543",
+   "Shares Outstanding": "175000",
+   "Total Net Assets": "13395101.543"
   }
  ]
 }

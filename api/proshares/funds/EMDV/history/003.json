@@ -2,7 +2,7 @@
  "ticker": "EMDV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2682,
+ "totalRows": 2683,
  "headers": [
   "Date",
   "NAV",
@@ -4101,6 +4101,12 @@
    "NAV": "46.5318",
    "Shares Outstanding": "155000",
    "Total Net Assets": "7212475.5318"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "46.1474",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "7152893.1474"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "TINT",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1233,
+ "totalRows": 1234,
  "headers": [
   "Date",
   "NAV",
@@ -1407,6 +1407,12 @@
    "NAV": "38.5159",
    "Shares Outstanding": "50000",
    "Total Net Assets": "1925833.5159"
+  },
+  {
+   "Date": "Sep 24 2026",
+   "NAV": "38.1523",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "1907653.1523"
   }
  ]
 }
