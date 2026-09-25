@@ -1155,7 +1155,7 @@ function renderFundsTable(): void {
   el.tableBody.querySelectorAll('input[data-checkbox]').forEach((checkbox: any) => {
     checkbox.addEventListener('change', (event: any) => {
       event.stopPropagation();
-      const ticker = (checkbox as any).dataset.checkbox || '';
+      const ticker = checkbox.dataset.checkbox || '';
       toggleFund(ticker);
     });
     checkbox.addEventListener('click', (event: any) => event.stopPropagation());
@@ -1629,7 +1629,7 @@ function renderSubtitle(text?: string): void {
   const countsText = state.counts
     ? `${state.counts.funds} ETFs · ${(state.counts.holdings || 0).toLocaleString('en-US')} holdings rows · ${(state.counts.history || 0).toLocaleString('en-US')} history rows`
     : '';
-  const base = text ? String(text) : 'Search ProShares ETFs, select rows, then use the Watchlist tab.';
+  const base = text ? String(text) : 'Search ProShares ETFs, select ETFs via the “Use” checkbox, then use the Watchlist tab.';
   // Selected ETF count and clickable ticker badges (active fund highlighted);
   // re-rendered by every selection writer so the count never lags.
   const selectedCount = state.selected.size;
