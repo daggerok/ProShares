@@ -8,6 +8,9 @@ import { fileURLToPath as outputFileURLToPath } from 'node:url';
 /** Presentation only: no requests, writes, filtering, or changes to updater state. */
 
 const outputClean = (value: unknown): string => String(value ?? 'null').replace(/[\r\n\t]+/g, ' ');
+/** Presentation only: per-fund retry and fallback notices are printed when VERBOSE is enabled. */
+const outputVerbose = (): boolean => /^(1|true|yes|on)$/i.test((globalThis as any).process?.env?.VERBOSE ?? '');
+function outputNote(message: string): void { if (outputVerbose()) console.warn(message); }
 /** Names are the canonical environment knobs, not internal parser properties. */
 function outputConfigEntries(config: Record<string, any>): [string, string][] {
   const values = new Map<string, string>();
@@ -36,7 +39,8 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
   });
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
-  console.log(`[ config ] ${brand} updater:\n${outputConfigEntries(config).map(([key, value]) => `            ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
+  console.log(`[ config ] ${brand} updater:\n${entries.map(([key, value]) => `            ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -88,19 +92,27 @@ function outputMoney(value: any): string {
 function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
   const width = Math.max(2, String(total).length);
   const metrics = data.metrics ?? {};
+  // Presentation only. Keep valid zero/false values; omit unavailable fields.
+  // outputMoney returns the string 'null' for an unavailable monetary value.
+  const field = (key: string, value: unknown): string =>
+    value === null || value === undefined || value === 'null' ? '' : `${key}=${outputClean(value)}`;
+  const sources = [
+    field('official', data.officialHistoryCount),
+    field('yahoo', data.yahooHistoryCount),
+  ].filter(part => part !== '').join(' ');
   const detail = [
-    `port=${outputClean(data.portId ?? data.portfolioId)}`,
-    `history=${outputClean(outputCount(data.history ?? data.historyCount))}`,
-    `(official=${outputClean(data.officialHistoryCount)} yahoo=${outputClean(data.yahooHistoryCount)})`,
-    `holdings=${outputClean(outputCount(data.holdings ?? data.holdingsCount))}`,
-    `divs=${outputClean(outputCount(data.worksheets?.Distributions ?? data.distributions))}`,
-    `netAssets=${outputMoney(data.netAssets ?? data.aum)}`,
-    `total=${outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)}`,
-    `div=${outputClean(outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield))}`,
-    `sec=${outputClean(outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield))}`,
-    `wp=${outputClean(data.workplaceRaw)}`,
-  ].join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)} ${detail}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+    field('port', data.portId ?? data.portfolioId),
+    field('history', outputCount(data.history ?? data.historyCount)),
+    sources ? `(${sources})` : '',
+    field('holdings', outputCount(data.holdings ?? data.holdingsCount)),
+    field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
+    field('netAssets', outputMoney(data.netAssets ?? data.aum)),
+    field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
+    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('wp', data.workplaceRaw),
+  ].filter(part => part !== '').join(' ');
+  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -714,7 +726,7 @@ export async function fetchText(
     if (httpFailureStatus !== null && !RETRY_STATUS.has(httpFailureStatus)) throw new Error(`${label}: ${lastError}`);
     if (attempt === config.maxRetries) throw new Error(`${label}: ${lastError}`);
     const backoff = 15_000 * (attempt + 1);
-    console.warn(formatRetry(label, lastError, Math.round(backoff / 1000), attempt + 1, config.maxRetries));
+    outputNote(formatRetry(label, lastError, Math.round(backoff / 1000), attempt + 1, config.maxRetries));
     await sleep(backoff);
   }
   throw new Error(`${label}: ${lastError}`);
@@ -1954,7 +1966,7 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
       const parsed = parseFinderCatalogPage(html, page.kind);
       if (!parsed.length) throw new Error(`no fund rows found on ${page.url}`);
       funds.push(...parsed);
-      console.log(`Catalog: ${parsed.length} ${page.kind} funds from ${page.url}`);
+      console.log(`[ catalog  ] ${parsed.length} ${page.kind} funds from ${page.url}`);
     } catch (error) {
       console.error(`Catalog: ${page.kind} finder page failed — ${errorMessage(error)}`);
       stats.failed++;
@@ -1999,7 +2011,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
       inceptionDateText: String(fund.inceptionDate || ''),
     }));
     if (!fallback.length) throw new Error('catalog unavailable and no previously published index.json to fall back to');
-    console.warn(`Catalog: falling back to the previously published catalog (${fallback.length} funds)`);
+    console.warn(`[ catalog  ] falling back to the previously published catalog (${fallback.length} funds)`);
     catalog = fallback;
   }
 
@@ -2016,7 +2028,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
     try {
       const text = await fetchText(HOLDINGS_ALL_URL, browserHeaders(), config, 'holdings file', 'psdlyhld.csv');
       holdingsFile = parseHoldingsFile(text);
-      console.log(`Holdings: ${holdingsFile.funds.size} funds as of ${holdingsFile.asOf} from ${HOLDINGS_ALL_URL}`);
+      console.log(`[ holdings ] ${holdingsFile.funds.size} funds as of ${holdingsFile.asOf} from ${HOLDINGS_ALL_URL}`);
     } catch (error) {
       console.error(`Holdings file failed — ${errorMessage(error)}`);
       stats.failed++;
@@ -2024,7 +2036,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
     try {
       const text = await fetchText(PERFORMANCE_URL, browserHeaders(), config, 'performance file', 'etf_performance.csv');
       performance = parsePerformanceFile(text);
-      console.log(`Performance: ${performance.size} rows from ${PERFORMANCE_URL}`);
+      console.log(`[ perf     ] ${performance.size} rows from ${PERFORMANCE_URL}`);
     } catch (error) {
       console.error(`Performance file failed — ${errorMessage(error)}`);
       stats.failed++;
@@ -2032,7 +2044,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
     try {
       const text = await fetchText(SPLITS_URL, browserHeaders(), config, 'splits file', 'etf_splits.csv');
       splits = parseSplitsFile(text);
-      console.log(`Splits: ${splits.size} symbols from ${SPLITS_URL}`);
+      console.log(`[ splits   ] ${splits.size} symbols from ${SPLITS_URL}`);
     } catch (error) {
       console.error(`Splits file failed — ${errorMessage(error)}`);
       stats.failed++;
@@ -2049,7 +2061,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         if (merged.size) {
           exchanges = merged;
           exchangeSource = 'Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)';
-          console.log(`Exchanges: ${exchanges.size} symbols resolved`);
+          console.log(`[ exchange ] ${exchanges.size} symbols resolved`);
         }
       } catch (error) {
         console.error(`Symbol directory failed — ${errorMessage(error)}`);
@@ -2199,7 +2211,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           const text = await fetchText(navHistoryUrl(fund.ticker), browserHeaders(), config, `${fund.ticker} NAV history`, '');
           navRows = parseNavHistoryFile(text, fund.ticker);
         } catch (error) {
-          console.warn(`${fund.ticker}: per-fund NAV history failed (${errorMessage(error)}); using the bulk file`);
+          outputNote(`${fund.ticker}: per-fund NAV history failed (${errorMessage(error)}); using the bulk file`);
         }
       }
       if (!navRows.length) {
@@ -2231,7 +2243,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
               emptyYears++;
             }
           } catch (error) {
-            console.warn(`${fund.ticker}: distributions ${year} failed — ${errorMessage(error)}`);
+            outputNote(`${fund.ticker}: distributions ${year} failed — ${errorMessage(error)}`);
             emptyYears++;
           }
           if (emptyYears >= 2) break;
@@ -2275,7 +2287,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
           holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
         }
       } catch (error) {
-        console.warn(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
+        outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
       }
       const splitRows = splits.get(fund.ticker) || [];
       const artifacts = buildFeed({
@@ -2368,7 +2380,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
   console.log(
     `Done. updated=${stats.updated} unchanged=${stats.unchanged} filtered=${stats.filtered} skipped=${stats.skipped} failed=${stats.failed} · funds=${counts.funds} holdings=${counts.holdings} history=${counts.history} · ${formatElapsed(Date.now() - runStartedAt)}`,
   );
-  if (stats.failed > 0) console.warn(`${stats.failed} step(s) failed; previously published files were kept for those funds.`);
+  if (stats.failed > 0) console.warn(`[ done     ] ${stats.failed} step(s) failed; previously published files were kept for those funds.`);
 }
 
 if (import.meta.main) {
