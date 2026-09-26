@@ -2,7 +2,7 @@
  "ticker": "IGHG",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3240,
+ "totalRows": 3241,
  "headers": [
   "Date",
   "NAV",
@@ -1449,6 +1449,12 @@
    "NAV": "77.7477",
    "Shares Outstanding": "4875000",
    "Total Net Assets": "379020115.2477"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "77.625",
+   "Shares Outstanding": "4925000",
+   "Total Net Assets": "382303202.625"
   }
  ]
 }

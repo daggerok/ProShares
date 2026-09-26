@@ -2,7 +2,7 @@
  "ticker": "NVDB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 264,
+ "totalRows": 265,
  "headers": [
   "Date",
   "NAV",
@@ -1593,6 +1593,12 @@
    "NAV": "33.0072",
    "Shares Outstanding": "180000",
    "Total Net Assets": "5941329.0072"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "33.113",
+   "Shares Outstanding": "170000",
+   "Total Net Assets": "5629243.113"
   }
  ]
 }

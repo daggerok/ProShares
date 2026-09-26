@@ -2,7 +2,7 @@
  "ticker": "BUYB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 98,
+ "totalRows": 99,
  "headers": [
   "Date",
   "NAV",
@@ -597,6 +597,12 @@
    "NAV": "41.4754",
    "Shares Outstanding": "610000",
    "Total Net Assets": "25300035.4754"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "41.7225",
+   "Shares Outstanding": "610000",
+   "Total Net Assets": "25450766.7225"
   }
  ]
 }
