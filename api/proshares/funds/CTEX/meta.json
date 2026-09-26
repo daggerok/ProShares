@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=CTEX&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/CTEX-psdlyhld.csv, as of Sep 24 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/CTEX-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/CTEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-25T06:22:26Z",
+  "catalogReadAt": "2026-09-26T01:25:15Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$30.79",
-  "value": 30.79,
-  "asOfDate": "Sep 24 2026"
+  "display": "$31.13",
+  "value": 31.13,
+  "asOfDate": "Sep 25 2026"
  },
  "marketPrice": {
-  "display": "$30.65",
-  "value": 30.65,
-  "asOfDate": "Sep 24 2026"
+  "display": "$31.07",
+  "value": 31.07,
+  "asOfDate": "Sep 25 2026"
  },
  "premiumDiscount": {
-  "display": "-0.45%",
-  "value": -0.4547,
+  "display": "-0.19%",
+  "value": -0.1927,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$4,617,862",
-  "value": 4617855.7855,
-  "asOfDate": "Sep 24 2026",
+  "display": "$4,669,711",
+  "value": 4669711.1312,
+  "asOfDate": "Sep 25 2026",
   "source": "official ProShares NAV history file (Assets Under Management)"
  },
  "yields": {
@@ -75,8 +75,8 @@
   "distributionYieldText": null,
   "yield12M": 2.33,
   "yield12MText": "2.33%",
-  "indicatedYield": 0.6816,
-  "indicatedYieldText": "0.68%",
+  "indicatedYield": 0.6741,
+  "indicatedYieldText": "0.67%",
   "secYield": 0.05,
   "secYieldText": "0.05%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -265,8 +265,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 31,
-  "asOfDate": "Sep 24 2026",
-  "asOf": "2026-09-24",
+  "asOfDate": "Sep 25 2026",
+  "asOf": "2026-09-25",
   "headers": [
    "Name",
    "Ticker",
@@ -275,7 +275,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/CTEX-psdlyhld.csv, as of Sep 24 2026)",
+  "source": "official ProShares daily holdings download (ByFund/CTEX-psdlyhld.csv, as of Sep 25 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -283,9 +283,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1253,
-  "asOf": "Sep 24 2026",
-  "asOfDate": "Sep 24 2026",
+  "totalRows": 1254,
+  "asOf": "Sep 25 2026",
+  "asOfDate": "Sep 25 2026",
   "headers": [
    "Date",
    "NAV",

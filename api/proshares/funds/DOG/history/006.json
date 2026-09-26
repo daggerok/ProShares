@@ -2,7 +2,7 @@
  "ticker": "DOG",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5099,
+ "totalRows": 5100,
  "headers": [
   "Date",
   "NAV",
@@ -603,6 +603,12 @@
    "NAV": "22.0676",
    "Shares Outstanding": "4973760",
    "Total Net Assets": "109758835.838"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "21.8737",
+   "Shares Outstanding": "5173760",
+   "Total Net Assets": "113169164.7435"
   }
  ]
 }

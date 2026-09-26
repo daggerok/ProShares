@@ -2,7 +2,7 @@
  "ticker": "BETE",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 750,
+ "totalRows": 751,
  "headers": [
   "Date",
   "NAV",
@@ -4509,6 +4509,12 @@
    "NAV": "41.5081",
    "Shares Outstanding": "230000",
    "Total Net Assets": "9546863"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "41.3477",
+   "Shares Outstanding": "230000",
+   "Total Net Assets": "9509971"
   }
  ]
 }

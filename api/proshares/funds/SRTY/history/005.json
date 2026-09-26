@@ -2,7 +2,7 @@
  "ticker": "SRTY",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4182,
+ "totalRows": 4183,
  "headers": [
   "Date",
   "NAV",
@@ -1101,6 +1101,12 @@
    "NAV": "25.6741",
    "Shares Outstanding": "2789300",
    "Total Net Assets": "71612792.8041"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "25.6454",
+   "Shares Outstanding": "2739300",
+   "Total Net Assets": "70250469.8654"
   }
  ]
 }

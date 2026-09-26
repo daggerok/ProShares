@@ -2,7 +2,7 @@
  "ticker": "BITU",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 624,
+ "totalRows": 625,
  "headers": [
   "Date",
   "NAV",
@@ -3753,6 +3753,12 @@
    "NAV": "15.537",
    "Shares Outstanding": "39440000",
    "Total Net Assets": "612779295.537"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "15.3626",
+   "Shares Outstanding": "39520000",
+   "Total Net Assets": "607129967.3626"
   }
  ]
 }

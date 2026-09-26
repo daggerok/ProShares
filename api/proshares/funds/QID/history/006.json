@@ -2,7 +2,7 @@
  "ticker": "QID",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5084,
+ "totalRows": 5085,
  "headers": [
   "Date",
   "NAV",
@@ -513,6 +513,12 @@
    "NAV": "13.1103",
    "Shares Outstanding": "17648900",
    "Total Net Assets": "231382413.0009"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "13.0101",
+   "Shares Outstanding": "16398900",
+   "Total Net Assets": "213351367.9203"
   }
  ]
 }

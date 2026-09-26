@@ -2,7 +2,7 @@
  "ticker": "SQQQ",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4182,
+ "totalRows": 4183,
  "headers": [
   "Date",
   "NAV",
@@ -1101,6 +1101,12 @@
    "NAV": "34.1344",
    "Shares Outstanding": "64151200",
    "Total Net Assets": "2189762823.6832"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "33.7447",
+   "Shares Outstanding": "66001200",
+   "Total Net Assets": "2227190794.8741"
   }
  ]
 }

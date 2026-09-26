@@ -2,7 +2,7 @@
  "ticker": "FB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 316,
+ "totalRows": 317,
  "headers": [
   "Date",
   "NAV",
@@ -1905,6 +1905,12 @@
    "NAV": "45.5183",
    "Shares Outstanding": "60000",
    "Total Net Assets": "2731143.5183"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "45.5668",
+   "Shares Outstanding": "60000",
+   "Total Net Assets": "2734053.5668"
   }
  ]
 }

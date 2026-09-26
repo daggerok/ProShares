@@ -2,7 +2,7 @@
  "ticker": "SPCF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 72,
+ "totalRows": 73,
  "headers": [
   "Date",
   "NAV",
@@ -441,6 +441,12 @@
    "NAV": "16.157",
    "Shares Outstanding": "5460000",
    "Total Net Assets": "88217220"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "16.2736",
+   "Shares Outstanding": "5480000",
+   "Total Net Assets": "89179328"
   }
  ]
 }

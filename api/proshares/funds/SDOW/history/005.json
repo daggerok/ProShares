@@ -2,7 +2,7 @@
  "ticker": "SDOW",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4182,
+ "totalRows": 4183,
  "headers": [
   "Date",
   "NAV",
@@ -1101,6 +1101,12 @@
    "NAV": "25.3922",
    "Shares Outstanding": "5997440",
    "Total Net Assets": "152288221.3602"
+  },
+  {
+   "Date": "Sep 25 2026",
+   "NAV": "24.7155",
+   "Shares Outstanding": "5997440",
+   "Total Net Assets": "148229753.0355"
   }
  ]
 }
