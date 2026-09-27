@@ -1,6 +1,6 @@
 # ProShares
 
-ProShares ETF holdings to Watchlist. A single-file client-side tool reading the generated `./api/proshares` static feed (the official ProShares ETF finder, per-fund product pages and distribution summary, plus the official daily holdings, NAV history, performance and split files) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist aggregation, ticker copy and CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
+One of the app's features lets you select ProShares ETFs in the Watchlist and aggregate their holdings to see how often each ticker appears across the selected funds. Repeated holdings make overlapping exposure visible: the more selected funds include a ticker, the greater its potential influence on the portfolio; gains in that holding may help, while declines may hurt, and actual impact also depends on each fund's position size. A single-file client-side tool reading the generated `./api/proshares` static feed (the official ProShares ETF finder, per-fund product pages and distribution summary, plus the official daily holdings, NAV history, performance and split files) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist aggregation, ticker copy and CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
 
 ## Using Bun
 
