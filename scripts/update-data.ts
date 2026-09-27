@@ -657,14 +657,24 @@ export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-let lastRequestStartedAt = 0;
+// One pacing lane per concurrent worker. A single shared gate capped total
+// throughput at one request per REQUEST_SLEEP no matter how high CONCURRENCY
+// was set; CONCURRENCY workers now each get their own paced lane, so
+// concurrency actually multiplies throughput as documented instead of only
+// overlapping wait time. Resized lazily from config.concurrency since this
+// function already receives config on every call.
+let requestLanes: number[] = [0];
 
 export async function paceRequests(config: UpdaterConfig): Promise<void> {
   const gap = Math.max(0, config.requestSleep) * 1000;
+  const laneCount = Math.max(1, config.concurrency);
+  if (requestLanes.length !== laneCount) requestLanes = new Array(laneCount).fill(0);
+  let lane = 0;
+  for (let i = 1; i < requestLanes.length; i++) if (requestLanes[i] < requestLanes[lane]) lane = i;
   const now = Date.now();
-  const wait = lastRequestStartedAt + gap - now;
+  const wait = requestLanes[lane] + gap - now;
   if (wait > 0) await sleep(wait);
-  lastRequestStartedAt = Date.now();
+  requestLanes[lane] = Date.now();
 }
 
 export function browserHeaders(): Record<string, string> {
