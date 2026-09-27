@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/PAWZ-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PAWZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -514,43 +514,43 @@
     "rows": [
      {
       "Company": "IDEXX LABORATORIES INC",
-      "Weight": 10.494737
+      "Weight": 10.590841
      },
      {
       "Company": "ZOETIS INC",
-      "Weight": 9.935183
+      "Weight": 10.022854
      },
      {
       "Company": "FRESHPET INC",
-      "Weight": 9.437901
+      "Weight": 9.352062
      },
      {
       "Company": "CHEWY INC - CLASS A",
-      "Weight": 9.246794
+      "Weight": 9.200801
      },
      {
       "Company": "VIRBAC SA",
-      "Weight": 7.3485640000000005
-     },
-     {
-      "Company": "OIL-DRI CORP OF AMERICA",
-      "Weight": 4.967812
+      "Weight": 7.380747
      },
      {
       "Company": "MERCK & CO. INC.",
-      "Weight": 4.773379
+      "Weight": 4.7883830000000005
      },
      {
-      "Company": "NESTLE SA-REG",
-      "Weight": 4.594863
+      "Company": "OIL-DRI CORP OF AMERICA",
+      "Weight": 4.742521
      },
      {
       "Company": "PETS AT HOME GROUP PLC",
-      "Weight": 4.501585
+      "Weight": 4.592637
+     },
+     {
+      "Company": "NESTLE SA-REG",
+      "Weight": 4.536764
      },
      {
       "Company": "PET VALU HOLDINGS LTD",
-      "Weight": 4.435639
+      "Weight": 4.474538
      }
     ]
    },
@@ -559,35 +559,35 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 66.117581
+      "Weight": 66.022001
      },
      {
       "Country": "United Kingdom",
-      "Weight": 8.828539000000001
+      "Weight": 8.873584
      },
      {
       "Country": "France",
-      "Weight": 7.3902399999999995
+      "Weight": 7.42222
      },
      {
       "Country": "Switzerland",
-      "Weight": 4.620922
+      "Weight": 4.562256
      },
      {
       "Country": "Canada",
-      "Weight": 4.460795
+      "Weight": 4.499681
      },
      {
       "Country": "Sweden",
-      "Weight": 3.9365539999999997
+      "Weight": 3.961674
      },
      {
       "Country": "Japan",
-      "Weight": 2.595219
+      "Weight": 2.618089
      },
      {
       "Country": "Thailand",
-      "Weight": 2.050151
+      "Weight": 2.040496
      }
     ]
    },
@@ -596,35 +596,35 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 66.11758095758124
+      "Weight": 66.02200111503626
      },
      {
       "Currency": "GBP",
-      "Weight": 8.82853933983913
+      "Weight": 8.873584020202156
      },
      {
       "Currency": "EUR",
-      "Weight": 7.390239752456402
+      "Weight": 7.422219588670741
      },
      {
       "Currency": "CHF",
-      "Weight": 4.620922271727183
+      "Weight": 4.562255689708701
      },
      {
       "Currency": "CAD",
-      "Weight": 4.460794517040667
+      "Weight": 4.49968088956516
      },
      {
       "Currency": "SEK",
-      "Weight": 3.9365536262968077
+      "Weight": 3.9616741948251275
      },
      {
       "Currency": "JPY",
-      "Weight": 2.5952187657220454
+      "Weight": 2.618088900461506
      },
      {
       "Currency": "THB",
-      "Weight": 2.0501507693365166
+      "Weight": 2.0404956015303464
      }
     ]
    },
@@ -633,27 +633,27 @@
     "rows": [
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 22.5370466883481
+      "Weight": 22.669967966397305
      },
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 21.242384646384846
+      "Weight": 21.318119829144724
      },
      {
       "Sector": "Health Care Equipment & Servic",
-      "Weight": 21.241913458428236
+      "Weight": 21.287371724738758
      },
      {
       "Sector": "Food, Beverage & Tobacco",
-      "Weight": 17.551968469967452
+      "Weight": 17.363119013039146
      },
      {
       "Sector": "Household & Personal Products",
-      "Weight": 10.390842450510194
+      "Weight": 10.183043963379868
      },
      {
       "Sector": "Insurance",
-      "Weight": 6.471912159115252
+      "Weight": 6.619615841010584
      }
     ]
    }

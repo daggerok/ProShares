@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MRGR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -689,27 +689,27 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 70.328783
+      "Weight": 70.385138
      },
      {
       "Country": "United Kingdom",
-      "Weight": 16.095126
+      "Weight": 16.138157
      },
      {
       "Country": "Other",
-      "Weight": 5.2892399999999995
+      "Weight": 5.29765
      },
      {
       "Country": "Norway",
-      "Weight": 3.135215
+      "Weight": 3.0272170000000003
      },
      {
       "Country": "Australia",
-      "Weight": 2.6676990000000003
+      "Weight": 2.6740489999999997
      },
      {
       "Country": "Germany",
-      "Weight": 2.483937
+      "Weight": 2.477789
      }
     ]
    },
@@ -718,27 +718,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 73.03789460989826
+      "Weight": 73.09889320440433
      },
      {
       "Currency": "GBP",
-      "Weight": 10.559678788299784
+      "Weight": 10.601054960901712
      },
      {
       "Currency": "EUR",
-      "Weight": 5.310271903026272
+      "Weight": 5.301135833568139
      },
      {
       "Currency": "Other",
-      "Weight": 5.289240067096684
+      "Weight": 5.297650152387107
      },
      {
       "Currency": "NOK",
-      "Weight": 3.135215488643665
+      "Weight": 3.027217027712845
      },
      {
       "Currency": "AUD",
-      "Weight": 2.667699143035336
+      "Weight": 2.674048821025861
      }
     ]
    }

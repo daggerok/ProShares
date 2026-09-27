@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/REGL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -633,11 +633,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.316134
+      "Weight": 98.35078200000001
      },
      {
       "Country": "Bermuda",
-      "Weight": 1.6838659999999999
+      "Weight": 1.6492179999999999
      }
     ]
    },
@@ -655,43 +655,43 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 31.071943481363135
+      "Weight": 31.028195055758705
      },
      {
       "Sector": "Industrials",
-      "Weight": 15.75728710531023
+      "Weight": 15.799275398559406
      },
      {
       "Sector": "Utilities",
-      "Weight": 14.886001480133327
+      "Weight": 14.87201042169288
      },
      {
       "Sector": "Materials",
-      "Weight": 14.056436689450841
+      "Weight": 14.070917794787189
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 7.318420634167867
+      "Weight": 7.3541663127623185
      },
      {
       "Sector": "Real Estate",
-      "Weight": 7.307003014995761
+      "Weight": 7.252730580311298
      },
      {
       "Sector": "Health Care",
-      "Weight": 3.2654088156985965
+      "Weight": 3.3163710778362323
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 3.0438882699186136
+      "Weight": 3.0187672176131777
      },
      {
       "Sector": "Information Technology",
-      "Weight": 1.6452118536730744
+      "Weight": 1.6663494314844336
      },
      {
       "Sector": "Energy",
-      "Weight": 1.4154206385371866
+      "Weight": 1.3788334609625326
      }
     ]
    }

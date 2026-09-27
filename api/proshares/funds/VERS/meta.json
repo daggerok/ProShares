@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/VERS-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -388,43 +388,43 @@
     "rows": [
      {
       "Company": "META PLATFORMS INC-CLASS A",
-      "Weight": 5.3950819999999995
+      "Weight": 5.163692
      },
      {
       "Company": "QORVO INC",
-      "Weight": 4.845389
+      "Weight": 4.864775
      },
      {
       "Company": "KOPIN CORP",
-      "Weight": 4.51056
+      "Weight": 4.57608
      },
      {
       "Company": "APPLE INC",
-      "Weight": 4.499513
-     },
-     {
-      "Company": "ALPHABET INC-CL A",
-      "Weight": 4.3350409999999995
-     },
-     {
-      "Company": "SANDISK CORP",
-      "Weight": 4.3260380000000005
+      "Weight": 4.523397
      },
      {
       "Company": "MICROSOFT CORP",
-      "Weight": 4.270445
+      "Weight": 4.383179
+     },
+     {
+      "Company": "SANDISK CORP",
+      "Weight": 4.3423940000000005
+     },
+     {
+      "Company": "ALPHABET INC-CL A",
+      "Weight": 4.311806
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 4.176796
+      "Weight": 4.144588
      },
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 4.114151
+      "Weight": 4.078275
      },
      {
-      "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 4.064572
+      "Company": "SNAP INC - A",
+      "Weight": 3.9962289999999996
      }
     ]
    },
@@ -433,19 +433,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 61.464082
+      "Weight": 61.332066
      },
      {
       "Country": "Other",
-      "Weight": 33.8999
+      "Weight": 34.018239
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.945181
+      "Weight": 2.9820510000000002
      },
      {
       "Country": "Finland",
-      "Weight": 1.690836
+      "Weight": 1.6676440000000001
      }
     ]
    },
@@ -453,28 +453,28 @@
     "label": "Fund Sector Weighting",
     "rows": [
      {
-      "Sector": "Media & Entertainment",
-      "Weight": 21.704990677726567
+      "Sector": "Semiconductors & Semiconductor",
+      "Weight": 21.399578493195705
      },
      {
-      "Sector": "Semiconductors & Semiconductor",
-      "Weight": 21.127435692336718
+      "Sector": "Media & Entertainment",
+      "Weight": 21.116851629685033
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 12.356054094452555
+      "Weight": 12.484281179154246
      },
      {
       "Sector": "Software & Services",
-      "Weight": 6.300842012129677
+      "Weight": 6.401474821558602
      },
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 4.114151092774985
+      "Weight": 4.0782751680366385
      },
      {
       "Sector": "Real Estate Management & Devel",
-      "Weight": 0.43786032261336294
+      "Weight": 0.445819499041474
      }
     ]
    }

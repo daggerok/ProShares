@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/QQQA-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/QQQA-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -362,11 +362,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 95.260205
+      "Weight": 95.195997
      },
      {
       "Country": "Netherlands",
-      "Weight": 4.739795
+      "Weight": 4.804003
      }
     ]
    },
@@ -384,23 +384,23 @@
     "rows": [
      {
       "Sector": "Information Technology",
-      "Weight": 68.04114901908572
+      "Weight": 67.95545456436382
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 10.082324242585983
+      "Weight": 10.260610937752256
      },
      {
       "Sector": "Communication Services",
-      "Weight": 8.883540707372218
+      "Weight": 8.883872379358628
      },
      {
       "Sector": "Industrials",
-      "Weight": 8.608531728673201
+      "Weight": 8.470580051647001
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 4.341932992350209
+      "Weight": 4.391676790870028
      }
     ]
    }

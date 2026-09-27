@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/EMDV-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EMDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -751,43 +751,43 @@
     "rows": [
      {
       "Country": "China",
-      "Weight": 49.04265
+      "Weight": 48.971198
      },
      {
       "Country": "India",
-      "Weight": 21.593897000000002
+      "Weight": 21.639742000000002
      },
      {
       "Country": "Taiwan",
-      "Weight": 7.031197000000001
+      "Weight": 7.036327000000001
      },
      {
       "Country": "Brazil",
-      "Weight": 5.0309680000000006
+      "Weight": 5.001747
      },
      {
       "Country": "South Africa",
-      "Weight": 4.5309740000000005
+      "Weight": 4.537294
      },
      {
       "Country": "South Korea",
-      "Weight": 4.115724
-     },
-     {
-      "Country": "Colombia",
-      "Weight": 2.204139
+      "Weight": 4.140688
      },
      {
       "Country": "Mexico",
-      "Weight": 2.1728549999999998
+      "Weight": 2.1958040000000003
+     },
+     {
+      "Country": "Colombia",
+      "Weight": 2.183732
      },
      {
       "Country": "Turkey",
-      "Weight": 2.163965
+      "Weight": 2.161915
      },
      {
       "Country": "Thailand",
-      "Weight": 2.11363
+      "Weight": 2.131553
      },
      {
       "Country": "Russian Federation",
@@ -800,51 +800,51 @@
     "rows": [
      {
       "Currency": "CNY",
-      "Weight": 35.561121503221166
+      "Weight": 35.5870697002315
      },
      {
       "Currency": "INR",
-      "Weight": 19.554355798647936
+      "Weight": 19.598712354988834
      },
      {
       "Currency": "HKD",
-      "Weight": 13.481528612607596
+      "Weight": 13.384128404808859
      },
      {
       "Currency": "TWD",
-      "Weight": 7.03119681606322
+      "Weight": 7.036327331426328
      },
      {
       "Currency": "BRL",
-      "Weight": 5.030968387927838
+      "Weight": 5.001747039073115
      },
      {
       "Currency": "ZAR",
-      "Weight": 4.530973849972771
+      "Weight": 4.537294100809175
      },
      {
       "Currency": "KRW",
-      "Weight": 4.11572408219409
-     },
-     {
-      "Currency": "COP",
-      "Weight": 2.20413919181276
+      "Weight": 4.140688221765302
      },
      {
       "Currency": "MXN",
-      "Weight": 2.172855496526157
+      "Weight": 2.195804046373749
+     },
+     {
+      "Currency": "COP",
+      "Weight": 2.183731756693906
      },
      {
       "Currency": "TRY",
-      "Weight": 2.1639652710169974
+      "Weight": 2.1619152206017325
      },
      {
       "Currency": "THB",
-      "Weight": 2.1136300474175136
+      "Weight": 2.131552670816736
      },
      {
       "Currency": "USD",
-      "Weight": 2.039540942591952
+      "Weight": 2.041029152410763
      }
     ]
    },
@@ -853,39 +853,39 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 25.194009486704584
+      "Weight": 25.123560934465978
      },
      {
       "Sector": "Information Technology",
-      "Weight": 21.81663575891106
+      "Weight": 21.881786467806883
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 17.097105221635633
+      "Weight": 17.079822091017352
      },
      {
       "Sector": "Utilities",
-      "Weight": 8.840731701117889
+      "Weight": 8.84505494634899
      },
      {
       "Sector": "Industrials",
-      "Weight": 7.174105950889592
+      "Weight": 7.143979601203898
      },
      {
       "Sector": "Communication Services",
-      "Weight": 6.612947810262665
+      "Weight": 6.595426149483888
      },
      {
       "Sector": "Health Care",
-      "Weight": 6.39724357045938
+      "Weight": 6.416852378836317
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 4.155423756779418
+      "Weight": 4.167312390062052
      },
      {
       "Sector": "Materials",
-      "Weight": 2.0876241651963077
+      "Weight": 2.0848483912047926
      },
      {
       "Sector": "Energy",

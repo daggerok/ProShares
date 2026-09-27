@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TINY-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -353,43 +353,43 @@
     "rows": [
      {
       "Company": "BRUKER CORP",
-      "Weight": 7.803337000000001
+      "Weight": 7.682509
      },
      {
       "Company": "SCREEN HOLDINGS CO LTD",
-      "Weight": 5.619444
+      "Weight": 5.760332
      },
      {
       "Company": "ASML HOLDING NV",
-      "Weight": 5.221904
+      "Weight": 5.201464
      },
      {
       "Company": "LAM RESEARCH CORP",
-      "Weight": 5.113645
+      "Weight": 5.151917
      },
      {
       "Company": "APPLIED MATERIALS INC",
-      "Weight": 5.07004
-     },
-     {
-      "Company": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "Weight": 4.984221
+      "Weight": 5.090363
      },
      {
       "Company": "NIKON CORP",
-      "Weight": 4.98031
+      "Weight": 4.981574
+     },
+     {
+      "Company": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "Weight": 4.893282
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 4.8068409999999995
+      "Weight": 4.729436
      },
      {
       "Company": "CABOT CORP",
-      "Weight": 4.560506
+      "Weight": 4.483560000000001
      },
      {
       "Company": "JGC HOLDINGS CORP",
-      "Weight": 4.38421
+      "Weight": 4.377637999999999
      }
     ]
    },
@@ -398,31 +398,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 55.565621
+      "Weight": 55.715433999999995
      },
      {
       "Country": "Japan",
-      "Weight": 20.786541
+      "Weight": 20.957276
      },
      {
       "Country": "South Korea",
-      "Weight": 7.115367
+      "Weight": 7.022205
      },
      {
       "Country": "Netherlands",
-      "Weight": 5.233147
+      "Weight": 5.2122269999999995
      },
      {
       "Country": "Taiwan",
-      "Weight": 4.994953
+      "Weight": 4.903408
      },
      {
       "Country": "China",
-      "Weight": 3.800835
+      "Weight": 3.6201999999999996
      },
      {
       "Country": "France",
-      "Weight": 2.503536
+      "Weight": 2.56925
      }
     ]
    },
@@ -431,27 +431,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 55.565621073243996
+      "Weight": 55.715434339306505
      },
      {
       "Currency": "JPY",
-      "Weight": 20.78654127760802
+      "Weight": 20.957276386374033
      },
      {
       "Currency": "EUR",
-      "Weight": 7.736683138444687
+      "Weight": 7.781476959235732
      },
      {
       "Currency": "KRW",
-      "Weight": 7.115367108703808
+      "Weight": 7.022204563387074
      },
      {
       "Currency": "TWD",
-      "Weight": 4.994952553923083
+      "Weight": 4.903407963875947
      },
      {
       "Currency": "HKD",
-      "Weight": 3.8008348480764043
+      "Weight": 3.620199787820714
      }
     ]
    },
@@ -460,27 +460,27 @@
     "rows": [
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 61.69825571153717
+      "Weight": 62.00873810238393
      },
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 11.027579655651522
+      "Weight": 10.92747566903081
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 8.994996216014487
+      "Weight": 8.937898915255808
      },
      {
       "Sector": "Materials",
-      "Weight": 8.530665159980073
+      "Weight": 8.393239812826765
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 4.980309875438652
+      "Weight": 4.981573984286784
      },
      {
       "Sector": "Capital Goods",
-      "Weight": 4.553345322203402
+      "Weight": 4.544572264581509
      }
     ]
    }

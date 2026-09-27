@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/SUPL-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SUPL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -408,43 +408,43 @@
     "rows": [
      {
       "Company": "DHL AG",
-      "Weight": 5.126912
-     },
-     {
-      "Company": "UNION PACIFIC CORP",
-      "Weight": 4.795894
+      "Weight": 5.193126
      },
      {
       "Company": "CANADIAN NATL RAILWAY CO",
-      "Weight": 4.7792010000000005
+      "Weight": 4.807408
      },
      {
-      "Company": "CSX CORP",
-      "Weight": 4.763393
+      "Company": "UNION PACIFIC CORP",
+      "Weight": 4.783795
      },
      {
       "Company": "NORFOLK SOUTHERN CORP",
-      "Weight": 4.756042
+      "Weight": 4.7463180000000005
+     },
+     {
+      "Company": "CSX CORP",
+      "Weight": 4.739014
      },
      {
       "Company": "CANADIAN PACIFIC KANSAS CITY",
-      "Weight": 4.655774
+      "Weight": 4.63316
      },
      {
       "Company": "AMADEUS IT GROUP SA",
-      "Weight": 4.516267999999999
+      "Weight": 4.488478
      },
      {
       "Company": "EXPEDITORS INTL WASH INC",
-      "Weight": 4.113034
+      "Weight": 4.191826
      },
      {
       "Company": "UNITED PARCEL SERVICE-CL B",
-      "Weight": 4.043601
+      "Weight": 4.121302
      },
      {
       "Company": "FEDEX CORP",
-      "Weight": 4.029877
+      "Weight": 4.114650999999999
      }
     ]
    },
@@ -453,51 +453,51 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 53.262608
+      "Weight": 53.224428
      },
      {
       "Country": "Canada",
-      "Weight": 11.128042
+      "Weight": 11.120829
      },
      {
       "Country": "Denmark",
-      "Weight": 5.307289
+      "Weight": 5.370176
      },
      {
       "Country": "Germany",
-      "Weight": 5.159083
+      "Weight": 5.225428
      },
      {
       "Country": "China",
-      "Weight": 4.879673
+      "Weight": 4.826544
      },
      {
       "Country": "Taiwan",
-      "Weight": 4.830011
+      "Weight": 4.822492
      },
      {
       "Country": "Spain",
-      "Weight": 4.544608
+      "Weight": 4.5163969999999996
      },
      {
       "Country": "Australia",
-      "Weight": 3.8108290000000005
+      "Weight": 3.783391
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.5261240000000003
+      "Weight": 2.5053490000000003
      },
      {
       "Country": "Japan",
-      "Weight": 2.117955
+      "Weight": 2.165491
      },
      {
       "Country": "South Korea",
-      "Weight": 1.6262180000000002
+      "Weight": 1.6323440000000002
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.80756
+      "Weight": 0.80713
      }
     ]
    },
@@ -506,43 +506,43 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 53.262608180984536
+      "Weight": 53.22442784367958
      },
      {
       "Currency": "CAD",
-      "Weight": 11.128041669345592
+      "Weight": 11.120828737175255
      },
      {
       "Currency": "EUR",
-      "Weight": 10.511250884432771
+      "Weight": 10.548955719726745
      },
      {
       "Currency": "DKK",
-      "Weight": 5.307288651166157
+      "Weight": 5.370176420687902
      },
      {
       "Currency": "HKD",
-      "Weight": 4.879673486639971
+      "Weight": 4.826544428447088
      },
      {
       "Currency": "TWD",
-      "Weight": 4.830011316670328
+      "Weight": 4.8224916472991275
      },
      {
       "Currency": "AUD",
-      "Weight": 3.810828996167448
+      "Weight": 3.7833914459700053
      },
      {
       "Currency": "CHF",
-      "Weight": 2.5261241078817163
+      "Weight": 2.5053488694863093
      },
      {
       "Currency": "JPY",
-      "Weight": 2.117954580789929
+      "Weight": 2.16549096842868
      },
      {
       "Currency": "KRW",
-      "Weight": 1.6262181259215487
+      "Weight": 1.63234391909931
      }
     ]
    },
@@ -551,23 +551,23 @@
     "rows": [
      {
       "Sector": "Transportation",
-      "Weight": 88.44756866875882
+      "Weight": 88.48857198143179
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 4.5162684698098134
+      "Weight": 4.488477865323542
      },
      {
       "Sector": "Commercial & Professional Services",
-      "Weight": 3.040969860984117
+      "Weight": 3.009580740983471
      },
      {
       "Sector": "Utilities",
-      "Weight": 2.7166465389011614
+      "Weight": 2.737768423060706
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 0.6549625291265907
+      "Weight": 0.6574203897315813
      }
     ]
    }

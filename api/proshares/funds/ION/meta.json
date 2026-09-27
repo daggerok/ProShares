@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ION-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -369,43 +369,43 @@
     "rows": [
      {
       "Company": "PACIFIC METALS CO LTD",
-      "Weight": 4.869172
+      "Weight": 5.0348370000000005
      },
      {
       "Company": "IGO LTD",
-      "Weight": 3.806102
+      "Weight": 3.7564859999999998
      },
      {
       "Company": "VALE INDONESIA TBK",
-      "Weight": 3.7022600000000003
+      "Weight": 3.683309
      },
      {
       "Company": "PT TIMAH (PERSERO) TBK",
-      "Weight": 3.6167730000000002
+      "Weight": 3.5317420000000004
      },
      {
       "Company": "SIGMA LITHIUM CORP",
-      "Weight": 3.30474
-     },
-     {
-      "Company": "PLS GROUP LTD",
-      "Weight": 2.920305
+      "Weight": 3.1821330000000003
      },
      {
       "Company": "QUIMICA Y MINERA CHIL-SP ADR",
-      "Weight": 2.912454
+      "Weight": 2.911483
      },
      {
       "Company": "TIBET MINERAL DEVELOPMENT-A",
-      "Weight": 2.895946
+      "Weight": 2.904935
      },
      {
       "Company": "ERAMET",
-      "Weight": 2.8794750000000002
+      "Weight": 2.887985
+     },
+     {
+      "Company": "PLS GROUP LTD",
+      "Weight": 2.860312
      },
      {
       "Company": "AFRICAN RAINBOW MINERALS LTD",
-      "Weight": 2.867918
+      "Weight": 2.8264489999999998
      }
     ]
    },
@@ -414,63 +414,63 @@
     "rows": [
      {
       "Country": "China",
-      "Weight": 29.290893
+      "Weight": 29.31763
      },
      {
       "Country": "Australia",
-      "Weight": 14.824154
+      "Weight": 14.50488
      },
      {
       "Country": "Indonesia",
-      "Weight": 10.090511000000001
+      "Weight": 9.961549
      },
      {
       "Country": "South Africa",
-      "Weight": 9.829406
+      "Weight": 9.905678
      },
      {
       "Country": "Canada",
-      "Weight": 9.48027
+      "Weight": 9.442612
      },
      {
       "Country": "Japan",
-      "Weight": 6.0676630000000005
+      "Weight": 6.266831000000001
      },
      {
       "Country": "United Kingdom",
-      "Weight": 3.9043229999999998
+      "Weight": 3.980869
      },
      {
       "Country": "Chile",
-      "Weight": 2.932059
+      "Weight": 2.9310579999999997
      },
      {
       "Country": "France",
-      "Weight": 2.898857
+      "Weight": 2.907402
      },
      {
       "Country": "United States",
-      "Weight": 2.637434
+      "Weight": 2.68177
      },
      {
       "Country": "Hong Kong",
-      "Weight": 2.610947
+      "Weight": 2.6291379999999998
      },
      {
       "Country": "Netherlands",
-      "Weight": 1.889289
+      "Weight": 1.891721
      },
      {
       "Country": "Brazil",
-      "Weight": 1.862246
+      "Weight": 1.8748999999999998
      },
      {
       "Country": "Sweden",
-      "Weight": 1.1765539999999999
+      "Weight": 1.188955
      },
      {
       "Country": "South Korea",
-      "Weight": 0.505393
+      "Weight": 0.515006
      }
     ]
    },
@@ -479,47 +479,47 @@
     "rows": [
      {
       "Currency": "CNY",
-      "Weight": 22.02127811351835
+      "Weight": 22.089455212571583
      },
      {
       "Currency": "AUD",
-      "Weight": 14.824154008816572
+      "Weight": 14.504879873030232
      },
      {
       "Currency": "USD",
-      "Weight": 11.264117564073647
+      "Weight": 11.206260641239005
      },
      {
       "Currency": "IDR",
-      "Weight": 10.090510811444608
-     },
-     {
-      "Currency": "HKD",
-      "Weight": 9.88056148517954
+      "Weight": 9.961549325856195
      },
      {
       "Currency": "ZAR",
-      "Weight": 9.82940645462624
+      "Weight": 9.905678064862244
      },
      {
-      "Currency": "CAD",
-      "Weight": 6.153284630939818
+      "Currency": "HKD",
+      "Weight": 9.85731242616474
      },
      {
       "Currency": "JPY",
-      "Weight": 6.067663203073346
+      "Weight": 6.266831340758358
+     },
+     {
+      "Currency": "CAD",
+      "Weight": 6.239085064185165
      },
      {
       "Currency": "EUR",
-      "Weight": 4.788146405004071
+      "Weight": 4.79912308607375
      },
      {
       "Currency": "GBP",
-      "Weight": 3.904322964815539
+      "Weight": 3.9808694795455115
      },
      {
       "Currency": "SEK",
-      "Weight": 1.176554358508269
+      "Weight": 1.1889554857132154
      }
     ]
    },
@@ -528,27 +528,27 @@
     "rows": [
      {
       "Sector": "Metals & Mining",
-      "Weight": 76.78981036440284
+      "Weight": 76.70886120477691
      },
      {
       "Sector": "Chemicals",
-      "Weight": 18.43310204242644
+      "Weight": 18.493744950380943
      },
      {
       "Sector": "Electrical Equipment",
-      "Weight": 1.8596675358930983
+      "Weight": 1.8654400063150753
      },
      {
       "Sector": "Trading Companies & Distributors",
-      "Weight": 1.1579205318764634
+      "Weight": 1.190142701052485
      },
      {
       "Sector": "Construction & Engineering",
-      "Weight": 0.6419610632007766
+      "Weight": 0.6244314867552399
      },
      {
       "Sector": "Broadline Retail",
-      "Weight": 0.4489066265499158
+      "Weight": 0.44954683404073825
      }
     ]
    }

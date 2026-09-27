@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/MAKX-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MAKX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -344,43 +344,43 @@
     "rows": [
      {
       "Company": "OUSTER INC",
-      "Weight": 8.398187
+      "Weight": 8.690641000000001
      },
      {
       "Company": "3D SYSTEMS CORP",
-      "Weight": 7.4710540000000005
+      "Weight": 7.614258
      },
      {
       "Company": "EMERSON ELECTRIC CO",
-      "Weight": 6.296197
+      "Weight": 6.247763
      },
      {
       "Company": "SK TELECOM CO LTD-SPON ADR",
-      "Weight": 5.787921
+      "Weight": 5.75151
      },
      {
       "Company": "ROCKWELL AUTOMATION INC",
-      "Weight": 5.622628
+      "Weight": 5.5211950000000005
      },
      {
       "Company": "COGNEX CORP",
-      "Weight": 5.53032
+      "Weight": 5.50539
      },
      {
       "Company": "AMBIQ MICRO INC",
-      "Weight": 5.294365
+      "Weight": 5.249687
      },
      {
       "Company": "AUTODESK INC",
-      "Weight": 5.189415
+      "Weight": 5.034594
      },
      {
       "Company": "ZEBRA TECHNOLOGIES CORP-CL A",
-      "Weight": 5.037148999999999
+      "Weight": 4.999116
      },
      {
       "Company": "ALLIENT INC",
-      "Weight": 4.601082
+      "Weight": 4.643473
      }
     ]
    },
@@ -389,19 +389,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 86.489598
+      "Weight": 86.447613
      },
      {
       "Country": "South Korea",
-      "Weight": 7.823847000000001
+      "Weight": 7.776
      },
      {
       "Country": "Israel",
-      "Weight": 3.1893489999999995
+      "Weight": 3.312285
      },
      {
       "Country": "Turkey",
-      "Weight": 2.4972060000000003
+      "Weight": 2.464102
      }
     ]
    },
@@ -410,27 +410,27 @@
     "rows": [
      {
       "Sector": "Capital Goods",
-      "Weight": 35.97690357800914
+      "Weight": 35.827454192667304
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 23.712842454017288
+      "Weight": 23.950940430226673
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 21.92174578846366
+      "Weight": 22.127454882066036
      },
      {
       "Sector": "Telecommunication Services",
-      "Weight": 8.27948354231654
+      "Weight": 8.21027293751975
      },
      {
       "Sector": "Software & Services",
-      "Weight": 7.864781805308375
+      "Weight": 7.659555060356685
      },
      {
       "Sector": "Materials",
-      "Weight": 2.0182440160461286
+      "Weight": 2.007640435890101
      }
     ]
    }

@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/CTEX-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/CTEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -325,43 +325,43 @@
     "rows": [
      {
       "Company": "ARCOSA INC",
-      "Weight": 6.126962
+      "Weight": 6.063262
      },
      {
       "Company": "BLOOM ENERGY CORP- A",
-      "Weight": 5.000639
+      "Weight": 5.354210999999999
      },
      {
       "Company": "FUELCELL ENERGY INC",
-      "Weight": 4.628666
+      "Weight": 4.605347
      },
      {
       "Company": "GE VERNOVA INC",
-      "Weight": 4.612033
+      "Weight": 4.573339
      },
      {
       "Company": "RENEW ENERGY GLOBAL PLC-A",
-      "Weight": 4.602527
+      "Weight": 4.544924999999999
      },
      {
       "Company": "ENERGY VAULT HOLDINGS INC",
-      "Weight": 4.355509
+      "Weight": 4.407456
      },
      {
       "Company": "GENERAC HOLDINGS INC",
-      "Weight": 3.975764
+      "Weight": 4.132054999999999
      },
      {
       "Company": "SHOALS TECHNOLOGIES GROUP -A",
-      "Weight": 3.93571
+      "Weight": 3.902584
      },
      {
       "Company": "FIRST SOLAR INC",
-      "Weight": 3.802756
+      "Weight": 3.881887
      },
      {
       "Company": "HYSTER-YALE INC",
-      "Weight": 3.574029
+      "Weight": 3.5516609999999997
      }
     ]
    },
@@ -370,15 +370,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 88.668072
+      "Weight": 88.834603
      },
      {
       "Country": "Canada",
-      "Weight": 5.897022
+      "Weight": 5.785353
      },
      {
       "Country": "China",
-      "Weight": 5.434907
+      "Weight": 5.380043000000001
      }
     ]
    },
@@ -387,31 +387,31 @@
     "rows": [
      {
       "Sector": "Capital Goods",
-      "Weight": 51.98880976854481
+      "Weight": 52.38842691463692
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 21.636360589253602
+      "Weight": 21.481636924045596
      },
      {
       "Sector": "Industrials",
-      "Weight": 8.251415708573267
+      "Weight": 8.200943220094992
      },
      {
       "Sector": "Utilities",
-      "Weight": 8.073436999973694
+      "Weight": 8.017836597353178
      },
      {
       "Sector": "Automobiles & Components",
-      "Weight": 3.3719882668246437
+      "Weight": 3.2832154584654667
      },
      {
       "Sector": "Energy",
-      "Weight": 3.301161286884543
+      "Weight": 3.2406591779311573
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 3.157916522162966
+      "Weight": 3.1754246033316424
      }
     ]
    }

@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/IQQQ-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/IQQQ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -47,13 +47,13 @@
   "asOfDate": "Sep 25 2026"
  },
  "marketPrice": {
-  "display": "$49.13",
-  "value": 49.13,
+  "display": "$49.14",
+  "value": 49.14,
   "asOfDate": "Sep 25 2026"
  },
  "premiumDiscount": {
-  "display": "0.02%",
-  "value": 0.0204,
+  "display": "0.04%",
+  "value": 0.0407,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },

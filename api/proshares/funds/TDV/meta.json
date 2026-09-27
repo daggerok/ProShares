@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TDV-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T02:44:10Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -497,15 +497,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 91.663113
+      "Weight": 91.644176
      },
      {
       "Country": "Ireland",
-      "Weight": 6.134308
+      "Weight": 6.109624999999999
      },
      {
       "Country": "Singapore",
-      "Weight": 2.202579
+      "Weight": 2.2461990000000003
      }
     ]
    },
@@ -523,15 +523,15 @@
     "rows": [
      {
       "Sector": "Information Technology",
-      "Weight": 79.99509650134685
+      "Weight": 80.21535187027784
      },
      {
       "Sector": "Financials",
-      "Weight": 10.898344305214295
+      "Weight": 10.776004899518592
      },
      {
       "Sector": "Industrials",
-      "Weight": 8.956654529482174
+      "Weight": 8.863913346137458
      }
     ]
    }
