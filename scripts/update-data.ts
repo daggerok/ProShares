@@ -1504,6 +1504,34 @@ export async function writeIfChanged(file: string, contents: string): Promise<'w
   return 'written';
 }
 
+// catalogReadAt/generatedAt are freshly stamped every run, so a raw text
+// comparison (writeIfChanged) would rewrite a fund's meta.json on every run
+// even when its actual data is identical. catalogReadAt lives nested inside
+// meta.source, not at the top level, so the exclusion has to recurse — same
+// as outputStable() already does for the console's unchanged/updated label.
+export function samePublishedContent(previous: string, value: unknown): boolean {
+  const withoutRunTimestamp = (item: unknown): unknown => {
+    if (Array.isArray(item)) return item.map(withoutRunTimestamp);
+    if (!item || typeof item !== 'object') return item;
+    const { generatedAt, catalogReadAt, ...content } = item as Record<string, unknown>;
+    return Object.fromEntries(Object.entries(content).map(([key, val]) => [key, withoutRunTimestamp(val)]));
+  };
+  try {
+    return JSON.stringify(withoutRunTimestamp(JSON.parse(previous))) === JSON.stringify(withoutRunTimestamp(value));
+  } catch { return false; }
+}
+
+export async function writeJsonIfChanged(file: string, value: unknown): Promise<'written' | 'unchanged'> {
+  const text = serialize(value);
+  if (existsSync(file)) {
+    const previous = await readFile(file, 'utf8');
+    if (previous === text || samePublishedContent(previous, value)) return 'unchanged';
+  }
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, text, 'utf8');
+  return 'written';
+}
+
 export function pageName(page: number): string {
   return `${String(page).padStart(3, '0')}.json`;
 }
@@ -2327,7 +2355,7 @@ export async function main(config: UpdaterConfig = readConfig()): Promise<void> 
         holdings: { ...(artifacts.meta.holdings as Record<string, unknown>), ...holdingsWrite.manifest },
         history: { ...(artifacts.meta.history as Record<string, unknown>), ...historyWrite.manifest },
       };
-      const metaResult = await writeIfChanged(path.join(directory, 'meta.json'), serialize(meta));
+      const metaResult = await writeJsonIfChanged(path.join(directory, 'meta.json'), meta);
       artifacts.changed = metaResult === 'written' || holdingsWrite.written > 0 || historyWrite.written > 0 || holdingsWrite.removed > 0 || historyWrite.removed > 0;
       if (artifacts.changed) stats.updated++;
       else stats.unchanged++;
