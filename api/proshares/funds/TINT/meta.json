@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TINT-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TINT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T03:03:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -425,43 +425,43 @@
     "rows": [
      {
       "Company": "ZEON CORP",
-      "Weight": 6.722777000000001
+      "Weight": 6.792057
      },
      {
       "Company": "SYENSQO SA",
-      "Weight": 6.605414
+      "Weight": 6.531863
      },
      {
       "Company": "SIKA AG-REG",
-      "Weight": 5.753252
+      "Weight": 5.733338000000001
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 5.168239
+      "Weight": 5.136188
      },
      {
       "Company": "AKZO NOBEL N.V.",
-      "Weight": 5.050878
+      "Weight": 5.050758
      },
      {
       "Company": "CABOT CORP",
-      "Weight": 4.926899
+      "Weight": 4.892517
      },
      {
       "Company": "PPG INDUSTRIES INC",
-      "Weight": 4.642661
+      "Weight": 4.655786
      },
      {
       "Company": "HEXCEL CORP",
-      "Weight": 4.582418
+      "Weight": 4.562697
      },
      {
       "Company": "RPM INTERNATIONAL INC",
-      "Weight": 4.506987
+      "Weight": 4.547613999999999
      },
      {
       "Company": "INGEVITY CORP",
-      "Weight": 4.5046919999999995
+      "Weight": 4.542299000000001
      }
     ]
    },
@@ -470,35 +470,35 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 38.851335999999996
+      "Weight": 39.071957000000005
      },
      {
       "Country": "South Korea",
-      "Weight": 15.775939
+      "Weight": 15.726200000000002
      },
      {
       "Country": "Japan",
-      "Weight": 11.475422
+      "Weight": 11.535574
      },
      {
       "Country": "Belgium",
-      "Weight": 10.887707
+      "Weight": 10.760765
      },
      {
       "Country": "France",
-      "Weight": 7.115515
+      "Weight": 7.039976
      },
      {
       "Country": "Switzerland",
-      "Weight": 5.773778999999999
+      "Weight": 5.753361
      },
      {
       "Country": "Netherlands",
-      "Weight": 5.068899
+      "Weight": 5.068397
      },
      {
       "Country": "Canada",
-      "Weight": 5.0514030000000005
+      "Weight": 5.04377
      }
     ]
    },
@@ -507,27 +507,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 38.851336429096506
+      "Weight": 39.07195745635656
      },
      {
       "Currency": "EUR",
-      "Weight": 23.07212124001314
+      "Weight": 22.869137902536625
      },
      {
       "Currency": "KRW",
-      "Weight": 15.775939274271918
+      "Weight": 15.726199681562417
      },
      {
       "Currency": "JPY",
-      "Weight": 11.47542173760077
+      "Weight": 11.535574288472343
      },
      {
       "Currency": "CHF",
-      "Weight": 5.773778548832132
+      "Weight": 5.753360865683336
      },
      {
       "Currency": "CAD",
-      "Weight": 5.051402770185533
+      "Weight": 5.043769805388718
      }
     ]
    },
@@ -536,23 +536,23 @@
     "rows": [
      {
       "Sector": "Materials",
-      "Weight": 73.07793680222167
+      "Weight": 73.02224760363698
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 13.927749121463847
+      "Weight": 14.080715498062007
      },
      {
       "Sector": "Capital Goods",
-      "Weight": 7.371285352801814
+      "Weight": 7.32075081926019
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 4.422211458051946
+      "Weight": 4.4086004736766675
      },
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 0.845302418116282
+      "Weight": 0.8196698132308734
      }
     ]
    }

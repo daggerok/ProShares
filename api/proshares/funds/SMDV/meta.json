@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/SMDV-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SMDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T03:03:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -626,11 +626,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.915418
+      "Weight": 74.252566
+     },
+     {
+      "Country": "Other",
+      "Weight": 23.554381
      },
      {
       "Country": "Ireland",
-      "Weight": 1.0845820000000002
+      "Weight": 2.193054
      }
     ]
    },
@@ -639,7 +643,11 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 100
+      "Weight": 76.44561922327867
+     },
+     {
+      "Currency": "Other",
+      "Weight": 23.554380776721327
      }
     ]
    },
@@ -647,44 +655,40 @@
     "label": "Fund Sector Weighting",
     "rows": [
      {
-      "Sector": "Financials",
-      "Weight": 32.362497060822335
+      "Sector": "Industrials",
+      "Weight": 19.87327872145601
      },
      {
-      "Sector": "Industrials",
-      "Weight": 21.512243965466972
+      "Sector": "Financials",
+      "Weight": 17.133190527102254
      },
      {
       "Sector": "Utilities",
-      "Weight": 17.739756492642307
+      "Weight": 13.716994063820836
      },
      {
       "Sector": "Materials",
-      "Weight": 7.337415650677704
+      "Weight": 9.406509423084565
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 6.012189614741002
+      "Weight": 5.158868129637773
      },
      {
       "Sector": "Real Estate",
-      "Weight": 4.804194809087871
-     },
-     {
-      "Sector": "Consumer Discretionary",
-      "Weight": 4.702648150866191
+      "Weight": 3.7989822384694403
      },
      {
       "Sector": "Health Care",
-      "Weight": 2.136356914084786
+      "Weight": 3.4260018237501653
      },
      {
       "Sector": "Information Technology",
-      "Weight": 2.0649873423436405
+      "Weight": 2.5981439457241184
      },
      {
       "Sector": "Communication Services",
-      "Weight": 1.0084041689957097
+      "Weight": 1.43312702821212
      }
     ]
    }

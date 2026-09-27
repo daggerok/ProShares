@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T03:03:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -243,43 +243,43 @@
     "rows": [
      {
       "Company": "DOORDASH INC - A",
-      "Weight": 5.779802
+      "Weight": 5.966954
      },
      {
       "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 5.643164
+      "Weight": 5.373682
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 5.28779
+      "Weight": 5.305967000000001
      },
      {
       "Company": "CAPCOM CO LTD",
-      "Weight": 5.15161
+      "Weight": 5.230955000000001
      },
      {
       "Company": "SPOTIFY TECHNOLOGY SA",
-      "Weight": 4.987942
-     },
-     {
-      "Company": "NETEASE INC",
-      "Weight": 4.78338
+      "Weight": 4.980811999999999
      },
      {
       "Company": "UBER TECHNOLOGIES INC",
-      "Weight": 4.731682
+      "Weight": 4.764988
+     },
+     {
+      "Company": "NETEASE INC",
+      "Weight": 4.64192
      },
      {
       "Company": "TAKE-TWO INTERACTIVE SOFTWRE",
-      "Weight": 4.57636
+      "Weight": 4.5473300000000005
      },
      {
       "Company": "NEXON CO LTD",
-      "Weight": 4.5299640000000005
+      "Weight": 4.537508
      },
      {
       "Company": "GRAB HOLDINGS LTD - CL A",
-      "Weight": 4.5007079999999995
+      "Weight": 4.5353270000000006
      }
     ]
    },
@@ -288,43 +288,43 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 42.664392
+      "Weight": 42.739662
      },
      {
       "Country": "Hong Kong",
-      "Weight": 14.429766999999998
+      "Weight": 14.237358
      },
      {
       "Country": "Japan",
-      "Weight": 9.720685
+      "Weight": 9.807701
      },
      {
       "Country": "China",
-      "Weight": 7.501796
+      "Weight": 7.475420000000001
      },
      {
       "Country": "Luxembourg",
-      "Weight": 5.008092
+      "Weight": 5.00082
      },
      {
       "Country": "South Korea",
-      "Weight": 4.934807
+      "Weight": 4.967223
      },
      {
       "Country": "Singapore",
-      "Weight": 4.518889000000001
+      "Weight": 4.5535440000000005
      },
      {
       "Country": "Germany",
-      "Weight": 4.438124
+      "Weight": 4.430257
      },
      {
       "Country": "Taiwan",
-      "Weight": 3.83651
+      "Weight": 3.8412300000000004
      },
      {
       "Country": "Poland",
-      "Weight": 2.946937
+      "Weight": 2.946784
      }
     ]
    },
@@ -333,31 +333,31 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 52.19137336733686
+      "Weight": 52.294026123416955
      },
      {
       "Currency": "HKD",
-      "Weight": 21.93156347923229
+      "Weight": 21.712778611144287
      },
      {
       "Currency": "JPY",
-      "Weight": 9.720684690393025
+      "Weight": 9.807700759848858
      },
      {
       "Currency": "KRW",
-      "Weight": 4.934806859911344
+      "Weight": 4.9672229913048405
      },
      {
       "Currency": "EUR",
-      "Weight": 4.438124169885832
+      "Weight": 4.430257060592553
      },
      {
       "Currency": "TWD",
-      "Weight": 3.8365104052869436
+      "Weight": 3.841230018668757
      },
      {
       "Currency": "PLN",
-      "Weight": 2.946937027953702
+      "Weight": 2.9467844350237398
      }
     ]
    },
@@ -366,27 +366,27 @@
     "rows": [
      {
       "Sector": "Media & Entertainment",
-      "Weight": 53.76080611612127
+      "Weight": 53.4698094522806
      },
      {
       "Sector": "Transportation",
-      "Weight": 15.81180307637076
+      "Weight": 15.926357179314799
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 14.563832574167886
+      "Weight": 14.711355775757081
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 10.737442769575235
+      "Weight": 10.74385148901636
      },
      {
       "Sector": "Software & Services",
-      "Weight": 3.3709628916855694
+      "Weight": 3.357286285693331
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 1.352805985451184
+      "Weight": 1.3912620284920416
      }
     ]
    }

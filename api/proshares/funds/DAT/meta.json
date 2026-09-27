@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/DAT-psdlyhld.csv, as of Sep 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/DAT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-26T02:02:20Z",
+  "catalogReadAt": "2026-09-27T03:03:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -242,43 +242,43 @@
     "rows": [
      {
       "Company": "ZEBRA TECHNOLOGIES CORP-CL A",
-      "Weight": 5.868793
+      "Weight": 5.997412
      },
      {
       "Company": "FIVE9 INC",
-      "Weight": 5.8149
+      "Weight": 5.720671
      },
      {
       "Company": "ELASTIC NV",
-      "Weight": 5.510682
-     },
-     {
-      "Company": "PALANTIR TECHNOLOGIES INC-A",
-      "Weight": 5.3012049999999995
+      "Weight": 5.363921
      },
      {
       "Company": "SNOWFLAKE INC",
-      "Weight": 5.2267399999999995
+      "Weight": 5.300592
+     },
+     {
+      "Company": "PALANTIR TECHNOLOGIES INC-A",
+      "Weight": 5.264022
      },
      {
       "Company": "DYNATRACE INC",
-      "Weight": 5.188446
+      "Weight": 5.16629
      },
      {
       "Company": "STRATEGY INC",
-      "Weight": 5.004900999999999
-     },
-     {
-      "Company": "NUTANIX INC - A",
-      "Weight": 4.769749999999999
-     },
-     {
-      "Company": "COMMVAULT SYSTEMS INC",
-      "Weight": 4.714988
+      "Weight": 4.9526319999999995
      },
      {
       "Company": "INTERDIGITAL INC",
-      "Weight": 4.695493
+      "Weight": 4.823534
+     },
+     {
+      "Company": "NUTANIX INC - A",
+      "Weight": 4.769947
+     },
+     {
+      "Company": "NICE LTD",
+      "Weight": 4.724801
      }
     ]
    },
@@ -287,23 +287,23 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 83.472825
+      "Weight": 83.285639
      },
      {
       "Country": "Israel",
-      "Weight": 8.967302
-     },
-     {
-      "Country": "France",
-      "Weight": 3.337127
+      "Weight": 8.860267
      },
      {
       "Country": "United Kingdom",
-      "Weight": 3.0853140000000003
+      "Weight": 3.454022
+     },
+     {
+      "Country": "France",
+      "Weight": 3.2447709999999996
      },
      {
       "Country": "Canada",
-      "Weight": 1.137433
+      "Weight": 1.1553010000000001
      }
     ]
    },
@@ -312,19 +312,19 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 90.83205087265718
+      "Weight": 90.86556948206024
      },
      {
       "Currency": "ILS",
-      "Weight": 4.693389434318906
+      "Weight": 4.734358245490354
      },
      {
       "Currency": "EUR",
-      "Weight": 3.3371269029425834
+      "Weight": 3.2447713366182045
      },
      {
       "Currency": "CAD",
-      "Weight": 1.1374327900813337
+      "Weight": 1.1553009358312083
      }
     ]
    },
@@ -333,19 +333,19 @@
     "rows": [
      {
       "Sector": "Software & Services",
-      "Weight": 84.88732740272276
+      "Weight": 84.56154200466234
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 9.199103609545487
+      "Weight": 9.235632491425571
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 3.079011774466678
+      "Weight": 3.447048811657605
      },
      {
       "Sector": "Commercial & Professional Services",
-      "Weight": 2.6302965928668596
+      "Weight": 2.5539014608750694
      }
     ]
    }
