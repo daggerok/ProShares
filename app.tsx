@@ -560,7 +560,7 @@ async function ensureSheet(sheet: 'holdings' | 'history', manifest: any): Promis
 function withTickerChain<T>(ticker: string, fn: () => Promise<T>): Promise<T> {
   const previous = holdingsChains.get(ticker) ?? Promise.resolve();
   const work = previous.then(fn, fn);
-  holdingsChains.set(ticker, work.catch(() => undefined));
+  holdingsChains.set(ticker, work.then(() => undefined, () => undefined));
   return work;
 }
 
