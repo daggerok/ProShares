@@ -943,3 +943,61 @@ describe('deterministic writes', () => {
     await rm(directory, { recursive: true, force: true });
   });
 });
+
+
+import { test as queueTest, describe as queueDescribe, expect as queueExpect } from 'bun:test';
+
+async function tickerChainHarness() {
+ const app=await Bun.file(new URL('../app.tsx',import.meta.url)).text();
+ const source=app.match(/^function withTickerChain<T>\([\s\S]*?^\}/m)?.[0];
+ queueExpect(source).toBeDefined();
+ const javascript=new Bun.Transpiler({loader:'ts'}).transformSync(source!);
+ const chains=new Map<string,Promise<void>>();
+ const enqueue=new Function('holdingsChains',`${javascript}; return withTickerChain;`)(chains) as
+  <T>(ticker:string,fn:()=>Promise<T>)=>Promise<T>;
+ return {chains,enqueue};
+}
+
+queueDescribe('per-ticker queue preserves caller results and stores completion-only promises',()=>{
+ queueTest('successful generic result reaches caller, not the internal queue',async()=>{
+  const {chains,enqueue}=await tickerChainHarness();
+  const value={rows:[['AGEM']]};
+  queueExpect(await enqueue('AGEM',async()=>value)).toBe(value);
+  queueExpect(await chains.get('AGEM')).toBeUndefined();
+ });
+ queueTest('rejection reaches caller without poisoning the next queued task',async()=>{
+  const {chains,enqueue}=await tickerChainHarness();
+  const error=new Error('page failed');
+  const work=enqueue('AGEM',async()=>{throw error;});
+  const observed=work.catch(reason=>reason);
+  const settled=chains.get('AGEM');
+  const next=enqueue('AGEM',async()=>42);
+  queueExpect(await observed).toBe(error);
+  queueExpect(await settled).toBeUndefined();
+  queueExpect(await next).toBe(42);
+  queueExpect(await chains.get('AGEM')).toBeUndefined();
+ });
+ queueTest('synchronous callback throws also leave the queue usable',async()=>{
+  const {chains,enqueue}=await tickerChainHarness();
+  const error=new Error('synchronous failure');
+  queueExpect(await enqueue('AGEM',()=>{throw error;}).catch(reason=>reason)).toBe(error);
+  queueExpect(await chains.get('AGEM')).toBeUndefined();
+  queueExpect(await enqueue('AGEM',async()=>'recovered')).toBe('recovered');
+ });
+ queueTest('same-ticker work stays serial while other tickers run independently',async()=>{
+  const {chains,enqueue}=await tickerChainHarness();
+  let release!:()=>void;
+  const gate=new Promise<void>(resolve=>{release=resolve;});
+  const events:string[]=[];
+  const first=enqueue('AGEM',async()=>{events.push('first');await gate;events.push('done');return 1;});
+  const second=enqueue('AGEM',async()=>{events.push('second');return 2;});
+  try {
+   queueExpect(await enqueue('SGOL',async()=>3)).toBe(3);
+   queueExpect(events).toEqual(['first']);
+  } finally { release(); }
+  queueExpect(await Promise.all([first,second])).toEqual([1,2]);
+  queueExpect(events).toEqual(['first','done','second']);
+  queueExpect(await chains.get('AGEM')).toBeUndefined();
+  queueExpect(await chains.get('SGOL')).toBeUndefined();
+ });
+});
