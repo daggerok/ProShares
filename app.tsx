@@ -1624,7 +1624,29 @@ function renderDistributionsTable(fund: FundRow): void {
 // 7. Subtitle
 // =========================================================================
 
-function renderSubtitle(text?: string): void {
+function renderHeaderSummary(subtitle: HTMLElement, tickers: Iterable<string>, activeTicker: string | null, activate: (ticker: string) => void): void {
+  const panel = document.getElementById('app-summary');
+  if (!panel) return;
+  // Move existing nodes: provenance links and their handlers remain intact.
+  panel.replaceChildren(...Array.from(subtitle.childNodes));
+  subtitle.replaceChildren();
+  const selected = [...tickers].sort();
+  if (!selected.length) return;
+  subtitle.append(document.createTextNode(`${selected.length} selected: `));
+  selected.forEach((ticker, index) => {
+    if (index) subtitle.append(document.createTextNode(', '));
+    const link = document.createElement('a');
+    link.href = '#';
+    link.dataset.headerFund = ticker;
+    link.title = `View ${ticker} details`;
+    link.className = `font-semibold ${ticker === activeTicker ? 'text-blue-700 dark:text-blue-300 underline' : 'text-blue-600 dark:text-blue-400 hover:underline'}`;
+    link.textContent = ticker;
+    link.addEventListener('click', event => { event.preventDefault(); activate(ticker); });
+    subtitle.append(link);
+  });
+}
+
+function renderSubtitleDetails(text?: string): void {
   const generated = state.generatedAt ? new Date(state.generatedAt).toLocaleString() : '';
   const countsText = state.counts
     ? `${state.counts.funds} ETFs · ${(state.counts.holdings || 0).toLocaleString('en-US')} holdings rows · ${(state.counts.history || 0).toLocaleString('en-US')} history rows`
@@ -1653,6 +1675,11 @@ function renderSubtitle(text?: string): void {
   el.subtitle.querySelectorAll('a[data-activate-fund]').forEach((link: any) => {
     link.addEventListener('click', () => activateFund(link.dataset.activateFund || ''));
   });
+}
+
+function renderSubtitle(text?: string): void {
+  renderSubtitleDetails(text);
+  renderHeaderSummary(el.subtitle, state.selected, state.activeFundTicker, activateFund);
 }
 
 function setStatusRow(message: string, tone: 'info' | 'error'): void {
