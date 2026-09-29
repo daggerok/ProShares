@@ -6,7 +6,7 @@
   "CONCURRENCY": "2",
   "HOLDINGS_PAGE_SIZE": "250",
   "HISTORY_PAGE_SIZE": "1000",
-  "STORE_RAW_DOWNLOADS": "",
+  "STORE_RAW_DOWNLOADS": "false",
   "MAX_RETRIES": "3",
   "TICKERS": "",
   "CATEGORY": "",
@@ -14,6 +14,6 @@
   "SEC_YIELD": ":",
   "HISTORY_RANGE": "max",
   "DISTRIBUTION_YEARS": "10",
-  "SKIP_PROSHARES": "",
+  "SKIP_PROSHARES": "false",
   "VERBOSE": "false"
 }
