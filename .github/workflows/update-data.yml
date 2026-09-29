@@ -14,32 +14,32 @@ on:
       request_sleep:
         description: "Seconds between outgoing request starts; keep requests polite to proshares.com and the ProShares data host"
         required: false
-        default: "2"
+        default: ""
         type: string
       aum:
         description: "AUM min:max; bounds may be amounts or K/M/B/T suffixes, or nano/micro/small/mid/large"
         required: false
-        default: ":"
+        default: ""
         type: string
       ter:
         description: "Expense ratio range in percent: min:max"
         required: false
-        default: ":"
+        default: ""
         type: string
       concurrency:
         description: "Parallel fund workers (keep low; proshares.com sits behind a WAF that answers 403 while throttling)"
         required: false
-        default: "2"
+        default: ""
         type: string
       holdings_page_size:
         description: "Rows in each generated holdings JSON page"
         required: false
-        default: "250"
+        default: ""
         type: string
       history_page_size:
         description: "Rows in each generated history JSON page"
         required: false
-        default: "1000"
+        default: ""
         type: string
       store_raw_downloads:
         description: "Store the official rendered holdings/NAV downloads under api/proshares/raw"
@@ -49,7 +49,7 @@ on:
       max_retries:
         description: "Retries after the initial request (408/425/429/403/5xx)"
         required: false
-        default: "3"
+        default: ""
         type: string
       tickers:
         description: "Only update these tickers, separated by spaces or commas"
@@ -64,22 +64,22 @@ on:
       dividend_yield:
         description: "Published 12-Month or indicated dividend-yield percentage range; colon required"
         required: false
-        default: ":"
+        default: ""
         type: string
       sec_yield:
         description: "Official page SEC 30-Day Yield min:max percentage; an active bound excludes pages without a published value"
         required: false
-        default: ":"
+        default: ""
         type: string
       history_range:
         description: "How much official NAV history to publish (max, 20y, 10y, 5y, or a number of months/days such as 36m or 90d)"
         required: false
-        default: "max"
+        default: ""
         type: string
       distribution_years:
         description: "How many years of the official distribution summary to walk per fund"
         required: false
-        default: "10"
+        default: ""
         type: string
       skip_proshares:
         description: "Legacy no-op retained for older dispatch forms; use tickers for a bounded update"
@@ -93,21 +93,21 @@ jobs:
     permissions:
       contents: write
     env:
-      MAX_FETCHES: ${{ inputs.max_fetches || '0' }}
-      REQUEST_SLEEP: ${{ inputs.request_sleep || '2' }}
-      AUM: ${{ inputs.aum || ':' }}
-      TER: ${{ inputs.ter || ':' }}
-      CONCURRENCY: ${{ inputs.concurrency || '2' }}
-      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '250' }}
-      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '1000' }}
+      MAX_FETCHES: ${{ inputs.max_fetches || '' }}
+      REQUEST_SLEEP: ${{ inputs.request_sleep || '' }}
+      AUM: ${{ inputs.aum || '' }}
+      TER: ${{ inputs.ter || '' }}
+      CONCURRENCY: ${{ inputs.concurrency || '' }}
+      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '' }}
+      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '' }}
       STORE_RAW_DOWNLOADS: ${{ inputs.store_raw_downloads || '' }}
-      MAX_RETRIES: ${{ inputs.max_retries || '3' }}
+      MAX_RETRIES: ${{ inputs.max_retries || '' }}
       TICKERS: ${{ inputs.tickers || '' }}
       CATEGORY: ${{ inputs.category || '' }}
-      DIVIDEND_YIELD: ${{ inputs.dividend_yield || ':' }}
-      SEC_YIELD: ${{ inputs.sec_yield || ':' }}
-      HISTORY_RANGE: ${{ inputs.history_range || 'max' }}
-      DISTRIBUTION_YEARS: ${{ inputs.distribution_years || '10' }}
+      DIVIDEND_YIELD: ${{ inputs.dividend_yield || '' }}
+      SEC_YIELD: ${{ inputs.sec_yield || '' }}
+      HISTORY_RANGE: ${{ inputs.history_range || '' }}
+      DISTRIBUTION_YEARS: ${{ inputs.distribution_years || '' }}
       SKIP_PROSHARES: ${{ inputs.skip_proshares || '' }}
 
     steps:
