@@ -1,5 +1,5 @@
-import './load-update-data-config'; // JSON defaults; explicit process.env overrides.
 #!/usr/bin/env bun
+import './load-update-data-config'; // JSON defaults; explicit process.env overrides.
 /// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
 import { createHash as outputCreateHash } from 'node:crypto';
