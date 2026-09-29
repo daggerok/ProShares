@@ -70,6 +70,7 @@ import {
   type HoldingsRow,
   type NavRow,
   type UpdaterConfig,
+  parseRanges,
 } from './update-data';
 
 // ---------------------------------------------------------------------------
@@ -1057,4 +1058,11 @@ headerTest('header markup supplies a focusable counter and hidden rich panel wit
   headerExpect(html).toContain("event.key !== 'Escape'");
   headerExpect(html).toContain("trigger.addEventListener('focus', show)");
   headerExpect(html).toContain("trigger.addEventListener('pointerenter'");
+});
+
+
+describe('return range defaults', () => {
+  test('colon-only values do not create active return filters', () => {
+    expect(parseRanges({ PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':', TOTAL_RETURN_1Y: ':' }, 'PERFORMANCE')).toEqual({});
+  });
 });
