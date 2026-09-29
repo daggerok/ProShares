@@ -540,7 +540,7 @@ export function parseAumRange(raw: string): Range | undefined {
   return { min, max };
 }
 
-export export function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMANCE' | 'TOTAL_RETURN'): RangeMap {
+export function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMANCE' | 'TOTAL_RETURN'): RangeMap {
   const ranges: RangeMap = {};
   for (const period of RETURN_PERIODS) {
     const raw = envValue(env, `${prefix}_${period}`);
