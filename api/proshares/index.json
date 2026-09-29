@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T03:06:47Z",
+ "generatedAt": "2026-09-29T04:56:58Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,12 +16,12 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-09-27T03:03:19Z"
+  "catalogReadAt": "2026-09-29T04:56:53Z"
  },
  "counts": {
   "funds": 173,
   "holdings": 20172,
-  "history": 540774
+  "history": 540775
  },
  "funds": [
   {
@@ -42,18 +42,18 @@
    "terGrossValue": 0.72,
    "terNet": "0.72%",
    "terNetValue": 0.72,
-   "nav": "$25.58",
-   "navValue": 25.58,
-   "aum": "$24,432,542",
-   "aumValue": 24432554.5838,
-   "asOfDate": "Sep 25 2026",
-   "netAssetsAsOf": "Sep 25 2026",
+   "nav": "$25.24",
+   "navValue": 25.24,
+   "aum": "$24,100,666",
+   "aumValue": 22965058.2363,
+   "asOfDate": "Sep 28 2026",
+   "netAssetsAsOf": "Sep 28 2026",
    "inceptionDate": "Aug 13 2026",
    "exchange": "Nasdaq",
-   "closePrice": "$25.55",
-   "closePriceValue": 25.55,
-   "premiumDiscount": "-0.12%",
-   "premiumDiscountValue": -0.1173,
+   "closePrice": "$25.23",
+   "closePriceValue": 25.23,
+   "premiumDiscount": "-0.04%",
+   "premiumDiscountValue": -0.0396,
    "distributions": {
     "frequency": "Monthly",
     "note": "This fund has not made any distributions.",
@@ -145,7 +145,7 @@
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 3,
-   "history": 31
+   "history": 32
   },
   {
    "ticker": "ACRT",

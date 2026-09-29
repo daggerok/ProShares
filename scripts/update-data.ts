@@ -545,7 +545,8 @@ export function parseRanges(env: Record<string, string | undefined>, prefix: 'PE
   for (const period of RETURN_PERIODS) {
     const raw = envValue(env, `${prefix}_${period}`);
     if (raw === '') continue;
-    ranges[period] = parseRange(raw, `${prefix}_${period}`);
+    const parsed = parseRange(raw, `${prefix}_${period}`);
+    if (parsed && (parsed.min !== undefined || parsed.max !== undefined)) ranges[period] = parsed;
   }
   return ranges;
 }
