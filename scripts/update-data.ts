@@ -1,16 +1,6 @@
 #!/usr/bin/env bun
-// Checked-in JSON is the runtime default; any nonblank environment value wins.
-import { readFileSync as readUpdaterConfig } from 'node:fs';
-try {
-  const updaterDefaults = JSON.parse(readUpdaterConfig(new URL('./update-data.config.json', import.meta.url), 'utf8')) as Record<string, unknown>;
-  for (const [key, value] of Object.entries(updaterDefaults)) {
-    const current = process.env[key];
-    if ((current === undefined || current.trim() === '') && value !== null && value !== undefined) process.env[key] = String(value);
-  }
-} catch (error) {
-  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-}
 /// <reference types="bun" />
+// Control defaults live in scripts/update-data.config.json; see resolveControls() and runtimeControls().
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
 import { createHash as outputCreateHash } from 'node:crypto';
 import { join as outputJoin } from 'node:path';
@@ -572,7 +562,9 @@ export const USAGE = `
 ProShares static feed updater (api/proshares/**).
 
 Usage:
-  ./scripts/update-data.ts [options]        # options come from the environment
+  ./scripts/update-data.ts [options]        # defaults: scripts/update-data.config.json; environment overrides
+
+Precedence: config file < advanced JSON (workflow) < nonblank workflow inputs < environment
 
 Environment variables
   MAX_FETCHES            0            Funds to process. 0 = full pass over the
@@ -595,8 +587,8 @@ Environment variables
                                       match an active bound. ":" accepts all.
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y  ""    Annualized-return ranges (min:max).
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y ""    Cumulative-return ranges (min:max).
-  CONCURRENCY            3            Parallel fund workers.
-  REQUEST_SLEEP          1.5          Seconds between outgoing request starts.
+  CONCURRENCY            2            Parallel fund workers.
+  REQUEST_SLEEP          2            Seconds between outgoing request starts.
   MAX_RETRIES            3            Retries after the initial request
                                       (408/425/429/403/5xx).
   HOLDINGS_PAGE_SIZE     250          Rows per generated holdings JSON page.
@@ -614,6 +606,8 @@ Environment variables
   OFFLINE_SEED           ""           Replay the previously published catalog and
                                       api/proshares/raw samples instead of
                                       fetching (1/true/yes/on).
+  VERBOSE                ""           Print per-fund retry and fallback notices
+                                      (1/true/yes/on).
 
 Examples
   MAX_FETCHES=10 ./scripts/update-data.ts
@@ -657,6 +651,73 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
     throw new Error(`Invalid AUDIENCE_TYPE "${config.audienceType}": use Investor or Advisor`);
   }
   return config;
+}
+
+// File defaults and explicit overrides: allowlisted scalar controls only, so
+// GitHub Actions can resolve them without interpolating user input into bash.
+// Precedence: config file < advanced JSON < nonblank inputs < environment.
+export const CONTROL_NAMES = [
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
+  'CATEGORY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'DISTRIBUTION_YEARS', 'MAX_RETRIES',
+  'STORE_RAW_DOWNLOADS', 'SKIP_PROSHARES', 'OFFLINE_SEED', 'VERBOSE',
+  ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap(prefix => ['YTD', '1Y', '3Y', '5Y', '10Y'].map(period => `${prefix}_${period}`)),
+] as const;
+export type ControlName = (typeof CONTROL_NAMES)[number];
+export const CONFIG_FILE_URL = new URL('./update-data.config.json', import.meta.url);
+
+// Legacy environment aliases that keep working; the canonical name wins when both are set.
+const CONTROL_ALIASES: Record<string, string[]> = {
+  TICKERS: ['PROSHARES_TICKERS'],
+  HISTORY_PAGE_SIZE: ['HISTORICAL_PAGE_SIZE'],
+  AUM: ['AUM_RANGE'],
+  TER: ['EXPENSE_RATIO', 'TER_RANGE'],
+  SKIP_PROSHARES: ['SKIP_PROSHARES_ETF'],
+};
+
+export function resolveControls(
+  file: unknown = {},
+  advanced: unknown = {},
+  inputs: unknown = {},
+  env: Record<string, string | undefined> = {},
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  const known = new Set<string>(CONTROL_NAMES);
+  const apply = (value: unknown, skipEmpty = false): void => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Configuration must be a JSON object');
+    for (const [key, raw] of Object.entries(value)) {
+      if (!known.has(key)) throw new Error(`Unknown updater control: ${key}`);
+      if (skipEmpty && (raw === '' || raw === undefined || raw === null)) continue;
+      if (!['string', 'number', 'boolean'].includes(typeof raw)) throw new Error(`${key}: expected string, number or boolean`);
+      const text = String(raw);
+      if (/[\r\n\0]/.test(text)) throw new Error(`${key}: multiline/control characters are not allowed`);
+      result[key] = text;
+    }
+  };
+  apply(file);
+  apply(advanced);
+  apply(inputs, true);
+  for (const key of CONTROL_NAMES) {
+    const name = [key, ...(CONTROL_ALIASES[key] ?? [])].find(candidate => env[candidate] !== undefined);
+    if (name !== undefined) apply({ [key]: env[name] });
+  }
+  const integerMin: Record<string, number> = { MAX_FETCHES: 0, MAX_RETRIES: 0, DISTRIBUTION_YEARS: 0, CONCURRENCY: 1, HOLDINGS_PAGE_SIZE: 1, HISTORY_PAGE_SIZE: 1 };
+  for (const [key, min] of Object.entries(integerMin)) {
+    const value = result[key];
+    if (value === undefined || value.trim() === '') continue;
+    if (!/^\d+$/.test(value.trim()) || !Number.isSafeInteger(Number(value)) || Number(value) < min) throw new Error(`${key}: expected integer >= ${min}`);
+  }
+  if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
+  for (const key of ['STORE_RAW_DOWNLOADS', 'SKIP_PROSHARES', 'OFFLINE_SEED', 'VERBOSE']) {
+    if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
+  }
+  if (result.HISTORY_RANGE) historyRangeDays(result.HISTORY_RANGE);
+  readConfig(result); // validate every min:max filter before any request or write
+  return result;
+}
+
+export async function runtimeControls(env: Record<string, string | undefined> = process.env): Promise<Record<string, string>> {
+  const file: unknown = JSON.parse(await readFile(CONFIG_FILE_URL, 'utf8'));
+  return resolveControls(file, {}, {}, env);
 }
 
 // ---------------------------------------------------------------------------
@@ -2027,7 +2088,12 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
   return { funds: [...unique.values()].sort((a, b) => a.ticker.localeCompare(b.ticker)), catalogReadAt };
 }
 
-export async function main(config: UpdaterConfig = readConfig()): Promise<void> {
+export async function main(config?: UpdaterConfig): Promise<void> {
+  if (!config) {
+    const controls = await runtimeControls();
+    if (controls.VERBOSE !== undefined) process.env.VERBOSE = controls.VERBOSE;
+    config = readConfig(controls);
+  }
   outputPrintConfig('ProShares', config);
   const runStartedAt = Date.now();
   await mkdir(path.join(API_ROOT, 'funds'), { recursive: true });
