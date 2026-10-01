@@ -17,13 +17,15 @@ The published application is available at <https://daggerok.github.io/ProShares/
 Run the updater with Bun:
 
 ```bash
-bun test scripts/update-data.test.ts
+bun test
 ./scripts/update-data.ts
 ```
 
-Run `./scripts/update-data.ts -h` (or `--help`) to print every configuration variable with its default and usage examples.
+Every control has a default in `scripts/update-data.config.json` (flat object, string values). The updater, the `--help` text, the README table below and the workflow all use the same `resolveControls` function from `scripts/update-data.ts`. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < environment variable (legacy aliases such as `PROSHARES_TICKERS` still work). A blank workflow input inherits the file value; `advanced` can set a key to an empty string on purpose. Unknown keys, non-scalar values, multi-line values and invalid numbers, booleans or ranges are rejected before any request or write.
 
-The **Update ProShares ETF data** GitHub Actions workflow (`.github/workflows/update-data.yml`, `workflow_dispatch` only) exposes the same settings as manual inputs and commits `api/proshares/**` and nothing else — a data run never rewrites app code or CI config. All supplied filters use **AND** logic.
+Run `./scripts/update-data.ts -h` (or `--help`) to print every control with its default and usage examples.
+
+The **Update ProShares ETF data** GitHub Actions workflow (`.github/workflows/update-data.yml`) runs weekly (Sunday 00:00 UTC) and on manual dispatch. It exposes the most common controls as inputs (at most 25 including `advanced`), accepts every other control through the `advanced` JSON input, and commits `api/proshares/**` and nothing else - a data run never rewrites app code or CI config. All supplied filters use **AND** logic.
 
 Updater output shows the catalog header, then numbered per-fund `ok` or `FAILED` lines **on completion**, followed by totals; it does not print per-fund start lines. Filtered funds appear in the final count only. Actual retry and fallback warnings are retained for diagnosis.
 
@@ -46,7 +48,9 @@ Every one of those sources is official and machine-readable: the whole feed is b
 
 `accounts.profunds.com/etfdata` is the distribution host ProShares itself links to from every fund page ("NAV History" → `ByFund/<TICKER>-historical_nav.csv`). Its directory listing is the authoritative fund universe for the data files, and the bulk files (`psdlyhld.csv`, `historical_nav.csv`, `etf_performance.csv`, `etf_splits.csv`) are refreshed every trading day right after NAV publication — the same numbers the website renders.
 
-### Known value limitations
+### Metrics and caveats
+
+Official NAV, price, yield and return figures are copied from ProShares sources as published; the only computed values are premium/discount, position weights and cumulative 3Y/5Y/10Y returns, each labelled as derived in `meta.json`. A missing figure is shown as `—` and is never treated as zero.
 
 | Metric | Status | Reason |
 | --- | --- | --- |
@@ -67,22 +71,32 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 
 ### Update controls
 
-| Environment variable | Default | Meaning |
+| Control | Default | Meaning |
 | --- | --: | --- |
 | `MAX_FETCHES` | `0` | Funds to process; `0` = full pass. A positive value resumes after the cursor in `api/proshares/update-state.json`. |
-| `TICKERS` | `""` | Space/comma separated ticker allowlist; ANDed with the other filters, never overriding them. |
+| `REQUEST_SLEEP` | `2` | Seconds between outgoing request starts; keeps requests polite to proshares.com and the data host. |
+| `CONCURRENCY` | `2` | Parallel fund workers; keep low, proshares.com sits behind a WAF that answers 403 while throttling. |
+| `AUM` | `":"` | `min:max` net-asset range; also accepts `nano`/`micro`/`small`/`mid`/`large` presets and `K`/`M`/`B`/`T` suffixes. |
+| `TER` | `":"` | Expense-ratio range in percent, `min:max`. |
+| `DIVIDEND_YIELD` | `":"` | `min:max` against the same official 12-Month or computed indicated value that the feed shows (requires fetching official distribution rows when 12-Month Yield is absent). |
+| `SEC_YIELD` | `":"` | Inclusive `min:max` against the official SEC 30-Day Yield on each fund page; `:` imposes no restriction, but an active bound excludes a fund whose page omits this field. |
+| `TICKERS` | `""` | Space or comma separated ticker allowlist; ANDed with the other filters, never overriding them. |
 | `CATEGORY` | `""` | Substring match on the ProShares asset class (Equity, Fixed Income, Commodity, Crypto-Linked, Cash, Alternative, Volatility). |
-| `AUM` / `TER` / `DIVIDEND_YIELD` | `":"` | `min:max` ranges; `AUM` also accepts `nano`/`micro`/`small`/`mid`/`large` presets and `K`/`M`/`B`/`T` suffixes. `DIVIDEND_YIELD` matches the same official 12-Month or computed indicated value that the feed shows (requires fetching official distribution rows when 12-Month Yield is absent). |
-| `SEC_YIELD` | `":"` | Inclusive `min:max` range against the official SEC 30-Day Yield on each fund page; `:` imposes no restriction, but an active bound excludes a fund whose page omits this field. |
-| `CONCURRENCY` / `REQUEST_SLEEP` | `3` / `1.5` | Politeness for the 173 fund pages and the JSON endpoint. |
-| `HOLDINGS_PAGE_SIZE` / `HISTORY_PAGE_SIZE` | `250` / `1000` | Rows per generated JSON page (alias `HISTORICAL_PAGE_SIZE`). |
-| `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years/months/days such as `10y`, `36m` or `90d`. |
+| `HOLDINGS_PAGE_SIZE` | `250` | Rows per generated holdings JSON page. |
+| `HISTORY_PAGE_SIZE` | `1000` | Rows per generated history JSON page (alias `HISTORICAL_PAGE_SIZE`). |
+| `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years, months or days such as `10y`, `36m` or `90d`. |
 | `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history fetched per fund (the endpoint is year-scoped). |
-| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 408/425/429/5xx. |
-| `SKIP_PROSHARES` | off | Legacy no-op in this official-source updater; it does not disable provider requests. Use `TICKERS` for bounded runs instead. |
-| `STORE_RAW_DOWNLOADS` | off | Keep one raw sample of each source under `api/proshares/raw`. |
+| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx. |
+| `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
+| `SKIP_PROSHARES` | `false` | Legacy no-op in this official-source updater; it does not disable provider requests. Use `TICKERS` for bounded runs instead. |
+| `OFFLINE_SEED` | `false` | Replay the published catalog and `api/proshares/raw` samples instead of fetching. |
+| `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
+| `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Annualized-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
+| `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Cumulative-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 
-There is no `SKIP_YAHOO` switch or Yahoo fallback: this updater uses the official ProShares pages, data host and distributions API. Setting `SKIP_YAHOO` has no effect.
+Workflow inputs: `tickers`, `max_fetches`, `request_sleep`, `concurrency`, `category`, `aum`, `ter`, `dividend_yield`, `sec_yield`, `holdings_page_size`, `history_page_size`, `history_range`, `distribution_years`, `max_retries`, `store_raw_downloads`, `skip_proshares`, `verbose` and `advanced`. The remaining controls are reachable through `advanced`, for example `{"PERFORMANCE_1Y": "5:", "OFFLINE_SEED": "true"}`.
+
+There is no `SKIP_YAHOO` switch or Yahoo fallback: this updater uses the official ProShares pages, data host and distributions API. Setting `SKIP_YAHOO` has no effect and is rejected as an unknown control.
 
 `TICKERS` combines with the AUM/TER/yield filters using AND logic; it does not override them. A young fund that lacks a requested 3Y/5Y/10Y figure passes a return filter (nothing is invented), while a fund without AUM/TER under an active AUM/TER filter fails it. Funds that did not update successfully keep their previously published metadata and data files, so a bounded or partly failed run can never empty the site.
 
@@ -96,68 +110,97 @@ DISTRIBUTION_YEARS=20 HISTORY_RANGE=5y ./scripts/update-data.ts
 STORE_RAW_DOWNLOADS=1 ./scripts/update-data.ts
 ```
 
+Manual workflow run with advanced overrides (blank inputs inherit `scripts/update-data.config.json`):
+
+```json
+{"PERFORMANCE_1Y": "5:", "HISTORY_RANGE": "10y"}
+```
+
 ## Uploading the official holdings file in the browser
 
 The dropzone in the toolbar accepts the official ProShares daily holdings download — either one fund's own file (`NOBL-psdlyhld.csv`, the "Download Holdings" link target of every fund page) or the all-funds `psdlyhld.csv`. It is parsed in the browser (no network call), merged into the catalog and overrides that fund's holdings for the session; the static feed is untouched and the upload disappears on reload. Holdings files for funds that are not in the catalog are added as `Uploaded` entries so a brand-new ETF can still be inspected.
 
-## TypeScript
+## TypeScript and verification
 
 The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone — no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
 
-Verification before every publish: `bun install --frozen-lockfile`, `bun test`, and `git diff --check`.
+Verification before every publish:
+
+```bash
+bun install --frozen-lockfile
+bun test
+bun build --target=bun scripts/update-data.ts --outfile=/dev/null
+git diff --check
+```
+
+`bun test` also covers the config, README and workflow checks in `scripts/config-docs.test.ts`.
 
 ## Brands table
 
 | Brand | Where to get the data |
 | --- | --- |
+| **AAM** | [aamlive.com](https://www.aamlive.com/ETF) \| [AAM](https://daggerok.github.io/AAM/) |
 | **abrdn (Aberdeen)** | [aberdeeninvestments.com](https://www.aberdeeninvestments.com/en-us/investor/funds/etfs) \| [aberdeen](https://daggerok.github.io/aberdeen/) |
 | **Amplify** | [amplifyetfs.com](https://amplifyetfs.com/) \| [Amplify](https://daggerok.github.io/Amplify/) |
+| **ARK Invest** | [ark-funds.com](https://www.ark-funds.com/our-etfs/) \| [ARK](https://daggerok.github.io/ARK/) |
 | **Capital Group** | [capitalgroup.com](https://www.capitalgroup.com/advisor/investments/exchange-traded-funds.html) \| [Capital-Group](https://daggerok.github.io/Capital-Group/) |
 | **Fidelity** | [fidelity.com](https://www.fidelity.com/etfs) \| [Fidelity](https://daggerok.github.io/Fidelity/) |
 | **First Trust** | [ftportfolios.com](https://www.ftportfolios.com/Retail/etf/etflist.aspx) \| [First-Trust](https://daggerok.github.io/First-Trust/) |
 | **Franklin Templeton** | [franklintempleton.com](https://www.franklintempleton.com/investments/options/exchange-traded-funds) \| [Franklin](https://daggerok.github.io/Franklin/) |
-| **Global X** | [globalxetfs.com/explore](https://www.globalxetfs.com/explore) \| [Global X](https://daggerok.github.io/Global-X/) |
+| **Global X** | [globalxetfs.com/explore](https://www.globalxetfs.com/explore) \| [Global-X](https://daggerok.github.io/Global-X/) |
 | **Goldman Sachs** | [am.gs.com](https://am.gs.com/en-us/individual/funds?locale=en-us&audience=individual&sf=funds&filters=funds%7CETF&limit=100) \| [Goldman-Sachs](https://daggerok.github.io/Goldman-Sachs/) |
 | **Invesco** | [invesco.com](https://www.invesco.com/us/en/financial-products/etfs.html) \| [Invesco](https://daggerok.github.io/Invesco/) |
 | **iShares** | [ishares.com](https://www.ishares.com/) \| [iShares](https://daggerok.github.io/iShares/) |
 | **JPMorgan** | [am.jpmorgan.com](https://am.jpmorgan.com/us/en/asset-management/adv/products/fund-explorer/etf) \| [JPMorgan](https://daggerok.github.io/JPMorgan/) |
 | **NEOS** | [neosfunds.com](https://neosfunds.com/#explore-etfs) \| [Neos](https://daggerok.github.io/Neos/) |
 | **Northern Trust** | [etfs.ntam.northerntrust.com](https://etfs.ntam.northerntrust.com/us/en/individual/funds) \| [Northern-Trust](https://daggerok.github.io/Northern-Trust/) |
+| **Pacer ETFs** | [paceretfs.com](https://www.paceretfs.com/products/) \| [Pacer](https://daggerok.github.io/Pacer/) (deployment pending) |
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
+| **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
 | **Vanguard** | [investor.vanguard.com](https://investor.vanguard.com/etf/list) \| [Vanguard](https://daggerok.github.io/Vanguard/) |
 | **VictoryShares** | [vcm.com VictoryShares ETFs](https://www.vcm.com/products/victoryshares-etfs/victoryshares-etfs-list) \| [VictoryShares](https://daggerok.github.io/VictoryShares/) |
 | **WisdomTree** | [wisdomtree.com](https://www.wisdomtree.com/investments) \| [WisdomTree](https://daggerok.github.io/WisdomTree/) |
+| **Xtrackers** | [etf.dws.com](https://etf.dws.com/en-us/etf-products/) \| [Xtrackers](https://daggerok.github.io/Xtrackers/) |
 
 ## Sibling applications
 
 | Application | Data provider | Repository |
 | --- | --- | --- |
+| AAM | Official AAM catalog/detail HTML + full holdings XLS + SEC N-PORT holdings fallback + Yahoo market history/dividends | [AAM](https://github.com/daggerok/AAM) |
 | abrdn (Aberdeen) | Official Aberdeen gateway + SEC N-PORT holdings fallback + Yahoo history/dividends | [aberdeen](https://github.com/daggerok/aberdeen) |
 | Amplify | Amplify ETFs (Firestore data feed) | [Amplify](https://github.com/daggerok/Amplify) |
+| ARK Invest | ark-funds.com fund pages + overview/NAV-history/performance JSON + official daily holdings CSV + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance distributions/history fallback | [ARK](https://github.com/daggerok/ARK) |
 | Capital Group | Official Capital Group fund data + SEC N-PORT holdings fallback + Yahoo history fallback | [Capital-Group](https://github.com/daggerok/Capital-Group) |
 | Fidelity | SEC EDGAR N-PORT-P + Yahoo Finance | [Fidelity](https://github.com/daggerok/Fidelity) |
 | First Trust | ftportfolios.com official ETF list + fund summary, holdings, distribution and price-history export pages + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance history fallback | [First-Trust](https://github.com/daggerok/First-Trust) |
 | Franklin Templeton | franklintempleton.com ETF listings + product pages + SEC EDGAR N-PORT-P | [Franklin](https://github.com/daggerok/Franklin) |
-| Global X | globalxetfs.com Next.js catalog and fund pages + dated full-holdings CSV | [Global X](https://github.com/daggerok/Global-X) |
+| Global X | globalxetfs.com Next.js catalog and fund pages + dated full-holdings CSV | [Global-X](https://github.com/daggerok/Global-X) |
 | Goldman Sachs | am.gs.com fund finder + detail pages + SEC EDGAR N-PORT-P | [Goldman-Sachs](https://github.com/daggerok/Goldman-Sachs) |
 | Invesco | invesco.com CSV downloads + Yahoo Finance | [Invesco](https://github.com/daggerok/Invesco) |
 | iShares | iShares (BlackRock) product workbooks | [iShares](https://github.com/daggerok/iShares) |
 | JPMorgan | am.jpmorgan.com fund explorer + product-data JSON | [JPMorgan](https://github.com/daggerok/JPMorgan) |
 | NEOS | neosfunds.com lineup table + official fund pages + daily holdings CSV | [Neos](https://github.com/daggerok/Neos) |
 | Northern Trust | etfs.ntam.northerntrust.com funds list + per-fund CSV/JSON downloads | [Northern-Trust](https://github.com/daggerok/Northern-Trust) |
+| Pacer ETFs | paceretfs.com product catalog and fund pages (Cloudflare WAF; r.jina.ai proxy fallback) + SEC EDGAR N-PORT-P (Pacer Funds Trust) + Yahoo Finance history/dividends | [Pacer](https://github.com/daggerok/Pacer) |
 | ProShares | proshares.com ETF finder + fund pages + official data host | [ProShares](https://github.com/daggerok/ProShares) |
 | Schwab | schwabassetmanagement.com product pages + CSV exports | [Schwab](https://github.com/daggerok/Schwab) |
 | SPDR | SSGA / State Street public feeds | [SPDR](https://github.com/daggerok/SPDR) |
+| Sprott ETFs | sprottetfs.com fund pages + SEC EDGAR N-PORT-P (Sprott Funds Trust) + Yahoo Finance history/dividends | [Sprott](https://github.com/daggerok/Sprott) |
+| Tema ETFs | Tema official fund pages + dated daily holdings CSV; SEC EDGAR N-PORT-P holdings fallback only + Yahoo Finance price/history/dividend fallback | [Tema](https://github.com/daggerok/Tema) |
+| Themes ETFs | themesetfs.com catalog + daily holdings CSV + Yahoo Finance history/dividends + SEC N-PORT-P holdings fallback | [Themes](https://github.com/daggerok/Themes) |
 | VanEck | vaneck.com ETF finder + product pages | [VanEck](https://github.com/daggerok/VanEck) |
 | Vanguard | Vanguard product pages + SEC EDGAR N-PORT-P | [Vanguard](https://github.com/daggerok/Vanguard) |
 | VictoryShares | VCM VictoryShares catalog and product JSON + SEC EDGAR N-PORT-P holdings fallback + Yahoo Finance adjusted-market-price history | [VictoryShares](https://github.com/daggerok/VictoryShares) |
 | WisdomTree | WisdomTree product table + SEC EDGAR N-PORT-P + Yahoo Finance | [WisdomTree](https://github.com/daggerok/WisdomTree) |
+| Xtrackers | Official DWS catalog/US sitemap + PDP/XLSX + SEC N-PORT-P holdings fallback + Yahoo Finance daily prices/history/dividends | [Xtrackers](https://github.com/daggerok/Xtrackers) |
 
 ## License
 
-[MIT — same as all sibling ETF repositories.](./LICENSE)
+[MIT - same as all sibling ETF repositories.](./LICENSE)
 
 ProShares® and the fund names/tickers referenced here are trademarks of ProShares Trust and ProShare Advisors LLC. This is an independent, unofficial tool; it is not affiliated with, endorsed by, or sponsored by ProShares. All data is reproduced from ProShares' own public pages and downloads for research purposes. All other trademarks, including index names, are the property of their respective owners.
