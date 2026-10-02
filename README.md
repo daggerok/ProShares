@@ -65,9 +65,9 @@ Official NAV, price, yield and return figures are copied from ProShares sources 
 | **Listing exchange** | from Nasdaq Trader; 0 blank in current feed | Not published on ProShares pages; the official Nasdaq Trader symbol directory resolves all 173 current tickers. A future newly listed fund absent from the directory would honestly show `—`. |
 | **Weight per position** | computed | The official holdings file has no weight column. The updater computes `position market value (or notional exposure for derivatives) ÷ fund net assets implied by the file's summed market values × 100`, reproducing the published page weights (previously verified for NOBL BDX `1.73%`, TQQQ NVDA `3.11%` and a Barclays swap `29.64%`, AGQ Silver DEC26 `77.04%`, IGHG Morgan Stanley `1.62%`, and several others). ProShares renders `--` for residual `Net Other Assets (Liabilities)` and its cash equivalents (`TREASURY BILL`, `PROSHARES GENIUS MNY MKT ETF`) → those keep weight `—` (`isWeightlessRow`). Bond/future/swap rows do carry a weight. Some geared funds legitimately total roughly −300% to +300%, not a feed error. |
 | **Cumulative TR 3Y/5Y/10Y** | derived from the official annualized figures | ProShares publishes annualized 3Y/5Y/10Y (and since-inception) returns only; the cumulative tenors are derived as `(1 + annualized)^n − 1` and labelled as derived in `meta.json`. |
-| **Holdings for brand-new funds** | 0 missing in current feed | All 173 current funds have holdings/history pages and pass `dev-run/check-feed.py`. A future brand-new fund may precede its first published holdings file; only then should the Holdings tab show an explanatory empty state. |
+| **Holdings for brand-new funds** | 0 missing in current feed | All 173 current funds have holdings/history pages. A future brand-new fund may precede its first published holdings file; only then should the Holdings tab show an explanatory empty state. |
 
-These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separately pushed data update that regenerated all 173 fund metadata files. `python3 dev-run/check-feed.py` reports 0 problems. The 132 missing SEC 30-day yields reflect pages without that field in this run, not a claim that those funds can never publish it; recheck on subsequent updates.
+These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separately pushed data update that regenerated all 173 fund metadata files. The 132 missing SEC 30-day yields reflect pages without that field in this run, not a claim that those funds can never publish it; recheck on subsequent updates.
 
 ### Update controls
 
@@ -86,15 +86,14 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | `HISTORY_PAGE_SIZE` | `1000` | Rows per generated history JSON page (alias `HISTORICAL_PAGE_SIZE`). |
 | `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years, months or days such as `10y`, `36m` or `90d`. |
 | `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history fetched per fund (the endpoint is year-scoped). |
-| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx. |
+| `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx; integer of at least 1. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
-| `SKIP_PROSHARES` | `false` | Legacy no-op in this official-source updater; it does not disable provider requests. Use `TICKERS` for bounded runs instead. |
 | `OFFLINE_SEED` | `false` | Replay the published catalog and `api/proshares/raw` samples instead of fetching. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Annualized-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Cumulative-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 
-Workflow inputs: `tickers`, `max_fetches`, `request_sleep`, `concurrency`, `category`, `aum`, `ter`, `dividend_yield`, `sec_yield`, `holdings_page_size`, `history_page_size`, `history_range`, `distribution_years`, `max_retries`, `store_raw_downloads`, `skip_proshares`, `verbose` and `advanced`. The remaining controls are reachable through `advanced`, for example `{"PERFORMANCE_1Y": "5:", "OFFLINE_SEED": "true"}`.
+Workflow inputs: `tickers`, `max_fetches`, `request_sleep`, `concurrency`, `category`, `aum`, `ter`, `dividend_yield`, `sec_yield`, `holdings_page_size`, `history_page_size`, `history_range`, `distribution_years`, `max_retries`, `store_raw_downloads`, `offline_seed`, `verbose` and `advanced`. The remaining controls are reachable through `advanced`, for example `{"PERFORMANCE_1Y": "5:", "TOTAL_RETURN_YTD": ":20"}`.
 
 There is no `SKIP_YAHOO` switch or Yahoo fallback: this updater uses the official ProShares pages, data host and distributions API. Setting `SKIP_YAHOO` has no effect and is rejected as an unknown control.
 
@@ -133,7 +132,7 @@ bun build --target=bun scripts/update-data.ts --outfile=/dev/null
 git diff --check
 ```
 
-`bun test` also covers the config, README and workflow checks in `scripts/config-docs.test.ts`.
+`bun test` also covers the config, README and workflow checks.
 
 ## Brands table
 
@@ -158,7 +157,7 @@ git diff --check
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
