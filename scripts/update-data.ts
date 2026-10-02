@@ -603,6 +603,11 @@ Environment variables
                                       fetching (1/true/yes/on).
   VERBOSE                ""           Print per-fund retry and fallback notices
                                       (1/true/yes/on).
+  USE_SYSTEM_CA          auto         TLS trust store: auto restarts the updater
+                                      once with Bun's --use-system-ca when a
+                                      request fails with an untrusted-certificate
+                                      error; true always uses the system CA
+                                      store; false never restarts.
 
 Examples
   MAX_FETCHES=10 ./scripts/update-data.ts
@@ -648,7 +653,7 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'CATEGORY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'DISTRIBUTION_YEARS', 'MAX_RETRIES',
-  'STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE',
+  'STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE', 'USE_SYSTEM_CA',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap(prefix => ['YTD', '1Y', '3Y', '5Y', '10Y'].map(period => `${prefix}_${period}`)),
 ] as const;
 export type ControlName = (typeof CONTROL_NAMES)[number];
@@ -697,6 +702,11 @@ export function resolveControls(
   if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
   for (const key of ['STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE']) {
     if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
+  }
+  if (result.USE_SYSTEM_CA !== undefined) {
+    const mode = result.USE_SYSTEM_CA.trim().toLowerCase();
+    if (!['auto', 'true', 'false'].includes(mode)) throw new Error('USE_SYSTEM_CA: expected auto, true or false');
+    result.USE_SYSTEM_CA = mode;
   }
   if (result.HISTORY_RANGE) historyRangeDays(result.HISTORY_RANGE);
   readConfig(result); // validate every min:max filter before any request or write
@@ -2076,10 +2086,47 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
   return { funds: [...unique.values()].sort((a, b) => a.ticker.localeCompare(b.ticker)), catalogReadAt };
 }
 
+// --- TLS trust store (identical in every ETF repo) ---
+const SYSTEM_CA_MARKER = 'ETF_UPDATER_SYSTEM_CA';
+const CERT_ERROR = /UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED|unable to get (?:local )?issuer certificate|self[- ]signed certificate|certificate has expired/i;
+
+export function isCertError(error: unknown): boolean {
+  const e = error as { code?: unknown; message?: unknown; cause?: unknown } | null;
+  return CERT_ERROR.test(`${String(e?.code ?? '')} ${String(e?.message ?? '')}`) || (e?.cause ? isCertError(e.cause) : false);
+}
+
+export function systemCaActive(env: Record<string, string | undefined> = process.env, execArgv: string[] = process.execArgv): boolean {
+  return execArgv.includes('--use-system-ca') || env.NODE_USE_SYSTEM_CA === '1' || env[SYSTEM_CA_MARKER] === '1';
+}
+
+export function reexecWithSystemCa(): never {
+  const child = Bun.spawnSync([process.execPath, '--use-system-ca', ...process.argv.slice(1)], {
+    env: { ...process.env, [SYSTEM_CA_MARKER]: '1' },
+    stdio: ['inherit', 'inherit', 'inherit'],
+  });
+  process.exit(child.exitCode ?? 1);
+}
+
+/** mode: auto (restart once on an untrusted-certificate error), true (restart now), false (never). */
+export function installSystemCa(mode: string, reexec: () => never = reexecWithSystemCa, active: boolean = systemCaActive()): void {
+  if (mode === 'false' || active) return;
+  if (mode === 'true') reexec();
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = (async (...args: Parameters<typeof fetch>) => {
+    try { return await realFetch(...args); }
+    catch (error) {
+      if (!isCertError(error)) throw error;
+      console.error('[ notice   ] TLS certificate not trusted; restarting once with --use-system-ca');
+      return reexec();
+    }
+  }) as typeof fetch;
+}
+
 export async function main(config?: UpdaterConfig): Promise<void> {
   if (!config) {
     const controls = await runtimeControls();
     if (controls.VERBOSE !== undefined) process.env.VERBOSE = controls.VERBOSE;
+    installSystemCa(controls.USE_SYSTEM_CA);
     config = readConfig(controls);
   }
   outputPrintConfig('ProShares', config);
