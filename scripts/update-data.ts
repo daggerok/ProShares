@@ -20,7 +20,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     requestSleepSeconds: 'REQUEST_SLEEP', categories: 'CATEGORY',
     aumRange: 'AUM', terRange: 'TER', dividendYieldRange: 'DIVIDEND_YIELD', secYieldRange: 'SEC_YIELD',
     performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
-    skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
+    skipVanEck: 'SKIP_VANECK',
     skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
   };
   const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
@@ -431,9 +431,6 @@ export type UpdaterConfig = {
   maxRetries: number;
   tickers: string[];
   category: string;
-  audienceType: string;
-  secUa: string;
-  skipProShares: boolean;
   offlineSeed: boolean;
   aumRange?: Range;
   terRange?: Range;
@@ -590,7 +587,7 @@ Environment variables
   CONCURRENCY            2            Parallel fund workers.
   REQUEST_SLEEP          2            Seconds between outgoing request starts.
   MAX_RETRIES            3            Retries after the initial request
-                                      (408/425/429/403/5xx).
+                                      (408/425/429/403/5xx); at least 1.
   HOLDINGS_PAGE_SIZE     250          Rows per generated holdings JSON page.
   HISTORY_PAGE_SIZE      1000         Rows per generated history JSON page
                                       (alias HISTORICAL_PAGE_SIZE).
@@ -599,8 +596,6 @@ Environment variables
                                       fetched per fund (the endpoint is
                                       year-scoped); a year column is skipped
                                       after two empty years.
-  SKIP_PROSHARES         ""           Legacy no-op; use TICKERS for bounded
-                                      updates (official sources are required).
   STORE_RAW_DOWNLOADS    ""           Keep one raw sample of each source under
                                       api/proshares/raw (1/true/yes/on).
   OFFLINE_SEED           ""           Replay the previously published catalog and
@@ -632,9 +627,6 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
       .map(ticker => ticker.replace(/[^A-Za-z0-9]/g, '').toUpperCase())
       .filter(Boolean),
     category: envValue(env, 'CATEGORY'),
-    audienceType: envValue(env, 'AUDIENCE_TYPE'),
-    secUa: envValue(env, 'SEC_UA'),
-    skipProShares: parseBoolean(envValue(env, 'SKIP_PROSHARES', ['SKIP_PROSHARES_ETF'])),
     offlineSeed: parseBoolean(envValue(env, 'OFFLINE_SEED')),
     performanceRanges: parseRanges(env, 'PERFORMANCE'),
     totalReturnRanges: parseRanges(env, 'TOTAL_RETURN'),
@@ -647,9 +639,6 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
   config.dividendYieldRange = dividendYield === '' ? undefined : parseRange(dividendYield, 'DIVIDEND_YIELD');
   const secYield = envValue(env, 'SEC_YIELD');
   config.secYieldRange = secYield === '' ? undefined : parseRange(secYield, 'SEC_YIELD');
-  if (config.audienceType && !['Investor', 'Advisor'].includes(config.audienceType)) {
-    throw new Error(`Invalid AUDIENCE_TYPE "${config.audienceType}": use Investor or Advisor`);
-  }
   return config;
 }
 
@@ -659,7 +648,7 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'CATEGORY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'DISTRIBUTION_YEARS', 'MAX_RETRIES',
-  'STORE_RAW_DOWNLOADS', 'SKIP_PROSHARES', 'OFFLINE_SEED', 'VERBOSE',
+  'STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap(prefix => ['YTD', '1Y', '3Y', '5Y', '10Y'].map(period => `${prefix}_${period}`)),
 ] as const;
 export type ControlName = (typeof CONTROL_NAMES)[number];
@@ -671,7 +660,6 @@ const CONTROL_ALIASES: Record<string, string[]> = {
   HISTORY_PAGE_SIZE: ['HISTORICAL_PAGE_SIZE'],
   AUM: ['AUM_RANGE'],
   TER: ['EXPENSE_RATIO', 'TER_RANGE'],
-  SKIP_PROSHARES: ['SKIP_PROSHARES_ETF'],
 };
 
 export function resolveControls(
@@ -700,14 +688,14 @@ export function resolveControls(
     const name = [key, ...(CONTROL_ALIASES[key] ?? [])].find(candidate => env[candidate] !== undefined);
     if (name !== undefined) apply({ [key]: env[name] });
   }
-  const integerMin: Record<string, number> = { MAX_FETCHES: 0, MAX_RETRIES: 0, DISTRIBUTION_YEARS: 0, CONCURRENCY: 1, HOLDINGS_PAGE_SIZE: 1, HISTORY_PAGE_SIZE: 1 };
+  const integerMin: Record<string, number> = { MAX_FETCHES: 0, MAX_RETRIES: 1, DISTRIBUTION_YEARS: 0, CONCURRENCY: 1, HOLDINGS_PAGE_SIZE: 1, HISTORY_PAGE_SIZE: 1 };
   for (const [key, min] of Object.entries(integerMin)) {
     const value = result[key];
     if (value === undefined || value.trim() === '') continue;
     if (!/^\d+$/.test(value.trim()) || !Number.isSafeInteger(Number(value)) || Number(value) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
-  for (const key of ['STORE_RAW_DOWNLOADS', 'SKIP_PROSHARES', 'OFFLINE_SEED', 'VERBOSE']) {
+  for (const key of ['STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE']) {
     if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
   }
   if (result.HISTORY_RANGE) historyRangeDays(result.HISTORY_RANGE);
