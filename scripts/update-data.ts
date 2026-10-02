@@ -1709,6 +1709,12 @@ function performanceBlock(row: PerformanceRow | undefined): Record<string, unkno
   return block;
 }
 
+/** ISO date of the official month-end performance table row (not the NAV date), or null when unknown. */
+export function performanceAsOfIso(row: PerformanceRow | undefined): string | null {
+  const iso = toIsoDate(row?.asOfDate && row.asOfDate !== '—' ? row.asOfDate : '');
+  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null;
+}
+
 export function buildFeed(inputs: {
   fund: CatalogFund;
   page: FundPageData;
@@ -1794,6 +1800,7 @@ export function buildFeed(inputs: {
     secYieldText: page.sec30DayYieldText,
     secYieldKind,
     returnsBasis: 'official ProShares performance file (etf_performance.csv, NAV total return, month-end)',
+    performanceAsOf: performanceAsOfIso(performanceNavMonth),
   };
 
   const entry: Record<string, unknown> = {
