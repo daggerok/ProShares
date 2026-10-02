@@ -90,6 +90,7 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
 | `OFFLINE_SEED` | `false` | Replay the published catalog and `api/proshares/raw` samples instead of fetching. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Annualized-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Cumulative-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 

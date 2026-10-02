@@ -6,7 +6,7 @@
  * performance and splits files, and the distribution summary JSON. Run with
  * `bun test scripts/update-data.test.ts` (the same command the workflow uses).
  */
-import { describe, expect, test } from 'bun:test';
+import { afterEach, describe, expect, test } from 'bun:test';
 import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import os from 'node:os';
@@ -15,6 +15,8 @@ import path from 'node:path';
 import {
   CONTROL_NAMES,
   USAGE,
+  installSystemCa,
+  isCertError,
   resolveControls,
   runtimeControls,
   applyHistoryRange,
@@ -1248,5 +1250,63 @@ describe('repository layout and README', () => {
     for (const command of ['bun install --frozen-lockfile', 'bun test', 'bun build --target=bun scripts/update-data.ts --outfile=/dev/null', 'git diff --check']) {
       expect(doc).toContain(command);
     }
+  });
+});
+
+describe('system CA support', () => {
+  const realFetch = globalThis.fetch;
+  afterEach(() => { globalThis.fetch = realFetch; });
+  const noReexec = (): never => { throw new Error('unexpected reexec'); };
+
+  test('USE_SYSTEM_CA resolver: auto/true/false case-insensitive, rejects others, default auto', () => {
+    for (const mode of ['auto', 'true', 'false', 'AUTO', 'True', 'FALSE']) {
+      expect(resolveControls({}, {}, {}, { USE_SYSTEM_CA: mode }).USE_SYSTEM_CA).toBe(mode.toLowerCase());
+    }
+    expect(() => resolveControls({}, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow(/USE_SYSTEM_CA/);
+    expect(resolveControls(JSON.parse(readFileSync(path.join(import.meta.dir, 'update-data.config.json'), 'utf8'))).USE_SYSTEM_CA).toBe('auto');
+  });
+
+  test('isCertError detects certificate failures, also through cause', () => {
+    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
+    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+  });
+
+  test('installSystemCa: false and active leave fetch untouched', () => {
+    const stub = (async () => new Response('ok')) as unknown as typeof fetch;
+    globalThis.fetch = stub;
+    installSystemCa('false', noReexec, false);
+    expect(globalThis.fetch).toBe(stub);
+    installSystemCa('auto', noReexec, true);
+    expect(globalThis.fetch).toBe(stub);
+    installSystemCa('true', noReexec, true);
+    expect(globalThis.fetch).toBe(stub);
+  });
+
+  test('installSystemCa: true reexecs immediately', () => {
+    let calls = 0;
+    installSystemCa('true', (() => { calls++; return undefined as never; }) as () => never, false);
+    expect(calls).toBe(1);
+  });
+
+  test('installSystemCa: auto wraps fetch', async () => {
+    let calls = 0;
+    const reexec = (() => { calls++; return undefined as never; }) as () => never;
+    globalThis.fetch = (async () => { throw new Error('unable to get local issuer certificate'); }) as unknown as typeof fetch;
+    installSystemCa('auto', reexec, false);
+    await fetch('https://example.invalid');
+    expect(calls).toBe(1);
+
+    globalThis.fetch = (async () => { throw Object.assign(new Error('reset'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
+    installSystemCa('auto', reexec, false);
+    await expect(fetch('https://example.invalid')).rejects.toThrow('reset');
+    expect(calls).toBe(1);
+
+    globalThis.fetch = (async () => new Response('fine')) as unknown as typeof fetch;
+    installSystemCa('auto', reexec, false);
+    expect(await (await fetch('https://example.invalid')).text()).toBe('fine');
+    expect(calls).toBe(1);
   });
 });
