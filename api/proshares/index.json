@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T04:56:58Z",
+ "generatedAt": "2026-10-02T03:20:20Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,12 +16,12 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-09-29T04:56:53Z"
+  "catalogReadAt": "2026-10-02T03:19:59Z"
  },
  "counts": {
   "funds": 173,
   "holdings": 20172,
-  "history": 540775
+  "history": 540779
  },
  "funds": [
   {
@@ -8994,18 +8994,18 @@
    "terGrossValue": 0.35,
    "terNet": "0.35%",
    "terNetValue": 0.35,
-   "nav": "$54.96",
-   "navValue": 54.96,
-   "aum": "$11,113,478,298",
-   "aumValue": 11113478269.9256,
-   "asOfDate": "Sep 25 2026",
-   "netAssetsAsOf": "Sep 25 2026",
+   "nav": "$54.21",
+   "navValue": 54.21,
+   "aum": "$10,962,053,696",
+   "aumValue": 10970182773.4278,
+   "asOfDate": "Oct 01 2026",
+   "netAssetsAsOf": "Oct 01 2026",
    "inceptionDate": "Oct 09 2013",
    "exchange": "Cboe BZX",
-   "closePrice": "$54.97",
-   "closePriceValue": 54.97,
-   "premiumDiscount": "0.02%",
-   "premiumDiscountValue": 0.0182,
+   "closePrice": "$54.23",
+   "closePriceValue": 54.23,
+   "premiumDiscount": "0.04%",
+   "premiumDiscountValue": 0.0369,
    "distributions": {
     "frequency": "Quarterly",
     "note": null,
@@ -9115,7 +9115,7 @@
     "returnsBasis": "official ProShares performance file (etf_performance.csv, NAV total return, month-end)"
    },
    "holdings": 70,
-   "history": 3260
+   "history": 3264
   },
   {
    "ticker": "NVDB",
