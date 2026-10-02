@@ -71,7 +71,7 @@ on:
         default: ""
         type: string
       max_retries:
-        description: "Retries after the initial request (408/425/429/403/5xx); blank inherits scripts/update-data.config.json"
+        description: "Retries (at least 1) after the initial request (408/425/429/403/5xx); blank inherits scripts/update-data.config.json"
         required: false
         default: ""
         type: string
@@ -80,13 +80,13 @@ on:
         required: false
         default: ""
         type: string
-      skip_proshares:
-        description: "Legacy no-op retained for older dispatch forms; use tickers for a bounded update; blank inherits scripts/update-data.config.json"
+      verbose:
+        description: "Print per-fund retry and fallback notices (1/true/yes/on); blank inherits scripts/update-data.config.json"
         required: false
         default: ""
         type: string
-      verbose:
-        description: "Print per-fund retry and fallback notices (1/true/yes/on); blank inherits scripts/update-data.config.json"
+      offline_seed:
+        description: "Replay the previously published catalog and api/proshares/raw samples instead of fetching; blank inherits scripts/update-data.config.json"
         required: false
         default: ""
         type: string
@@ -106,9 +106,12 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -131,6 +134,7 @@ jobs:
               .filter(([key]) => key !== "advanced")
               .map(([key, value]) => [key.toUpperCase(), value]));
             const file = await Bun.file("scripts/update-data.config.json").json();
+            // Protected repository Actions variables: highest precedence, applied only when nonblank (never printed).
             const protectedVars = {};
             const controls = resolveControls(file, advanced, individual, protectedVars);
             await appendFile(process.env.GITHUB_ENV,
@@ -140,6 +144,8 @@ jobs:
         run: bun ./scripts/update-data.ts
       - name: Commit updated data
         if: ${{ !cancelled() }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           git add api/proshares
           if git diff --cached --quiet -- api/proshares; then
@@ -149,4 +155,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(data): update ProShares ETF data"
-          git push
+          # Runtime-only auth; no token/header stored in URL, file or Git config.
+          git -c credential.helper= -c credential.helper='!f() { if test "$1" = get; then printf "username=x-access-token\npassword=%s\n" "$GITHUB_TOKEN"; fi; }; f' push
