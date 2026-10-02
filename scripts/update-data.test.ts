@@ -21,6 +21,7 @@ import {
   runtimeControls,
   applyHistoryRange,
   buildFeed,
+  performanceAsOfIso,
   cleanText,
   compareDisplayDates,
   cumulativeFromAnnualized,
@@ -855,6 +856,20 @@ describe('feed assembly', () => {
     expect(entry.metrics.secYieldKind).toContain('official ProShares SEC 30-Day Yield');
     expect(entry.holdings).toBe(3);
     expect(entry.history).toBe(2);
+  });
+
+  test('metrics end with returnsBasis then performanceAsOf (ISO table date, not the NAV date)', () => {
+    const keys = Object.keys(entry.metrics);
+    expect(keys.slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    expect(entry.metrics.returnsBasis).toContain('official ProShares performance file');
+    expect(entry.metrics.performanceAsOf).toBe(toIsoDate(inputs.performanceNavMonth!.asOfDate));
+    expect(entry.metrics.performanceAsOf).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    const without = buildFeed({ ...inputs, performanceNavMonth: undefined }).entry as Record<string, any>;
+    expect(without.metrics.performanceAsOf).toBeNull();
+    expect(without.metrics.returnsBasis.length).toBeGreaterThan(1);
+    expect(performanceAsOfIso(undefined)).toBeNull();
+    expect(performanceAsOfIso({ asOfDate: '—' } as any)).toBeNull();
+    expect(performanceAsOfIso({ asOfDate: 'Aug 31 2026' } as any)).toBe('2026-08-31');
   });
 
   test('derived tenors are stored alongside the published annualized ones', () => {
