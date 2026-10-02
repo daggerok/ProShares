@@ -1,9 +1,0 @@
-# Bounded SEC 30-Day Yield HTML probe. One page per ticker; never refresh the full feed.
-# /tmp/body is fetched by probe.yml; the helper prints nearby markup and element ids.
-https://www.proshares.com/our-etfs/strategic/nobl | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/strategic/ighg | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/strategic/hyhg | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/leveraged-and-inverse/agq | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/leveraged-and-inverse/boil | cmd=python3 probe/sec-yield-context.py /tmp/body
-https://www.proshares.com/our-etfs/leveraged-and-inverse/spcf | cmd=python3 probe/sec-yield-context.py /tmp/body
