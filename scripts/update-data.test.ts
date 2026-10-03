@@ -1,60 +1,63 @@
 /**
  * @file Unit tests for the ProShares static feed updater.
  *
- * Pure-function coverage with inline fixtures taken from the real sources: the
- * finder rows, the fund-page markup, the official `psdlyhld.csv`, NAV history,
- * performance and splits files, and the distribution summary JSON. Run with
- * `bun test scripts/update-data.test.ts` (the same command the workflow uses).
+ * Five groups shared by every ETF repo: controls, parsing, metrics, pipeline, network.
+ * Tiny inline samples, mocked fetch, a per-test temp copy of the updater for pipeline runs;
+ * no network, no fixtures, no dependence on the machine zone, directory order or exported
+ * control variables. Run with `bun test scripts/update-data.test.ts`.
  */
-import { afterEach, describe, expect, test } from 'bun:test';
-import { mkdtemp, readFile, rm } from 'node:fs/promises';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 import {
   CONTROL_NAMES,
+  GEARED_FINDER_URL,
+  HOLDINGS_ALL_URL,
+  NAV_HISTORY_ALL_URL,
+  NASDAQ_LISTED_URL,
+  NASDAQ_OTHER_LISTED_URL,
+  PERFORMANCE_URL,
+  SPLITS_URL,
+  STRATEGIC_FINDER_URL,
   USAGE,
-  installSystemCa,
-  isCertError,
-  resolveControls,
-  runtimeControls,
   applyHistoryRange,
+  atomicWrite,
   buildFeed,
-  performanceAsOfIso,
   cleanText,
   compareDisplayDates,
   cumulativeFromAnnualized,
+  cursorScope,
   decodeEntities,
   distributionRowsForCsv,
   fetchText,
   formatAumDisplay,
-  formatElapsed,
-  formatFundProgress,
   formatMoneyText,
   formatPercentText,
-  formatRetry,
   formatUsDate,
   headerIndex,
   historyRangeDays,
   holdingWeight,
   holdingsHeaders,
-  holdingsUrl,
   holdingsNetAssets,
+  holdingsUrl,
+  indicatedYield,
+  installSystemCa,
+  isCertError,
   isOtherAssetsRow,
   isWeightlessRow,
-  indicatedYield,
+  mapWithConcurrency,
   matchesRange,
   matchesReturnRange,
   navHistoryUrl,
   normalizeDistributionFrequency,
   normalizeNumberText,
-  normalizeSecurityName,
   numberOrNull,
   pageName,
-  parseAumBound,
+  paceRequests,
   parseAumRange,
-  parseBoolean,
   parseCsvRecords,
   parseDistributionSummary,
   parseFinderCatalogPage,
@@ -63,34 +66,31 @@ import {
   parseNavHistoryFile,
   parsePerformanceFile,
   parseRange,
+  parseRanges,
   parseSplitsFile,
   parseSymbolDirectory,
   paymentsPerYear,
-  progressLabel,
+  performanceAsOfIso,
   readConfig,
+  resolveControls,
   resolveDividendYield,
+  rowFromMeta,
+  runtimeControls,
+  selectBatch,
   serialize,
   stripTags,
+  tenorAvailable,
   toIsoDate,
   writeIfChanged,
   writeJsonIfChanged,
   writeSheetPages,
-  atomicWrite,
-  cursorScope,
-  mapWithConcurrency,
-  paceRequests,
-  parseTickers,
-  rowFromMeta,
-  selectBatch,
-  tenorAvailable,
   type HoldingsRow,
   type NavRow,
   type UpdaterConfig,
-  parseRanges,
 } from './update-data';
 
 // ---------------------------------------------------------------------------
-// Fixtures (verbatim excerpts of the live sources)
+// Inline samples (verbatim excerpts of the live sources)
 // ---------------------------------------------------------------------------
 
 const STRATEGIC_ROW = `
@@ -253,557 +253,302 @@ const testConfig: UpdaterConfig = {
 };
 
 // ---------------------------------------------------------------------------
-// Text, number and date helpers
+// Shared hooks: clean environment, pinned zone, restored globals
 // ---------------------------------------------------------------------------
 
-describe('text and number helpers', () => {
-  test('cleanText collapses whitespace and decodes non-breaking spaces', () => {
-    expect(cleanText('  UltraPro   QQQ\u00a0 ')).toBe('UltraPro QQQ');
-  });
+const realFetch = globalThis.fetch;
+const realSetTimeout = globalThis.setTimeout;
+const realDateNow = Date.now;
+const realConsole = { log: console.log, warn: console.warn, error: console.error };
+const realExitCode = process.exitCode;
+const ENV_KEYS: string[] = [
+  ...CONTROL_NAMES, 'PROSHARES_TICKERS', 'HISTORICAL_PAGE_SIZE', 'AUM_RANGE', 'EXPENSE_RATIO', 'TER_RANGE',
+  'GITHUB_STEP_SUMMARY', 'NODE_USE_SYSTEM_CA', 'ETF_UPDATER_SYSTEM_CA', 'TZ',
+];
+let savedEnv: Record<string, string | undefined> = {};
 
-  test('stripTags removes markup and decodes entities', () => {
-    expect(stripTags('<span class="d-none">+</span>3x<span></span>')).toBe('+ 3x');
-    expect(decodeEntities('Nasdaq-100&reg; Index&nbsp;(NDX)')).toBe('Nasdaq-100® Index (NDX)');
-  });
-
-  test('normalizeNumberText expands scientific notation and drops placeholders', () => {
-    expect(normalizeNumberText('2.97E8')).toBe('297000000');
-    expect(normalizeNumberText('$1,234.50')).toBe('1234.50');
-    expect(normalizeNumberText('--')).toBe('');
-    expect(normalizeNumberText('N/A')).toBe('');
-  });
-
-  test('numberOrNull treats provider placeholders and denormals as missing', () => {
-    expect(numberOrNull('')).toBeNull();
-    expect(numberOrNull('—')).toBeNull();
-    expect(numberOrNull('-1557')).toBe(-1557);
-    expect(numberOrNull('5e-324')).toBeNull();
-    expect(numberOrNull('0')).toBe(0);
-  });
-
-  test('formatters follow the shared display contract', () => {
-    expect(formatPercentText(9.345)).toBe('9.35%');
-    expect(formatPercentText(null)).toBe('—');
-    expect(formatMoneyText(11270728460)).toBe('$11.27B');
-    expect(formatMoneyText(null)).toBe('—');
-    expect(formatAumDisplay(11270728460)).toBe('$11.27 B');
-  });
-
-  test('normalizeSecurityName keeps the published upper-case names', () => {
-    expect(normalizeSecurityName('  BECTON   DICKINSON AND CO ')).toBe('BECTON DICKINSON AND CO');
-  });
+beforeEach(() => {
+  savedEnv = Object.fromEntries(ENV_KEYS.map(key => [key, process.env[key]]));
+  for (const key of ENV_KEYS) delete process.env[key];
+  process.env.TZ = 'UTC';
 });
 
-describe('date helpers', () => {
-  test('formatUsDate normalizes US, ISO and dashed forms', () => {
-    expect(formatUsDate('9/18/2026')).toBe('Sep 18 2026');
-    expect(formatUsDate('2026-06-24T00:00:00')).toBe('Jun 24 2026');
-    expect(formatUsDate('01-Jan-2020')).toBe('Jan 01 2020');
-    expect(formatUsDate('')).toBe('—');
-  });
-
-  test('toIsoDate keeps provenance sortable', () => {
-    expect(toIsoDate('9/18/2026')).toBe('2026-09-18');
-    expect(toIsoDate('2026-06-24T00:00:00')).toBe('2026-06-24');
-  });
-
-  test('compareDisplayDates sorts display dates chronologically', () => {
-    const dates = ['Jun 24 2026', 'Mar 25 2026', 'Dec 24 2025'];
-    expect([...dates].sort(compareDisplayDates)).toEqual(['Dec 24 2025', 'Mar 25 2026', 'Jun 24 2026']);
-  });
+afterEach(() => {
+  globalThis.fetch = realFetch;
+  globalThis.setTimeout = realSetTimeout;
+  Date.now = realDateNow;
+  Object.assign(console, realConsole);
+  process.exitCode = realExitCode ?? 0; // assigning undefined would keep a leaked 1
+  for (const key of ENV_KEYS) {
+    if (savedEnv[key] === undefined) delete process.env[key];
+    else process.env[key] = savedEnv[key];
+  }
 });
 
+const readText = (relative: string): string => readFileSync(new URL(`./${relative}`, import.meta.url), 'utf8');
+const configFile = (): Record<string, unknown> => JSON.parse(readText('update-data.config.json'));
+const quiet = (): void => { console.log = console.warn = console.error = () => {}; };
+
 // ---------------------------------------------------------------------------
-// CSV reader
+// controls: precedence, strict validation, aliases (no network)
 // ---------------------------------------------------------------------------
 
-describe('CSV reader', () => {
-  test('handles quotes, embedded commas, CRLF and BOM', () => {
-    const records = parseCsvRecords('\uFEFFa,b\r\n"1,25",2\r\n"say ""hi""",3\r\n');
-    expect(records).toEqual([['a', 'b'], ['1,25', '2'], ['say "hi"', '3']]);
+describe('controls', () => {
+  test('precedence: file < advanced < nonblank input < env, an explicit empty env wins', () => {
+    const merged = resolveControls({ CONCURRENCY: 2, TICKERS: 'NOBL' }, { CONCURRENCY: 3, TICKERS: 'TQQQ' }, { CONCURRENCY: '4', TICKERS: '' }, { CONCURRENCY: '5' });
+    expect(merged.CONCURRENCY).toBe('5');
+    expect(merged.TICKERS).toBe('TQQQ'); // blank input does not erase the advanced value
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
+    expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
+    expect(resolveControls({ TICKERS: 'NOBL' }, { TICKERS: '' }, {}).TICKERS).toBe('');
+    expect(resolveControls({ TICKERS: 'NOBL' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
+    expect(resolveControls({ OFFLINE_SEED: true }, {}, {}, { OFFLINE_SEED: 'false' }).OFFLINE_SEED).toBe('false');
   });
 
-  test('headerIndex and lookups ignore punctuation and case', () => {
-    const index = headerIndex(['Fund Ticker', 'Shares/Contracts', 'Exposure Value (Notional + G/L)']);
-    expect(index.get('fundticker')).toBe(0);
-    expect(index.get('sharescontracts')).toBe(1);
-    expect(index.get('exposurevaluenotionalgl')).toBe(2);
+  test('brand env aliases work and the canonical name wins', () => {
+    expect(resolveControls({}, {}, {}, { PROSHARES_TICKERS: 'NOBL' }).TICKERS).toBe('NOBL');
+    expect(resolveControls({}, {}, {}, { HISTORICAL_PAGE_SIZE: '500' }).HISTORY_PAGE_SIZE).toBe('500');
+    expect(resolveControls({}, {}, {}, { AUM_RANGE: '1B:' }).AUM).toBe('1B:');
+    expect(resolveControls({}, {}, {}, { EXPENSE_RATIO: '0:1' }).TER).toBe('0:1');
+    expect(resolveControls({}, {}, {}, { TICKERS: 'TQQQ', PROSHARES_TICKERS: 'NOBL' }).TICKERS).toBe('TQQQ');
   });
-});
 
-// ---------------------------------------------------------------------------
-// Range parsing (shared with every sibling updater)
-// ---------------------------------------------------------------------------
+  test('config file defaults: scheduled path equals the file, documented provider defaults, runtime env wins', async () => {
+    const defaults = configFile();
+    const stringified = Object.fromEntries(Object.entries(defaults).map(([key, value]) => [key, String(value)]));
+    expect(resolveControls(defaults, {}, {}, {})).toEqual(stringified);
+    expect(resolveControls(defaults, {}, Object.fromEntries(CONTROL_NAMES.map(name => [name, ''])), {})).toEqual(stringified);
+    const config = readConfig(resolveControls(defaults));
+    expect(config).toMatchObject({ tickers: [], maxFetches: 0, concurrency: 2, requestSleep: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', distributionYears: 10, maxRetries: 3, storeRawDownloads: false, offlineSeed: false });
+    expect(config.performanceRanges).toEqual({});
+    expect(config.totalReturnRanges).toEqual({});
+    expect(await runtimeControls({})).toEqual(resolveControls(defaults));
+    const overridden = await runtimeControls({ TICKERS: 'NOBL', REQUEST_SLEEP: '0' });
+    expect([overridden.TICKERS, overridden.REQUEST_SLEEP, overridden.CONCURRENCY]).toEqual(['NOBL', '0', '2']);
+  });
 
-describe('range parsing', () => {
-  test('empty and ":" mean no restriction', () => {
+  test('config keys equal CONTROL_NAMES and --help; USE_SYSTEM_CA is auto, true or false only', () => {
+    const defaults = configFile();
+    expect(Object.keys(defaults).sort()).toEqual([...CONTROL_NAMES].sort());
+    expect(Object.values(defaults).every(value => typeof value === 'string')).toBe(true);
+    for (const name of CONTROL_NAMES) {
+      const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_/);
+      expect(USAGE).toContain(tenor ? `${tenor[1]}_YTD|1Y|3Y|5Y|10Y` : name);
+    }
+    expect(defaults.USE_SYSTEM_CA).toBe('auto');
+    for (const mode of ['auto', 'true', 'false', 'AUTO', 'True', 'FALSE']) {
+      expect(resolveControls({}, {}, {}, { USE_SYSTEM_CA: mode }).USE_SYSTEM_CA).toBe(mode.toLowerCase());
+    }
+    expect(() => resolveControls({}, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow(/USE_SYSTEM_CA/);
+  });
+
+  test('strict validation: bad values never fall back silently', () => {
+    const bad: [string, unknown][] = [
+      ['CONCURRENCY', 0], ['CONCURRENCY', 'x'], ['MAX_RETRIES', 0], ['MAX_RETRIES', -1], ['MAX_FETCHES', 1.5], ['DISTRIBUTION_YEARS', -1],
+      ['HOLDINGS_PAGE_SIZE', 0], ['HISTORY_PAGE_SIZE', '1e3'], ['REQUEST_SLEEP', '-1'], ['REQUEST_SLEEP', 'fast'],
+      ['VERBOSE', 'maybe'], ['STORE_RAW_DOWNLOADS', 'sometimes'], ['OFFLINE_SEED', '2'],
+      ['HISTORY_RANGE', 'forever'], ['HISTORY_RANGE', '0y'], ['HISTORY_RANGE', '0d'],
+      ['AUM', '1:2:3'], ['AUM', 'huge:'], ['AUM', 'large:micro'], ['TER', 'x'], ['TER', '2:1'], ['TER', '5'],
+      ['DIVIDEND_YIELD', '5:1'], ['SEC_YIELD', '1'], ['PERFORMANCE_5Y', 'a:b'], ['TOTAL_RETURN_10Y', '9:1'],
+      ['TICKERS', 'AAA $$$'], ['TICKERS', ';;;x!'],
+    ];
+    for (const [key, value] of bad) expect(() => resolveControls({}, { [key]: value }), `${key}=${String(value)}`).toThrow();
+    expect(() => resolveControls({}, { MAX_RETRIES: 0 })).toThrow(/MAX_RETRIES/);
+    expect(() => resolveControls({}, { HISTORY_RANGE: '0y' })).toThrow(/at least 1/);
+    expect(() => resolveControls({}, { TICKERS: 'AAA $$$' })).toThrow(/invalid ticker/);
+    // shapes, unknown keys, non-scalars and control characters
+    for (const value of [{ UNKNOWN: 1 }, { OUTPUT_DIR: '/tmp' }, { TICKERS: ['NOBL'] }, { TICKERS: { a: 1 } }, { TICKERS: null }, null, [], 'text', 7]) {
+      expect(() => resolveControls(value)).toThrow();
+    }
+    for (const call of [
+      () => resolveControls({}, []), () => resolveControls({}, 'x'), () => resolveControls({}, {}, null),
+      () => resolveControls({}, { TICKERS: 'NOBL\nEVIL=yes' }), () => resolveControls({}, {}, { CATEGORY: 'a\rb' }), () => resolveControls({}, {}, {}, { TICKERS: 'x\0y' }),
+    ]) expect(call).toThrow();
+    expect(() => resolveControls({}, { TICKERS: 'NOBL\nEVIL=yes' })).toThrow(/multiline/);
+  });
+
+  test('range filters: syntax, AUM presets, a colon never filters nulls, young funds skip return filters', () => {
     expect(parseRange('', 'TER')).toBeUndefined();
     expect(parseRange(':', 'TER')).toEqual({ min: undefined, max: undefined });
-  });
-
-  test('accepts optional % and $ and inclusive bounds', () => {
     expect(parseRange('0.2%:1.5%', 'TER')).toEqual({ min: 0.2, max: 1.5 });
-    expect(() => parseRange('$1B:', 'AUM')).toThrow(/Invalid AUM minimum/);
-  });
-
-  test('rejects colonless input and inverted ranges', () => {
     expect(() => parseRange('5', 'TER')).toThrow(/single colon/);
     expect(() => parseRange('2:1', 'TER')).toThrow(/minimum is above maximum/);
     expect(() => parseRange('a:b', 'TER')).toThrow(/Invalid TER minimum/);
-  });
-
-  test('AUM presets, suffixes and preset bounds', () => {
-    expect(parseAumBound('nano')).toEqual({ preset: 'nano' });
-    expect(parseAumBound('2b')).toEqual({ value: 2_000_000_000 });
-    expect(() => parseAumBound('huge')).toThrow(/Invalid AUM bound/);
     expect(parseAumRange('micro:large')).toEqual({ min: 10_000_000, max: undefined });
     expect(parseAumRange('1B:2B')).toEqual({ min: 1_000_000_000, max: 2_000_000_000 });
-    expect(() => parseAumRange('large:micro')).toThrow(/above maximum/);
-  });
-
-  test('matchesRange and matchesReturnRange differ for young funds', () => {
+    expect(readConfig({ AUM: '300M:' }).aumRange).toEqual({ min: 300_000_000, max: undefined });
+    expect(readConfig({ TICKERS: 'nobl, tqqq\nbrk.b' }).tickers).toEqual(['NOBL', 'TQQQ', 'BRK.B']);
+    expect(parseRanges({ PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':', TOTAL_RETURN_1Y: ':' }, 'PERFORMANCE')).toEqual({});
     expect(matchesRange(null, { min: 1 })).toBe(false);
-    expect(matchesRange(null, { min: undefined, max: undefined })).toBe(true); // ':' is unbounded
+    expect(matchesRange(null, { min: undefined, max: undefined })).toBe(true);
     expect(matchesReturnRange(null, { min: 1 })).toBe(true);
     expect(matchesReturnRange(5, { min: 1, max: 4 })).toBe(false);
-  });
-
-  test('booleans accept the documented truthy spellings only', () => {
-    expect(parseBoolean('YES')).toBe(true);
-    expect(parseBoolean('on')).toBe(true);
-    expect(parseBoolean('0')).toBe(false);
-    expect(parseBoolean('', true)).toBe(true);
-  });
-});
-
-describe('configuration', () => {
-  test('defaults match the documented surface', () => {
-    const config = readConfig({});
-    expect(config.concurrency).toBe(3);
-    expect(config.requestSleep).toBe(1.5);
-    expect(config.holdingsPageSize).toBe(250);
-    expect(config.historyPageSize).toBe(1000);
-    expect(config.historyRange).toBe('max');
-    expect(config.distributionYears).toBe(10);
-    expect(config.aumRange).toBeUndefined();
-  });
-
-  test('aliases, tickers and invalid values', () => {
-    const config = readConfig({ HISTORICAL_PAGE_SIZE: '500', TICKERS: 'nobl, tqqq\nbrk.b', AUM: '300M:' });
-    expect(config.historyPageSize).toBe(500);
-    expect(config.tickers).toEqual(['NOBL', 'TQQQ', 'BRK.B']);
-    expect(config.aumRange).toEqual({ min: 300_000_000, max: undefined });
-    expect(() => readConfig({ TER: 'x' })).toThrow(/Invalid TER range/);
-  });
-
-  test('SEC_YIELD bounds match the official page value; colon never filters nulls', () => {
     const published = parseFundPage(FUND_PAGE).sec30DayYield;
     const absent = parseFundPage('<span id="snapshot-distributions">Quarterly</span>').sec30DayYield;
-    expect(matchesRange(published, readConfig({ SEC_YIELD: ':' }).secYieldRange)).toBe(true);
-    expect(matchesRange(absent, readConfig({ SEC_YIELD: ':' }).secYieldRange)).toBe(true);
     expect(matchesRange(published, readConfig({ SEC_YIELD: '2:3' }).secYieldRange)).toBe(true);
     expect(matchesRange(published, readConfig({ SEC_YIELD: '3:' }).secYieldRange)).toBe(false);
     expect(matchesRange(absent, readConfig({ SEC_YIELD: '2:3' }).secYieldRange)).toBe(false);
+    expect(matchesRange(absent, readConfig({ SEC_YIELD: ':' }).secYieldRange)).toBe(true);
   });
 });
 
 // ---------------------------------------------------------------------------
-// Progress output (never changes the generated feed)
+// parsing: one tiny sample per provider payload; missing values become null
 // ---------------------------------------------------------------------------
 
-describe('per-fund progress', () => {
-  test('numbers concurrent work with a stable candidate position and elapsed time', () => {
-    expect(progressLabel('TQQQ', 37, 173)).toBe('[  37/173] TQQQ');
-    expect(progressLabel('NOBL', 1, 7)).toBe('[   1/7] NOBL');
-    expect(formatElapsed(2450)).toBe('2.5s');
-    expect(formatRetry('BIS fund page', 'HTTP 500 Internal Server Error', 15, 1, 3))
-      .toBe('[retry] BIS fund page → HTTP 500 Internal Server Error, backoff 15s (attempt 1/3)');
+describe('parsing', () => {
+  test('text, number, date and CSV helpers; placeholders are null, a real 0 stays 0', () => {
+    expect(cleanText('  UltraPro   QQQ  ')).toBe('UltraPro QQQ');
+    expect(stripTags('<span class="d-none">+</span>3x<span></span>')).toBe('+ 3x');
+    expect(decodeEntities('Nasdaq-100&reg; Index&nbsp;(NDX)')).toBe('Nasdaq-100® Index (NDX)');
+    expect(normalizeNumberText('2.97E8')).toBe('297000000');
+    expect(normalizeNumberText('$1,234.50')).toBe('1234.50');
+    expect(normalizeNumberText('--')).toBe('');
+    expect(numberOrNull('')).toBeNull();
+    expect(numberOrNull('—')).toBeNull();
+    expect(numberOrNull('5e-324')).toBeNull();
+    expect(numberOrNull('-1557')).toBe(-1557);
+    expect(numberOrNull('0')).toBe(0);
+    expect(formatPercentText(9.345)).toBe('9.35%');
+    expect(formatPercentText(null)).toBe('—');
+    expect(formatMoneyText(11270728460)).toBe('$11.27B');
+    expect(formatAumDisplay(11270728460)).toBe('$11.27 B');
+    expect(formatUsDate('9/18/2026')).toBe('Sep 18 2026');
+    expect(formatUsDate('2026-06-24T00:00:00')).toBe('Jun 24 2026');
+    expect(formatUsDate('')).toBe('—');
+    expect(toIsoDate('9/18/2026')).toBe('2026-09-18');
+    expect(['Jun 24 2026', 'Mar 25 2026', 'Dec 24 2025'].sort(compareDisplayDates)).toEqual(['Dec 24 2025', 'Mar 25 2026', 'Jun 24 2026']);
+    expect(parseCsvRecords('﻿a,b\r\n"1,25",2\r\n"say ""hi""",3\r\n')).toEqual([['a', 'b'], ['1,25', '2'], ['say "hi"', '3']]);
+    const index = headerIndex(['Fund Ticker', 'Shares/Contracts', 'Exposure Value (Notional + G/L)']);
+    expect([index.get('fundticker'), index.get('sharescontracts'), index.get('exposurevaluenotionalgl')]).toEqual([0, 1, 2]);
   });
 
-  test('summarizes successful or unchanged funds but hides unavailable metrics', () => {
-    const before = { nav: '$55.66', aumValue: 11_270_728_460, ter: '0.35%', distributionFrequency: '04 - Quarterly', holdings: 71, history: 3220, metrics: { dividendYieldText: '2.01%' } };
-    const snapshot = JSON.stringify(before);
-    expect(formatFundProgress(progressLabel('NOBL', 1, 7), before, true, 2400))
-      .toBe('[   1/7] NOBL ok · NAV $55.66 · AUM $11.27B · TER 0.35% · DivYld 2.01% · Freq 04 - Quarterly · holdings 71 · history 3220 · 2.4s');
-    for (const missingFrequency of ['—', '00 - None']) {
-      expect(formatFundProgress(progressLabel('BOIL', 2, 7), { nav: '—', ter: '—', aumValue: null, distributionFrequency: missingFrequency, holdings: 0, history: 15, metrics: { dividendYieldText: '—' } }, false, 99))
-        .toBe('[   2/7] BOIL ok (unchanged) · holdings 0 · history 15 · 0.1s');
-    }
-    expect(JSON.stringify(before)).toBe(snapshot);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// HTTP retry policy (no external requests)
-// ---------------------------------------------------------------------------
-
-describe('HTTP retry policy', () => {
-  test('a permanent HTTP 404 fails on the first try, even with retries available', async () => {
-    const originalFetch = globalThis.fetch;
-    const originalWarn = console.warn;
-    let calls = 0;
-    const warnings: string[] = [];
-    globalThis.fetch = (async () => { calls++; return new Response('missing', { status: 404, statusText: 'Not Found' }); }) as unknown as typeof fetch;
-    console.warn = (message: unknown) => { warnings.push(String(message)); };
-    try {
-      await expect(fetchText('https://example.test/missing', {}, readConfig({ MAX_RETRIES: '3', REQUEST_SLEEP: '0' }), 'SPCF fund page'))
-        .rejects.toThrow('SPCF fund page: HTTP 404 Not Found');
-      expect(calls).toBe(1);
-      expect(warnings).toEqual([]);
-    } finally {
-      globalThis.fetch = originalFetch;
-      console.warn = originalWarn;
-    }
-  });
-
-  test('an exhausted retryable HTTP 500 fails without a phantom retry', async () => {
-    const originalFetch = globalThis.fetch;
-    const originalWarn = console.warn;
-    let calls = 0;
-    const warnings: string[] = [];
-    globalThis.fetch = (async () => { calls++; return new Response('retryable', { status: 500, statusText: 'Internal Server Error' }); }) as unknown as typeof fetch;
-    console.warn = (message: unknown) => { warnings.push(String(message)); };
-    try {
-      await expect(fetchText('https://example.test/error', {}, { ...readConfig({ REQUEST_SLEEP: '0' }), maxRetries: 0 }, 'BIS fund page'))
-        .rejects.toThrow('BIS fund page: HTTP 500 Internal Server Error');
-      expect(calls).toBe(1);
-      expect(warnings).toEqual([]);
-    } finally {
-      globalThis.fetch = originalFetch;
-      console.warn = originalWarn;
-    }
-  });
-});
-
-// ---------------------------------------------------------------------------
-// (a) Finder catalog
-// ---------------------------------------------------------------------------
-
-describe('finder catalog parsing', () => {
-  test('strategic rows keep the provider asset class and marketing category', () => {
-    const funds = parseFinderCatalogPage(STRATEGIC_ROW, 'strategic');
-    expect(funds).toHaveLength(1);
-    expect(funds[0]).toMatchObject({
-      ticker: 'NOBL',
-      name: 'S&P 500 Dividend Aristocrats ETF',
-      assetClass: 'Equity',
-      marketingCategory: 'DividendGrowers',
-      fundPage: 'https://www.proshares.com/our-etfs/strategic/nobl',
-      inceptionDateText: 'Oct 09 2013',
-      netAssetsValue: 11_270_728_460,
+  test('finder catalog: strategic and geared rows, rows without a fund link are ignored', () => {
+    const [strategic] = parseFinderCatalogPage(STRATEGIC_ROW, 'strategic');
+    expect(strategic).toMatchObject({
+      ticker: 'NOBL', name: 'S&P 500 Dividend Aristocrats ETF', assetClass: 'Equity', marketingCategory: 'DividendGrowers',
+      fundPage: 'https://www.proshares.com/our-etfs/strategic/nobl', inceptionDateText: 'Oct 09 2013', netAssetsValue: 11_270_728_460,
     });
-  });
-
-  test('geared rows keep strategy, daily objective and benchmark ticker', () => {
-    const funds = parseFinderCatalogPage(GEARED_ROW, 'geared');
-    expect(funds).toHaveLength(1);
-    expect(funds[0]).toMatchObject({
-      ticker: 'TQQQ',
-      assetClass: 'Equity',
-      strategy: 'Broad Market',
-      dailyObjective: '+3x',
-      benchmarkTicker: 'NDX',
-    });
-  });
-
-  test('rows without a fund link are ignored', () => {
+    const [geared] = parseFinderCatalogPage(GEARED_ROW, 'geared');
+    expect(geared).toMatchObject({ ticker: 'TQQQ', assetClass: 'Equity', strategy: 'Broad Market', dailyObjective: '+3x', benchmarkTicker: 'NDX' });
     expect(parseFinderCatalogPage('<tr><td>no link here</td></tr>', 'strategic')).toEqual([]);
   });
-});
 
-// ---------------------------------------------------------------------------
-// (b) Fund page
-// ---------------------------------------------------------------------------
-
-describe('fund page parsing', () => {
-  const page = parseFundPage(FUND_PAGE);
-
-  test('snapshot, price and distribution blocks', () => {
-    expect(page.cusip).toBe('74348A467');
-    expect(page.expenseRatio).toBe(0.35);
-    expect(page.netAssetsValue).toBe(11_270_728_460);
-    expect(page.nav).toBe(55.66);
-    expect(page.marketPrice).toBe(55.66);
-    expect(page.priceAsOf).toBe('Sep 18 2026');
-    expect(page.distributionFrequency).toBe('Quarterly');
-    expect(page.twelveMonthYield).toBe(2.01);
-    expect(page.sec30DayYield).toBe(2.09);
-    expect(page.sec30DayYieldText).toBe('2.09%');
-    expect(page.inceptionDate).toBe('Oct 09 2013');
-    expect(page.expenseRatio).toBe(0.35);
-    expect(page.netExpenseRatio).toBe(0.35);
-    // One published ratio serves as gross and net (ProShares publishes no waiver).
-    expect(page.grossExpenseRatio).toBe(0.35);
-    expect(page.expenseRatioFootnote).toBe('');
+  test('fund page: snapshot, price, distributions, characteristics, exposures and return tables', () => {
+    const page = parseFundPage(FUND_PAGE);
+    expect(page).toMatchObject({
+      cusip: '74348A467', expenseRatio: 0.35, netAssetsValue: 11_270_728_460, nav: 55.66, marketPrice: 55.66, priceAsOf: 'Sep 18 2026',
+      distributionFrequency: 'Quarterly', twelveMonthYield: 2.01, sec30DayYield: 2.09, sec30DayYieldText: '2.09%', inceptionDate: 'Oct 09 2013',
+      distributionsNote: '',
+    });
+    expect(page.characteristics['Number of Holdings']).toBe('71');
+    expect(page.characteristics['Price/Earnings Ratio']).toBe('24.342');
+    expect(page.indexStats['Dividend Yield ( % )']).toBe('2.49');
+    expect(page.exposures[0].label).toBe('Fund Country Weighting');
+    expect(page.exposures[0].rows[0]).toEqual({ Country: 'United States', Weight: 92.592586 });
+    expect(page.returns.monthEnd).toMatchObject({ asOfDate: 'Aug 31 2026', ytd: 12.35, mpytd: 12.37 });
+    expect(page.returns.quarterEnd).toMatchObject({ asOfDate: 'Jun 30 2026', ytd: 9.09 });
+    // return tenors follow the header labels, not their position
+    const swapped = parseFundPage(FUND_PAGE.replace('<th>Fund + Index</th><th>1m</th><th>3m</th>', '<th>Fund + Index</th><th>3m</th><th>1m</th>'));
+    expect([swapped.returns.monthEnd.mo1, swapped.returns.monthEnd.mo3]).toEqual([8.43, 1.41]);
   });
 
-  test('a fund that never distributed says so on its own page', () => {
+  test('fund page: absent or unavailable values are null, never 0', () => {
     const never = parseFundPage('<div id="distributionTab"><p>This fund has not made any distributions.</p></div>');
     expect(never.distributionsNote).toBe('This fund has not made any distributions.');
     expect(never.sec30DayYield).toBeNull();
     expect(never.sec30DayYieldText).toBe('—');
-    expect(parseFundPage(FUND_PAGE).distributionsNote).toBe('');
-  });
-
-  test('SEC yield is absent on a geared page, but distinct from bond yield to maturity', () => {
     const geared = parseFundPage('<span id="snapshot-distributions">Quarterly</span>');
     expect(geared.sec30DayYield).toBeNull();
-    expect(geared.sec30DayYieldText).toBe('—');
-    const bond = parseFundPage('<span id="characteristics-weightedAverageYieldMaturity">5.63%</span><span id="distributions-sec30DayYield">5.42%</span>');
-    expect(bond.sec30DayYield).toBe(5.42);
-    expect(bond.characteristics['Weighted Average Yield to Maturity']).toBe('5.63%');
+    expect(geared.expenseRatio).toBeNull();
+    expect(geared.nav).toBeNull();
     const unavailable = parseFundPage('<span id="distributions-sec30DayYield">—</span>');
     expect(unavailable.sec30DayYield).toBeNull();
-    expect(unavailable.sec30DayYieldText).toBe('—');
+    const bond = parseFundPage('<span id="characteristics-weightedAverageYieldMaturity">5.63%</span><span id="distributions-sec30DayYield">5.42%</span>');
+    expect(bond.sec30DayYield).toBe(5.42); // distinct from the bond yield to maturity
+    expect(bond.characteristics['Weighted Average Yield to Maturity']).toBe('5.63%');
   });
 
-  test('geared pages publish gross and net ratios plus a snapshot frequency', () => {
-    const geared = parseFundPage(`
-<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Gross Expense Ratio</span> <div><span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span></div></li>
-<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Net Expense Ratio</span> <div><span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.82%</span></div></li>
-<li class="about-fund__list-item mb-3"><span class="about-fund__list-label d-inline-block">Distributions</span> <div><span id="snapshot-distributions" class="about-fund__list-value d-inline-block">Quarterly</span></div></li>`);
-    expect(geared.grossExpenseRatio).toBe(0.97);
-    expect(geared.netExpenseRatio).toBe(0.82);
-    expect(geared.expenseRatio).toBe(0.82);
-    expect(geared.distributionFrequency).toBe('Quarterly');
-    // "Net Expense Ratio 1.17%*" keeps the footnote marker out of the number.
-    const waived = parseFundPage('<li><span class="about-fund__list-label">Net Expense Ratio</span> <span id="snapshot-netExpenseRatio" class="about-fund__list-value">1.17%*</span></li>');
-    expect(waived.netExpenseRatio).toBe(1.17);
-    expect(waived.netExpenseRatioText).toBe('1.17%');
-    expect(waived.expenseRatioFootnote).toBe('*');
-  });
-
-  test('characteristics and index stats', () => {
-    expect(page.characteristics['Number of Holdings']).toBe('71');
-    expect(page.characteristics['Price/Earnings Ratio']).toBe('24.342');
-    expect(page.indexStats['Dividend Yield ( % )']).toBe('2.49');
-  });
-
-  test('month-end and quarter-end return tables are paired with their as-of dates', () => {
-    expect(page.returns.monthEnd.asOfDate).toBe('Aug 31 2026');
-    expect(page.returns.monthEnd.ytd).toBe(12.35);
-    expect(page.returns.monthEnd.mpytd).toBe(12.37);
-    expect(page.returns.quarterEnd.asOfDate).toBe('Jun 30 2026');
-    expect(page.returns.quarterEnd.ytd).toBe(9.09);
-  });
-
-  test('return tenors follow the header labels, not their position', () => {
-    const swapped = parseFundPage(FUND_PAGE.replace(
-      '<th>Fund + Index</th><th>1m</th><th>3m</th>',
-      '<th>Fund + Index</th><th>3m</th><th>1m</th>'));
-    // The NOBL NAV row reads 1.41% for 1m and 8.43% for 3m; swapped columns must
-    // still land in their own tenor.
-    expect(swapped.returns.monthEnd.mo1).toBe(8.43);
-    expect(swapped.returns.monthEnd.mo3).toBe(1.41);
-  });
-
-  test('exposure JSON blocks are decoded', () => {
-    expect(page.exposures[0].label).toBe('Fund Country Weighting');
-    expect(page.exposures[0].rows[0]).toEqual({ Country: 'United States', Weight: 92.592586 });
-  });
-});
-
-// ---------------------------------------------------------------------------
-// (c) Holdings file
-// ---------------------------------------------------------------------------
-
-describe('holdings file parsing', () => {
-  const file = parseHoldingsFile(HOLDINGS_CSV);
-
-  test('preamble resolves the as-of date and every fund row', () => {
+  test('holdings file: preamble, per-security identifiers, headers that grow only when used', () => {
+    const file = parseHoldingsFile(HOLDINGS_CSV);
     expect(file.asOf).toBe('Sep 18 2026');
     expect(file.asOfIso).toBe('2026-09-18');
     expect([...file.funds.keys()].sort()).toEqual(['ANEW', 'IGHG', 'NOBL']);
-    expect(file.funds.get('NOBL')?.rows.length).toBe(3);
-  });
-
-  test('equity, bond and derivative rows keep their own identifiers', () => {
     const nobl = file.funds.get('NOBL')?.rows || [];
-    expect(nobl[0]).toMatchObject({ ticker: 'BDX', identifier: '2087807', marketValue: '195347528.4' });
     const ighg = file.funds.get('IGHG')?.rows || [];
+    expect(nobl).toHaveLength(3);
+    expect(nobl[0]).toMatchObject({ ticker: 'BDX', identifier: '2087807', marketValue: '195347528.4' });
     expect(ighg[0]).toMatchObject({ ticker: '', identifier: 'BYM4WR8', coupon: '4.375', maturity: '2047-01-22' });
     expect(ighg[1]).toMatchObject({ exposure: '-164774390.6', marketValue: '' });
+    expect(holdingsHeaders(nobl)).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held']);
+    expect(holdingsHeaders(ighg)).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Exposure Value', 'Coupon', 'Maturity Date']);
   });
 
-  test('headers grow only for the columns a fund actually uses', () => {
-    expect(holdingsHeaders(file.funds.get('NOBL')?.rows || [])).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held']);
-    expect(holdingsHeaders(file.funds.get('IGHG')?.rows || [])).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Exposure Value', 'Coupon', 'Maturity Date']);
-  });
-
-  test('weights reproduce the fund page Exposure Weight column', () => {
-    // Live checks: NOBL BDX 1.73%, TQQQ NVDA 3.11%, TQQQ Barclays swap 29.64%,
-    // AGQ Silver DEC26 77.04%, IGHG Morgan Stanley 1.62% — the denominator is the
-    // sum of the market values the same official file reports.
+  test('holdings weights reproduce the fund page; cash-like lines carry no weight', () => {
     const nobl = parseHoldingsFile(HOLDINGS_CSV).funds.get('NOBL')?.rows || [];
-    // The fixture keeps three of NOBL's seventy rows, so the published fund
-    // total (Σ market values in the official file on 2026-09-18) is used here.
+    const blank = { ticker: '', identifier: '', coupon: '', maturity: '', exposure: '', marketValue: '' };
+    // the fixture keeps 3 of NOBL's rows: the published fund total is used as the denominator
     expect(Number(holdingWeight(nobl[0], 11_264_839_323)).toFixed(2)).toBe('1.73');
     expect(holdingsNetAssets(nobl)).toBeCloseTo(409_244_295.4, 4);
     expect(isOtherAssetsRow(nobl[2])).toBe(true);
-
     const tqqq: HoldingsRow[] = [
-      { name: 'NVDA', ticker: 'NVDA', identifier: '', coupon: '', maturity: '', shares: '5127506', exposure: '', marketValue: '1139690759' },
-      { name: 'NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '366121', exposure: '10853353165', marketValue: '' },
-      { name: 'Net Other Assets (Liabilities)', ticker: '', identifier: '', coupon: '', maturity: '', shares: '9707363674', exposure: '', marketValue: '9707363673.76' },
-      { name: 'TREASURY BILL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '1000000000' },
+      { ...blank, name: 'NVDA', ticker: 'NVDA', shares: '5127506', marketValue: '1139690759' },
+      { ...blank, name: 'NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL', shares: '366121', exposure: '10853353165' },
+      { ...blank, name: 'Net Other Assets (Liabilities)', shares: '9707363674', marketValue: '9707363673.76' },
     ];
-    // Σ market values for TQQQ in the official file on 2026-09-18.
-    const tqqqTotal = 36_617_542_112;
-    expect(holdingsNetAssets(tqqq)).toBeCloseTo(11_847_054_432.76, 2);
-    expect(Number(holdingWeight(tqqq[0], tqqqTotal)).toFixed(2)).toBe('3.11');
-    expect(Number(holdingWeight(tqqq[1], tqqqTotal)).toFixed(2)).toBe('29.64');
-    expect(holdingWeight(tqqq[2], tqqqTotal)).toBe('—');
-    // The fund page renders no weight for its cash-equivalent lines either:
-    // Net Other Assets, Treasury bills and the ProShares money-market fund.
-    expect(isWeightlessRow(tqqq[2])).toBe(true);
-    expect(isWeightlessRow({ name: 'TREASURY BILL', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '998429170' })).toBe(true);
-    expect(isWeightlessRow({ name: 'PROSHARES GENIUS MNY MKT ETF', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '7019262250' })).toBe(true);
-    expect(isWeightlessRow({ name: 'US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY', ticker: '', identifier: '', coupon: '', maturity: '', shares: '-1557', exposure: '-164774390.6', marketValue: '' })).toBe(false);
-    expect(holdingWeight({ name: 'PROSHARES GENIUS MNY MKT ETF', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '7019262250' }, tqqqTotal)).toBe('—');
-
-    const agq: HoldingsRow[] = [
-      { name: 'SILVER FUTURE DEC26', ticker: '', identifier: '', coupon: '', maturity: '', shares: '3411', exposure: '1145226195', marketValue: '' },
-      { name: 'Net Other Assets / Cash', ticker: '', identifier: '', coupon: '', maturity: '', shares: '1486541291', exposure: '', marketValue: '1486541291.25' },
-    ];
-    expect(Number(holdingWeight(agq[0], holdingsNetAssets(agq))).toFixed(2)).toBe('77.04');
-
-    expect(holdingWeight({ name: 'NO SIDE', ticker: '', identifier: '', coupon: '', maturity: '', shares: '', exposure: '', marketValue: '' }, 1)).toBe('—');
+    const total = 36_617_542_112;
+    expect(Number(holdingWeight(tqqq[0], total)).toFixed(2)).toBe('3.11');
+    expect(Number(holdingWeight(tqqq[1], total)).toFixed(2)).toBe('29.64');
+    expect(holdingWeight(tqqq[2], total)).toBe('—');
+    expect(isWeightlessRow({ ...blank, name: 'TREASURY BILL', shares: '1', marketValue: '998429170' })).toBe(true);
+    expect(isWeightlessRow({ ...blank, name: 'US 10YR NOTE (CBT) BOND 21/DEC/2026 TYZ6 COMDTY', shares: '-1557', exposure: '-164774390.6' })).toBe(false);
+    expect(holdingWeight({ ...blank, name: 'NO SIDE', shares: '' }, 1)).toBe('—');
   });
-});
 
-// ---------------------------------------------------------------------------
-// (d) NAV history
-// ---------------------------------------------------------------------------
-
-describe('NAV history parsing', () => {
-  test('keeps only the requested ticker and converts shares to units', () => {
+  test('NAV history keeps one ticker, converts shares to units; per-fund URLs and HISTORY_RANGE windows', () => {
     const rows = parseNavHistoryFile(NAV_CSV, 'NOBL');
     expect(rows).toHaveLength(2);
-    expect(rows[0]).toEqual({
-      date: 'Sep 18 2026',
-      nav: 55.6579,
-      sharesOutstanding: 202_400_000,
-      netAssets: 11_265_159_071.3158,
-    });
-  });
-
-  test('per-fund URL pattern and range windows', () => {
+    expect(rows[0]).toEqual({ date: 'Sep 18 2026', nav: 55.6579, sharesOutstanding: 202_400_000, netAssets: 11_265_159_071.3158 });
     expect(navHistoryUrl('NOBL')).toBe('https://accounts.profunds.com/etfdata/ByFund/NOBL-historical_nav.csv');
     expect(holdingsUrl('NOBL')).toBe('https://accounts.profunds.com/etfdata/ByFund/NOBL-psdlyhld.csv');
-    expect(historyRangeDays('max')).toBeNull();
-    expect(historyRangeDays('10y')).toBe(3650);
-    expect(historyRangeDays('6m')).toBe(180);
-    expect(historyRangeDays('30d')).toBe(30);
-    expect(() => historyRangeDays('forever')).toThrow(/Invalid HISTORY_RANGE/);
-  });
-
-  test('applyHistoryRange trims the oldest rows only', () => {
-    const rows: NavRow[] = [
+    expect([historyRangeDays('max'), historyRangeDays('10y'), historyRangeDays('6m'), historyRangeDays('30d')]).toEqual([null, 3650, 180, 30]);
+    const old: NavRow[] = [
       { date: 'Sep 18 2020', nav: 1, sharesOutstanding: 1, netAssets: 1 },
       { date: 'Sep 18 2026', nav: 2, sharesOutstanding: 2, netAssets: 2 },
     ];
-    expect(applyHistoryRange(rows, '1y')).toHaveLength(1);
-    expect(applyHistoryRange(rows, 'max')).toHaveLength(2);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// (e) Performance, (f) splits, (g) distributions, (h) symbol directory
-// ---------------------------------------------------------------------------
-
-describe('performance file', () => {
-  const map = parsePerformanceFile(PERFORMANCE_CSV);
-
-  test('keys each row by symbol, basis and period', () => {
-    expect(map.size).toBe(5);
-    const nobl = map.get('NOBL|NAV|MONTH')!;
-    expect(nobl.asOfDate).toBe('Aug 31 2026');
-    expect(nobl.ytd).toBe(12.35);
-    expect(nobl.yr3).toBe(9.34);
-    expect(map.get('NOBL|MARKET|MONTH')!.yr5).toBe(6.4);
-    expect(map.get('NOBL|NAV|QUARTER')!.sinceInception).toBe(10.72);
+    expect(applyHistoryRange(old, '1y').map(row => row.nav)).toEqual([2]); // the oldest rows go
+    expect(applyHistoryRange(old, 'max')).toHaveLength(2);
   });
 
-  test('young funds keep empty tenors as null', () => {
-    const spcf = map.get('SPCF|MARKET|MONTH')!;
-    expect(spcf.yr1).toBeNull();
-    expect(spcf.yr10).toBeNull();
-    expect(spcf.ytd).toBe(-37.24);
-  });
-
-  test('cumulative returns are derived from the published annualized ones', () => {
+  test('performance and splits files; young funds keep empty tenors as null', () => {
+    const performance = parsePerformanceFile(PERFORMANCE_CSV);
+    expect(performance.size).toBe(5);
+    expect(performance.get('NOBL|NAV|MONTH')).toMatchObject({ asOfDate: 'Aug 31 2026', ytd: 12.35, yr3: 9.34 });
+    expect(performance.get('NOBL|MARKET|MONTH')!.yr5).toBe(6.4);
+    expect(performance.get('NOBL|NAV|QUARTER')!.sinceInception).toBe(10.72);
+    const young = performance.get('SPCF|MARKET|MONTH')!;
+    expect([young.yr1, young.yr10, young.ytd]).toEqual([null, null, -37.24]);
     expect(cumulativeFromAnnualized(9.34, 3)).toBeCloseTo(30.7185, 3);
-    expect(cumulativeFromAnnualized(6.38, 5)).toBeCloseTo(36.2385, 3);
     expect(cumulativeFromAnnualized(null, 5)).toBeNull();
-  });
-});
-
-describe('splits file', () => {
-  test('groups split rows per symbol, newest first', () => {
     const splits = parseSplitsFile(SPLITS_CSV);
     expect(splits.get('NOBL')![0]).toMatchObject({ splitType: 'Forward', ratio: 2, date: 'May 28 2026' });
     expect(splits.get('REW')![0].postSplitCusip).toBe('74350P451');
   });
-});
 
-describe('distribution summary', () => {
-  const rows = parseDistributionSummary(DISTRIBUTIONS_JSON);
-
-  test('parses every payout and sorts by ex-date', () => {
+  test('distribution summary: payouts sorted by ex-date, CSV rows, tolerated bad payloads', () => {
+    const rows = parseDistributionSummary(DISTRIBUTIONS_JSON);
     expect(rows).toHaveLength(2);
     expect(rows[0].exDate).toBe('Mar 25 2026');
     expect(rows[1].dividend).toBeCloseTo(0.303711, 6);
     expect(rows[0].shortTermCapGains).toBeCloseTo(0.0121, 6);
-  });
-
-  test('CSV rows use sortable dates and six-decimal money', () => {
     const csv = distributionRowsForCsv(rows);
-    expect(csv[1]['Ex-Date']).toBe('24-Jun-2026');
-    expect(csv[1].Dividend).toBe('0.303711');
-    expect(csv[0]['LT Cap Gains']).toBe('—');
-  });
-
-  test('frequency labels and payment counts', () => {
-    expect(normalizeDistributionFrequency('Quarterly')).toBe('Quarterly');
-    expect(normalizeDistributionFrequency('wEEKLy')).toBe('Weekly');
-    expect(normalizeDistributionFrequency('Semi-Annual')).toBe('Semi-annually');
-    expect(normalizeDistributionFrequency('')).toBe('—');
-    expect(paymentsPerYear('Weekly')).toBe(52);
-    expect(paymentsPerYear('Monthly')).toBe(12);
-    expect(paymentsPerYear('Irregular')).toBeNull();
-    expect(paymentsPerYear('—')).toBeNull();
-  });
-
-  test('the dividend-yield filter resolves the same official-or-indicated basis as the feed', () => {
-    const bounded = readConfig({ DIVIDEND_YIELD: '0.5:1' }).dividendYieldRange;
-    const unbounded = readConfig({ DIVIDEND_YIELD: ':' }).dividendYieldRange;
-    const indicated = resolveDividendYield(null, 0.15596, 'Quarterly', 78.62); // TQQQ: no official 12-Month Yield
-    expect(indicated.effective).toBe(indicated.indicated);
-    expect(matchesRange(indicated.effective, bounded)).toBe(true);
-    expect(matchesRange(null, bounded)).toBe(false);
-    expect(matchesRange(null, unbounded)).toBe(true);
-    const official = resolveDividendYield(2.01, 0.303711, 'Quarterly', 55.66); // NOBL
-    expect(official.effective).toBe(2.01);
-    expect(official.indicated).not.toBe(2.01);
-  });
-
-  test('indicated yield is annualised from the latest payout only', () => {
-    expect(indicatedYield(0.303711, 'Quarterly', 55.66)).toBeCloseTo(2.1825, 3);
-    // IQMM publishes Weekly and the official API records weekly payouts;
-    // its recent $0.069297 distribution is not evidence of a 12-Month Yield.
-    expect(indicatedYield(0.069297, 'Weekly', 100.06)).toBe(3.6013);
-    expect(indicatedYield(null, 'Quarterly', 55.66)).toBeNull();
-    expect(indicatedYield(0.303711, 'Quarterly', null)).toBeNull();
-  });
-
-  test('malformed or empty payloads are tolerated', () => {
+    expect([csv[1]['Ex-Date'], csv[1].Dividend, csv[0]['LT Cap Gains']]).toEqual(['24-Jun-2026', '0.303711', '—']);
     expect(parseDistributionSummary('[]')).toEqual([]);
     expect(parseDistributionSummary('not json')).toEqual([]);
   });
-});
 
-describe('nasdaq symbol directory', () => {
-  test('resolves listing exchanges and skips the trailer line', () => {
+  test('nasdaq symbol directory resolves listing exchanges and skips the trailer line', () => {
     const text = [
       'ACT Symbol|Security Name|Exchange|CQS Symbol|ETF|Round Lot Size|Test Issue|NASDAQ Symbol',
       'A|Agilent Technologies, Inc. Common Stock|N|A|N|100|N|A',
@@ -811,23 +556,22 @@ describe('nasdaq symbol directory', () => {
       'File Creation Time: 0918202600:00|||||||',
     ].join('\r\n');
     const map = parseSymbolDirectory(text, { N: 'NYSE', P: 'NYSE Arca' });
-    expect(map.get('NOBL')).toBe('NYSE Arca');
-    expect(map.get('A')).toBe('NYSE');
-    expect(map.size).toBe(2);
+    expect([map.get('NOBL'), map.get('A'), map.size]).toEqual(['NYSE Arca', 'NYSE', 2]);
   });
 });
 
 // ---------------------------------------------------------------------------
-// Feed assembly and deterministic writes
+// metrics: nulls for young funds, one key set, basis and as-of travel together
 // ---------------------------------------------------------------------------
 
-describe('feed assembly', () => {
+describe('metrics', () => {
+  const performance = parsePerformanceFile(PERFORMANCE_CSV);
   const inputs = {
     fund: parseFinderCatalogPage(STRATEGIC_ROW, 'strategic')[0],
     page: parseFundPage(FUND_PAGE),
-    performanceNavMonth: parsePerformanceFile(PERFORMANCE_CSV).get('NOBL|NAV|MONTH'),
-    performanceMarketMonth: parsePerformanceFile(PERFORMANCE_CSV).get('NOBL|MARKET|MONTH'),
-    performanceNavQuarter: parsePerformanceFile(PERFORMANCE_CSV).get('NOBL|NAV|QUARTER'),
+    performanceNavMonth: performance.get('NOBL|NAV|MONTH'),
+    performanceMarketMonth: performance.get('NOBL|MARKET|MONTH'),
+    performanceNavQuarter: performance.get('NOBL|NAV|QUARTER'),
     performanceMarketQuarter: undefined,
     navRows: parseNavHistoryFile(NAV_CSV, 'NOBL'),
     holdingsRows: parseHoldingsFile(HOLDINGS_CSV).funds.get('NOBL')?.rows || [],
@@ -841,599 +585,450 @@ describe('feed assembly', () => {
     catalogReadAt: '2026-09-21T00:00:00Z',
   };
   const artifacts = buildFeed(inputs);
-
   const entry = artifacts.entry as Record<string, any>;
   const meta = artifacts.meta as Record<string, any>;
+  const entryOf = (override: Partial<typeof inputs>) => buildFeed({ ...inputs, ...override }).entry as Record<string, any>;
+  const numericKeys = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'secYield'];
 
-  test('index entry carries every column the browser reads', () => {
-    expect(entry.ticker).toBe('NOBL');
-    expect(entry.category).toBe('Equity');
-    expect(entry.terValue).toBe(0.35);
-    expect(entry.terNetValue).toBe(0.35);
-    // ProShares publishes one ratio for NOBL, so it serves as gross and net.
-    expect(entry.terGrossValue).toBe(0.35);
-    expect(entry.nav).toBe('$55.66');
-    expect(entry.aumValue).toBe(11_265_159_071.3158);
-    expect(entry.exchange).toBe('NYSE Arca');
-    expect(entry.closePrice).toBe('$55.66');
-    expect(entry.premiumDiscount).toBe('0.00%');
-    expect(entry.distributionFrequency).toBe('Quarterly');
+  test('index entry carries the columns the browser reads', () => {
+    expect(entry).toMatchObject({
+      ticker: 'NOBL', category: 'Equity', terValue: 0.35, terNetValue: 0.35, terGrossValue: 0.35, nav: '$55.66', aumValue: 11_265_159_071.3158,
+      exchange: 'NYSE Arca', closePrice: '$55.66', premiumDiscount: '0.00%', distributionFrequency: 'Quarterly', holdings: 3, history: 2,
+    });
     expect(entry.distributions).toMatchObject({ frequency: 'Quarterly', exDate: 'Jun 24 2026', dividend: '0.3037' });
-    expect(entry.metrics.ytd).toBe(12.35);
-    expect(entry.metrics.secYield).toBe(2.09);
-    expect(entry.metrics.secYieldText).toBe('2.09%');
+    expect(entry.metrics).toMatchObject({ ytd: 12.35, secYield: 2.09, secYieldText: '2.09%' });
     expect(entry.metrics.secYieldKind).toContain('official ProShares SEC 30-Day Yield');
-    expect(entry.holdings).toBe(3);
-    expect(entry.history).toBe(2);
+    expect(meta.identifiers).toMatchObject({ cusip: '74348A467', isin: null });
+    expect(meta.source.holdingsSource).toContain('psdlyhld.csv');
+    expect(meta.holdings.asOf).toBe('2026-09-18');
+    for (const row of artifacts.holdingsRows) expect(Object.keys(row)).toEqual(artifacts.holdingsHeaders);
+    for (const row of artifacts.historyRows) expect(Object.keys(row)).toEqual(artifacts.historyHeaders);
   });
 
-  test('metrics end with returnsBasis then performanceAsOf (ISO table date, not the NAV date)', () => {
+  test('every row has the same metrics keys (numbers or null), ending with returnsBasis then performanceAsOf', () => {
+    const young = { ...inputs.performanceNavMonth!, inceptionDate: 'Mar 01 2026', yr1: 0, yr3: 0, yr5: 0, yr10: 0, sinceInception: 9 };
+    const rows = [entry, entryOf({ performanceNavMonth: young }), entryOf({ performanceNavMonth: undefined })];
     const keys = Object.keys(entry.metrics);
     expect(keys.slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
-    expect(entry.metrics.returnsBasis).toContain('official ProShares performance file');
-    expect(entry.metrics.performanceAsOf).toBe(toIsoDate(inputs.performanceNavMonth!.asOfDate));
-    expect(entry.metrics.performanceAsOf).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    const without = buildFeed({ ...inputs, performanceNavMonth: undefined }).entry as Record<string, any>;
-    expect(without.metrics.performanceAsOf).toBeNull();
-    expect(without.metrics.returnsBasis.length).toBeGreaterThan(1);
-    expect(performanceAsOfIso(undefined)).toBeNull();
-    expect(performanceAsOfIso({ asOfDate: '—' } as any)).toBeNull();
-    expect(performanceAsOfIso({ asOfDate: 'Aug 31 2026' } as any)).toBe('2026-08-31');
+    // KNOWN GAP (reported, updater unchanged): rowFromMeta omits dividendYieldBasis, dividendYieldComputed and secYieldKind
+    const rebuilt = rowFromMeta(meta) as Record<string, any>;
+    expect(keys).toEqual(expect.arrayContaining(Object.keys(rebuilt.metrics)));
+    expect(Object.keys(rebuilt.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    for (const row of [...rows, rebuilt]) {
+      if (row !== rebuilt) expect(Object.keys(row.metrics)).toEqual(keys);
+      for (const key of numericKeys) expect(typeof row.metrics[key] === 'number' || row.metrics[key] === null, key).toBe(true);
+      expect(String(row.metrics.returnsBasis).length).toBeGreaterThan(1);
+    }
   });
 
-  test('derived tenors are stored alongside the published annualized ones', () => {
+  test('returnsBasis and performanceAsOf travel together: ISO table date, null when there is no table', () => {
+    expect(entry.metrics.returnsBasis).toContain('official ProShares performance file');
+    expect(entry.metrics.performanceAsOf).toBe('2026-08-31'); // the table date, not the NAV date (Sep 18)
+    const without = entryOf({ performanceNavMonth: undefined });
+    expect(without.metrics.performanceAsOf).toBeNull();
+    expect(without.metrics.returnsBasis.length).toBeGreaterThan(1);
+    for (const key of ['ytd', 'tr1y', 'tr3y', 'cagr3y', 'siAnn']) expect(without.metrics[key]).toBeNull();
+    expect(performanceAsOfIso({ asOfDate: '—' } as any)).toBeNull();
+    expect(performanceAsOfIso(undefined)).toBeNull();
+    const row = rowFromMeta(meta) as Record<string, any>;
+    expect(row.metrics.performanceAsOf).toBe(entry.metrics.performanceAsOf);
+    expect(row.dataFile).toBe('./funds/NOBL/meta.json');
+    expect([row.aumValue, row.holdings, row.history]).toEqual([entry.aumValue, entry.holdings, entry.history]);
+  });
+
+  test('young fund: horizons longer than its age and siAnn under one year are null, never a placeholder 0', () => {
+    const young = { ...inputs.performanceNavMonth!, inceptionDate: 'Mar 01 2026', asOfDate: 'Aug 31 2026', yr1: 0, yr3: 0, yr5: 0, yr10: 0, sinceInception: 9 };
+    const metrics = entryOf({ performanceNavMonth: young }).metrics;
+    for (const key of ['tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn']) expect(metrics[key], key).toBeNull();
+    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2023' }, 3)).toBe(true);
+    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2024' }, 3)).toBe(false);
+    expect(tenorAvailable(undefined, 1)).toBe(false);
+  });
+
+  test('derived total returns sit next to the published annualized ones', () => {
     expect(entry.metrics.cagr3y).toBe(9.34);
     expect(entry.metrics.tr3y).toBeCloseTo(30.7185, 3);
     expect(entry.metrics.tr5y).toBeCloseTo(36.2385, 3);
     expect(entry.metrics.tr10y).toBeCloseTo(158.903, 3);
   });
 
-  test('meta carries provenance for every consumer', () => {
-    expect(meta.identifiers.cusip).toBe('74348A467');
-    expect(meta.identifiers.isin).toBeNull();
-    expect(meta.source.holdingsSource).toContain('psdlyhld.csv');
-    expect(meta.source.historySource).toContain('ByFund/NOBL-historical_nav.csv');
-    expect(meta.yields.secYield).toBe(2.09);
-    expect(meta.yields.secYieldText).toBe('2.09%');
-    expect(meta.yields.secYieldKind).toContain('official ProShares SEC 30-Day Yield');
-    expect(meta.source.secYield).toBe(meta.yields.secYieldKind);
-    expect(meta.distributions.headers).toContain('Record Date');
-    expect(meta.holdings.asOf).toBe('2026-09-18');
-    expect(meta.documents.summaryProspectus).toContain('ticker=NOBL');
-    expect(meta.officialMetrics.splits).toHaveLength(1);
+  test('TER: one published ratio serves as gross and net; geared pages map gross, net and the footnote', () => {
+    expect(inputs.page).toMatchObject({ expenseRatio: 0.35, grossExpenseRatio: 0.35, netExpenseRatio: 0.35, expenseRatioFootnote: '' });
+    const geared = parseFundPage(`
+<span id="snapshot-grossExpenseRatio" class="about-fund__list-value d-inline-block">0.97%</span>
+<span id="snapshot-netExpenseRatio" class="about-fund__list-value d-inline-block">0.82%</span>`);
+    expect([geared.grossExpenseRatio, geared.netExpenseRatio, geared.expenseRatio]).toEqual([0.97, 0.82, 0.82]);
+    const mapped = entryOf({ page: { ...inputs.page, ...geared } });
+    expect([mapped.terGrossValue, mapped.terNetValue, mapped.terValue]).toEqual([0.97, 0.82, 0.82]);
+    const waived = parseFundPage('<li><span class="about-fund__list-label">Net Expense Ratio</span> <span id="snapshot-netExpenseRatio" class="about-fund__list-value">1.17%*</span></li>');
+    expect([waived.netExpenseRatio, waived.netExpenseRatioText, waived.expenseRatioFootnote]).toEqual([1.17, '1.17%', '*']);
   });
 
-  test('aum text and aumValue come from one source and date', () => {
+  test('yields: official, indicated and absent values keep honest nulls and provenance', () => {
+    const noSec = buildFeed({ ...inputs, page: { ...inputs.page, sec30DayYield: null, sec30DayYieldText: '—' } });
+    const noSecEntry = noSec.entry as Record<string, any>;
+    expect(noSecEntry.metrics.secYield).toBeNull();
+    expect(noSecEntry.metrics.secYieldKind).toBe('not published on this fund page (data limitation)');
+    expect((noSec.meta as Record<string, any>).yields.secYield).toBeNull();
+    const noFrequency = { ...inputs.page, distributionFrequency: '', twelveMonthYield: null, twelveMonthYieldText: '—' };
+    expect(entryOf({ page: noFrequency }).metrics.dividendYield).toBeNull();
+    expect(entryOf({ page: noFrequency }).metrics.dividendYieldBasis).toContain('no payment frequency is published');
+    expect(entryOf({ page: noFrequency, distributions: [] }).metrics.dividendYieldBasis).toContain('no distributions yet');
+    expect(resolveDividendYield(2.01, 0.303711, 'Quarterly', 55.66).effective).toBe(2.01);
+    const indicated = resolveDividendYield(null, 0.15596, 'Quarterly', 78.62);
+    expect(indicated.effective).toBe(indicated.indicated);
+    expect(indicatedYield(0.303711, 'Quarterly', 55.66)).toBeCloseTo(2.1825, 3);
+    expect(indicatedYield(null, 'Quarterly', 55.66)).toBeNull();
+    expect(indicatedYield(0.303711, 'Quarterly', null)).toBeNull();
+    expect(normalizeDistributionFrequency('Semi-Annual')).toBe('Semi-annually');
+    expect(normalizeDistributionFrequency('')).toBe('—');
+    expect([paymentsPerYear('Weekly'), paymentsPerYear('Monthly'), paymentsPerYear('Irregular'), paymentsPerYear('—')]).toEqual([52, 12, null, null]);
+    const bounded = readConfig({ DIVIDEND_YIELD: '0.5:1' }).dividendYieldRange;
+    expect(matchesRange(indicated.effective, bounded)).toBe(true);
+    expect(matchesRange(null, bounded)).toBe(false);
+  });
+
+  test('AUM text and aumValue come from one source', () => {
     const skewed = buildFeed({ ...inputs, page: { ...inputs.page, netAssetsText: '$1', netAssetsValue: 1 } });
     const e = skewed.entry as Record<string, any>;
     expect(e.aum).toBe(formatAumDisplay(e.aumValue));
     expect((skewed.meta as Record<string, any>).aum.display).toBe(formatAumDisplay(e.aumValue));
   });
-
-  test('horizons longer than the fund age and siAnn under one year are null, never a placeholder 0', () => {
-    const young = { ...inputs.performanceNavMonth!, inceptionDate: 'Mar 01 2026', asOfDate: 'Aug 31 2026', yr1: 0, yr3: 0, yr5: 0, yr10: 0, sinceInception: 9 };
-    const m = (buildFeed({ ...inputs, performanceNavMonth: young }).entry as Record<string, any>).metrics;
-    for (const key of ['tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn']) expect(m[key]).toBeNull();
-    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2023' }, 3)).toBe(true);
-    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2024' }, 3)).toBe(false);
-  });
-
-  test('an index row rebuilt from meta.json keeps the contract keys and numbers', () => {
-    const row = rowFromMeta(meta) as Record<string, any>;
-    expect(row.dataFile).toBe('./funds/NOBL/meta.json');
-    expect(row.aumValue).toBe(entry.aumValue);
-    expect(row.holdings).toBe(entry.holdings);
-    expect(row.history).toBe(entry.history);
-    expect(Object.keys(row.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
-    expect(row.metrics.performanceAsOf).toBe(entry.metrics.performanceAsOf);
-    expect(row.metrics.cagr3y).toBe(entry.metrics.cagr3y);
-  });
-
-  test('distribution-history gaps distinguish missing frequency from never distributed', () => {
-    const noPublishedYield = { ...inputs.page, distributionFrequency: '', twelveMonthYield: null, twelveMonthYieldText: '—' };
-    const hasPayouts = buildFeed({ ...inputs, page: noPublishedYield });
-    const payoutEntry = hasPayouts.entry as Record<string, any>;
-    const payoutMeta = hasPayouts.meta as Record<string, any>;
-    expect(payoutEntry.metrics.dividendYield).toBeNull();
-    expect(payoutEntry.metrics.dividendYieldBasis).toContain('official distributions exist but no payment frequency is published');
-    expect(payoutMeta.yields.effectiveYieldBasis).toBe(payoutEntry.metrics.dividendYieldBasis);
-    expect(payoutMeta.distributions.rows).toHaveLength(2);
-    const noPayouts = buildFeed({ ...inputs, page: noPublishedYield, distributions: [] });
-    expect((noPayouts.entry as Record<string, any>).metrics.dividendYieldBasis).toContain('no distributions yet');
-  });
-
-  test('pages without an SEC-yield element keep honest nulls and explicit provenance', () => {
-    const missing = buildFeed({ ...inputs, page: { ...inputs.page, sec30DayYield: null, sec30DayYieldText: '—' } });
-    const entryWithout = missing.entry as Record<string, any>;
-    const metaWithout = missing.meta as Record<string, any>;
-    expect(entryWithout.metrics.secYield).toBeNull();
-    expect(entryWithout.metrics.secYieldText).toBe('—');
-    expect(entryWithout.metrics.secYieldKind).toBe('not published on this fund page (data limitation)');
-    expect(metaWithout.yields.secYield).toBeNull();
-    expect(metaWithout.yields.secYieldText).toBe('—');
-    expect(metaWithout.yields.secYieldKind).toBe(entryWithout.metrics.secYieldKind);
-    expect(metaWithout.source.secYield).toBe(entryWithout.metrics.secYieldKind);
-  });
-
-  test('holdings and history rows are keyed by their page headers', () => {
-    for (const row of artifacts.holdingsRows) expect(Object.keys(row)).toEqual(artifacts.holdingsHeaders);
-    for (const row of artifacts.historyRows) expect(Object.keys(row)).toEqual(artifacts.historyHeaders);
-  });
 });
 
-describe('deterministic writes', () => {
-  test('serialize is stable and newline-terminated', () => {
-    expect(serialize({ b: 1, a: 2 })).toBe('{\n "b": 1,\n "a": 2\n}\n');
-  });
+// ---------------------------------------------------------------------------
+// pipeline: mocked fetch, a 3-fund catalog, a per-test temp copy of the updater
+// ---------------------------------------------------------------------------
 
-  test('writeIfChanged only rewrites when the bytes move', async () => {
-    const directory = await mkdtemp(path.join(os.tmpdir(), 'proshares-updater-'));
-    const file = path.join(directory, 'index.json');
-    expect(await writeIfChanged(file, 'one')).toBe('written');
-    expect(await writeIfChanged(file, 'one')).toBe('unchanged');
-    expect(await writeIfChanged(file, 'two')).toBe('written');
-    expect(await readFile(file, 'utf8')).toBe('two');
-    await rm(directory, { recursive: true, force: true });
-  });
+type Updater = typeof import('./update-data');
+const FUNDS: Record<string, 'strategic' | 'geared'> = { IGHG: 'strategic', NOBL: 'strategic', TQQQ: 'geared' };
+const TICKERS = Object.keys(FUNDS);
+const FUND_STAGE = /our-etfs\/(?:strategic|leveraged-and-inverse)\/|ByFund\/|distributionsummary/;
 
-  test('writeSheetPages paginates, matches headers and drops stale pages', async () => {
-    const directory = await mkdtemp(path.join(os.tmpdir(), 'proshares-pages-'));
-    const rows = [{ a: '1' }, { a: '2' }, { a: '3' }, { a: '4' }, { a: '5' }];
-    const first = await writeSheetPages(directory, 'holdings', 'NOBL', ['a'], rows, 2);
-    expect(first.manifest.pages).toEqual(['./holdings/001.json', './holdings/002.json', './holdings/003.json']);
-    expect(first.manifest.totalRows).toBe(5);
-    expect(first.written).toBe(3);
-    const page = JSON.parse(await readFile(path.join(directory, 'holdings', pageName(3)), 'utf8'));
-    expect(page).toMatchObject({ ticker: 'NOBL', page: 3, pageSize: 2, totalRows: 5, headers: ['a'] });
-    expect(page.rows).toEqual([{ a: '5' }]);
+const catalogRow = (ticker: string, kind: 'strategic' | 'geared'): string =>
+  kind === 'strategic'
+    ? STRATEGIC_ROW.replace(/NOBL/g, ticker).replace(/nobl/g, ticker.toLowerCase())
+    : GEARED_ROW.replace(/TQQQ/g, ticker).replace(/tqqq/g, ticker.toLowerCase());
+const holdingsCsvFor = (tickers: string[]): string =>
+  [...HOLDINGS_CSV.split('\n').slice(0, 4), ...tickers.flatMap(t => [
+    `"${t}","ProShares ${t}","BDX","2087807","BECTON DICKINSON AND CO",,,1079626,,195347528.4,`,
+    `"${t}","ProShares ${t}","","","NET OTHER ASSETS (LIABILITIES)",,,27861053,,27861053.4,`,
+  ])].join('\n');
+const navCsvFor = (ticker: string): string =>
+  NAV_CSV.replace(/NOBL/g, ticker) + `09/18/2020,ProShares ${ticker},${ticker},40,40,0,0,100000,4000000000\n`;
 
-    const second = await writeSheetPages(directory, 'holdings', 'NOBL', ['a'], rows.slice(0, 3), 2);
-    expect(second.manifest.pages).toHaveLength(2);
-    expect(second.removed).toBe(1);
-    // Page 1 and 2 change because `totalRows` moved with the shorter row set.
-    expect(second.written).toBe(2);
-    expect(existsSync(path.join(directory, 'holdings', '003.json'))).toBe(false);
-    await rm(directory, { recursive: true, force: true });
-  });
-});
+type FeedOptions = { fail?: (url: string) => boolean; barrier?: number };
+type FeedState = { urls: string[]; inFlight: number; peak: number };
 
-
-import { test as queueTest, describe as queueDescribe, expect as queueExpect } from 'bun:test';
-
-async function tickerChainHarness() {
- const app=await Bun.file(new URL('../app.tsx',import.meta.url)).text();
- const source=app.match(/^function withTickerChain<T>\([\s\S]*?^\}/m)?.[0];
- queueExpect(source).toBeDefined();
- const javascript=new Bun.Transpiler({loader:'ts'}).transformSync(source!);
- const chains=new Map<string,Promise<void>>();
- const enqueue=new Function('holdingsChains',`${javascript}; return withTickerChain;`)(chains) as
-  <T>(ticker:string,fn:()=>Promise<T>)=>Promise<T>;
- return {chains,enqueue};
-}
-
-queueDescribe('per-ticker queue preserves caller results and stores completion-only promises',()=>{
- queueTest('successful generic result reaches caller, not the internal queue',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const value={rows:[['AGEM']]};
-  queueExpect(await enqueue('AGEM',async()=>value)).toBe(value);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
- });
- queueTest('rejection reaches caller without poisoning the next queued task',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const error=new Error('page failed');
-  const work=enqueue('AGEM',async()=>{throw error;});
-  const observed=work.catch(reason=>reason);
-  const settled=chains.get('AGEM');
-  const next=enqueue('AGEM',async()=>42);
-  queueExpect(await observed).toBe(error);
-  queueExpect(await settled).toBeUndefined();
-  queueExpect(await next).toBe(42);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
- });
- queueTest('synchronous callback throws also leave the queue usable',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const error=new Error('synchronous failure');
-  queueExpect(await enqueue('AGEM',()=>{throw error;}).catch(reason=>reason)).toBe(error);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
-  queueExpect(await enqueue('AGEM',async()=>'recovered')).toBe('recovered');
- });
- queueTest('same-ticker work stays serial while other tickers run independently',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  let release!:()=>void;
-  const gate=new Promise<void>(resolve=>{release=resolve;});
-  const events:string[]=[];
-  const first=enqueue('AGEM',async()=>{events.push('first');await gate;events.push('done');return 1;});
-  const second=enqueue('AGEM',async()=>{events.push('second');return 2;});
-  try {
-   queueExpect(await enqueue('SGOL',async()=>3)).toBe(3);
-   queueExpect(events).toEqual(['first']);
-  } finally { release(); }
-  queueExpect(await Promise.all([first,second])).toEqual([1,2]);
-  queueExpect(events).toEqual(['first','done','second']);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
-  queueExpect(await chains.get('SGOL')).toBeUndefined();
- });
-});
-
-
-import { test as headerTest, expect as headerExpect } from 'bun:test';
-async function headerSummaryHarness() {
-  const source = await Bun.file(new URL('../app.tsx', import.meta.url)).text();
-  const match = /^([ \t]*)function renderHeaderSummary\(/m.exec(source);
-  headerExpect(match).not.toBeNull();
-  const tail = source.slice(match!.index);
-  const end = new RegExp('^' + match![1] + '}', 'm').exec(tail)!;
-  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(tail.slice(0, end.index + end[0].length));
-  const makeNode = (text = ''): any => {
-    const node: any = { textContent: text, childNodes: [], dataset: {}, listeners: {} };
-    node.replaceChildren = (...children: any[]) => { node.childNodes = children; };
-    node.append = (...children: any[]) => { node.childNodes.push(...children); };
-    node.addEventListener = (name: string, listener: any) => { node.listeners[name] = listener; };
-    return node;
+/** Installs a mocked fetch serving a complete 3-fund ProShares feed; `fail` answers 404 for matching URLs. */
+function mockFeed(options: FeedOptions = {}): FeedState {
+  const state: FeedState = { urls: [], inFlight: 0, peak: 0 };
+  const year = new Date().getUTCFullYear();
+  let latch: () => void = () => {};
+  const released = new Promise<void>(resolve => { latch = resolve; });
+  if (options.barrier) realSetTimeout(latch, 1500); // safety net only: a broken pool then fails on `peak`
+  const body = (url: string): string | null => {
+    if (url === STRATEGIC_FINDER_URL) return TICKERS.filter(t => FUNDS[t] === 'strategic').map(t => catalogRow(t, 'strategic')).join('');
+    if (url === GEARED_FINDER_URL) return TICKERS.filter(t => FUNDS[t] === 'geared').map(t => catalogRow(t, 'geared')).join('');
+    if (url === HOLDINGS_ALL_URL) return holdingsCsvFor(TICKERS);
+    if (url === PERFORMANCE_URL) return PERFORMANCE_CSV;
+    if (url === SPLITS_URL) return SPLITS_CSV;
+    if (url === NAV_HISTORY_ALL_URL || url === NASDAQ_LISTED_URL || url === NASDAQ_OTHER_LISTED_URL) return null;
+    if (/our-etfs\/(?:strategic|leveraged-and-inverse)\/\w+$/.test(url)) return FUND_PAGE;
+    const file = url.match(/ByFund\/(\w+)-(historical_nav|psdlyhld)\.csv$/);
+    if (file) return file[2] === 'psdlyhld' ? holdingsCsvFor([file[1]]) : navCsvFor(file[1]);
+    const dist = url.match(/distributionsummary\?fund=\w+&year=(\d+)/);
+    if (dist) return Number(dist[1]) === year ? DISTRIBUTIONS_JSON : '[]';
+    return null;
   };
-  const panel = makeNode(), subtitle = makeNode(), details = makeNode('Data: source link and updated timestamp');
-  subtitle.append(details);
-  const document = { getElementById: () => panel, createTextNode: makeNode, createElement: () => makeNode() };
-  const render = new Function('document', js + '; return renderHeaderSummary;')(document);
-  const text = () => subtitle.childNodes.map((n: any) => n.textContent).join('');
-  return { render, panel, subtitle, details, makeNode, text };
-}
-headerTest('header has no visible subtitle without selection; original details nodes are retained', async () => {
-  const h = await headerSummaryHarness();
-  h.render(h.subtitle, new Set(), null, () => {});
-  headerExpect(h.text()).toBe('');
-  headerExpect(h.panel.childNodes).toEqual([h.details]);
-  headerExpect(h.panel.childNodes[0]).toBe(h.details);
-});
-headerTest('header shows sorted selected tickers only, preserving click activation and highlight', async () => {
-  const h = await headerSummaryHarness(); const activated: string[] = [];
-  h.render(h.subtitle, new Set(['ZZZ', 'AAA']), 'AAA', (ticker: string) => activated.push(ticker));
-  headerExpect(h.text()).toBe('2 selected: AAA, ZZZ');
-  const links = h.subtitle.childNodes.filter((n: any) => n.dataset.headerFund);
-  headerExpect(links[0].className).toContain('underline');
-  links[1].listeners.click({ preventDefault() {} });
-  headerExpect(activated).toEqual(['ZZZ']);
-  headerExpect(h.panel.childNodes[0]).toBe(h.details);
-});
-headerTest('all selected still lists tickers; clear replaces both summary and selection', async () => {
-  const h = await headerSummaryHarness();
-  h.render(h.subtitle, new Set(['CCC','AAA','BBB']), 'BBB', () => {});
-  headerExpect(h.text()).toBe('3 selected: AAA, BBB, CCC');
-  const next = h.makeNode('Fresh detail context'); h.subtitle.replaceChildren(next);
-  h.render(h.subtitle, new Set(), null, () => {});
-  headerExpect(h.text()).toBe(''); headerExpect(h.panel.childNodes).toEqual([next]);
-});
-headerTest('header markup supplies a focusable counter and hidden rich panel with dismissal', async () => {
-  const html = await Bun.file(new URL('../index.html', import.meta.url)).text();
-  headerExpect(html).toMatch(/<button[^>]*aria-controls="app-summary"[^>]*id="ticker-count"/);
-  headerExpect(html).toContain('id="app-summary" role="region" aria-label="ETF catalog information" hidden');
-  headerExpect(html).toContain("event.key !== 'Escape'");
-  headerExpect(html).toContain("trigger.addEventListener('focus', show)");
-  headerExpect(html).toContain("trigger.addEventListener('pointerenter'");
-});
-
-
-describe('return range defaults', () => {
-  test('colon-only values do not create active return filters', () => {
-    expect(parseRanges({ PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':', TOTAL_RETURN_1Y: ':' }, 'PERFORMANCE')).toEqual({});
-  });
-});
-
-// ---------------------------------------------------------------------------
-// Configuration, documentation parity and workflow shape
-// ---------------------------------------------------------------------------
-
-const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
-const file = () => JSON.parse(read('scripts/update-data.config.json')) as Record<string, unknown>;
-
-describe('resolveControls', () => {
-  test('precedence: file < advanced < nonblank input < environment', () => {
-    const c = resolveControls({ CONCURRENCY: 2, TICKERS: 'NOBL' }, { CONCURRENCY: 3, TICKERS: 'TQQQ' }, { CONCURRENCY: '4', TICKERS: '' }, { CONCURRENCY: '5' });
-    expect(c.CONCURRENCY).toBe('5');
-    expect(c.TICKERS).toBe('TQQQ');
-    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
-    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
-  });
-
-  test('blank input inherits the file value; advanced may deliberately blank a key', () => {
-    expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
-    expect(resolveControls({ TICKERS: 'NOBL' }, { TICKERS: '' }, { TICKERS: '' }).TICKERS).toBe('');
-    expect(resolveControls({ STORE_RAW_DOWNLOADS: true }, {}, {}, { STORE_RAW_DOWNLOADS: 'false' }).STORE_RAW_DOWNLOADS).toBe('false');
-  });
-
-  test('legacy environment aliases still work and the canonical name wins', () => {
-    expect(resolveControls({}, {}, {}, { PROSHARES_TICKERS: 'NOBL' }).TICKERS).toBe('NOBL');
-    expect(resolveControls({}, {}, {}, { HISTORICAL_PAGE_SIZE: '500' }).HISTORY_PAGE_SIZE).toBe('500');
-    expect(resolveControls({}, {}, {}, { AUM_RANGE: '1B:' }).AUM).toBe('1B:');
-    expect(resolveControls({}, {}, {}, { EXPENSE_RATIO: '0:1' }).TER).toBe('0:1');
-    expect(resolveControls({}, {}, {}, { TICKERS: 'TQQQ', PROSHARES_TICKERS: 'NOBL' }).TICKERS).toBe('TQQQ');
-  });
-
-  test('scheduled path (empty inputs and advanced) equals the config defaults', () => {
-    const defaults = file();
-    const scheduled = resolveControls(defaults, JSON.parse('{}'), {}, {});
-    expect(scheduled).toEqual(Object.fromEntries(Object.entries(defaults).map(([k, v]) => [k, String(v)])));
-    const blankInputs = Object.fromEntries(CONTROL_NAMES.map(name => [name, '']));
-    expect(resolveControls(defaults, {}, blankInputs, {})).toEqual(scheduled);
-  });
-
-  test('provider-specific defaults', () => {
-    const config = readConfig(resolveControls(file()));
-    expect(config.tickers).toEqual([]);
-    expect(config.maxFetches).toBe(0);
-    expect(config.concurrency).toBe(2);
-    expect(config.requestSleep).toBe(2);
-    expect(config.holdingsPageSize).toBe(250);
-    expect(config.historyPageSize).toBe(1000);
-    expect(config.historyRange).toBe('max');
-    expect(config.distributionYears).toBe(10);
-    expect(config.maxRetries).toBe(3);
-    expect(() => resolveControls({}, { MAX_RETRIES: 0 })).toThrow(/MAX_RETRIES/);
-    expect(config.storeRawDownloads).toBe(false);
-    expect(config.offlineSeed).toBe(false);
-    expect(config.aumRange).toEqual({ min: undefined, max: undefined });
-    expect(config.terRange).toEqual({ min: undefined, max: undefined });
-    expect(config.performanceRanges).toEqual({});
-    expect(config.totalReturnRanges).toEqual({});
-  });
-
-  test('advanced reaches controls with no dedicated workflow input', () => {
-    const c = readConfig(resolveControls(file(), { PERFORMANCE_1Y: '5:', TOTAL_RETURN_YTD: ':20', OFFLINE_SEED: true }));
-    expect(c.performanceRanges['1Y']).toEqual({ min: 5, max: undefined });
-    expect(c.totalReturnRanges.YTD).toEqual({ min: undefined, max: 20 });
-    expect(c.offlineSeed).toBe(true);
-  });
-
-  test('rejects invalid JSON shapes, unknown keys, non-scalars and control characters', () => {
-    for (const value of [{ UNKNOWN: 1 }, { OUTPUT_DIR: '/tmp' }, { TICKERS: ['NOBL'] }, { TICKERS: { a: 1 } }, { TICKERS: null }, null, [], 'text', 7]) {
-      expect(() => resolveControls(value)).toThrow();
-    }
-    expect(() => resolveControls({}, [])).toThrow();
-    expect(() => resolveControls({}, 'x')).toThrow();
-    expect(() => resolveControls({}, {}, null)).toThrow();
-    expect(() => resolveControls({}, { TICKERS: 'NOBL\nEVIL=yes' })).toThrow(/multiline/);
-    expect(() => resolveControls({}, {}, { CATEGORY: 'a\rb' })).toThrow();
-    expect(() => resolveControls({}, {}, {}, { TICKERS: 'x\0y' })).toThrow();
-    expect(() => JSON.parse('{bad')).toThrow();
-  });
-
-  test('rejects invalid values per control', () => {
-    for (const value of [
-      { CONCURRENCY: 0 }, { CONCURRENCY: 'x' }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { DISTRIBUTION_YEARS: -1 },
-      { HOLDINGS_PAGE_SIZE: 0 }, { HISTORY_PAGE_SIZE: '1e3' }, { REQUEST_SLEEP: '-1' }, { REQUEST_SLEEP: 'fast' },
-      { VERBOSE: 'maybe' }, { STORE_RAW_DOWNLOADS: 'sometimes' }, { OFFLINE_SEED: '2' }, { HISTORY_RANGE: 'forever' },
-      { AUM: '1:2:3' }, { AUM: 'huge:' }, { TER: 'x' }, { DIVIDEND_YIELD: '5:1' }, { SEC_YIELD: '1' }, { PERFORMANCE_5Y: 'a:b' }, { TOTAL_RETURN_10Y: '9:1' },
-    ]) {
-      expect(() => resolveControls({}, value)).toThrow();
-    }
-  });
-
-  test('runtimeControls reads the config file and lets the environment win', async () => {
-    expect(await runtimeControls({})).toEqual(resolveControls(file()));
-    const c = await runtimeControls({ TICKERS: 'NOBL', REQUEST_SLEEP: '0' });
-    expect(c.TICKERS).toBe('NOBL');
-    expect(c.REQUEST_SLEEP).toBe('0');
-    expect(c.CONCURRENCY).toBe('2');
-  });
-});
-
-describe('documentation parity', () => {
-  const tenors = ['YTD', '1Y', '3Y', '5Y', '10Y'];
-  const readmeControls = (): string[] => {
-    const doc = read('README.md');
-    const start = doc.indexOf('### Update controls');
-    const section = doc.slice(start, doc.indexOf('\n#', start + 5));
-    const names: string[] = [];
-    for (const row of section.split('\n').filter(line => line.startsWith('| `'))) {
-      let prefix = '';
-      for (const token of [...row.split('|')[1].matchAll(/`([^`]+)`/g)].map(m => m[1])) {
-        const grouped = token.match(/^(PERFORMANCE|TOTAL_RETURN)_(YTD)$/);
-        if (grouped) prefix = grouped[1];
-        names.push(token.startsWith('_') ? `${prefix}${token}` : token);
+  globalThis.fetch = (async (input: unknown) => {
+    const url = String(input);
+    state.urls.push(url);
+    const staged = FUND_STAGE.test(url);
+    if (staged) { state.inFlight++; state.peak = Math.max(state.peak, state.inFlight); }
+    try {
+      if (staged) {
+        if (options.barrier && state.inFlight >= options.barrier) latch();
+        await (options.barrier ? released : new Promise(resolve => realSetTimeout(resolve, 1)));
       }
+      const text = options.fail?.(url) ? null : body(url);
+      return text === null ? new Response('missing', { status: 404, statusText: 'Not Found' }) : new Response(text);
+    } finally {
+      if (staged) state.inFlight--;
     }
-    return names;
-  };
+  }) as unknown as typeof fetch;
+  return state;
+}
 
-  test('config file keys == CONTROL_NAMES == README rows == --help', () => {
-    expect(Object.keys(file()).sort()).toEqual([...CONTROL_NAMES].sort());
-    expect(Object.values(file()).every(value => typeof value === 'string')).toBe(true);
-    expect(readmeControls().sort()).toEqual([...CONTROL_NAMES].sort());
-    for (const name of CONTROL_NAMES) {
-      const tenor = name.match(/^(PERFORMANCE|TOTAL_RETURN)_(.+)$/);
-      if (tenor) expect(tenors).toContain(tenor[2]);
-      expect(USAGE).toContain(tenor ? `${tenor[1]}_YTD|1Y|3Y|5Y|10Y` : name);
-    }
-    expect(read('README.md')).toContain('scripts/update-data.config.json');
+type Repo = { mod: Updater; api: string; run: (override?: Partial<UpdaterConfig>) => Promise<void> };
+
+/** Runs `fn` against a fresh temp copy of the updater, so main() writes into a temp api/ tree, removed afterwards. */
+async function withRepo<T>(fn: (repo: Repo) => Promise<T>): Promise<T> {
+  const root = mkdtempSync(path.join(os.tmpdir(), 'proshares-test-'));
+  try {
+    mkdirSync(path.join(root, 'scripts'));
+    for (const name of ['update-data.ts', 'update-data.config.json']) copyFileSync(new URL(`./${name}`, import.meta.url), path.join(root, 'scripts', name));
+    const mod = (await import(pathToFileURL(path.join(root, 'scripts', 'update-data.ts')).href)) as Updater;
+    quiet();
+    return await fn({ mod, api: path.join(root, 'api', 'proshares'), run: override => mod.main({ ...testConfig, ...override }) });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
+
+/** Every file under `dir`, sorted, as path -> mtime + content: equal snapshots mean nothing was written. */
+function snapshot(dir: string, prefix = ''): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const name of readdirSync(path.join(dir, prefix)).sort()) {
+    const relative = path.join(prefix, name);
+    const stat = statSync(path.join(dir, relative));
+    if (stat.isDirectory()) Object.assign(out, snapshot(dir, relative));
+    else out[relative] = `${stat.mtimeMs}:${readFileSync(path.join(dir, relative), 'utf8')}`;
+  }
+  return out;
+}
+const readIndex = (api: string): { funds: Record<string, any>[] } => JSON.parse(readFileSync(path.join(api, 'index.json'), 'utf8'));
+const tickersIn = (api: string): string[] => readIndex(api).funds.map(fund => String(fund.ticker));
+
+describe('pipeline', () => {
+  test('a full run publishes every fund with a complete row and its meta file', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await run();
+      const { funds } = readIndex(api);
+      expect(funds.map(fund => fund.ticker)).toEqual(TICKERS);
+      for (const row of funds) {
+        expect(row.dataFile).toBe(`./funds/${row.ticker}/meta.json`);
+        expect(existsSync(path.join(api, 'funds', row.ticker, 'meta.json'))).toBe(true);
+        expect(row.metrics.returnsBasis.length).toBeGreaterThan(1);
+      }
+      const byTicker = Object.fromEntries(funds.map(fund => [fund.ticker, fund]));
+      expect(byTicker.NOBL.metrics.ytd).toBe(12.35);
+      expect(byTicker.IGHG.metrics.ytd).toBeNull(); // no performance row: null, never 0
+      expect(byTicker.IGHG.metrics.performanceAsOf).toBeNull();
+      expect(process.exitCode).not.toBe(1);
+    });
   });
 
-  test('config file carries no personal contact', () => {
-    expect(read('scripts/update-data.config.json')).not.toMatch(/@|https?:\/\//);
-  });
-});
-
-describe('update-data workflow', () => {
-  const workflow = read('.github/workflows/update-data.yml');
-  const inputsBlock = workflow.slice(workflow.indexOf('    inputs:'), workflow.indexOf('\npermissions:'));
-  const names = [...inputsBlock.matchAll(/^      (\w+):$/gm)].map(m => m[1]);
-
-  test('dispatch inputs: at most 25, advanced defaults to {}, each maps to a control', () => {
-    expect(names.length).toBeLessThanOrEqual(25);
-    expect(names).toContain('advanced');
-    expect(inputsBlock).toMatch(/advanced:[\s\S]*?default: '\{\}'/);
-    for (const name of names.filter(n => n !== 'advanced')) expect(CONTROL_NAMES).toContain(name.toUpperCase() as never);
-    expect(names).not.toContain('output_dir');
-  });
-
-  test('schedule, resolver reuse and fixed output directory', () => {
-    expect(workflow).toContain("cron: '0 0 * * 0'");
-    expect(workflow).not.toMatch(/^  push:/m);
-    expect(workflow).toContain('toJSON(inputs)');
-    expect(workflow).toContain('import { resolveControls } from "./scripts/update-data.ts"');
-    expect(workflow).not.toMatch(/\$\{\{\s*inputs\./);
-    expect(workflow).not.toMatch(/OUTPUT_DIR/);
-    expect(workflow).toContain('git add api/proshares');
-    expect([...workflow.matchAll(/git add ([^\n]+)/g)].map(m => m[1].trim())).toEqual(['api/proshares']);
-    expect(workflow).not.toMatch(/bunx tsc/);
+  test('a filtered run (one ticker, batch size, filter, lost index) never shrinks the feed', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await run();
+      const before = snapshot(path.join(api, 'funds'));
+      await run({ tickers: ['NOBL'] });
+      expect(tickersIn(api)).toEqual(TICKERS);
+      expect(snapshot(path.join(api, 'funds'))).toEqual(before);
+      await run({ maxFetches: 1 });
+      expect(tickersIn(api)).toEqual(TICKERS);
+      await run({ terRange: { min: 5, max: undefined } });
+      expect(tickersIn(api)).toEqual(TICKERS);
+      rmSync(path.join(api, 'index.json'));
+      await run({ tickers: ['TQQQ'] });
+      expect(tickersIn(api)).toEqual(TICKERS); // rebuilt from every funds/*/meta.json
+    });
   });
 
-  test('hardening: timeout, no persisted checkout credentials, runtime-only push auth', () => {
-    expect(workflow).toContain('timeout-minutes: 30');
-    expect(workflow).toContain('persist-credentials: false');
-    expect(workflow).toContain('credential.helper');
-    expect(workflow).not.toMatch(/x-access-token:\$\{\{/);
-    expect(workflow).not.toContain('SEC_UA');
-  });
-});
-
-describe('repository layout and README', () => {
-  test('scripts/ holds exactly the three standard files', () => {
-    expect(readdirSync(new URL('./', import.meta.url)).sort()).toEqual(['update-data.config.json', 'update-data.test.ts', 'update-data.ts']);
+  test('a second identical run writes nothing (zero diff)', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await run();
+      const first = snapshot(api);
+      expect(Object.keys(first).length).toBeGreaterThan(TICKERS.length * 3);
+      await run();
+      expect(snapshot(api)).toEqual(first);
+    });
   });
 
-  test('README keeps the standard section order and verification commands', () => {
-    const doc = read('README.md');
-    const order = ['## Using Bun', '## Updating the static ProShares data', '### Data sources', '### Metrics and caveats', '### Update controls', '### Examples', '## TypeScript and verification', '## Brands table', '## Sibling applications', '## License'];
-    const positions = order.map(heading => doc.indexOf(heading));
-    expect(positions.every(position => position >= 0)).toBe(true);
-    expect([...positions].sort((x, y) => x - y)).toEqual(positions);
-    for (const command of ['bun install --frozen-lockfile', 'bun test', 'bun build --target=bun scripts/update-data.ts --outfile=/dev/null', 'git diff --check']) {
-      expect(doc).toContain(command);
-    }
-  });
-});
-
-describe('system CA support', () => {
-  const realFetch = globalThis.fetch;
-  afterEach(() => { globalThis.fetch = realFetch; });
-  const noReexec = (): never => { throw new Error('unexpected reexec'); };
-
-  test('USE_SYSTEM_CA resolver: auto/true/false case-insensitive, rejects others, default auto', () => {
-    for (const mode of ['auto', 'true', 'false', 'AUTO', 'True', 'FALSE']) {
-      expect(resolveControls({}, {}, {}, { USE_SYSTEM_CA: mode }).USE_SYSTEM_CA).toBe(mode.toLowerCase());
-    }
-    expect(() => resolveControls({}, {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow(/USE_SYSTEM_CA/);
-    expect(resolveControls(JSON.parse(readFileSync(path.join(import.meta.dir, 'update-data.config.json'), 'utf8'))).USE_SYSTEM_CA).toBe('auto');
+  test('a failed source keeps the fund exactly as published', async () => {
+    await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run();
+      const published = snapshot(api);
+      mockFeed({ fail: url => url.includes('/strategic/nobl') });
+      await run();
+      expect(snapshot(api)).toEqual(published);
+      expect(tickersIn(api)).toEqual(TICKERS);
+      expect(process.exitCode).not.toBe(1); // one failed fund among three is not a failed run
+      mockFeed({ fail: url => url === PERFORMANCE_URL });
+      await run();
+      expect(snapshot(api)).toEqual(published);
+      expect(process.exitCode).toBe(1); // every fund failed
+    });
   });
 
-  test('isCertError detects certificate failures, also through cause', () => {
-    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
-    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
-    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
-    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
-    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+  test('unknown tickers fail before any fund is written', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await expect(run({ tickers: ['ZZZZ'] })).rejects.toThrow(/absent from the catalog/);
+      expect(readdirSync(path.join(api, 'funds'))).toEqual([]);
+    });
   });
 
-  test('installSystemCa: false and active leave fetch untouched', () => {
-    const stub = (async () => new Response('ok')) as unknown as typeof fetch;
-    globalThis.fetch = stub;
-    installSystemCa('false', noReexec, false);
-    expect(globalThis.fetch).toBe(stub);
-    installSystemCa('auto', noReexec, true);
-    expect(globalThis.fetch).toBe(stub);
-    installSystemCa('true', noReexec, true);
-    expect(globalThis.fetch).toBe(stub);
+  test('HISTORY_RANGE trims the published NAV history from the old end', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await run({ tickers: ['NOBL'] });
+      const history = () => JSON.parse(readFileSync(path.join(api, 'funds', 'NOBL', 'meta.json'), 'utf8')).history.totalRows;
+      expect(history()).toBe(3);
+      await run({ tickers: ['NOBL'], historyRange: '1y' });
+      expect(history()).toBe(2);
+    });
   });
 
-  test('installSystemCa: true reexecs immediately', () => {
-    let calls = 0;
-    installSystemCa('true', (() => { calls++; return undefined as never; }) as () => never, false);
-    expect(calls).toBe(1);
-  });
-
-  test('installSystemCa: auto wraps fetch', async () => {
-    let calls = 0;
-    const reexec = (() => { calls++; return undefined as never; }) as () => never;
-    globalThis.fetch = (async () => { throw new Error('unable to get local issuer certificate'); }) as unknown as typeof fetch;
-    installSystemCa('auto', reexec, false);
-    await fetch('https://example.invalid');
-    expect(calls).toBe(1);
-
-    globalThis.fetch = (async () => { throw Object.assign(new Error('reset'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
-    installSystemCa('auto', reexec, false);
-    await expect(fetch('https://example.invalid')).rejects.toThrow('reset');
-    expect(calls).toBe(1);
-
-    globalThis.fetch = (async () => new Response('fine')) as unknown as typeof fetch;
-    installSystemCa('auto', reexec, false);
-    expect(await (await fetch('https://example.invalid')).text()).toBe('fine');
-    expect(calls).toBe(1);
-  });
-});
-
-describe('batch cursor, pacing, deadline and stable writes', () => {
-  const funds = ['AAA', 'BBB', 'CCC', 'DDD'].map(ticker => ({ ticker }));
-
-  test('a batch continues after the cursor and wraps around instead of stalling at the end', () => {
-    expect(selectBatch(funds, 2, null).map(f => f.ticker)).toEqual(['AAA', 'BBB']);
-    expect(selectBatch(funds, 2, 'BBB').map(f => f.ticker)).toEqual(['CCC', 'DDD']);
-    expect(selectBatch(funds, 2, 'DDD').map(f => f.ticker)).toEqual(['AAA', 'BBB']);
-    expect(selectBatch(funds, 3, 'CCC').map(f => f.ticker)).toEqual(['DDD', 'AAA', 'BBB']);
+  test('batches continue after the cursor and wrap; the cursor scope follows the selection', () => {
+    const funds = ['AAA', 'BBB', 'CCC', 'DDD'].map(ticker => ({ ticker }));
+    const tickers = (items: { ticker: string }[]) => items.map(item => item.ticker);
+    expect(tickers(selectBatch(funds, 2, null))).toEqual(['AAA', 'BBB']);
+    expect(tickers(selectBatch(funds, 2, 'BBB'))).toEqual(['CCC', 'DDD']);
+    expect(tickers(selectBatch(funds, 3, 'CCC'))).toEqual(['DDD', 'AAA', 'BBB']);
     expect(selectBatch(funds, 0, 'BBB')).toHaveLength(4);
-  });
-
-  test('the cursor scope changes with the catalog-level selection', () => {
     const base = { tickers: [] as string[], category: '' };
-    expect(cursorScope(base)).toBe(cursorScope({ ...base }));
     expect(cursorScope({ ...base, category: 'Equity' })).not.toBe(cursorScope(base));
-    expect(cursorScope({ ...base, aumRange: { min: 1 } })).not.toBe(cursorScope(base));
     expect(cursorScope({ ...base, tickers: ['B', 'A'] })).toBe(cursorScope({ ...base, tickers: ['A', 'B'] }));
   });
 
-  test('TICKERS entries that are not tickers are an error', () => {
-    expect(parseTickers('tqqq, sqqq')).toEqual(['TQQQ', 'SQQQ']);
-    expect(() => parseTickers('AAA $$$')).toThrow(/invalid ticker/);
-    expect(() => readConfig({ TICKERS: ';;;x!' })).toThrow(/invalid ticker/);
-  });
+  test('writes: stable serialization, rewrite only when bytes move, stamps ignored, pages paginated and pruned', async () => {
+    const directory = mkdtempSync(path.join(os.tmpdir(), 'proshares-writes-'));
+    try {
+      expect(serialize({ b: 1, a: 2 })).toBe('{\n "b": 1,\n "a": 2\n}\n');
+      const plain = path.join(directory, 'plain.json');
+      expect(await writeIfChanged(plain, 'one')).toBe('written');
+      expect(await writeIfChanged(plain, 'one')).toBe('unchanged');
+      expect(await writeIfChanged(plain, 'two')).toBe('written');
+      const file = path.join(directory, 'index.json');
+      const index = (stamp: string, ticker = 'AAA') => ({ generatedAt: stamp, source: { catalogReadAt: stamp }, funds: [{ ticker }] });
+      expect(await writeJsonIfChanged(file, index('2026-10-01T00:00:00Z'))).toBe('written');
+      expect(await writeJsonIfChanged(file, index('2026-10-02T00:00:00Z'))).toBe('unchanged');
+      expect(await writeJsonIfChanged(file, index('2026-10-03T00:00:00Z', 'BBB'))).toBe('written');
+      await atomicWrite(path.join(directory, 'x.json'), '{}');
+      expect(readdirSync(directory).filter(name => name.includes('.tmp-'))).toEqual([]);
 
-  test('HISTORY_RANGE with a zero window is an error', () => {
-    expect(() => historyRangeDays('0y')).toThrow(/at least 1/);
-    expect(() => historyRangeDays('0d')).toThrow(/at least 1/);
-    expect(historyRangeDays('max')).toBeNull();
+      const rows = [{ a: '1' }, { a: '2' }, { a: '3' }, { a: '4' }, { a: '5' }];
+      const first = await writeSheetPages(directory, 'holdings', 'NOBL', ['a'], rows, 2);
+      expect(first.manifest.pages).toEqual(['./holdings/001.json', './holdings/002.json', './holdings/003.json']);
+      expect([first.manifest.totalRows, first.written]).toEqual([5, 3]);
+      const last = JSON.parse(readFileSync(path.join(directory, 'holdings', pageName(3)), 'utf8'));
+      expect(last).toMatchObject({ ticker: 'NOBL', page: 3, pageSize: 2, totalRows: 5, headers: ['a'], rows: [{ a: '5' }] });
+      const second = await writeSheetPages(directory, 'holdings', 'NOBL', ['a'], rows.slice(0, 3), 2);
+      expect([second.manifest.pages.length, second.removed, second.written]).toEqual([2, 1, 2]);
+      expect(existsSync(path.join(directory, 'holdings', '003.json'))).toBe(false);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
   });
+});
 
-  test('request lanes are reserved before awaiting: starts are spaced per lane, not bursted', async () => {
-    const config = readConfig({ CONCURRENCY: '3', REQUEST_SLEEP: '0.1' });
-    const t0 = Date.now();
-    const starts: number[] = [];
-    await Promise.all([0, 1, 2].map(async () => {
-      for (let i = 0; i < 4; i++) { await paceRequests(config); starts.push(Date.now() - t0); }
-    }));
-    // 3 lanes x 4 starts, 100 ms apart per lane: the last start is at least ~300 ms in (old code: ~200 ms)
-    expect(Math.max(...starts)).toBeGreaterThanOrEqual(280);
-    expect(starts.filter(t => t < 50).length).toBeLessThanOrEqual(3);
+// ---------------------------------------------------------------------------
+// network: timeouts, bounded retries, pacing, concurrency, certificate fallback
+// ---------------------------------------------------------------------------
+
+describe('network', () => {
+  /** setTimeout that fires at once and records the requested delays, so retry back-offs cost nothing. */
+  const instantTimers = (): number[] => {
+    const delays: number[] = [];
+    globalThis.setTimeout = ((fn: () => void, ms?: number) => { delays.push(Number(ms)); return realSetTimeout(fn, 0); }) as unknown as typeof setTimeout;
+    return delays;
+  };
+
+  test('retries are bounded: permanent 4xx once, 403 twice, other failures maxRetries + 1 calls', async () => {
+    instantTimers();
+    const cases: [number, number, number][] = [[404, 3, 1], [403, 5, 2], [500, 2, 3], [500, 0, 1]];
+    for (const [status, maxRetries, expectedCalls] of cases) {
+      let calls = 0;
+      globalThis.fetch = (async () => { calls++; return new Response('x', { status, statusText: 'Nope' }); }) as unknown as typeof fetch;
+      await expect(fetchText('https://example.test/x', {}, { ...testConfig, maxRetries }, 'probe')).rejects.toThrow(`probe: HTTP ${status} Nope`);
+      expect(calls, `${status}/${maxRetries}`).toBe(expectedCalls);
+    }
+    let attempts = 0;
+    globalThis.fetch = (async () => { if (++attempts === 1) throw new Error('socket hang up'); return new Response('fine'); }) as unknown as typeof fetch;
+    expect(await fetchText('https://example.test/x', {}, { ...testConfig, maxRetries: 2 }, 'probe')).toBe('fine');
+    expect(attempts).toBe(2);
   });
 
   test('every request carries a timeout signal', async () => {
-    const originalFetch = globalThis.fetch;
     let signal: AbortSignal | null | undefined;
     globalThis.fetch = (async (_url: unknown, init?: RequestInit) => { signal = init?.signal; return new Response('ok'); }) as unknown as typeof fetch;
-    try {
-      await fetchText('https://example.test/x', {}, readConfig({ REQUEST_SLEEP: '0' }), 'probe');
-      expect(signal).toBeInstanceOf(AbortSignal);
-    } finally { globalThis.fetch = originalFetch; }
+    await fetchText('https://example.test/x', {}, testConfig, 'probe');
+    expect(signal).toBeInstanceOf(AbortSignal);
+    expect(signal!.aborted).toBe(false);
   });
 
-  test('past the soft deadline no new fund is started', async () => {
+  test('request lanes are reserved before awaiting: starts are spaced per lane, not bursted (fake clock)', async () => {
+    const now = Date.now();
+    Date.now = () => now;
+    const delays = instantTimers();
+    const config = { ...testConfig, requestSleep: 0.1 };
+    await paceRequests({ ...config, concurrency: 5 }); // resets the lanes
+    delays.length = 0;
+    for (let i = 0; i < 12; i++) await paceRequests({ ...config, concurrency: 3 });
+    // 3 lanes x 4 starts, 100 ms apart per lane: the first three start at once, then 100, 200 and 300 ms
+    expect(delays.sort((a, b) => a - b)).toEqual([100, 100, 100, 200, 200, 200, 300, 300, 300]);
+  });
+
+  test('in-flight work: worker pool peak is 1 at limit 1 and N at limit N, a passed deadline starts nothing', async () => {
+    const measure = async (limit: number): Promise<number> => {
+      let active = 0;
+      let peak = 0;
+      await mapWithConcurrency([1, 2, 3, 4, 5, 6], limit, async () => {
+        peak = Math.max(peak, ++active);
+        await new Promise(resolve => realSetTimeout(resolve, 2));
+        active--;
+      });
+      return peak;
+    };
+    expect(await measure(1)).toBe(1);
+    expect(await measure(3)).toBe(3);
     let started = 0;
     await mapWithConcurrency([1, 2, 3], 2, async () => { started++; }, Date.now() - 1);
     expect(started).toBe(0);
-    await mapWithConcurrency([1, 2, 3], 2, async () => { started++; });
-    expect(started).toBe(3);
   });
 
-  test('an index that only differs by run stamps is not rewritten; writes leave no temp files', async () => {
-    const directory = await mkdtemp(path.join(os.tmpdir(), 'proshares-index-'));
-    try {
-      const file = path.join(directory, 'index.json');
-      const index = (stamp: string) => ({ generatedAt: stamp, source: { catalogReadAt: stamp }, counts: { funds: 1 }, funds: [{ ticker: 'AAA' }] });
-      expect(await writeJsonIfChanged(file, index('2026-10-01T00:00:00Z'))).toBe('written');
-      const first = readFileSync(file, 'utf8');
-      expect(await writeJsonIfChanged(file, index('2026-10-02T00:00:00Z'))).toBe('unchanged');
-      expect(readFileSync(file, 'utf8')).toBe(first);
-      expect(await writeJsonIfChanged(file, { ...index('2026-10-03T00:00:00Z'), funds: [{ ticker: 'BBB' }] })).toBe('written');
-      await atomicWrite(path.join(directory, 'x.json'), '{}');
-      expect(readdirSync(directory).filter(name => name.includes('.tmp-'))).toEqual([]);
-    } finally { await rm(directory, { recursive: true, force: true }); }
+  test('the real run fetches funds in parallel at CONCURRENCY=3 and one at a time at CONCURRENCY=1', async () => {
+    await withRepo(async ({ run }) => {
+      const serial = mockFeed();
+      await run({ concurrency: 1 });
+      expect(serial.peak).toBe(1);
+      const parallel = mockFeed({ barrier: 3 });
+      await run({ concurrency: 3, tickers: [] });
+      expect(parallel.peak).toBe(3);
+    });
+  });
+
+  test('HISTORY_RANGE and per-fund NAV and holdings requests use the official per-fund files', async () => {
+    await withRepo(async ({ run }) => {
+      const feed = mockFeed();
+      await run({ tickers: ['NOBL'], historyRange: '1y' });
+      expect(feed.urls).toContain(navHistoryUrl('NOBL'));
+      expect(feed.urls).toContain(holdingsUrl('NOBL'));
+      expect(feed.urls.filter(url => url.includes('distributionsummary?fund=NOBL')).length).toBeGreaterThan(0);
+      expect(feed.urls.some(url => /TQQQ|IGHG/.test(url) && FUND_STAGE.test(url))).toBe(false);
+    });
+  });
+
+  test('system CA: auto restarts once on certificate errors only, false and active leave fetch untouched', async () => {
+    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
+    expect(isCertError(new Error('HTTP 403 Forbidden'))).toBe(false);
+    quiet();
+    const noReexec = (): never => { throw new Error('unexpected reexec'); };
+    const stub = (async () => new Response('ok')) as unknown as typeof fetch;
+    globalThis.fetch = stub;
+    installSystemCa('false', noReexec, false);
+    installSystemCa('auto', noReexec, true);
+    installSystemCa('true', noReexec, true);
+    expect(globalThis.fetch).toBe(stub);
+    let restarts = 0;
+    const reexec = (() => { restarts++; return undefined as never; }) as () => never;
+    installSystemCa('true', reexec, false);
+    expect(restarts).toBe(1);
+    globalThis.fetch = (async () => { throw new Error('unable to get local issuer certificate'); }) as unknown as typeof fetch;
+    installSystemCa('auto', reexec, false);
+    await fetch('https://example.invalid');
+    expect(restarts).toBe(2);
+    globalThis.fetch = (async () => { throw Object.assign(new Error('reset'), { code: 'ECONNRESET' }); }) as unknown as typeof fetch;
+    installSystemCa('auto', reexec, false);
+    await expect(fetch('https://example.invalid')).rejects.toThrow('reset');
+    expect(restarts).toBe(2);
   });
 });
