@@ -2,7 +2,7 @@
  "ticker": "UYM",
  "page": 1,
  "pageSize": 250,
- "totalRows": 32,
+ "totalRows": 33,
  "headers": [
   "Name",
   "Ticker",
@@ -14,56 +14,56 @@
  ],
  "rows": [
   {
-   "Name": "MATERIALS SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "27.8620151413",
-   "Market Value": "—",
-   "Shares Held": "9349",
-   "Exposure Value": "9897879.79"
-  },
-  {
    "Name": "MATERIALS SELECT SECTOR INDEX SWAP UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "27.0961002958",
+   "Weight": "27.6248652759",
    "Market Value": "—",
    "Shares Held": "9092",
-   "Exposure Value": "9625791.32"
+   "Exposure Value": "9446224.32"
   },
   {
-   "Name": "MATERIALS SELECT SECTOR INDEX SWAP BNP PARIBAS",
+   "Name": "MATERIALS SELECT SECTOR INDEX SWAP BANK OF AMERICA NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "24.5718595401",
+   "Weight": "25.8139964127",
    "Market Value": "—",
-   "Shares Held": "8245",
-   "Exposure Value": "8729063.95"
+   "Shares Held": "8496",
+   "Exposure Value": "8827004.16"
   },
   {
    "Name": "MATERIALS SELECT SECTOR INDEX SWAP GOLDMAN SACHS INTERNATIONAL",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "24.5360969792",
+   "Weight": "25.0149049512",
    "Market Value": "—",
    "Shares Held": "8233",
-   "Exposure Value": "8716359.43"
+   "Exposure Value": "8553757.68"
+  },
+  {
+   "Name": "MATERIALS SELECT SECTOR INDEX SWAP BNP PARIBAS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "24.4649598770",
+   "Market Value": "—",
+   "Shares Held": "8052",
+   "Exposure Value": "8365705.92"
   },
   {
    "Name": "MATERIALS SELECT SECTOR INDEX SWAP SOCIETE GENERALE",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "23.5913693292",
+   "Weight": "24.0517414787",
    "Market Value": "—",
    "Shares Held": "7916",
-   "Exposure Value": "8380748.36"
+   "Exposure Value": "8224407.36"
   },
   {
    "Name": "LINDE PLC",
    "Ticker": "LIN",
    "Identifier": "BNZHB81",
-   "Weight": "8.6135254936",
-   "Market Value": "3059923.68",
+   "Weight": "9.1311778695",
+   "Market Value": "3122373.76",
    "Shares Held": "6512",
    "Exposure Value": "—"
   },
@@ -71,8 +71,8 @@
    "Name": "NEWMONT CORP",
    "Ticker": "NEM",
    "Identifier": "2636607",
-   "Weight": "5.0879775094",
-   "Market Value": "1807485.55",
+   "Weight": "5.0303509609",
+   "Market Value": "1720110.6",
    "Shares Held": "14885",
    "Exposure Value": "—"
   },
@@ -80,8 +80,8 @@
    "Name": "FREEPORT-MCMORAN INC",
    "Ticker": "FCX",
    "Identifier": "2352118",
-   "Weight": "4.1291925166",
-   "Market Value": "1466880.66",
+   "Weight": "4.2737787899",
+   "Market Value": "1461403.44",
    "Shares Held": "20286",
    "Exposure Value": "—"
   },
@@ -89,8 +89,8 @@
    "Name": "ECOLAB INC",
    "Ticker": "ECL",
    "Identifier": "2304227",
-   "Weight": "3.4388832286",
-   "Market Value": "1221650.79",
+   "Weight": "3.4986259898",
+   "Market Value": "1196342.7",
    "Shares Held": "4371",
    "Exposure Value": "—"
   },
@@ -98,8 +98,8 @@
    "Name": "SHERWIN-WILLIAMS CO/THE",
    "Ticker": "SHW",
    "Identifier": "2804211",
-   "Weight": "3.4378679051",
-   "Market Value": "1221290.1",
+   "Weight": "3.4675068180",
+   "Market Value": "1185701.61",
    "Shares Held": "3711",
    "Exposure Value": "—"
   },
@@ -107,8 +107,8 @@
    "Name": "VULCAN MATERIALS CO",
    "Ticker": "VMC",
    "Identifier": "2931205",
-   "Weight": "3.2841714726",
-   "Market Value": "1166690",
+   "Weight": "3.3848918621",
+   "Market Value": "1157451.72",
    "Shares Held": "4762",
    "Exposure Value": "—"
   },
@@ -116,26 +116,17 @@
    "Name": "STEEL DYNAMICS INC",
    "Ticker": "STLD",
    "Identifier": "2849472",
-   "Weight": "3.2518700589",
-   "Market Value": "1155215.04",
+   "Weight": "3.3542053019",
+   "Market Value": "1146958.56",
    "Shares Held": "4944",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "NUCOR CORP",
-   "Ticker": "NUE",
-   "Identifier": "2651086",
-   "Weight": "3.2113248454",
-   "Market Value": "1140811.5",
-   "Shares Held": "4614",
    "Exposure Value": "—"
   },
   {
    "Name": "MARTIN MARIETTA MATERIALS",
    "Ticker": "MLM",
    "Identifier": "2572079",
-   "Weight": "3.1968897930",
-   "Market Value": "1135683.5",
+   "Weight": "3.3073107940",
+   "Market Value": "1130923.15",
    "Shares Held": "2345",
    "Exposure Value": "—"
   },
@@ -143,53 +134,62 @@
    "Name": "AIR PRODUCTS & CHEMICALS INC",
    "Ticker": "APD",
    "Identifier": "2011602",
-   "Weight": "3.1963529824",
-   "Market Value": "1135492.8",
+   "Weight": "3.2712933112",
+   "Market Value": "1118607.1",
    "Shares Held": "4030",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "NUCOR CORP",
+   "Ticker": "NUE",
+   "Identifier": "2651086",
+   "Weight": "3.2436643059",
+   "Market Value": "1109159.46",
+   "Shares Held": "4614",
    "Exposure Value": "—"
   },
   {
    "Name": "CRH PLC",
    "Ticker": "CRH",
    "Identifier": "B01ZKD6",
-   "Weight": "3.1878655770",
-   "Market Value": "1132477.68",
+   "Weight": "3.1911283589",
+   "Market Value": "1091194.98",
    "Shares Held": "13317",
    "Exposure Value": "—"
   },
   {
-   "Name": "CORTEVA INC",
-   "Ticker": "CTVA",
-   "Identifier": "BK73B42",
-   "Weight": "3.1032570281",
-   "Market Value": "1102420.8",
+   "Name": "VYLOR INC",
+   "Ticker": "VYLR",
+   "Identifier": "C0C06F3",
+   "Weight": "2.7616324991",
+   "Market Value": "944330.4",
    "Shares Held": "14040",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SMURFIT WESTROCK PLC",
-   "Ticker": "SW",
-   "Identifier": "BRK49M5",
-   "Weight": "2.6755425965",
-   "Market Value": "950476.8",
-   "Shares Held": "20480",
    "Exposure Value": "—"
   },
   {
    "Name": "PPG INDUSTRIES INC",
    "Ticker": "PPG",
    "Identifier": "2698470",
-   "Weight": "2.6271164861",
-   "Market Value": "933273.6",
+   "Weight": "2.6691373117",
+   "Market Value": "912702",
    "Shares Held": "8680",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SMURFIT WESTROCK PLC",
+   "Ticker": "SW",
+   "Identifier": "BRK49M5",
+   "Weight": "2.5478235759",
+   "Market Value": "871219.2",
+   "Shares Held": "20480",
    "Exposure Value": "—"
   },
   {
    "Name": "INTL FLAVORS & FRAGRANCES",
    "Ticker": "IFF",
    "Identifier": "2464165",
-   "Weight": "2.4029626979",
-   "Market Value": "853643.78",
+   "Weight": "2.4011597882",
+   "Market Value": "821068.04",
    "Shares Held": "9962",
    "Exposure Value": "—"
   },
@@ -197,8 +197,8 @@
    "Name": "PACKAGING CORP OF AMERICA",
    "Ticker": "PKG",
    "Identifier": "2504566",
-   "Weight": "2.3087313625",
-   "Market Value": "820168.44",
+   "Weight": "2.3111552832",
+   "Market Value": "790291.32",
    "Shares Held": "3458",
    "Exposure Value": "—"
   },
@@ -206,8 +206,8 @@
    "Name": "DOW INC",
    "Ticker": "DOW",
    "Identifier": "BHXCF84",
-   "Weight": "2.2245070541",
-   "Market Value": "790248.06",
+   "Weight": "2.3069048807",
+   "Market Value": "788837.91",
    "Shares Held": "28203",
    "Exposure Value": "—"
   },
@@ -215,80 +215,89 @@
    "Name": "AMCOR PLC",
    "Ticker": "AMCR",
    "Identifier": "BV7DQ55",
-   "Weight": "2.1601642717",
-   "Market Value": "767390.52",
+   "Weight": "2.2098686605",
+   "Market Value": "755656.72",
    "Shares Held": "18052",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "INTERNATIONAL PAPER CO",
-   "Ticker": "IP",
-   "Identifier": "2465254",
-   "Weight": "2.0383277564",
-   "Market Value": "724108.54",
-   "Shares Held": "20677",
    "Exposure Value": "—"
   },
   {
    "Name": "CF INDUSTRIES HOLDINGS INC",
    "Ticker": "CF",
    "Identifier": "B0G4K50",
-   "Weight": "1.9073665033",
-   "Market Value": "677585.03",
+   "Weight": "1.9874284733",
+   "Market Value": "679594.09",
    "Shares Held": "5909",
    "Exposure Value": "—"
   },
   {
-   "Name": "BALL CORP",
-   "Ticker": "BALL",
-   "Identifier": "2073022",
-   "Weight": "1.6533259637",
-   "Market Value": "587338.05",
-   "Shares Held": "10335",
+   "Name": "INTERNATIONAL PAPER CO",
+   "Ticker": "IP",
+   "Identifier": "2465254",
+   "Weight": "1.9331790416",
+   "Market Value": "661043.69",
+   "Shares Held": "20677",
    "Exposure Value": "—"
   },
   {
    "Name": "LYONDELLBASELL INDU-CL A",
    "Ticker": "LYB",
    "Identifier": "B3SPXZ3",
-   "Weight": "1.6513401587",
-   "Market Value": "586632.6",
+   "Weight": "1.7285519950",
+   "Market Value": "591072.2",
    "Shares Held": "10090",
    "Exposure Value": "—"
   },
   {
-   "Name": "ALBEMARLE CORP",
-   "Ticker": "ALB",
-   "Identifier": "2046853",
-   "Weight": "1.4230296215",
-   "Market Value": "505526.11",
-   "Shares Held": "4607",
+   "Name": "BALL CORP",
+   "Ticker": "BALL",
+   "Identifier": "2073022",
+   "Weight": "1.7037286630",
+   "Market Value": "582583.95",
+   "Shares Held": "10335",
    "Exposure Value": "—"
   },
   {
    "Name": "AVERY DENNISON CORP",
    "Ticker": "AVY",
    "Identifier": "2066408",
-   "Weight": "1.4188352085",
-   "Market Value": "504036.06",
+   "Weight": "1.4699533964",
+   "Market Value": "502645.33",
    "Shares Held": "2959",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ALBEMARLE CORP",
+   "Ticker": "ALB",
+   "Identifier": "2046853",
+   "Weight": "1.4091274962",
+   "Market Value": "481846.13",
+   "Shares Held": "4607",
    "Exposure Value": "—"
   },
   {
    "Name": "MOSAIC CO/THE",
    "Ticker": "MOS",
    "Identifier": "B3NPHP6",
-   "Weight": "0.8039494353",
-   "Market Value": "285600.12",
+   "Weight": "0.7648005941",
+   "Market Value": "261520.84",
    "Shares Held": "12412",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CORTEVA INC",
+   "Ticker": "CTVA",
+   "Identifier": "BK73B42",
+   "Weight": "0.4894240171",
+   "Market Value": "167356.8",
+   "Shares Held": "14040",
    "Exposure Value": "—"
   },
   {
    "Name": "DUPONT DE NEMOURS INC",
    "Ticker": "DD",
    "Identifier": "BW60F13",
-   "Weight": "0.0003707568",
-   "Market Value": "131.71",
+   "Weight": "0.0003801180",
+   "Market Value": "129.98",
    "Shares Held": "1",
    "Exposure Value": "—"
   },
@@ -297,8 +306,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "9792455.66",
-   "Shares Held": "9792455.66",
+   "Market Value": "8942518.26",
+   "Shares Held": "8942518.26",
    "Exposure Value": "—"
   }
  ]

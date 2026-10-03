@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=VERS&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Sep 25 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Oct 02 2026)",
   "historySource": "official ProShares NAV history file (ByFund/VERS-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-27T03:03:19Z",
+  "catalogReadAt": "2026-10-03T06:11:56Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,26 +42,26 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$74.87",
-  "value": 74.87,
-  "asOfDate": "Sep 25 2026"
+  "display": "$74.82",
+  "value": 74.82,
+  "asOfDate": "Oct 02 2026"
  },
  "marketPrice": {
-  "display": "$74.85",
-  "value": 74.85,
-  "asOfDate": "Sep 25 2026"
+  "display": "$74.74",
+  "value": 74.74,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
-  "display": "-0.03%",
-  "value": -0.0267,
+  "display": "-0.11%",
+  "value": -0.1069,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$5,240,641",
-  "value": 5240638.8652,
-  "asOfDate": "Sep 25 2026",
-  "source": "official ProShares NAV history file (Assets Under Management)"
+  "display": "$5.24 M",
+  "value": 5237789.8245,
+  "asOfDate": "Oct 02 2026",
+  "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": 0.13,
@@ -75,7 +75,7 @@
   "distributionYieldText": null,
   "yield12M": 0.13,
   "yield12MText": "0.13%",
-  "indicatedYield": 0.2781,
+  "indicatedYield": 0.2783,
   "indicatedYieldText": "0.28%",
   "secYield": -0.11,
   "secYieldText": "-0.11%",
@@ -327,9 +327,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 40,
-  "asOfDate": "Sep 25 2026",
-  "asOf": "2026-09-25",
+  "totalRows": 39,
+  "asOfDate": "Oct 02 2026",
+  "asOf": "2026-10-02",
   "headers": [
    "Name",
    "Ticker",
@@ -338,7 +338,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Sep 25 2026)",
+  "source": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Oct 02 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -346,9 +346,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1139,
-  "asOf": "Sep 25 2026",
-  "asOfDate": "Sep 25 2026",
+  "totalRows": 1144,
+  "asOf": "Oct 02 2026",
+  "asOfDate": "Oct 02 2026",
   "headers": [
    "Date",
    "NAV",
@@ -388,43 +388,43 @@
     "rows": [
      {
       "Company": "META PLATFORMS INC-CLASS A",
-      "Weight": 5.163692
-     },
-     {
-      "Company": "QORVO INC",
-      "Weight": 4.864775
+      "Weight": 5.073995
      },
      {
       "Company": "KOPIN CORP",
-      "Weight": 4.57608
+      "Weight": 4.566908
      },
      {
       "Company": "APPLE INC",
-      "Weight": 4.523397
+      "Weight": 4.485325
      },
      {
       "Company": "MICROSOFT CORP",
-      "Weight": 4.383179
-     },
-     {
-      "Company": "SANDISK CORP",
-      "Weight": 4.3423940000000005
-     },
-     {
-      "Company": "ALPHABET INC-CL A",
-      "Weight": 4.311806
+      "Weight": 4.456461
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 4.144588
+      "Weight": 4.368576
      },
      {
-      "Company": "AMAZON.COM INC",
-      "Weight": 4.078275
+      "Company": "ALPHABET INC-CL A",
+      "Weight": 4.367964
+     },
+     {
+      "Company": "SANDISK CORP",
+      "Weight": 4.236368
      },
      {
       "Company": "SNAP INC - A",
-      "Weight": 3.9962289999999996
+      "Weight": 4.172954
+     },
+     {
+      "Company": "AMAZON.COM INC",
+      "Weight": 4.168409
+     },
+     {
+      "Company": "ROBLOX CORP -CLASS A",
+      "Weight": 3.687986
      }
     ]
    },
@@ -433,19 +433,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 61.332066
+      "Weight": 61.986799999999995
      },
      {
       "Country": "Other",
-      "Weight": 34.018239
+      "Weight": 33.095117
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.9820510000000002
+      "Weight": 3.1923600000000003
      },
      {
       "Country": "Finland",
-      "Weight": 1.6676440000000001
+      "Weight": 1.725723
      }
     ]
    },
@@ -454,27 +454,27 @@
     "rows": [
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 21.399578493195705
+      "Weight": 21.739907410575103
      },
      {
       "Sector": "Media & Entertainment",
-      "Weight": 21.116851629685033
+      "Weight": 21.19548495717694
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 12.484281179154246
+      "Weight": 12.686047140326027
      },
      {
       "Sector": "Software & Services",
-      "Weight": 6.401474821558602
+      "Weight": 6.59898937331829
      },
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 4.0782751680366385
+      "Weight": 4.168408616104483
      },
      {
       "Sector": "Real Estate Management & Devel",
-      "Weight": 0.445819499041474
+      "Weight": 0.4546580157245313
      }
     ]
    }
