@@ -7,7 +7,7 @@
  * control variables. Run with `bun test scripts/update-data.test.ts`.
  */
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test';
-import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -67,6 +67,8 @@ import {
   parsePerformanceFile,
   parseRange,
   parseRanges,
+  publishedAsOf,
+  stalestFirst,
   parseSplitsFile,
   parseSymbolDirectory,
   paymentsPerYear,
@@ -872,6 +874,44 @@ describe('pipeline', () => {
       expect(history()).toBe(3);
       await run({ tickers: ['NOBL'], historyRange: '1y' });
       expect(history()).toBe(2);
+    });
+  });
+
+  test('stalest fund first: a deadline-truncated run refreshes the stalest, the next runs pick up the skipped funds', async () => {
+    mockFeed();
+    await withRepo(async ({ api, run }) => {
+      await run();
+      // published as-of dates: TQQQ stalest, then IGHG, then NOBL (alphabetical order would be IGHG, NOBL, TQQQ)
+      const asOf: Record<string, string> = { TQQQ: 'Sep 01 2026', IGHG: 'Sep 05 2026', NOBL: 'Sep 10 2026' };
+      const index = readIndex(api);
+      for (const row of index.funds) { row.asOfDate = asOf[row.ticker]; row.netAssetsAsOf = asOf[row.ticker]; row.metrics.performanceAsOf = '2026-08-31'; }
+      writeFileSync(path.join(api, 'index.json'), JSON.stringify(index));
+      const published = Object.fromEntries(index.funds.map(row => [row.ticker, row]));
+      expect(stalestFirst([{ ticker: 'IGHG' }, { ticker: 'NOBL' }, { ticker: 'TQQQ' }, { ticker: 'ZNEW' }], published).map(f => f.ticker)).toEqual(['ZNEW', 'TQQQ', 'IGHG', 'NOBL']);
+      expect(publishedAsOf({ ...index.funds[0], dataFile: null })).toBeNull();
+
+      // fake clock: the first fund page of each run "takes" 26 minutes (soft deadline 25), so each run handles exactly one fund
+      let clock = realDateNow();
+      Date.now = () => clock;
+      const summary = path.join(path.dirname(api), 'summary.md');
+      process.env.GITHUB_STEP_SUMMARY = summary;
+      const order: string[] = [];
+      const feed = globalThis.fetch;
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+        const page = /our-etfs\/(?:strategic|leveraged-and-inverse)\/(\w+)$/.exec(String(input));
+        if (page) { order.push(page[1].toUpperCase()); clock += 26 * 60_000; }
+        return feed(input as RequestInfo, init);
+      }) as typeof fetch;
+      const runs: string[][] = [];
+      for (let i = 0; i < 3; i++) {
+        order.length = 0;
+        await run();
+        runs.push([...order]);
+      }
+      expect(runs).toEqual([['TQQQ'], ['IGHG'], ['NOBL']]);
+      expect(readFileSync(summary, 'utf8')).toContain('1 of 3 funds refreshed, 2 keep their published files, oldest remaining published as-of: 2026-09-05 (IGHG)');
+      expect(tickersIn(api)).toEqual(TICKERS);
+      expect(readIndex(api).funds.every(row => row.asOfDate === 'Sep 18 2026')).toBe(true);
     });
   });
 
