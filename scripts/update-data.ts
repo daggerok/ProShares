@@ -2166,6 +2166,36 @@ export function selectBatch<T extends { ticker: string }>(candidates: T[], maxFe
   return ordered.slice(0, maxFetches);
 }
 
+/**
+ * ISO date a published index row is refreshed up to (the latest of its dated fields),
+ * or null when the fund has no published data yet.
+ */
+export function publishedAsOf(row: Record<string, unknown> | null | undefined): string | null {
+  if (!row || row.dataFile === null) return null;
+  const metrics = row.metrics as Record<string, unknown> | undefined;
+  const dates = [row.asOfDate, row.netAssetsAsOf, metrics?.performanceAsOf]
+    .map(value => toIsoDate(value))
+    .filter(value => /^\d{4}-\d{2}-\d{2}$/.test(value));
+  return dates.length ? dates.sort()[dates.length - 1] : null;
+}
+
+/**
+ * Run order of an unbounded run: funds without published data first, then the stalest
+ * published as-of, ties alphabetical. A run cut short by the soft deadline therefore
+ * leaves the freshest funds for last, and the next run starts where this one stopped.
+ */
+export function stalestFirst<T extends { ticker: string }>(funds: T[], published: Record<string, Record<string, unknown>>): T[] {
+  const key = (fund: T): string => publishedAsOf(published[fund.ticker]) ?? '';
+  return [...funds].sort((a, b) => (key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : a.ticker.localeCompare(b.ticker)));
+}
+
+/** One line for the log and the step summary: what a deadline-truncated run left behind. */
+export function deadlineSummary(attempted: number, total: number, remaining: Array<{ ticker: string }>, published: Record<string, Record<string, unknown>>): string {
+  const ordered = stalestFirst(remaining, published);
+  const oldest = ordered.length ? `${publishedAsOf(published[ordered[0].ticker]) ?? 'never published'} (${ordered[0].ticker})` : 'none';
+  return `${attempted} of ${total} funds refreshed, ${remaining.length} keep their published files, oldest remaining published as-of: ${oldest}`;
+}
+
 /** Soft deadline: the run stops taking new funds well before the 30 minute workflow timeout. */
 export const SOFT_DEADLINE_MS = 25 * 60_000;
 
@@ -2398,7 +2428,8 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   const useCursor = config.tickers.length === 0;
   const scope = cursorScope(config);
   const cursor = config.maxFetches > 0 && useCursor ? await readCursor(scope) : null;
-  candidates = selectBatch(candidates, config.maxFetches, cursor);
+  // A bounded run walks the alphabetical cursor; an unbounded run goes stalest first.
+  candidates = config.maxFetches > 0 ? selectBatch(candidates, config.maxFetches, cursor) : stalestFirst(candidates, previousFunds);
   stats.skipped += beforeBatch - candidates.length;
   const newFunds = catalog.map(fund => fund.ticker).filter(ticker => !previousFunds[ticker]);
   if (newFunds.length && !config.offlineSeed) {
@@ -2638,7 +2669,12 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
     }
   }, stopAt);
-  if (completed.length < candidates.length) console.warn(`[ deadline ] soft deadline reached: ${completed.length} of ${candidates.length} funds processed; the rest keep their published files`);
+  if (completed.length < candidates.length) {
+    const doneTickers = new Set(completed);
+    const line = `soft deadline reached: ${deadlineSummary(completed.length, candidates.length, candidates.filter(fund => !doneTickers.has(fund.ticker)), previousFunds)}; the next run starts with them`;
+    console.warn(`[ deadline ] ${line}`);
+    if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `- ${line}\n`, 'utf8');
+  }
 
   // --- index.json -----------------------------------------------------------
   const indexFile = path.join(API_ROOT, 'index.json');
