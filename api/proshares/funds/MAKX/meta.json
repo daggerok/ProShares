@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=MAKX&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/MAKX-psdlyhld.csv, as of Sep 25 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/MAKX-psdlyhld.csv, as of Oct 02 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MAKX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-09-27T03:03:19Z",
+  "catalogReadAt": "2026-10-03T05:19:52Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,26 +42,26 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$68.99",
-  "value": 68.99,
-  "asOfDate": "Sep 25 2026"
+  "display": "$71.21",
+  "value": 71.21,
+  "asOfDate": "Oct 02 2026"
  },
  "marketPrice": {
-  "display": "$68.98",
-  "value": 68.98,
-  "asOfDate": "Sep 25 2026"
+  "display": "$71.15",
+  "value": 71.15,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
-  "display": "-0.01%",
-  "value": -0.0145,
+  "display": "-0.08%",
+  "value": -0.0843,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$5,174,321",
-  "value": 5174318.99,
-  "asOfDate": "Sep 25 2026",
-  "source": "official ProShares NAV history file (Assets Under Management)"
+  "display": "$5.34 M",
+  "value": 5340701.2084,
+  "asOfDate": "Oct 02 2026",
+  "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": 0.14,
@@ -75,7 +75,7 @@
   "distributionYieldText": null,
   "yield12M": 0.14,
   "yield12MText": "0.14%",
-  "indicatedYield": 0.0949,
+  "indicatedYield": 0.0919,
   "indicatedYieldText": "0.09%",
   "secYield": -0.18,
   "secYieldText": "-0.18%",
@@ -283,8 +283,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 25,
-  "asOfDate": "Sep 25 2026",
-  "asOf": "2026-09-25",
+  "asOfDate": "Oct 02 2026",
+  "asOf": "2026-10-02",
   "headers": [
    "Name",
    "Ticker",
@@ -293,7 +293,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/MAKX-psdlyhld.csv, as of Sep 25 2026)",
+  "source": "official ProShares daily holdings download (ByFund/MAKX-psdlyhld.csv, as of Oct 02 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -301,9 +301,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1254,
-  "asOf": "Sep 25 2026",
-  "asOfDate": "Sep 25 2026",
+  "totalRows": 1259,
+  "asOf": "Oct 02 2026",
+  "asOfDate": "Oct 02 2026",
   "headers": [
    "Date",
    "NAV",
@@ -344,43 +344,43 @@
     "rows": [
      {
       "Company": "OUSTER INC",
-      "Weight": 8.690641000000001
+      "Weight": 8.548931999999999
      },
      {
       "Company": "3D SYSTEMS CORP",
-      "Weight": 7.614258
+      "Weight": 7.810992
      },
      {
       "Company": "EMERSON ELECTRIC CO",
-      "Weight": 6.247763
-     },
-     {
-      "Company": "SK TELECOM CO LTD-SPON ADR",
-      "Weight": 5.75151
-     },
-     {
-      "Company": "ROCKWELL AUTOMATION INC",
-      "Weight": 5.5211950000000005
+      "Weight": 6.182427
      },
      {
       "Company": "COGNEX CORP",
-      "Weight": 5.50539
+      "Weight": 5.907639
+     },
+     {
+      "Company": "SK TELECOM CO LTD-SPON ADR",
+      "Weight": 5.64755
+     },
+     {
+      "Company": "ROCKWELL AUTOMATION INC",
+      "Weight": 5.598076
      },
      {
       "Company": "AMBIQ MICRO INC",
-      "Weight": 5.249687
+      "Weight": 4.968808
      },
      {
       "Company": "AUTODESK INC",
-      "Weight": 5.034594
+      "Weight": 4.938313
      },
      {
       "Company": "ZEBRA TECHNOLOGIES CORP-CL A",
-      "Weight": 4.999116
+      "Weight": 4.9195530000000005
      },
      {
       "Company": "ALLIENT INC",
-      "Weight": 4.643473
+      "Weight": 4.587618
      }
     ]
    },
@@ -389,19 +389,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 86.447613
+      "Weight": 86.69024
      },
      {
       "Country": "South Korea",
-      "Weight": 7.776
+      "Weight": 7.62969
      },
      {
       "Country": "Israel",
-      "Weight": 3.312285
+      "Weight": 3.353175
      },
      {
       "Country": "Turkey",
-      "Weight": 2.464102
+      "Weight": 2.326895
      }
     ]
    },
@@ -410,27 +410,27 @@
     "rows": [
      {
       "Sector": "Capital Goods",
-      "Weight": 35.827454192667304
+      "Weight": 35.84501063471854
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 23.950940430226673
+      "Weight": 23.883519052215355
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 22.127454882066036
+      "Weight": 22.2710500748296
      },
      {
       "Sector": "Telecommunication Services",
-      "Weight": 8.21027293751975
+      "Weight": 7.969814241745493
      },
      {
       "Sector": "Software & Services",
-      "Weight": 7.659555060356685
+      "Weight": 7.864624543699004
      },
      {
       "Sector": "Materials",
-      "Weight": 2.007640435890101
+      "Weight": 1.9669544773474605
      }
     ]
    }

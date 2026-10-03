@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=NOBL&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Oct 01 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Oct 02 2026)",
   "historySource": "official ProShares NAV history file (ByFund/NOBL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-02T03:19:59Z",
+  "catalogReadAt": "2026-10-03T05:19:52Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,26 +42,26 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$54.21",
-  "value": 54.21,
-  "asOfDate": "Oct 01 2026"
+  "display": "$54.30",
+  "value": 54.3,
+  "asOfDate": "Oct 02 2026"
  },
  "marketPrice": {
-  "display": "$54.23",
-  "value": 54.23,
-  "asOfDate": "Oct 01 2026"
+  "display": "$54.30",
+  "value": 54.3,
+  "asOfDate": "Oct 02 2026"
  },
  "premiumDiscount": {
-  "display": "0.04%",
-  "value": 0.0369,
+  "display": "0.00%",
+  "value": 0,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$10,962,053,696",
-  "value": 10970182773.4278,
-  "asOfDate": "Oct 01 2026",
-  "source": "official ProShares NAV history file (Assets Under Management)"
+  "display": "$10.99 B",
+  "value": 10992609963.5958,
+  "asOfDate": "Oct 02 2026",
+  "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": 2.01,
@@ -75,7 +75,7 @@
   "distributionYieldText": null,
   "yield12M": 2.01,
   "yield12MText": "2.01%",
-  "indicatedYield": 2.0847,
+  "indicatedYield": 2.0813,
   "indicatedYieldText": "2.08%",
   "secYield": 2.09,
   "secYieldText": "2.09%",
@@ -571,8 +571,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 70,
-  "asOfDate": "Oct 01 2026",
-  "asOf": "2026-10-01",
+  "asOfDate": "Oct 02 2026",
+  "asOf": "2026-10-02",
   "headers": [
    "Name",
    "Ticker",
@@ -581,7 +581,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Oct 01 2026)",
+  "source": "official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Oct 02 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -589,9 +589,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3264,
-  "asOf": "Oct 01 2026",
-  "asOfDate": "Oct 01 2026",
+  "totalRows": 3265,
+  "asOf": "Oct 02 2026",
+  "asOfDate": "Oct 02 2026",
   "headers": [
    "Date",
    "NAV",
@@ -642,23 +642,23 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 92.663441
+      "Weight": 92.650937
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.890509
-     },
-     {
-      "Country": "Ireland",
-      "Weight": 1.5890399999999998
+      "Weight": 2.904541
      },
      {
       "Country": "Other",
-      "Weight": 1.5890140000000001
+      "Weight": 1.5954110000000001
+     },
+     {
+      "Country": "Ireland",
+      "Weight": 1.584835
      },
      {
       "Country": "United Kingdom",
-      "Weight": 1.2679960000000001
+      "Weight": 1.264276
      }
     ]
    },
@@ -667,11 +667,11 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 98.41098602058752
+      "Weight": 98.40458879180179
      },
      {
       "Currency": "Other",
-      "Weight": 1.5890139794124785
+      "Weight": 1.5954112081982152
      }
     ]
    },
@@ -680,43 +680,43 @@
     "rows": [
      {
       "Sector": "Consumer Staples",
-      "Weight": 22.796885049565756
+      "Weight": 22.535253128612734
      },
      {
       "Sector": "Industrials",
-      "Weight": 21.712749235416638
+      "Weight": 22.082682276490907
      },
      {
       "Sector": "Financials",
-      "Weight": 12.974392277525121
+      "Weight": 12.934428536683578
      },
      {
       "Sector": "Materials",
-      "Weight": 11.517277232315939
+      "Weight": 11.507447904256125
      },
      {
       "Sector": "Health Care",
-      "Weight": 11.007923190962963
+      "Weight": 10.900365295852302
      },
      {
       "Sector": "Utilities",
-      "Weight": 5.263164183145775
+      "Weight": 5.289728816532653
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 4.2479543538699165
+      "Weight": 4.2299171961019315
      },
      {
       "Sector": "Real Estate",
-      "Weight": 3.929291014382725
+      "Weight": 3.9010259596530825
      },
      {
       "Sector": "Information Technology",
-      "Weight": 3.1702717402540936
+      "Weight": 3.199540576470211
      },
      {
       "Sector": "Energy",
-      "Weight": 1.592565315586799
+      "Weight": 1.605636905477325
      }
     ]
    }

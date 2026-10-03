@@ -2,1096 +2,943 @@
  "ticker": "TOLZ",
  "page": 1,
  "pageSize": 250,
- "totalRows": 120,
+ "totalRows": 116,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held",
-  "Exposure Value"
+  "Shares Held"
  ],
  "rows": [
-  {
-   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "EUR/USD",
-   "Weight": "-0.0302734349",
-   "Market Value": "—",
-   "Shares Held": "-42500",
-   "Exposure Value": "-48433"
-  },
-  {
-   "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "GBP/USD",
-   "Weight": "-0.0126296035",
-   "Market Value": "—",
-   "Shares Held": "-15250",
-   "Exposure Value": "-20205.49"
-  },
-  {
-   "Name": "AUSTRALIA DOLLAR CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "AUD/USD",
-   "Weight": "-0.0048531255",
-   "Market Value": "—",
-   "Shares Held": "-11050",
-   "Exposure Value": "-7764.28"
-  },
-  {
-   "Name": "JAPAN YEN CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "JPY/USD",
-   "Weight": "-0.0000874644",
-   "Market Value": "—",
-   "Shares Held": "-22000",
-   "Exposure Value": "-139.93"
-  },
   {
    "Name": "ENBRIDGE INC",
    "Ticker": "ENB",
    "Identifier": "2466149",
-   "Weight": "5.8626300385",
-   "Market Value": "9379337.42",
-   "Shares Held": "200614",
-   "Exposure Value": "—"
+   "Weight": "5.7968883729",
+   "Market Value": "9225217.72",
+   "Shares Held": "200614"
   },
   {
    "Name": "NATIONAL GRID PLC",
    "Ticker": "NG/",
    "Identifier": "BDR05C0",
-   "Weight": "5.3169398517",
-   "Market Value": "8506314.16",
-   "Shares Held": "569663",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "VINCI SA",
-   "Ticker": "DG",
-   "Identifier": "B1XH026",
-   "Weight": "4.4217271421",
-   "Market Value": "7074106.77",
-   "Shares Held": "55773",
-   "Exposure Value": "—"
+   "Weight": "5.4366067657",
+   "Market Value": "8651862.49",
+   "Shares Held": "569663"
   },
   {
    "Name": "WILLIAMS COS INC",
    "Ticker": "WMB",
    "Identifier": "2967181",
-   "Weight": "4.2192346537",
-   "Market Value": "6750148.86",
-   "Shares Held": "97461",
-   "Exposure Value": "—"
+   "Weight": "4.3200087998",
+   "Market Value": "6874898.94",
+   "Shares Held": "97461"
+  },
+  {
+   "Name": "VINCI SA",
+   "Ticker": "DG",
+   "Identifier": "B1XH026",
+   "Weight": "4.2139958466",
+   "Market Value": "6706189.02",
+   "Shares Held": "55773"
   },
   {
    "Name": "AMERICAN TOWER CORP",
    "Ticker": "AMT",
    "Identifier": "B7FBFL2",
-   "Weight": "3.9225995897",
-   "Market Value": "6275576.81",
-   "Shares Held": "37127",
-   "Exposure Value": "—"
+   "Weight": "3.7840687735",
+   "Market Value": "6021999.4",
+   "Shares Held": "37127"
   },
   {
    "Name": "TC ENERGY CORP",
    "Ticker": "TRP",
    "Identifier": "BJMY6G0",
-   "Weight": "3.4550920658",
-   "Market Value": "5527634.2",
-   "Shares Held": "94007",
-   "Exposure Value": "—"
+   "Weight": "3.4943511583",
+   "Market Value": "5560940.31",
+   "Shares Held": "94007"
   },
   {
    "Name": "ENERGY TRANSFER LP",
    "Ticker": "ET",
    "Identifier": "B0WHXD2",
-   "Weight": "3.1161614574",
-   "Market Value": "4985395.56",
-   "Shares Held": "246924",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "E.ON SE",
-   "Ticker": "EOAN",
-   "Identifier": "4942904",
-   "Weight": "3.0778541643",
-   "Market Value": "4924109.58",
-   "Shares Held": "251435",
-   "Exposure Value": "—"
+   "Weight": "3.1761386980",
+   "Market Value": "5054534.28",
+   "Shares Held": "246924"
   },
   {
    "Name": "KINDER MORGAN INC",
    "Ticker": "KMI",
    "Identifier": "B3NQ4P8",
-   "Weight": "3.0010749566",
-   "Market Value": "4801274.25",
-   "Shares Held": "156139",
-   "Exposure Value": "—"
+   "Weight": "3.0483930289",
+   "Market Value": "4851238.73",
+   "Shares Held": "156139"
+  },
+  {
+   "Name": "E.ON SE",
+   "Ticker": "EOAN",
+   "Identifier": "4942904",
+   "Weight": "3.0274998648",
+   "Market Value": "4817989.17",
+   "Shares Held": "251435"
   },
   {
    "Name": "TARGA RESOURCES CORP",
    "Ticker": "TRGP",
    "Identifier": "B55PZY3",
-   "Weight": "2.9672593117",
-   "Market Value": "4747174.24",
-   "Shares Held": "17086",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ONEOK INC",
-   "Ticker": "OKE",
-   "Identifier": "BWJJFW8",
-   "Weight": "2.7825755450",
-   "Market Value": "4451707.64",
-   "Shares Held": "50228",
-   "Exposure Value": "—"
+   "Weight": "3.0248735562",
+   "Market Value": "4813809.64",
+   "Shares Held": "17086"
   },
   {
    "Name": "CHENIERE ENERGY INC",
    "Ticker": "LNG",
    "Identifier": "2654364",
-   "Weight": "2.7623581309",
-   "Market Value": "4419362.78",
-   "Shares Held": "16457",
-   "Exposure Value": "—"
+   "Weight": "2.7915943709",
+   "Market Value": "4442567.15",
+   "Shares Held": "16457"
+  },
+  {
+   "Name": "ONEOK INC",
+   "Ticker": "OKE",
+   "Identifier": "BWJJFW8",
+   "Weight": "2.7736665358",
+   "Market Value": "4414036.64",
+   "Shares Held": "50228"
   },
   {
    "Name": "ENTERPRISE PRODUCTS PARTNERS",
    "Ticker": "EPD",
    "Identifier": "2285388",
-   "Weight": "2.6481751703",
-   "Market Value": "4236687",
-   "Shares Held": "115284",
-   "Exposure Value": "—"
+   "Weight": "2.6209329590",
+   "Market Value": "4170975.12",
+   "Shares Held": "115284"
   },
   {
    "Name": "SEMPRA",
    "Ticker": "SRE",
    "Identifier": "2138158",
-   "Weight": "2.5379286001",
-   "Market Value": "4060308.86",
-   "Shares Held": "52102",
-   "Exposure Value": "—"
+   "Weight": "2.5661259392",
+   "Market Value": "4083754.76",
+   "Shares Held": "52102"
   },
   {
    "Name": "EXELON CORP",
    "Ticker": "EXC",
    "Identifier": "2670519",
-   "Weight": "2.0738954050",
-   "Market Value": "3317924.66",
-   "Shares Held": "82249",
-   "Exposure Value": "—"
+   "Weight": "2.1050545254",
+   "Market Value": "3350001.77",
+   "Shares Held": "82249"
   },
   {
    "Name": "TRANSURBAN GROUP",
    "Ticker": "TCL",
    "Identifier": "6200882",
-   "Weight": "2.0188722917",
-   "Market Value": "3229895.85",
-   "Shares Held": "353595",
-   "Exposure Value": "—"
+   "Weight": "2.0272399630",
+   "Market Value": "3226167.01",
+   "Shares Held": "353595"
   },
   {
    "Name": "FORTIS INC",
    "Ticker": "FTS",
    "Identifier": "2347200",
-   "Weight": "1.9213488398",
-   "Market Value": "3073872.81",
-   "Shares Held": "57894",
-   "Exposure Value": "—"
+   "Weight": "1.9222659260",
+   "Market Value": "3059110.43",
+   "Shares Held": "57894"
   },
   {
    "Name": "CONSOLIDATED EDISON INC",
    "Ticker": "ED",
    "Identifier": "2216850",
-   "Weight": "1.8990205111",
-   "Market Value": "3038150.8",
-   "Shares Held": "29468",
-   "Exposure Value": "—"
+   "Weight": "1.9144653458",
+   "Market Value": "3046696.52",
+   "Shares Held": "29468"
   },
   {
    "Name": "FERROVIAL NV",
    "Ticker": "FER",
    "Identifier": "BRS7CF0",
-   "Weight": "1.8588703908",
-   "Market Value": "2973916.57",
-   "Shares Held": "53740",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "AENA SME SA",
-   "Ticker": "AENA",
-   "Identifier": "BTMKJR0",
-   "Weight": "1.5355033206",
-   "Market Value": "2456577.28",
-   "Shares Held": "83294",
-   "Exposure Value": "—"
+   "Weight": "1.8047445516",
+   "Market Value": "2872085.91",
+   "Shares Held": "53740"
   },
   {
    "Name": "PEMBINA PIPELINE CORP",
    "Ticker": "PPL",
    "Identifier": "B4PT2P8",
-   "Weight": "1.4651923758",
-   "Market Value": "2344090.21",
-   "Shares Held": "52462",
-   "Exposure Value": "—"
+   "Weight": "1.5140775070",
+   "Market Value": "2409515.89",
+   "Shares Held": "52462"
+  },
+  {
+   "Name": "AENA SME SA",
+   "Ticker": "AENA",
+   "Identifier": "BTMKJR0",
+   "Weight": "1.5085250610",
+   "Market Value": "2400679.68",
+   "Shares Held": "83294"
   },
   {
    "Name": "CROWN CASTLE INC",
    "Ticker": "CCI",
    "Identifier": "BTGQCX1",
-   "Weight": "1.4374934236",
-   "Market Value": "2299776",
-   "Shares Held": "33900",
-   "Exposure Value": "—"
+   "Weight": "1.4152971592",
+   "Market Value": "2252316",
+   "Shares Held": "33900"
   },
   {
    "Name": "P G & E CORP",
    "Ticker": "PCG",
    "Identifier": "2689560",
-   "Weight": "1.3568086722",
-   "Market Value": "2170692.38",
-   "Shares Held": "175907",
-   "Exposure Value": "—"
+   "Weight": "1.3617962779",
+   "Market Value": "2167174.24",
+   "Shares Held": "175907"
   },
   {
    "Name": "ATMOS ENERGY CORP",
    "Ticker": "ATO",
    "Identifier": "2315359",
-   "Weight": "1.3260911774",
-   "Market Value": "2121548.95",
-   "Shares Held": "13495",
-   "Exposure Value": "—"
+   "Weight": "1.3327873286",
+   "Market Value": "2121009.15",
+   "Shares Held": "13495"
   },
   {
    "Name": "AMERICAN WATER WORKS CO INC",
    "Ticker": "AWK",
    "Identifier": "B2R3PV1",
-   "Weight": "1.2986659194",
-   "Market Value": "2077672.61",
-   "Shares Held": "15871",
-   "Exposure Value": "—"
+   "Weight": "1.2989736357",
+   "Market Value": "2067197.75",
+   "Shares Held": "15871"
   },
   {
    "Name": "CENTERPOINT ENERGY INC",
    "Ticker": "CNP",
    "Identifier": "2440637",
-   "Weight": "1.2115498023",
-   "Market Value": "1938299.76",
-   "Shares Held": "52614",
-   "Exposure Value": "—"
+   "Weight": "1.2493856841",
+   "Market Value": "1988283.06",
+   "Shares Held": "52614"
   },
   {
    "Name": "EVERSOURCE ENERGY",
    "Ticker": "ES",
    "Identifier": "BVVN4Q8",
-   "Weight": "1.1972663015",
-   "Market Value": "1915448.28",
-   "Shares Held": "30084",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CELLNEX TELECOM SA",
-   "Ticker": "CLNX",
-   "Identifier": "BX90C05",
-   "Weight": "1.0730529849",
-   "Market Value": "1716725.42",
-   "Shares Held": "62794",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "TERNA-RETE ELETTRICA NAZIONA",
-   "Ticker": "TRN",
-   "Identifier": "B01BN57",
-   "Weight": "1.0444617062",
-   "Market Value": "1670983.62",
-   "Shares Held": "159831",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "MPLX LP",
-   "Ticker": "MPLX",
-   "Identifier": "B847R56",
-   "Weight": "1.0350630713",
-   "Market Value": "1655947.2",
-   "Shares Held": "29154",
-   "Exposure Value": "—"
+   "Weight": "1.2193085176",
+   "Market Value": "1940418",
+   "Shares Held": "30084"
   },
   {
    "Name": "EDISON INTERNATIONAL",
    "Ticker": "EIX",
    "Identifier": "2829515",
-   "Weight": "1.0114674750",
-   "Market Value": "1618197.75",
-   "Shares Held": "30735",
-   "Exposure Value": "—"
+   "Weight": "1.0407818596",
+   "Market Value": "1656309.15",
+   "Shares Held": "30735"
+  },
+  {
+   "Name": "TERNA-RETE ELETTRICA NAZIONA",
+   "Ticker": "TRN",
+   "Identifier": "B01BN57",
+   "Weight": "1.0350724960",
+   "Market Value": "1647223.22",
+   "Shares Held": "159831"
+  },
+  {
+   "Name": "MPLX LP",
+   "Ticker": "MPLX",
+   "Identifier": "B847R56",
+   "Weight": "1.0328601791",
+   "Market Value": "1643702.52",
+   "Shares Held": "29154"
+  },
+  {
+   "Name": "CELLNEX TELECOM SA",
+   "Ticker": "CLNX",
+   "Identifier": "BX90C05",
+   "Weight": "1.0053135758",
+   "Market Value": "1599864.62",
+   "Shares Held": "62794"
   },
   {
    "Name": "UNITED UTILITIES GROUP PLC",
    "Ticker": "UU/",
    "Identifier": "B39J2M4",
-   "Weight": "0.9798134120",
-   "Market Value": "1567555.95",
-   "Shares Held": "84387",
-   "Exposure Value": "—"
+   "Weight": "0.9953624354",
+   "Market Value": "1584028.29",
+   "Shares Held": "84387"
   },
   {
    "Name": "NATURGY ENERGY GROUP SA",
    "Ticker": "NTGY",
    "Identifier": "5650422",
-   "Weight": "0.9633523404",
-   "Market Value": "1541220.68",
-   "Shares Held": "46475",
-   "Exposure Value": "—"
+   "Weight": "0.9679569649",
+   "Market Value": "1540414.99",
+   "Shares Held": "46475"
   },
   {
    "Name": "NISOURCE INC",
    "Ticker": "NI",
    "Identifier": "2645409",
-   "Weight": "0.9437777610",
-   "Market Value": "1509904.26",
-   "Shares Held": "38303",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SBA COMMUNICATIONS CORP",
-   "Ticker": "SBAC",
-   "Identifier": "BZ6TS23",
-   "Weight": "0.8800536213",
-   "Market Value": "1407955.1",
-   "Shares Held": "8474",
-   "Exposure Value": "—"
+   "Weight": "0.9490254969",
+   "Market Value": "1510287.29",
+   "Shares Held": "38303"
   },
   {
    "Name": "CIA SANEAMENTO BASICO DE-ADR",
    "Ticker": "SBS",
    "Identifier": "2945927",
-   "Weight": "0.8685464658",
-   "Market Value": "1389545.36",
-   "Shares Held": "268252",
-   "Exposure Value": "—"
+   "Weight": "0.9068669136",
+   "Market Value": "1443195.76",
+   "Shares Held": "268252"
+  },
+  {
+   "Name": "SBA COMMUNICATIONS CORP",
+   "Ticker": "SBAC",
+   "Identifier": "BZ6TS23",
+   "Weight": "0.8439342996",
+   "Market Value": "1343044.26",
+   "Shares Held": "8474"
   },
   {
    "Name": "HYDRO ONE LTD",
    "Ticker": "H",
    "Identifier": "BYYXJY9",
-   "Weight": "0.8114929265",
-   "Market Value": "1298268.17",
-   "Shares Held": "36127",
-   "Exposure Value": "—"
+   "Weight": "0.8096163553",
+   "Market Value": "1288430.39",
+   "Shares Held": "36127"
   },
   {
    "Name": "SEVERN TRENT PLC",
    "Ticker": "SVT",
    "Identifier": "B1FH8J7",
-   "Weight": "0.7656770928",
-   "Market Value": "1224969.64",
-   "Shares Held": "30194",
-   "Exposure Value": "—"
+   "Weight": "0.7836688951",
+   "Market Value": "1247137.38",
+   "Shares Held": "30194"
   },
   {
    "Name": "SNAM SPA",
    "Ticker": "SRG",
    "Identifier": "7251470",
-   "Weight": "0.7379822597",
-   "Market Value": "1180662.02",
-   "Shares Held": "185403",
-   "Exposure Value": "—"
+   "Weight": "0.7363563052",
+   "Market Value": "1171843.72",
+   "Shares Held": "185403"
   },
   {
    "Name": "TOKYO GAS CO LTD",
    "Ticker": "9531",
    "Identifier": "6895448",
-   "Weight": "0.6731977466",
-   "Market Value": "1077016.42",
-   "Shares Held": "27197",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "GRUPO AEROPORTUARIO PAC-ADR",
-   "Ticker": "PAC",
-   "Identifier": "B0YFC60",
-   "Weight": "0.6256092546",
-   "Market Value": "1000881.9",
-   "Shares Held": "4635",
-   "Exposure Value": "—"
+   "Weight": "0.6683935876",
+   "Market Value": "1063687.27",
+   "Shares Held": "27197"
   },
   {
    "Name": "DT MIDSTREAM INC",
    "Ticker": "DTM",
    "Identifier": "BN7L880",
-   "Weight": "0.6227687034",
-   "Market Value": "996337.44",
-   "Shares Held": "8148",
-   "Exposure Value": "—"
+   "Weight": "0.6195191046",
+   "Market Value": "985908",
+   "Shares Held": "8148"
   },
   {
    "Name": "KEYERA CORP",
    "Ticker": "KEY",
    "Identifier": "B3SGMV5",
-   "Weight": "0.6094460231",
-   "Market Value": "975023.13",
-   "Shares Held": "26491",
-   "Exposure Value": "—"
+   "Weight": "0.6122413129",
+   "Market Value": "974326.06",
+   "Shares Held": "26491"
+  },
+  {
+   "Name": "GRUPO AEROPORTUARIO PAC-ADR",
+   "Ticker": "PAC",
+   "Identifier": "B0YFC60",
+   "Weight": "0.5851241028",
+   "Market Value": "931171.5",
+   "Shares Held": "4635"
   },
   {
    "Name": "WESTERN MIDSTREAM PARTNERS L",
    "Ticker": "WES",
    "Identifier": "BJ552C8",
-   "Weight": "0.5925414979",
-   "Market Value": "947978.4",
-   "Shares Held": "20789",
-   "Exposure Value": "—"
+   "Weight": "0.5847119773",
+   "Market Value": "930515.64",
+   "Shares Held": "20789"
   },
   {
    "Name": "AUCKLAND INTL AIRPORT LTD",
    "Ticker": "AIA",
    "Identifier": "BKX3XG2",
-   "Weight": "0.5848013294",
-   "Market Value": "935595.28",
-   "Shares Held": "193111",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PLAINS ALL AMER PIPELINE LP",
-   "Ticker": "PAA",
-   "Identifier": "2311960",
-   "Weight": "0.5677413835",
-   "Market Value": "908301.9",
-   "Shares Held": "37195",
-   "Exposure Value": "—"
+   "Weight": "0.5685052214",
+   "Market Value": "904724.07",
+   "Shares Held": "193111"
   },
   {
    "Name": "ESSENTIAL UTILITIES INC",
    "Ticker": "WTRG",
    "Identifier": "BLCF3J9",
-   "Weight": "0.5600438440",
-   "Market Value": "895986.98",
-   "Shares Held": "22666",
-   "Exposure Value": "—"
+   "Weight": "0.5608786506",
+   "Market Value": "892587.08",
+   "Shares Held": "22666"
   },
   {
    "Name": "APA GROUP",
    "Ticker": "APA",
    "Identifier": "6247306",
-   "Weight": "0.5588951374",
-   "Market Value": "894149.22",
-   "Shares Held": "119712",
-   "Exposure Value": "—"
+   "Weight": "0.5585968166",
+   "Market Value": "888955.75",
+   "Shares Held": "119712"
+  },
+  {
+   "Name": "PLAINS ALL AMER PIPELINE LP",
+   "Ticker": "PAA",
+   "Identifier": "2311960",
+   "Weight": "0.5550939449",
+   "Market Value": "883381.25",
+   "Shares Held": "37195"
   },
   {
    "Name": "HONG KONG & CHINA GAS",
    "Ticker": "3",
    "Identifier": "6436557",
-   "Weight": "0.5517785269",
-   "Market Value": "882763.7",
-   "Shares Held": "978751",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "REDEIA CORP SA",
-   "Ticker": "RED",
-   "Identifier": "BD6FXN3",
-   "Weight": "0.4912424268",
-   "Market Value": "785914.93",
-   "Shares Held": "46099",
-   "Exposure Value": "—"
+   "Weight": "0.5521355845",
+   "Market Value": "878673.29",
+   "Shares Held": "978751"
   },
   {
    "Name": "ELIA GROUP SA/NV",
    "Ticker": "ELI",
    "Identifier": "B09M9F4",
-   "Weight": "0.4911080519",
-   "Market Value": "785699.95",
-   "Shares Held": "5828",
-   "Exposure Value": "—"
+   "Weight": "0.4861073544",
+   "Market Value": "773595.4",
+   "Shares Held": "5828"
   },
   {
-   "Name": "GETLINK SE",
-   "Ticker": "GET",
-   "Identifier": "B292JQ9",
-   "Weight": "0.4598080529",
-   "Market Value": "735624.6",
-   "Shares Held": "34281",
-   "Exposure Value": "—"
+   "Name": "REDEIA CORP SA",
+   "Ticker": "RED",
+   "Identifier": "BD6FXN3",
+   "Weight": "0.4826719575",
+   "Market Value": "768128.28",
+   "Shares Held": "46099"
   },
   {
    "Name": "BROOKFIELD INFRASTRUCTURE PA",
    "Ticker": "BIP",
    "Identifier": "B2NHY98",
-   "Weight": "0.4396244546",
-   "Market Value": "703333.84",
-   "Shares Held": "20234",
-   "Exposure Value": "—"
+   "Weight": "0.4643343659",
+   "Market Value": "738945.68",
+   "Shares Held": "20234"
+  },
+  {
+   "Name": "GETLINK SE",
+   "Ticker": "GET",
+   "Identifier": "B292JQ9",
+   "Weight": "0.4469692651",
+   "Market Value": "711310.71",
+   "Shares Held": "34281"
   },
   {
    "Name": "SOUTH BOW CORP",
    "Ticker": "SOBO",
    "Identifier": "BMZMBC3",
-   "Weight": "0.3998256481",
-   "Market Value": "639661.66",
-   "Shares Held": "18818",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ADP",
-   "Ticker": "ADP",
-   "Identifier": "B164FY1",
-   "Weight": "0.3574496274",
-   "Market Value": "571866.32",
-   "Shares Held": "4529",
-   "Exposure Value": "—"
+   "Weight": "0.3998966513",
+   "Market Value": "636398.95",
+   "Shares Held": "18818"
   },
   {
    "Name": "CHINA TOWER CORP LTD-H",
    "Ticker": "788",
    "Identifier": "BTVMCY5",
-   "Weight": "0.3496426277",
-   "Market Value": "559376.28",
-   "Shares Held": "494413",
-   "Exposure Value": "—"
+   "Weight": "0.3507648994",
+   "Market Value": "558210.26",
+   "Shares Held": "494413"
+  },
+  {
+   "Name": "ADP",
+   "Ticker": "ADP",
+   "Identifier": "B164FY1",
+   "Weight": "0.3444368638",
+   "Market Value": "548139.77",
+   "Shares Held": "4529"
   },
   {
    "Name": "ANTERO MIDSTREAM CORP",
    "Ticker": "AM",
    "Identifier": "BJBT0Q4",
-   "Weight": "0.3472216843",
-   "Market Value": "555503.13",
-   "Shares Held": "26541",
-   "Exposure Value": "—"
+   "Weight": "0.3395575322",
+   "Market Value": "540374.76",
+   "Shares Held": "26541"
   },
   {
    "Name": "ITALGAS SPA",
    "Ticker": "IG",
    "Identifier": "BD2Z8S7",
-   "Weight": "0.3438565032",
-   "Market Value": "550119.34",
-   "Shares Held": "57812",
-   "Exposure Value": "—"
+   "Weight": "0.3376653720",
+   "Market Value": "537363.56",
+   "Shares Held": "57812"
   },
   {
    "Name": "FLUGHAFEN ZURICH AG-REG",
    "Ticker": "FHZN",
    "Identifier": "BYQ8481",
-   "Weight": "0.3317864391",
-   "Market Value": "530809.03",
-   "Shares Held": "2179",
-   "Exposure Value": "—"
+   "Weight": "0.3234447182",
+   "Market Value": "514732.69",
+   "Shares Held": "2179"
   },
   {
    "Name": "SOUTHWEST GAS HOLDINGS INC",
    "Ticker": "SWX",
    "Identifier": "2831888",
-   "Weight": "0.3001609850",
-   "Market Value": "480213",
-   "Shares Held": "5825",
-   "Exposure Value": "—"
+   "Weight": "0.3026685071",
+   "Market Value": "481669.25",
+   "Shares Held": "5825"
   },
   {
    "Name": "GRUPO AEROPORTUARIO SUR-ADR",
    "Ticker": "ASR",
    "Identifier": "2639361",
-   "Weight": "0.2984159668",
-   "Market Value": "477421.23",
-   "Shares Held": "1963",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PLAINS GP HOLDINGS LP",
-   "Ticker": "PAGP",
-   "Identifier": "BDGHN95",
-   "Weight": "0.2626513910",
-   "Market Value": "420203.22",
-   "Shares Held": "15809",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "GRUPO AEROPORTUARIO CEN-ADR",
-   "Ticker": "OMAB",
-   "Identifier": "B1JB4F3",
-   "Weight": "0.2599816994",
-   "Market Value": "415932.11",
-   "Shares Held": "4037",
-   "Exposure Value": "—"
+   "Weight": "0.2891443746",
+   "Market Value": "460146.83",
+   "Shares Held": "1963"
   },
   {
    "Name": "NEW JERSEY RESOURCES CORP",
    "Ticker": "NJR",
    "Identifier": "2630513",
-   "Weight": "0.2563634449",
-   "Market Value": "410143.44",
-   "Shares Held": "8104",
-   "Exposure Value": "—"
+   "Weight": "0.2627140341",
+   "Market Value": "418085.36",
+   "Shares Held": "8104"
   },
   {
-   "Name": "ENN ENERGY HOLDINGS LTD",
-   "Ticker": "2688",
-   "Identifier": "6333937",
-   "Weight": "0.2545213239",
-   "Market Value": "407196.32",
-   "Shares Held": "65508",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ENAGAS SA",
-   "Ticker": "ENG",
-   "Identifier": "7383072",
-   "Weight": "0.2541175614",
-   "Market Value": "406550.36",
-   "Shares Held": "21465",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "HESS MIDSTREAM LP - CLASS A",
-   "Ticker": "HESM",
-   "Identifier": "BKPK695",
-   "Weight": "0.2451335338",
-   "Market Value": "392177.25",
-   "Shares Held": "10253",
-   "Exposure Value": "—"
+   "Name": "PLAINS GP HOLDINGS LP",
+   "Ticker": "PAGP",
+   "Identifier": "BDGHN95",
+   "Weight": "0.2588791797",
+   "Market Value": "411982.54",
+   "Shares Held": "15809"
   },
   {
    "Name": "BROOKFIELD INFRASTRUCTURE-A",
    "Ticker": "BIPC",
    "Identifier": "BSPS5M1",
-   "Weight": "0.2431256662",
-   "Market Value": "388964.96",
-   "Shares Held": "11126",
-   "Exposure Value": "—"
+   "Weight": "0.2562308089",
+   "Market Value": "407767.9",
+   "Shares Held": "11126"
+  },
+  {
+   "Name": "ENN ENERGY HOLDINGS LTD",
+   "Ticker": "2688",
+   "Identifier": "6333937",
+   "Weight": "0.2550361942",
+   "Market Value": "405866.78",
+   "Shares Held": "65508"
+  },
+  {
+   "Name": "ENAGAS SA",
+   "Ticker": "ENG",
+   "Identifier": "7383072",
+   "Weight": "0.2531426578",
+   "Market Value": "402853.39",
+   "Shares Held": "21465"
+  },
+  {
+   "Name": "HESS MIDSTREAM LP - CLASS A",
+   "Ticker": "HESM",
+   "Identifier": "BKPK695",
+   "Weight": "0.2432126873",
+   "Market Value": "387050.75",
+   "Shares Held": "10253"
   },
   {
    "Name": "3I INFRASTRUCTURE PLC",
    "Ticker": "3IN",
    "Identifier": "BF5FX16",
-   "Weight": "0.2418975397",
-   "Market Value": "387000.14",
-   "Shares Held": "74894",
-   "Exposure Value": "—"
+   "Weight": "0.2415764450",
+   "Market Value": "384446.82",
+   "Shares Held": "74894"
+  },
+  {
+   "Name": "GRUPO AEROPORTUARIO CEN-ADR",
+   "Ticker": "OMAB",
+   "Identifier": "B1JB4F3",
+   "Weight": "0.2389361487",
+   "Market Value": "380245.03",
+   "Shares Held": "4037"
   },
   {
    "Name": "HICL INFRASTRUCTURE PLC",
    "Ticker": "HICL",
    "Identifier": "BJLP1Y7",
-   "Weight": "0.2354196947",
-   "Market Value": "376636.55",
-   "Shares Held": "212773",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "JAPAN AIRPORT TERMINAL CO",
-   "Ticker": "9706",
-   "Identifier": "6472175",
-   "Weight": "0.2348916269",
-   "Market Value": "375791.72",
-   "Shares Held": "10655",
-   "Exposure Value": "—"
+   "Weight": "0.2323732897",
+   "Market Value": "369800.84",
+   "Shares Held": "212773"
   },
   {
    "Name": "SPIRE INC",
    "Ticker": "SR",
    "Identifier": "BYXJQG9",
-   "Weight": "0.2279354250",
-   "Market Value": "364662.83",
-   "Shares Held": "4723",
-   "Exposure Value": "—"
+   "Weight": "0.2301240747",
+   "Market Value": "366221.42",
+   "Shares Held": "4723"
   },
   {
    "Name": "ONE GAS INC",
    "Ticker": "OGS",
    "Identifier": "BJ0KXV4",
-   "Weight": "0.2253831694",
-   "Market Value": "360579.6",
-   "Shares Held": "5022",
-   "Exposure Value": "—"
+   "Weight": "0.2290087860",
+   "Market Value": "364446.54",
+   "Shares Held": "5022"
+  },
+  {
+   "Name": "JAPAN AIRPORT TERMINAL CO",
+   "Ticker": "9706",
+   "Identifier": "6472175",
+   "Weight": "0.2263943850",
+   "Market Value": "360285.96",
+   "Shares Held": "10655"
   },
   {
    "Name": "GIBSON ENERGY INC",
    "Ticker": "GEI",
    "Identifier": "B44WH97",
-   "Weight": "0.2120943734",
-   "Market Value": "339319.5",
-   "Shares Held": "15598",
-   "Exposure Value": "—"
+   "Weight": "0.2162802317",
+   "Market Value": "344190.21",
+   "Shares Held": "15598"
   },
   {
    "Name": "NORTHWESTERN ENERGY GROUP IN",
    "Ticker": "NWE",
    "Identifier": "B03PGL4",
-   "Weight": "0.2114014466",
-   "Market Value": "338210.92",
-   "Shares Held": "4913",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "KUNLUN ENERGY CO LTD",
-   "Ticker": "135",
-   "Identifier": "6340078",
-   "Weight": "0.2075970560",
-   "Market Value": "332124.46",
-   "Shares Held": "343705",
-   "Exposure Value": "—"
+   "Weight": "0.2138504974",
+   "Market Value": "340323.51",
+   "Shares Held": "4913"
   },
   {
    "Name": "PENNON GROUP PLC",
    "Ticker": "PNN",
    "Identifier": "BNNTLN4",
-   "Weight": "0.2002619939",
-   "Market Value": "320389.45",
-   "Shares Held": "53976",
-   "Exposure Value": "—"
+   "Weight": "0.2061389013",
+   "Market Value": "328051.21",
+   "Shares Held": "53976"
+  },
+  {
+   "Name": "KUNLUN ENERGY CO LTD",
+   "Ticker": "135",
+   "Identifier": "6340078",
+   "Weight": "0.2029547284",
+   "Market Value": "322983.89",
+   "Shares Held": "343705"
   },
   {
    "Name": "HELIOS TOWERS PLC",
    "Ticker": "HTWS",
    "Identifier": "BJVQC70",
-   "Weight": "0.1958554287",
-   "Market Value": "313339.6",
-   "Shares Held": "111658",
-   "Exposure Value": "—"
+   "Weight": "0.1992739262",
+   "Market Value": "317126.23",
+   "Shares Held": "111658"
   },
   {
    "Name": "CHINA MERCHANTS PORT HOLDING",
    "Ticker": "144",
    "Identifier": "6416139",
-   "Weight": "0.1797096426",
-   "Market Value": "287508.74",
-   "Shares Held": "133529",
-   "Exposure Value": "—"
+   "Weight": "0.1819816791",
+   "Market Value": "289607.2",
+   "Shares Held": "133529"
   },
   {
    "Name": "VOPAK",
    "Ticker": "VPK",
    "Identifier": "5809428",
-   "Weight": "0.1691972419",
-   "Market Value": "270690.46",
-   "Shares Held": "5106",
-   "Exposure Value": "—"
+   "Weight": "0.1738944597",
+   "Market Value": "276737.13",
+   "Shares Held": "5106"
   },
   {
    "Name": "AMERICAN STATES WATER CO",
    "Ticker": "AWR",
    "Identifier": "2267171",
-   "Weight": "0.1638039538",
-   "Market Value": "262062",
-   "Shares Held": "3165",
-   "Exposure Value": "—"
+   "Weight": "0.1647127634",
+   "Market Value": "262125.3",
+   "Shares Held": "3165"
   },
   {
    "Name": "FRAPORT AG FRANKFURT AIRPORT",
    "Ticker": "FRA",
    "Identifier": "7107551",
-   "Weight": "0.1591963449",
-   "Market Value": "254690.51",
-   "Shares Held": "3573",
-   "Exposure Value": "—"
+   "Weight": "0.1564669110",
+   "Market Value": "249002.78",
+   "Shares Held": "3573"
   },
   {
    "Name": "CHESAPEAKE UTILITIES CORP",
    "Ticker": "CPK",
    "Identifier": "2190750",
-   "Weight": "0.1548602986",
-   "Market Value": "247753.48",
-   "Shares Held": "1924",
-   "Exposure Value": "—"
+   "Weight": "0.1540013845",
+   "Market Value": "245079.12",
+   "Shares Held": "1924"
   },
   {
    "Name": "TOHO GAS CO LTD",
    "Ticker": "9533",
    "Identifier": "6895222",
-   "Weight": "0.1526474183",
-   "Market Value": "244213.2",
-   "Shares Held": "30400",
-   "Exposure Value": "—"
+   "Weight": "0.1512859473",
+   "Market Value": "240757.75",
+   "Shares Held": "30400"
   },
   {
    "Name": "CALIFORNIA WATER SERVICE GRP",
    "Ticker": "CWT",
    "Identifier": "2165383",
-   "Weight": "0.1432268626",
-   "Market Value": "229141.71",
-   "Shares Held": "4963",
-   "Exposure Value": "—"
+   "Weight": "0.1433318176",
+   "Market Value": "228099.48",
+   "Shares Held": "4963"
   },
   {
    "Name": "INFRASTRUTTURE WIRELESS ITAL",
    "Ticker": "INW",
    "Identifier": "BZ0P4R4",
-   "Weight": "0.1388044084",
-   "Market Value": "222066.44",
-   "Shares Held": "29979",
-   "Exposure Value": "—"
+   "Weight": "0.1378571643",
+   "Market Value": "219387.07",
+   "Shares Held": "29979"
   },
   {
    "Name": "CHENIERE ENERGY PARTNERS LP",
    "Ticker": "CQP",
    "Identifier": "B1VNH36",
-   "Weight": "0.1225502060",
-   "Market Value": "196062.13",
-   "Shares Held": "3091",
-   "Exposure Value": "—"
+   "Weight": "0.1190826894",
+   "Market Value": "189509.21",
+   "Shares Held": "3091"
   },
   {
    "Name": "JIANGSU EXPRESS CO LTD-H",
    "Ticker": "177",
    "Identifier": "6005504",
-   "Weight": "0.1176946365",
-   "Market Value": "188293.94",
-   "Shares Held": "138819",
-   "Exposure Value": "—"
+   "Weight": "0.1174941972",
+   "Market Value": "186981.27",
+   "Shares Held": "138819"
   },
   {
    "Name": "H2O AMERICA",
    "Ticker": "HTO",
    "Identifier": "2811932",
-   "Weight": "0.1139646778",
-   "Market Value": "182326.56",
-   "Shares Held": "2928",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SES",
-   "Ticker": "SESG",
-   "Identifier": "B00ZQQ2",
-   "Weight": "0.1103449106",
-   "Market Value": "176535.47",
-   "Shares Held": "34671",
-   "Exposure Value": "—"
+   "Weight": "0.1106319556",
+   "Market Value": "176060.64",
+   "Shares Held": "2928"
   },
   {
    "Name": "CHINA RESOURCES GAS GROUP LT",
    "Ticker": "1193",
    "Identifier": "6535517",
-   "Weight": "0.1027156087",
-   "Market Value": "164329.72",
-   "Shares Held": "79522",
-   "Exposure Value": "—"
+   "Weight": "0.1028376968",
+   "Market Value": "163656.79",
+   "Shares Held": "79522"
   },
   {
-   "Name": "BEIJING ENTERPRISES HLDGS",
-   "Ticker": "392",
-   "Identifier": "6081690",
-   "Weight": "0.1022434149",
-   "Market Value": "163574.28",
-   "Shares Held": "43232",
-   "Exposure Value": "—"
+   "Name": "SES",
+   "Ticker": "SESG",
+   "Identifier": "B00ZQQ2",
+   "Weight": "0.1021353128",
+   "Market Value": "162539.01",
+   "Shares Held": "34671"
   },
   {
    "Name": "CHINA GAS HOLDINGS LTD",
    "Ticker": "384",
    "Identifier": "6460794",
-   "Weight": "0.1020679924",
-   "Market Value": "163293.63",
-   "Shares Held": "238090",
-   "Exposure Value": "—"
+   "Weight": "0.1018063652",
+   "Market Value": "162015.52",
+   "Shares Held": "238090"
+  },
+  {
+   "Name": "BEIJING ENTERPRISES HLDGS",
+   "Ticker": "392",
+   "Identifier": "6081690",
+   "Weight": "0.1004604820",
+   "Market Value": "159873.67",
+   "Shares Held": "43232"
   },
   {
    "Name": "NORTHWEST NATURAL HOLDING CO",
    "Ticker": "NWN",
    "Identifier": "BFNR303",
-   "Weight": "0.0987931697",
-   "Market Value": "158054.4",
-   "Shares Held": "3360",
-   "Exposure Value": "—"
+   "Weight": "0.1000351544",
+   "Market Value": "159196.8",
+   "Shares Held": "3360"
   },
   {
    "Name": "REDES ENERGETICAS NACIONAIS",
    "Ticker": "RENE",
    "Identifier": "B233HR5",
-   "Weight": "0.0982984488",
-   "Market Value": "157262.92",
-   "Shares Held": "38655",
-   "Exposure Value": "—"
+   "Weight": "0.0968072278",
+   "Market Value": "154059.85",
+   "Shares Held": "38655"
   },
   {
    "Name": "ATLAS ARTERIA",
    "Ticker": "ALX",
    "Identifier": "BZ03TZ1",
-   "Weight": "0.0929913624",
-   "Market Value": "148772.37",
-   "Shares Held": "54151",
-   "Exposure Value": "—"
+   "Weight": "0.0897515663",
+   "Market Value": "142831.41",
+   "Shares Held": "54151"
   },
   {
    "Name": "ACEA SPA",
    "Ticker": "ACE",
    "Identifier": "5728125",
-   "Weight": "0.0836028348",
-   "Market Value": "133752.12",
-   "Shares Held": "5845",
-   "Exposure Value": "—"
+   "Weight": "0.0825360904",
+   "Market Value": "131348.64",
+   "Shares Held": "5845"
   },
   {
    "Name": "GENESIS ENERGY L.P.",
    "Ticker": "GEL",
    "Identifier": "2372257",
-   "Weight": "0.0817596324",
-   "Market Value": "130803.27",
-   "Shares Held": "9231",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "HUTCHISON PORT HOLDINGS TR-U",
-   "Ticker": "HPHT",
-   "Identifier": "B56ZM74",
-   "Weight": "0.0708466633",
-   "Market Value": "113344.14",
-   "Shares Held": "539734",
-   "Exposure Value": "—"
+   "Weight": "0.0814973314",
+   "Market Value": "129695.55",
+   "Shares Held": "9231"
   },
   {
    "Name": "WESTSHORE TERMINALS INVESTME",
    "Ticker": "WTE",
    "Identifier": "B8KB138",
-   "Weight": "0.0684786560",
-   "Market Value": "109555.68",
-   "Shares Held": "3647",
-   "Exposure Value": "—"
+   "Weight": "0.0737872120",
+   "Market Value": "117425.6",
+   "Shares Held": "3647"
+  },
+  {
+   "Name": "HUTCHISON PORT HOLDINGS TR-U",
+   "Ticker": "HPHT",
+   "Identifier": "B56ZM74",
+   "Weight": "0.0729183025",
+   "Market Value": "116042.81",
+   "Shares Held": "539734"
   },
   {
    "Name": "COSCO SHIPPING PORTS LTD",
    "Ticker": "1199",
    "Identifier": "6354251",
-   "Weight": "0.0635802263",
-   "Market Value": "101718.92",
-   "Shares Held": "132324",
-   "Exposure Value": "—"
+   "Weight": "0.0644750526",
+   "Market Value": "102606.15",
+   "Shares Held": "132324"
   },
   {
    "Name": "WATERBRIDGE INFRASTRUC-CL A",
    "Ticker": "WBI",
    "Identifier": "BMVFC45",
-   "Weight": "0.0605368688",
-   "Market Value": "96850",
-   "Shares Held": "3250",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "EUTELSAT COMMUNICATIONS",
-   "Ticker": "ETL",
-   "Identifier": "B0M7KJ7",
-   "Weight": "0.0557250722",
-   "Market Value": "89151.84",
-   "Shares Held": "45816",
-   "Exposure Value": "—"
+   "Weight": "0.0589179315",
+   "Market Value": "93762.5",
+   "Shares Held": "3250"
   },
   {
    "Name": "ANHUI EXPRESSWAY CO LTD-H",
    "Ticker": "995",
    "Identifier": "6045180",
-   "Weight": "0.0555051018",
-   "Market Value": "88799.92",
-   "Shares Held": "45647",
-   "Exposure Value": "—"
+   "Weight": "0.0559968400",
+   "Market Value": "89113.85",
+   "Shares Held": "45647"
   },
   {
    "Name": "BEIJING ENTERPRISES WATER GR",
    "Ticker": "371",
    "Identifier": "B01YCG0",
-   "Weight": "0.0548700116",
-   "Market Value": "87783.87",
-   "Shares Held": "444260",
-   "Exposure Value": "—"
+   "Weight": "0.0540721111",
+   "Market Value": "86050.82",
+   "Shares Held": "444260"
   },
   {
    "Name": "CORP AMERICA AIRPORTS SA",
    "Ticker": "CAAP",
    "Identifier": "BD45SN0",
-   "Weight": "0.0495406732",
-   "Market Value": "79257.72",
-   "Shares Held": "3319",
-   "Exposure Value": "—"
+   "Weight": "0.0506794437",
+   "Market Value": "80651.7",
+   "Shares Held": "3319"
+  },
+  {
+   "Name": "EUTELSAT COMMUNICATIONS",
+   "Ticker": "ETL",
+   "Identifier": "B0M7KJ7",
+   "Weight": "0.0492998105",
+   "Market Value": "78456.14",
+   "Shares Held": "45816"
   },
   {
    "Name": "UNITIL CORP",
    "Ticker": "UTL",
    "Identifier": "2925037",
-   "Weight": "0.0476707246",
-   "Market Value": "76266.08",
-   "Shares Held": "1496",
-   "Exposure Value": "—"
+   "Weight": "0.0481304439",
+   "Market Value": "76595.2",
+   "Shares Held": "1496"
   },
   {
    "Name": "RAI WAY SPA",
    "Ticker": "RWAY",
    "Identifier": "BSM8WL2",
-   "Weight": "0.0319593351",
-   "Market Value": "51130.19",
-   "Shares Held": "10267",
-   "Exposure Value": "—"
+   "Weight": "0.0315233320",
+   "Market Value": "50166.5",
+   "Shares Held": "10267"
   },
   {
    "Name": "FRIEDRICH VORWERK GROUP SE",
    "Ticker": "VH2",
    "Identifier": "BNTJ0F3",
-   "Weight": "0.0281059650",
-   "Market Value": "44965.37",
-   "Shares Held": "617",
-   "Exposure Value": "—"
+   "Weight": "0.0279796348",
+   "Market Value": "44527.03",
+   "Shares Held": "617"
   },
   {
    "Name": "SHENZHEN EXPRESSWAY CORP-H",
    "Ticker": "548",
    "Identifier": "6848743",
-   "Weight": "0.0259599970",
-   "Market Value": "41532.14",
-   "Shares Held": "51795",
-   "Exposure Value": "—"
+   "Weight": "0.0262325724",
+   "Market Value": "41746.74",
+   "Shares Held": "51795"
   },
   {
    "Name": "CHINA WATER AFFAIRS GROUP",
    "Ticker": "855",
    "Identifier": "6671477",
-   "Weight": "0.0259141553",
-   "Market Value": "41458.8",
-   "Shares Held": "77617",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "WATERBRIDGE INFRASTRUC-CL A",
-   "Ticker": "WBI",
-   "Identifier": "BMVFC45",
-   "Weight": "0.0225383419",
-   "Market Value": "36058",
-   "Shares Held": "1210",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "BEIJING CAPITAL INTL AIRPO-H",
-   "Ticker": "694",
-   "Identifier": "6208422",
-   "Weight": "0.0221452680",
-   "Market Value": "35429.14",
-   "Shares Held": "190354",
-   "Exposure Value": "—"
+   "Weight": "0.0260102662",
+   "Market Value": "41392.96",
+   "Shares Held": "77617"
   },
   {
    "Name": "CONSOLIDATED WATER CO-ORD SH",
    "Ticker": "CWCO",
    "Identifier": "2099095",
-   "Weight": "0.0218721301",
-   "Market Value": "34992.16",
-   "Shares Held": "1256",
-   "Exposure Value": "—"
+   "Weight": "0.0237955238",
+   "Market Value": "37868.4",
+   "Shares Held": "1256"
+  },
+  {
+   "Name": "BEIJING CAPITAL INTL AIRPO-H",
+   "Ticker": "694",
+   "Identifier": "6208422",
+   "Weight": "0.0219491155",
+   "Market Value": "34930.01",
+   "Shares Held": "190354"
+  },
+  {
+   "Name": "WATERBRIDGE INFRASTRUC-CL A",
+   "Ticker": "WBI",
+   "Identifier": "BMVFC45",
+   "Weight": "0.0219355991",
+   "Market Value": "34908.5",
+   "Shares Held": "1210"
   },
   {
    "Name": "TOWNGAS SMART ENERGY CO LTD",
    "Ticker": "1083",
    "Identifier": "6345460",
-   "Weight": "0.0212623610",
-   "Market Value": "34016.62",
-   "Shares Held": "92331",
-   "Exposure Value": "—"
+   "Weight": "0.0215145884",
+   "Market Value": "34238.5",
+   "Shares Held": "92331"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "723911.79",
-   "Shares Held": "723911.79",
-   "Exposure Value": "—"
+   "Market Value": "870982.6",
+   "Shares Held": "870982.6"
   }
  ]
 }
