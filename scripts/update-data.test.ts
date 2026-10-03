@@ -73,7 +73,16 @@ import {
   stripTags,
   toIsoDate,
   writeIfChanged,
+  writeJsonIfChanged,
   writeSheetPages,
+  atomicWrite,
+  cursorScope,
+  mapWithConcurrency,
+  paceRequests,
+  parseTickers,
+  rowFromMeta,
+  selectBatch,
+  tenorAvailable,
   type HoldingsRow,
   type NavRow,
   type UpdaterConfig,
@@ -382,7 +391,7 @@ describe('configuration', () => {
   test('aliases, tickers and invalid values', () => {
     const config = readConfig({ HISTORICAL_PAGE_SIZE: '500', TICKERS: 'nobl, tqqq\nbrk.b', AUM: '300M:' });
     expect(config.historyPageSize).toBe(500);
-    expect(config.tickers).toEqual(['NOBL', 'TQQQ', 'BRKB']);
+    expect(config.tickers).toEqual(['NOBL', 'TQQQ', 'BRK.B']);
     expect(config.aumRange).toEqual({ min: 300_000_000, max: undefined });
     expect(() => readConfig({ TER: 'x' })).toThrow(/Invalid TER range/);
   });
@@ -761,7 +770,7 @@ describe('distribution summary', () => {
     expect(normalizeDistributionFrequency('')).toBe('—');
     expect(paymentsPerYear('Weekly')).toBe(52);
     expect(paymentsPerYear('Monthly')).toBe(12);
-    expect(paymentsPerYear('Irregular')).toBe(1);
+    expect(paymentsPerYear('Irregular')).toBeNull();
     expect(paymentsPerYear('—')).toBeNull();
   });
 
@@ -892,6 +901,32 @@ describe('feed assembly', () => {
     expect(meta.holdings.asOf).toBe('2026-09-18');
     expect(meta.documents.summaryProspectus).toContain('ticker=NOBL');
     expect(meta.officialMetrics.splits).toHaveLength(1);
+  });
+
+  test('aum text and aumValue come from one source and date', () => {
+    const skewed = buildFeed({ ...inputs, page: { ...inputs.page, netAssetsText: '$1', netAssetsValue: 1 } });
+    const e = skewed.entry as Record<string, any>;
+    expect(e.aum).toBe(formatAumDisplay(e.aumValue));
+    expect((skewed.meta as Record<string, any>).aum.display).toBe(formatAumDisplay(e.aumValue));
+  });
+
+  test('horizons longer than the fund age and siAnn under one year are null, never a placeholder 0', () => {
+    const young = { ...inputs.performanceNavMonth!, inceptionDate: 'Mar 01 2026', asOfDate: 'Aug 31 2026', yr1: 0, yr3: 0, yr5: 0, yr10: 0, sinceInception: 9 };
+    const m = (buildFeed({ ...inputs, performanceNavMonth: young }).entry as Record<string, any>).metrics;
+    for (const key of ['tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn']) expect(m[key]).toBeNull();
+    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2023' }, 3)).toBe(true);
+    expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2024' }, 3)).toBe(false);
+  });
+
+  test('an index row rebuilt from meta.json keeps the contract keys and numbers', () => {
+    const row = rowFromMeta(meta) as Record<string, any>;
+    expect(row.dataFile).toBe('./funds/NOBL/meta.json');
+    expect(row.aumValue).toBe(entry.aumValue);
+    expect(row.holdings).toBe(entry.holdings);
+    expect(row.history).toBe(entry.history);
+    expect(Object.keys(row.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    expect(row.metrics.performanceAsOf).toBe(entry.metrics.performanceAsOf);
+    expect(row.metrics.cagr3y).toBe(entry.metrics.cagr3y);
   });
 
   test('distribution-history gaps distinguish missing frequency from never distributed', () => {
@@ -1323,5 +1358,82 @@ describe('system CA support', () => {
     installSystemCa('auto', reexec, false);
     expect(await (await fetch('https://example.invalid')).text()).toBe('fine');
     expect(calls).toBe(1);
+  });
+});
+
+describe('batch cursor, pacing, deadline and stable writes', () => {
+  const funds = ['AAA', 'BBB', 'CCC', 'DDD'].map(ticker => ({ ticker }));
+
+  test('a batch continues after the cursor and wraps around instead of stalling at the end', () => {
+    expect(selectBatch(funds, 2, null).map(f => f.ticker)).toEqual(['AAA', 'BBB']);
+    expect(selectBatch(funds, 2, 'BBB').map(f => f.ticker)).toEqual(['CCC', 'DDD']);
+    expect(selectBatch(funds, 2, 'DDD').map(f => f.ticker)).toEqual(['AAA', 'BBB']);
+    expect(selectBatch(funds, 3, 'CCC').map(f => f.ticker)).toEqual(['DDD', 'AAA', 'BBB']);
+    expect(selectBatch(funds, 0, 'BBB')).toHaveLength(4);
+  });
+
+  test('the cursor scope changes with the catalog-level selection', () => {
+    const base = { tickers: [] as string[], category: '' };
+    expect(cursorScope(base)).toBe(cursorScope({ ...base }));
+    expect(cursorScope({ ...base, category: 'Equity' })).not.toBe(cursorScope(base));
+    expect(cursorScope({ ...base, aumRange: { min: 1 } })).not.toBe(cursorScope(base));
+    expect(cursorScope({ ...base, tickers: ['B', 'A'] })).toBe(cursorScope({ ...base, tickers: ['A', 'B'] }));
+  });
+
+  test('TICKERS entries that are not tickers are an error', () => {
+    expect(parseTickers('tqqq, sqqq')).toEqual(['TQQQ', 'SQQQ']);
+    expect(() => parseTickers('AAA $$$')).toThrow(/invalid ticker/);
+    expect(() => readConfig({ TICKERS: ';;;x!' })).toThrow(/invalid ticker/);
+  });
+
+  test('HISTORY_RANGE with a zero window is an error', () => {
+    expect(() => historyRangeDays('0y')).toThrow(/at least 1/);
+    expect(() => historyRangeDays('0d')).toThrow(/at least 1/);
+    expect(historyRangeDays('max')).toBeNull();
+  });
+
+  test('request lanes are reserved before awaiting: starts are spaced per lane, not bursted', async () => {
+    const config = readConfig({ CONCURRENCY: '3', REQUEST_SLEEP: '0.1' });
+    const t0 = Date.now();
+    const starts: number[] = [];
+    await Promise.all([0, 1, 2].map(async () => {
+      for (let i = 0; i < 4; i++) { await paceRequests(config); starts.push(Date.now() - t0); }
+    }));
+    // 3 lanes x 4 starts, 100 ms apart per lane: the last start is at least ~300 ms in (old code: ~200 ms)
+    expect(Math.max(...starts)).toBeGreaterThanOrEqual(280);
+    expect(starts.filter(t => t < 50).length).toBeLessThanOrEqual(3);
+  });
+
+  test('every request carries a timeout signal', async () => {
+    const originalFetch = globalThis.fetch;
+    let signal: AbortSignal | null | undefined;
+    globalThis.fetch = (async (_url: unknown, init?: RequestInit) => { signal = init?.signal; return new Response('ok'); }) as unknown as typeof fetch;
+    try {
+      await fetchText('https://example.test/x', {}, readConfig({ REQUEST_SLEEP: '0' }), 'probe');
+      expect(signal).toBeInstanceOf(AbortSignal);
+    } finally { globalThis.fetch = originalFetch; }
+  });
+
+  test('past the soft deadline no new fund is started', async () => {
+    let started = 0;
+    await mapWithConcurrency([1, 2, 3], 2, async () => { started++; }, Date.now() - 1);
+    expect(started).toBe(0);
+    await mapWithConcurrency([1, 2, 3], 2, async () => { started++; });
+    expect(started).toBe(3);
+  });
+
+  test('an index that only differs by run stamps is not rewritten; writes leave no temp files', async () => {
+    const directory = await mkdtemp(path.join(os.tmpdir(), 'proshares-index-'));
+    try {
+      const file = path.join(directory, 'index.json');
+      const index = (stamp: string) => ({ generatedAt: stamp, source: { catalogReadAt: stamp }, counts: { funds: 1 }, funds: [{ ticker: 'AAA' }] });
+      expect(await writeJsonIfChanged(file, index('2026-10-01T00:00:00Z'))).toBe('written');
+      const first = readFileSync(file, 'utf8');
+      expect(await writeJsonIfChanged(file, index('2026-10-02T00:00:00Z'))).toBe('unchanged');
+      expect(readFileSync(file, 'utf8')).toBe(first);
+      expect(await writeJsonIfChanged(file, { ...index('2026-10-03T00:00:00Z'), funds: [{ ticker: 'BBB' }] })).toBe('written');
+      await atomicWrite(path.join(directory, 'x.json'), '{}');
+      expect(readdirSync(directory).filter(name => name.includes('.tmp-'))).toEqual([]);
+    } finally { await rm(directory, { recursive: true, force: true }); }
   });
 });

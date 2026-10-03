@@ -163,7 +163,7 @@ function outputCreateReporter(root: URL | string, total: number) {
  * fails leaves the previously published files untouched, so a partial run can
  * never empty the site.
  */
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { appendFile, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -616,6 +616,13 @@ Examples
   DISTRIBUTION_YEARS=20 HISTORY_RANGE=5y ./scripts/update-data.ts
 `;
 
+/** Ticker list: any entry that is not a plain ticker is an error, never silently dropped or widened to all funds. */
+export function parseTickers(raw: string): string[] {
+  const tokens = raw.split(/[\s,;]+/).filter(Boolean);
+  for (const token of tokens) if (!/^[A-Za-z0-9.-]{1,10}$/.test(token)) throw new Error(`TICKERS: invalid ticker "${token}"`);
+  return tokens.map(token => token.toUpperCase());
+}
+
 export function readConfig(env: Record<string, string | undefined> = Bun.env as Record<string, string | undefined>): UpdaterConfig {
   const config: UpdaterConfig = {
     concurrency: Math.max(1, parsePositiveInt(envValue(env, 'CONCURRENCY'), 3)),
@@ -627,10 +634,7 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
     distributionYears: Math.max(0, parseNonNegativeInt(envValue(env, 'DISTRIBUTION_YEARS'), 10)),
     storeRawDownloads: parseBoolean(envValue(env, 'STORE_RAW_DOWNLOADS')),
     maxRetries: parseNonNegativeInt(envValue(env, 'MAX_RETRIES'), 3),
-    tickers: envValue(env, 'TICKERS', ['PROSHARES_TICKERS'])
-      .split(/[\s,]+/)
-      .map(ticker => ticker.replace(/[^A-Za-z0-9]/g, '').toUpperCase())
-      .filter(Boolean),
+    tickers: parseTickers(envValue(env, 'TICKERS', ['PROSHARES_TICKERS'])),
     category: envValue(env, 'CATEGORY'),
     offlineSeed: parseBoolean(envValue(env, 'OFFLINE_SEED')),
     performanceRanges: parseRanges(env, 'PERFORMANCE'),
@@ -722,6 +726,7 @@ export async function runtimeControls(env: Record<string, string | undefined> = 
 // HTTP layer: polite pacing, bounded retries, optional raw-sample capture
 // ---------------------------------------------------------------------------
 
+const FETCH_TIMEOUT_MS = 45_000;
 const RETRY_STATUS = new Set([403, 408, 425, 429, 500, 502, 503, 504]);
 
 export function sleep(ms: number): Promise<void> {
@@ -742,10 +747,12 @@ export async function paceRequests(config: UpdaterConfig): Promise<void> {
   if (requestLanes.length !== laneCount) requestLanes = new Array(laneCount).fill(0);
   let lane = 0;
   for (let i = 1; i < requestLanes.length; i++) if (requestLanes[i] < requestLanes[lane]) lane = i;
+  // Reserve the slot synchronously, before any await, so concurrent callers never pick the same lane.
   const now = Date.now();
-  const wait = requestLanes[lane] + gap - now;
+  const start = Math.max(now, requestLanes[lane] + gap);
+  requestLanes[lane] = start;
+  const wait = start - now;
   if (wait > 0) await sleep(wait);
-  requestLanes[lane] = Date.now();
 }
 
 export function browserHeaders(): Record<string, string> {
@@ -791,7 +798,7 @@ export async function fetchText(
     await paceRequests(config);
     let httpFailureStatus: number | null = null;
     try {
-      const response = await fetch(url, { headers });
+      const response = await fetch(url, { headers, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
       if (response.ok) {
         const text = await response.text();
         if (config.storeRawDownloads && rawName) recordRawSample(rawName, text);
@@ -805,8 +812,9 @@ export async function fetchText(
     // A 4xx not in the retry list is permanent. A terminal 5xx/network error
     // must fail immediately too: never log a phantom retry or sleep again.
     if (httpFailureStatus !== null && !RETRY_STATUS.has(httpFailureStatus)) throw new Error(`${label}: ${lastError}`);
-    if (attempt === config.maxRetries) throw new Error(`${label}: ${lastError}`);
-    const backoff = 15_000 * (attempt + 1);
+    // 403 is retried once at most (a WAF denial rarely clears), other transient failures up to MAX_RETRIES
+    if (attempt === config.maxRetries || (httpFailureStatus === 403 && attempt >= 1)) throw new Error(`${label}: ${lastError}`);
+    const backoff = Math.min(30_000, 15_000 * (attempt + 1));
     outputNote(formatRetry(label, lastError, Math.round(backoff / 1000), attempt + 1, config.maxRetries));
     await sleep(backoff);
   }
@@ -1310,6 +1318,7 @@ export function historyRangeDays(range: string): number | null {
   const match = /^(\d+)\s*(y|yr|year|years|m|mo|month|months|d|day|days)?$/.exec(text);
   if (!match) throw new Error(`Invalid HISTORY_RANGE "${range}": use max, <N>y, <N>m or <N>d`);
   const amount = Number(match[1]);
+  if (amount <= 0) throw new Error(`Invalid HISTORY_RANGE "${range}": the window must be at least 1 (use max for everything)`);
   const unit = (match[2] || 'y').toLowerCase();
   if (unit.startsWith('y')) return amount * 365;
   if (unit.startsWith('m') && unit !== 'max') return amount * 30;
@@ -1504,7 +1513,6 @@ const FREQUENCY_PAYMENTS: Record<string, number> = {
   semiannual: 2,
   annual: 1,
   annually: 1,
-  irregular: 1,
 };
 
 export function normalizeDistributionFrequency(label: unknown): string {
@@ -1570,9 +1578,16 @@ export async function writeIfChanged(file: string, contents: string): Promise<'w
     const previous = await readFile(file, 'utf8');
     if (previous === contents) return 'unchanged';
   }
-  await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(file, contents, 'utf8');
+  await atomicWrite(file, contents);
   return 'written';
+}
+
+/** tmp file + rename, so a killed run never leaves a truncated JSON file. */
+export async function atomicWrite(file: string, contents: string): Promise<void> {
+  await mkdir(path.dirname(file), { recursive: true });
+  const tmp = `${file}.tmp-${process.pid}`;
+  await writeFile(tmp, contents, 'utf8');
+  await rename(tmp, file);
 }
 
 // catalogReadAt/generatedAt are freshly stamped every run, so a raw text
@@ -1584,7 +1599,7 @@ export function samePublishedContent(previous: string, value: unknown): boolean 
   const withoutRunTimestamp = (item: unknown): unknown => {
     if (Array.isArray(item)) return item.map(withoutRunTimestamp);
     if (!item || typeof item !== 'object') return item;
-    const { generatedAt, catalogReadAt, ...content } = item as Record<string, unknown>;
+    const { generatedAt, catalogReadAt, savedAt, ...content } = item as Record<string, unknown>;
     return Object.fromEntries(Object.entries(content).map(([key, val]) => [key, withoutRunTimestamp(val)]));
   };
   try {
@@ -1598,8 +1613,7 @@ export async function writeJsonIfChanged(file: string, value: unknown): Promise<
     const previous = await readFile(file, 'utf8');
     if (previous === text || samePublishedContent(previous, value)) return 'unchanged';
   }
-  await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(file, text, 'utf8');
+  await atomicWrite(file, text);
   return 'written';
 }
 
@@ -1621,6 +1635,7 @@ export async function writeSheetPages(
   headers: string[],
   rows: Record<string, string>[],
   pageSize: number,
+  prune = true,
 ): Promise<SheetWriteResult> {
   const directory = path.join(fundDirectory, sheet);
   const pageCount = Math.max(0, Math.ceil(rows.length / pageSize));
@@ -1642,16 +1657,22 @@ export async function writeSheetPages(
     if (result === 'written') written++;
     pages.push(relative);
   }
-  if (existsSync(directory)) {
-    for (const file of await readdir(directory)) {
-      const match = /^(\d{3})\.json$/.exec(file);
-      if (!match) continue;
-      if (Number(match[1]) <= pageCount) continue;
-      await rm(path.join(directory, file));
-      removed++;
-    }
-  }
+  if (prune) removed = await pruneSheetPages(directory, pageCount);
   return { manifest: { pages, pageSize, totalRows: rows.length }, written, removed };
+}
+
+/** Removes pages beyond the current page count; called only after the new meta.json is written. */
+export async function pruneSheetPages(directory: string, pageCount: number): Promise<number> {
+  let removed = 0;
+  if (!existsSync(directory)) return removed;
+  for (const file of await readdir(directory)) {
+    const match = /^(\d{3})\.json$/.exec(file);
+    if (!match) continue;
+    if (Number(match[1]) <= pageCount) continue;
+    await rm(path.join(directory, file));
+    removed++;
+  }
+  return removed;
 }
 
 // ---------------------------------------------------------------------------
@@ -1707,6 +1728,18 @@ function performanceBlock(row: PerformanceRow | undefined): Record<string, unkno
     sinceInceptionText: formatPercentText(row.sinceInception),
   };
   return block;
+}
+
+/**
+ * A horizon is published only when the fund is at least that old at the table date (a young fund must show null,
+ * never a placeholder 0). Unknown inception or table date keeps the provider value.
+ */
+export function tenorAvailable(row: PerformanceRow | undefined, years: number): boolean {
+  if (!row) return false;
+  const start = Date.parse(`${row.inceptionDate} UTC`);
+  const end = Date.parse(`${row.asOfDate} UTC`);
+  if (!Number.isFinite(start) || !Number.isFinite(end)) return true;
+  return end - start >= years * 365 * 86_400_000 - 5 * 86_400_000;
 }
 
 /** ISO date of the official month-end performance table row (not the NAV date), or null when unknown. */
@@ -1782,16 +1815,17 @@ export function buildFeed(inputs: {
   const marketMonth = performanceBlock(performanceMarketMonth);
   const marketQuarter = performanceBlock(performanceMarketQuarter);
 
+  const tenor = (value: number | null | undefined, years: number): number | null => (tenorAvailable(performanceNavMonth, years) ? value ?? null : null);
   const metrics = {
     ytd: performanceNavMonth?.ytd ?? null,
-    tr1y: performanceNavMonth?.yr1 ?? null,
-    tr3y: cumulativeFromAnnualized(performanceNavMonth?.yr3 ?? null, 3),
-    tr5y: cumulativeFromAnnualized(performanceNavMonth?.yr5 ?? null, 5),
-    tr10y: cumulativeFromAnnualized(performanceNavMonth?.yr10 ?? null, 10),
-    cagr3y: performanceNavMonth?.yr3 ?? null,
-    cagr5y: performanceNavMonth?.yr5 ?? null,
-    cagr10y: performanceNavMonth?.yr10 ?? null,
-    siAnn: performanceNavMonth?.sinceInception ?? null,
+    tr1y: tenor(performanceNavMonth?.yr1, 1),
+    tr3y: cumulativeFromAnnualized(tenor(performanceNavMonth?.yr3, 3), 3),
+    tr5y: cumulativeFromAnnualized(tenor(performanceNavMonth?.yr5, 5), 5),
+    tr10y: cumulativeFromAnnualized(tenor(performanceNavMonth?.yr10, 10), 10),
+    cagr3y: tenor(performanceNavMonth?.yr3, 3),
+    cagr5y: tenor(performanceNavMonth?.yr5, 5),
+    cagr10y: tenor(performanceNavMonth?.yr10, 10),
+    siAnn: tenorAvailable(performanceNavMonth, 1) ? performanceNavMonth?.sinceInception ?? null : null,
     dividendYield: effectiveYield,
     dividendYieldText: formatPercentText(effectiveYield),
     dividendYieldBasis: effectiveYieldBasis,
@@ -1823,10 +1857,10 @@ export function buildFeed(inputs: {
     terNetValue: page.netExpenseRatio ?? page.expenseRatio,
     nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
     navValue: nav,
-    aum: page.netAssetsText || formatAumDisplay(netAssets),
+    aum: formatAumDisplay(netAssets),
     aumValue: netAssets,
     asOfDate,
-    netAssetsAsOf: latest?.date || page.priceAsOf || '—',
+    netAssetsAsOf: latest?.netAssets != null ? latest.date : page.priceAsOf || '—',
     inceptionDate: page.inceptionDate || fund.inceptionDateText || '—',
     exchange: exchange || '—',
     closePrice: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`,
@@ -1899,10 +1933,10 @@ export function buildFeed(inputs: {
       formula: '(market price − NAV) / NAV',
     },
     aum: {
-      display: page.netAssetsText || formatAumDisplay(netAssets),
+      display: formatAumDisplay(netAssets),
       value: netAssets,
-      asOfDate: latest?.date || page.priceAsOf || '—',
-      source: 'official ProShares NAV history file (Assets Under Management)',
+      asOfDate: latest?.netAssets != null ? latest.date : page.priceAsOf || '—',
+      source: latest?.netAssets != null ? 'official ProShares NAV history file (Assets Under Management); display and value share this one source and date' : 'fund page Net Assets (the NAV history file had no value)',
     },
     yields: {
       dividendYield: page.twelveMonthYield,
@@ -2037,16 +2071,103 @@ export async function readPreviousIndex(): Promise<{ generatedAt: string; funds:
   }
 }
 
-export async function readCursor(): Promise<string | null> {
+/** Identity of the catalog-level selection a cursor belongs to (a cursor from another selection is ignored). */
+export function cursorScope(config: Pick<UpdaterConfig, 'tickers' | 'category' | 'aumRange'>): string {
+  return JSON.stringify({ tickers: [...config.tickers].sort(), category: config.category.toLowerCase(), aum: config.aumRange ?? null });
+}
+
+/** Index row rebuilt from a published meta.json, for funds that have files but no index row. */
+export function rowFromMeta(meta: Record<string, any>): Record<string, unknown> {
+  const ticker = String(meta.ticker);
+  const monthEnd = meta.returns?.monthEnd ?? {};
+  const num = (value: unknown): number | null => numberOrNull(value);
+  const total = (value: unknown, years: number): number | null => cumulativeFromAnnualized(num(value), years);
+  const geared = meta.officialMetrics?.geared ?? {};
+  const asOf = toIsoDate(monthEnd.asOfDate && monthEnd.asOfDate !== '—' ? monthEnd.asOfDate : '');
+  return {
+    ticker,
+    name: meta.name,
+    category: meta.category || 'ETF',
+    marketingCategory: String(meta.categoryPath || '').split(' > ')[1] || '',
+    strategy: geared.strategy || '',
+    dailyObjective: geared.dailyObjective || '',
+    benchmark: geared.benchmark || '',
+    fundPage: meta.source?.fundPage,
+    dataFile: `./funds/${ticker}/meta.json`,
+    cusip: meta.identifiers?.cusip || null,
+    isin: null,
+    ter: meta.expenseRatio?.display ?? '—',
+    terValue: num(meta.expenseRatio?.value),
+    terGross: meta.expenseRatio?.gross?.display ?? '—',
+    terGrossValue: num(meta.expenseRatio?.gross?.value),
+    terNet: meta.expenseRatio?.net?.display ?? '—',
+    terNetValue: num(meta.expenseRatio?.net?.value),
+    nav: meta.nav?.display ?? '—',
+    navValue: num(meta.nav?.value),
+    aum: meta.aum?.display ?? '—',
+    aumValue: num(meta.aum?.value),
+    asOfDate: meta.nav?.asOfDate ?? '—',
+    netAssetsAsOf: meta.aum?.asOfDate ?? '—',
+    inceptionDate: monthEnd.inceptionDate ?? '—',
+    exchange: meta.source?.exchangeSource ?? '—',
+    closePrice: meta.marketPrice?.display ?? '—',
+    closePriceValue: num(meta.marketPrice?.value),
+    premiumDiscount: meta.premiumDiscount?.display ?? '—',
+    premiumDiscountValue: num(meta.premiumDiscount?.value),
+    distributions: { frequency: meta.distributions?.frequency ?? '—', note: meta.distributions?.note ?? null, exDate: meta.distributions?.rows?.[meta.distributions.rows.length - 1]?.['Ex-Date'] ?? '—', dividend: '—' },
+    distributionFrequency: meta.distributions?.frequency ?? '—',
+    returns: meta.returns,
+    metrics: {
+      ytd: num(monthEnd.ytd), tr1y: num(monthEnd.yr1), tr3y: total(monthEnd.yr3, 3), tr5y: total(monthEnd.yr5, 5), tr10y: total(monthEnd.yr10, 10),
+      cagr3y: num(monthEnd.yr3), cagr5y: num(monthEnd.yr5), cagr10y: num(monthEnd.yr10), siAnn: num(monthEnd.sinceInception),
+      dividendYield: num(meta.yields?.effectiveYield), dividendYieldText: meta.yields?.effectiveYieldText ?? '—',
+      secYield: num(meta.yields?.secYield), secYieldText: meta.yields?.secYieldText ?? '—',
+      returnsBasis: 'official ProShares performance file (etf_performance.csv, NAV total return, month-end)',
+      performanceAsOf: /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : null,
+    },
+    holdings: num(meta.holdings?.totalRows) ?? 0,
+    history: num(meta.history?.totalRows) ?? 0,
+  };
+}
+
+/** Funds with a published meta.json that the index does not list (rows rebuilt offline). */
+export async function readMissingRows(listed: Set<string>): Promise<Record<string, Record<string, unknown>>> {
+  const rows: Record<string, Record<string, unknown>> = {};
+  const root = path.join(API_ROOT, 'funds');
+  if (!existsSync(root)) return rows;
+  for (const dir of (await readdir(root)).sort()) {
+    if (listed.has(dir)) continue;
+    try {
+      const meta = JSON.parse(await readFile(path.join(root, dir, 'meta.json'), 'utf8')) as Record<string, any>;
+      if (meta?.ticker === dir) rows[dir] = rowFromMeta(meta);
+    } catch { /* no meta.json: not a published fund */ }
+  }
+  return rows;
+}
+
+export async function readCursor(scope: string | null = null): Promise<string | null> {
   const file = path.join(API_ROOT, 'update-state.json');
   if (!existsSync(file)) return null;
   try {
     const parsed = JSON.parse(await readFile(file, 'utf8')) as Record<string, unknown>;
+    if (scope !== null && parsed.scope !== scope) return null;
     return parsed.cursor ? String(parsed.cursor) : null;
   } catch {
     return null;
   }
 }
+
+/** Batch of at most `maxFetches` funds that continues after `cursor` and wraps around the sorted list. */
+export function selectBatch<T extends { ticker: string }>(candidates: T[], maxFetches: number, cursor: string | null): T[] {
+  if (maxFetches <= 0) return candidates;
+  const sorted = [...candidates].sort((a, b) => a.ticker.localeCompare(b.ticker));
+  const after = cursor ? sorted.filter(fund => fund.ticker.localeCompare(cursor) > 0) : sorted;
+  const ordered = cursor ? [...after, ...sorted.filter(fund => fund.ticker.localeCompare(cursor) <= 0)] : sorted;
+  return ordered.slice(0, maxFetches);
+}
+
+/** Soft deadline: the run stops taking new funds well before the 30 minute workflow timeout. */
+export const SOFT_DEADLINE_MS = 25 * 60_000;
 
 async function writeRawSamples(config: UpdaterConfig): Promise<void> {
   if (!config.storeRawDownloads) return;
@@ -2055,11 +2176,12 @@ async function writeRawSamples(config: UpdaterConfig): Promise<void> {
   }
 }
 
-async function mapWithConcurrency<T, R>(items: T[], limit: number, worker: (item: T, index: number) => Promise<R>): Promise<R[]> {
+export async function mapWithConcurrency<T, R>(items: T[], limit: number, worker: (item: T, index: number) => Promise<R>, stopAt = Infinity): Promise<R[]> {
   const results: R[] = new Array(items.length);
   let next = 0;
   const runners = new Array(Math.min(limit, items.length)).fill(0).map(async () => {
     while (true) {
+      if (Date.now() >= stopAt) return;
       const index = next++;
       if (index >= items.length) return;
       results[index] = await worker(items[index], index);
@@ -2138,10 +2260,13 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   }
   outputPrintConfig('ProShares', config);
   const runStartedAt = Date.now();
+  const stopAt = runStartedAt + SOFT_DEADLINE_MS;
   await mkdir(path.join(API_ROOT, 'funds'), { recursive: true });
   const stats: Stats = { updated: 0, unchanged: 0, skipped: 0, failed: 0, filtered: 0 };
   const previousIndex = await readPreviousIndex();
   const previousFunds = previousIndex.funds;
+  // The index must list every fund that has a meta.json, even when an earlier run shrank it.
+  for (const [ticker, row] of Object.entries(await readMissingRows(new Set(Object.keys(previousFunds))))) previousFunds[ticker] = row;
 
   // --- catalog --------------------------------------------------------------
   let catalog: CatalogFund[] = [];
@@ -2267,15 +2392,28 @@ export async function main(config?: UpdaterConfig): Promise<void> {
     return true;
   });
   const beforeBatch = candidates.length;
-  const cursor = config.maxFetches > 0 ? await readCursor() : null;
-  if (cursor) candidates = candidates.filter(fund => fund.ticker > cursor);
-  if (config.maxFetches > 0) candidates = candidates.slice(0, config.maxFetches);
+  const unknownTickers = config.tickers.filter(ticker => !catalog.some(fund => fund.ticker === ticker));
+  if (unknownTickers.length) throw new Error(`Requested tickers absent from the catalog: ${unknownTickers.join(' ')}`);
+  // A TICKERS run is a one-off selection: it never reads, writes or deletes the batch cursor.
+  const useCursor = config.tickers.length === 0;
+  const scope = cursorScope(config);
+  const cursor = config.maxFetches > 0 && useCursor ? await readCursor(scope) : null;
+  candidates = selectBatch(candidates, config.maxFetches, cursor);
   stats.skipped += beforeBatch - candidates.length;
+  const newFunds = catalog.map(fund => fund.ticker).filter(ticker => !previousFunds[ticker]);
+  if (newFunds.length && !config.offlineSeed) {
+    const line = `NEW FUNDS: ${newFunds.join(', ')}`;
+    console.log(`[ new      ] ${line}`);
+    if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${line}\n`, 'utf8');
+  }
+  let fundFailures = 0;
+  const completed: string[] = [];
   outputPrintFilter(beforeBatch, catalog.length, outputHasOutputFilters(config));
   const output = outputCreateReporter(API_ROOT, candidates.length);
 
   // --- per-fund processing --------------------------------------------------
   const results = await mapWithConcurrency(candidates, config.concurrency, async (fund, index) => {
+    completed.push(fund.ticker);
     const before = await output.before(fund.ticker);
     const startedAt = Date.now();
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
@@ -2381,6 +2519,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
 
       // Distribution history (official endpoint; two empty years stop the walk).
       let distributions: DistributionRow[] = [];
+      let distributionsFailed = false;
       if (!config.offlineSeed) {
         const currentYear = new Date().getUTCFullYear();
         let emptyYears = 0;
@@ -2402,6 +2541,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
             }
           } catch (error) {
             outputNote(`${fund.ticker}: distributions ${year} failed — ${errorMessage(error)}`);
+            distributionsFailed = true;
             emptyYears++;
           }
           if (emptyYears >= 2) break;
@@ -2447,6 +2587,14 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       } catch (error) {
         outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
       }
+      // Fund-level consistency: when a required source failed for an already published fund, keep its previous
+      // complete state instead of publishing fresh columns next to stale ones.
+      if (!config.offlineSeed && previous) {
+        if (!performance.size) throw new Error('performance file unavailable - kept the published fund');
+        if (!navRows.length && Number(previous.history || 0) > 0) throw new Error('NAV history unavailable - kept the published fund');
+        if (distributionsFailed) throw new Error('distribution history unavailable - kept the published fund');
+        if (!(holdings && holdings.rows.length) && Number(previous.holdings || 0) > 0) throw new Error('holdings unavailable - kept the published fund');
+      }
       const splitRows = splits.get(fund.ticker) || [];
       const artifacts = buildFeed({
         fund,
@@ -2468,14 +2616,16 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       });
 
       await mkdir(directory, { recursive: true });
-      const holdingsWrite = await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize);
-      const historyWrite = await writeSheetPages(directory, 'history', fund.ticker, artifacts.historyHeaders, artifacts.historyRows, config.historyPageSize);
+      const holdingsWrite = await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
+      const historyWrite = await writeSheetPages(directory, 'history', fund.ticker, artifacts.historyHeaders, artifacts.historyRows, config.historyPageSize, false);
       const meta = {
         ...artifacts.meta,
         holdings: { ...(artifacts.meta.holdings as Record<string, unknown>), ...holdingsWrite.manifest },
         history: { ...(artifacts.meta.history as Record<string, unknown>), ...historyWrite.manifest },
       };
       const metaResult = await writeJsonIfChanged(path.join(directory, 'meta.json'), meta);
+      holdingsWrite.removed = await pruneSheetPages(path.join(directory, 'holdings'), holdingsWrite.manifest.pages.length);
+      historyWrite.removed = await pruneSheetPages(path.join(directory, 'history'), historyWrite.manifest.pages.length);
       artifacts.changed = metaResult === 'written' || holdingsWrite.written > 0 || historyWrite.written > 0 || holdingsWrite.removed > 0 || historyWrite.removed > 0;
       if (artifacts.changed) stats.updated++;
       else stats.unchanged++;
@@ -2483,10 +2633,12 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       await output.result(fund.ticker, before);
     } catch (error) {
       stats.failed++;
+      fundFailures++;
       await output.result(fund.ticker, before, 'failed', errorMessage(error));
       if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
     }
-  });
+  }, stopAt);
+  if (completed.length < candidates.length) console.warn(`[ deadline ] soft deadline reached: ${completed.length} of ${candidates.length} funds processed; the rest keep their published files`);
 
   // --- index.json -----------------------------------------------------------
   const indexFile = path.join(API_ROOT, 'index.json');
@@ -2497,9 +2649,8 @@ export async function main(config?: UpdaterConfig): Promise<void> {
     history: funds.reduce((sum, fund) => sum + Number(fund.history || 0), 0),
   };
   const index = {
-    // The stamp only moves when the feed content actually did, so a rerun
-    // against unchanged upstream data leaves an empty git diff.
-    generatedAt: previousIndex.generatedAt || new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+    // generatedAt and catalogReadAt are stamps: writeJsonIfChanged ignores them, so an unchanged feed leaves the file untouched.
+    generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
     source: {
       provider: 'ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)',
       market: 'us',
@@ -2521,23 +2672,24 @@ export async function main(config?: UpdaterConfig): Promise<void> {
     counts,
     funds,
   };
-  const indexResult = await writeIfChanged(indexFile, serialize(index));
-  if (indexResult === 'written' && previousIndex.generatedAt) {
-    await writeFile(indexFile, serialize({ ...index, generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') }), 'utf8');
-  }
+  await writeJsonIfChanged(indexFile, index);
 
   // --- cursor & raw samples -------------------------------------------------
   const stateFile = path.join(API_ROOT, 'update-state.json');
-  if (config.maxFetches > 0 && candidates.length) {
-    await writeIfChanged(stateFile, serialize({ cursor: candidates[candidates.length - 1].ticker, savedAt: new Date().toISOString() }));
-  } else if (config.maxFetches === 0 && existsSync(stateFile)) {
-    await rm(stateFile);
+  if (useCursor) {
+    const lastDone = candidates.filter(fund => completed.includes(fund.ticker)).pop();
+    if (config.maxFetches > 0 && lastDone) {
+      await writeJsonIfChanged(stateFile, { scope, cursor: lastDone.ticker, savedAt: new Date().toISOString() });
+    } else if (config.maxFetches === 0 && existsSync(stateFile)) {
+      await rm(stateFile);
+    }
   }
   await writeRawSamples(config);
 
   console.log(
     `Done. updated=${stats.updated} unchanged=${stats.unchanged} filtered=${stats.filtered} skipped=${stats.skipped} failed=${stats.failed} · funds=${counts.funds} holdings=${counts.holdings} history=${counts.history} · ${formatElapsed(Date.now() - runStartedAt)}`,
   );
+  if (candidates.length > 0 && fundFailures === completed.length) process.exitCode = 1;
   if (stats.failed > 0) console.warn(`[ done     ] ${stats.failed} step(s) failed; previously published files were kept for those funds.`);
 }
 
