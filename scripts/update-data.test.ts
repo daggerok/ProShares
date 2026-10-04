@@ -13,6 +13,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 import {
+  dividendYieldBasisCode,
+  migrateYieldBasis,
   CONTROL_NAMES,
   GEARED_FINDER_URL,
   HOLDINGS_ALL_URL,
@@ -642,8 +644,35 @@ describe('metrics', () => {
     const row = rowFromMeta(meta) as Record<string, any>;
     expect(row.metrics.performanceAsOf).toBe(entry.metrics.performanceAsOf);
     expect(row.dataFile).toBe('./funds/NOBL/meta.json');
-    for (const key of ['dividendYieldBasis', 'dividendYieldComputed', 'secYieldKind']) expect(row.metrics[key]).toEqual(entry.metrics[key]);
+    for (const key of ['dividendYieldBasis', 'dividendYieldBasisText', 'dividendYieldComputed', 'secYieldKind']) expect(row.metrics[key]).toEqual(entry.metrics[key]);
     expect([row.aumValue, row.holdings, row.history]).toEqual([entry.aumValue, entry.holdings, entry.history]);
+  });
+
+  test('dividendYieldBasis: a code per yield source, null with a null yield, same key set on fresh, rebuilt and legacy rows', () => {
+    expect(entry.metrics.dividendYield).toBe(2.01);
+    expect(entry.metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    const indicatedEntry = entryOf({ page: { ...inputs.page, twelveMonthYield: null, twelveMonthYieldText: '—' } });
+    expect([indicatedEntry.metrics.dividendYield === null, indicatedEntry.metrics.dividendYieldBasis]).toEqual([false, 'indicated']);
+    const none = entryOf({ page: { ...inputs.page, distributionFrequency: '', twelveMonthYield: null, twelveMonthYieldText: '—' } });
+    expect([none.metrics.dividendYield, none.metrics.dividendYieldBasis]).toEqual([null, null]);
+    expect([dividendYieldBasisCode(2, null), dividendYieldBasisCode(null, 1), dividendYieldBasisCode(null, null)]).toEqual(['official-trailing-12m', 'indicated', null]);
+    const keys = (row: Record<string, any>) => Object.keys(row.metrics).sort();
+    const rebuilt = rowFromMeta(buildFeed(inputs).meta) as Record<string, any>;
+    expect(rebuilt.metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    const legacyMeta = JSON.parse(JSON.stringify(buildFeed(inputs).meta));
+    delete legacyMeta.yields.effectiveYieldBasisCode;
+    const legacy = rowFromMeta(legacyMeta) as Record<string, any>;
+    expect(legacy.metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    expect(keys(legacy)).toEqual(keys(entry));
+    expect(keys(rebuilt)).toEqual(keys(entry));
+    expect(typeof rebuilt.metrics.dividendYieldBasisText).toBe('string');
+    // legacy index rows: free text moves out, the code follows the yield
+    const old = (extra: Record<string, unknown>) => migrateYieldBasis({ dividendYieldBasis: 'x', dividendYieldText: 't', ...extra });
+    expect(old({ dividendYield: 1, dividendYieldBasis: 'official ProShares 12-Month Yield (page distributions block)' }).dividendYieldBasis).toBe('official-trailing-12m');
+    expect(old({ dividendYield: 1, dividendYieldBasis: 'indicated yield computed by the updater', dividendYieldComputed: true }).dividendYieldBasis).toBe('indicated');
+    expect(old({ dividendYield: 1, dividendYieldBasis: 'something else' }).dividendYieldBasis).toBe('official-other');
+    const gone = old({ dividendYield: null, dividendYieldBasis: 'not published by ProShares' });
+    expect([gone.dividendYieldBasis, gone.dividendYieldBasisText]).toEqual([null, 'not published by ProShares']);
   });
 
   test('young fund: horizons longer than its age and siAnn under one year are null, never a placeholder 0', () => {
@@ -682,8 +711,8 @@ describe('metrics', () => {
     expect((noSec.meta as Record<string, any>).yields.secYield).toBeNull();
     const noFrequency = { ...inputs.page, distributionFrequency: '', twelveMonthYield: null, twelveMonthYieldText: '—' };
     expect(entryOf({ page: noFrequency }).metrics.dividendYield).toBeNull();
-    expect(entryOf({ page: noFrequency }).metrics.dividendYieldBasis).toContain('no payment frequency is published');
-    expect(entryOf({ page: noFrequency, distributions: [] }).metrics.dividendYieldBasis).toContain('no distributions yet');
+    expect(entryOf({ page: noFrequency }).metrics.dividendYieldBasisText).toContain('no payment frequency is published');
+    expect(entryOf({ page: noFrequency, distributions: [] }).metrics.dividendYieldBasisText).toContain('no distributions yet');
     expect(resolveDividendYield(2.01, 0.303711, 'Quarterly', 55.66).effective).toBe(2.01);
     const indicated = resolveDividendYield(null, 0.15596, 'Quarterly', 78.62);
     expect(indicated.effective).toBe(indicated.indicated);

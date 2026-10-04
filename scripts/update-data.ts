@@ -1930,7 +1930,8 @@ export function buildFeed(inputs: {
     siAnn: tenorAvailable(performanceNavMonth, 1) ? performanceNavMonth?.sinceInception ?? null : null,
     dividendYield: effectiveYield,
     dividendYieldText: formatPercentText(effectiveYield),
-    dividendYieldBasis: effectiveYieldBasis,
+    dividendYieldBasis: dividendYieldBasisCode(publishedYield, indicated),
+    dividendYieldBasisText: effectiveYieldBasis,
     dividendYieldComputed: publishedYield === null && indicated !== null,
     secYield: page.sec30DayYield,
     secYieldText: page.sec30DayYieldText,
@@ -2047,6 +2048,7 @@ export function buildFeed(inputs: {
       effectiveYield,
       effectiveYieldText: formatPercentText(effectiveYield),
       effectiveYieldBasis,
+      effectiveYieldBasisCode: dividendYieldBasisCode(publishedYield, indicated),
       effectiveYieldComputed: publishedYield === null && indicated !== null,
       distributionYield: null,
       distributionYieldText: null,
@@ -2166,7 +2168,7 @@ export async function readPreviousIndex(): Promise<{ generatedAt: string; funds:
     const parsed = JSON.parse(await readFile(indexFile, 'utf8')) as Record<string, unknown>;
     const funds: Record<string, Record<string, unknown>> = {};
     for (const fund of (parsed.funds as Record<string, unknown>[]) || []) {
-      if (fund && typeof fund.ticker === 'string') funds[fund.ticker] = fund;
+      if (fund && typeof fund.ticker === 'string') funds[fund.ticker] = fund.metrics && typeof fund.metrics === 'object' ? { ...fund, metrics: migrateYieldBasis(fund.metrics as Record<string, any>) } : fund;
     }
     return { generatedAt: String(parsed.generatedAt || ''), funds };
   } catch {
@@ -2177,6 +2179,40 @@ export async function readPreviousIndex(): Promise<{ generatedAt: string; funds:
 /** Identity of the catalog-level selection a cursor belongs to (a cursor from another selection is ignored). */
 export function cursorScope(config: Pick<UpdaterConfig, 'tickers' | 'category' | 'aumRange'>): string {
   return JSON.stringify({ tickers: [...config.tickers].sort(), category: config.category.toLowerCase(), aum: config.aumRange ?? null });
+}
+
+export type DividendYieldBasis = 'official-trailing-12m' | 'official-distribution-rate' | 'official-other' | 'computed-trailing-12m' | 'indicated';
+
+/** Short code for the definition behind dividendYield; null exactly when there is no yield. */
+export function dividendYieldBasisCode(published: number | null, indicated: number | null): DividendYieldBasis | null {
+  if (published !== null) return 'official-trailing-12m'; // the page 12-Month Yield
+  return indicated !== null ? 'indicated' : null;
+}
+
+/**
+ * Rows written before the code existed held the free text under dividendYieldBasis. Moves it to
+ * dividendYieldBasisText and derives the code from it, so a kept row never pairs a yield with a wrong code.
+ */
+export function migrateYieldBasis(metrics: Record<string, any>): Record<string, any> {
+  const raw = metrics.dividendYieldBasis;
+  const codes: readonly string[] = ['official-trailing-12m', 'official-distribution-rate', 'official-other', 'computed-trailing-12m', 'indicated'];
+  const text = typeof metrics.dividendYieldBasisText === 'string' ? metrics.dividendYieldBasisText : typeof raw === 'string' && !codes.includes(raw) ? raw : null;
+  let code: string | null = typeof raw === 'string' && codes.includes(raw) ? raw : null;
+  if (code === null && numberOrNull(metrics.dividendYield) !== null) {
+    const t = String(text ?? '');
+    code = t.startsWith('official ProShares 12-Month Yield') ? 'official-trailing-12m'
+      : t.startsWith('indicated yield computed') || metrics.dividendYieldComputed === true ? 'indicated'
+      : 'official-other';
+  }
+  if (numberOrNull(metrics.dividendYield) === null) code = null;
+  const out: Record<string, any> = {};
+  for (const [key, value] of Object.entries(metrics)) {
+    if (key === 'dividendYieldBasisText') continue;
+    out[key] = key === 'dividendYieldBasis' ? code : value;
+    if (key === 'dividendYieldBasis') out.dividendYieldBasisText = text;
+  }
+  if (!('dividendYieldBasis' in metrics)) Object.assign(out, { dividendYieldBasis: code, dividendYieldBasisText: text });
+  return out;
 }
 
 /** Index row rebuilt from a published meta.json, for funds that have files but no index row. */
@@ -2220,15 +2256,15 @@ export function rowFromMeta(meta: Record<string, any>): Record<string, unknown> 
     distributions: { frequency: meta.distributions?.frequency ?? '—', note: meta.distributions?.note ?? null, exDate: meta.distributions?.rows?.[meta.distributions.rows.length - 1]?.['Ex-Date'] ?? '—', dividend: '—' },
     distributionFrequency: meta.distributions?.frequency ?? '—',
     returns: meta.returns,
-    metrics: {
+    metrics: migrateYieldBasis({
       ytd: num(monthEnd.ytd), tr1y: num(monthEnd.yr1), tr3y: total(monthEnd.yr3, 3), tr5y: total(monthEnd.yr5, 5), tr10y: total(monthEnd.yr10, 10),
       cagr3y: num(monthEnd.yr3), cagr5y: num(monthEnd.yr5), cagr10y: num(monthEnd.yr10), siAnn: num(monthEnd.sinceInception),
       dividendYield: num(meta.yields?.effectiveYield), dividendYieldText: meta.yields?.effectiveYieldText ?? '—',
-      dividendYieldBasis: meta.yields?.effectiveYieldBasis ?? null, dividendYieldComputed: meta.yields?.effectiveYieldComputed ?? null,
+      dividendYieldBasis: meta.yields?.effectiveYieldBasisCode ?? null, dividendYieldBasisText: meta.yields?.effectiveYieldBasis ?? null, dividendYieldComputed: meta.yields?.effectiveYieldComputed ?? null,
       secYield: num(meta.yields?.secYield), secYieldText: meta.yields?.secYieldText ?? '—', secYieldKind: meta.yields?.secYieldKind ?? null,
       returnsBasis: 'official ProShares performance file (etf_performance.csv, NAV total return, month-end)',
       performanceAsOf: /^\d{4}-\d{2}-\d{2}$/.test(asOf) ? asOf : null,
-    },
+    }),
     holdings: num(meta.holdings?.totalRows) ?? 0,
     history: num(meta.history?.totalRows) ?? 0,
   };
