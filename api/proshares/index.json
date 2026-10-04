@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T06:37:02Z",
+ "generatedAt": "2026-10-04T02:59:03Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-10-03T06:11:56Z"
+  "catalogReadAt": "2026-10-04T02:49:21Z"
  },
  "counts": {
   "funds": 173,
@@ -50,10 +50,10 @@
    "netAssetsAsOf": "Oct 02 2026",
    "inceptionDate": "Aug 13 2026",
    "exchange": "Nasdaq",
-   "closePrice": "$25.18",
-   "closePriceValue": 25.18,
-   "premiumDiscount": "0.00%",
-   "premiumDiscountValue": 0,
+   "closePrice": "$25.19",
+   "closePriceValue": 25.19,
+   "premiumDiscount": "0.04%",
+   "premiumDiscountValue": 0.0397,
    "distributions": {
     "frequency": "Monthly",
     "note": null,
