@@ -95,7 +95,7 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | --- | --: | --- |
 | `MAX_FETCHES` | `0` | Funds to process; `0` = full pass. A positive value takes the next batch after the cursor in `api/proshares/update-state.json`, wrapping around at the end. The cursor is scoped to the catalog-level selection (`TICKERS`, `CATEGORY`, `AUM`); a `TICKERS` run never reads, writes or deletes it. The run also stops taking new funds after 25 minutes and still writes the index. |
 | `REQUEST_SLEEP` | `2` | Seconds between outgoing request starts, paced per worker lane (the lane slot is reserved before waiting); every request has a 45 s timeout and a 403 is retried at most once; keeps requests polite to proshares.com and the data host. |
-| `CONCURRENCY` | `2` | Parallel fund workers; keep low, proshares.com sits behind a WAF that answers 403 while throttling. |
+| `CONCURRENCY` | `3` | Parallel fund workers (about 1.5 requests per second with `REQUEST_SLEEP=2`); keep low, proshares.com sits behind a WAF that answers 403 while throttling. |
 | `AUM` | `":"` | `min:max` net-asset range; also accepts `nano`/`micro`/`small`/`mid`/`large` presets and `K`/`M`/`B`/`T` suffixes. |
 | `TER` | `":"` | Expense-ratio range in percent, `min:max`. |
 | `DIVIDEND_YIELD` | `":"` | `min:max` against the same official 12-Month or computed indicated value that the feed shows (requires fetching official distribution rows when 12-Month Yield is absent). |
@@ -105,7 +105,7 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows per generated holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows per generated history JSON page (alias `HISTORICAL_PAGE_SIZE`). |
 | `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years, months or days such as `10y`, `36m` or `90d`; a zero window (`0y`) is an error. |
-| `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history fetched per fund (the endpoint is year-scoped). |
+| `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history per fund (the endpoint is year-scoped). A fund that already publishes distributions re-reads only the current and previous year and keeps the older published rows; a full walk of all years runs when nothing is published yet or `distributions.refreshedAt` in its `meta.json` is 90 to 120 days old (a per-ticker offset spreads the refreshes over several runs). |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx; integer of at least 1. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
 | `OFFLINE_SEED` | `false` | Replay the published catalog and `api/proshares/raw` samples instead of fetching. |

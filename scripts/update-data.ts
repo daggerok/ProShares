@@ -584,7 +584,7 @@ Environment variables
                                       match an active bound. ":" accepts all.
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y  ""    Annualized-return ranges (min:max).
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y ""    Cumulative-return ranges (min:max).
-  CONCURRENCY            2            Parallel fund workers.
+  CONCURRENCY            3            Parallel fund workers.
   REQUEST_SLEEP          2            Seconds between outgoing request starts.
   MAX_RETRIES            3            Retries after the initial request
                                       (408/425/429/403/5xx); at least 1.
@@ -593,9 +593,12 @@ Environment variables
                                       (alias HISTORICAL_PAGE_SIZE).
   HISTORY_RANGE          max          NAV-history window: max | 20y | 10y | 5y.
   DISTRIBUTION_YEARS     10           Calendar years of distribution history
-                                      fetched per fund (the endpoint is
-                                      year-scoped); a year column is skipped
-                                      after two empty years.
+                                      per fund (the endpoint is year-scoped).
+                                      A fund with published distributions
+                                      re-reads only the current and previous
+                                      year (older rows are kept); a full walk
+                                      runs when nothing is published or the
+                                      published refreshedAt is 90+ days old.
   STORE_RAW_DOWNLOADS    ""           Keep one raw sample of each source under
                                       api/proshares/raw (1/true/yes/on).
   OFFLINE_SEED           ""           Replay the previously published catalog and
@@ -1503,6 +1506,104 @@ export function distributionRowsForCsv(rows: DistributionRow[]): Record<string, 
   }));
 }
 
+// Older distribution years are immutable history. A fund that already publishes distributions re-reads only the
+// current and the previous calendar year; the older published rows are kept and merged. A full walk of every year
+// happens when nothing is published yet, when a published row cannot be read back, or when the published
+// `distributions.refreshedAt` is older than DISTRIBUTION_REFRESH_DAYS plus a per-ticker stagger of up to
+// DISTRIBUTION_REFRESH_STAGGER_DAYS (so the funds do not all refresh in the same run).
+export const DISTRIBUTION_REFRESH_DAYS = 90;
+export const DISTRIBUTION_REFRESH_STAGGER_DAYS = 30;
+
+/** Published CSV rows (`26-Dec-2017`, `0.212820`, `—`) back to DistributionRow; null when any row is unreadable. */
+export function readPublishedDistributions(rows: unknown): DistributionRow[] | null {
+  if (!Array.isArray(rows)) return null;
+  const money = (cell: unknown): number | null => (cell === '—' || cell === undefined || cell === null ? null : numberOrNull(cell));
+  const out: DistributionRow[] = [];
+  for (const row of rows as Record<string, unknown>[]) {
+    const exDate = formatUsDate(row?.['Ex-Date']);
+    if (exDate === '—' || Number.isNaN(Date.parse(`${exDate} UTC`))) return null;
+    out.push({
+      exDate,
+      recordDate: formatUsDate(row['Record Date']),
+      payableDate: formatUsDate(row['Payable Date']),
+      dividend: money(row.Dividend),
+      shortTermCapGains: money(row['ST Cap Gains']),
+      longTermCapGains: money(row['LT Cap Gains']),
+      returnOfCapital: money(row['Return of Capital']),
+      special: null,
+      other: null,
+    });
+  }
+  return out;
+}
+
+export function distributionRefreshDue(ticker: string, refreshedAt: unknown, now: Date): boolean {
+  const refreshed = typeof refreshedAt === 'string' ? Date.parse(`${refreshedAt.slice(0, 10)}T00:00:00Z`) : NaN;
+  if (Number.isNaN(refreshed)) return false; // unknown stamp on a published feed: backfilled by the caller, not a reason for a full walk
+  const stagger = [...ticker].reduce((sum, char) => (sum * 31 + char.charCodeAt(0)) % DISTRIBUTION_REFRESH_STAGGER_DAYS, 0);
+  return now.getTime() - refreshed >= (DISTRIBUTION_REFRESH_DAYS + stagger) * 86_400_000;
+}
+
+export type DistributionFetch = { rows: DistributionRow[]; failed: boolean; full: boolean; requests: number; refreshedAt: string | null };
+
+/**
+ * Distribution history of one fund. `published` is the previous meta.distributions block (rows + refreshedAt) or null.
+ * Full walk: every year down to DISTRIBUTION_YEARS, stopping after two empty years. Recent mode: current and previous
+ * year from the endpoint, older rows from `published`.
+ */
+export async function fetchDistributions(
+  ticker: string,
+  config: UpdaterConfig,
+  published: { rows?: unknown; refreshedAt?: unknown } | null,
+  now: Date = new Date(),
+): Promise<DistributionFetch> {
+  const currentYear = now.getUTCFullYear();
+  const today = now.toISOString().slice(0, 10);
+  const kept = published ? readPublishedDistributions(published.rows) : null;
+  const previousStamp = typeof published?.refreshedAt === 'string' && published.refreshedAt ? published.refreshedAt : null;
+  const recent = Boolean(kept && kept.length > 0 && !distributionRefreshDue(ticker, previousStamp, now));
+  const span = recent ? Math.min(1, config.distributionYears) : config.distributionYears;
+  const rows: DistributionRow[] = [];
+  let failed = false;
+  let requests = 0;
+  let emptyYears = 0;
+  for (let year = currentYear; year >= currentYear - span; year--) {
+    requests++;
+    try {
+      const text = await fetchText(
+        distributionSummaryUrl(ticker, year),
+        jsonHeaders(),
+        config,
+        `${ticker} distributions ${year}`,
+        rows.length === 0 && year === currentYear ? `distributions-${ticker}-${year}.json` : '',
+      );
+      const parsed = parseDistributionSummary(text);
+      if (parsed.length) {
+        emptyYears = 0;
+        rows.push(...parsed);
+      } else {
+        emptyYears++;
+      }
+    } catch (error) {
+      outputNote(`${ticker}: distributions ${year} failed - ${errorMessage(error)}`);
+      failed = true;
+      emptyYears++;
+    }
+    if (!recent && emptyYears >= 2) break;
+  }
+  if (recent && kept) {
+    const oldest = currentYear - config.distributionYears;
+    for (const row of kept) {
+      const year = new Date(`${row.exDate} UTC`).getUTCFullYear();
+      if (year < currentYear - span && year >= oldest) rows.push(row);
+    }
+  }
+  rows.sort((a, b) => compareDisplayDates(a.exDate, b.exDate));
+  // The stamp moves only with a full walk; a recent-only run keeps it, or backfills it once for a feed built by full walks.
+  const refreshedAt = recent ? previousStamp ?? today : failed ? previousStamp : today;
+  return { rows, failed, full: !recent, requests, refreshedAt };
+}
+
 const FREQUENCY_PAYMENTS: Record<string, number> = {
   weekly: 52,
   monthly: 12,
@@ -1760,6 +1861,7 @@ export function buildFeed(inputs: {
   holdingsAsOf: string;
   holdingsSourceLabel: string;
   distributions: DistributionRow[];
+  distributionsRefreshedAt?: string | null;
   exchange: string;
   exchangeSource: string;
   splits: SplitRow[];
@@ -1768,7 +1870,7 @@ export function buildFeed(inputs: {
 }): FundArtifacts {
   const {
     fund, page, performanceNavMonth, performanceNavQuarter, performanceMarketMonth, performanceMarketQuarter,
-    navRows, holdingsRows, holdingsAsOf, holdingsSourceLabel, distributions, exchange, exchangeSource, splits, config, catalogReadAt,
+    navRows, holdingsRows, holdingsAsOf, holdingsSourceLabel, distributions, distributionsRefreshedAt, exchange, exchangeSource, splits, config, catalogReadAt,
   } = inputs;
 
   const orderedNavRows = [...navRows].sort((a, b) => compareDisplayDates(a.date, b.date));
@@ -1966,6 +2068,7 @@ export function buildFeed(inputs: {
       paymentsPerYear: payments,
       headers: DISTRIBUTION_HEADERS,
       rows: distributionCsvRows,
+      ...(distributionsRefreshedAt ? { refreshedAt: distributionsRefreshedAt } : {}),
       asOfDate: page.distributionsAsOf || '—',
       source: `${PROSHARES_SITE}/api/distributionsummary (official, year-scoped)`,
     },
@@ -2549,36 +2652,23 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       navRows.sort((a, b) => compareDisplayDates(a.date, b.date));
       navRows = applyHistoryRange(navRows, config.historyRange);
 
-      // Distribution history (official endpoint; two empty years stop the walk).
+      // Distribution history (official endpoint): current + previous year when rows are already published.
       let distributions: DistributionRow[] = [];
       let distributionsFailed = false;
+      let distributionsRefreshedAt: string | null = null;
       if (!config.offlineSeed) {
-        const currentYear = new Date().getUTCFullYear();
-        let emptyYears = 0;
-        for (let year = currentYear; year >= currentYear - config.distributionYears; year--) {
+        let publishedBlock: Record<string, any> | null = null;
+        if (previous) {
           try {
-            const text = await fetchText(
-              distributionSummaryUrl(fund.ticker, year),
-              jsonHeaders(),
-              config,
-              `${fund.ticker} distributions ${year}`,
-              distributions.length === 0 && year === currentYear ? `distributions-${fund.ticker}-${year}.json` : '',
-            );
-            const parsed = parseDistributionSummary(text);
-            if (parsed.length) {
-              emptyYears = 0;
-              distributions.push(...parsed);
-            } else {
-              emptyYears++;
-            }
-          } catch (error) {
-            outputNote(`${fund.ticker}: distributions ${year} failed — ${errorMessage(error)}`);
-            distributionsFailed = true;
-            emptyYears++;
+            publishedBlock = JSON.parse(await readFile(path.join(directory, 'meta.json'), 'utf8')).distributions ?? null;
+          } catch {
+            publishedBlock = null;
           }
-          if (emptyYears >= 2) break;
         }
-        distributions.sort((a, b) => compareDisplayDates(a.exDate, b.exDate));
+        const fetched = await fetchDistributions(fund.ticker, config, publishedBlock);
+        distributions = fetched.rows;
+        distributionsFailed = fetched.failed;
+        distributionsRefreshedAt = fetched.refreshedAt;
       }
 
       // DIVIDEND_YIELD filters the same official-or-indicated value the feed
@@ -2640,6 +2730,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
         holdingsAsOf,
         holdingsSourceLabel,
         distributions,
+        distributionsRefreshedAt,
         exchange: exchanges.get(fund.ticker) || '',
         exchangeSource: exchanges.get(fund.ticker) ? exchangeSource : '—',
         splits: splitRows,
