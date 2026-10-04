@@ -612,12 +612,9 @@ describe('metrics', () => {
     const rows = [entry, entryOf({ performanceNavMonth: young }), entryOf({ performanceNavMonth: undefined })];
     const keys = Object.keys(entry.metrics);
     expect(keys.slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
-    // KNOWN GAP (reported, updater unchanged): rowFromMeta omits dividendYieldBasis, dividendYieldComputed and secYieldKind
     const rebuilt = rowFromMeta(meta) as Record<string, any>;
-    expect(keys).toEqual(expect.arrayContaining(Object.keys(rebuilt.metrics)));
-    expect(Object.keys(rebuilt.metrics).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
     for (const row of [...rows, rebuilt]) {
-      if (row !== rebuilt) expect(Object.keys(row.metrics)).toEqual(keys);
+      expect(Object.keys(row.metrics)).toEqual(keys);
       for (const key of numericKeys) expect(typeof row.metrics[key] === 'number' || row.metrics[key] === null, key).toBe(true);
       expect(String(row.metrics.returnsBasis).length).toBeGreaterThan(1);
     }
@@ -635,6 +632,7 @@ describe('metrics', () => {
     const row = rowFromMeta(meta) as Record<string, any>;
     expect(row.metrics.performanceAsOf).toBe(entry.metrics.performanceAsOf);
     expect(row.dataFile).toBe('./funds/NOBL/meta.json');
+    for (const key of ['dividendYieldBasis', 'dividendYieldComputed', 'secYieldKind']) expect(row.metrics[key]).toEqual(entry.metrics[key]);
     expect([row.aumValue, row.holdings, row.history]).toEqual([entry.aumValue, entry.holdings, entry.history]);
   });
 
