@@ -23,6 +23,8 @@ import {
   SPLITS_URL,
   STRATEGIC_FINDER_URL,
   USAGE,
+  distributionRefreshDue,
+  readPublishedDistributions,
   applyHistoryRange,
   atomicWrite,
   buildFeed,
@@ -322,12 +324,12 @@ describe('controls', () => {
     expect(resolveControls(defaults, {}, {}, {})).toEqual(stringified);
     expect(resolveControls(defaults, {}, Object.fromEntries(CONTROL_NAMES.map(name => [name, ''])), {})).toEqual(stringified);
     const config = readConfig(resolveControls(defaults));
-    expect(config).toMatchObject({ tickers: [], maxFetches: 0, concurrency: 2, requestSleep: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', distributionYears: 10, maxRetries: 3, storeRawDownloads: false, offlineSeed: false });
+    expect(config).toMatchObject({ tickers: [], maxFetches: 0, concurrency: 3, requestSleep: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', distributionYears: 10, maxRetries: 3, storeRawDownloads: false, offlineSeed: false });
     expect(config.performanceRanges).toEqual({});
     expect(config.totalReturnRanges).toEqual({});
     expect(await runtimeControls({})).toEqual(resolveControls(defaults));
     const overridden = await runtimeControls({ TICKERS: 'NOBL', REQUEST_SLEEP: '0' });
-    expect([overridden.TICKERS, overridden.REQUEST_SLEEP, overridden.CONCURRENCY]).toEqual(['NOBL', '0', '2']);
+    expect([overridden.TICKERS, overridden.REQUEST_SLEEP, overridden.CONCURRENCY]).toEqual(['NOBL', '0', '3']);
   });
 
   test('config keys equal CONTROL_NAMES and --help; USE_SYSTEM_CA is auto, true or false only', () => {
@@ -560,6 +562,14 @@ describe('parsing', () => {
     const map = parseSymbolDirectory(text, { N: 'NYSE', P: 'NYSE Arca' });
     expect([map.get('NOBL'), map.get('A'), map.size]).toEqual(['NYSE Arca', 'NYSE', 2]);
   });
+
+  test('published distribution rows read back to the same CSV rows (the merge keeps old years unchanged)', () => {
+    const rows = distributionRowsForCsv(parseDistributionSummary(DISTRIBUTIONS_JSON));
+    expect(rows.length).toBeGreaterThan(0);
+    expect(distributionRowsForCsv(readPublishedDistributions(rows)!)).toEqual(rows);
+    expect(readPublishedDistributions([{ 'Ex-Date': '\u2014' }])).toBeNull(); // unreadable: the caller walks every year
+    expect(readPublishedDistributions(undefined)).toBeNull();
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -717,7 +727,7 @@ const holdingsCsvFor = (tickers: string[]): string =>
 const navCsvFor = (ticker: string): string =>
   NAV_CSV.replace(/NOBL/g, ticker) + `09/18/2020,ProShares ${ticker},${ticker},40,40,0,0,100000,4000000000\n`;
 
-type FeedOptions = { fail?: (url: string) => boolean; barrier?: number };
+type FeedOptions = { fail?: (url: string) => boolean; barrier?: number; distributionYears?: number[] };
 type FeedState = { urls: string[]; inFlight: number; peak: number };
 
 /** Installs a mocked fetch serving a complete 3-fund ProShares feed; `fail` answers 404 for matching URLs. */
@@ -738,6 +748,9 @@ function mockFeed(options: FeedOptions = {}): FeedState {
     const file = url.match(/ByFund\/(\w+)-(historical_nav|psdlyhld)\.csv$/);
     if (file) return file[2] === 'psdlyhld' ? holdingsCsvFor([file[1]]) : navCsvFor(file[1]);
     const dist = url.match(/distributionsummary\?fund=\w+&year=(\d+)/);
+    if (dist && options.distributionYears) {
+      return options.distributionYears.includes(Number(dist[1])) ? DISTRIBUTIONS_JSON.replace(/\d{4}(-\d\d-\d\dT)/g, `${dist[1]}$1`) : '[]';
+    }
     if (dist) return Number(dist[1]) === year ? DISTRIBUTIONS_JSON : '[]';
     return null;
   };
@@ -854,6 +867,54 @@ describe('pipeline', () => {
       expect(snapshot(api)).toEqual(published);
       expect(process.exitCode).toBe(1); // every fund failed
     });
+  });
+
+  test('distributions: only the current and previous year are requested once rows are published, every year otherwise, reruns write nothing', async () => {
+    const year = new Date().getUTCFullYear();
+    const perYear = parseDistributionSummary(DISTRIBUTIONS_JSON).length;
+    const distRequests = (feed: FeedState): string[] => feed.urls.filter(url => url.includes('distributionsummary?fund=NOBL')).map(url => url.slice(-4));
+    const published = (api: string): { rows: Record<string, string>[]; refreshedAt?: string } =>
+      JSON.parse(readFileSync(path.join(api, 'funds', 'NOBL', 'meta.json'), 'utf8')).distributions;
+    await withRepo(async ({ api, run }) => {
+      const years = [year, year - 1, year - 2, year - 3];
+      const first = mockFeed({ distributionYears: years });
+      await run({ tickers: ['NOBL'] });
+      expect(distRequests(first)).toEqual([year, year - 1, year - 2, year - 3, year - 4, year - 5].map(String)); // full walk, two empty years stop it
+      expect(published(api).rows.length).toBe(4 * perYear);
+      expect(published(api).refreshedAt).toBe(new Date().toISOString().slice(0, 10));
+
+      const before = snapshot(api);
+      const second = mockFeed({ distributionYears: years });
+      await run({ tickers: ['NOBL'] });
+      expect(distRequests(second)).toEqual([String(year), String(year - 1)]);
+      expect(snapshot(api)).toEqual(before); // zero diff on a rerun
+
+      // older years are immutable history: kept from the published rows even if the source stops serving them
+      mockFeed({ distributionYears: [year, year - 1] });
+      await run({ tickers: ['NOBL'] });
+      expect(published(api).rows.length).toBe(4 * perYear);
+
+      // a stale refreshedAt triggers the full walk again, which then sees the source as it is now
+      const metaFile = path.join(api, 'funds', 'NOBL', 'meta.json');
+      const meta = JSON.parse(readFileSync(metaFile, 'utf8'));
+      meta.distributions.refreshedAt = '2000-01-01';
+      writeFileSync(metaFile, JSON.stringify(meta));
+      const refresh = mockFeed({ distributionYears: [year, year - 1] });
+      await run({ tickers: ['NOBL'] });
+      expect(distRequests(refresh).length).toBe(4); // years with data, then two empty years
+      expect(published(api).rows.length).toBe(2 * perYear);
+      expect(published(api).refreshedAt).toBe(new Date().toISOString().slice(0, 10));
+    });
+  });
+
+  test('distribution refresh is due after 90 days plus a per-ticker offset of under 30 days', () => {
+    const now = new Date(Date.UTC(2026, 9, 3));
+    const ago = (days: number): string => new Date(now.getTime() - days * 86_400_000).toISOString().slice(0, 10);
+    expect(distributionRefreshDue('NOBL', ago(89), now)).toBe(false);
+    expect(distributionRefreshDue('NOBL', ago(120), now)).toBe(true);
+    expect(distributionRefreshDue('NOBL', undefined, now)).toBe(false); // unknown stamp is backfilled, not refetched
+    // the same stamp, different tickers: one is already due, the other waits for its offset
+    expect([distributionRefreshDue('IGHG', ago(110), now), distributionRefreshDue('NOBL', ago(110), now)]).toEqual([true, false]);
   });
 
   test('unknown tickers fail before any fund is written', async () => {
