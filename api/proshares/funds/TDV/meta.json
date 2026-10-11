@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TDV&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/TDV-psdlyhld.csv, as of Oct 02 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TDV-psdlyhld.csv, as of Oct 09 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-04T03:27:00Z",
+  "catalogReadAt": "2026-10-11T03:17:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$102.55",
-  "value": 102.55,
-  "asOfDate": "Oct 02 2026"
+  "display": "$102.02",
+  "value": 102.02,
+  "asOfDate": "Oct 09 2026"
  },
  "marketPrice": {
-  "display": "$102.60",
-  "value": 102.6,
-  "asOfDate": "Oct 02 2026"
+  "display": "$101.96",
+  "value": 101.96,
+  "asOfDate": "Oct 09 2026"
  },
  "premiumDiscount": {
-  "display": "0.05%",
-  "value": 0.0488,
+  "display": "-0.06%",
+  "value": -0.0588,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$270.72 M",
-  "value": 270720750.5457,
-  "asOfDate": "Oct 02 2026",
+  "display": "$271.37 M",
+  "value": 271373036.0199,
+  "asOfDate": "Oct 09 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,7 +76,7 @@
   "distributionYieldText": null,
   "yield12M": 1.03,
   "yield12MText": "1.03%",
-  "indicatedYield": 1.0066,
+  "indicatedYield": 1.0119,
   "indicatedYieldText": "1.01%",
   "secYield": 1.08,
   "secYieldText": "1.08%",
@@ -85,83 +85,83 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Aug 31 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Nov 07 2019",
-   "mo1": 2.96,
-   "mo3": -1.89,
-   "mo6": 14.22,
-   "ytd": 18.49,
-   "yr1": 22.34,
-   "yr3": 16.68,
-   "yr5": 11.65,
+   "mo1": -2.35,
+   "mo3": -4.14,
+   "mo6": 17.76,
+   "ytd": 15.71,
+   "yr1": 16.13,
+   "yr3": 18.3,
+   "yr5": 12.18,
    "yr10": null,
-   "sinceInception": 16.15,
-   "mo1Text": "2.96%",
-   "ytdText": "18.49%",
-   "yr1Text": "22.34%",
-   "yr3Text": "16.68%",
-   "yr5Text": "11.65%",
+   "sinceInception": 15.54,
+   "mo1Text": "-2.35%",
+   "ytdText": "15.71%",
+   "yr1Text": "16.13%",
+   "yr3Text": "18.30%",
+   "yr5Text": "12.18%",
    "yr10Text": "—",
-   "sinceInceptionText": "16.15%",
+   "sinceInceptionText": "15.54%",
    "marketPrice": {
-    "asOfDate": "Aug 31 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Nov 07 2019",
-    "mo1": 3.01,
-    "mo3": -1.75,
-    "mo6": 14.33,
-    "ytd": 18.45,
-    "yr1": 22.44,
-    "yr3": 16.64,
-    "yr5": 11.61,
+    "mo1": -2.29,
+    "mo3": -4.16,
+    "mo6": 17.94,
+    "ytd": 15.73,
+    "yr1": 16.22,
+    "yr3": 18.31,
+    "yr5": 12.12,
     "yr10": null,
-    "sinceInception": 16.14,
-    "mo1Text": "3.01%",
-    "ytdText": "18.45%",
-    "yr1Text": "22.44%",
-    "yr3Text": "16.64%",
-    "yr5Text": "11.61%",
+    "sinceInception": 15.55,
+    "mo1Text": "-2.29%",
+    "ytdText": "15.73%",
+    "yr1Text": "16.22%",
+    "yr3Text": "18.31%",
+    "yr5Text": "12.12%",
     "yr10Text": "—",
-    "sinceInceptionText": "16.14%"
+    "sinceInceptionText": "15.55%"
    }
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Nov 07 2019",
-   "mo1": -0.06,
-   "mo3": 22.85,
-   "mo6": 20.7,
-   "ytd": 20.7,
-   "yr1": 26.3,
-   "yr3": 17.6,
-   "yr5": 13.35,
+   "mo1": -2.35,
+   "mo3": -4.14,
+   "mo6": 17.76,
+   "ytd": 15.71,
+   "yr1": 16.13,
+   "yr3": 18.3,
+   "yr5": 12.18,
    "yr10": null,
-   "sinceInception": 16.91,
-   "mo1Text": "-0.06%",
-   "ytdText": "20.70%",
-   "yr1Text": "26.30%",
-   "yr3Text": "17.60%",
-   "yr5Text": "13.35%",
+   "sinceInception": 15.54,
+   "mo1Text": "-2.35%",
+   "ytdText": "15.71%",
+   "yr1Text": "16.13%",
+   "yr3Text": "18.30%",
+   "yr5Text": "12.18%",
    "yr10Text": "—",
-   "sinceInceptionText": "16.91%",
+   "sinceInceptionText": "15.54%",
    "marketPrice": {
-    "asOfDate": "Jun 30 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Nov 07 2019",
-    "mo1": 0.17,
-    "mo3": 23.06,
-    "mo6": 20.76,
-    "ytd": 20.76,
-    "yr1": 26.4,
-    "yr3": 17.59,
-    "yr5": 13.35,
+    "mo1": -2.29,
+    "mo3": -4.16,
+    "mo6": 17.94,
+    "ytd": 15.73,
+    "yr1": 16.22,
+    "yr3": 18.31,
+    "yr5": 12.12,
     "yr10": null,
-    "sinceInception": 16.93,
-    "mo1Text": "0.17%",
-    "ytdText": "20.76%",
-    "yr1Text": "26.40%",
-    "yr3Text": "17.59%",
-    "yr5Text": "13.35%",
+    "sinceInception": 15.55,
+    "mo1Text": "-2.29%",
+    "ytdText": "15.73%",
+    "yr1Text": "16.22%",
+    "yr3Text": "18.31%",
+    "yr5Text": "12.12%",
     "yr10Text": "—",
-    "sinceInceptionText": "16.93%"
+    "sinceInceptionText": "15.55%"
    }
   }
  },
@@ -438,8 +438,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 38,
-  "asOfDate": "Oct 02 2026",
-  "asOf": "2026-10-02",
+  "asOfDate": "Oct 09 2026",
+  "asOf": "2026-10-09",
   "headers": [
    "Name",
    "Ticker",
@@ -448,7 +448,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/TDV-psdlyhld.csv, as of Oct 02 2026)",
+  "source": "official ProShares daily holdings download (ByFund/TDV-psdlyhld.csv, as of Oct 09 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -456,9 +456,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1736,
-  "asOf": "Oct 02 2026",
-  "asOfDate": "Oct 02 2026",
+  "totalRows": 1741,
+  "asOf": "Oct 09 2026",
+  "asOfDate": "Oct 09 2026",
   "headers": [
    "Date",
    "NAV",
@@ -499,15 +499,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 91.166493
+      "Weight": 91.172418
      },
      {
       "Country": "Ireland",
-      "Weight": 6.407289
+      "Weight": 6.600454999999999
      },
      {
       "Country": "Singapore",
-      "Weight": 2.426218
+      "Weight": 2.227127
      }
     ]
    },
@@ -525,15 +525,15 @@
     "rows": [
      {
       "Sector": "Information Technology",
-      "Weight": 80.98545802336118
+      "Weight": 80.08369618600129
      },
      {
       "Sector": "Financials",
-      "Weight": 10.315493138851407
+      "Weight": 10.810301858485715
      },
      {
       "Sector": "Industrials",
-      "Weight": 8.55567886845753
+      "Weight": 8.939854657623107
      }
     ]
    }

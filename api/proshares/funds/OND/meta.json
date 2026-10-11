@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=OND&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 02 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 09 2026)",
   "historySource": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-04T03:27:00Z",
+  "catalogReadAt": "2026-10-11T03:17:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$32.99",
-  "value": 32.99,
-  "asOfDate": "Oct 02 2026"
+  "display": "$33.52",
+  "value": 33.52,
+  "asOfDate": "Oct 09 2026"
  },
  "marketPrice": {
-  "display": "$32.84",
-  "value": 32.84,
-  "asOfDate": "Oct 02 2026"
+  "display": "$33.27",
+  "value": 33.27,
+  "asOfDate": "Oct 09 2026"
  },
  "premiumDiscount": {
-  "display": "-0.45%",
-  "value": -0.4547,
+  "display": "-0.75%",
+  "value": -0.7458,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$2.47 M",
-  "value": 2474470.4925,
-  "asOfDate": "Oct 02 2026",
+  "display": "$2.51 M",
+  "value": 2513958.519,
+  "asOfDate": "Oct 09 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -85,83 +85,83 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Aug 31 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Oct 26 2021",
-   "mo1": 1.47,
-   "mo3": -0.09,
-   "mo6": -3.84,
-   "ytd": -14.27,
-   "yr1": -20.52,
-   "yr3": 15.11,
+   "mo1": -6.5,
+   "mo3": -5.32,
+   "mo6": -0.51,
+   "ytd": -19.84,
+   "yr1": -31.5,
+   "yr3": 15.27,
    "yr5": null,
    "yr10": null,
-   "sinceInception": -2.41,
-   "mo1Text": "1.47%",
-   "ytdText": "-14.27%",
-   "yr1Text": "-20.52%",
-   "yr3Text": "15.11%",
+   "sinceInception": -3.69,
+   "mo1Text": "-6.50%",
+   "ytdText": "-19.84%",
+   "yr1Text": "-31.50%",
+   "yr3Text": "15.27%",
    "yr5Text": "—",
    "yr10Text": "—",
-   "sinceInceptionText": "-2.41%",
+   "sinceInceptionText": "-3.69%",
    "marketPrice": {
-    "asOfDate": "Aug 31 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Oct 26 2021",
-    "mo1": 1.59,
-    "mo3": -0.06,
-    "mo6": -3.51,
-    "ytd": -14.56,
-    "yr1": -20.85,
-    "yr3": 15.08,
+    "mo1": -6.77,
+    "mo3": -5.67,
+    "mo6": -1.8,
+    "ytd": -20.34,
+    "yr1": -31.96,
+    "yr3": 15.3,
     "yr5": null,
     "yr10": null,
-    "sinceInception": -2.47,
-    "mo1Text": "1.59%",
-    "ytdText": "-14.56%",
-    "yr1Text": "-20.85%",
-    "yr3Text": "15.08%",
+    "sinceInception": -3.81,
+    "mo1Text": "-6.77%",
+    "ytdText": "-20.34%",
+    "yr1Text": "-31.96%",
+    "yr3Text": "15.30%",
     "yr5Text": "—",
     "yr10Text": "—",
-    "sinceInceptionText": "-2.47%"
+    "sinceInceptionText": "-3.81%"
    }
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Oct 26 2021",
-   "mo1": -1.33,
-   "mo3": 5.09,
-   "mo6": -15.33,
-   "ytd": -15.33,
-   "yr1": -18.63,
-   "yr3": 14.23,
+   "mo1": -6.5,
+   "mo3": -5.32,
+   "mo6": -0.51,
+   "ytd": -19.84,
+   "yr1": -31.5,
+   "yr3": 15.27,
    "yr5": null,
    "yr10": null,
-   "sinceInception": -2.76,
-   "mo1Text": "-1.33%",
-   "ytdText": "-15.33%",
-   "yr1Text": "-18.63%",
-   "yr3Text": "14.23%",
+   "sinceInception": -3.69,
+   "mo1Text": "-6.50%",
+   "ytdText": "-19.84%",
+   "yr1Text": "-31.50%",
+   "yr3Text": "15.27%",
    "yr5Text": "—",
    "yr10Text": "—",
-   "sinceInceptionText": "-2.76%",
+   "sinceInceptionText": "-3.69%",
    "marketPrice": {
-    "asOfDate": "Jun 30 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Oct 26 2021",
-    "mo1": -1.22,
-    "mo3": 4.1,
-    "mo6": -15.55,
-    "ytd": -15.55,
-    "yr1": -19.04,
-    "yr3": 14.2,
+    "mo1": -6.77,
+    "mo3": -5.67,
+    "mo6": -1.8,
+    "ytd": -20.34,
+    "yr1": -31.96,
+    "yr3": 15.3,
     "yr5": null,
     "yr10": null,
-    "sinceInception": -2.8,
-    "mo1Text": "-1.22%",
-    "ytdText": "-15.55%",
-    "yr1Text": "-19.04%",
-    "yr3Text": "14.20%",
+    "sinceInception": -3.81,
+    "mo1Text": "-6.77%",
+    "ytdText": "-20.34%",
+    "yr1Text": "-31.96%",
+    "yr3Text": "15.30%",
     "yr5Text": "—",
     "yr10Text": "—",
-    "sinceInceptionText": "-2.80%"
+    "sinceInceptionText": "-3.81%"
    }
   }
  },
@@ -178,15 +178,15 @@
    "Return of Capital"
   ],
   "rows": [],
-  "refreshedAt": "2026-10-04",
+  "refreshedAt": "2026-10-11",
   "asOfDate": "Aug 31 2026",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
   "totalRows": 28,
-  "asOfDate": "Oct 02 2026",
-  "asOf": "2026-10-02",
+  "asOfDate": "Oct 09 2026",
+  "asOf": "2026-10-09",
   "headers": [
    "Name",
    "Ticker",
@@ -195,7 +195,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 02 2026)",
+  "source": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 09 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -203,9 +203,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1240,
-  "asOf": "Oct 02 2026",
-  "asOfDate": "Oct 02 2026",
+  "totalRows": 1245,
+  "asOf": "Oct 09 2026",
+  "asOfDate": "Oct 09 2026",
   "headers": [
    "Date",
    "NAV",
@@ -245,43 +245,43 @@
     "rows": [
      {
       "Company": "DOORDASH INC - A",
-      "Weight": 5.893845000000001
-     },
-     {
-      "Company": "NVIDIA CORP",
-      "Weight": 5.568988
-     },
-     {
-      "Company": "CAPCOM CO LTD",
-      "Weight": 5.300609
+      "Weight": 6.026709
      },
      {
       "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 5.154915
+      "Weight": 5.530522
      },
      {
-      "Company": "NETEASE INC",
-      "Weight": 4.822514
+      "Company": "NVIDIA CORP",
+      "Weight": 5.372108
      },
      {
-      "Company": "UBER TECHNOLOGIES INC",
-      "Weight": 4.707008
+      "Company": "CAPCOM CO LTD",
+      "Weight": 5.13885
      },
      {
       "Company": "SPOTIFY TECHNOLOGY SA",
-      "Weight": 4.663242
+      "Weight": 5.135984
+     },
+     {
+      "Company": "NETEASE INC",
+      "Weight": 4.93256
+     },
+     {
+      "Company": "UBER TECHNOLOGIES INC",
+      "Weight": 4.864364999999999
      },
      {
       "Company": "TAKE-TWO INTERACTIVE SOFTWRE",
-      "Weight": 4.620991
+      "Weight": 4.788706
      },
      {
       "Company": "GRAB HOLDINGS LTD - CL A",
-      "Weight": 4.506311999999999
+      "Weight": 4.593953
      },
      {
       "Company": "DELIVERY HERO SE",
-      "Weight": 4.447798
+      "Weight": 4.345893
      }
     ]
    },
@@ -290,43 +290,43 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 42.870972
+      "Weight": 43.457530999999996
      },
      {
       "Country": "Hong Kong",
-      "Weight": 14.134680999999999
+      "Weight": 13.722233000000001
      },
      {
       "Country": "Japan",
-      "Weight": 9.323919
+      "Weight": 9.018991
      },
      {
       "Country": "China",
-      "Weight": 7.4314160000000005
-     },
-     {
-      "Country": "South Korea",
-      "Weight": 5.386469
+      "Weight": 7.563165
      },
      {
       "Country": "Luxembourg",
-      "Weight": 4.709077
+      "Weight": 5.185428
+     },
+     {
+      "Country": "South Korea",
+      "Weight": 4.962562
      },
      {
       "Country": "Singapore",
-      "Weight": 4.550605
+      "Weight": 4.638178
      },
      {
       "Country": "Germany",
-      "Weight": 4.491515
+      "Weight": 4.38773
      },
      {
       "Country": "Taiwan",
-      "Weight": 4.0457659999999995
+      "Weight": 3.962666
      },
      {
       "Country": "Poland",
-      "Weight": 3.055579
+      "Weight": 3.101516
      }
     ]
    },
@@ -335,31 +335,31 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 52.13065371542562
+      "Weight": 53.28113597086319
      },
      {
       "Currency": "HKD",
-      "Weight": 21.566096582703622
+      "Weight": 21.285398707537297
      },
      {
       "Currency": "JPY",
-      "Weight": 9.32391921362926
+      "Weight": 9.018990814711835
      },
      {
       "Currency": "KRW",
-      "Weight": 5.386469399144845
+      "Weight": 4.96256249238739
      },
      {
       "Currency": "EUR",
-      "Weight": 4.491515414805732
+      "Weight": 4.3877297826641035
      },
      {
       "Currency": "TWD",
-      "Weight": 4.045766394604405
+      "Weight": 3.9626658192633855
      },
      {
       "Currency": "PLN",
-      "Weight": 3.0555792796865187
+      "Weight": 3.1015164125727974
      }
     ]
    },
@@ -368,27 +368,27 @@
     "rows": [
      {
       "Sector": "Media & Entertainment",
-      "Weight": 52.91683563155966
+      "Weight": 53.571677081909705
      },
      {
       "Sector": "Transportation",
-      "Weight": 15.891329394930898
+      "Weight": 15.999146260512365
      },
      {
       "Sector": "Consumer Services",
-      "Weight": 14.62545982130464
+      "Weight": 14.666952492931557
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 10.741495674410501
+      "Weight": 10.00594724849775
      },
      {
       "Sector": "Software & Services",
-      "Weight": 3.4467326665945217
+      "Weight": 3.3638249158429177
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 1.404802333091033
+      "Weight": 1.4389489944040714
      }
     ]
    }

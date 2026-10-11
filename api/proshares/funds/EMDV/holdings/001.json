@@ -2,439 +2,375 @@
  "ticker": "EMDV",
  "page": 1,
  "pageSize": 250,
- "totalRows": 50,
+ "totalRows": 48,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held",
-  "Exposure Value"
+  "Shares Held"
  ],
  "rows": [
-  {
-   "Name": "KOREA (SOUTH) WON CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "KRW/USD",
-   "Weight": "0.0233220164",
-   "Market Value": "—",
-   "Shares Held": "2245795",
-   "Exposure Value": "1663.24"
-  },
-  {
-   "Name": "SOUTH AFRICA RAND CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "ZAR/USD",
-   "Weight": "0.0096848822",
-   "Market Value": "—",
-   "Shares Held": "11500",
-   "Exposure Value": "690.69"
-  },
   {
    "Name": "LOCALIZA RENT A CAR",
    "Ticker": "RENT3",
    "Identifier": "B08K3S0",
-   "Weight": "2.8754947978",
-   "Market Value": "205069.66",
-   "Shares Held": "25784",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "LOTES CO LTD",
-   "Ticker": "3533",
-   "Identifier": "B1GJFG8",
-   "Weight": "2.6042681775",
-   "Market Value": "185726.78",
-   "Shares Held": "3194",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "BANK OF CHINA LTD-A",
-   "Ticker": "601988",
-   "Identifier": "BP3R239",
-   "Weight": "2.5022649940",
-   "Market Value": "178452.29",
-   "Shares Held": "177800",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "POSTAL SAVINGS BANK OF CHI-H",
-   "Ticker": "1658",
-   "Identifier": "BD8GL18",
-   "Weight": "2.4653459465",
-   "Market Value": "175819.36",
-   "Shares Held": "256693",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "BANK OF COMMUNICATIONS CO-A",
-   "Ticker": "601328",
-   "Identifier": "BP3R2G2",
-   "Weight": "2.4504169619",
-   "Market Value": "174754.68",
-   "Shares Held": "151200",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "IND & COMM BK OF CHINA-A",
-   "Ticker": "601398",
-   "Identifier": "BP3R217",
-   "Weight": "2.3998276882",
-   "Market Value": "171146.84",
-   "Shares Held": "138600",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "WEG SA",
-   "Ticker": "WEGE3",
-   "Identifier": "2945422",
-   "Weight": "2.3930679436",
-   "Market Value": "170664.76",
-   "Shares Held": "17300",
-   "Exposure Value": "—"
+   "Weight": "3.8651135211",
+   "Market Value": "281928.86",
+   "Shares Held": "25784"
   },
   {
    "Name": "ALCHIP TECHNOLOGIES LTD",
    "Ticker": "3661",
    "Identifier": "B4TPSL0",
-   "Weight": "2.3914432099",
-   "Market Value": "170548.89",
-   "Shares Held": "1428",
-   "Exposure Value": "—"
+   "Weight": "2.6640047247",
+   "Market Value": "194317.66",
+   "Shares Held": "1428"
+  },
+  {
+   "Name": "LOTES CO LTD",
+   "Ticker": "3533",
+   "Identifier": "B1GJFG8",
+   "Weight": "2.6261570861",
+   "Market Value": "191556.98",
+   "Shares Held": "3194"
+  },
+  {
+   "Name": "BANK OF CHINA LTD-A",
+   "Ticker": "601988",
+   "Identifier": "BP3R239",
+   "Weight": "2.4658746646",
+   "Market Value": "179865.67",
+   "Shares Held": "177800"
+  },
+  {
+   "Name": "WEG SA",
+   "Ticker": "WEGE3",
+   "Identifier": "2945422",
+   "Weight": "2.4487026497",
+   "Market Value": "178613.11",
+   "Shares Held": "17300"
+  },
+  {
+   "Name": "POSTAL SAVINGS BANK OF CHI-H",
+   "Ticker": "1658",
+   "Identifier": "BD8GL18",
+   "Weight": "2.4304268801",
+   "Market Value": "177280.04",
+   "Shares Held": "256693"
+  },
+  {
+   "Name": "BANK OF COMMUNICATIONS CO-A",
+   "Ticker": "601328",
+   "Identifier": "BP3R2G2",
+   "Weight": "2.4098052721",
+   "Market Value": "175775.86",
+   "Shares Held": "151200"
   },
   {
    "Name": "CHINA MERCHANTS BANK-A",
    "Ticker": "600036",
    "Identifier": "BP3R273",
-   "Weight": "2.3813585594",
-   "Market Value": "169829.69",
-   "Shares Held": "27600",
-   "Exposure Value": "—"
+   "Weight": "2.3419075670",
+   "Market Value": "170823.27",
+   "Shares Held": "27600"
   },
   {
-   "Name": "CHINA CONSTRUCTION BANK-A",
-   "Ticker": "601939",
-   "Identifier": "BP3R3L4",
-   "Weight": "2.3683264762",
-   "Market Value": "168900.29",
-   "Shares Held": "102400",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "WISTRON CORP",
-   "Ticker": "3231",
-   "Identifier": "6672481",
-   "Weight": "2.3246699791",
-   "Market Value": "165786.87",
-   "Shares Held": "28358",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ENN ENERGY HOLDINGS LTD",
-   "Ticker": "2688",
-   "Identifier": "6333937",
-   "Weight": "2.3174200240",
-   "Market Value": "165269.83",
-   "Shares Held": "26675",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CHINA UNITED NETWORK-A",
-   "Ticker": "600050",
-   "Identifier": "BP3R2X9",
-   "Weight": "2.2927771315",
-   "Market Value": "163512.39",
-   "Shares Held": "259200",
-   "Exposure Value": "—"
+   "Name": "IND & COMM BK OF CHINA-A",
+   "Ticker": "601398",
+   "Identifier": "BP3R217",
+   "Weight": "2.3339180614",
+   "Market Value": "170240.5",
+   "Shares Held": "138600"
   },
   {
    "Name": "SHOPRITE HOLDINGS LTD",
    "Ticker": "SHP",
    "Identifier": "6801575",
-   "Weight": "2.2577760186",
-   "Market Value": "161016.24",
-   "Shares Held": "8604",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "YEALINK NETWORK TECHNOLOGY-A",
-   "Ticker": "300628",
-   "Identifier": "BFCCR07",
-   "Weight": "2.2379115566",
-   "Market Value": "159599.58",
-   "Shares Held": "27100",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CHINA STATE CONSTRUCTION -A",
-   "Ticker": "601668",
-   "Identifier": "BP3R2Q2",
-   "Weight": "2.2244339932",
-   "Market Value": "158638.41",
-   "Shares Held": "245100",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SUNDARAM FINANCE LTD",
-   "Ticker": "SUF",
-   "Identifier": "B0L4LR4",
-   "Weight": "2.2173580516",
-   "Market Value": "158133.78",
-   "Shares Held": "3464",
-   "Exposure Value": "—"
+   "Weight": "2.3223366577",
+   "Market Value": "169395.73",
+   "Shares Held": "8604"
   },
   {
    "Name": "PERSISTENT SYSTEMS LTD",
    "Ticker": "PSYS",
    "Identifier": "BLC87W9",
-   "Weight": "2.2031132023",
-   "Market Value": "157117.89",
-   "Shares Held": "2819",
-   "Exposure Value": "—"
+   "Weight": "2.3052965285",
+   "Market Value": "168152.79",
+   "Shares Held": "2819"
   },
   {
-   "Name": "WULIANGYE YIBIN CO LTD-A",
-   "Ticker": "000858",
-   "Identifier": "BD5CPG2",
-   "Weight": "2.1975960908",
-   "Market Value": "156724.43",
-   "Shares Held": "15000",
-   "Exposure Value": "—"
+   "Name": "CHINA CONSTRUCTION BANK-A",
+   "Ticker": "601939",
+   "Identifier": "BP3R3L4",
+   "Weight": "2.3033124846",
+   "Market Value": "168008.07",
+   "Shares Held": "102400"
   },
   {
-   "Name": "YUHAN CORP",
-   "Ticker": "000100",
-   "Identifier": "6988337",
-   "Weight": "2.1931081969",
-   "Market Value": "156404.37",
-   "Shares Held": "2850",
-   "Exposure Value": "—"
+   "Name": "ENN ENERGY HOLDINGS LTD",
+   "Ticker": "2688",
+   "Identifier": "6333937",
+   "Weight": "2.3019751195",
+   "Market Value": "167910.52",
+   "Shares Held": "26675"
+  },
+  {
+   "Name": "WISTRON CORP",
+   "Ticker": "3231",
+   "Identifier": "6672481",
+   "Weight": "2.2951124006",
+   "Market Value": "167409.94",
+   "Shares Held": "28358"
+  },
+  {
+   "Name": "CHINA UNITED NETWORK-A",
+   "Ticker": "600050",
+   "Identifier": "BP3R2X9",
+   "Weight": "2.2832528304",
+   "Market Value": "166544.88",
+   "Shares Held": "259200"
+  },
+  {
+   "Name": "YEALINK NETWORK TECHNOLOGY-A",
+   "Ticker": "300628",
+   "Identifier": "BFCCR07",
+   "Weight": "2.2195383157",
+   "Market Value": "161897.42",
+   "Shares Held": "27100"
   },
   {
    "Name": "CHINA MENGNIU DAIRY CO",
    "Ticker": "2319",
    "Identifier": "B01B1L9",
-   "Weight": "2.1648012054",
-   "Market Value": "154385.62",
-   "Shares Held": "68915",
-   "Exposure Value": "—"
+   "Weight": "2.1958762070",
+   "Market Value": "160171.46",
+   "Shares Held": "68915"
   },
   {
    "Name": "CHINA TOWER CORP LTD-H",
    "Ticker": "788",
    "Identifier": "BTVMCY5",
-   "Weight": "2.1642779029",
-   "Market Value": "154348.3",
-   "Shares Held": "136708",
-   "Exposure Value": "—"
+   "Weight": "2.1935237879",
+   "Market Value": "159999.87",
+   "Shares Held": "136708"
   },
   {
    "Name": "ITC LTD",
    "Ticker": "ITC",
    "Identifier": "B0JGGP5",
-   "Weight": "2.1615279006",
-   "Market Value": "154152.18",
-   "Shares Held": "58007",
-   "Exposure Value": "—"
+   "Weight": "2.1868447768",
+   "Market Value": "159512.69",
+   "Shares Held": "58007"
   },
   {
-   "Name": "REINET INVESTMENTS SCA",
-   "Ticker": "RNI",
-   "Identifier": "BF52QF2",
-   "Weight": "2.1542949122",
-   "Market Value": "153636.35",
-   "Shares Held": "5866",
-   "Exposure Value": "—"
+   "Name": "CHINA STATE CONSTRUCTION -A",
+   "Ticker": "601668",
+   "Identifier": "BP3R2Q2",
+   "Weight": "2.1841533209",
+   "Market Value": "159316.37",
+   "Shares Held": "245100"
   },
   {
-   "Name": "HUAXIA BANK CO LTD-A",
-   "Ticker": "600015",
-   "Identifier": "BP3R2T5",
-   "Weight": "2.1502941440",
-   "Market Value": "153351.03",
-   "Shares Held": "164000",
-   "Exposure Value": "—"
+   "Name": "WULIANGYE YIBIN CO LTD-A",
+   "Ticker": "000858",
+   "Identifier": "BD5CPG2",
+   "Weight": "2.1682052932",
+   "Market Value": "158153.09",
+   "Shares Held": "15000"
   },
   {
    "Name": "MIDEA GROUP CO LTD-A",
    "Ticker": "000333",
    "Identifier": "BD5CPP1",
-   "Weight": "2.1440206837",
-   "Market Value": "152903.63",
-   "Shares Held": "12800",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "COCA-COLA FEMSA SAB DE CV",
-   "Ticker": "KOFUBL",
-   "Identifier": "BHHP0S4",
-   "Weight": "2.1439623520",
-   "Market Value": "152899.47",
-   "Shares Held": "14329",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SUN PHARMACEUTICAL INDUS",
-   "Ticker": "SUNP",
-   "Identifier": "6582483",
-   "Weight": "2.1394767017",
-   "Market Value": "152579.57",
-   "Shares Held": "8158",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "INFOSYS LTD-SP ADR",
-   "Ticker": "INFY",
-   "Identifier": "2398822",
-   "Weight": "2.1373693294",
-   "Market Value": "152429.28",
-   "Shares Held": "13807",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SUZHOU TFC OPTICAL COMMUNI-A",
-   "Ticker": "300394",
-   "Identifier": "BL5P4J3",
-   "Weight": "2.1267121590",
-   "Market Value": "151669.25",
-   "Shares Held": "3900",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "TENCENT HOLDINGS LTD",
-   "Ticker": "700",
-   "Identifier": "BMMV2K8",
-   "Weight": "2.1186155531",
-   "Market Value": "151091.83",
-   "Shares Held": "2815",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "NHPC LTD",
-   "Ticker": "NHPC",
-   "Identifier": "B233LP1",
-   "Weight": "2.1181385234",
-   "Market Value": "151057.81",
-   "Shares Held": "202732",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "HACI OMER SABANCI HOLDING",
-   "Ticker": "SAHOL",
-   "Identifier": "B03N0C7",
-   "Weight": "2.1170480294",
-   "Market Value": "150980.04",
-   "Shares Held": "85551",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "KWEICHOW MOUTAI CO LTD-A",
-   "Ticker": "600519",
-   "Identifier": "BP3R2F1",
-   "Weight": "2.1055768796",
-   "Market Value": "150161.96",
-   "Shares Held": "800",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "MPHASIS LTD",
-   "Ticker": "MPHL",
-   "Identifier": "6151593",
-   "Weight": "2.0993554411",
-   "Market Value": "149718.27",
-   "Shares Held": "6407",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ZHANGZHOU PIENTZEHUANG PHA-A",
-   "Ticker": "600436",
-   "Identifier": "BP3R7Z6",
-   "Weight": "2.0974296542",
-   "Market Value": "149580.93",
-   "Shares Held": "8500",
-   "Exposure Value": "—"
+   "Weight": "2.1622398634",
+   "Market Value": "157717.96",
+   "Shares Held": "12800"
   },
   {
    "Name": "INTERCONEXION ELECTRICA SA",
    "Ticker": "ISA",
    "Identifier": "2205706",
-   "Weight": "2.0787879141",
-   "Market Value": "148251.47",
-   "Shares Held": "17099",
-   "Exposure Value": "—"
+   "Weight": "2.1434809698",
+   "Market Value": "156349.65",
+   "Shares Held": "17099"
+  },
+  {
+   "Name": "MPHASIS LTD",
+   "Ticker": "MPHL",
+   "Identifier": "6151593",
+   "Weight": "2.1430023699",
+   "Market Value": "156314.74",
+   "Shares Held": "6407"
+  },
+  {
+   "Name": "COCA-COLA FEMSA SAB DE CV",
+   "Ticker": "KOFUBL",
+   "Identifier": "BHHP0S4",
+   "Weight": "2.1319491946",
+   "Market Value": "155508.5",
+   "Shares Held": "14329"
+  },
+  {
+   "Name": "YUHAN CORP",
+   "Ticker": "000100",
+   "Identifier": "6988337",
+   "Weight": "2.1275053860",
+   "Market Value": "155184.36",
+   "Shares Held": "2850"
+  },
+  {
+   "Name": "HUAXIA BANK CO LTD-A",
+   "Ticker": "600015",
+   "Identifier": "BP3R2T5",
+   "Weight": "2.1165813544",
+   "Market Value": "154387.54",
+   "Shares Held": "164000"
   },
   {
    "Name": "HANKOOK TIRE & TECHNOLOGY CO",
    "Ticker": "161390",
    "Identifier": "B7T5KQ0",
-   "Weight": "2.0714194727",
-   "Market Value": "147725.98",
-   "Shares Held": "3330",
-   "Exposure Value": "—"
+   "Weight": "2.1117584772",
+   "Market Value": "154035.75",
+   "Shares Held": "3330"
   },
   {
-   "Name": "GULF DEVELOPMENT PCL-NVDR",
-   "Ticker": "GULF-R",
-   "Identifier": "BMY3G88",
-   "Weight": "2.0577649512",
-   "Market Value": "146752.19",
-   "Shares Held": "83141",
-   "Exposure Value": "—"
+   "Name": "REINET INVESTMENTS SCA",
+   "Ticker": "RNI",
+   "Identifier": "BF52QF2",
+   "Weight": "2.1036143280",
+   "Market Value": "153441.7",
+   "Shares Held": "5866"
   },
   {
-   "Name": "HDFC ASSET MANAGEMENT CO LTD",
-   "Ticker": "HDFCAMC",
-   "Identifier": "BG0R3M5",
-   "Weight": "2.0461591899",
-   "Market Value": "145924.51",
-   "Shares Held": "6088",
-   "Exposure Value": "—"
+   "Name": "NHPC LTD",
+   "Ticker": "NHPC",
+   "Identifier": "B233LP1",
+   "Weight": "2.0972084108",
+   "Market Value": "152974.44",
+   "Shares Held": "202732"
+  },
+  {
+   "Name": "TENCENT HOLDINGS LTD",
+   "Ticker": "700",
+   "Identifier": "BMMV2K8",
+   "Weight": "2.0889698029",
+   "Market Value": "152373.5",
+   "Shares Held": "2815"
+  },
+  {
+   "Name": "ZHANGZHOU PIENTZEHUANG PHA-A",
+   "Ticker": "600436",
+   "Identifier": "BP3R7Z6",
+   "Weight": "2.0864058457",
+   "Market Value": "152186.48",
+   "Shares Held": "8500"
+  },
+  {
+   "Name": "KWEICHOW MOUTAI CO LTD-A",
+   "Ticker": "600519",
+   "Identifier": "BP3R2F1",
+   "Weight": "2.0698739290",
+   "Market Value": "150980.61",
+   "Shares Held": "800"
   },
   {
    "Name": "TSINGTAO BREWERY CO LTD-H",
    "Ticker": "168",
    "Identifier": "6905808",
-   "Weight": "2.0400416547",
-   "Market Value": "145488.23",
-   "Shares Held": "29051",
-   "Exposure Value": "—"
+   "Weight": "2.0634678746",
+   "Market Value": "150513.34",
+   "Shares Held": "29051"
+  },
+  {
+   "Name": "GULF DEVELOPMENT PCL-NVDR",
+   "Ticker": "GULF-R",
+   "Identifier": "BMY3G88",
+   "Weight": "2.0563404246",
+   "Market Value": "149993.45",
+   "Shares Held": "83141"
+  },
+  {
+   "Name": "SUN PHARMACEUTICAL INDUS",
+   "Ticker": "SUNP",
+   "Identifier": "6582483",
+   "Weight": "2.0349431310",
+   "Market Value": "148432.69",
+   "Shares Held": "8158"
+  },
+  {
+   "Name": "INFOSYS LTD-SP ADR",
+   "Ticker": "INFY",
+   "Identifier": "2398822",
+   "Weight": "2.0310553812",
+   "Market Value": "148149.11",
+   "Shares Held": "13807"
+  },
+  {
+   "Name": "SUNDARAM FINANCE LTD",
+   "Ticker": "SUF",
+   "Identifier": "B0L4LR4",
+   "Weight": "2.0195558234",
+   "Market Value": "147310.31",
+   "Shares Held": "3464"
+  },
+  {
+   "Name": "HACI OMER SABANCI HOLDING",
+   "Ticker": "SAHOL",
+   "Identifier": "B03N0C7",
+   "Weight": "1.9848338216",
+   "Market Value": "144777.62",
+   "Shares Held": "85551"
   },
   {
    "Name": "PIDILITE INDUSTRIES LTD",
    "Ticker": "PIDI",
    "Identifier": "B0JJV59",
-   "Weight": "2.0071117371",
-   "Market Value": "143139.79",
-   "Shares Held": "9415",
-   "Exposure Value": "—"
+   "Weight": "1.9775362362",
+   "Market Value": "144245.32",
+   "Shares Held": "9415"
   },
   {
    "Name": "LTM LTD",
    "Ticker": "LTM",
    "Identifier": "BD6F8V6",
-   "Weight": "1.9855985637",
-   "Market Value": "141605.55",
-   "Shares Held": "3403",
-   "Exposure Value": "—"
+   "Weight": "1.9629636862",
+   "Market Value": "143182.37",
+   "Shares Held": "3403"
   },
   {
-   "Name": "NAURA TECHNOLOGY GROUP CO-A",
-   "Ticker": "002371",
-   "Identifier": "BD5LYF1",
-   "Weight": "1.9385746740",
-   "Market Value": "138251.98",
-   "Shares Held": "1505",
-   "Exposure Value": "—"
+   "Name": "HDFC ASSET MANAGEMENT CO LTD",
+   "Ticker": "HDFCAMC",
+   "Identifier": "BG0R3M5",
+   "Weight": "1.9521767500",
+   "Market Value": "142395.55",
+   "Shares Held": "6088"
+  },
+  {
+   "Name": "SUZHOU TFC OPTICAL COMMUNI-A",
+   "Ticker": "300394",
+   "Identifier": "BL5P4J3",
+   "Weight": "1.8778329588",
+   "Market Value": "136972.77",
+   "Shares Held": "3900"
   },
   {
    "Name": "LUZHOU LAOJIAO CO LTD-A",
    "Ticker": "000568",
    "Identifier": "BD5CMM7",
-   "Weight": "1.9347043107",
-   "Market Value": "137975.96",
-   "Shares Held": "12800",
-   "Exposure Value": "—"
+   "Weight": "1.8748501753",
+   "Market Value": "136755.2",
+   "Shares Held": "12800"
+  },
+  {
+   "Name": "NAURA TECHNOLOGY GROUP CO-A",
+   "Ticker": "002371",
+   "Identifier": "BD5LYF1",
+   "Weight": "1.8314823926",
+   "Market Value": "133591.87",
+   "Shares Held": "1505"
   },
   {
    "Name": "POLYUS PJSC-REG S-GDR",
@@ -442,8 +378,7 @@
    "Identifier": "BYXL3S6",
    "Weight": "0.0000000000",
    "Market Value": "0",
-   "Shares Held": "3949",
-   "Exposure Value": "—"
+   "Shares Held": "3949"
   },
   {
    "Name": "ROSNEFT OIL CO PJSC-REGS GDR",
@@ -451,17 +386,15 @@
    "Identifier": "B17FSC2",
    "Weight": "0.0000000000",
    "Market Value": "0",
-   "Shares Held": "25159",
-   "Exposure Value": "—"
+   "Shares Held": "25159"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "28452.15",
-   "Shares Held": "28452.15",
-   "Exposure Value": "—"
+   "Market Value": "29543.91",
+   "Shares Held": "29543.91"
   }
  ]
 }

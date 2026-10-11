@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ANEW&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/ANEW-psdlyhld.csv, as of Oct 02 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ANEW-psdlyhld.csv, as of Oct 09 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ANEW-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-04T03:27:00Z",
+  "catalogReadAt": "2026-10-11T03:17:19Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$53.98",
-  "value": 53.98,
-  "asOfDate": "Oct 02 2026"
+  "display": "$54.72",
+  "value": 54.72,
+  "asOfDate": "Oct 09 2026"
  },
  "marketPrice": {
-  "display": "$53.98",
-  "value": 53.98,
-  "asOfDate": "Oct 02 2026"
+  "display": "$54.68",
+  "value": 54.68,
+  "asOfDate": "Oct 09 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "-0.07%",
+  "value": -0.0731,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$8.10 M",
-  "value": 8097728.9845,
-  "asOfDate": "Oct 02 2026",
+  "display": "$8.21 M",
+  "value": 8208444.7226,
+  "asOfDate": "Oct 09 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,7 +76,7 @@
   "distributionYieldText": null,
   "yield12M": 0.5,
   "yield12MText": "0.50%",
-  "indicatedYield": 0.2222,
+  "indicatedYield": 0.2192,
   "indicatedYieldText": "0.22%",
   "secYield": 0.44,
   "secYieldText": "0.44%",
@@ -85,83 +85,83 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Aug 31 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Oct 16 2020",
-   "mo1": 5.57,
-   "mo3": 6.3,
-   "mo6": 10.58,
-   "ytd": 8.91,
-   "yr1": 8.17,
-   "yr3": 15.22,
-   "yr5": 3.61,
+   "mo1": -1.09,
+   "mo3": 4.93,
+   "mo6": 19.41,
+   "ytd": 7.73,
+   "yr1": 4.91,
+   "yr3": 17.17,
+   "yr5": 4.71,
    "yr10": null,
-   "sinceInception": 6.21,
-   "mo1Text": "5.57%",
-   "ytdText": "8.91%",
-   "yr1Text": "8.17%",
-   "yr3Text": "15.22%",
-   "yr5Text": "3.61%",
+   "sinceInception": 5.92,
+   "mo1Text": "-1.09%",
+   "ytdText": "7.73%",
+   "yr1Text": "4.91%",
+   "yr3Text": "17.17%",
+   "yr5Text": "4.71%",
    "yr10Text": "—",
-   "sinceInceptionText": "6.21%",
+   "sinceInceptionText": "5.92%",
    "marketPrice": {
-    "asOfDate": "Aug 31 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Oct 16 2020",
-    "mo1": 5.32,
-    "mo3": 6.12,
-    "mo6": 10.61,
-    "ytd": 8.69,
-    "yr1": 7.77,
-    "yr3": 15.14,
-    "yr5": 3.57,
+    "mo1": -0.83,
+    "mo3": 4.83,
+    "mo6": 19.2,
+    "ytd": 7.8,
+    "yr1": 5.04,
+    "yr3": 17.25,
+    "yr5": 4.69,
     "yr10": null,
-    "sinceInception": 6.13,
-    "mo1Text": "5.32%",
-    "ytdText": "8.69%",
-    "yr1Text": "7.77%",
-    "yr3Text": "15.14%",
-    "yr5Text": "3.57%",
+    "sinceInception": 5.9,
+    "mo1Text": "-0.83%",
+    "ytdText": "7.80%",
+    "yr1Text": "5.04%",
+    "yr3Text": "17.25%",
+    "yr5Text": "4.69%",
     "yr10Text": "—",
-    "sinceInceptionText": "6.13%"
+    "sinceInceptionText": "5.90%"
    }
   },
   "quarterEnd": {
-   "asOfDate": "Jun 30 2026",
+   "asOfDate": "Sep 30 2026",
    "inceptionDate": "Oct 16 2020",
-   "mo1": 0.21,
-   "mo3": 13.8,
-   "mo6": 2.67,
-   "ytd": 2.67,
-   "yr1": 2.98,
-   "yr3": 12.75,
-   "yr5": 3.02,
+   "mo1": -1.09,
+   "mo3": 4.93,
+   "mo6": 19.41,
+   "ytd": 7.73,
+   "yr1": 4.91,
+   "yr3": 17.17,
+   "yr5": 4.71,
    "yr10": null,
-   "sinceInception": 5.3,
-   "mo1Text": "0.21%",
-   "ytdText": "2.67%",
-   "yr1Text": "2.98%",
-   "yr3Text": "12.75%",
-   "yr5Text": "3.02%",
+   "sinceInception": 5.92,
+   "mo1Text": "-1.09%",
+   "ytdText": "7.73%",
+   "yr1Text": "4.91%",
+   "yr3Text": "17.17%",
+   "yr5Text": "4.71%",
    "yr10Text": "—",
-   "sinceInceptionText": "5.30%",
+   "sinceInceptionText": "5.92%",
    "marketPrice": {
-    "asOfDate": "Jun 30 2026",
+    "asOfDate": "Sep 30 2026",
     "inceptionDate": "Oct 16 2020",
-    "mo1": 0.39,
-    "mo3": 13.71,
-    "mo6": 2.83,
-    "ytd": 2.83,
-    "yr1": 3.19,
-    "yr3": 12.78,
-    "yr5": 3.02,
+    "mo1": -0.83,
+    "mo3": 4.83,
+    "mo6": 19.2,
+    "ytd": 7.8,
+    "yr1": 5.04,
+    "yr3": 17.25,
+    "yr5": 4.69,
     "yr10": null,
-    "sinceInception": 5.29,
-    "mo1Text": "0.39%",
-    "ytdText": "2.83%",
-    "yr1Text": "3.19%",
-    "yr3Text": "12.78%",
-    "yr5Text": "3.02%",
+    "sinceInception": 5.9,
+    "mo1Text": "-0.83%",
+    "ytdText": "7.80%",
+    "yr1Text": "5.04%",
+    "yr3Text": "17.25%",
+    "yr5Text": "4.69%",
     "yr10Text": "—",
-    "sinceInceptionText": "5.29%"
+    "sinceInceptionText": "5.90%"
    }
   }
  },
@@ -365,9 +365,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 148,
-  "asOfDate": "Oct 02 2026",
-  "asOf": "2026-10-02",
+  "totalRows": 147,
+  "asOfDate": "Oct 09 2026",
+  "asOf": "2026-10-09",
   "headers": [
    "Name",
    "Ticker",
@@ -376,7 +376,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/ANEW-psdlyhld.csv, as of Oct 02 2026)",
+  "source": "official ProShares daily holdings download (ByFund/ANEW-psdlyhld.csv, as of Oct 09 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -384,9 +384,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1500,
-  "asOf": "Oct 02 2026",
-  "asOfDate": "Oct 02 2026",
+  "totalRows": 1505,
+  "asOf": "Oct 09 2026",
+  "asOfDate": "Oct 09 2026",
   "headers": [
    "Date",
    "NAV",
@@ -427,23 +427,23 @@
     "rows": [
      {
       "Company - Digital Consumer": "META PLATFORMS INC-CLASS A",
-      "Weight": 2.256863
+      "Weight": 2.250184
      },
      {
       "Company - Digital Consumer": "AMAZON.COM INC",
-      "Weight": 1.814002
-     },
-     {
-      "Company - Digital Consumer": "TENCENT HOLDINGS LTD",
-      "Weight": 1.710152
+      "Weight": 1.9119210000000002
      },
      {
       "Company - Digital Consumer": "NINTENDO CO LTD",
-      "Weight": 1.687027
+      "Weight": 1.722557
      },
      {
-      "Company - Digital Consumer": "ALIBABA GROUP HOLDING LTD",
-      "Weight": 1.462728
+      "Company - Digital Consumer": "TENCENT HOLDINGS LTD",
+      "Weight": 1.7013989999999999
+     },
+     {
+      "Company - Digital Consumer": "EBAY INC",
+      "Weight": 1.513063
      }
     ]
    },
@@ -451,24 +451,24 @@
     "label": "Fund Top Food Revolution Weightings",
     "rows": [
      {
-      "Company - Food Revolution": "DEERE & CO",
-      "Weight": 2.299209
-     },
-     {
       "Company - Food Revolution": "DOORDASH INC - A",
-      "Weight": 2.289206
-     },
-     {
-      "Company - Food Revolution": "SYMRISE AG",
-      "Weight": 2.168629
+      "Weight": 2.401147
      },
      {
       "Company - Food Revolution": "INTL FLAVORS & FRAGRANCES",
-      "Weight": 2.141563
+      "Weight": 2.218782
+     },
+     {
+      "Company - Food Revolution": "SYMRISE AG",
+      "Weight": 2.157361
+     },
+     {
+      "Company - Food Revolution": "DEERE & CO",
+      "Weight": 2.103017
      },
      {
       "Company - Food Revolution": "KERRY GROUP PLC-A",
-      "Weight": 2.069817
+      "Weight": 2.05732
      }
     ]
    },
@@ -477,23 +477,23 @@
     "rows": [
      {
       "Company - Future of Work": "MICROSOFT CORP",
-      "Weight": 2.3200350000000003
+      "Weight": 2.418465
      },
      {
       "Company - Future of Work": "APPLE INC",
-      "Weight": 2.0893129999999998
+      "Weight": 2.128572
      },
      {
       "Company - Future of Work": "NVIDIA CORP",
-      "Weight": 1.9848709999999998
+      "Weight": 1.963708
      },
      {
       "Company - Future of Work": "ADOBE INC",
-      "Weight": 1.743612
+      "Weight": 1.794562
      },
      {
       "Company - Future of Work": "ALPHABET INC-CL A",
-      "Weight": 1.658654
+      "Weight": 1.713714
      }
     ]
    },
@@ -501,24 +501,24 @@
     "label": "Fund Top Genomics & Telehealth Weightings",
     "rows": [
      {
+      "Company - Genomics & Telehealth": "MODERNA INC",
+      "Weight": 2.776817
+     },
+     {
       "Company - Genomics & Telehealth": "DANAHER CORP",
-      "Weight": 2.397702
+      "Weight": 2.485139
      },
      {
       "Company - Genomics & Telehealth": "ABBVIE INC",
-      "Weight": 2.301214
-     },
-     {
-      "Company - Genomics & Telehealth": "MODERNA INC",
-      "Weight": 2.285535
+      "Weight": 2.441976
      },
      {
       "Company - Genomics & Telehealth": "ABBOTT LABORATORIES",
-      "Weight": 2.054169
+      "Weight": 2.118648
      },
      {
-      "Company - Genomics & Telehealth": "EDWARDS LIFESCIENCES CORP",
-      "Weight": 1.787664
+      "Company - Genomics & Telehealth": "INTUITIVE SURGICAL INC",
+      "Weight": 1.812956
      }
     ]
    },
@@ -527,63 +527,63 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 74.637241
+      "Weight": 74.534193
      },
      {
       "Country": "Switzerland",
-      "Weight": 4.042248
+      "Weight": 4.096992
      },
      {
       "Country": "China",
-      "Weight": 3.927391
+      "Weight": 3.9416510000000002
      },
      {
       "Country": "Germany",
-      "Weight": 3.772979
+      "Weight": 3.727897
      },
      {
       "Country": "Japan",
-      "Weight": 2.779419
+      "Weight": 2.8222750000000003
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.7178
+      "Weight": 2.693892
      },
      {
       "Country": "Ireland",
-      "Weight": 2.0790010000000003
+      "Weight": 2.066573
      },
      {
       "Country": "Other",
-      "Weight": 1.600224
+      "Weight": 1.7572709999999998
      },
      {
       "Country": "South Africa",
-      "Weight": 1.4648400000000001
+      "Weight": 1.5125140000000001
      },
      {
       "Country": "South Korea",
-      "Weight": 1.2138609999999999
+      "Weight": 1.121309
      },
      {
       "Country": "France",
-      "Weight": 0.650693
+      "Weight": 0.6042310000000001
      },
      {
       "Country": "Singapore",
-      "Weight": 0.526869
+      "Weight": 0.536239
      },
      {
       "Country": "Australia",
-      "Weight": 0.344202
-     },
-     {
-      "Country": "Israel",
-      "Weight": 0.126288
+      "Weight": 0.343641
      },
      {
       "Country": "Canada",
-      "Weight": 0.116942
+      "Weight": 0.123023
+     },
+     {
+      "Country": "Israel",
+      "Weight": 0.1183
      }
     ]
    },
@@ -592,59 +592,59 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 75.43393627045815
+      "Weight": 75.30974671070075
      },
      {
       "Currency": "EUR",
-      "Weight": 6.502673660966746
+      "Weight": 6.3987003149059625
      },
      {
       "Currency": "CHF",
-      "Weight": 4.042248288013781
+      "Weight": 4.096992141224349
      },
      {
       "Currency": "HKD",
-      "Weight": 3.8116387406088013
+      "Weight": 3.827136783726807
      },
      {
       "Currency": "JPY",
-      "Weight": 2.7794191397694035
+      "Weight": 2.82227489650067
      },
      {
       "Currency": "TWD",
-      "Weight": 2.7178003578158942
+      "Weight": 2.6938920661762724
      },
      {
       "Currency": "Other",
-      "Weight": 1.600223703654204
+      "Weight": 1.7572710894304875
      },
      {
       "Currency": "ZAR",
-      "Weight": 1.4648400141481437
+      "Weight": 1.5125136692953984
      },
      {
       "Currency": "KRW",
-      "Weight": 0.8327983983696391
+      "Weight": 0.7723837753632824
      },
      {
       "Currency": "AUD",
-      "Weight": 0.34420245397037913
-     },
-     {
-      "Currency": "ILS",
-      "Weight": 0.1262879261959343
+      "Weight": 0.3436408580165646
      },
      {
       "Currency": "CAD",
-      "Weight": 0.1169424626179224
+      "Weight": 0.12302315377698539
+     },
+     {
+      "Currency": "ILS",
+      "Weight": 0.11830008873289877
      },
      {
       "Currency": "CNY",
-      "Weight": 0.11575176571209103
+      "Weight": 0.11451407372359916
      },
      {
       "Currency": "SGD",
-      "Weight": 0.11123681769891773
+      "Weight": 0.10961037842597385
      }
     ]
    }

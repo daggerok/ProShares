@@ -2,7 +2,7 @@
  "ticker": "ISPY",
  "page": 3,
  "pageSize": 250,
- "totalRows": 513,
+ "totalRows": 512,
  "headers": [
   "Name",
   "Ticker",
@@ -14,29 +14,11 @@
  ],
  "rows": [
   {
-   "Name": "NORWEGIAN CRUISE LINE HOLDIN",
-   "Ticker": "NCLH",
-   "Identifier": "B9CGTC3",
-   "Weight": "0.0088074284",
-   "Market Value": "102876.3",
-   "Shares Held": "6795",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "MOSAIC CO/THE",
-   "Ticker": "MOS",
-   "Identifier": "B3NPHP6",
-   "Weight": "0.0084870732",
-   "Market Value": "99134.35",
-   "Shares Held": "4705",
-   "Exposure Value": "—"
-  },
-  {
    "Name": "SMITH (A.O.) CORP",
    "Ticker": "AOS",
    "Identifier": "2816023",
-   "Weight": "0.0078950160",
-   "Market Value": "92218.75",
+   "Weight": "0.0077799131",
+   "Market Value": "91617.5",
    "Shares Held": "1625",
    "Exposure Value": "—"
   },
@@ -44,35 +26,44 @@
    "Name": "DAVITA INC",
    "Ticker": "DVA",
    "Identifier": "2898087",
-   "Weight": "0.0076948830",
-   "Market Value": "89881.07",
+   "Weight": "0.0076563796",
+   "Market Value": "90162.75",
    "Shares Held": "503",
    "Exposure Value": "—"
   },
   {
-   "Name": "HORMEL FOODS CORP",
-   "Ticker": "HRL",
-   "Identifier": "2437264",
-   "Weight": "0.0074789211",
-   "Market Value": "87358.5",
-   "Shares Held": "4314",
+   "Name": "MOSAIC CO/THE",
+   "Ticker": "MOS",
+   "Identifier": "B3NPHP6",
+   "Weight": "0.0074873050",
+   "Market Value": "88171.7",
+   "Shares Held": "4705",
    "Exposure Value": "—"
   },
   {
    "Name": "ERIE INDEMNITY COMPANY-CL A",
    "Ticker": "ERIE",
    "Identifier": "2311711",
-   "Weight": "0.0072390445",
-   "Market Value": "84556.59",
+   "Weight": "0.0072591915",
+   "Market Value": "85485.4",
    "Shares Held": "385",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HORMEL FOODS CORP",
+   "Ticker": "HRL",
+   "Identifier": "2437264",
+   "Weight": "0.0070299368",
+   "Market Value": "82785.66",
+   "Shares Held": "4314",
    "Exposure Value": "—"
   },
   {
    "Name": "WYNN RESORTS LTD",
    "Ticker": "WYNN",
    "Identifier": "2963811",
-   "Weight": "0.0070613974",
-   "Market Value": "82481.56",
+   "Weight": "0.0069367307",
+   "Market Value": "81688.05",
    "Shares Held": "1087",
    "Exposure Value": "—"
   },
@@ -80,17 +71,17 @@
    "Name": "MGM RESORTS INTERNATIONAL",
    "Ticker": "MGM",
    "Identifier": "2547419",
-   "Weight": "0.0068028325",
-   "Market Value": "79461.36",
+   "Weight": "0.0064797770",
+   "Market Value": "76306.89",
    "Shares Held": "2607",
    "Exposure Value": "—"
   },
   {
-   "Name": "PARAMOUNT SKYDANCE CL B",
-   "Ticker": "PSKY",
+   "Name": "SKYDANCE CORP",
+   "Ticker": "SKYD",
    "Identifier": "BSNMNQ5",
-   "Weight": "0.0065674976",
-   "Market Value": "76712.5",
+   "Weight": "0.0062810798",
+   "Market Value": "73967",
    "Shares Held": "8075",
    "Exposure Value": "—"
   },
@@ -98,8 +89,8 @@
    "Name": "BROWN-FORMAN CORP-CLASS B",
    "Ticker": "BF/B",
    "Identifier": "2146838",
-   "Weight": "0.0058744852",
-   "Market Value": "68617.68",
+   "Weight": "0.0058780596",
+   "Market Value": "69220.97",
    "Shares Held": "2623",
    "Exposure Value": "—"
   },
@@ -107,8 +98,8 @@
    "Name": "NEWS CORP - CLASS B",
    "Ticker": "NWS",
    "Identifier": "BBGVT51",
-   "Weight": "0.0047689214",
-   "Market Value": "55704",
+   "Weight": "0.0047840383",
+   "Market Value": "56337.6",
    "Shares Held": "1760",
    "Exposure Value": "—"
   },
@@ -126,8 +117,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "32633821.19",
-   "Shares Held": "32633821.19",
+   "Market Value": "31315356.71",
+   "Shares Held": "31315356.71",
    "Exposure Value": "—"
   }
  ]
