@@ -20,12 +20,14 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     requestSleepSeconds: 'REQUEST_SLEEP', categories: 'CATEGORY',
     aumRange: 'AUM', terRange: 'TER', dividendYieldRange: 'DIVIDEND_YIELD', secYieldRange: 'SEC_YIELD',
     performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
-    skipVanEck: 'SKIP_VANECK',
+    skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
     skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
+    skipGlobalX: 'SKIP_GLOBALX', skipNorthernTrust: 'SKIP_NORTHERNTRUST',
   };
-  const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
+  const range = (v: any): string => typeof v === 'string' ? v : v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
   for (const [key, value] of Object.entries(config)) {
-    const name = aliases[key] ?? key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
+    if (['proxyGapMs', 'fetchTimeoutMs', 'retryDelayMs'].includes(key)) continue;
+    const name = aliases[key] ?? (/^[A-Z0-9_]+$/.test(key) ? key : key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase());
     if (name === 'PERFORMANCE' || name === 'TOTAL_RETURN') {
       for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y']) values.set(`${name}_${period}`, range(value?.[period]));
     } else if (['AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD'].includes(name)) {
@@ -40,13 +42,18 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     return (ai < 0 ? first.length : ai) - (bi < 0 ? first.length : bi) || a.localeCompare(b);
   });
 }
+function outputConfigValue(key: string, value: string): string {
+  if (/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key)) return '<redacted>';
+  if (key === 'TICKERS' && ['', 'null', 'undefined'].includes(value)) return 'all';
+  return outputClean(value);
+}
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${outputConfigValue(key, value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
-    /^(TICKERS|CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
+    /^(CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
     !['', ':', 'null', 'all'].includes(value));
 }
 function outputPrintFilter(selected: number, total: number, deferred = false): void {
@@ -78,18 +85,29 @@ async function outputInspectFund(root: URL | string, ticker: string): Promise<{ 
 }
 const outputCount = (value: any): unknown => typeof value === 'number' ? value : Array.isArray(value) ? value.length : value?.totalRows ?? value?.rows?.length ?? null;
 const outputScalar = (value: any): any => value && typeof value === 'object' ? value.display ?? value.value ?? null : value;
+const outputUnits: Record<string, number> = { K: 1e3, M: 1e6, B: 1e9, T: 1e12, THOUSAND: 1e3, MILLION: 1e6, BILLION: 1e9, TRILLION: 1e12 };
 function outputMoney(value: any): string {
-  const raw = outputScalar(value);
+  const raw = value && typeof value === 'object' && typeof value.value === 'number' && Number.isFinite(value.value) ? value.value : outputScalar(value);
   if (raw === null || raw === undefined || raw === '—' || raw === '--') return 'null';
   const text = String(raw).replace(/[$,\s]/g, '');
-  const match = text.match(/^([+-]?[\d.]+)([KMBT])?$/i);
+  const match = text.match(/^([+-]?[\d.]+)(K|M|B|T|Thousand|Million|Billion|Trillion)?$/i);
   if (!match) return outputClean(raw);
-  const number = Number(match[1]) * ({ K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[match[2]?.toUpperCase() as 'K' | 'M' | 'B' | 'T'] ?? 1);
+  const number = Number(match[1]) * (outputUnits[match[2]?.toUpperCase() ?? ''] ?? 1);
   if (!Number.isFinite(number)) return 'null';
   for (const [unit, scale] of [['T', 1e12], ['B', 1e9], ['M', 1e6], ['K', 1e3]] as const) {
     if (Math.abs(number) >= scale) return `$${(number / scale).toFixed(1)}${unit}`;
   }
   return `$${number.toFixed(2)}`;
+}
+/** Yields: rounded to 2 decimals without trailing zeros; placeholders are omitted like null. */
+function outputPercent(value: any): unknown {
+  const raw = outputScalar(value);
+  if (raw === null || raw === undefined) return null;
+  if (typeof raw === 'number') return Number.isFinite(raw) ? Number(raw.toFixed(2)) : null;
+  const text = String(raw).trim().replace(/%$/, '').trim();
+  if (['', '-', '—', '--', 'n/a'].includes(text.toLowerCase())) return null;
+  const number = Number(text.replace(/,/g, ''));
+  return Number.isFinite(number) ? Number(number.toFixed(2)) : outputClean(raw);
 }
 function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
   const width = Math.max(2, String(total).length);
@@ -110,21 +128,34 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
     field('netAssets', outputMoney(data.netAssets ?? data.aum)),
     field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
-    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
-    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('div', outputPercent(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
   return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
+  const tally = new Map<string, number>();
   return {
     before: (ticker: string) => outputInspectFund(root, ticker),
     async result(ticker: string, before: { digest: string }, status?: string, reason?: unknown, extra: any = {}) {
       const after = await outputInspectFund(root, ticker);
-      console.log(outputFundLine(++completed, total, ticker, status ?? (before.digest === after.digest ? 'unchanged' : 'updated'), { ...after.meta, ...extra }, reason));
+      const final = status ?? (before.digest === after.digest ? 'unchanged' : 'updated');
+      tally.set(final, (tally.get(final) ?? 0) + 1);
+      console.log(outputFundLine(++completed, total, ticker, final, { ...after.meta, ...extra }, reason));
+    },
+    /** First [ done ] line: the statuses of every fund line this reporter printed. */
+    summary(startedAt: number): string {
+      const order = ['updated', 'unchanged', 'kept', 'skipped', 'failed'];
+      const statuses = [...order, ...[...tally.keys()].filter(status => !order.includes(status))];
+      return `[ done     ] ${completed} fund${completed === 1 ? '' : 's'}: ${statuses.map(status => `${tally.get(status) ?? 0} ${status}`).join(', ')} in ${((Date.now() - startedAt) / 1000).toFixed(1)}s`;
     },
   };
+}
+/** Second [ done ] line: published totals. */
+function outputCounts(funds: number, holdings: number, history: number): string {
+  return `[ done     ] counts: ${funds.toLocaleString('en-US')} funds / ${holdings.toLocaleString('en-US')} holdings rows / ${history.toLocaleString('en-US')} history rows`;
 }
 
 /**
@@ -2376,7 +2407,7 @@ async function loadCatalogs(config: UpdaterConfig, stats: Stats): Promise<{ fund
       funds.push(...parsed);
       console.log(`[ catalog  ] ${parsed.length} ${page.kind} funds from ${page.url}`);
     } catch (error) {
-      console.error(`Catalog: ${page.kind} finder page failed — ${errorMessage(error)}`);
+      console.error(`[ catalog  ] ${page.kind} finder page failed — ${errorMessage(error)}`);
       stats.failed++;
     }
   }
@@ -2441,10 +2472,12 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   // --- catalog --------------------------------------------------------------
   let catalog: CatalogFund[] = [];
   let catalogReadAt = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+  let catalogSource = 'previously published index';
   if (!config.offlineSeed) {
     const loaded = await loadCatalogs(config, stats);
     catalog = loaded.funds;
     catalogReadAt = loaded.catalogReadAt;
+    if (catalog.length) catalogSource = 'ProShares strategic + geared finder pages';
   }
   if (!catalog.length) {
     const fallback = Object.values(previousFunds).map(fund => ({
@@ -2483,7 +2516,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       holdingsFile = parseHoldingsFile(text);
       console.log(`[ holdings ] ${holdingsFile.funds.size} funds as of ${holdingsFile.asOf} from ${HOLDINGS_ALL_URL}`);
     } catch (error) {
-      console.error(`Holdings file failed — ${errorMessage(error)}`);
+      console.error(`[ holdings ] holdings file failed — ${errorMessage(error)}`);
       stats.failed++;
     }
     try {
@@ -2491,7 +2524,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       performance = parsePerformanceFile(text);
       console.log(`[ perf     ] ${performance.size} rows from ${PERFORMANCE_URL}`);
     } catch (error) {
-      console.error(`Performance file failed — ${errorMessage(error)}`);
+      console.error(`[ perf     ] performance file failed — ${errorMessage(error)}`);
       stats.failed++;
     }
     try {
@@ -2499,7 +2532,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       splits = parseSplitsFile(text);
       console.log(`[ splits   ] ${splits.size} symbols from ${SPLITS_URL}`);
     } catch (error) {
-      console.error(`Splits file failed — ${errorMessage(error)}`);
+      console.error(`[ splits   ] splits file failed — ${errorMessage(error)}`);
       stats.failed++;
     }
     {
@@ -2517,10 +2550,12 @@ export async function main(config?: UpdaterConfig): Promise<void> {
           console.log(`[ exchange ] ${exchanges.size} symbols resolved`);
         }
       } catch (error) {
-        console.error(`Symbol directory failed — ${errorMessage(error)}`);
+        console.error(`[ exchange ] symbol directory failed — ${errorMessage(error)}`);
       }
     }
   }
+
+  console.log(`[ catalog  ] ${catalog.length} ProShares ETFs (${catalogSource})`);
 
   const loadNavHistoryAll = async (): Promise<Map<string, NavRow[]>> => {
     if (!navHistoryAllLoaded) {
@@ -2547,7 +2582,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
             return acc;
           }, new Map<string, NavRow[]>());
       } catch (error) {
-        console.error(`Bulk NAV history failed — ${errorMessage(error)}`);
+        outputNote(`[ history  ] bulk NAV history failed — ${errorMessage(error)}`);
       }
     }
     return navHistoryAll;
@@ -2579,7 +2614,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   }
   let fundFailures = 0;
   const completed: string[] = [];
-  outputPrintFilter(beforeBatch, catalog.length, outputHasOutputFilters(config));
+  outputPrintFilter(beforeBatch, catalog.length, outputHasOutputFilters({ ...config, tickers: [] }));
   const output = outputCreateReporter(API_ROOT, candidates.length);
 
   // --- per-fund processing --------------------------------------------------
@@ -2850,11 +2885,10 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   }
   await writeRawSamples(config);
 
-  console.log(
-    `Done. updated=${stats.updated} unchanged=${stats.unchanged} filtered=${stats.filtered} skipped=${stats.skipped} failed=${stats.failed} · funds=${counts.funds} holdings=${counts.holdings} history=${counts.history} · ${formatElapsed(Date.now() - runStartedAt)}`,
-  );
+  if (stats.failed > 0) console.warn(`[ failed   ] ${stats.failed} step(s) failed; previously published files were kept for those funds`);
+  console.log(output.summary(runStartedAt));
+  console.log(outputCounts(counts.funds, counts.holdings, counts.history));
   if (candidates.length > 0 && fundFailures === completed.length) process.exitCode = 1;
-  if (stats.failed > 0) console.warn(`[ done     ] ${stats.failed} step(s) failed; previously published files were kept for those funds.`);
 }
 
 if (import.meta.main) {
