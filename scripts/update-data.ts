@@ -2612,7 +2612,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   }
   let fundFailures = 0;
   const completed: string[] = [];
-  outputPrintFilter(beforeBatch, catalog.length, outputHasOutputFilters(config));
+  outputPrintFilter(beforeBatch, catalog.length, outputHasOutputFilters({ ...config, tickers: [] }));
   const output = outputCreateReporter(API_ROOT, candidates.length);
 
   // --- per-fund processing --------------------------------------------------
