@@ -2,7 +2,7 @@
  "ticker": "NOBL",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3270,
+ "totalRows": 3271,
  "headers": [
   "Date",
   "NAV",
@@ -1629,6 +1629,12 @@
    "NAV": "55.0625",
    "Shares Outstanding": "202300000",
    "Total Net Assets": "11139143860.125"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "55.5075",
+   "Shares Outstanding": "202300000",
+   "Total Net Assets": "11229167361.015"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "QQXL",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 292,
+ "totalRows": 293,
  "headers": [
   "Date",
   "NAV",
@@ -1761,6 +1761,12 @@
    "NAV": "60.8376",
    "Shares Outstanding": "100000",
    "Total Net Assets": "6083820.8376"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "59.9324",
+   "Shares Outstanding": "100000",
+   "Total Net Assets": "5993299.9324"
   }
  ]
 }

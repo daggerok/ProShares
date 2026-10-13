@@ -2,7 +2,7 @@
  "ticker": "TWM",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4961,
+ "totalRows": 4962,
  "headers": [
   "Date",
   "NAV",
@@ -5775,6 +5775,12 @@
    "NAV": "24.0338",
    "Shares Outstanding": "2752730",
    "Total Net Assets": "66158538.2402"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "24.2468",
+   "Shares Outstanding": "2752730",
+   "Total Net Assets": "66744869.5172"
   }
  ]
 }

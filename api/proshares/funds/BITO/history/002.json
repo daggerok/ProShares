@@ -2,7 +2,7 @@
  "ticker": "BITO",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1251,
+ "totalRows": 1252,
  "headers": [
   "Date",
   "NAV",
@@ -1515,6 +1515,12 @@
    "NAV": "10.9973",
    "Shares Outstanding": "150920000",
    "Total Net Assets": "1659712526.9973"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "11.0589",
+   "Shares Outstanding": "150070000",
+   "Total Net Assets": "1659609134.0589"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "UPV",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4140,
+ "totalRows": 4141,
  "headers": [
   "Date",
   "NAV",
@@ -849,6 +849,12 @@
    "NAV": "91.2097",
    "Shares Outstanding": "125000",
    "Total Net Assets": "11401212.5"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "90.7676",
+   "Shares Outstanding": "125000",
+   "Total Net Assets": "11345950"
   }
  ]
 }

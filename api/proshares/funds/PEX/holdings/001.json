@@ -2,331 +2,263 @@
  "ticker": "PEX",
  "page": 1,
  "pageSize": 250,
- "totalRows": 35,
+ "totalRows": 31,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held",
-  "Exposure Value"
+  "Shares Held"
  ],
  "rows": [
   {
-   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "EUR/USD",
-   "Weight": "-0.4528255666",
-   "Market Value": "—",
-   "Shares Held": "-41250",
-   "Exposure Value": "-46202.06"
-  },
-  {
-   "Name": "SWEDEN KRONA CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "SEK/USD",
-   "Weight": "-0.0564061226",
-   "Market Value": "—",
-   "Shares Held": "-57500",
-   "Exposure Value": "-5755.15"
-  },
-  {
-   "Name": "SWITZERLAND FRANC CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "CHF/USD",
-   "Weight": "-0.0472450465",
-   "Market Value": "—",
-   "Shares Held": "-4000",
-   "Exposure Value": "-4820.44"
-  },
-  {
-   "Name": "CANADA DOLLAR CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "CAD/USD",
-   "Weight": "0.0109934677",
-   "Market Value": "—",
-   "Shares Held": "1600",
-   "Exposure Value": "1121.67"
+   "Name": "ARES CAPITAL CORP",
+   "Ticker": "ARCC",
+   "Identifier": "B032FN0",
+   "Weight": "9.9589127956",
+   "Market Value": "1017328.41",
+   "Shares Held": "54607"
   },
   {
    "Name": "3I GROUP PLC",
    "Ticker": "III",
    "Identifier": "B1YW440",
-   "Weight": "10.0027536251",
-   "Market Value": "1020586.86",
-   "Shares Held": "32089",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ARES CAPITAL CORP",
-   "Ticker": "ARCC",
-   "Identifier": "B032FN0",
-   "Weight": "9.9333534584",
-   "Market Value": "1013505.92",
-   "Shares Held": "54607",
-   "Exposure Value": "—"
+   "Weight": "9.9474317321",
+   "Market Value": "1016155.59",
+   "Shares Held": "32089"
   },
   {
    "Name": "SOFINA",
    "Ticker": "SOF",
    "Identifier": "4820301",
-   "Weight": "7.7683464865",
-   "Market Value": "792608.98",
-   "Shares Held": "2865",
-   "Exposure Value": "—"
+   "Weight": "7.7581416555",
+   "Market Value": "792514.01",
+   "Shares Held": "2865"
   },
   {
    "Name": "ONEX CORPORATION",
    "Ticker": "ONEX",
    "Identifier": "2659518",
-   "Weight": "7.6651381257",
-   "Market Value": "782078.57",
-   "Shares Held": "10786",
-   "Exposure Value": "—"
+   "Weight": "7.6449993093",
+   "Market Value": "780956.23",
+   "Shares Held": "10786"
   },
   {
    "Name": "MAIN STREET CAPITAL CORP",
    "Ticker": "MAIN",
    "Identifier": "B28BNR6",
-   "Weight": "7.6019301215",
-   "Market Value": "775629.42",
-   "Shares Held": "14433",
-   "Exposure Value": "—"
+   "Weight": "7.5815505795",
+   "Market Value": "774474.78",
+   "Shares Held": "14433"
   },
   {
    "Name": "FS KKR CAPITAL CORP",
    "Ticker": "FSK",
    "Identifier": "BLPJL16",
-   "Weight": "4.5017134302",
-   "Market Value": "459312.48",
-   "Shares Held": "42372",
-   "Exposure Value": "—"
+   "Weight": "4.5170781055",
+   "Market Value": "461431.08",
+   "Shares Held": "42372"
   },
   {
    "Name": "HERCULES CAPITAL INC",
    "Ticker": "HTGC",
    "Identifier": "B07LT08",
-   "Weight": "4.4730303659",
-   "Market Value": "456385.93",
-   "Shares Held": "27643",
-   "Exposure Value": "—"
+   "Weight": "4.4758078709",
+   "Market Value": "457215.22",
+   "Shares Held": "27643"
   },
   {
    "Name": "GOLUB CAPITAL BDC INC",
    "Ticker": "GBDC",
    "Identifier": "B60K6F8",
-   "Weight": "4.4560900542",
-   "Market Value": "454657.5",
-   "Shares Held": "37575",
-   "Exposure Value": "—"
+   "Weight": "4.4544479554",
+   "Market Value": "455033.25",
+   "Shares Held": "37575"
   },
   {
    "Name": "WENDEL",
    "Ticker": "MF",
    "Identifier": "7390113",
-   "Weight": "3.5966553545",
-   "Market Value": "366968.87",
-   "Shares Held": "4129",
-   "Exposure Value": "—"
+   "Weight": "3.6067518987",
+   "Market Value": "368438.93",
+   "Shares Held": "4129"
   },
   {
    "Name": "EURAZEO SE",
    "Ticker": "RF",
    "Identifier": "7042395",
-   "Weight": "3.4535489595",
-   "Market Value": "352367.64",
-   "Shares Held": "6863",
-   "Exposure Value": "—"
+   "Weight": "3.4231149884",
+   "Market Value": "349679.95",
+   "Shares Held": "6863"
   },
   {
    "Name": "HGCAPITAL TRUST PLC",
    "Ticker": "HGT",
    "Identifier": "BJ0LT19",
-   "Weight": "3.0770356043",
-   "Market Value": "313951.76",
-   "Shares Held": "64783",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "SIXTH STREET SPECIALTY LENDI",
-   "Ticker": "TSLX",
-   "Identifier": "BMGGJV9",
-   "Weight": "2.8030554201",
-   "Market Value": "285997.4",
-   "Shares Held": "16484",
-   "Exposure Value": "—"
+   "Weight": "3.1781797596",
+   "Market Value": "324659.19",
+   "Shares Held": "64783"
   },
   {
    "Name": "BROOKFIELD BUSINESS CORP COMMON STOCK CAD",
    "Ticker": "-",
    "Identifier": "BTZS142",
-   "Weight": "2.7981153331",
-   "Market Value": "285493.36",
-   "Shares Held": "10700",
-   "Exposure Value": "—"
+   "Weight": "2.7907637120",
+   "Market Value": "285083.65",
+   "Shares Held": "10700"
+  },
+  {
+   "Name": "SIXTH STREET SPECIALTY LENDI",
+   "Ticker": "TSLX",
+   "Identifier": "BMGGJV9",
+   "Weight": "2.7738900277",
+   "Market Value": "283359.96",
+   "Shares Held": "16484"
   },
   {
    "Name": "KINNEVIK AB - B",
    "Ticker": "KINVB",
    "Identifier": "BRDY8X6",
-   "Weight": "2.6709606246",
-   "Market Value": "272519.69",
-   "Shares Held": "40397",
-   "Exposure Value": "—"
+   "Weight": "2.7403544013",
+   "Market Value": "279934.21",
+   "Shares Held": "40397"
   },
   {
    "Name": "HBM HEALTHCARE IVST-A",
    "Ticker": "HBMN",
    "Identifier": "B01TCC1",
-   "Weight": "2.6223828405",
-   "Market Value": "267563.27",
-   "Shares Held": "957",
-   "Exposure Value": "—"
+   "Weight": "2.6037198385",
+   "Market Value": "265976.64",
+   "Shares Held": "957"
   },
   {
    "Name": "CAPITAL SOUTHWEST CORP",
    "Ticker": "CSWC",
    "Identifier": "2174583",
-   "Weight": "2.4884932892",
-   "Market Value": "253902.44",
-   "Shares Held": "10786",
-   "Exposure Value": "—"
+   "Weight": "2.4834103688",
+   "Market Value": "253686.72",
+   "Shares Held": "10786"
   },
   {
    "Name": "MOLTEN VENTURES PLC",
    "Ticker": "GROW",
    "Identifier": "BY7QYJ5",
-   "Weight": "2.4690666644",
-   "Market Value": "251920.33",
-   "Shares Held": "27694",
-   "Exposure Value": "—"
+   "Weight": "2.4344463474",
+   "Market Value": "248684.92",
+   "Shares Held": "27694"
   },
   {
    "Name": "GIMV NV",
    "Ticker": "GIMB",
    "Identifier": "5249080",
-   "Weight": "2.0927409000",
-   "Market Value": "213523.59",
-   "Shares Held": "4113",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "GOLDMAN SACHS BDC INC",
-   "Ticker": "GSBD",
-   "Identifier": "BWC8Y36",
-   "Weight": "1.5885272157",
-   "Market Value": "162078.37",
-   "Shares Held": "18481",
-   "Exposure Value": "—"
+   "Weight": "2.0972827863",
+   "Market Value": "214242.8",
+   "Shares Held": "4113"
   },
   {
    "Name": "OAKTREE SPECIALTY LENDING CO",
    "Ticker": "OCSL",
    "Identifier": "BPVGJR1",
-   "Weight": "1.5871318498",
-   "Market Value": "161936",
-   "Shares Held": "13960",
-   "Exposure Value": "—"
+   "Weight": "1.6153017052",
+   "Market Value": "165007.2",
+   "Shares Held": "13960"
+  },
+  {
+   "Name": "GOLDMAN SACHS BDC INC",
+   "Ticker": "GSBD",
+   "Identifier": "BWC8Y36",
+   "Weight": "1.5920580385",
+   "Market Value": "162632.8",
+   "Shares Held": "18481"
   },
   {
    "Name": "OAKLEY CAPITAL INVESTMENTS",
    "Ticker": "OCI",
    "Identifier": "B23DL39",
-   "Weight": "1.5795311882",
-   "Market Value": "161160.5",
-   "Shares Held": "24054",
-   "Exposure Value": "—"
+   "Weight": "1.5609774656",
+   "Market Value": "159457.84",
+   "Shares Held": "24054"
   },
   {
    "Name": "SYNCONA LTD",
    "Ticker": "SYNC",
    "Identifier": "B8P59C0",
-   "Weight": "1.5183407161",
-   "Market Value": "154917.2",
-   "Shares Held": "94966",
-   "Exposure Value": "—"
+   "Weight": "1.5222831822",
+   "Market Value": "155505.12",
+   "Shares Held": "94966"
   },
   {
    "Name": "BARINGS BDC INC",
    "Ticker": "BBDC",
    "Identifier": "BFZ4N57",
-   "Weight": "1.3183669643",
-   "Market Value": "134513.76",
-   "Shares Held": "15788",
-   "Exposure Value": "—"
+   "Weight": "1.3245205365",
+   "Market Value": "135303.16",
+   "Shares Held": "15788"
   },
   {
    "Name": "RATOS AB-B SHS",
    "Ticker": "RATOB",
    "Identifier": "B130WD0",
-   "Weight": "1.3170131547",
-   "Market Value": "134375.63",
-   "Shares Held": "36129",
-   "Exposure Value": "—"
+   "Weight": "1.3078147384",
+   "Market Value": "133596.62",
+   "Shares Held": "36129"
   },
   {
    "Name": "PROSPECT CAPITAL CORP",
    "Ticker": "PSEC",
    "Identifier": "B020VX7",
-   "Weight": "1.1759586933",
-   "Market Value": "119983.76",
-   "Shares Held": "69758",
-   "Exposure Value": "—"
+   "Weight": "1.1813834444",
+   "Market Value": "120681.34",
+   "Shares Held": "69758"
   },
   {
    "Name": "NEUBERGER PVT EQTY PRTNR LTD",
    "Ticker": "NBPE",
    "Identifier": "B28ZZX8",
-   "Weight": "1.1564492502",
-   "Market Value": "117993.2",
-   "Shares Held": "5925",
-   "Exposure Value": "—"
+   "Weight": "1.1519716502",
+   "Market Value": "117676.85",
+   "Shares Held": "5925"
   },
   {
    "Name": "MIDCAP FINANCIAL INVESTMENT",
    "Ticker": "MFIC",
    "Identifier": "BGLP5H7",
-   "Weight": "1.1489181755",
-   "Market Value": "117224.8",
-   "Shares Held": "13840",
-   "Exposure Value": "—"
+   "Weight": "1.1434818970",
+   "Market Value": "116809.6",
+   "Shares Held": "13840"
   },
   {
    "Name": "NEW MOUNTAIN FINANCE CORP",
    "Ticker": "NMFC",
    "Identifier": "B61WWF5",
-   "Weight": "0.9157311494",
-   "Market Value": "93432.59",
-   "Shares Held": "13883",
-   "Exposure Value": "—"
+   "Weight": "0.9159968431",
+   "Market Value": "93571.42",
+   "Shares Held": "13883"
   },
   {
    "Name": "SLR INVESTMENT CORP",
    "Ticker": "SLRC",
    "Identifier": "B61FRC6",
-   "Weight": "0.8599606205",
-   "Market Value": "87742.29",
-   "Shares Held": "7717",
-   "Exposure Value": "—"
+   "Weight": "0.8619556116",
+   "Market Value": "88050.97",
+   "Shares Held": "7717"
   },
   {
    "Name": "PARTNERS GROUP PRIVATE EQUIT",
    "Ticker": "PEY",
    "Identifier": "B28C2R2",
-   "Weight": "0.7146564532",
-   "Market Value": "72916.82",
-   "Shares Held": "9490",
-   "Exposure Value": "—"
+   "Weight": "0.7025501064",
+   "Market Value": "71767.29",
+   "Shares Held": "9490"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "65810.13",
-   "Shares Held": "65810.13",
-   "Exposure Value": "—"
+   "Market Value": "66339.98",
+   "Shares Held": "66339.98"
   }
  ]
 }

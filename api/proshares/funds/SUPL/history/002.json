@@ -2,7 +2,7 @@
  "ticker": "SUPL",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1134,
+ "totalRows": 1135,
  "headers": [
   "Date",
   "NAV",
@@ -813,6 +813,12 @@
    "NAV": "44.4498",
    "Shares Outstanding": "50000",
    "Total Net Assets": "2222534.4498"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "44.6846",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "2234274.6846"
   }
  ]
 }

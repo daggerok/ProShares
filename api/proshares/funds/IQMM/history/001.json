@@ -2,7 +2,7 @@
  "ticker": "IQMM",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 164,
+ "totalRows": 165,
  "headers": [
   "Date",
   "NAV",
@@ -993,6 +993,12 @@
    "NAV": "100.1195",
    "Shares Outstanding": "190055000",
    "Total Net Assets": "19028211672.6195"
+  },
+  {
+   "Date": "Oct 12 2026",
+   "NAV": "100.118",
+   "Shares Outstanding": "190055000",
+   "Total Net Assets": "19027926590.118"
   }
  ]
 }
