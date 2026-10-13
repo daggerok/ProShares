@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/VERS-psdlyhld.csv, as of Oct 12 2026)",
   "historySource": "official ProShares NAV history file (ByFund/VERS-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-13T02:14:23Z",
+  "catalogReadAt": "2026-10-13T03:54:54Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -390,43 +390,43 @@
     "rows": [
      {
       "Company": "META PLATFORMS INC-CLASS A",
-      "Weight": 5.158355
+      "Weight": 5.423278
      },
      {
       "Company": "SNAP INC - A",
-      "Weight": 4.7985310000000005
+      "Weight": 5.11503
      },
      {
       "Company": "MICROSOFT CORP",
-      "Weight": 4.7454339999999995
+      "Weight": 4.880876
      },
      {
       "Company": "APPLE INC",
-      "Weight": 4.660443
+      "Weight": 4.800566
      },
      {
       "Company": "ALPHABET INC-CL A",
-      "Weight": 4.6055980000000005
+      "Weight": 4.697945
      },
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 4.479423
+      "Weight": 4.505167
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 4.409546000000001
-     },
-     {
-      "Company": "KOPIN CORP",
-      "Weight": 4.272543
+      "Weight": 4.42655
      },
      {
       "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 4.140181
+      "Weight": 4.340961
+     },
+     {
+      "Company": "KOPIN CORP",
+      "Weight": 4.023613999999999
      },
      {
       "Company": "SANDISK CORP",
-      "Weight": 4.01269
+      "Weight": 3.837078
      }
     ]
    },
@@ -435,19 +435,19 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 64.368115
+      "Weight": 65.65141799999999
      },
      {
       "Country": "Other",
-      "Weight": 31.025757
+      "Weight": 29.856671000000002
      },
      {
       "Country": "Taiwan",
-      "Weight": 2.8691370000000003
+      "Weight": 2.8038279999999998
      },
      {
       "Country": "Finland",
-      "Weight": 1.736992
+      "Weight": 1.6880840000000001
      }
     ]
    },
@@ -456,27 +456,27 @@
     "rows": [
      {
       "Sector": "Media & Entertainment",
-      "Weight": 22.88434017580291
+      "Weight": 23.8424013329333
      },
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 21.053332151847826
+      "Weight": 20.9812802149866
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 12.66278409280462
+      "Weight": 12.7380639652361
      },
      {
       "Sector": "Software & Services",
-      "Weight": 7.359873889368046
+      "Weight": 7.533166052044729
      },
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 4.479422657501172
+      "Weight": 4.505166687638058
      },
      {
       "Sector": "Real Estate Management & Devel",
-      "Weight": 0.4772497713818267
+      "Weight": 0.48405134837975916
      }
     ]
    }
