@@ -2,7 +2,7 @@
  "ticker": "NVDB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 276,
+ "totalRows": 280,
  "headers": [
   "Date",
   "NAV",
@@ -1665,6 +1665,30 @@
    "NAV": "33.2324",
    "Shares Outstanding": "150000",
    "Total Net Assets": "4984893.2324"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "NAV": "33.8721",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "5080848.8721"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "NAV": "31.7193",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "4757926.7193"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "NAV": "30.5407",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "4581135.5407"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "NAV": "29.6341",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "4445144.6341"
   }
  ]
 }

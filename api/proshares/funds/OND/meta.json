@@ -13,11 +13,11 @@
   "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=OND&year=2026",
-  "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 12 2026)",
+  "exchangeSource": "—",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 16 2026)",
   "historySource": "official ProShares NAV history file (ByFund/OND-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-13T02:14:23Z",
+  "catalogReadAt": "2026-10-18T02:28:44Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$33.42",
-  "value": 33.42,
-  "asOfDate": "Oct 12 2026"
+  "display": "$33.21",
+  "value": 33.21,
+  "asOfDate": "Oct 16 2026"
  },
  "marketPrice": {
-  "display": "$33.32",
-  "value": 33.32,
-  "asOfDate": "Oct 12 2026"
+  "display": "—",
+  "value": null,
+  "asOfDate": "Oct 16 2026"
  },
  "premiumDiscount": {
-  "display": "-0.30%",
-  "value": -0.2992,
+  "display": "—",
+  "value": null,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$2.51 M",
-  "value": 2506443.4188,
-  "asOfDate": "Oct 12 2026",
+  "display": "$2.49 M",
+  "value": 2490895.7115,
+  "asOfDate": "Oct 16 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -178,24 +178,25 @@
    "Return of Capital"
   ],
   "rows": [],
-  "refreshedAt": "2026-10-13",
+  "refreshedAt": "2026-10-18",
   "asOfDate": "Aug 31 2026",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 28,
-  "asOfDate": "Oct 12 2026",
-  "asOf": "2026-10-12",
+  "totalRows": 5,
+  "asOfDate": "Oct 16 2026",
+  "asOf": "2026-10-16",
   "headers": [
    "Name",
    "Ticker",
    "Identifier",
    "Weight",
    "Market Value",
-   "Shares Held"
+   "Shares Held",
+   "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 12 2026)",
+  "source": "official ProShares daily holdings download (ByFund/OND-psdlyhld.csv, as of Oct 16 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -203,9 +204,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1246,
-  "asOf": "Oct 12 2026",
-  "asOfDate": "Oct 12 2026",
+  "totalRows": 1250,
+  "asOf": "Oct 16 2026",
+  "asOfDate": "Oct 16 2026",
   "headers": [
    "Date",
    "NAV",
@@ -241,154 +242,11 @@
   "splits": [],
   "exposures": [
    {
-    "label": "Top 10 Index Holdings",
+    "label": "Index Holdings",
     "rows": [
      {
-      "Company": "DOORDASH INC - A",
-      "Weight": 6.026709
-     },
-     {
-      "Company": "ROBLOX CORP -CLASS A",
-      "Weight": 5.530522
-     },
-     {
-      "Company": "NVIDIA CORP",
-      "Weight": 5.372108
-     },
-     {
-      "Company": "CAPCOM CO LTD",
-      "Weight": 5.13885
-     },
-     {
-      "Company": "SPOTIFY TECHNOLOGY SA",
-      "Weight": 5.135984
-     },
-     {
-      "Company": "NETEASE INC",
-      "Weight": 4.93256
-     },
-     {
-      "Company": "UBER TECHNOLOGIES INC",
-      "Weight": 4.864364999999999
-     },
-     {
-      "Company": "TAKE-TWO INTERACTIVE SOFTWRE",
-      "Weight": 4.788706
-     },
-     {
-      "Company": "GRAB HOLDINGS LTD - CL A",
-      "Weight": 4.593953
-     },
-     {
-      "Company": "DELIVERY HERO SE",
-      "Weight": 4.345893
-     }
-    ]
-   },
-   {
-    "label": "Fund Country Weighting",
-    "rows": [
-     {
-      "Country": "United States",
-      "Weight": 43.457530999999996
-     },
-     {
-      "Country": "Hong Kong",
-      "Weight": 13.722233000000001
-     },
-     {
-      "Country": "Japan",
-      "Weight": 9.018991
-     },
-     {
-      "Country": "China",
-      "Weight": 7.563165
-     },
-     {
-      "Country": "Luxembourg",
-      "Weight": 5.185428
-     },
-     {
-      "Country": "South Korea",
-      "Weight": 4.962562
-     },
-     {
-      "Country": "Singapore",
-      "Weight": 4.638178
-     },
-     {
-      "Country": "Germany",
-      "Weight": 4.38773
-     },
-     {
-      "Country": "Taiwan",
-      "Weight": 3.962666
-     },
-     {
-      "Country": "Poland",
-      "Weight": 3.101516
-     }
-    ]
-   },
-   {
-    "label": "Fund Currency Weighting",
-    "rows": [
-     {
-      "Currency": "USD",
-      "Weight": 53.28113597086319
-     },
-     {
-      "Currency": "HKD",
-      "Weight": 21.285398707537297
-     },
-     {
-      "Currency": "JPY",
-      "Weight": 9.018990814711835
-     },
-     {
-      "Currency": "KRW",
-      "Weight": 4.96256249238739
-     },
-     {
-      "Currency": "EUR",
-      "Weight": 4.3877297826641035
-     },
-     {
-      "Currency": "TWD",
-      "Weight": 3.9626658192633855
-     },
-     {
-      "Currency": "PLN",
-      "Weight": 3.1015164125727974
-     }
-    ]
-   },
-   {
-    "label": "Fund Sector Weighting",
-    "rows": [
-     {
-      "Sector": "Media & Entertainment",
-      "Weight": 53.571677081909705
-     },
-     {
-      "Sector": "Transportation",
-      "Weight": 15.999146260512365
-     },
-     {
-      "Sector": "Consumer Services",
-      "Weight": 14.666952492931557
-     },
-     {
-      "Sector": "Semiconductors & Semiconductor",
-      "Weight": 10.00594724849775
-     },
-     {
-      "Sector": "Software & Services",
-      "Weight": 3.3638249158429177
-     },
-     {
-      "Sector": "Consumer Durables & Apparel",
-      "Weight": 1.4389489944040714
+      "Company": "NET OTHER ASSETS (LIABILITIES)",
+      "Weight": 0
      }
     ]
    }

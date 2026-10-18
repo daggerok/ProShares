@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=RB&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Oct 12 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Oct 16 2026)",
   "historySource": "official ProShares NAV history file (ByFund/RB-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-13T02:14:23Z",
+  "catalogReadAt": "2026-10-18T02:28:44Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,32 +42,32 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$46.24",
-  "value": 46.24,
-  "asOfDate": "Oct 12 2026"
+  "display": "$46.25",
+  "value": 46.25,
+  "asOfDate": "Oct 16 2026"
  },
  "marketPrice": {
   "display": "$46.25",
   "value": 46.25,
-  "asOfDate": "Oct 12 2026"
+  "asOfDate": "Oct 16 2026"
  },
  "premiumDiscount": {
-  "display": "0.02%",
-  "value": 0.0216,
+  "display": "0.00%",
+  "value": 0,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
   "display": "$1.16 M",
-  "value": 1156078.7413,
-  "asOfDate": "Oct 12 2026",
+  "value": 1156176.2452,
+  "asOfDate": "Oct 16 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 1.2582,
+  "effectiveYield": 1.2579,
   "effectiveYieldText": "1.26%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
@@ -76,7 +76,7 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 1.2582,
+  "indicatedYield": 1.2579,
   "indicatedYieldText": "1.26%",
   "secYield": null,
   "secYieldText": "—",
@@ -230,9 +230,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 1969,
-  "asOfDate": "Oct 12 2026",
-  "asOf": "2026-10-12",
+  "totalRows": 1967,
+  "asOfDate": "Oct 16 2026",
+  "asOf": "2026-10-16",
   "headers": [
    "Name",
    "Ticker",
@@ -242,7 +242,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Oct 12 2026)",
+  "source": "official ProShares daily holdings download (ByFund/RB-psdlyhld.csv, as of Oct 16 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -257,9 +257,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 328,
-  "asOf": "Oct 12 2026",
-  "asOfDate": "Oct 12 2026",
+  "totalRows": 332,
+  "asOf": "Oct 16 2026",
+  "asOfDate": "Oct 16 2026",
   "headers": [
    "Date",
    "NAV",
@@ -275,13 +275,13 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Expiration Date 10/13/": "2026",
-   "Strike Price - Short Call": "2,830",
-   "Strike Price - Long Put": "2,810",
-   "Strike Price - Short Put": "2,755",
-   "FIGI - Short Call BBG025G7HWY": "7",
-   "FIGI - Long Put BBG025G7JD": "59",
-   "FIGI - Short Put BBG025G7J2D": "4",
+   "Expiration Date 10/19/": "2026",
+   "Strike Price - Short Call": "2,760",
+   "Strike Price - Long Put": "2,735",
+   "Strike Price - Short Put": "2,670",
+   "FIGI - Short Call BBG024H5KSP": "8",
+   "FIGI - Long Put BBG024H5R": "198",
+   "FIGI - Short Put BBG024H5RH": "57",
    "Total Number of Holdings": "1975",
    "Price/Earnings Ratio": "23.76",
    "Price/Book Ratio": "2.67",

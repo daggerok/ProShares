@@ -2,439 +2,556 @@
  "ticker": "ION",
  "page": 1,
  "pageSize": 250,
- "totalRows": 53,
+ "totalRows": 60,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held"
+  "Shares Held",
+  "Exposure Value"
  ],
  "rows": [
+  {
+   "Name": "AUSTRALIA DOLLAR CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "AUD/USD",
+   "Weight": "2.8759433519",
+   "Market Value": "—",
+   "Shares Held": "428000",
+   "Exposure Value": "297288.8"
+  },
+  {
+   "Name": "JAPAN YEN CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "JPY/USD",
+   "Weight": "-1.1660484850",
+   "Market Value": "—",
+   "Shares Held": "-19044000",
+   "Exposure Value": "-120535.46"
+  },
+  {
+   "Name": "SOUTH AFRICA RAND CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "ZAR/USD",
+   "Weight": "-1.0527720980",
+   "Market Value": "—",
+   "Shares Held": "-1792500",
+   "Exposure Value": "-108825.98"
+  },
+  {
+   "Name": "HONG KONG DOLLAR CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "HKD/USD",
+   "Weight": "-1.0459241347",
+   "Market Value": "—",
+   "Shares Held": "-848500",
+   "Exposure Value": "-108118.1"
+  },
+  {
+   "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "GBP/USD",
+   "Weight": "-0.8832295759",
+   "Market Value": "—",
+   "Shares Held": "-68500",
+   "Exposure Value": "-91300.22"
+  },
+  {
+   "Name": "SWEDEN KRONA CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "SEK/USD",
+   "Weight": "-0.1285463545",
+   "Market Value": "—",
+   "Shares Held": "-131750",
+   "Exposure Value": "-13287.95"
+  },
+  {
+   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "EUR/USD",
+   "Weight": "-0.0684997543",
+   "Market Value": "—",
+   "Shares Held": "-6300",
+   "Exposure Value": "-7080.88"
+  },
   {
    "Name": "PACIFIC METALS CO LTD",
    "Ticker": "5541",
    "Identifier": "6666343",
-   "Weight": "4.6496805775",
-   "Market Value": "511632.04",
-   "Shares Held": "34483"
-  },
-  {
-   "Name": "IGO LTD",
-   "Ticker": "IGO",
-   "Identifier": "6439567",
-   "Weight": "3.5800470142",
-   "Market Value": "393933.89",
-   "Shares Held": "96136"
-  },
-  {
-   "Name": "VALE INDONESIA TBK",
-   "Ticker": "INCO",
-   "Identifier": "B0217K9",
-   "Weight": "3.4939965041",
-   "Market Value": "384465.24",
-   "Shares Held": "1674435"
-  },
-  {
-   "Name": "PT TIMAH (PERSERO) TBK",
-   "Ticker": "TINS",
-   "Identifier": "6875730",
-   "Weight": "3.4470761132",
-   "Market Value": "379302.31",
-   "Shares Held": "1593782"
+   "Weight": "4.0030179988",
+   "Market Value": "413795.5",
+   "Shares Held": "28035",
+   "Exposure Value": "—"
   },
   {
    "Name": "SIGMA LITHIUM CORP",
    "Ticker": "SGML",
    "Identifier": "BNM4ZD8",
-   "Weight": "3.1495867136",
-   "Market Value": "346567.78",
-   "Shares Held": "39338"
+   "Weight": "3.5415247890",
+   "Market Value": "366090.54",
+   "Shares Held": "42918",
+   "Exposure Value": "—"
   },
   {
-   "Name": "TIBET MINERAL DEVELOPMENT-A",
-   "Ticker": "000762",
-   "Identifier": "BD580M1",
-   "Weight": "3.0597073642",
-   "Market Value": "336677.82",
-   "Shares Held": "108700"
-  },
-  {
-   "Name": "ERAMET",
-   "Ticker": "ERA",
-   "Identifier": "4017017",
-   "Weight": "2.9870172144",
-   "Market Value": "328679.29",
-   "Shares Held": "6771"
-  },
-  {
-   "Name": "QUIMICA Y MINERA CHIL-SP ADR",
-   "Ticker": "SQM",
-   "Identifier": "2771122",
-   "Weight": "2.9277502227",
-   "Market Value": "322157.79",
-   "Shares Held": "5157"
-  },
-  {
-   "Name": "ZANGGE MINING CO LTD-A",
-   "Ticker": "000408",
-   "Identifier": "BQ3RQ45",
-   "Weight": "2.8423553165",
-   "Market Value": "312761.28",
-   "Shares Held": "29400"
+   "Name": "IGO LTD",
+   "Ticker": "IGO",
+   "Identifier": "6439567",
+   "Weight": "3.4650311975",
+   "Market Value": "358183.33",
+   "Shares Held": "94792",
+   "Exposure Value": "—"
   },
   {
    "Name": "AFRICAN RAINBOW MINERALS LTD",
    "Ticker": "ARI",
    "Identifier": "6041122",
-   "Weight": "2.7502778674",
-   "Market Value": "302629.45",
-   "Shares Held": "34415"
-  },
-  {
-   "Name": "ANTAM PERSERO TBK PT",
-   "Ticker": "ANTM",
-   "Identifier": "6053859",
-   "Weight": "2.7407350774",
-   "Market Value": "301579.4",
-   "Shares Held": "1769925"
-  },
-  {
-   "Name": "PLS GROUP LTD",
-   "Ticker": "PLS",
-   "Identifier": "B2368L5",
-   "Weight": "2.6674777494",
-   "Market Value": "293518.46",
-   "Shares Held": "125194"
-  },
-  {
-   "Name": "ALBEMARLE CORP",
-   "Ticker": "ALB",
-   "Identifier": "2046853",
-   "Weight": "2.5738518973",
-   "Market Value": "283216.25",
-   "Shares Held": "2875"
-  },
-  {
-   "Name": "QINGHAI SALT LAKE INDUSTRY-A",
-   "Ticker": "000792",
-   "Identifier": "BD5CNB3",
-   "Weight": "2.5621499040",
-   "Market Value": "281928.61",
-   "Shares Held": "80500"
-  },
-  {
-   "Name": "FIRST QUANTUM MINERALS LTD",
-   "Ticker": "FM",
-   "Identifier": "2347608",
-   "Weight": "2.5206782775",
-   "Market Value": "277365.24",
-   "Shares Held": "10136"
-  },
-  {
-   "Name": "MINERAL RESOURCES LTD",
-   "Ticker": "MIN",
-   "Identifier": "B17ZL56",
-   "Weight": "2.5091445020",
-   "Market Value": "276096.11",
-   "Shares Held": "8086"
-  },
-  {
-   "Name": "VALTERRA PLATINUM LIMITED",
-   "Ticker": "VAL",
-   "Identifier": "6761000",
-   "Weight": "2.4645295393",
-   "Market Value": "271186.86",
-   "Shares Held": "3670"
-  },
-  {
-   "Name": "XINJIANG XINXIN MINING IND-H",
-   "Ticker": "3833",
-   "Identifier": "B24FHB4",
-   "Weight": "2.4173872208",
-   "Market Value": "265999.51",
-   "Shares Held": "1125307"
-  },
-  {
-   "Name": "TIANQI LITHIUM CORP-A",
-   "Ticker": "002466",
-   "Identifier": "BD5CKH8",
-   "Weight": "2.3810959011",
-   "Market Value": "262006.16",
-   "Shares Held": "44700"
-  },
-  {
-   "Name": "CMOC GROUP LTD-H",
-   "Ticker": "3993",
-   "Identifier": "B1VRCG6",
-   "Weight": "2.3515809120",
-   "Market Value": "258758.45",
-   "Shares Held": "132981"
-  },
-  {
-   "Name": "ANGLO AMERICAN PLC",
-   "Ticker": "AAL",
-   "Identifier": "BTK05J6",
-   "Weight": "2.2173843207",
-   "Market Value": "243992",
-   "Shares Held": "4416"
-  },
-  {
-   "Name": "YOUNGY CO LTD-A",
-   "Ticker": "002192",
-   "Identifier": "BD5CQT2",
-   "Weight": "2.1619310824",
-   "Market Value": "237890.15",
-   "Shares Held": "29900"
-  },
-  {
-   "Name": "LUNDIN MINING CORP",
-   "Ticker": "LUN",
-   "Identifier": "2866857",
-   "Weight": "2.1598312233",
-   "Market Value": "237659.09",
-   "Shares Held": "9653"
-  },
-  {
-   "Name": "CHINA NONFERROUS MINING CORP",
-   "Ticker": "1258",
-   "Identifier": "B890GY2",
-   "Weight": "2.1146352687",
-   "Market Value": "232685.91",
-   "Shares Held": "120529"
+   "Weight": "3.4196883512",
+   "Market Value": "353496.2",
+   "Shares Held": "38547",
+   "Exposure Value": "—"
   },
   {
    "Name": "LIONTOWN LTD",
    "Ticker": "LTR",
    "Identifier": "B1J89V5",
-   "Weight": "2.0366380355",
-   "Market Value": "224103.41",
-   "Shares Held": "429502"
+   "Weight": "3.3947202948",
+   "Market Value": "350915.23",
+   "Shares Held": "711556",
+   "Exposure Value": "—"
   },
   {
-   "Name": "VALE SA-SP ADR",
-   "Ticker": "VALE",
-   "Identifier": "2857334",
-   "Weight": "1.9788041208",
-   "Market Value": "217739.6",
-   "Shares Held": "16105"
+   "Name": "TIBET MINERAL DEVELOPMENT-A",
+   "Ticker": "000762",
+   "Identifier": "BD580M1",
+   "Weight": "3.3443707194",
+   "Market Value": "345710.55",
+   "Shares Held": "120400",
+   "Exposure Value": "—"
   },
   {
-   "Name": "GANFENG LITHIUM GROUP CO L-H",
-   "Ticker": "1772",
-   "Identifier": "BZ9NS11",
-   "Weight": "1.9615749341",
-   "Market Value": "215843.77",
-   "Shares Held": "60581"
+   "Name": "QUIMICA Y MINERA CHIL-SP ADR",
+   "Ticker": "SQM",
+   "Identifier": "2771122",
+   "Weight": "3.2234125754",
+   "Market Value": "333207",
+   "Shares Held": "5535",
+   "Exposure Value": "—"
   },
   {
-   "Name": "AMG CRITICAL MATERIALS N.V.",
-   "Ticker": "AMG",
-   "Identifier": "B1Z95S1",
-   "Weight": "1.9600646096",
-   "Market Value": "215677.58",
-   "Shares Held": "6852"
+   "Name": "ALBEMARLE CORP",
+   "Ticker": "ALB",
+   "Identifier": "2046853",
+   "Weight": "3.1192145670",
+   "Market Value": "322435.96",
+   "Shares Held": "3377",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VALE INDONESIA TBK",
+   "Ticker": "INCO",
+   "Identifier": "B0217K9",
+   "Weight": "3.1038165170",
+   "Market Value": "320844.25",
+   "Shares Held": "1674435",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PT TIMAH (PERSERO) TBK",
+   "Ticker": "TINS",
+   "Identifier": "6875730",
+   "Weight": "3.0399464030",
+   "Market Value": "314241.94",
+   "Shares Held": "1593782",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "YOUNGY CO LTD-A",
+   "Ticker": "002192",
+   "Identifier": "BD5CQT2",
+   "Weight": "2.9943495200",
+   "Market Value": "309528.55",
+   "Shares Held": "43300",
+   "Exposure Value": "—"
   },
   {
    "Name": "ELEVRA LITHIUM LTD",
    "Ticker": "ELV",
    "Identifier": "BVBM1M0",
-   "Weight": "1.9517963121",
-   "Market Value": "214767.77",
-   "Shares Held": "67699"
+   "Weight": "2.9604389067",
+   "Market Value": "306023.18",
+   "Shares Held": "109869",
+   "Exposure Value": "—"
   },
   {
-   "Name": "SICHUAN YAHUA INDUSTRIAL-A",
-   "Ticker": "002497",
-   "Identifier": "BD5LSZ9",
-   "Weight": "1.7260741822",
-   "Market Value": "189930.22",
-   "Shares Held": "85200"
+   "Name": "TIANQI LITHIUM CORP-A",
+   "Ticker": "002466",
+   "Identifier": "BD5CKH8",
+   "Weight": "2.8995309421",
+   "Market Value": "299727.07",
+   "Shares Held": "55000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PLS GROUP LTD",
+   "Ticker": "PLS",
+   "Identifier": "B2368L5",
+   "Weight": "2.8230364799",
+   "Market Value": "291819.77",
+   "Shares Held": "140982",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "QINGHAI SALT LAKE INDUSTRY-A",
+   "Ticker": "000792",
+   "Identifier": "BD5CNB3",
+   "Weight": "2.7790156694",
+   "Market Value": "287269.3",
+   "Shares Held": "83300",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ZANGGE MINING CO LTD-A",
+   "Ticker": "000408",
+   "Identifier": "BQ3RQ45",
+   "Weight": "2.7710152539",
+   "Market Value": "286442.29",
+   "Shares Held": "27300",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ERAMET",
+   "Ticker": "ERA",
+   "Identifier": "4017017",
+   "Weight": "2.5717453080",
+   "Market Value": "265843.58",
+   "Shares Held": "6331",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MINERAL RESOURCES LTD",
+   "Ticker": "MIN",
+   "Identifier": "B17ZL56",
+   "Weight": "2.5285461022",
+   "Market Value": "261378.04",
+   "Shares Held": "8424",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "GANFENG LITHIUM GROUP CO L-H",
+   "Ticker": "1772",
+   "Identifier": "BZ9NS11",
+   "Weight": "2.4276485396",
+   "Market Value": "250948.17",
+   "Shares Held": "82196",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ANTAM PERSERO TBK PT",
+   "Ticker": "ANTM",
+   "Identifier": "6053859",
+   "Weight": "2.4249550345",
+   "Market Value": "250669.74",
+   "Shares Held": "1769925",
+   "Exposure Value": "—"
   },
   {
    "Name": "CHENGXIN LITHIUM GROUP CO-A",
    "Ticker": "002240",
    "Identifier": "BFCCQ55",
-   "Weight": "1.6905528835",
-   "Market Value": "186021.6",
-   "Shares Held": "52800"
+   "Weight": "2.3243194413",
+   "Market Value": "240266.95",
+   "Shares Held": "74900",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "FIRST QUANTUM MINERALS LTD",
+   "Ticker": "FM",
+   "Identifier": "2347608",
+   "Weight": "2.2850979513",
+   "Market Value": "236212.59",
+   "Shares Held": "9079",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SICHUAN YAHUA INDUSTRIAL-A",
+   "Ticker": "002497",
+   "Identifier": "BD5LSZ9",
+   "Weight": "2.2036550937",
+   "Market Value": "227793.77",
+   "Shares Held": "112000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VALTERRA PLATINUM LIMITED",
+   "Ticker": "VAL",
+   "Identifier": "6761000",
+   "Weight": "2.1896547294",
+   "Market Value": "226346.54",
+   "Shares Held": "2975",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CMOC GROUP LTD-H",
+   "Ticker": "3993",
+   "Identifier": "B1VRCG6",
+   "Weight": "2.1863375477",
+   "Market Value": "226003.64",
+   "Shares Held": "121400",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AMG CRITICAL MATERIALS N.V.",
+   "Ticker": "AMG",
+   "Identifier": "B1Z95S1",
+   "Weight": "2.0324496274",
+   "Market Value": "210096.11",
+   "Shares Held": "7234",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "VALE SA-SP ADR",
+   "Ticker": "VALE",
+   "Identifier": "2857334",
+   "Weight": "1.9467913661",
+   "Market Value": "201241.54",
+   "Shares Held": "15409",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LUNDIN MINING CORP",
+   "Ticker": "LUN",
+   "Identifier": "2866857",
+   "Weight": "1.9450078851",
+   "Market Value": "201057.18",
+   "Shares Held": "8530",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ANGLO AMERICAN PLC",
+   "Ticker": "AAL",
+   "Identifier": "BTK05J6",
+   "Weight": "1.8106967545",
+   "Market Value": "187173.32",
+   "Shares Held": "3470",
+   "Exposure Value": "—"
   },
   {
    "Name": "XIZANG ZHUFENG RESOURCES-A",
    "Ticker": "600338",
    "Identifier": "BFB4HB5",
-   "Weight": "1.6718023759",
-   "Market Value": "183958.37",
-   "Shares Held": "103900"
+   "Weight": "1.7582019908",
+   "Market Value": "181746.89",
+   "Shares Held": "108800",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "XINJIANG XINXIN MINING IND-H",
+   "Ticker": "3833",
+   "Identifier": "B24FHB4",
+   "Weight": "1.6196707162",
+   "Market Value": "167426.79",
+   "Shares Held": "784447",
+   "Exposure Value": "—"
   },
   {
    "Name": "NORTHAM PLATINUM HOLDINGS LT",
    "Ticker": "NPH",
    "Identifier": "BMZ1NS0",
-   "Weight": "1.6109243653",
-   "Market Value": "177259.6",
-   "Shares Held": "12015"
+   "Weight": "1.5041600443",
+   "Market Value": "155486.35",
+   "Shares Held": "10396",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CHINA NONFERROUS MINING CORP",
+   "Ticker": "1258",
+   "Identifier": "B890GY2",
+   "Weight": "1.4783034399",
+   "Market Value": "152813.53",
+   "Shares Held": "84994",
+   "Exposure Value": "—"
   },
   {
    "Name": "IMPALA PLATINUM HOLDINGS LTD",
    "Ticker": "IMP",
    "Identifier": "B1FFT76",
-   "Weight": "1.5166133734",
-   "Market Value": "166882",
-   "Shares Held": "15117"
-  },
-  {
-   "Name": "IVANHOE MINES LTD-CL A",
-   "Ticker": "IVN",
-   "Identifier": "BD73C40",
-   "Weight": "1.5085736376",
-   "Market Value": "165997.34",
-   "Shares Held": "20442"
-  },
-  {
-   "Name": "BOLIDEN AB",
-   "Ticker": "BOL",
-   "Identifier": "BPYTZ57",
-   "Weight": "1.3233766253",
-   "Market Value": "145619.01",
-   "Shares Held": "2667"
-  },
-  {
-   "Name": "SIBANYE STILLWATER LTD",
-   "Ticker": "SSW",
-   "Identifier": "BL0L913",
-   "Weight": "1.3148364168",
-   "Market Value": "144679.28",
-   "Shares Held": "58746"
+   "Weight": "1.4387240154",
+   "Market Value": "148722.17",
+   "Shares Held": "13030",
+   "Exposure Value": "—"
   },
   {
    "Name": "ZHEJIANG HUAYOU COBALT CO -A",
    "Ticker": "603799",
    "Identifier": "BFF5BV2",
-   "Weight": "1.2753122447",
-   "Market Value": "140330.2",
-   "Shares Held": "27200"
-  },
-  {
-   "Name": "HAINAN MINING CO LTD-A",
-   "Ticker": "601969",
-   "Identifier": "BZ0D1Z5",
-   "Weight": "1.2605782424",
-   "Market Value": "138708.93",
-   "Shares Held": "104900"
+   "Weight": "1.4370342746",
+   "Market Value": "148547.5",
+   "Shares Held": "30800",
+   "Exposure Value": "—"
   },
   {
    "Name": "SINOMINE RESOURCE GROUP CO-A",
    "Ticker": "002738",
    "Identifier": "BNR4M32",
-   "Weight": "1.1891350488",
-   "Market Value": "130847.61",
-   "Shares Held": "22600"
+   "Weight": "1.4352114209",
+   "Market Value": "148359.07",
+   "Shares Held": "28000",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BOLIDEN AB",
+   "Ticker": "BOL",
+   "Identifier": "BPYTZ57",
+   "Weight": "1.2599120551",
+   "Market Value": "130238.22",
+   "Shares Held": "2420",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "IVANHOE MINES LTD-CL A",
+   "Ticker": "IVN",
+   "Identifier": "BD73C40",
+   "Weight": "1.1687860064",
+   "Market Value": "120818.44",
+   "Shares Held": "16619",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SIBANYE STILLWATER LTD",
+   "Ticker": "SSW",
+   "Identifier": "BL0L913",
+   "Weight": "1.1238202489",
+   "Market Value": "116170.29",
+   "Shares Held": "45483",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "HAINAN MINING CO LTD-A",
+   "Ticker": "601969",
+   "Identifier": "BZ0D1Z5",
+   "Weight": "1.0866557212",
+   "Market Value": "112328.56",
+   "Shares Held": "89100",
+   "Exposure Value": "—"
   },
   {
    "Name": "GLENCORE PLC",
    "Ticker": "GLEN",
    "Identifier": "B4T3BW6",
-   "Weight": "1.1773023709",
-   "Market Value": "129545.59",
-   "Shares Held": "16732"
+   "Weight": "1.0153615629",
+   "Market Value": "104958.82",
+   "Shares Held": "13505",
+   "Exposure Value": "—"
   },
   {
    "Name": "RIO TINTO PLC",
    "Ticker": "RIO",
    "Identifier": "0718875",
-   "Weight": "0.9945341102",
-   "Market Value": "109434.51",
-   "Shares Held": "1160"
-  },
-  {
-   "Name": "SUMITOMO CORP",
-   "Ticker": "8053",
-   "Identifier": "6858946",
-   "Weight": "0.7442398300",
-   "Market Value": "81893.14",
-   "Shares Held": "7607"
-  },
-  {
-   "Name": "METALLURGICAL CORP OF CHIN-H",
-   "Ticker": "1618",
-   "Identifier": "B42SRM0",
-   "Weight": "0.6899563003",
-   "Market Value": "75920",
-   "Shares Held": "451353"
+   "Weight": "0.8814822753",
+   "Market Value": "91119.6",
+   "Shares Held": "1003",
+   "Exposure Value": "—"
   },
   {
    "Name": "CONTEMPORARY AMPEREX TECHN-A",
    "Ticker": "300750",
    "Identifier": "BHQPSY7",
-   "Weight": "0.6887627813",
-   "Market Value": "75788.67",
-   "Shares Held": "1700"
+   "Weight": "0.7614125826",
+   "Market Value": "78707.89",
+   "Shares Held": "1900",
+   "Exposure Value": "—"
   },
   {
-   "Name": "POSCO HOLDINGS INC -SPON ADR",
-   "Ticker": "PKX",
-   "Identifier": "2692795",
-   "Weight": "0.5547012368",
-   "Market Value": "61037.08",
-   "Shares Held": "1097"
+   "Name": "METALLURGICAL CORP OF CHIN-H",
+   "Ticker": "1618",
+   "Identifier": "B42SRM0",
+   "Weight": "0.7482835469",
+   "Market Value": "77350.73",
+   "Shares Held": "461628",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SUMITOMO CORP",
+   "Ticker": "8053",
+   "Identifier": "6858946",
+   "Weight": "0.6661780268",
+   "Market Value": "68863.41",
+   "Shares Held": "6235",
+   "Exposure Value": "—"
   },
   {
    "Name": "WESFARMERS LTD",
    "Ticker": "WES",
    "Identifier": "6948836",
-   "Weight": "0.5014642741",
-   "Market Value": "55179.1",
-   "Shares Held": "1025"
+   "Weight": "0.5942092105",
+   "Market Value": "61423.93",
+   "Shares Held": "1115",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "POSCO HOLDINGS INC -SPON ADR",
+   "Ticker": "PKX",
+   "Identifier": "2692795",
+   "Weight": "0.4653026966",
+   "Market Value": "48098.75",
+   "Shares Held": "875",
+   "Exposure Value": "—"
   },
   {
    "Name": "ZIJIN MINING GROUP CO LTD-H",
    "Ticker": "2899",
    "Identifier": "6725299",
-   "Weight": "0.4549059466",
-   "Market Value": "50056.01",
-   "Shares Held": "12057"
+   "Weight": "0.4043239190",
+   "Market Value": "41795.32",
+   "Shares Held": "10263",
+   "Exposure Value": "—"
   },
   {
    "Name": "MMG LTD",
    "Ticker": "1208",
    "Identifier": "6728793",
-   "Weight": "0.4023734809",
-   "Market Value": "44275.55",
-   "Shares Held": "40805"
+   "Weight": "0.2900897188",
+   "Market Value": "29986.83",
+   "Shares Held": "30823",
+   "Exposure Value": "—"
   },
   {
    "Name": "SOJITZ CORP",
    "Ticker": "2768",
    "Identifier": "6594143",
-   "Weight": "0.2624461264",
-   "Market Value": "28878.51",
-   "Shares Held": "858"
+   "Weight": "0.2450616613",
+   "Market Value": "25332.24",
+   "Shares Held": "736",
+   "Exposure Value": "—"
   },
   {
    "Name": "TOYOTA TSUSHO CORP",
    "Ticker": "8015",
    "Identifier": "6900580",
-   "Weight": "0.1994626222",
-   "Market Value": "21948.06",
-   "Shares Held": "489"
+   "Weight": "0.1645180898",
+   "Market Value": "17006.38",
+   "Shares Held": "361",
+   "Exposure Value": "—"
   },
   {
    "Name": "BHP GROUP LTD",
    "Ticker": "BHP",
    "Identifier": "6144690",
-   "Weight": "0.0947309455",
-   "Market Value": "10423.81",
-   "Shares Held": "240"
+   "Weight": "0.0786573537",
+   "Market Value": "8130.88",
+   "Shares Held": "195",
+   "Exposure Value": "—"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "58160.03",
-   "Shares Held": "58160.03"
+   "Market Value": "-143106.25",
+   "Shares Held": "-143106.25",
+   "Exposure Value": "—"
   }
  ]
 }

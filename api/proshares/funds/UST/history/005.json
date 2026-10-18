@@ -2,7 +2,7 @@
  "ticker": "UST",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4209,
+ "totalRows": 4213,
  "headers": [
   "Date",
   "NAV",
@@ -1263,6 +1263,30 @@
    "NAV": "38.0833",
    "Shares Outstanding": "405000",
    "Total Net Assets": "15423736.5"
+  },
+  {
+   "Date": "Oct 13 2026",
+   "NAV": "38.21",
+   "Shares Outstanding": "405000",
+   "Total Net Assets": "15475050"
+  },
+  {
+   "Date": "Oct 14 2026",
+   "NAV": "38.3409",
+   "Shares Outstanding": "405000",
+   "Total Net Assets": "15528064.5"
+  },
+  {
+   "Date": "Oct 15 2026",
+   "NAV": "38.8857",
+   "Shares Outstanding": "405000",
+   "Total Net Assets": "15748708.5"
+  },
+  {
+   "Date": "Oct 16 2026",
+   "NAV": "38.9472",
+   "Shares Outstanding": "405000",
+   "Total Net Assets": "15773616"
   }
  ]
 }

@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=OILK&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/OILK-psdlyhld.csv, as of Oct 12 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/OILK-psdlyhld.csv, as of Oct 16 2026)",
   "historySource": "official ProShares NAV history file (ByFund/OILK-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-13T02:14:23Z",
+  "catalogReadAt": "2026-10-18T02:28:44Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -28,47 +28,47 @@
   "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
  },
  "expenseRatio": {
-  "display": "0.69%",
-  "value": 0.69,
+  "display": "0.70%",
+  "value": 0.7,
   "gross": {
-   "display": "0.69%",
-   "value": 0.69
+   "display": "0.70%",
+   "value": 0.7
   },
   "net": {
-   "display": "0.69%",
-   "value": 0.69
+   "display": "0.70%",
+   "value": 0.7
   },
   "footnote": null,
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$58.45",
-  "value": 58.45,
-  "asOfDate": "Oct 12 2026"
+  "display": "$60.72",
+  "value": 60.72,
+  "asOfDate": "Oct 16 2026"
  },
  "marketPrice": {
-  "display": "$58.33",
-  "value": 58.33,
-  "asOfDate": "Oct 12 2026"
+  "display": "$60.49",
+  "value": 60.49,
+  "asOfDate": "Oct 16 2026"
  },
  "premiumDiscount": {
-  "display": "-0.21%",
-  "value": -0.2053,
+  "display": "-0.38%",
+  "value": -0.3788,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$235.79 M",
-  "value": 235789690.7034,
-  "asOfDate": "Oct 12 2026",
+  "display": "$244.96 M",
+  "value": 244958243.1786,
+  "asOfDate": "Oct 16 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 52.8215,
-  "effectiveYieldText": "52.82%",
+  "effectiveYield": 50.8468,
+  "effectiveYieldText": "50.85%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 52.8215,
-  "indicatedYieldText": "52.82%",
+  "indicatedYield": 50.8468,
+  "indicatedYieldText": "50.85%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -708,8 +708,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "Oct 12 2026",
-  "asOf": "2026-10-12",
+  "asOfDate": "Oct 16 2026",
+  "asOf": "2026-10-16",
   "headers": [
    "Name",
    "Ticker",
@@ -719,7 +719,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/OILK-psdlyhld.csv, as of Oct 12 2026)",
+  "source": "official ProShares daily holdings download (ByFund/OILK-psdlyhld.csv, as of Oct 16 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -727,9 +727,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2525,
-  "asOf": "Oct 12 2026",
-  "asOfDate": "Oct 12 2026",
+  "totalRows": 2529,
+  "asOf": "Oct 16 2026",
+  "asOfDate": "Oct 16 2026",
   "headers": [
    "Date",
    "NAV",

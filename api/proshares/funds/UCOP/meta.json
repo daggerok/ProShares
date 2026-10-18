@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UCOP&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/UCOP-psdlyhld.csv, as of Oct 12 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UCOP-psdlyhld.csv, as of Oct 16 2026)",
   "historySource": "official ProShares NAV history file (ByFund/UCOP-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-13T02:14:23Z",
+  "catalogReadAt": "2026-10-18T02:28:44Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -31,8 +31,8 @@
   "display": "0.95%",
   "value": 0.95,
   "gross": {
-   "display": "1.04%",
-   "value": 1.04
+   "display": "3.44%",
+   "value": 3.44
   },
   "net": {
    "display": "0.95%",
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$43.00",
-  "value": 43,
-  "asOfDate": "Oct 12 2026"
+  "display": "$40.52",
+  "value": 40.52,
+  "asOfDate": "Oct 16 2026"
  },
  "marketPrice": {
-  "display": "$42.91",
-  "value": 42.91,
-  "asOfDate": "Oct 12 2026"
+  "display": "$39.96",
+  "value": 39.96,
+  "asOfDate": "Oct 16 2026"
  },
  "premiumDiscount": {
-  "display": "-0.21%",
-  "value": -0.2093,
+  "display": "-1.38%",
+  "value": -1.382,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$4.73 M",
-  "value": 4730120.0007,
-  "asOfDate": "Oct 12 2026",
+  "display": "$4.46 M",
+  "value": 4456789.5159,
+  "asOfDate": "Oct 16 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -204,8 +204,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 5,
-  "asOfDate": "Oct 12 2026",
-  "asOf": "2026-10-12",
+  "asOfDate": "Oct 16 2026",
+  "asOf": "2026-10-16",
   "headers": [
    "Name",
    "Ticker",
@@ -215,7 +215,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/UCOP-psdlyhld.csv, as of Oct 12 2026)",
+  "source": "official ProShares daily holdings download (ByFund/UCOP-psdlyhld.csv, as of Oct 16 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -223,9 +223,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 122,
-  "asOf": "Oct 12 2026",
-  "asOfDate": "Oct 12 2026",
+  "totalRows": 126,
+  "asOf": "Oct 16 2026",
+  "asOfDate": "Oct 16 2026",
   "headers": [
    "Date",
    "NAV",

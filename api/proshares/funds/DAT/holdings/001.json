@@ -2,223 +2,43 @@
  "ticker": "DAT",
  "page": 1,
  "pageSize": 250,
- "totalRows": 26,
+ "totalRows": 3,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held"
+  "Shares Held",
+  "Exposure Value"
  ],
  "rows": [
   {
-   "Name": "ZEBRA TECHNOLOGIES CORP-CL A",
-   "Ticker": "ZBRA",
-   "Identifier": "2989356",
-   "Weight": "6.0081117067",
-   "Market Value": "322527.72",
-   "Shares Held": "831"
+   "Name": "ISRAEL SHEKEL CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "ILS/USD",
+   "Weight": "-4.6046015126",
+   "Market Value": "—",
+   "Shares Held": "-757000",
+   "Exposure Value": "-246347.1"
   },
   {
-   "Name": "DYNATRACE INC",
-   "Ticker": "DT",
-   "Identifier": "BJV2RD9",
-   "Weight": "5.5560057889",
-   "Market Value": "298257.75",
-   "Shares Held": "4571"
-  },
-  {
-   "Name": "ELASTIC NV",
-   "Ticker": "ESTC",
-   "Identifier": "BFXCLC6",
-   "Weight": "5.5534010073",
-   "Market Value": "298117.92",
-   "Shares Held": "3121"
-  },
-  {
-   "Name": "PALANTIR TECHNOLOGIES INC-A",
-   "Ticker": "PLTR",
-   "Identifier": "BN78DQ4",
-   "Weight": "5.5401578455",
-   "Market Value": "297407",
-   "Shares Held": "1423"
-  },
-  {
-   "Name": "FIVE9 INC",
-   "Ticker": "FIVN",
-   "Identifier": "BKY7X18",
-   "Weight": "5.4486374862",
-   "Market Value": "292494",
-   "Shares Held": "8200"
-  },
-  {
-   "Name": "SNOWFLAKE INC",
-   "Ticker": "SNOW",
-   "Identifier": "BN134B7",
-   "Weight": "5.4308537001",
-   "Market Value": "291539.33",
-   "Shares Held": "809"
-  },
-  {
-   "Name": "NUTANIX INC - A",
-   "Ticker": "NTNX",
-   "Identifier": "BYQBFT8",
-   "Weight": "4.9650363074",
-   "Market Value": "266533.3",
-   "Shares Held": "3595"
-  },
-  {
-   "Name": "COMMVAULT SYSTEMS INC",
-   "Ticker": "CVLT",
-   "Identifier": "B142B38",
-   "Weight": "4.7031787323",
-   "Market Value": "252476.25",
-   "Shares Held": "1625"
-  },
-  {
-   "Name": "AVEPOINT INC",
-   "Ticker": "AVPT",
-   "Identifier": "BP2Q7W1",
-   "Weight": "4.5985489617",
-   "Market Value": "246859.51",
-   "Shares Held": "16943"
-  },
-  {
-   "Name": "NICE LTD",
-   "Ticker": "NICE",
-   "Identifier": "6647133",
-   "Weight": "4.5604622976",
-   "Market Value": "244814.94",
-   "Shares Held": "2098"
-  },
-  {
-   "Name": "BRAZE INC-A",
-   "Ticker": "BRZE",
-   "Identifier": "BPLQR66",
-   "Weight": "4.5575041390",
-   "Market Value": "244656.14",
-   "Shares Held": "8419"
-  },
-  {
-   "Name": "STRATEGY INC",
-   "Ticker": "MSTR",
-   "Identifier": "2974329",
-   "Weight": "4.5534905065",
-   "Market Value": "244440.68",
-   "Shares Held": "1601"
-  },
-  {
-   "Name": "INTERDIGITAL INC",
-   "Ticker": "IDCC",
-   "Identifier": "2465737",
-   "Weight": "4.5233672127",
-   "Market Value": "242823.6",
-   "Shares Held": "740"
-  },
-  {
-   "Name": "DATADOG INC - CLASS A",
-   "Ticker": "DDOG",
-   "Identifier": "BKT9Y49",
-   "Weight": "4.4097977677",
-   "Market Value": "236726.96",
-   "Shares Held": "824"
-  },
-  {
-   "Name": "TYLER TECHNOLOGIES INC",
-   "Ticker": "TYL",
-   "Identifier": "2909644",
-   "Weight": "3.9134671929",
-   "Market Value": "210082.92",
-   "Shares Held": "618"
-  },
-  {
-   "Name": "MONGODB INC",
-   "Ticker": "MDB",
-   "Identifier": "BF2FJ99",
-   "Weight": "3.8994083022",
-   "Market Value": "209328.21",
-   "Shares Held": "549"
-  },
-  {
-   "Name": "GENIUS SPORTS LTD",
-   "Ticker": "GENI",
-   "Identifier": "BMF1JR1",
-   "Weight": "3.3792461090",
-   "Market Value": "181404.84",
-   "Shares Held": "27444"
-  },
-  {
-   "Name": "TERADATA CORP",
-   "Ticker": "TDC",
-   "Identifier": "B247H10",
-   "Weight": "3.2707703597",
-   "Market Value": "175581.64",
-   "Shares Held": "5723"
-  },
-  {
-   "Name": "VUSION",
-   "Ticker": "VU",
-   "Identifier": "B0XMRC3",
-   "Weight": "3.0150058834",
-   "Market Value": "161851.68",
-   "Shares Held": "1174"
-  },
-  {
-   "Name": "CELLEBRITE DI LTD",
-   "Ticker": "CLBT",
-   "Identifier": "BN7GN02",
-   "Weight": "2.9764604066",
-   "Market Value": "159782.48",
-   "Shares Held": "13967"
-  },
-  {
-   "Name": "PAGERDUTY INC",
-   "Ticker": "PD",
-   "Identifier": "BJ7JPH4",
-   "Weight": "2.5708320405",
-   "Market Value": "138007.52",
-   "Shares Held": "8498"
-  },
-  {
-   "Name": "INNODATA INC",
-   "Ticker": "INOD",
-   "Identifier": "2226741",
-   "Weight": "2.1115015469",
-   "Market Value": "113349.72",
-   "Shares Held": "1892"
-  },
-  {
-   "Name": "RED VIOLET INC",
-   "Ticker": "RDVT",
-   "Identifier": "BFXSFB1",
-   "Weight": "2.0011868214",
-   "Market Value": "107427.8",
-   "Shares Held": "1340"
-  },
-  {
-   "Name": "COGNYTE SOFTWARE LTD",
-   "Ticker": "CGNT",
-   "Identifier": "BMYDNT8",
-   "Weight": "1.1584519662",
-   "Market Value": "62188.07",
-   "Shares Held": "7091"
-  },
-  {
-   "Name": "ENGHOUSE SYSTEMS LTD",
-   "Ticker": "ENGH",
-   "Identifier": "2282237",
-   "Weight": "1.1073250014",
-   "Market Value": "59443.47",
-   "Shares Held": "4995"
+   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
+   "Ticker": "-",
+   "Identifier": "EUR/USD",
+   "Weight": "-2.9878664228",
+   "Market Value": "—",
+   "Shares Held": "-142750",
+   "Exposure Value": "-159851.45"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "10081",
-   "Shares Held": "10081"
+   "Market Value": "5350019.96",
+   "Shares Held": "5350019.96",
+   "Exposure Value": "—"
   }
  ]
 }
