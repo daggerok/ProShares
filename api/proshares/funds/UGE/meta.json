@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UGE&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/UGE-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UGE-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/UGE-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$20.41",
-  "value": 20.41,
-  "asOfDate": "Oct 16 2026"
+  "display": "$20.21",
+  "value": 20.21,
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$20.39",
-  "value": 20.39,
-  "asOfDate": "Oct 16 2026"
+  "display": "$20.21",
+  "value": 20.21,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "-0.10%",
-  "value": -0.098,
+  "display": "0.00%",
+  "value": 0,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$9.80 M",
-  "value": 9795840,
-  "asOfDate": "Oct 16 2026",
+  "display": "$9.70 M",
+  "value": 9700176,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 2.0242,
-  "effectiveYieldText": "2.02%",
+  "effectiveYield": 2.0442,
+  "effectiveYieldText": "2.04%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 2.0242,
-  "indicatedYieldText": "2.02%",
+  "indicatedYield": 2.0442,
+  "indicatedYieldText": "2.04%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -546,8 +546,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 39,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -557,7 +557,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/UGE-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/UGE-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -565,9 +565,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4962,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 4963,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -587,14 +587,14 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Total Number of Holdings": "34",
-   "Price/Earnings Ratio": "20.64",
-   "Price/Book Ratio": "4.98",
-   "Dividend Yield ( % )": "2.58",
-   "Avg. Index Market Capitalization": "$101.32 billion",
+   "Total Number of Holdings": "33",
+   "Price/Earnings Ratio": "19.36",
+   "Price/Book Ratio": "4.99",
+   "Dividend Yield ( % )": "2.71",
+   "Avg. Index Market Capitalization": "$100.77 billion",
    "": "2017"
   },
-  "indexAsOf": "Jun 30 2026",
+  "indexAsOf": "Sep 30 2026",
   "geared": {
    "strategy": "Sector",
    "dailyObjective": "+2x",
@@ -629,43 +629,43 @@
     "rows": [
      {
       "Company": "Walmart Inc.",
-      "Weight": 10.843641
+      "Weight": 10.589625
      },
      {
       "Company": "Costco Wholesale Corp.",
-      "Weight": 9.063519000000001
+      "Weight": 9.231279
      },
      {
-      "Company": "Procter & Gamble Co.",
-      "Weight": 7.457113
+      "Company": "The Procter & Gamble Co.",
+      "Weight": 7.721613
      },
      {
       "Company": "The Coca-Cola Co.",
-      "Weight": 6.87251
+      "Weight": 7.6217690000000005
      },
      {
       "Company": "Philip Morris International Inc.",
-      "Weight": 6.157571
+      "Weight": 6.800602
      },
      {
-      "Company": "Colgate-Palmolive Co.",
-      "Weight": 4.714574
+      "Company": "Target Corp.",
+      "Weight": 4.591156
      },
      {
       "Company": "Altria Group Inc.",
-      "Weight": 4.550973
+      "Weight": 4.5780840000000005
      },
      {
-      "Company": "Monster Beverage Corp.",
-      "Weight": 4.47072
+      "Company": "Colgate-Palmolive Co.",
+      "Weight": 4.4730609999999995
      },
      {
       "Company": "PepsiCo Inc.",
-      "Weight": 4.339715
+      "Weight": 4.278828
      },
      {
       "Company": "Mondelez International Inc.",
-      "Weight": 4.168671
+      "Weight": 4.275341
      }
     ]
    },
@@ -674,15 +674,15 @@
     "rows": [
      {
       "Sector": "Food, Beverage & Tobacco",
-      "Weight": 46.125310000000006
+      "Weight": 46.101853
      },
      {
       "Sector": "Food & Staples Retailing",
-      "Weight": 33.419639000000004
+      "Weight": 33.718763
      },
      {
       "Sector": "Household & Personal Products",
-      "Weight": 20.455050999999997
+      "Weight": 20.179385
      }
     ]
    }

@@ -2,7 +2,7 @@
  "ticker": "OND",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1250,
+ "totalRows": 1251,
  "headers": [
   "Date",
   "NAV",
@@ -1509,6 +1509,12 @@
    "NAV": "33.2115",
    "Shares Outstanding": "75000",
    "Total Net Assets": "2490895.7115"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "NAV": "33.2108",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "2490843.2108"
   }
  ]
 }

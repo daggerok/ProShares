@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ITWO&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ITWO-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$41.77",
-  "value": 41.77,
-  "asOfDate": "Oct 16 2026"
+  "display": "$41.90",
+  "value": 41.9,
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$41.80",
-  "value": 41.8,
-  "asOfDate": "Oct 16 2026"
+  "display": "$41.85",
+  "value": 41.85,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "0.07%",
-  "value": 0.0718,
+  "display": "-0.12%",
+  "value": -0.1193,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$177.52 M",
-  "value": 177522966.7701,
-  "asOfDate": "Oct 16 2026",
+  "display": "$178.06 M",
+  "value": 178055491.8954,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 6.5284,
-  "effectiveYieldText": "6.53%",
+  "effectiveYield": 6.5081,
+  "effectiveYieldText": "6.51%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 6.5284,
-  "indicatedYieldText": "6.53%",
+  "indicatedYield": 6.5081,
+  "indicatedYieldText": "6.51%",
   "secYield": 0.97,
   "secYieldText": "0.97%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -401,9 +401,9 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 1977,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "totalRows": 1975,
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -413,7 +413,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -428,9 +428,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 533,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 534,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -450,10 +450,10 @@
   },
   "characteristicsAsOf": "Aug 31 2026",
   "index": {
-   "Expiration Date 10/19/": "2026",
-   "Strike Price": "2,770",
-   "Moneyness": "101.79%",
-   "FIGI BBG025MCC1P": "2",
+   "Expiration Date 10/20/": "2026",
+   "Strike Price": "2,780",
+   "Moneyness": "101.9%",
+   "FIGI BBG025N8T1L": "6",
    "Total Number of Holdings": "1975",
    "Price/Earnings Ratio": "23.76",
    "Price/Book Ratio": "2.67",
@@ -472,44 +472,44 @@
     "label": "Top 10 Index Holdings",
     "rows": [
      {
+      "Company": "Twist Bioscience Corp.",
+      "Weight": 0.43093200000000004
+     },
+     {
       "Company": "Moog Inc.-Class A",
-      "Weight": 0.376963
-     },
-     {
-      "Company": "Hut 8 Corp.",
-      "Weight": 0.370311
-     },
-     {
-      "Company": "Viasat Inc.",
-      "Weight": 0.35418099999999997
-     },
-     {
-      "Company": "BrightSpring Health Services Inc.",
-      "Weight": 0.353304
-     },
-     {
-      "Company": "Cytokinetics Inc.",
-      "Weight": 0.349731
-     },
-     {
-      "Company": "MaxLinear Inc.",
-      "Weight": 0.34432999999999997
-     },
-     {
-      "Company": "Argan Inc.",
-      "Weight": 0.340697
-     },
-     {
-      "Company": "UMB Financial Corp.",
-      "Weight": 0.327414
+      "Weight": 0.368012
      },
      {
       "Company": "JFrog Ltd.",
-      "Weight": 0.30802199999999996
+      "Weight": 0.35675300000000004
      },
      {
-      "Company": "Riot Platforms Inc.",
-      "Weight": 0.303516
+      "Company": "10x Genomics Inc.-Class A",
+      "Weight": 0.356477
+     },
+     {
+      "Company": "UMB Financial Corp.",
+      "Weight": 0.32342400000000004
+     },
+     {
+      "Company": "BrightSpring Health Services Inc.",
+      "Weight": 0.321131
+     },
+     {
+      "Company": "Glaukos Corp.",
+      "Weight": 0.31884
+     },
+     {
+      "Company": "Viasat Inc.",
+      "Weight": 0.305325
+     },
+     {
+      "Company": "Hut 8 Corp.",
+      "Weight": 0.29957
+     },
+     {
+      "Company": "Cytokinetics Inc.",
+      "Weight": 0.29956
      }
     ]
    },
@@ -518,47 +518,47 @@
     "rows": [
      {
       "Sector": "Health Care",
-      "Weight": 19.998776
+      "Weight": 20.797561
      },
      {
       "Sector": "Financials",
-      "Weight": 18.563293
+      "Weight": 18.957825
      },
      {
       "Sector": "Industrials",
-      "Weight": 14.912085
+      "Weight": 13.968458
      },
      {
       "Sector": "Information Technology",
-      "Weight": 14.331756
+      "Weight": 13.737272
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 9.40676
-     },
-     {
-      "Sector": "Real Estate",
-      "Weight": 5.7671
+      "Weight": 8.848462
      },
      {
       "Sector": "Energy",
-      "Weight": 5.7430259999999995
+      "Weight": 6.718419000000001
+     },
+     {
+      "Sector": "Real Estate",
+      "Weight": 5.6827700000000005
      },
      {
       "Sector": "Materials",
-      "Weight": 4.221086000000001
+      "Weight": 4.16202
      },
      {
       "Sector": "Utilities",
-      "Weight": 2.682501
+      "Weight": 2.720067
      },
      {
       "Sector": "Communication Services",
-      "Weight": 2.41666
+      "Weight": 2.45581
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 1.9569269999999999
+      "Weight": 1.9513220000000002
      }
     ]
    }

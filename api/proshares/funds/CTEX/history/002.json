@@ -2,7 +2,7 @@
  "ticker": "CTEX",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1269,
+ "totalRows": 1270,
  "headers": [
   "Date",
   "NAV",
@@ -1620,6 +1620,12 @@
   },
   {
    "Date": "Oct 16 2026",
+   "NAV": "30.0566",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "4508520.0566"
+  },
+  {
+   "Date": "Oct 19 2026",
    "NAV": "30.0566",
    "Shares Outstanding": "150000",
    "Total Net Assets": "4508520.0566"

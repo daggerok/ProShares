@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=EET&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/EET-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/EET-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EET-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$95.22",
-  "value": 95.22,
-  "asOfDate": "Oct 16 2026"
+  "display": "$96.59",
+  "value": 96.59,
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$95.04",
-  "value": 95.04,
-  "asOfDate": "Oct 16 2026"
+  "display": "$96.58",
+  "value": 96.58,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "-0.19%",
-  "value": -0.189,
+  "display": "-0.01%",
+  "value": -0.0104,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$33.33 M",
-  "value": 33325390,
-  "asOfDate": "Oct 16 2026",
+  "display": "$33.81 M",
+  "value": 33805310,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 1.9858,
-  "effectiveYieldText": "1.99%",
+  "effectiveYield": 1.9576,
+  "effectiveYieldText": "1.96%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 1.9858,
-  "indicatedYieldText": "1.99%",
+  "indicatedYield": 1.9576,
+  "indicatedYieldText": "1.96%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -321,8 +321,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 7,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -332,7 +332,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/EET-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/EET-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -340,9 +340,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4372,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 4373,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -362,14 +362,14 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Total Number of Holdings": "1178",
-   "Price/Earnings Ratio": "18.14",
-   "Price/Book Ratio": "2.54",
-   "Dividend Yield ( % )": "1.89",
-   "Avg. Index Market Capitalization": "$12.07 billion",
+   "Total Number of Holdings": "1165",
+   "Price/Earnings Ratio": "14.99",
+   "Price/Book Ratio": "2.41",
+   "Dividend Yield ( % )": "2.01",
+   "Avg. Index Market Capitalization": "$10.54 billion",
    "": "2018"
   },
-  "indexAsOf": "Jun 30 2026",
+  "indexAsOf": "Sep 30 2026",
   "geared": {
    "strategy": "International",
    "dailyObjective": "+2x",
@@ -382,43 +382,43 @@
     "rows": [
      {
       "Company": "Taiwan Semiconductor Manufacturing Co. Ltd.",
-      "Weight": 15.082696
+      "Weight": 15.628749000000001
      },
      {
       "Company": "Samsung Electronics Co. Ltd.",
-      "Weight": 8.15966
+      "Weight": 7.5542620000000005
      },
      {
-      "Company": "SK hynix Inc.",
-      "Weight": 7.645605
+      "Company": "Sk Hynix",
+      "Weight": 5.9010750000000005
      },
      {
       "Company": "Tencent Holdings Ltd.",
-      "Weight": 2.73208
+      "Weight": 2.744807
      },
      {
-      "Company": "Alibaba Group Holding Ltd.",
-      "Weight": 1.604201
+      "Company": "Alibaba Group Holding",
+      "Weight": 1.8560159999999999
      },
      {
-      "Company": "MediaTek Inc.",
-      "Weight": 1.556654
-     },
-     {
-      "Company": "Delta Electronics Inc.",
-      "Weight": 0.9650550000000001
+      "Company": "Mediatek Inc.",
+      "Weight": 1.8167300000000002
      },
      {
       "Company": "Samsung Electronics Co. Ltd.-Preferred",
-      "Weight": 0.88852
+      "Weight": 0.9421789999999999
      },
      {
-      "Company": "Sk Square Co. Ltd.",
-      "Weight": 0.8187909999999999
+      "Company": "Delta Electronics Inc.",
+      "Weight": 0.941873
+     },
+     {
+      "Company": "China Construction Bank-Class H",
+      "Weight": 0.8574170000000001
      },
      {
       "Company": "HDFC Bank Ltd.",
-      "Weight": 0.7790980000000001
+      "Weight": 0.7897120000000001
      }
     ]
    },
@@ -427,99 +427,99 @@
     "rows": [
      {
       "Country": "Taiwan",
-      "Weight": 27.343671000000004
+      "Weight": 28.941519999999997
      },
      {
       "Country": "South Korea",
-      "Weight": 23.723688000000003
+      "Weight": 21.395827
      },
      {
       "Country": "China",
-      "Weight": 19.032014
+      "Weight": 19.804880999999998
      },
      {
       "Country": "India",
-      "Weight": 11.093547
+      "Weight": 10.651881000000001
      },
      {
       "Country": "Brazil",
-      "Weight": 3.7749489999999994
+      "Weight": 4.087217
      },
      {
       "Country": "South Africa",
-      "Weight": 2.917176
+      "Weight": 2.924759
      },
      {
       "Country": "Saudi Arabia",
-      "Weight": 2.40136
+      "Weight": 2.301987
      },
      {
       "Country": "Mexico",
-      "Weight": 1.658569
+      "Weight": 1.5640790000000002
      },
      {
       "Country": "United Arab Emirates",
-      "Weight": 1.1282459999999999
+      "Weight": 1.230951
      },
      {
       "Country": "Poland",
-      "Weight": 1.0027490000000001
+      "Weight": 1.166765
      },
      {
       "Country": "Thailand",
-      "Weight": 0.96296
+      "Weight": 0.9149499999999999
      },
      {
       "Country": "Malaysia",
-      "Weight": 0.901596
-     },
-     {
-      "Country": "Kuwait",
-      "Weight": 0.521591
+      "Weight": 0.885042
      },
      {
       "Country": "Greece",
-      "Weight": 0.509752
+      "Weight": 0.623667
      },
      {
-      "Country": "Qatar",
-      "Weight": 0.476868
-     },
-     {
-      "Country": "Chile",
-      "Weight": 0.44372500000000004
+      "Country": "Kuwait",
+      "Weight": 0.542427
      },
      {
       "Country": "Indonesia",
-      "Weight": 0.428687
+      "Weight": 0.434428
+     },
+     {
+      "Country": "Qatar",
+      "Weight": 0.42495299999999997
+     },
+     {
+      "Country": "Chile",
+      "Weight": 0.41945699999999997
      },
      {
       "Country": "Peru",
-      "Weight": 0.382262
+      "Weight": 0.404514
      },
      {
       "Country": "Turkey",
-      "Weight": 0.368925
+      "Weight": 0.37110699999999996
      },
      {
       "Country": "Hungary",
-      "Weight": 0.336994
+      "Weight": 0.322427
      },
      {
       "Country": "Philippines",
-      "Weight": 0.273461
+      "Weight": 0.24833799999999998
      },
      {
       "Country": "Colombia",
-      "Weight": 0.143131
+      "Weight": 0.165891
      },
      {
       "Country": "Czech Republic",
-      "Weight": 0.10401200000000001
+      "Weight": 0.109201
      },
      {
       "Country": "Egypt",
-      "Weight": 0.070065
+      "Weight": 0.06373000000000001
      }
     ]
    },
@@ -528,47 +528,47 @@
     "rows": [
      {
       "Sector": "Information Technology",
-      "Weight": 45.259693
+      "Weight": 43.783576000000004
      },
      {
       "Sector": "Financials",
-      "Weight": 18.39686
+      "Weight": 19.349004
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 7.232734000000001
+      "Weight": 7.3901010000000005
      },
      {
       "Sector": "Industrials",
-      "Weight": 6.746805
+      "Weight": 6.34025
      },
      {
       "Sector": "Communication Services",
-      "Weight": 6.003557000000001
+      "Weight": 5.856522
      },
      {
       "Sector": "Materials",
-      "Weight": 5.431287
+      "Weight": 5.768452
      },
      {
       "Sector": "Energy",
-      "Weight": 3.08405
-     },
-     {
-      "Sector": "Consumer Staples",
-      "Weight": 2.646806
+      "Weight": 3.399121
      },
      {
       "Sector": "Health Care",
-      "Weight": 2.3672869999999997
+      "Weight": 2.7159050000000002
+     },
+     {
+      "Sector": "Consumer Staples",
+      "Weight": 2.58169
      },
      {
       "Sector": "Utilities",
-      "Weight": 1.862892
+      "Weight": 1.8627799999999999
      },
      {
       "Sector": "Real Estate",
-      "Weight": 0.96803
+      "Weight": 0.952597
      }
     ]
    }

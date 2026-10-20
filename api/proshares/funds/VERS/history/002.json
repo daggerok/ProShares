@@ -2,7 +2,7 @@
  "ticker": "VERS",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1154,
+ "totalRows": 1155,
  "headers": [
   "Date",
   "NAV",
@@ -930,6 +930,12 @@
   },
   {
    "Date": "Oct 16 2026",
+   "NAV": "71.4389",
+   "Shares Outstanding": "70000",
+   "Total Net Assets": "5000794.4389"
+  },
+  {
+   "Date": "Oct 19 2026",
    "NAV": "71.4389",
    "Shares Outstanding": "70000",
    "Total Net Assets": "5000794.4389"

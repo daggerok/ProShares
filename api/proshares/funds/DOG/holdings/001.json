@@ -2,7 +2,7 @@
  "ticker": "DOG",
  "page": 1,
  "pageSize": 250,
- "totalRows": 10,
+ "totalRows": 11,
  "headers": [
   "Name",
   "Ticker",
@@ -10,98 +10,131 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
   {
    "Name": "DJ Industrial Average Index SWAP BNP Paribas",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-16.9166923538",
+   "Weight": "-23.2285375275",
    "Market Value": "—",
-   "Shares Held": "-354",
-   "Exposure Value": "-18408853.14"
+   "Shares Held": "-526",
+   "Exposure Value": "-27334131.78",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average Index SWAP Bank of America NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.4760091632",
+   "Weight": "-12.4533224007",
    "Market Value": "—",
    "Shares Held": "-282",
-   "Exposure Value": "-14664679.62"
+   "Exposure Value": "-14654420.46",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJIA MINI E-CBOT EQUITY INDEX 18/DEC/2026 DMZ6 INDEX",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.1949690813",
+   "Weight": "-12.1946684691",
    "Market Value": "—",
    "Shares Held": "-55",
-   "Exposure Value": "-14358850"
+   "Exposure Value": "-14350050",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average SWAP Barclays Capital",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.1414982975",
+   "Weight": "-12.1441973766",
    "Market Value": "—",
    "Shares Held": "-275",
-   "Exposure Value": "-14300662.75"
+   "Exposure Value": "-14290658.25",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average Index SWAP Goldman Sachs International",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-12.3769020329",
+   "Weight": "-11.4376258928",
    "Market Value": "—",
    "Shares Held": "-259",
-   "Exposure Value": "-13468624.19"
+   "Exposure Value": "-13459201.77",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average Index SWAP Citibank NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-12.1379657002",
+   "Weight": "-11.2168223042",
    "Market Value": "—",
    "Shares Held": "-254",
-   "Exposure Value": "-13208612.14"
+   "Exposure Value": "-13199371.62",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average Index SWAP UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-10.5085154823",
+   "Weight": "-9.7110301517",
    "Market Value": "—",
    "Shares Held": "-219.9",
-   "Exposure Value": "-11435433.96"
+   "Exposure Value": "-11427433.93",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "DJ Industrial Average Index SWAP Societe Generale",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-8.2194098442",
+   "Weight": "-7.5956434501",
    "Market Value": "—",
    "Shares Held": "-172",
-   "Exposure Value": "-8944414.52"
+   "Exposure Value": "-8938157.16",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "100120000",
+   "Market Value": "100130000",
    "Shares Held": "1000000",
-   "Exposure Value": "—"
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BWRXMP4",
+   "Weight": "—",
+   "Market Value": "4968019.45",
+   "Shares Held": "5000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-12-17"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "8700641.5",
-   "Shares Held": "8700641.5",
-   "Exposure Value": "—"
+   "Market Value": "12576766.35",
+   "Shares Held": "12576766.35",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }

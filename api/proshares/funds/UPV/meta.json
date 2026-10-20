@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UPV&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/UPV-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UPV-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/UPV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$93.79",
-  "value": 93.79,
-  "asOfDate": "Oct 16 2026"
+  "display": "$91.93",
+  "value": 91.93,
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$93.78",
-  "value": 93.78,
-  "asOfDate": "Oct 16 2026"
+  "display": "$91.91",
+  "value": 91.91,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "-0.01%",
-  "value": -0.0107,
+  "display": "-0.02%",
+  "value": -0.0218,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$11.72 M",
-  "value": 11723700,
-  "asOfDate": "Oct 16 2026",
+  "display": "$11.49 M",
+  "value": 11490687.5,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 2.5082,
-  "effectiveYieldText": "2.51%",
+  "effectiveYield": 2.5589,
+  "effectiveYieldText": "2.56%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 2.5082,
-  "indicatedYieldText": "2.51%",
+  "indicatedYield": 2.5589,
+  "indicatedYieldText": "2.56%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -321,8 +321,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 7,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -332,7 +332,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/UPV-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/UPV-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -340,9 +340,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4145,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 4146,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -362,14 +362,14 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Total Number of Holdings": "1",
-   "Price/Earnings Ratio": "17.31",
-   "Price/Book Ratio": "2.38",
-   "Dividend Yield ( % )": "2.95",
-   "Avg. Index Market Capitalization": "$16.81 billion",
+   "Total Number of Holdings": "1216",
+   "Price/Earnings Ratio": "15.93",
+   "Price/Book Ratio": "2.35",
+   "Dividend Yield ( % )": "3.02",
+   "Avg. Index Market Capitalization": "$17.95 billion",
    "": "2018"
   },
-  "indexAsOf": "Jun 30 2026",
+  "indexAsOf": "Sep 30 2026",
   "geared": {
    "strategy": "International",
    "dailyObjective": "+2x",
@@ -381,44 +381,44 @@
     "label": "Index Holdings",
     "rows": [
      {
-      "Company": "ASML HOLDING NV",
-      "Weight": 4.847263
+      "Company": "ASML Holding NV",
+      "Weight": 4.525259999999999
      },
      {
-      "Company": "HSBC HOLDINGS PLC",
-      "Weight": 2.079827
+      "Company": "HSBC Holdings plc",
+      "Weight": 2.207573
      },
      {
-      "Company": "NOVARTIS AG-REG",
-      "Weight": 1.8668299999999998
+      "Company": "Roche Holding AG",
+      "Weight": 1.9044660000000002
      },
      {
-      "Company": "ROCHE HOLDING AG",
-      "Weight": 1.850632
+      "Company": "Shell plc",
+      "Weight": 1.790895
      },
      {
-      "Company": "ASTRAZENECA PLC",
-      "Weight": 1.791457
+      "Company": "Novartis AG",
+      "Weight": 1.735652
      },
      {
-      "Company": "NESTLE SA-REG",
-      "Weight": 1.690409
+      "Company": "AstraZeneca plc",
+      "Weight": 1.582183
      },
      {
-      "Company": "SIEMENS AG-REG",
-      "Weight": 1.505204
+      "Company": "Nestle SA",
+      "Weight": 1.517433
      },
      {
-      "Company": "SHELL PLC",
-      "Weight": 1.39465
+      "Company": "Siemens AG",
+      "Weight": 1.4676150000000001
      },
      {
-      "Company": "BANCO SANTANDER SA",
-      "Weight": 1.275511
+      "Company": "SAP SE",
+      "Weight": 1.332746
      },
      {
-      "Company": "ALLIANZ SE-REG",
-      "Weight": 1.150392
+      "Company": "Banco Santander SA",
+      "Weight": 1.3077139999999998
      }
     ]
    },
@@ -426,44 +426,44 @@
     "label": "Index Country Weightings",
     "rows": [
      {
-      "Country": "UNITED KINGDOM",
-      "Weight": 22.515417
+      "Country": "United Kingdom",
+      "Weight": 22.97294
      },
      {
-      "Country": "SWITZERLAND",
-      "Weight": 14.310967
+      "Country": "Switzerland",
+      "Weight": 13.687726999999999
      },
      {
-      "Country": "FRANCE",
-      "Weight": 14.168619
+      "Country": "France",
+      "Weight": 13.630424999999999
      },
      {
-      "Country": "GERMANY",
-      "Weight": 12.83988
-     },
-     {
-      "Country": "NETHERLANDS",
-      "Weight": 8.653603
+      "Country": "Germany",
+      "Weight": 12.916321
      },
      {
       "Country": "Other",
-      "Weight": 7.708848
+      "Weight": 8.731903
      },
      {
-      "Country": "SPAIN",
-      "Weight": 5.97359
+      "Country": "Netherlands",
+      "Weight": 8.337201
      },
      {
-      "Country": "ITALY",
-      "Weight": 5.705486
+      "Country": "Spain",
+      "Weight": 6.056706
      },
      {
-      "Country": "SWEDEN",
-      "Weight": 5.393405
+      "Country": "Italy",
+      "Weight": 5.588855000000001
      },
      {
-      "Country": "DENMARK",
-      "Weight": 2.730185
+      "Country": "Sweden",
+      "Weight": 5.448883
+     },
+     {
+      "Country": "Denmark",
+      "Weight": 2.629039
      }
     ]
    }

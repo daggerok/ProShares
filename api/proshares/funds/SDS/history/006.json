@@ -2,7 +2,7 @@
  "ticker": "SDS",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5100,
+ "totalRows": 5101,
  "headers": [
   "Date",
   "NAV",
@@ -609,6 +609,12 @@
    "NAV": "54.6441",
    "Shares Outstanding": "6860970",
    "Total Net Assets": "374911585.4211"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "NAV": "54.2136",
+   "Shares Outstanding": "6860970",
+   "Total Net Assets": "371957937.4056"
   }
  ]
 }

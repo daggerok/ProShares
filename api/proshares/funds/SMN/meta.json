@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SMN&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/SMN-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SMN-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SMN-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -44,23 +44,23 @@
  "nav": {
   "display": "$20.00",
   "value": 20,
-  "asOfDate": "Oct 16 2026"
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$20.09",
-  "value": 20.09,
-  "asOfDate": "Oct 16 2026"
+  "display": "$19.91",
+  "value": 19.91,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "0.45%",
-  "value": 0.45,
+  "display": "-0.45%",
+  "value": -0.45,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
   "display": "$4.05 M",
-  "value": 4050670.9516,
-  "asOfDate": "Oct 16 2026",
+  "value": 4049010.5418,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -330,8 +330,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 6,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -341,7 +341,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/SMN-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/SMN-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -349,9 +349,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4962,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 4963,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -371,14 +371,14 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Total Number of Holdings": "26",
-   "Price/Earnings Ratio": "23.08",
-   "Price/Book Ratio": "2.88",
-   "Dividend Yield ( % )": "1.86",
-   "Avg. Index Market Capitalization": "$46.15 billion",
+   "Total Number of Holdings": "25",
+   "Price/Earnings Ratio": "19.62",
+   "Price/Book Ratio": "2.69",
+   "Dividend Yield ( % )": "1.98",
+   "Avg. Index Market Capitalization": "$45.53 billion",
    "": "2018"
   },
-  "indexAsOf": "Jun 30 2026",
+  "indexAsOf": "Sep 30 2026",
   "geared": {
    "strategy": "Sector",
    "dailyObjective": "-2x",
@@ -434,43 +434,43 @@
     "rows": [
      {
       "Company": "Linde plc",
-      "Weight": 14.082463
+      "Weight": 12.286232
      },
      {
       "Company": "Newmont Corp.",
-      "Weight": 5.852342
+      "Weight": 6.824279
      },
      {
       "Company": "Freeport-McMoRan Inc.",
-      "Weight": 5.306412
-     },
-     {
-      "Company": "Corteva Inc.",
-      "Weight": 4.966242
-     },
-     {
-      "Company": "Sherwin-Williams Co.",
-      "Weight": 4.946934
+      "Weight": 5.644443
      },
      {
       "Company": "Ecolab Inc.",
-      "Weight": 4.733684
+      "Weight": 4.770824
+     },
+     {
+      "Company": "The Sherwin-Williams Co.",
+      "Weight": 4.76844
      },
      {
       "Company": "Vulcan Materials Co.",
-      "Weight": 4.72409
-     },
-     {
-      "Company": "CRH plc",
-      "Weight": 4.672931999999999
-     },
-     {
-      "Company": "Air Products & Chemicals Inc.",
-      "Weight": 4.629588
+      "Weight": 4.63009
      },
      {
       "Company": "Martin Marietta Materials Inc.",
-      "Weight": 4.554553
+      "Weight": 4.472777
+     },
+     {
+      "Company": "Air Products & Chemicals Inc.",
+      "Weight": 4.4571510000000005
+     },
+     {
+      "Company": "CRH plc",
+      "Weight": 4.382928
+     },
+     {
+      "Company": "Steel Dynamics Inc.",
+      "Weight": 4.354716
      }
     ]
    },
@@ -479,19 +479,19 @@
     "rows": [
      {
       "Sector": "Chemicals",
-      "Weight": 51.910606
+      "Weight": 48.624474
      },
      {
       "Sector": "Metals & Mining",
-      "Weight": 18.775273000000002
+      "Weight": 21.110029
      },
      {
       "Sector": "Containers & Packaging",
-      "Weight": 15.362545999999998
+      "Weight": 16.779702
      },
      {
       "Sector": "Construction Materials",
-      "Weight": 13.951575
+      "Weight": 13.485795
      }
     ]
    }

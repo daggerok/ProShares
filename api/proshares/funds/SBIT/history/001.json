@@ -2,7 +2,7 @@
  "ticker": "SBIT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 640,
+ "totalRows": 641,
  "headers": [
   "Date",
   "NAV",
@@ -3849,6 +3849,12 @@
    "NAV": "31.9168",
    "Shares Outstanding": "3901940",
    "Total Net Assets": "124537502.4256"
+  },
+  {
+   "Date": "Oct 19 2026",
+   "NAV": "31.7169",
+   "Shares Outstanding": "3831940",
+   "Total Net Assets": "121537321.2198"
   }
  ]
 }

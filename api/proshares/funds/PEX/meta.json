@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=PEX&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 16 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 19 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-18T02:28:44Z",
+  "catalogReadAt": "2026-10-20T04:07:11Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$22.26",
-  "value": 22.26,
-  "asOfDate": "Oct 16 2026"
+  "display": "$21.97",
+  "value": 21.97,
+  "asOfDate": "Oct 19 2026"
  },
  "marketPrice": {
-  "display": "$22.09",
-  "value": 22.09,
-  "asOfDate": "Oct 16 2026"
+  "display": "$21.83",
+  "value": 21.83,
+  "asOfDate": "Oct 19 2026"
  },
  "premiumDiscount": {
-  "display": "-0.76%",
-  "value": -0.7637,
+  "display": "-0.64%",
+  "value": -0.6372,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$10.24 M",
-  "value": 10241140.2633,
-  "asOfDate": "Oct 16 2026",
+  "display": "$10.11 M",
+  "value": 10105853.9692,
+  "asOfDate": "Oct 19 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 8.03,
   "yield12MText": "8.03%",
-  "indicatedYield": 4.4053,
-  "indicatedYieldText": "4.41%",
+  "indicatedYield": 4.4634,
+  "indicatedYieldText": "4.46%",
   "secYield": 6.84,
   "secYieldText": "6.84%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -546,8 +546,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 31,
-  "asOfDate": "Oct 16 2026",
-  "asOf": "2026-10-16",
+  "asOfDate": "Oct 19 2026",
+  "asOf": "2026-10-19",
   "headers": [
    "Name",
    "Ticker",
@@ -556,7 +556,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 16 2026)",
+  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 19 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -564,9 +564,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3432,
-  "asOf": "Oct 16 2026",
-  "asOfDate": "Oct 16 2026",
+  "totalRows": 3433,
+  "asOf": "Oct 19 2026",
+  "asOfDate": "Oct 19 2026",
   "headers": [
    "Date",
    "NAV",
@@ -592,11 +592,11 @@
    "Total Number of Holdings": "30",
    "Price/Earnings Ratio": "14.98",
    "Price/Book Ratio": "0.77",
-   "Dividend Yield ( % )": "6.81",
-   "Avg. Index Market Capitalization": "$3.51 billion",
+   "Dividend Yield ( % )": "6.54",
+   "Avg. Index Market Capitalization": "$3.67 billion",
    "": "2017"
   },
-  "indexAsOf": "Jun 30 2026",
+  "indexAsOf": "Sep 30 2026",
   "geared": {
    "strategy": "",
    "dailyObjective": "",
@@ -609,43 +609,43 @@
     "rows": [
      {
       "Company": "Ares Capital Corp.",
-      "Weight": 10.301301
+      "Weight": 10.336465
      },
      {
       "Company": "3i Group plc",
-      "Weight": 9.539124000000001
-     },
-     {
-      "Company": "Onex Corp.",
-      "Weight": 8.102025
+      "Weight": 9.683957
      },
      {
       "Company": "Main Street Capital Corp.",
-      "Weight": 7.314281
+      "Weight": 7.856296
      },
      {
       "Company": "Sofina SA",
-      "Weight": 7.283861
+      "Weight": 7.753328
      },
      {
-      "Company": "Hercules Capital Inc.",
-      "Weight": 4.732495
+      "Company": "Onex Corp.",
+      "Weight": 7.6235170000000005
      },
      {
       "Company": "FS KKR Capital Corp.",
-      "Weight": 4.564082
+      "Weight": 4.7914270000000005
+     },
+     {
+      "Company": "Hercules Capital Inc.",
+      "Weight": 4.743873
      },
      {
       "Company": "Golub Capital BDC Inc.",
-      "Weight": 4.532678
+      "Weight": 4.462782
      },
      {
-      "Company": "Wendel SA",
-      "Weight": 3.967259
+      "Company": "Wendel",
+      "Weight": 3.6206219999999996
      },
      {
-      "Company": "Eurazeo SE",
-      "Weight": 3.693448
+      "Company": "Eurazeo",
+      "Weight": 3.5009930000000002
      }
     ]
    },
@@ -663,31 +663,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 45.905307
+      "Weight": 45.742943000000004
      },
      {
       "Country": "United Kingdom",
-      "Weight": 21.653231
+      "Weight": 21.443008
      },
      {
       "Country": "Belgium",
-      "Weight": 10.675590999999999
+      "Weight": 10.749588000000001
      },
      {
       "Country": "Canada",
-      "Weight": 7.737478
+      "Weight": 7.832181
      },
      {
       "Country": "France",
-      "Weight": 7.3959079999999995
+      "Weight": 7.483877999999999
      },
      {
       "Country": "Sweden",
-      "Weight": 3.983456
+      "Weight": 4.079176
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.64903
+      "Weight": 2.669226
      }
     ]
    },
@@ -696,27 +696,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 45.90530681412371
+      "Weight": 45.742943063685864
      },
      {
       "Currency": "GBP",
-      "Weight": 20.921846255684745
+      "Weight": 20.70595917745674
      },
      {
       "Currency": "EUR",
-      "Weight": 18.802883547799276
+      "Weight": 18.970514842168928
      },
      {
       "Currency": "CAD",
-      "Weight": 7.7374775860758485
+      "Weight": 7.83218083221515
      },
      {
       "Currency": "SEK",
-      "Weight": 3.9834562247907908
+      "Weight": 4.079175623089669
      },
      {
       "Currency": "CHF",
-      "Weight": 2.649029571525632
+      "Weight": 2.669226461383643
      }
     ]
    }

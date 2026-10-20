@@ -2,7 +2,7 @@
  "ticker": "RWM",
  "page": 1,
  "pageSize": 250,
- "totalRows": 10,
+ "totalRows": 11,
  "headers": [
   "Name",
   "Ticker",
@@ -10,98 +10,131 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
   {
    "Name": "Russell 2000 Index SWAP Barclays Capital",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-26.7648038749",
+   "Weight": "-19.3723350256",
    "Market Value": "—",
-   "Shares Held": "-16065",
-   "Exposure Value": "-43718809.05"
+   "Shares Held": "-10573",
+   "Exposure Value": "-28846315.9",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP Bank of America NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.9130331254",
+   "Weight": "-15.3010848197",
    "Market Value": "—",
    "Shares Held": "-8351",
-   "Exposure Value": "-22726160.87"
+   "Exposure Value": "-22784033.3",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP Goldman Sachs International",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-12.6092498041",
+   "Weight": "-13.8672278780",
    "Market Value": "—",
    "Shares Held": "-7568.43",
-   "Exposure Value": "-20596503.79"
+   "Exposure Value": "-20648953.03",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "E-MINI RUSS 2000 EQUITY INDEX 18/DEC/2026 RTYZ6 INDEX",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-11.1366381022",
+   "Weight": "-12.2469578989",
    "Market Value": "—",
    "Shares Held": "-133",
-   "Exposure Value": "-18191075"
+   "Exposure Value": "-18236295",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-9.9439801497",
+   "Weight": "-10.9360541542",
    "Market Value": "—",
    "Shares Held": "-5968.66",
-   "Exposure Value": "-16242934.99"
+   "Exposure Value": "-16284297.81",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP Societe Generale",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-9.4047505679",
+   "Weight": "-10.3430276383",
    "Market Value": "—",
    "Shares Held": "-5645",
-   "Exposure Value": "-15362133.65"
+   "Exposure Value": "-15401253.5",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP Citibank NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-8.6117193420",
+   "Weight": "-9.4708786293",
    "Market Value": "—",
    "Shares Held": "-5169",
-   "Exposure Value": "-14066761.53"
+   "Exposure Value": "-14102582.7",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "Russell 2000 Index SWAP BNP Paribas",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-7.5987718938",
+   "Weight": "-8.4576466924",
    "Market Value": "—",
-   "Shares Held": "-4561",
-   "Exposure Value": "-12412168.57"
+   "Shares Held": "-4616",
+   "Exposure Value": "-12593832.8",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "136163200",
-   "Shares Held": "1360000",
-   "Exposure Value": "—"
+   "Market Value": "154200200",
+   "Shares Held": "1540000",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BWRXMP4",
+   "Weight": "—",
+   "Market Value": "7948831.12",
+   "Shares Held": "8000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-12-17"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "27181202.8",
-   "Shares Held": "27181202.8",
-   "Exposure Value": "—"
+   "Market Value": "-13244338.62",
+   "Shares Held": "-13244338.62",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }
