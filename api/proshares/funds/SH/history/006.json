@@ -2,7 +2,7 @@
  "ticker": "SH",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5120,
+ "totalRows": 5121,
  "headers": [
   "Date",
   "NAV",
@@ -729,6 +729,12 @@
    "NAV": "32.3388",
    "Shares Outstanding": "30138420",
    "Total Net Assets": "974640336.696"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "32.2542",
+   "Shares Outstanding": "28988420",
+   "Total Net Assets": "934998296.364"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "SMDD",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4199,
+ "totalRows": 4200,
  "headers": [
   "Date",
   "NAV",
@@ -1203,6 +1203,12 @@
    "NAV": "9.0707",
    "Shares Outstanding": "249300",
    "Total Net Assets": "2261280.1565"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "8.8067",
+   "Shares Outstanding": "249300",
+   "Total Net Assets": "2195466.2765"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "ULE",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4502,
+ "totalRows": 4503,
  "headers": [
   "Date",
   "NAV",
@@ -3021,6 +3021,12 @@
    "NAV": "11.90078453",
    "Shares Outstanding": "300000",
    "Total Net Assets": "3570235.359"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "11.95095287",
+   "Shares Outstanding": "300000",
+   "Total Net Assets": "3585285.861"
   }
  ]
 }

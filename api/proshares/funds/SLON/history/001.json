@@ -2,7 +2,7 @@
  "ticker": "SLON",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 320,
+ "totalRows": 321,
  "headers": [
   "Date",
   "NAV",
@@ -1929,6 +1929,12 @@
    "NAV": "31.8648",
    "Shares Outstanding": "783950",
    "Total Net Assets": "24980346.2304"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "33.1014",
+   "Shares Outstanding": "783950",
+   "Total Net Assets": "25949776.3272"
   }
  ]
 }

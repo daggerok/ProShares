@@ -2,7 +2,7 @@
  "ticker": "DXD",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5101,
+ "totalRows": 5102,
  "headers": [
   "Date",
   "NAV",
@@ -615,6 +615,12 @@
    "NAV": "17.5012",
    "Shares Outstanding": "2709790",
    "Total Net Assets": "47424506.7432"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "17.1504",
+   "Shares Outstanding": "2609790",
+   "Total Net Assets": "44758873.8144"
   }
  ]
 }

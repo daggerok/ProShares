@@ -2,7 +2,7 @@
  "ticker": "MAKX",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1270,
+ "totalRows": 1271,
  "headers": [
   "Date",
   "NAV",
@@ -1626,6 +1626,12 @@
   },
   {
    "Date": "Oct 19 2026",
+   "NAV": "65.9069",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "4943083.4069"
+  },
+  {
+   "Date": "Oct 20 2026",
    "NAV": "65.9069",
    "Shares Outstanding": "75000",
    "Total Net Assets": "4943083.4069"

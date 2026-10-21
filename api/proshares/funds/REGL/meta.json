@@ -14,11 +14,11 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=REGL&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Oct 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Oct 20 2026)",
   "historySource": "official ProShares NAV history file (ByFund/REGL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-20T04:07:11Z",
-  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
+  "catalogReadAt": "2026-10-21T06:18:55Z",
+  "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
   "cusip": "74347B680",
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$88.55",
-  "value": 88.55,
-  "asOfDate": "Oct 19 2026"
+  "display": "$89.68",
+  "value": 89.68,
+  "asOfDate": "Oct 20 2026"
  },
  "marketPrice": {
-  "display": "$88.52",
-  "value": 88.52,
-  "asOfDate": "Oct 19 2026"
+  "display": "$89.68",
+  "value": 89.68,
+  "asOfDate": "Oct 20 2026"
  },
  "premiumDiscount": {
-  "display": "-0.03%",
-  "value": -0.0339,
+  "display": "0.00%",
+  "value": 0,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1.68 B",
-  "value": 1676162617.5453,
-  "asOfDate": "Oct 19 2026",
+  "display": "$1.70 B",
+  "value": 1695828088.6789,
+  "asOfDate": "Oct 20 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,11 +76,11 @@
   "distributionYieldText": null,
   "yield12M": 2.19,
   "yield12MText": "2.19%",
-  "indicatedYield": 1.7927,
-  "indicatedYieldText": "1.79%",
-  "secYield": 1.9,
-  "secYieldText": "1.90%",
-  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
+  "indicatedYield": 1.7701,
+  "indicatedYieldText": "1.77%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "not published on this fund page (data limitation)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -567,14 +567,14 @@
    }
   ],
   "refreshedAt": "2026-10-04",
-  "asOfDate": "Aug 31 2026",
+  "asOfDate": "Sep 30 2026",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
   "totalRows": 66,
-  "asOfDate": "Oct 19 2026",
-  "asOf": "2026-10-19",
+  "asOfDate": "Oct 20 2026",
+  "asOf": "2026-10-20",
   "headers": [
    "Name",
    "Ticker",
@@ -583,7 +583,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Oct 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Oct 20 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -591,9 +591,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2945,
-  "asOf": "Oct 19 2026",
-  "asOfDate": "Oct 19 2026",
+  "totalRows": 2946,
+  "asOf": "Oct 20 2026",
+  "asOfDate": "Oct 20 2026",
   "headers": [
    "Date",
    "NAV",
@@ -610,10 +610,10 @@
  "officialMetrics": {
   "characteristics": {
    "Number of Holdings": "67",
-   "Price/Book Ratio": "2.158",
-   "Avg. Market Cap": "$0.03 billion"
+   "Price/Book Ratio": "2.004",
+   "Avg. Market Cap": "$8.69 billion"
   },
-  "characteristicsAsOf": "Aug 31 2026",
+  "characteristicsAsOf": "Sep 30 2026",
   "index": {
    "Total Number of Holdings": "65",
    "Price/Earnings Ratio": "15.25",
@@ -725,11 +725,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.218039
+      "Weight": 98.22662100000001
      },
      {
       "Country": "Bermuda",
-      "Weight": 1.781961
+      "Weight": 1.7733789999999998
      }
     ]
    },
@@ -747,43 +747,43 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 31.242048410032215
+      "Weight": 31.25393338819553
      },
      {
       "Sector": "Industrials",
-      "Weight": 15.633269283353943
+      "Weight": 15.560973169049108
      },
      {
       "Sector": "Utilities",
-      "Weight": 15.347413812804852
+      "Weight": 15.404788991240114
      },
      {
       "Sector": "Materials",
-      "Weight": 13.92114786560218
+      "Weight": 13.878036504910158
      },
      {
       "Sector": "Real Estate",
-      "Weight": 7.251378858749935
+      "Weight": 7.299524105681742
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 7.20702634728395
+      "Weight": 7.249256908254867
      },
      {
       "Sector": "Health Care",
-      "Weight": 3.2892815310946406
+      "Weight": 3.3003024398749345
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 3.082265400705871
+      "Weight": 3.068813323355817
      },
      {
       "Sector": "Information Technology",
-      "Weight": 1.4938978980519335
+      "Weight": 1.4731141225564972
      },
      {
       "Sector": "Energy",
-      "Weight": 1.383480270741076
+      "Weight": 1.3660071439672823
      }
     ]
    }

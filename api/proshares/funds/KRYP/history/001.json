@@ -2,7 +2,7 @@
  "ticker": "KRYP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 180,
+ "totalRows": 181,
  "headers": [
   "Date",
   "NAV",
@@ -1089,6 +1089,12 @@
    "NAV": "22.1352",
    "Shares Outstanding": "80000",
    "Total Net Assets": "1770838.1352"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "22.4272",
+   "Shares Outstanding": "80000",
+   "Total Net Assets": "1794198.4272"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "ANEW",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1511,
+ "totalRows": 1512,
  "headers": [
   "Date",
   "NAV",
@@ -3075,6 +3075,12 @@
    "NAV": "54.8987",
    "Shares Outstanding": "150000",
    "Total Net Assets": "8234859.8987"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "54.8991",
+   "Shares Outstanding": "150000",
+   "Total Net Assets": "8234919.8991"
   }
  ]
 }

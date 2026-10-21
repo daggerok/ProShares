@@ -14,11 +14,11 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ITWO&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 20 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ITWO-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-20T04:07:11Z",
-  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
+  "catalogReadAt": "2026-10-21T06:18:55Z",
+  "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
   "cusip": "74349Y787",
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$41.90",
-  "value": 41.9,
-  "asOfDate": "Oct 19 2026"
+  "display": "$42.59",
+  "value": 42.59,
+  "asOfDate": "Oct 20 2026"
  },
  "marketPrice": {
-  "display": "$41.85",
-  "value": 41.85,
-  "asOfDate": "Oct 19 2026"
+  "display": "$42.53",
+  "value": 42.53,
+  "asOfDate": "Oct 20 2026"
  },
  "premiumDiscount": {
-  "display": "-0.12%",
-  "value": -0.1193,
+  "display": "-0.14%",
+  "value": -0.1409,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$178.06 M",
-  "value": 178055491.8954,
-  "asOfDate": "Oct 19 2026",
+  "display": "$181.01 M",
+  "value": 181010092.5906,
+  "asOfDate": "Oct 20 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 6.5081,
-  "effectiveYieldText": "6.51%",
+  "effectiveYield": 6.4027,
+  "effectiveYieldText": "6.40%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,11 +76,11 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 6.5081,
-  "indicatedYieldText": "6.51%",
-  "secYield": 0.97,
-  "secYieldText": "0.97%",
-  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
+  "indicatedYield": 6.4027,
+  "indicatedYieldText": "6.40%",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "not published on this fund page (data limitation)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -396,14 +396,14 @@
    }
   ],
   "refreshedAt": "2026-10-04",
-  "asOfDate": "Aug 31 2026",
+  "asOfDate": "Sep 30 2026",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
   "totalRows": 1975,
-  "asOfDate": "Oct 19 2026",
-  "asOf": "2026-10-19",
+  "asOfDate": "Oct 20 2026",
+  "asOf": "2026-10-20",
   "headers": [
    "Name",
    "Ticker",
@@ -413,7 +413,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/ITWO-psdlyhld.csv, as of Oct 20 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -428,9 +428,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 534,
-  "asOf": "Oct 19 2026",
-  "asOfDate": "Oct 19 2026",
+  "totalRows": 535,
+  "asOf": "Oct 20 2026",
+  "asOfDate": "Oct 20 2026",
   "headers": [
    "Date",
    "NAV",
@@ -444,16 +444,16 @@
  },
  "officialMetrics": {
   "characteristics": {
-   "Number of Holdings": "1956",
-   "Price/Book Ratio": "2.3",
-   "Avg. Market Cap": "$1.92 billion"
+   "Number of Holdings": "1979",
+   "Price/Book Ratio": "2.16",
+   "Avg. Market Cap": "$1.76 billion"
   },
-  "characteristicsAsOf": "Aug 31 2026",
+  "characteristicsAsOf": "Sep 30 2026",
   "index": {
-   "Expiration Date 10/20/": "2026",
-   "Strike Price": "2,780",
-   "Moneyness": "101.9%",
-   "FIGI BBG025N8T1L": "6",
+   "Expiration Date 10/21/": "2026",
+   "Strike Price": "2,825",
+   "Moneyness": "101.86%",
+   "FIGI BBG025PBH": "639",
    "Total Number of Holdings": "1975",
    "Price/Earnings Ratio": "23.76",
    "Price/Book Ratio": "2.67",

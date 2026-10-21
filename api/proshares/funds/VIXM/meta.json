@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=VIXM&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/VIXM-psdlyhld.csv, as of Oct 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/VIXM-psdlyhld.csv, as of Oct 20 2026)",
   "historySource": "official ProShares NAV history file (ByFund/VIXM-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-20T04:07:11Z",
+  "catalogReadAt": "2026-10-21T06:18:55Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$12.93",
-  "value": 12.93,
-  "asOfDate": "Oct 19 2026"
+  "display": "$12.98",
+  "value": 12.98,
+  "asOfDate": "Oct 20 2026"
  },
  "marketPrice": {
-  "display": "$12.90",
-  "value": 12.9,
-  "asOfDate": "Oct 19 2026"
+  "display": "$13.00",
+  "value": 13,
+  "asOfDate": "Oct 20 2026"
  },
  "premiumDiscount": {
-  "display": "-0.23%",
-  "value": -0.232,
+  "display": "0.15%",
+  "value": 0.1541,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$46.06 M",
-  "value": 46062168.2506505,
-  "asOfDate": "Oct 19 2026",
+  "display": "$45.26 M",
+  "value": 45260630.25463641,
+  "asOfDate": "Oct 20 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -178,15 +178,15 @@
    "Return of Capital"
   ],
   "rows": [],
-  "refreshedAt": "2026-10-20",
+  "refreshedAt": "2026-10-21",
   "asOfDate": "—",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 6,
-  "asOfDate": "Oct 19 2026",
-  "asOf": "2026-10-19",
+  "totalRows": 5,
+  "asOfDate": "Oct 20 2026",
+  "asOf": "2026-10-20",
   "headers": [
    "Name",
    "Ticker",
@@ -196,7 +196,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/VIXM-psdlyhld.csv, as of Oct 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/VIXM-psdlyhld.csv, as of Oct 20 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -204,9 +204,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3972,
-  "asOf": "Oct 19 2026",
-  "asOfDate": "Oct 19 2026",
+  "totalRows": 3973,
+  "asOf": "Oct 20 2026",
+  "asOfDate": "Oct 20 2026",
   "headers": [
    "Date",
    "NAV",

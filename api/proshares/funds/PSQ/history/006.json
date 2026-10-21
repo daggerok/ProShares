@@ -2,7 +2,7 @@
  "ticker": "PSQ",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5116,
+ "totalRows": 5117,
  "headers": [
   "Date",
   "NAV",
@@ -705,6 +705,12 @@
    "NAV": "25.6111",
    "Shares Outstanding": "25072180",
    "Total Net Assets": "642126083.5869"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "25.6511",
+   "Shares Outstanding": "25222180",
+   "Total Net Assets": "646976635.7469"
   }
  ]
 }

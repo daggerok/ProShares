@@ -2,7 +2,7 @@
  "ticker": "OILK",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2530,
+ "totalRows": 2531,
  "headers": [
   "Date",
   "NAV",
@@ -3189,6 +3189,12 @@
    "NAV": "60.5733",
    "Shares Outstanding": "4034030",
    "Total Net Assets": "244354751.6922"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "60.3148",
+   "Shares Outstanding": "4084030",
+   "Total Net Assets": "246327693.9032"
   }
  ]
 }

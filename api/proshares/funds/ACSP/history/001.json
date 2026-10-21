@@ -2,7 +2,7 @@
  "ticker": "ACSP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 47,
+ "totalRows": 48,
  "headers": [
   "Date",
   "NAV",
@@ -291,6 +291,12 @@
    "NAV": "21.5286",
    "Shares Outstanding": "425000",
    "Total Net Assets": "9149676.5286"
+  },
+  {
+   "Date": "Oct 20 2026",
+   "NAV": "21.6392",
+   "Shares Outstanding": "425000",
+   "Total Net Assets": "9196681.6392"
   }
  ]
 }

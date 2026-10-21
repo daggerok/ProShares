@@ -2,313 +2,239 @@
  "ticker": "PAWZ",
  "page": 1,
  "pageSize": 250,
- "totalRows": 33,
+ "totalRows": 28,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held",
-  "Exposure Value"
+  "Shares Held"
  ],
  "rows": [
-  {
-   "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "GBP/USD",
-   "Weight": "0.5021351447",
-   "Market Value": "—",
-   "Shares Held": "124500",
-   "Exposure Value": "165628.58"
-  },
-  {
-   "Name": "SWITZERLAND FRANC CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "CHF/USD",
-   "Weight": "0.1356872775",
-   "Market Value": "—",
-   "Shares Held": "37000",
-   "Exposure Value": "44756.26"
-  },
-  {
-   "Name": "SWEDEN KRONA CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "SEK/USD",
-   "Weight": "-0.1089498600",
-   "Market Value": "—",
-   "Shares Held": "-356500",
-   "Exposure Value": "-35936.96"
-  },
-  {
-   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "EUR/USD",
-   "Weight": "0.0640679975",
-   "Market Value": "—",
-   "Shares Held": "18850",
-   "Exposure Value": "21132.74"
-  },
-  {
-   "Name": "JAPAN YEN CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "JPY/USD",
-   "Weight": "0.0208040591",
-   "Market Value": "—",
-   "Shares Held": "1088000",
-   "Exposure Value": "6862.19"
-  },
   {
    "Name": "CHEWY INC - CLASS A",
    "Ticker": "CHWY",
    "Identifier": "BJLFHW7",
-   "Weight": "10.2600639722",
-   "Market Value": "3384267.85",
-   "Shares Held": "164845",
-   "Exposure Value": "—"
+   "Weight": "10.5957438342",
+   "Market Value": "3549112.85",
+   "Shares Held": "164845"
   },
   {
    "Name": "IDEXX LABORATORIES INC",
    "Ticker": "IDXX",
    "Identifier": "2459202",
-   "Weight": "10.1623280748",
-   "Market Value": "3352029.8",
-   "Shares Held": "6031",
-   "Exposure Value": "—"
+   "Weight": "10.0457110933",
+   "Market Value": "3364875.83",
+   "Shares Held": "6031"
   },
   {
    "Name": "ZOETIS INC",
    "Ticker": "ZTS",
    "Identifier": "B95WG16",
-   "Weight": "10.0756514327",
-   "Market Value": "3323439.63",
-   "Shares Held": "41757",
-   "Exposure Value": "—"
+   "Weight": "9.9781036497",
+   "Market Value": "3342230.28",
+   "Shares Held": "41757"
   },
   {
    "Name": "FRESHPET INC",
    "Ticker": "FRPT",
    "Identifier": "BS7K7M9",
-   "Weight": "9.7734130522",
-   "Market Value": "3223746.72",
-   "Shares Held": "48756",
-   "Exposure Value": "—"
+   "Weight": "9.6141862622",
+   "Market Value": "3220333.8",
+   "Shares Held": "48756"
   },
   {
    "Name": "VIRBAC SA",
    "Ticker": "VIRP",
    "Identifier": "7399369",
-   "Weight": "7.5493733700",
-   "Market Value": "2490150.32",
-   "Shares Held": "6591",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PETS AT HOME GROUP PLC",
-   "Ticker": "PETS",
-   "Identifier": "BJ62K68",
-   "Weight": "4.8001855615",
-   "Market Value": "1583334.54",
-   "Shares Held": "502603",
-   "Exposure Value": "—"
+   "Weight": "7.6270242017",
+   "Market Value": "2554721.03",
+   "Shares Held": "6591"
   },
   {
    "Name": "CVS GROUP PLC",
    "Ticker": "CVSG",
    "Identifier": "B286382",
-   "Weight": "4.7107481680",
-   "Market Value": "1553833.74",
-   "Shares Held": "90612",
-   "Exposure Value": "—"
+   "Weight": "4.7882945386",
+   "Market Value": "1603870.19",
+   "Shares Held": "90612"
   },
   {
-   "Name": "NESTLE SA-REG",
-   "Ticker": "NESN",
-   "Identifier": "7123870",
-   "Weight": "4.6526468774",
-   "Market Value": "1534669.11",
-   "Shares Held": "15369",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PET VALU HOLDINGS LTD",
-   "Ticker": "PET",
-   "Identifier": "BKY8LF1",
-   "Weight": "4.5232369343",
-   "Market Value": "1491983.42",
-   "Shares Held": "107419",
-   "Exposure Value": "—"
+   "Name": "PETS AT HOME GROUP PLC",
+   "Ticker": "PETS",
+   "Identifier": "BJ62K68",
+   "Weight": "4.7698729205",
+   "Market Value": "1597699.75",
+   "Shares Held": "502603"
   },
   {
    "Name": "TRUPANION INC",
    "Ticker": "TRUP",
    "Identifier": "BP3YM85",
-   "Weight": "4.4971464197",
-   "Market Value": "1483377.5",
-   "Shares Held": "53941",
-   "Exposure Value": "—"
+   "Weight": "4.6314770527",
+   "Market Value": "1551343.16",
+   "Shares Held": "53941"
+  },
+  {
+   "Name": "NESTLE SA-REG",
+   "Ticker": "NESN",
+   "Identifier": "7123870",
+   "Weight": "4.6239650316",
+   "Market Value": "1548826.96",
+   "Shares Held": "15369"
+  },
+  {
+   "Name": "PET VALU HOLDINGS LTD",
+   "Ticker": "PET",
+   "Identifier": "BKY8LF1",
+   "Weight": "4.4715302347",
+   "Market Value": "1497767.94",
+   "Shares Held": "107419"
   },
   {
    "Name": "MERCK & CO. INC.",
    "Ticker": "MRK",
    "Identifier": "2778844",
-   "Weight": "4.2041942993",
-   "Market Value": "1386747.65",
-   "Shares Held": "9655",
-   "Exposure Value": "—"
+   "Weight": "4.2746943835",
+   "Market Value": "1431836.5",
+   "Shares Held": "9655"
   },
   {
    "Name": "VIMIAN GROUP AB",
    "Ticker": "VIMIAN",
    "Identifier": "BNKCRG1",
-   "Weight": "3.7935253879",
-   "Market Value": "1251289.08",
-   "Shares Held": "326228",
-   "Exposure Value": "—"
+   "Weight": "3.7428265707",
+   "Market Value": "1253683.94",
+   "Shares Held": "326228"
   },
   {
    "Name": "OIL-DRI CORP OF AMERICA",
    "Ticker": "ODC",
    "Identifier": "2657794",
-   "Weight": "3.5030375799",
-   "Market Value": "1155472.08",
-   "Shares Held": "16392",
-   "Exposure Value": "—"
+   "Weight": "3.5411322373",
+   "Market Value": "1186125.12",
+   "Shares Held": "16392"
   },
   {
    "Name": "COLGATE-PALMOLIVE CO",
    "Ticker": "CL",
    "Identifier": "2209106",
-   "Weight": "2.9517695923",
-   "Market Value": "973637.1",
-   "Shares Held": "10485",
-   "Exposure Value": "—"
+   "Weight": "2.9593455186",
+   "Market Value": "991251.9",
+   "Shares Held": "10485"
   },
   {
    "Name": "CENCORA INC",
    "Ticker": "COR",
    "Identifier": "2795393",
-   "Weight": "2.5810628622",
-   "Market Value": "851360",
-   "Shares Held": "2504",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ANICOM HOLDINGS INC",
-   "Ticker": "8715",
-   "Identifier": "B3PQXL5",
-   "Weight": "2.3415133617",
-   "Market Value": "772344.93",
-   "Shares Held": "109043",
-   "Exposure Value": "—"
+   "Weight": "2.5661486838",
+   "Market Value": "859548.08",
+   "Shares Held": "2504"
   },
   {
    "Name": "PETCO HEALTH AND WELLNESS CO",
    "Ticker": "WOOF",
    "Identifier": "BNRQM83",
-   "Weight": "2.2449125911",
-   "Market Value": "740481.3",
-   "Shares Held": "316445",
-   "Exposure Value": "—"
+   "Weight": "2.2012319127",
+   "Market Value": "737316.85",
+   "Shares Held": "316445"
+  },
+  {
+   "Name": "ANICOM HOLDINGS INC",
+   "Ticker": "8715",
+   "Identifier": "B3PQXL5",
+   "Weight": "2.1968267133",
+   "Market Value": "735841.3",
+   "Shares Held": "109043"
   },
   {
    "Name": "CENTRAL GARDEN & PET CO",
    "Ticker": "CENT",
    "Identifier": "2183868",
-   "Weight": "2.0988628629",
-   "Market Value": "692307",
-   "Shares Held": "16650",
-   "Exposure Value": "—"
+   "Weight": "2.1439040141",
+   "Market Value": "718114.5",
+   "Shares Held": "16650"
   },
   {
    "Name": "I-TAIL CORP PCL-NVDR",
    "Ticker": "ITC-R",
    "Identifier": "BN72NR7",
-   "Weight": "1.9369804168",
-   "Market Value": "638910.3",
-   "Shares Held": "1269976",
-   "Exposure Value": "—"
+   "Weight": "1.9157354936",
+   "Market Value": "641687.98",
+   "Shares Held": "1269976"
   },
   {
    "Name": "GENERAL MILLS INC",
    "Ticker": "GIS",
    "Identifier": "2367026",
-   "Weight": "0.6975153823",
-   "Market Value": "230074.48",
-   "Shares Held": "7064",
-   "Exposure Value": "—"
+   "Weight": "0.7050155704",
+   "Market Value": "236149.52",
+   "Shares Held": "7064"
   },
   {
    "Name": "TRACTOR SUPPLY COMPANY",
    "Ticker": "TSCO",
    "Identifier": "2900335",
-   "Weight": "0.6852479667",
-   "Market Value": "226028.09",
-   "Shares Held": "6889",
-   "Exposure Value": "—"
+   "Weight": "0.6768551045",
+   "Market Value": "226716.99",
+   "Shares Held": "6889"
   },
   {
    "Name": "JM SMUCKER CO/THE",
    "Ticker": "SJM",
    "Identifier": "2951452",
-   "Weight": "0.5339389469",
-   "Market Value": "176119.02",
-   "Shares Held": "1386",
-   "Exposure Value": "—"
+   "Weight": "0.5365551684",
+   "Market Value": "179722.62",
+   "Shares Held": "1386"
   },
   {
    "Name": "ELANCO ANIMAL HEALTH INC",
    "Ticker": "ELAN",
    "Identifier": "BF5L3T2",
-   "Weight": "0.4672382568",
-   "Market Value": "154117.89",
-   "Shares Held": "6561",
-   "Exposure Value": "—"
+   "Weight": "0.4446389833",
+   "Market Value": "148934.7",
+   "Shares Held": "6561"
   },
   {
    "Name": "UNICHARM CORP",
    "Ticker": "8113",
    "Identifier": "6911485",
-   "Weight": "0.2716315516",
-   "Market Value": "89597.29",
-   "Shares Held": "14065",
-   "Exposure Value": "—"
+   "Weight": "0.2726141179",
+   "Market Value": "91313.86",
+   "Shares Held": "14065"
   },
   {
    "Name": "POST HOLDINGS INC",
    "Ticker": "POST",
    "Identifier": "B6T0518",
-   "Weight": "0.1194692919",
-   "Market Value": "39406.78",
-   "Shares Held": "509",
-   "Exposure Value": "—"
+   "Weight": "0.1189239340",
+   "Market Value": "39834.34",
+   "Shares Held": "509"
   },
   {
    "Name": "SPECTRUM BRANDS HOLDINGS INC",
    "Ticker": "SPB",
    "Identifier": "BDRYFB1",
-   "Weight": "0.0696173918",
-   "Market Value": "22963.2",
-   "Shares Held": "299",
-   "Exposure Value": "—"
+   "Weight": "0.0710194990",
+   "Market Value": "23788.44",
+   "Shares Held": "299"
   },
   {
    "Name": "ARATA CORP",
    "Ticker": "2733",
    "Identifier": "6517515",
-   "Weight": "0.0183735502",
-   "Market Value": "6060.49",
-   "Shares Held": "370",
-   "Exposure Value": "—"
+   "Weight": "0.0182375942",
+   "Market Value": "6108.8",
+   "Shares Held": "370"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "157111.79",
-   "Shares Held": "157111.79",
-   "Exposure Value": "—"
+   "Market Value": "156888.81",
+   "Shares Held": "156888.81"
   }
  ]
 }

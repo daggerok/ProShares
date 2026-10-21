@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SJB&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/SJB-psdlyhld.csv, as of Oct 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SJB-psdlyhld.csv, as of Oct 20 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SJB-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-20T04:07:11Z",
+  "catalogReadAt": "2026-10-21T06:18:55Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -44,23 +44,23 @@
  "nav": {
   "display": "$15.54",
   "value": 15.54,
-  "asOfDate": "Oct 19 2026"
+  "asOfDate": "Oct 20 2026"
  },
  "marketPrice": {
-  "display": "$15.54",
-  "value": 15.54,
-  "asOfDate": "Oct 19 2026"
+  "display": "$15.53",
+  "value": 15.53,
+  "asOfDate": "Oct 20 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "-0.06%",
+  "value": -0.0644,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$53.60 M",
-  "value": 53598165,
-  "asOfDate": "Oct 19 2026",
+  "display": "$53.61 M",
+  "value": 53606445,
+  "asOfDate": "Oct 20 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -411,8 +411,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 6,
-  "asOfDate": "Oct 19 2026",
-  "asOf": "2026-10-19",
+  "asOfDate": "Oct 20 2026",
+  "asOf": "2026-10-20",
   "headers": [
    "Name",
    "Ticker",
@@ -422,7 +422,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/SJB-psdlyhld.csv, as of Oct 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/SJB-psdlyhld.csv, as of Oct 20 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -430,9 +430,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3919,
-  "asOf": "Oct 19 2026",
-  "asOfDate": "Oct 19 2026",
+  "totalRows": 3920,
+  "asOf": "Oct 20 2026",
+  "asOfDate": "Oct 20 2026",
   "headers": [
    "Date",
    "NAV",

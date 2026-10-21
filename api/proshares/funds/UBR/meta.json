@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=UBR&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/UBR-psdlyhld.csv, as of Oct 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/UBR-psdlyhld.csv, as of Oct 20 2026)",
   "historySource": "official ProShares NAV history file (ByFund/UBR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-20T04:07:11Z",
+  "catalogReadAt": "2026-10-21T06:18:55Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$41.26",
-  "value": 41.26,
-  "asOfDate": "Oct 19 2026"
+  "display": "$43.25",
+  "value": 43.25,
+  "asOfDate": "Oct 20 2026"
  },
  "marketPrice": {
-  "display": "$41.33",
-  "value": 41.33,
-  "asOfDate": "Oct 19 2026"
+  "display": "$43.15",
+  "value": 43.15,
+  "asOfDate": "Oct 20 2026"
  },
  "premiumDiscount": {
-  "display": "0.17%",
-  "value": 0.1697,
+  "display": "-0.23%",
+  "value": -0.2312,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$3.78 M",
-  "value": 3777467.8617,
-  "asOfDate": "Oct 19 2026",
+  "display": "$3.96 M",
+  "value": 3959583.8904,
+  "asOfDate": "Oct 20 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 1.691,
-  "effectiveYieldText": "1.69%",
+  "effectiveYield": 1.6132,
+  "effectiveYieldText": "1.61%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 1.691,
-  "indicatedYieldText": "1.69%",
+  "indicatedYield": 1.6132,
+  "indicatedYieldText": "1.61%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -312,8 +312,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 6,
-  "asOfDate": "Oct 19 2026",
-  "asOf": "2026-10-19",
+  "asOfDate": "Oct 20 2026",
+  "asOf": "2026-10-20",
   "headers": [
    "Name",
    "Ticker",
@@ -323,7 +323,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/UBR-psdlyhld.csv, as of Oct 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/UBR-psdlyhld.csv, as of Oct 20 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -331,9 +331,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4146,
-  "asOf": "Oct 19 2026",
-  "asOfDate": "Oct 19 2026",
+  "totalRows": 4147,
+  "asOf": "Oct 20 2026",
+  "asOfDate": "Oct 20 2026",
   "headers": [
    "Date",
    "NAV",
