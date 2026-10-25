@@ -2,7 +2,7 @@
  "ticker": "BIB",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4161,
+ "totalRows": 4164,
  "headers": [
   "Date",
   "NAV",
@@ -975,6 +975,24 @@
    "NAV": "114.0796",
    "Shares Outstanding": "840000",
    "Total Net Assets": "95826864"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "114.6169",
+   "Shares Outstanding": "840000",
+   "Total Net Assets": "96278196"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "112.8873",
+   "Shares Outstanding": "860000",
+   "Total Net Assets": "97083078"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "110.2902",
+   "Shares Outstanding": "860000",
+   "Total Net Assets": "94849572"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "EMDV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2701,
+ "totalRows": 2704,
  "headers": [
   "Date",
   "NAV",
@@ -4215,6 +4215,24 @@
    "NAV": "47.7707",
    "Shares Outstanding": "155000",
    "Total Net Assets": "7404506.2707"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "47.7251",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "7397438.2251"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "47.1424",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "7307119.1424"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "46.9855",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "7282799.4855"
   }
  ]
 }

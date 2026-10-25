@@ -2,7 +2,7 @@
  "ticker": "UCC",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4964,
+ "totalRows": 4967,
  "headers": [
   "Date",
   "NAV",
@@ -5793,6 +5793,24 @@
    "NAV": "45.1413",
    "Shares Outstanding": "195000",
    "Total Net Assets": "8802553.5"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "45.2097",
+   "Shares Outstanding": "195000",
+   "Total Net Assets": "8815891.5"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "44.7639",
+   "Shares Outstanding": "195000",
+   "Total Net Assets": "8728960.5"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "43.2814",
+   "Shares Outstanding": "195000",
+   "Total Net Assets": "8439873"
   }
  ]
 }

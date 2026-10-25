@@ -2,7 +2,7 @@
  "ticker": "VIXM",
  "page": 1,
  "pageSize": 250,
- "totalRows": 5,
+ "totalRows": 6,
  "headers": [
   "Name",
   "Ticker",
@@ -20,42 +20,51 @@
    "Weight": "—",
    "Market Value": "—",
    "Shares Held": "170000",
-   "Exposure Value": "17011900"
+   "Exposure Value": "17020400"
   },
   {
    "Name": "CBOE VIX FUTURE Apr27",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "33.8245140299",
+   "Weight": "33.7337419358",
    "Market Value": "—",
-   "Shares Held": "745",
-   "Exposure Value": "15309750"
+   "Shares Held": "739",
+   "Exposure Value": "15511314.4"
   },
   {
    "Name": "CBOE VIX FUTURE Mar27",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "33.1687628674",
+   "Weight": "33.1672164168",
    "Market Value": "—",
-   "Shares Held": "745",
-   "Exposure Value": "15012942"
+   "Shares Held": "739",
+   "Exposure Value": "15250816.9"
   },
   {
    "Name": "CBOE VIX FUTURE Feb27",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "32.9933033445",
+   "Weight": "28.0322996631",
    "Market Value": "—",
-   "Shares Held": "745",
-   "Exposure Value": "14933525"
+   "Shares Held": "628",
+   "Exposure Value": "12889700"
+  },
+  {
+   "Name": "CBOE VIX FUTURE MAY27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "5.0420493901",
+   "Market Value": "—",
+   "Shares Held": "110",
+   "Exposure Value": "2318415"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "45262291.09",
-   "Shares Held": "45262291.09",
+   "Market Value": "45981600.35",
+   "Shares Held": "45981600.35",
    "Exposure Value": "—"
   }
  ]

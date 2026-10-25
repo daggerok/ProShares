@@ -2,7 +2,7 @@
  "ticker": "SUPL",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1141,
+ "totalRows": 1144,
  "headers": [
   "Date",
   "NAV",
@@ -855,6 +855,24 @@
    "NAV": "44.8369",
    "Shares Outstanding": "50000",
    "Total Net Assets": "2241889.8369"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "44.8369",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "2241889.8369"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "44.8374",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "2241914.8374"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "44.839",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "2241994.839"
   }
  ]
 }

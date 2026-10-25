@@ -2,7 +2,7 @@
  "ticker": "UMDD",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4200,
+ "totalRows": 4203,
  "headers": [
   "Date",
   "NAV",
@@ -1209,6 +1209,24 @@
    "NAV": "30.8677",
    "Shares Outstanding": "880000",
    "Total Net Assets": "27163576"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "31.2282",
+   "Shares Outstanding": "880000",
+   "Total Net Assets": "27480816"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "30.4781",
+   "Shares Outstanding": "880000",
+   "Total Net Assets": "26820728"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "29.9427",
+   "Shares Outstanding": "880000",
+   "Total Net Assets": "26349576"
   }
  ]
 }

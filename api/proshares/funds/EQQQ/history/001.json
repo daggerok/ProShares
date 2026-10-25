@@ -2,7 +2,7 @@
  "ticker": "EQQQ",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 65,
+ "totalRows": 68,
  "headers": [
   "Date",
   "NAV",
@@ -399,6 +399,24 @@
    "NAV": "39.4881",
    "Shares Outstanding": "130000",
    "Total Net Assets": "5133492.4881"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "40.0313",
+   "Shares Outstanding": "130000",
+   "Total Net Assets": "5204109.0313"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "38.8102",
+   "Shares Outstanding": "130000",
+   "Total Net Assets": "5045364.8102"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "38.5282",
+   "Shares Outstanding": "130000",
+   "Total Net Assets": "5008704.5282"
   }
  ]
 }

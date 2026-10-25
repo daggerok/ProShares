@@ -14,11 +14,11 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=PEX&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 20 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-21T06:18:55Z",
-  "secYield": "not published on this fund page (data limitation)"
+  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74348A533",
@@ -42,45 +42,45 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$22.13",
-  "value": 22.13,
-  "asOfDate": "Oct 20 2026"
+  "display": "$22.36",
+  "value": 22.36,
+  "asOfDate": "Oct 23 2026"
  },
  "marketPrice": {
-  "display": "$22.04",
-  "value": 22.04,
-  "asOfDate": "Oct 20 2026"
+  "display": "$22.25",
+  "value": 22.25,
+  "asOfDate": "Oct 23 2026"
  },
  "premiumDiscount": {
-  "display": "-0.41%",
-  "value": -0.4067,
+  "display": "-0.49%",
+  "value": -0.4919,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$10.18 M",
-  "value": 10181616.1339,
-  "asOfDate": "Oct 20 2026",
+  "display": "$10.29 M",
+  "value": 10287278.3636,
+  "asOfDate": "Oct 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
-  "dividendYield": 8.03,
-  "dividendYieldText": "8.03%",
+  "dividendYield": 5.66,
+  "dividendYieldText": "5.66%",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 8.03,
-  "effectiveYieldText": "8.03%",
+  "effectiveYield": 5.66,
+  "effectiveYieldText": "5.66%",
   "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
   "effectiveYieldBasisCode": "official-trailing-12m",
   "effectiveYieldComputed": false,
   "distributionYield": null,
   "distributionYieldText": null,
-  "yield12M": 8.03,
-  "yield12MText": "8.03%",
-  "indicatedYield": 4.4311,
-  "indicatedYieldText": "4.43%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "not published on this fund page (data limitation)"
+  "yield12M": 5.66,
+  "yield12MText": "5.66%",
+  "indicatedYield": 4.3856,
+  "indicatedYieldText": "4.39%",
+  "secYield": 7.08,
+  "secYieldText": "7.08%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -546,8 +546,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 31,
-  "asOfDate": "Oct 20 2026",
-  "asOf": "2026-10-20",
+  "asOfDate": "Oct 23 2026",
+  "asOf": "2026-10-23",
   "headers": [
    "Name",
    "Ticker",
@@ -556,7 +556,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 20 2026)",
+  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Oct 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -564,9 +564,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3434,
-  "asOf": "Oct 20 2026",
-  "asOfDate": "Oct 20 2026",
+  "totalRows": 3437,
+  "asOf": "Oct 23 2026",
+  "asOfDate": "Oct 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -663,31 +663,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 45.514851
+      "Weight": 45.495461999999996
      },
      {
       "Country": "United Kingdom",
-      "Weight": 21.559673
+      "Weight": 21.188964
      },
      {
       "Country": "Belgium",
-      "Weight": 10.711003
+      "Weight": 10.810977
      },
      {
       "Country": "Canada",
-      "Weight": 7.987627999999999
+      "Weight": 8.139651
      },
      {
       "Country": "France",
-      "Weight": 7.411732
+      "Weight": 7.467198
      },
      {
       "Country": "Sweden",
-      "Weight": 4.122539
+      "Weight": 4.249756
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.692574
+      "Weight": 2.647992
      }
     ]
    },
@@ -696,27 +696,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 45.51485060461214
+      "Weight": 45.49546165323231
      },
      {
       "Currency": "GBP",
-      "Weight": 20.832678736103688
+      "Weight": 20.467072327391996
      },
      {
       "Currency": "EUR",
-      "Weight": 18.84972927793556
+      "Weight": 19.000067617144285
      },
      {
       "Currency": "CAD",
-      "Weight": 7.98762787116644
+      "Weight": 8.139650631406727
      },
      {
       "Currency": "SEK",
-      "Weight": 4.122539404582145
+      "Weight": 4.24975581597342
      },
      {
       "Currency": "CHF",
-      "Weight": 2.692574105600023
+      "Weight": 2.647991954851261
      }
     ]
    }

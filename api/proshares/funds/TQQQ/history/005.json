@@ -2,7 +2,7 @@
  "ticker": "TQQQ",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4200,
+ "totalRows": 4203,
  "headers": [
   "Date",
   "NAV",
@@ -1209,6 +1209,24 @@
    "NAV": "70.325",
    "Shares Outstanding": "508600000",
    "Total Net Assets": "35767295000"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "72.6793",
+   "Shares Outstanding": "509750000",
+   "Total Net Assets": "37048273175"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "66.3448",
+   "Shares Outstanding": "516650000",
+   "Total Net Assets": "34277040920"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "66.2741",
+   "Shares Outstanding": "518750000",
+   "Total Net Assets": "34379689375"
   }
  ]
 }

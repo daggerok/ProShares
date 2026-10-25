@@ -2,7 +2,7 @@
  "ticker": "ETHT",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 7,
  "headers": [
   "Name",
   "Ticker",
@@ -17,54 +17,63 @@
    "Name": "ETHEREUM TRUST (ETHA) SWAP MAREX",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "66.6856301810",
+   "Weight": "67.9642938934",
    "Market Value": "—",
    "Shares Held": "3103761",
-   "Exposure Value": "170924118.27"
+   "Exposure Value": "167851394.88"
   },
   {
    "Name": "ETHEREUM TRUST (ETHA) SWAP GOLDMAN",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "51.7308276773",
+   "Weight": "52.7227405075",
    "Market Value": "—",
    "Shares Held": "2407717",
-   "Exposure Value": "132592975.19"
-  },
-  {
-   "Name": "CME ETHER FUTURE DIGITAL ASSETS 30/OCT/2026 DCRV6 CURNCY",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "40.8196581680",
-   "Market Value": "—",
-   "Shares Held": "859",
-   "Exposure Value": "104626200"
+   "Exposure Value": "130209335.36"
   },
   {
    "Name": "ETHEREUM TRUST (ETHA) SWAP Nomura",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "31.8829985003",
+   "Weight": "32.4943391012",
    "Market Value": "—",
    "Shares Held": "1483936",
-   "Exposure Value": "81720355.52"
+   "Exposure Value": "80251258.88"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 30/OCT/2026 DCRV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "30.2541845898",
+   "Market Value": "—",
+   "Shares Held": "625",
+   "Exposure Value": "74718750"
   },
   {
    "Name": "ETHEREUM TRUST (ETHA) SWAP CITIBANK CITIBANK",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "9.1320369508",
+   "Weight": "9.3071392065",
    "Market Value": "—",
    "Shares Held": "425034",
-   "Exposure Value": "23406622.38"
+   "Exposure Value": "22985838.72"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 27/NOV/2026 DCRX6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "7.5359871286",
+   "Market Value": "—",
+   "Shares Held": "155",
+   "Exposure Value": "18611625"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "256313268.4",
-   "Shares Held": "256313268.4",
+   "Market Value": "246969968",
+   "Shares Held": "246969968",
    "Exposure Value": "—"
   }
  ]

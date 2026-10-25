@@ -14,11 +14,11 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TINY&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Oct 20 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Oct 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TINY-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-21T06:18:55Z",
-  "secYield": "not published on this fund page (data limitation)"
+  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347G465",
@@ -42,45 +42,45 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$68.94",
-  "value": 68.94,
-  "asOfDate": "Oct 20 2026"
+  "display": "$66.25",
+  "value": 66.25,
+  "asOfDate": "Oct 23 2026"
  },
  "marketPrice": {
-  "display": "$69.26",
-  "value": 69.26,
-  "asOfDate": "Oct 20 2026"
+  "display": "$66.24",
+  "value": 66.24,
+  "asOfDate": "Oct 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.46%",
-  "value": 0.4642,
+  "display": "-0.02%",
+  "value": -0.0151,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$12.06 M",
-  "value": 12064341.4387,
-  "asOfDate": "Oct 20 2026",
+  "display": "$11.59 M",
+  "value": 11592976.2452,
+  "asOfDate": "Oct 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
-  "dividendYield": 0.19,
-  "dividendYieldText": "0.19%",
+  "dividendYield": 0.08,
+  "dividendYieldText": "0.08%",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 0.19,
-  "effectiveYieldText": "0.19%",
+  "effectiveYield": 0.08,
+  "effectiveYieldText": "0.08%",
   "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
   "effectiveYieldBasisCode": "official-trailing-12m",
   "effectiveYieldComputed": false,
   "distributionYield": null,
   "distributionYieldText": null,
-  "yield12M": 0.19,
-  "yield12MText": "0.19%",
-  "indicatedYield": 0.0479,
+  "yield12M": 0.08,
+  "yield12MText": "0.08%",
+  "indicatedYield": 0.0498,
   "indicatedYieldText": "0.05%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "not published on this fund page (data limitation)"
+  "secYield": 0.19,
+  "secYieldText": "0.19%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -294,8 +294,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 31,
-  "asOfDate": "Oct 20 2026",
-  "asOf": "2026-10-20",
+  "asOfDate": "Oct 23 2026",
+  "asOf": "2026-10-23",
   "headers": [
    "Name",
    "Ticker",
@@ -304,7 +304,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Oct 20 2026)",
+  "source": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Oct 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -312,9 +312,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 1252,
-  "asOf": "Oct 20 2026",
-  "asOfDate": "Oct 20 2026",
+  "totalRows": 1255,
+  "asOf": "Oct 23 2026",
+  "asOfDate": "Oct 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -355,43 +355,43 @@
     "rows": [
      {
       "Company": "BRUKER CORP",
-      "Weight": 7.571595
+      "Weight": 8.113671
      },
      {
       "Company": "SCREEN HOLDINGS CO LTD",
-      "Weight": 6.0311829999999995
+      "Weight": 5.752707
      },
      {
       "Company": "ASML HOLDING NV",
-      "Weight": 5.5434730000000005
+      "Weight": 5.550774
      },
      {
       "Company": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "Weight": 5.241547
+      "Weight": 5.4163429999999995
      },
      {
       "Company": "NIKON CORP",
-      "Weight": 5.148566000000001
+      "Weight": 5.339544
      },
      {
       "Company": "NVIDIA CORP",
-      "Weight": 5.144327
-     },
-     {
-      "Company": "LAM RESEARCH CORP",
-      "Weight": 4.869745
-     },
-     {
-      "Company": "APPLIED MATERIALS INC",
-      "Weight": 4.807063
+      "Weight": 5.217456
      },
      {
       "Company": "CABOT CORP",
-      "Weight": 4.7397160000000005
+      "Weight": 4.944038
+     },
+     {
+      "Company": "APPLIED MATERIALS INC",
+      "Weight": 4.660062
+     },
+     {
+      "Company": "JGC HOLDINGS CORP",
+      "Weight": 4.525664
      },
      {
       "Company": "ENTEGRIS INC",
-      "Weight": 4.531901
+      "Weight": 4.439794
      }
     ]
    },
@@ -400,31 +400,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 55.166607
+      "Weight": 54.361870999999994
      },
      {
       "Country": "Japan",
-      "Weight": 21.467074999999998
+      "Weight": 21.751029
      },
      {
       "Country": "South Korea",
-      "Weight": 7.790305999999999
+      "Weight": 7.607661
      },
      {
       "Country": "Netherlands",
-      "Weight": 5.559878
+      "Weight": 5.567988
      },
      {
       "Country": "Taiwan",
-      "Weight": 5.257058
+      "Weight": 5.433139
      },
      {
       "Country": "China",
-      "Weight": 2.674584
+      "Weight": 2.649331
      },
      {
       "Country": "France",
-      "Weight": 2.0844910000000003
+      "Weight": 2.62898
      }
     ]
    },
@@ -433,27 +433,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 55.16660748652252
+      "Weight": 54.36187110756842
      },
      {
       "Currency": "JPY",
-      "Weight": 21.467074940561794
-     },
-     {
-      "Currency": "KRW",
-      "Weight": 7.790306208006862
+      "Weight": 21.751029352445006
      },
      {
       "Currency": "EUR",
-      "Weight": 7.644369320176933
+      "Weight": 8.196967875987003
+     },
+     {
+      "Currency": "KRW",
+      "Weight": 7.6076610847687745
      },
      {
       "Currency": "TWD",
-      "Weight": 5.2570582868667755
+      "Weight": 5.43313946138453
      },
      {
       "Currency": "HKD",
-      "Weight": 2.67458375786511
+      "Weight": 2.649331117846266
      }
     ]
    },
@@ -462,27 +462,27 @@
     "rows": [
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 61.11334147920209
+      "Weight": 59.51122119877268
      },
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 10.44541459964926
+      "Weight": 11.46927358990491
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 9.22942106627858
+      "Weight": 9.498288071343987
      },
      {
       "Sector": "Materials",
-      "Weight": 9.147088798942244
+      "Weight": 9.165578171897044
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 5.1485658691729945
+      "Weight": 5.339544242246624
      },
      {
       "Sector": "Capital Goods",
-      "Weight": 4.621109408007591
+      "Weight": 4.706944633479411
      }
     ]
    }

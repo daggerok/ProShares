@@ -2,7 +2,7 @@
  "ticker": "TBF",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4320,
+ "totalRows": 4323,
  "headers": [
   "Date",
   "NAV",
@@ -1929,6 +1929,24 @@
    "NAV": "25.9895",
    "Shares Outstanding": "4800000",
    "Total Net Assets": "124749600"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "25.949",
+   "Shares Outstanding": "4800000",
+   "Total Net Assets": "124555200"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "25.4739",
+   "Shares Outstanding": "4690000",
+   "Total Net Assets": "119472591"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "25.6154",
+   "Shares Outstanding": "4780000",
+   "Total Net Assets": "122441612"
   }
  ]
 }

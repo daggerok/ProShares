@@ -2,7 +2,7 @@
  "ticker": "SMDD",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4200,
+ "totalRows": 4203,
  "headers": [
   "Date",
   "NAV",
@@ -1209,6 +1209,24 @@
    "NAV": "8.8067",
    "Shares Outstanding": "249300",
    "Total Net Assets": "2195466.2765"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "8.7049",
+   "Shares Outstanding": "249300",
+   "Total Net Assets": "2170088.0455"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "8.9151",
+   "Shares Outstanding": "249300",
+   "Total Net Assets": "2222489.8545"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "9.0738",
+   "Shares Outstanding": "249300",
+   "Total Net Assets": "2262052.971"
   }
  ]
 }

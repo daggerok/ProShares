@@ -2,7 +2,7 @@
  "ticker": "SKHU",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 71,
+ "totalRows": 74,
  "headers": [
   "Date",
   "NAV",
@@ -435,6 +435,24 @@
    "NAV": "12.2173",
    "Shares Outstanding": "3650000",
    "Total Net Assets": "44593157.2173"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "12.8153",
+   "Shares Outstanding": "3650000",
+   "Total Net Assets": "46775857.8153"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "10.7381",
+   "Shares Outstanding": "3610000",
+   "Total Net Assets": "38764551.7381"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "11.589",
+   "Shares Outstanding": "3610000",
+   "Total Net Assets": "41836301.589"
   }
  ]
 }

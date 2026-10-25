@@ -14,11 +14,11 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TOLZ&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Oct 20 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Oct 23 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-21T06:18:55Z",
-  "secYield": "not published on this fund page (data limitation)"
+  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
   "cusip": "74347B508",
@@ -42,45 +42,45 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$57.39",
-  "value": 57.39,
-  "asOfDate": "Oct 20 2026"
+  "display": "$58.42",
+  "value": 58.42,
+  "asOfDate": "Oct 23 2026"
  },
  "marketPrice": {
-  "display": "$57.47",
-  "value": 57.47,
-  "asOfDate": "Oct 20 2026"
+  "display": "$58.43",
+  "value": 58.43,
+  "asOfDate": "Oct 23 2026"
  },
  "premiumDiscount": {
-  "display": "0.14%",
-  "value": 0.1394,
+  "display": "0.02%",
+  "value": 0.0171,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$166.45 M",
-  "value": 166445267.3949,
-  "asOfDate": "Oct 20 2026",
+  "display": "$169.43 M",
+  "value": 169430238.4242,
+  "asOfDate": "Oct 23 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
-  "dividendYield": 3.01,
-  "dividendYieldText": "3.01%",
+  "dividendYield": 3.32,
+  "dividendYieldText": "3.32%",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 3.01,
-  "effectiveYieldText": "3.01%",
+  "effectiveYield": 3.32,
+  "effectiveYieldText": "3.32%",
   "effectiveYieldBasis": "official ProShares 12-Month Yield (page distributions block)",
   "effectiveYieldBasisCode": "official-trailing-12m",
   "effectiveYieldComputed": false,
   "distributionYield": null,
   "distributionYieldText": null,
-  "yield12M": 3.01,
-  "yield12MText": "3.01%",
-  "indicatedYield": 2.9862,
-  "indicatedYieldText": "2.99%",
-  "secYield": null,
-  "secYieldText": "—",
-  "secYieldKind": "not published on this fund page (data limitation)"
+  "yield12M": 3.32,
+  "yield12MText": "3.32%",
+  "indicatedYield": 2.9335,
+  "indicatedYieldText": "2.93%",
+  "secYield": 3.59,
+  "secYieldText": "3.59%",
+  "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
@@ -573,8 +573,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 116,
-  "asOfDate": "Oct 20 2026",
-  "asOf": "2026-10-20",
+  "asOfDate": "Oct 23 2026",
+  "asOf": "2026-10-23",
   "headers": [
    "Name",
    "Ticker",
@@ -583,7 +583,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Oct 20 2026)",
+  "source": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Oct 23 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -591,9 +591,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3163,
-  "asOf": "Oct 20 2026",
-  "asOfDate": "Oct 20 2026",
+  "totalRows": 3166,
+  "asOf": "Oct 23 2026",
+  "asOfDate": "Oct 23 2026",
   "headers": [
    "Date",
    "NAV",
@@ -636,43 +636,43 @@
     "rows": [
      {
       "Company": "ENBRIDGE INC",
-      "Weight": 5.774844
+      "Weight": 5.707389999999999
      },
      {
       "Company": "NATIONAL GRID PLC",
-      "Weight": 5.542945
-     },
-     {
-      "Company": "WILLIAMS COS INC",
-      "Weight": 4.118182
+      "Weight": 5.503354
      },
      {
       "Company": "AMERICAN TOWER CORP",
-      "Weight": 4.094511
+      "Weight": 4.151174
+     },
+     {
+      "Company": "WILLIAMS COS INC",
+      "Weight": 4.134608
      },
      {
       "Company": "VINCI SA",
-      "Weight": 4.0094129999999994
+      "Weight": 3.932571
      },
      {
       "Company": "TC ENERGY CORP",
-      "Weight": 3.4895660000000004
+      "Weight": 3.467452
      },
      {
       "Company": "KINDER MORGAN INC",
-      "Weight": 3.149175
+      "Weight": 3.1807469999999998
      },
      {
       "Company": "E.ON SE",
-      "Weight": 3.057505
+      "Weight": 3.089415
      },
      {
       "Company": "TARGA RESOURCES CORP",
-      "Weight": 3.00416
+      "Weight": 3.056645
      },
      {
       "Company": "ENERGY TRANSFER LP",
-      "Weight": 2.900308
+      "Weight": 2.987715
      }
     ]
    },
@@ -681,83 +681,83 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 49.86496
+      "Weight": 50.318514
      },
      {
       "Country": "Canada",
-      "Weight": 15.681943
+      "Weight": 15.584059
      },
      {
       "Country": "United Kingdom",
-      "Weight": 8.241777
+      "Weight": 8.147701999999999
      },
      {
       "Country": "Spain",
-      "Weight": 5.857546999999999
+      "Weight": 5.805467999999999
      },
      {
       "Country": "France",
-      "Weight": 4.8737129999999995
+      "Weight": 4.765484
      },
      {
       "Country": "Germany",
-      "Weight": 3.2517530000000003
+      "Weight": 3.273524
      },
      {
       "Country": "Australia",
-      "Weight": 2.703634
+      "Weight": 2.751804
      },
      {
       "Country": "Italy",
-      "Weight": 2.352815
+      "Weight": 2.327589
      },
      {
       "Country": "China",
-      "Weight": 1.300467
+      "Weight": 1.232083
      },
      {
       "Country": "Mexico",
-      "Weight": 1.133866
+      "Weight": 1.134897
      },
      {
       "Country": "Brazil",
-      "Weight": 1.0367950000000001
+      "Weight": 1.016811
      },
      {
       "Country": "Japan",
-      "Weight": 1.00623
+      "Weight": 1.005145
      },
      {
       "Country": "Hong Kong",
-      "Weight": 0.8970809999999999
+      "Weight": 0.86607
      },
      {
       "Country": "New Zealand",
-      "Weight": 0.542655
+      "Weight": 0.547015
      },
      {
       "Country": "Belgium",
-      "Weight": 0.49151100000000003
+      "Weight": 0.48457200000000006
      },
      {
       "Country": "Switzerland",
-      "Weight": 0.316732
+      "Weight": 0.306198
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.183611
+      "Weight": 0.184171
      },
      {
       "Country": "Luxembourg",
-      "Weight": 0.098095
+      "Weight": 0.091034
      },
      {
       "Country": "Portugal",
-      "Weight": 0.09310600000000001
+      "Weight": 0.09073
      },
      {
       "Country": "Singapore",
-      "Weight": 0.071709
+      "Weight": 0.06713
      }
     ]
    },
@@ -766,39 +766,39 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 52.805335598900335
+      "Weight": 53.22728977965462
      },
      {
       "Currency": "EUR",
-      "Weight": 17.202151339525457
+      "Weight": 17.02257187265073
      },
      {
       "Currency": "CAD",
-      "Weight": 14.983936674602708
+      "Weight": 14.894120552249262
      },
      {
       "Currency": "GBP",
-      "Weight": 8.241777205987344
+      "Weight": 8.147702412057644
      },
      {
       "Currency": "AUD",
-      "Weight": 2.7036339134100977
+      "Weight": 2.75180431097669
      },
      {
       "Currency": "HKD",
-      "Weight": 2.1975482659293832
+      "Weight": 2.098153257759896
      },
      {
       "Currency": "JPY",
-      "Weight": 1.0062303388999132
+      "Weight": 1.005145370277342
      },
      {
       "Currency": "NZD",
-      "Weight": 0.5426549322872531
+      "Weight": 0.547014939541699
      },
      {
       "Currency": "CHF",
-      "Weight": 0.3167317304575131
+      "Weight": 0.30619750483212116
      }
     ]
    },
@@ -807,39 +807,39 @@
     "rows": [
      {
       "Sector": "Oil & Gas Storage & Transportation",
-      "Weight": 40.4890829519591
+      "Weight": 40.57468821344005
      },
      {
       "Sector": "Electricity Transmission & Distribution",
-      "Weight": 21.351874518084298
+      "Weight": 21.3869339751276
      },
      {
       "Sector": "Master Limited Partnerships",
-      "Weight": 8.70547034472394
+      "Weight": 8.764763270356829
      },
      {
       "Sector": "Communications",
-      "Weight": 8.624368636113115
+      "Weight": 8.712988165542939
      },
      {
       "Sector": "Diversified",
-      "Weight": 7.466491293863152
+      "Weight": 7.370130362937857
      },
      {
       "Sector": "Water",
-      "Weight": 5.458331540303588
+      "Weight": 5.479610828765852
      },
      {
       "Sector": "Airports",
-      "Weight": 4.248832725244286
+      "Weight": 4.20637056049323
      },
      {
       "Sector": "Toll Roads",
-      "Weight": 2.762182474934631
+      "Weight": 2.805803370290149
      },
      {
       "Sector": "Ports",
-      "Weight": 0.37989288227767415
+      "Weight": 0.35570349294832304
      }
     ]
    }

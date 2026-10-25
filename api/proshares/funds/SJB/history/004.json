@@ -2,7 +2,7 @@
  "ticker": "SJB",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3920,
+ "totalRows": 3923,
  "headers": [
   "Date",
   "NAV",
@@ -5529,6 +5529,24 @@
    "NAV": "15.5381",
    "Shares Outstanding": "3450000",
    "Total Net Assets": "53606445"
+  },
+  {
+   "Date": "Oct 21 2026",
+   "NAV": "15.5084",
+   "Shares Outstanding": "4000000",
+   "Total Net Assets": "62033600"
+  },
+  {
+   "Date": "Oct 22 2026",
+   "NAV": "15.487",
+   "Shares Outstanding": "4250000",
+   "Total Net Assets": "65819750"
+  },
+  {
+   "Date": "Oct 23 2026",
+   "NAV": "15.5024",
+   "Shares Outstanding": "4400000",
+   "Total Net Assets": "68210560"
   }
  ]
 }
