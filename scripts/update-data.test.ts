@@ -44,6 +44,7 @@ import {
   headerIndex,
   historyRangeDays,
   holdingWeight,
+  holdingsGuard,
   holdingsHeaders,
   holdingsNetAssets,
   holdingsUrl,
@@ -512,6 +513,21 @@ describe('parsing', () => {
     expect(holdingWeight({ ...blank, name: 'NO SIDE', shares: '' }, 1)).toBe('—');
   });
 
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6\u200B0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
+  });
+
   test('NAV history keeps one ticker, converts shares to units; per-fund URLs and HISTORY_RANGE windows', () => {
     const rows = parseNavHistoryFile(NAV_CSV, 'NOBL');
     expect(rows).toHaveLength(2);
@@ -895,6 +911,31 @@ describe('pipeline', () => {
       await run();
       expect(snapshot(api)).toEqual(published);
       expect(process.exitCode).toBe(1); // every fund failed
+    });
+  });
+
+  test('a fresh holdings download that fails the holdings guard (cut after its first position) keeps the fund exactly as published', async () => {
+    const sheet = (rows: string[]): string => [...HOLDINGS_CSV.split('\n').slice(0, 4), ...rows].join('\n');
+    const full = [
+      '"TQQQ","ProShares UltraPro QQQ","NVDA","2379504","NVIDIA CORP",,,5127506,,1139690759,',
+      '"TQQQ","ProShares UltraPro QQQ","AAPL","2046251","APPLE INC",,,3000000,,900000000,',
+      '"TQQQ","ProShares UltraPro QQQ","","","NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL",,,366121,10853353165,,',
+      '"TQQQ","ProShares UltraPro QQQ","","","NET OTHER ASSETS (LIABILITIES)",,,9707363674,,9707363673.76,',
+    ];
+    const serve = (rows: string[]): void => {
+      mockFeed();
+      const feed = globalThis.fetch;
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).endsWith('ByFund/TQQQ-psdlyhld.csv') ? new Response(sheet(rows)) : feed(String(input), init))) as unknown as typeof fetch;
+    };
+    await withRepo(async ({ api, run }) => {
+      serve(full);
+      await run();
+      const published = snapshot(api);
+      expect(readIndex(api).funds.find(fund => fund.ticker === 'TQQQ')?.holdings).toBe(4);
+      serve(full.slice(0, 1));
+      await run({ tickers: ['TQQQ'] });
+      expect(snapshot(api)).toEqual(published);
+      expect(process.exitCode).toBe(1); // the only selected fund failed
     });
   });
 
