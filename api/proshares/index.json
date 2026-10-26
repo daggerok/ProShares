@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T02:48:42Z",
+ "generatedAt": "2026-10-26T04:15:53Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-10-25T02:39:00Z"
+  "catalogReadAt": "2026-10-26T04:15:51Z"
  },
  "counts": {
   "funds": 173,
@@ -737,7 +737,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 11,
-   "history": 1515
+   "history": 1515,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "BETE",
@@ -2310,7 +2313,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 9,
-   "history": 2247
+   "history": 2247,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "COIA",
@@ -2882,7 +2888,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 1,
-   "history": 1274
+   "history": 1274,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "DAT",
@@ -3025,7 +3034,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 3,
-   "history": 1274
+   "history": 1274,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "DDM",
@@ -8602,7 +8614,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 1,
-   "history": 1274
+   "history": 1274,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "MRGR",
@@ -9746,7 +9761,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 5,
-   "history": 1255
+   "history": 1255,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "ONLN",
@@ -17611,7 +17629,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 7,
-   "history": 1144
+   "history": 1144,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "SVXY",
@@ -18612,7 +18633,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 4,
-   "history": 1255
+   "history": 1255,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "TINY",
@@ -23760,7 +23784,10 @@
     "performanceAsOf": "2026-09-30"
    },
    "holdings": 1,
-   "history": 1159
+   "history": 1159,
+   "status": "closed",
+   "closedDate": "2026-10-12",
+   "closedSource": "https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm"
   },
   {
    "ticker": "VIXM",
