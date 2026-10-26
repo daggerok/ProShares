@@ -1287,16 +1287,29 @@ for (const tickers of [
   'OILK PSQ PST QID QQDN REK RWM SCO SDD SDOW SDS SETH SH SJB SLON SPXU SQQQ SRS SRTY TBF TBT TBX UBT UCO UGL UJB',
   'ULE UPV UST UXRP VIXM VIXY XPP YCL YCS ZSL',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric'];
-// sum: hedged funds (HDG, HYHG, IGHG) net their short futures out, option-income funds, funds in liquidation hold mostly cash
-// (ANEW, CLIX, OND, SUPL; open-items etfs Q1)
+// sum: hedged funds (HDG, HYHG, IGHG) net their short futures out, option-income funds
 for (const tickers of [
-  'ANEW CLIX FB HDG HYHG IGHG IQQQ ISPY ITWO OND QB RB SUPL',
+  'FB HDG HYHG IGHG IQQQ ISPY ITWO QB RB',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['sum'];
-// numeric and sum: VIX futures funds outside the geared catalog (SVXY, UVXY), RINF, the money market fund IQMM (only Treasury
-// bills, no weights) and funds in liquidation (CTEX, DAT, MAKX, TINT, VERS; open-items etfs Q1)
+// numeric and sum: VIX futures funds outside the geared catalog (SVXY, UVXY), RINF and the money market fund IQMM (only Treasury
+// bills, no weights)
 for (const tickers of [
-  'CTEX DAT IQMM MAKX RINF SVXY TINT UVXY VERS',
+  'IQMM RINF SVXY UVXY',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric', 'sum'];
+/** SEC 497 of 2026-09-28 (Plan of Liquidation): October 12, 2026 is each fund's last full day of trading, distribution on October 27, 2026. */
+const LIQUIDATION_2026_10_12 = 'https://www.sec.gov/Archives/edgar/data/1174610/000117461026001069/f46317d1.htm';
+/** Funds the issuer closed, each confirmed from an SEC filing or the issuer notice (`source`): never fetched or guarded, last published data kept, index row marked closed. */
+export const CLOSED_FUNDS: ClosedFund[] = [
+  { ticker: 'ANEW', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'CLIX', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'CTEX', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'DAT', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'MAKX', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'OND', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'SUPL', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'TINT', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+  { ticker: 'VERS', closed: '2026-10-12', source: LIQUIDATION_2026_10_12 },
+];
 
 /** True for a leveraged or inverse daily objective from the geared finder page (+2x, -1x, -3x); +1x and blank are not geared. */
 export function isGearedObjective(dailyObjective: string): boolean {
@@ -2334,6 +2347,45 @@ export function rowFromMeta(meta: Record<string, any>): Record<string, unknown> 
   };
 }
 
+/**
+ * Index row of a catalog fund without published data (new, and its first read failed or its holdings failed the guard):
+ * catalog fields only, `dataFile: null`, holdings and history 0, the full metrics key set with nulls.
+ */
+export function catalogOnlyRow(fund: CatalogFund): Record<string, unknown> {
+  return {
+    ticker: fund.ticker,
+    name: fund.name,
+    category: fund.assetClass || 'ETF',
+    marketingCategory: fund.marketingCategory,
+    strategy: fund.strategy,
+    dailyObjective: fund.dailyObjective,
+    benchmark: fund.benchmark,
+    fundPage: fund.fundPage,
+    dataFile: null,
+    cusip: null,
+    isin: null,
+    ter: '—', terValue: null, terGross: '—', terGrossValue: null, terNet: '—', terNetValue: null,
+    nav: '—', navValue: null,
+    aum: formatAumDisplay(fund.netAssetsValue), aumValue: fund.netAssetsValue,
+    asOfDate: '—', netAssetsAsOf: '—',
+    inceptionDate: fund.inceptionDateText || '—',
+    exchange: '—',
+    closePrice: '—', closePriceValue: null, premiumDiscount: '—', premiumDiscountValue: null,
+    distributions: { frequency: '—', note: null, exDate: '—', dividend: '—' },
+    distributionFrequency: '—',
+    returns: {},
+    metrics: {
+      ytd: null, tr1y: null, tr3y: null, tr5y: null, tr10y: null, cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null,
+      dividendYield: null, dividendYieldText: '—', dividendYieldBasis: null, dividendYieldBasisText: null, dividendYieldComputed: null,
+      secYield: null, secYieldText: '—', secYieldKind: null,
+      returnsBasis: 'no published data yet: official ProShares performance file (etf_performance.csv) once the fund is read',
+      performanceAsOf: null,
+    },
+    holdings: 0,
+    history: 0,
+  };
+}
+
 /** Funds with a published meta.json that the index does not list (rows rebuilt offline). */
 export async function readMissingRows(listed: Set<string>): Promise<Record<string, Record<string, unknown>>> {
   const rows: Record<string, Record<string, unknown>> = {};
@@ -2616,14 +2668,16 @@ export async function main(config?: UpdaterConfig): Promise<void> {
 
   // --- candidate selection (catalog-level filters, then the bounded cursor) --
   const catalogFiltersActive = Boolean(config.tickers.length || config.category || config.aumRange);
-  let candidates = catalog.filter(fund => {
+  // A closed fund leaves the queue here, before the batch: it is never fetched, guarded or reported and spends no MAX_FETCHES budget.
+  let candidates = withoutClosedFunds(catalog.filter(fund => {
     if (config.tickers.length && !config.tickers.includes(fund.ticker)) return false;
     if (config.category && !(fund.assetClass || '').toLowerCase().includes(config.category.toLowerCase())) return false;
     if (config.aumRange && !matchesRange(fund.netAssetsValue, config.aumRange)) return false;
     return true;
-  });
+  }), fund => fund.ticker, CLOSED_FUNDS);
   const beforeBatch = candidates.length;
-  const unknownTickers = config.tickers.filter(ticker => !catalog.some(fund => fund.ticker === ticker));
+  // A closed fund the live catalog no longer lists is still a known ticker while its row is published.
+  const unknownTickers = config.tickers.filter(ticker => !catalog.some(fund => fund.ticker === ticker) && !(closedFund(CLOSED_FUNDS, ticker) && previousFunds[ticker]));
   if (unknownTickers.length) throw new Error(`Requested tickers absent from the catalog: ${unknownTickers.join(' ')}`);
   // A TICKERS run is a one-off selection: it never reads, writes or deletes the batch cursor.
   const useCursor = config.tickers.length === 0;
@@ -2649,7 +2703,9 @@ export async function main(config?: UpdaterConfig): Promise<void> {
     const before = await output.before(fund.ticker);
     const startedAt = Date.now();
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
-    const previous = previousFunds[fund.ticker];
+    // A catalog-only row (dataFile null) is not published data: the fund is still new.
+    const previousRow = previousFunds[fund.ticker];
+    const previous = previousRow && previousRow.dataFile !== null ? previousRow : undefined;
     try {
       const page = parseFundPage(await fetchText(fund.fundPage, browserHeaders(), config, `${fund.ticker} fund page`, `fund-${fund.ticker}.html`));
 
@@ -2814,7 +2870,8 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       stats.failed++;
       fundFailures++;
       await output.result(fund.ticker, before, 'failed', errorMessage(error));
-      if (!previousFunds[fund.ticker] && previous) previousFunds[fund.ticker] = previous;
+      // A new fund whose source failed or whose holdings the guard rejected is still listed, catalog fields only.
+      if (!previousFunds[fund.ticker]) previousFunds[fund.ticker] = previous ?? catalogOnlyRow(fund);
     }
   }, stopAt);
   if (completed.length < candidates.length) {
@@ -2826,7 +2883,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
 
   // --- index.json -----------------------------------------------------------
   const indexFile = path.join(API_ROOT, 'index.json');
-  const funds = Object.values(previousFunds).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  const funds = markClosedFunds(Object.values(previousFunds).sort((a, b) => String(a.ticker).localeCompare(String(b.ticker))), CLOSED_FUNDS);
   const counts = {
     funds: funds.length,
     holdings: funds.reduce((sum, fund) => sum + Number(fund.holdings || 0), 0),
@@ -2896,7 +2953,7 @@ if (import.meta.main) {
  * Weight (%) or Market Weight) are required, >= 80% of the rows carry a numeric weight, the weights add up to
  * 50..150 and the sheet keeps >= 50% of the previously published rows. `relax` switches off the checks a fund
  * legitimately fails: 'numeric' and 'sum' (geared, inverse, futures, look-through, top-N lists) and 'count'.
- * Rows are arrays in header order or objects keyed by the header text.
+ * Rows are arrays in header order or objects keyed by the header text. A fund in the brand's CLOSED_FUNDS never reaches the guard.
  */
 export function holdingsGuard(headers: ReadonlyArray<string>, rows: ReadonlyArray<unknown>, previousRows: number | null | undefined, relax: ReadonlyArray<string> = []): string | null {
   const previous = Number(previousRows) > 0 ? Number(previousRows) : 0;
@@ -2931,5 +2988,44 @@ function holdingsGuardNumber(value: unknown): number | null {
   if (negative) text = text.slice(1, -1);
   if (!/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i.test(text)) return null;
   return negative ? -Number(text) : Number(text);
+}
+
+/** A fund its issuer closed (liquidated, delisted or merged away), confirmed from an official source: an SEC filing or the issuer's notice. */
+export type ClosedFund = { ticker: string; closed: string; source: string };
+
+/**
+ * The brand's CLOSED_FUNDS entry for a ticker, or null. A closed fund is never fetched, never guarded and never reported failed: it keeps
+ * its last published data and its index row carries `status: 'closed'`, `closedDate` and `closedSource`. A malformed entry throws, so a
+ * typo (no ISO date, no https source) never ships.
+ */
+export function closedFund(list: ReadonlyArray<ClosedFund>, ticker: unknown): ClosedFund | null {
+  const wanted = String(ticker === null || ticker === undefined ? '' : ticker).trim().toUpperCase();
+  let found: ClosedFund | null = null;
+  for (let i = 0; i < list.length; i++) {
+    const fund = list[i];
+    if (!/^[A-Z0-9][A-Z0-9.-]{0,9}$/.test(fund.ticker) || !/^\d{4}-\d{2}-\d{2}$/.test(fund.closed) || !/^https:\/\/\S+$/.test(fund.source)) throw new Error(`CLOSED_FUNDS: ${fund.ticker} needs an upper-case ticker, an ISO closing date and an https source`);
+    if (fund.ticker === wanted) found = fund;
+  }
+  return found;
+}
+
+/** The index rows with every closed fund marked (`status: 'closed'`, `closedDate`, `closedSource`); other rows are returned as they are. */
+export function markClosedFunds<T extends object>(rows: ReadonlyArray<T>, list: ReadonlyArray<ClosedFund>): T[] {
+  return rows.map((row) => {
+    const fund = closedFund(list, (row as { ticker?: unknown }).ticker);
+    return fund ? ({ ...row, status: 'closed', closedDate: fund.closed, closedSource: fund.source } as T) : row;
+  });
+}
+
+/** A run's queue without the closed funds, which are named once in the log: they are neither fetched nor counted as failed. */
+export function withoutClosedFunds<T>(queue: ReadonlyArray<T>, tickerOf: (item: T) => string, list: ReadonlyArray<ClosedFund>): T[] {
+  const closed: string[] = [];
+  const open: T[] = [];
+  for (let i = 0; i < queue.length; i++) {
+    if (closedFund(list, tickerOf(queue[i]))) closed.push(tickerOf(queue[i]));
+    else open.push(queue[i]);
+  }
+  if (closed.length) console.log(`[ closed   ] ${closed.join(', ')}: closed by the issuer, published data kept`);
+  return open;
 }
 // </holdings-guard>

@@ -334,7 +334,9 @@ describe('controls', () => {
     const overridden = await runtimeControls({ TICKERS: 'NOBL', REQUEST_SLEEP: '0' });
     expect([overridden.TICKERS, overridden.REQUEST_SLEEP, overridden.CONCURRENCY]).toEqual(['NOBL', '0', '3']);
   });
+});
 
+describe('controls 2', () => {
   test('config keys equal CONTROL_NAMES and --help; USE_SYSTEM_CA is auto, true or false only', () => {
     const defaults = configFile();
     expect(Object.keys(defaults).sort()).toEqual([...CONTROL_NAMES].sort());
@@ -476,7 +478,9 @@ describe('parsing', () => {
     expect(bond.sec30DayYield).toBe(5.42); // distinct from the bond yield to maturity
     expect(bond.characteristics['Weighted Average Yield to Maturity']).toBe('5.63%');
   });
+});
 
+describe('parsing 2', () => {
   test('holdings file: preamble, per-security identifiers, headers that grow only when used', () => {
     const file = parseHoldingsFile(HOLDINGS_CSV);
     expect(file.asOf).toBe('Sep 18 2026');
@@ -548,7 +552,9 @@ describe('parsing', () => {
     expect(applyHistoryRange(old, '1y').map(row => row.nav)).toEqual([2]); // the oldest rows go
     expect(applyHistoryRange(old, 'max')).toHaveLength(2);
   });
+});
 
+describe('parsing 3', () => {
   test('performance and splits files; young funds keep empty tenors as null', () => {
     const performance = parsePerformanceFile(PERFORMANCE_CSV);
     expect(performance.size).toBe(5);
@@ -705,6 +711,32 @@ describe('metrics', () => {
     expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2024' }, 3)).toBe(false);
     expect(tenorAvailable(undefined, 1)).toBe(false);
   });
+});
+
+describe('metrics 2', () => {
+  const performance = parsePerformanceFile(PERFORMANCE_CSV);
+  const inputs = {
+    fund: parseFinderCatalogPage(STRATEGIC_ROW, 'strategic')[0],
+    page: parseFundPage(FUND_PAGE),
+    performanceNavMonth: performance.get('NOBL|NAV|MONTH'),
+    performanceMarketMonth: performance.get('NOBL|MARKET|MONTH'),
+    performanceNavQuarter: performance.get('NOBL|NAV|QUARTER'),
+    performanceMarketQuarter: undefined,
+    navRows: parseNavHistoryFile(NAV_CSV, 'NOBL'),
+    holdingsRows: parseHoldingsFile(HOLDINGS_CSV).funds.get('NOBL')?.rows || [],
+    holdingsAsOf: 'Sep 18 2026',
+    holdingsSourceLabel: 'official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Sep 18 2026)',
+    distributions: parseDistributionSummary(DISTRIBUTIONS_JSON),
+    exchange: 'NYSE Arca',
+    exchangeSource: 'Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)',
+    splits: parseSplitsFile(SPLITS_CSV).get('NOBL') || [],
+    config: testConfig,
+    catalogReadAt: '2026-09-21T00:00:00Z',
+  };
+  const artifacts = buildFeed(inputs);
+  const entry = artifacts.entry as Record<string, any>;
+  const meta = artifacts.meta as Record<string, any>;
+  const entryOf = (override: Partial<typeof inputs>) => buildFeed({ ...inputs, ...override }).entry as Record<string, any>;
 
   test('derived total returns sit next to the published annualized ones', () => {
     expect(entry.metrics.cagr3y).toBe(9.34);
@@ -957,7 +989,9 @@ describe('pipeline', () => {
       expect(process.exitCode).toBe(1);
     });
   });
+});
 
+describe('pipeline 2', () => {
   test('a geared fund passes the weight sum by its catalog objective without a relax entry, a strategic fund with the same sheet does not', async () => {
     // four equities (96%) plus a swap (199%): about 295% in all, normal for a +3x fund, broken for an unlevered one
     const swapSheet = (ticker: string): string => `${holdingsCsvFor([ticker])}\n"${ticker}","ProShares ${ticker}","","","NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL",,,366121,1500000000,,`;
@@ -972,8 +1006,50 @@ describe('pipeline', () => {
       const byTicker = Object.fromEntries(readIndex(api).funds.map(fund => [fund.ticker, fund]));
       expect(byTicker.TQQQ.dailyObjective).toBe('+3x');
       expect(byTicker.TQQQ.holdings).toBe(6);
-      expect(byTicker.NOBL).toBeUndefined(); // rejected by the sum check: nothing published
+      // rejected by the sum check: no files, but a catalog-only row like any new fund whose source failed
       expect(existsSync(path.join(api, 'funds', 'NOBL', 'meta.json'))).toBe(false);
+      expect(byTicker.NOBL).toMatchObject({ dataFile: null, holdings: 0, history: 0 });
+      expect(Object.keys(byTicker.NOBL.metrics)).toEqual(Object.keys(byTicker.TQQQ.metrics));
+      expect(Object.values(byTicker.NOBL.metrics).filter(value => typeof value === 'number')).toEqual([]);
+      expect(byTicker.NOBL.metrics.returnsBasis.length).toBeGreaterThan(1);
+      expect(process.exitCode).not.toBe(1); // one of two selected funds failed
+    });
+  });
+
+  test('a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing', async () => {
+    await withRepo(async ({ mod, api, run }) => {
+      const entry = { ticker: 'NOBL', closed: '2026-10-01', source: 'https://www.sec.gov/Archives/edgar/data/1/notice.htm' };
+      expect(() => mod.closedFund([{ ...entry, closed: 'soon' }], 'NOBL')).toThrow('CLOSED_FUNDS');
+      expect(mod.closedFund([entry], 'nobl')).toEqual(entry);
+      mockFeed();
+      await run();
+      const first = snapshot(api);
+      const dataFile = readIndex(api).funds.find(fund => fund.ticker === 'NOBL')?.dataFile;
+      // the guard would reject these holdings (no market values, so no weights)
+      const feed = mockFeed();
+      const inner = globalThis.fetch;
+      const noValues = holdingsCsvFor(['NOBL']).replace(/,[\d.]+,$/gm, ',,');
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).endsWith('ByFund/NOBL-psdlyhld.csv') ? new Response(noValues) : inner(String(input), init))) as unknown as typeof fetch;
+      mod.CLOSED_FUNDS.push(entry);
+      try {
+        await run({ tickers: ['NOBL'] });
+        expect(feed.urls.filter(url => /nobl/i.test(url))).toEqual([]);
+        expect(process.exitCode).not.toBe(1);
+        const closed = snapshot(api);
+        for (const file of Object.keys(first)) if (file !== 'index.json') expect([file, closed[file]]).toEqual([file, first[file]]);
+        const rows = readIndex(api).funds;
+        expect(rows.map(row => row.ticker)).toEqual(TICKERS);
+        expect(rows.find(row => row.ticker === 'NOBL')).toMatchObject({ status: 'closed', closedDate: '2026-10-01', closedSource: entry.source, dataFile });
+        expect(rows.filter(row => row.status === 'closed')).toHaveLength(1);
+        await run();
+        expect(snapshot(api)).toEqual(closed);
+        // the live catalog drops the fund: its row survives and a one-ticker run of it is still accepted
+        globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input) === STRATEGIC_FINDER_URL ? new Response(catalogRow('IGHG', 'strategic')) : inner(String(input), init))) as unknown as typeof fetch;
+        await run({ tickers: ['NOBL'] });
+        expect(snapshot(api)).toEqual(closed);
+      } finally {
+        mod.CLOSED_FUNDS.splice(mod.CLOSED_FUNDS.indexOf(entry), 1);
+      }
     });
   });
 
@@ -1032,7 +1108,9 @@ describe('pipeline', () => {
       expect(readdirSync(path.join(api, 'funds'))).toEqual([]);
     });
   });
+});
 
+describe('pipeline 3', () => {
   test('HISTORY_RANGE trims the published NAV history from the old end', async () => {
     mockFeed();
     await withRepo(async ({ api, run }) => {
@@ -1189,7 +1267,9 @@ describe('network', () => {
     await mapWithConcurrency([1, 2, 3], 2, async () => { started++; }, Date.now() - 1);
     expect(started).toBe(0);
   });
+});
 
+describe('network 2', () => {
   test('the real run fetches funds in parallel at CONCURRENCY=3 and one at a time at CONCURRENCY=1', async () => {
     await withRepo(async ({ run }) => {
       const serial = mockFeed();
