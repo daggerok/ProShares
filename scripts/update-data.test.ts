@@ -69,8 +69,11 @@ import {
   parseFinderCatalogPage,
   parseFundPage,
   parseHoldingsFile,
+  parseNavHistoryAll,
   parseNavHistoryFile,
   parsePerformanceFile,
+  lostValueSets,
+  hasNumericWeight,
   parseRange,
   parseRanges,
   publishedAsOf,
@@ -570,7 +573,7 @@ describe('parsing 3', () => {
     expect(splits.get('REW')![0].postSplitCusip).toBe('74350P451');
   });
 
-  test('distribution summary: payouts sorted by ex-date, CSV rows, tolerated bad payloads', () => {
+  test('distribution summary: payouts sorted by ex-date, CSV rows; an empty year is [] or blank, any other body throws', () => {
     const rows = parseDistributionSummary(DISTRIBUTIONS_JSON);
     expect(rows).toHaveLength(2);
     expect(rows[0].exDate).toBe('Mar 25 2026');
@@ -578,8 +581,12 @@ describe('parsing 3', () => {
     expect(rows[0].shortTermCapGains).toBeCloseTo(0.0121, 6);
     const csv = distributionRowsForCsv(rows);
     expect([csv[1]['Ex-Date'], csv[1].Dividend, csv[0]['LT Cap Gains']]).toEqual(['24-Jun-2026', '0.303711', '—']);
-    expect(parseDistributionSummary('[]')).toEqual([]);
-    expect(parseDistributionSummary('not json')).toEqual([]);
+    expect(parseDistributionSummary('[]')).toEqual([]); // the live answer for a year without payouts, also before inception
+    expect(parseDistributionSummary(' \n')).toEqual([]);
+    // a block page or an error object answered with HTTP 200 is a failed year, never an empty one
+    expect(() => parseDistributionSummary('<html>Access denied</html>')).toThrow('not JSON: Access denied');
+    expect(() => parseDistributionSummary('not json')).toThrow('not JSON');
+    expect(() => parseDistributionSummary('{"Message":"An error has occurred."}')).toThrow('not a JSON array');
   });
 
   test('nasdaq symbol directory resolves listing exchanges and skips the trailer line', () => {
@@ -599,6 +606,21 @@ describe('parsing 3', () => {
     expect(distributionRowsForCsv(readPublishedDistributions(rows)!)).toEqual(rows);
     expect(readPublishedDistributions([{ 'Ex-Date': '\u2014' }])).toBeNull(); // unreadable: the caller walks every year
     expect(readPublishedDistributions(undefined)).toBeNull();
+  });
+
+  test('a renamed column fails the whole file (performance, holdings, NAV history) instead of turning its values into null', () => {
+    const rename = (text: string, from: string, to: string): string => text.replace(from, to);
+    expect(() => parsePerformanceFile(rename(PERFORMANCE_CSV, '1-Year Return', '1Y Total Return'))).toThrow('performance file: missing column "1-Year Return"');
+    expect(parsePerformanceFile(rename(PERFORMANCE_CSV, '1-Year Return', '1 Year Return')).get('NOBL|NAV|MONTH')?.yr1).toBe(12.93); // known spelling
+    expect(() => parseHoldingsFile(rename(HOLDINGS_CSV, ' Market Value', ' Market Val'))).toThrow('holdings file: missing column "Market Value"');
+    expect(() => parseHoldingsFile(rename(HOLDINGS_CSV, 'Exposure Value (Notional + G/L)', 'Notional'))).toThrow('"Exposure Value (Notional + G/L)"');
+    expect(() => parseNavHistoryFile(rename(NAV_CSV, ',NAV,', ',Net Asset Value,'), 'NOBL')).toThrow('NAV history file: missing column "NAV"');
+    // the all-funds NAV file is read by header now, not by position: a moved column still lands in the right field
+    const moved = NAV_CSV.split('\n').map(line => line.split(',')).map(cells => [cells[2], ...cells.slice(0, 2), ...cells.slice(3)].join(',')).join('\n');
+    expect(parseNavHistoryAll(moved).get('NOBL')).toEqual(parseNavHistoryFile(NAV_CSV, 'NOBL'));
+    expect(lostValueSets({ terValue: 0.35, metrics: { ytd: 1, tr1y: null } }, { terValue: null, metrics: { ytd: null, tr1y: null } })).toEqual(['expense ratio', 'returns']);
+    expect(lostValueSets({ terValue: null, metrics: { ytd: null } }, { terValue: null, metrics: { ytd: null } })).toEqual([]); // honest nulls stay
+    expect([hasNumericWeight([{ Weight: '—' }, { Weight: '1.73' }]), hasNumericWeight([{ Weight: '—' }])]).toEqual([true, false]);
   });
 });
 
@@ -1200,6 +1222,93 @@ describe('pipeline 3', () => {
     } finally {
       rmSync(directory, { recursive: true, force: true });
     }
+  });
+});
+
+/** mockFeed() plus `rewrite`: a non-null body from it answers that URL instead of the regular feed. */
+function mockFeedWith(rewrite: (url: string) => string | null, options: FeedOptions = {}): FeedState {
+  const state = mockFeed(options);
+  const inner = globalThis.fetch;
+  globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+    const body = rewrite(String(input));
+    return body === null ? inner(String(input), init) : new Response(body);
+  }) as unknown as typeof fetch;
+  return state;
+}
+
+describe('pipeline 4', () => {
+  test('distributions: a block page answered with HTTP 200 fails the year and keeps the fund; a full walk keeps published years older than the walk', async () => {
+    const year = new Date().getUTCFullYear();
+    const perYear = parseDistributionSummary(DISTRIBUTIONS_JSON).length;
+    const metaFile = (api: string): string => path.join(api, 'funds', 'NOBL', 'meta.json');
+    const published = (api: string): { rows: Record<string, string>[]; refreshedAt?: string } => JSON.parse(readFileSync(metaFile(api), 'utf8')).distributions;
+    await withRepo(async ({ api, run }) => {
+      mockFeed({ distributionYears: [year, year - 2] });
+      await run({ tickers: ['NOBL'] });
+      expect(published(api).rows.length).toBe(2 * perYear);
+      const before = snapshot(api);
+      // recent mode: the current year answers a block page with HTTP 200, the fund keeps its published payouts
+      mockFeedWith(url => (url.endsWith(`fund=NOBL&year=${year}`) ? '<html>Access denied</html>' : null), { distributionYears: [year, year - 2] });
+      await run({ tickers: ['NOBL'] });
+      expect(snapshot(api)).toEqual(before);
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
+      // a refresh-due full walk meets two empty years and stops: the published older year survives it
+      const meta = JSON.parse(readFileSync(metaFile(api), 'utf8'));
+      meta.distributions.refreshedAt = '2000-01-01';
+      writeFileSync(metaFile(api), JSON.stringify(meta));
+      mockFeed({ distributionYears: [] });
+      await run({ tickers: ['NOBL'] });
+      expect(process.exitCode).not.toBe(1);
+      expect(published(api).rows.map(row => row['Ex-Date'].slice(-4))).toEqual(Array(perYear).fill(String(year - 2)));
+      expect(published(api).refreshedAt).toBe(new Date().toISOString().slice(0, 10));
+    });
+  });
+
+  test('a bulk NAV fallback that starts after the published history keeps the fund; one that reaches back as far is used', async () => {
+    const totalRows = (api: string): number => JSON.parse(readFileSync(path.join(api, 'funds', 'NOBL', 'meta.json'), 'utf8')).history.totalRows;
+    const perFundDown = (url: string): boolean => url.endsWith('ByFund/NOBL-historical_nav.csv');
+    await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run({ tickers: ['NOBL'] });
+      expect(totalRows(api)).toBe(3); // Sep 2020 to Sep 2026
+      const published = snapshot(api);
+      mockFeedWith(url => (url === NAV_HISTORY_ALL_URL ? NAV_CSV : null), { fail: perFundDown }); // bulk slice starts Sep 17 2026
+      await run({ tickers: ['NOBL'] });
+      expect(snapshot(api)).toEqual(published);
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
+      mockFeedWith(url => (url === NAV_HISTORY_ALL_URL ? navCsvFor('NOBL') : null), { fail: perFundDown });
+      await run({ tickers: ['NOBL'] });
+      expect(process.exitCode).not.toBe(1);
+      expect(totalRows(api)).toBe(3);
+    });
+  });
+
+  test('a renamed page id, a fund missing from the performance file or emptied values never write all-null TER, returns or weights over published ones', async () => {
+    await withRepo(async ({ mod, api, run }) => {
+      mockFeed();
+      await run();
+      const published = snapshot(api);
+      const expectKept = async (tickers: string[]): Promise<void> => {
+        await run({ tickers });
+        expect(snapshot(api)).toEqual(published);
+        expect(process.exitCode).toBe(1);
+        process.exitCode = 0;
+      };
+      mockFeedWith(url => (/strategic\/nobl$/.test(url) ? FUND_PAGE.replace('snapshot-expenseRatio', 'snapshot-totalExpenseRatio') : null));
+      await expectKept(['NOBL']);
+      mockFeedWith(url => (url === PERFORMANCE_URL ? PERFORMANCE_CSV.split('\n').filter(line => !line.includes(',NOBL,')).join('\n') : null));
+      await expectKept(['NOBL']);
+      // a swap fund relaxed for numeric weights (+3x also relaxes the sum) whose market values and exposures come back empty
+      mod.HOLDINGS_GUARD_RELAX.TQQQ = ['numeric'];
+      try {
+        mockFeedWith(url => (url.endsWith('ByFund/TQQQ-psdlyhld.csv') ? holdingsCsvFor(['TQQQ']).replace(/,[\d.]+,$/gm, ',,') : null));
+        await expectKept(['TQQQ']);
+      } finally {
+        delete mod.HOLDINGS_GUARD_RELAX.TQQQ;
+      }
+    });
   });
 });
 

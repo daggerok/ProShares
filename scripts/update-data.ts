@@ -441,6 +441,16 @@ export function cellAt(row: string[], index: Map<string, number>, ...names: stri
   return '';
 }
 
+/**
+ * Throws when a column the parser reads is missing from the header row. A renamed column would otherwise turn every value of
+ * it into null for every fund while the file still downloads; failing the file keeps the published funds instead.
+ * Each entry lists the accepted spellings of one column.
+ */
+export function requireHeaders(index: Map<string, number>, file: string, columns: string[][]): void {
+  const missing = columns.filter(names => !names.some(name => index.has(name.toLowerCase().replace(/[^a-z0-9]/g, ''))));
+  if (missing.length) throw new Error(`${file}: missing column${missing.length > 1 ? 's' : ''} ${missing.map(names => `"${names[0]}"`).join(', ')}`);
+}
+
 // ---------------------------------------------------------------------------
 // Configuration (identical env surface to the sibling updaters)
 // ---------------------------------------------------------------------------
@@ -1196,6 +1206,10 @@ export function parseHoldingsFile(text: string): HoldingsFile {
   }
   if (headerPosition < 0) throw new Error('holdings file: no "Fund Ticker" header row found');
   const index = headerIndex(records[headerPosition]);
+  requireHeaders(index, 'holdings file', [
+    ['Fund Ticker'], ['Fund Name'], ['Security Ticker'], ['Security Sedol', 'Security SEDOL'], ['Security Description'], ['Coupon'],
+    ['Maturity Date'], ['Shares/Contracts', 'Shares Contracts'], ['Exposure Value (Notional + G/L)', 'Exposure Value'], ['Market Value'],
+  ]);
   const funds = new Map<string, { name: string; rows: HoldingsRow[] }>();
   for (let i = headerPosition + 1; i < records.length; i++) {
     const row = records[i];
@@ -1278,7 +1292,7 @@ export function holdingsNetAssets(rows: HoldingsRow[]): number {
 // these two). The sum check of a leveraged or inverse fund is relaxed by its catalog objective (isGearedObjective), not by this
 // table, so a newly launched geared fund is published without an entry here; every other fund gets every check unless it is
 // listed. The column and row-count checks stay on for all.
-const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {};
+export const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {};
 // numeric: a few swap or futures lines next to cash lines that carry no weight by design (Net Other Assets, Treasury bills, the
 // money market fund), so fewer than 80% of the rows have one (geared and inverse swap funds, autocallable, crypto, VIX and oil
 // futures funds)
@@ -1369,27 +1383,82 @@ export function navHistoryUrl(ticker: string): string {
   return `${PROSHARES_DATA_HOST}/ByFund/${ticker}-historical_nav.csv`;
 }
 
-export function parseNavHistoryFile(text: string, ticker: string): NavRow[] {
+/** NAV rows per ticker of a NAV history file (the per-fund file and the all-funds file share one layout), in file order. */
+export function parseNavHistoryAll(text: string): Map<string, NavRow[]> {
   const records = parseCsvRecords(text);
-  if (!records.length) return [];
+  const map = new Map<string, NavRow[]>();
+  if (!records.length) return map;
   const index = headerIndex(records[0]);
-  const rows: NavRow[] = [];
+  requireHeaders(index, 'NAV history file', [
+    ['Date'], ['Ticker'], ['NAV'], ['Shares Outstanding (000)', 'Shares Outstanding 000'], ['Assets Under Management', 'AUM'],
+  ]);
   for (let i = 1; i < records.length; i++) {
     const row = records[i];
-    if (cleanText(cellAt(row, index, 'Ticker')).toUpperCase() !== ticker) continue;
+    const ticker = cleanText(cellAt(row, index, 'Ticker')).toUpperCase();
+    if (!/^[A-Z0-9]{1,8}$/.test(ticker)) continue;
     const date = formatUsDate(cellAt(row, index, 'Date'));
     if (!date || date === '—') continue;
     const sharesText = cellAt(row, index, 'Shares Outstanding (000)', 'Shares Outstanding 000');
     const shares = numberOrNull(sharesText);
-    rows.push({
+    const list = map.get(ticker) || [];
+    list.push({
       date,
       nav: numberOrNull(cellAt(row, index, 'NAV')),
       // The file publishes shares outstanding in thousands.
       sharesOutstanding: shares === null ? null : round(shares * 1000, 0),
       netAssets: numberOrNull(cellAt(row, index, 'Assets Under Management', 'AUM')),
     });
+    map.set(ticker, list);
   }
-  return rows;
+  return map;
+}
+
+export function parseNavHistoryFile(text: string, ticker: string): NavRow[] {
+  return parseNavHistoryAll(text).get(ticker) || [];
+}
+
+/**
+ * The bulk NAV file is only a fallback for the per-fund file. For a fund that already publishes history it is used only when it
+ * reaches back at least as far as the published history (`publishedFirst`, the first date of history page 1); a shorter slice
+ * would rewrite the history pages without their oldest years. Returns the reason to keep the fund, or null.
+ */
+export function navFallbackProblem(rows: NavRow[], publishedFirst: string | null): string | null {
+  if (!rows.length || !publishedFirst) return null;
+  const first = rows.reduce((oldest, row) => (compareDisplayDates(row.date, oldest) < 0 ? row.date : oldest), rows[0].date);
+  return compareDisplayDates(first, publishedFirst) > 0 ? `bulk NAV history starts ${first}, after the published ${publishedFirst}` : null;
+}
+
+/** Rows of the first published page of a sheet block from meta.json (`history`, `holdings`); [] when there is none or it is unreadable. */
+export async function firstPublishedRows(directory: string, block: unknown): Promise<Record<string, unknown>[]> {
+  const page = (block as { pages?: unknown } | null | undefined)?.pages;
+  const first = Array.isArray(page) ? page[0] : undefined;
+  if (typeof first !== 'string' || !first) return [];
+  try {
+    const rows = JSON.parse(await readFile(path.join(directory, first), 'utf8')).rows;
+    return Array.isArray(rows) ? rows.filter(row => row && typeof row === 'object' && !Array.isArray(row)) : [];
+  } catch {
+    return [];
+  }
+}
+
+/** True when at least one holdings row carries a numeric Weight (cash-only funds such as IQMM publish none at all). */
+export function hasNumericWeight(rows: ReadonlyArray<Record<string, unknown>>): boolean {
+  return rows.some(row => numberOrNull(row.Weight) !== null);
+}
+
+const RETURN_METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'siAnn'];
+
+/**
+ * Value sets a fresh row would turn from published numbers into all-null: the expense ratio (a renamed `snapshot-expenseRatio`
+ * id) and the official returns (a renamed performance column, a fund missing from the file). Honest nulls stay possible for a
+ * fund that never had the value; the caller keeps a fund that would lose one.
+ */
+export function lostValueSets(previous: Record<string, any>, next: Record<string, any>): string[] {
+  const lost: string[] = [];
+  if (numberOrNull(previous.terValue) !== null && numberOrNull(next.terValue) === null) lost.push('expense ratio');
+  const returns = (row: Record<string, any>): (number | null)[] => RETURN_METRIC_KEYS.map(key => numberOrNull(row.metrics?.[key]));
+  if (returns(previous).some(value => value !== null) && returns(next).every(value => value === null)) lost.push('returns');
+  return lost;
 }
 
 export function historyRangeDays(range: string): number | null {
@@ -1439,6 +1508,12 @@ export function parsePerformanceFile(text: string): Map<string, PerformanceRow> 
   const map = new Map<string, PerformanceRow>();
   if (!records.length) return map;
   const index = headerIndex(records[0]);
+  requireHeaders(index, 'performance file', [
+    ['Fund Symbol'], ['Return Type'], ['Data Period'], ['Return Effective Date'], ['Inception Date'],
+    ['1-Month Return', '1 Month Return'], ['3-Month Return', '3 Month Return'], ['6-Month Return', '6 Month Return'],
+    ['Year-To-Date Return', 'Year To Date Return'], ['1-Year Return', '1 Year Return'], ['3-Year Return', '3 Year Return'],
+    ['5-Year Return', '5 Year Return'], ['10-Year Return', '10 Year Return'], ['Return Since Inception'],
+  ]);
   for (let i = 1; i < records.length; i++) {
     const row = records[i];
     const symbol = cleanText(cellAt(row, index, 'Fund Symbol')).toUpperCase();
@@ -1521,14 +1596,21 @@ export function distributionSummaryUrl(ticker: string, year: number): string {
   return `${PROSHARES_SITE}/api/distributionsummary?fund=${encodeURIComponent(ticker)}&year=${year}`;
 }
 
+/**
+ * The endpoint answers `[]` (HTTP 200, JSON) for a year without payouts, also before inception (checked live 2026-10-26: COIA,
+ * launched 2025, asked for 2015). An empty body is an empty year too. Anything else that is not a JSON array (an HTML block
+ * page, an error object) throws, so the year counts as failed and the published rows are kept instead of dropped.
+ */
 export function parseDistributionSummary(text: string): DistributionRow[] {
+  const body = String(text ?? '').trim();
+  if (!body) return [];
   let parsed: unknown;
   try {
-    parsed = JSON.parse(text);
+    parsed = JSON.parse(body);
   } catch {
-    return [];
+    throw new Error(`distribution summary is not JSON: ${cleanText(stripTags(body)).slice(0, 60) || 'markup only'}`);
   }
-  if (!Array.isArray(parsed)) return [];
+  if (!Array.isArray(parsed)) throw new Error('distribution summary is not a JSON array');
   return parsed
     .map(entry => {
       const record = entry as Record<string, unknown>;
@@ -1626,7 +1708,7 @@ export type DistributionFetch = { rows: DistributionRow[]; failed: boolean; full
 /**
  * Distribution history of one fund. `published` is the previous meta.distributions block (rows + refreshedAt) or null.
  * Full walk: every year down to DISTRIBUTION_YEARS, stopping after two empty years. Recent mode: current and previous
- * year from the endpoint, older rows from `published`.
+ * year from the endpoint. In both modes the published rows older than the last year asked are merged back.
  */
 export async function fetchDistributions(
   ticker: string,
@@ -1644,7 +1726,9 @@ export async function fetchDistributions(
   let failed = false;
   let requests = 0;
   let emptyYears = 0;
+  let lastYear = currentYear;
   for (let year = currentYear; year >= currentYear - span; year--) {
+    lastYear = year;
     requests++;
     try {
       const text = await fetchText(
@@ -1668,11 +1752,13 @@ export async function fetchDistributions(
     }
     if (!recent && emptyYears >= 2) break;
   }
-  if (recent && kept) {
+  // Published years older than the last year asked are history the endpoint was not asked about: kept in both modes (a full
+  // walk stops after two empty years, so a fund that paid only years ago would otherwise lose its whole table).
+  if (kept) {
     const oldest = currentYear - config.distributionYears;
     for (const row of kept) {
       const year = new Date(`${row.exDate} UTC`).getUTCFullYear();
-      if (year < currentYear - span && year >= oldest) rows.push(row);
+      if (year < lastYear && year >= oldest) rows.push(row);
     }
   }
   rows.sort((a, b) => compareDisplayDates(a.exDate, b.exDate));
@@ -2640,25 +2726,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       navHistoryAllLoaded = true;
       try {
         const text = await fetchText(NAV_HISTORY_ALL_URL, browserHeaders(), config, 'NAV history file', 'historical_nav.csv');
-        navHistoryAll = parseCsvRecords(text)
-          .slice(1)
-          .map(row => ({
-            ticker: cleanText(row[2] || '').toUpperCase(),
-            date: formatUsDate(cleanText(row[0])),
-            nav: numberOrNull(row[3]),
-            sharesOutstanding: (() => {
-              const shares = numberOrNull(row[7]);
-              return shares === null ? null : round(shares * 1000, 0);
-            })(),
-            netAssets: numberOrNull(row[8]),
-          }))
-          .filter(row => /^[A-Z0-9]{1,8}$/.test(row.ticker))
-          .reduce((acc, row) => {
-            const list = acc.get(row.ticker) || [];
-            list.push({ date: row.date, nav: row.nav, sharesOutstanding: row.sharesOutstanding, netAssets: row.netAssets });
-            acc.set(row.ticker, list);
-            return acc;
-          }, new Map<string, NavRow[]>());
+        navHistoryAll = parseNavHistoryAll(text);
       } catch (error) {
         outputNote(`[ history  ] bulk NAV history failed — ${errorMessage(error)}`);
       }
@@ -2745,10 +2813,20 @@ export async function main(config?: UpdaterConfig): Promise<void> {
         return;
       }
 
-      // NAV history: the per-fund file reaches inception, the bulk file starts
-      // in 2011; the per-fund file is therefore preferred, the bulk slice is the
-      // fallback.
+      let previousMeta: Record<string, any> | null = null;
+      if (previous) {
+        try {
+          previousMeta = JSON.parse(await readFile(path.join(directory, 'meta.json'), 'utf8'));
+        } catch {
+          previousMeta = null;
+        }
+      }
+
+      // NAV history: the per-fund file reaches inception and is preferred; the bulk slice is the fallback (it reached SSO's
+      // June 2006 inception on 2026-10-26, older notes said it starts in 2011), used for a published fund only when it reaches
+      // back as far as the published history.
       let navRows: NavRow[] = [];
+      let navProblem: string | null = null;
       try {
         const text = await fetchText(navHistoryUrl(fund.ticker), browserHeaders(), config, `${fund.ticker} NAV history`, '');
         navRows = parseNavHistoryFile(text, fund.ticker);
@@ -2758,6 +2836,10 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       if (!navRows.length) {
         const bulk = await loadNavHistoryAll();
         navRows = bulk.get(fund.ticker) || [];
+        if (previousMeta && Number(previous?.history || 0) > 0) {
+          const firstPage = await firstPublishedRows(directory, previousMeta.history);
+          navProblem = navFallbackProblem(navRows, firstPage.length ? cleanText(firstPage[0].Date) || null : null);
+        }
       }
       navRows.sort((a, b) => compareDisplayDates(a.date, b.date));
       navRows = applyHistoryRange(navRows, config.historyRange);
@@ -2766,14 +2848,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       let distributions: DistributionRow[] = [];
       let distributionsFailed = false;
       let distributionsRefreshedAt: string | null = null;
-      let publishedBlock: Record<string, any> | null = null;
-      if (previous) {
-        try {
-          publishedBlock = JSON.parse(await readFile(path.join(directory, 'meta.json'), 'utf8')).distributions ?? null;
-        } catch {
-          publishedBlock = null;
-        }
-      }
+      const publishedBlock: Record<string, any> | null = previousMeta?.distributions ?? null;
       const fetched = await fetchDistributions(fund.ticker, config, publishedBlock);
       distributions = fetched.rows;
       distributionsFailed = fetched.failed;
@@ -2822,6 +2897,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       if (previous) {
         if (!performance.size) throw new Error('performance file unavailable - kept the published fund');
         if (!navRows.length && Number(previous.history || 0) > 0) throw new Error('NAV history unavailable - kept the published fund');
+        if (navProblem) throw new Error(`${navProblem} - kept the published fund`);
         if (distributionsFailed) throw new Error('distribution history unavailable - kept the published fund');
         if (!(holdings && holdings.rows.length) && Number(previous.holdings || 0) > 0) throw new Error('holdings unavailable - kept the published fund');
       }
@@ -2849,6 +2925,15 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       // the fund keeps its previous complete state and is counted as failed.
       const holdingsProblem = holdings ? holdingsGuard(artifacts.holdingsHeaders, artifacts.holdingsRows, numberOrNull(previous?.holdings), holdingsGuardRelax(fund.ticker, fund.dailyObjective)) : null;
       if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previous ? 'kept the published fund' : 'no data published for this fund yet'}`);
+      // A renamed page id or column empties a whole value set while every source still answers: never publish that over good data.
+      if (previous) {
+        const lost = lostValueSets(previous, artifacts.entry);
+        if (
+          artifacts.holdingsRows.length && !hasNumericWeight(artifacts.holdingsRows) &&
+          hasNumericWeight(await firstPublishedRows(directory, previousMeta?.holdings))
+        ) lost.push('holdings weights');
+        if (lost.length) throw new Error(`${lost.join(', ')} turned all-null (renamed page id or column?) - kept the published fund`);
+      }
 
       await mkdir(directory, { recursive: true });
       const holdingsWrite = await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
