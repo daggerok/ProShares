@@ -45,6 +45,7 @@ import {
   historyRangeDays,
   holdingWeight,
   holdingsGuard,
+  holdingsGuardRelax,
   holdingsHeaders,
   holdingsNetAssets,
   holdingsUrl,
@@ -526,6 +527,9 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
     expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
+    // relaxed per fund, never brand-wide: a plain equity fund and a fund not listed yet get every check
+    expect([holdingsGuardRelax('NOBL'), holdingsGuardRelax('NEWX'), holdingsGuardRelax('TQQQ'), holdingsGuardRelax('BITO'), holdingsGuardRelax('SQQQ')])
+      .toEqual([[], [], ['sum'], ['numeric'], ['numeric', 'sum']]);
   });
 
   test('NAV history keeps one ticker, converts shares to units; per-fund URLs and HISTORY_RANGE windows', () => {
@@ -764,9 +768,13 @@ const catalogRow = (ticker: string, kind: 'strategic' | 'geared'): string =>
   kind === 'strategic'
     ? STRATEGIC_ROW.replace(/NOBL/g, ticker).replace(/nobl/g, ticker.toLowerCase())
     : GEARED_ROW.replace(/TQQQ/g, ticker).replace(/tqqq/g, ticker.toLowerCase());
+// four weighted positions and the unweighted Net Other Assets line: a sheet that passes every guard check (no fund is relaxed by default)
 const holdingsCsvFor = (tickers: string[]): string =>
   [...HOLDINGS_CSV.split('\n').slice(0, 4), ...tickers.flatMap(t => [
     `"${t}","ProShares ${t}","BDX","2087807","BECTON DICKINSON AND CO",,,1079626,,195347528.4,`,
+    `"${t}","ProShares ${t}","MDT","BTN1Y11","MEDTRONIC PLC",,,2019274,,186035713.6,`,
+    `"${t}","ProShares ${t}","KO","2206657","COCA-COLA CO",,,2500000,,175000000,`,
+    `"${t}","ProShares ${t}","PG","2704407","PROCTER & GAMBLE CO",,,1100000,,170000000,`,
     `"${t}","ProShares ${t}","","","NET OTHER ASSETS (LIABILITIES)",,,27861053,,27861053.4,`,
   ])].join('\n');
 const navCsvFor = (ticker: string): string =>
@@ -919,6 +927,7 @@ describe('pipeline', () => {
     const full = [
       '"TQQQ","ProShares UltraPro QQQ","NVDA","2379504","NVIDIA CORP",,,5127506,,1139690759,',
       '"TQQQ","ProShares UltraPro QQQ","AAPL","2046251","APPLE INC",,,3000000,,900000000,',
+      '"TQQQ","ProShares UltraPro QQQ","MSFT","2588173","MICROSOFT CORP",,,2000000,,800000000,',
       '"TQQQ","ProShares UltraPro QQQ","","","NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL",,,366121,10853353165,,',
       '"TQQQ","ProShares UltraPro QQQ","","","NET OTHER ASSETS (LIABILITIES)",,,9707363674,,9707363673.76,',
     ];
@@ -931,11 +940,19 @@ describe('pipeline', () => {
       serve(full);
       await run();
       const published = snapshot(api);
-      expect(readIndex(api).funds.find(fund => fund.ticker === 'TQQQ')?.holdings).toBe(4);
+      expect(readIndex(api).funds.find(fund => fund.ticker === 'TQQQ')?.holdings).toBe(5);
       serve(full.slice(0, 1));
       await run({ tickers: ['TQQQ'] });
       expect(snapshot(api)).toEqual(published);
       expect(process.exitCode).toBe(1); // the only selected fund failed
+      // NOBL has no relax entry: a download whose market values are gone (no weights) is rejected as well
+      process.exitCode = 0;
+      const feed = globalThis.fetch;
+      const noValues = holdingsCsvFor(['NOBL']).replace(/,[\d.]+,$/gm, ',,');
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).endsWith('ByFund/NOBL-psdlyhld.csv') ? new Response(noValues) : feed(String(input), init))) as unknown as typeof fetch;
+      await run({ tickers: ['NOBL'] });
+      expect(snapshot(api)).toEqual(published);
+      expect(process.exitCode).toBe(1);
     });
   });
 
@@ -1171,6 +1188,23 @@ describe('network', () => {
       expect(feed.urls).toContain(holdingsUrl('NOBL'));
       expect(feed.urls.filter(url => url.includes('distributionsummary?fund=NOBL')).length).toBeGreaterThan(0);
       expect(feed.urls.some(url => /TQQQ|IGHG/.test(url) && FUND_STAGE.test(url))).toBe(false);
+    });
+  });
+
+  test('OFFLINE_SEED requests no holdings file and keeps the published holdings as they are', async () => {
+    await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run();
+      const holdingsOf = (): unknown[] => TICKERS.map(ticker => [
+        snapshot(path.join(api, 'funds', ticker, 'holdings')),
+        JSON.parse(readFileSync(path.join(api, 'funds', ticker, 'meta.json'), 'utf8')).holdings,
+        readIndex(api).funds.find(fund => fund.ticker === ticker)?.holdings,
+      ]);
+      const published = holdingsOf();
+      const feed = mockFeed();
+      await run({ offlineSeed: true });
+      expect(feed.urls.filter(url => url.includes('psdlyhld'))).toEqual([]);
+      expect(holdingsOf()).toEqual(published);
     });
   });
 
