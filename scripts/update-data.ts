@@ -462,7 +462,6 @@ export type UpdaterConfig = {
   maxRetries: number;
   tickers: string[];
   category: string;
-  offlineSeed: boolean;
   aumRange?: Range;
   terRange?: Range;
   dividendYieldRange?: Range;
@@ -632,9 +631,6 @@ Environment variables
                                       published refreshedAt is 90+ days old.
   STORE_RAW_DOWNLOADS    ""           Keep one raw sample of each source under
                                       api/proshares/raw (1/true/yes/on).
-  OFFLINE_SEED           ""           Replay the previously published catalog and
-                                      api/proshares/raw samples instead of
-                                      fetching (1/true/yes/on).
   VERBOSE                ""           Print per-fund retry and fallback notices
                                       (1/true/yes/on).
   USE_SYSTEM_CA          auto         TLS trust store: auto restarts the updater
@@ -670,7 +666,6 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
     maxRetries: parseNonNegativeInt(envValue(env, 'MAX_RETRIES'), 3),
     tickers: parseTickers(envValue(env, 'TICKERS', ['PROSHARES_TICKERS'])),
     category: envValue(env, 'CATEGORY'),
-    offlineSeed: parseBoolean(envValue(env, 'OFFLINE_SEED')),
     performanceRanges: parseRanges(env, 'PERFORMANCE'),
     totalReturnRanges: parseRanges(env, 'TOTAL_RETURN'),
   };
@@ -691,7 +686,7 @@ export function readConfig(env: Record<string, string | undefined> = Bun.env as 
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'CATEGORY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'HISTORY_RANGE', 'DISTRIBUTION_YEARS', 'MAX_RETRIES',
-  'STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE', 'USE_SYSTEM_CA',
+  'STORE_RAW_DOWNLOADS', 'VERBOSE', 'USE_SYSTEM_CA',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap(prefix => ['YTD', '1Y', '3Y', '5Y', '10Y'].map(period => `${prefix}_${period}`)),
 ] as const;
 export type ControlName = (typeof CONTROL_NAMES)[number];
@@ -738,7 +733,7 @@ export function resolveControls(
     if (!/^\d+$/.test(value.trim()) || !Number.isSafeInteger(Number(value)) || Number(value) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   if (result.REQUEST_SLEEP?.trim() && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
-  for (const key of ['STORE_RAW_DOWNLOADS', 'OFFLINE_SEED', 'VERBOSE']) {
+  for (const key of ['STORE_RAW_DOWNLOADS', 'VERBOSE']) {
     if (result[key]?.trim() && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key].trim())) throw new Error(`${key}: expected boolean`);
   }
   if (result.USE_SYSTEM_CA !== undefined) {
@@ -1278,34 +1273,42 @@ export function holdingsNetAssets(rows: HoldingsRow[]): number {
   return rows.reduce((sum, row) => sum + (numberOrNull(row.marketValue) ?? 0), 0);
 }
 
-/** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
+/** Funds whose holdings legitimately fail a holdingsGuard check (futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
 // Per fund, from the guard run over every published sheet of 2026-10-23 (173 funds: 23 pass every check, 150 fail one or both of
-// these two). Every other fund, and a new fund until it is listed here, gets every check; the column and row-count checks stay on for all.
+// these two). The sum check of a leveraged or inverse fund is relaxed by its catalog objective (isGearedObjective), not by this
+// table, so a newly launched geared fund is published without an entry here; every other fund gets every check unless it is
+// listed. The column and row-count checks stay on for all.
 const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {};
 // numeric: a few swap or futures lines next to cash lines that carry no weight by design (Net Other Assets, Treasury bills, the
-// money market fund), so fewer than 80% of the rows have one (autocallable, crypto, VIX and oil futures funds)
+// money market fund), so fewer than 80% of the rows have one (geared and inverse swap funds, autocallable, crypto, VIX and oil
+// futures funds)
 for (const tickers of [
-  'ACQQ ACRT ACSP BETE BETH BITO EETH KRYP OILK VIXM VIXY',
+  'ACQQ ACRT ACSP AGQ BETE BETH BITI BITO BOIL DOG DUG DXD EET EETH EEV EFO EFZ EPV EUM EUO EWV EZJ GLL KOLD KRYP',
+  'OILK PSQ PST QID QQDN REK RWM SCO SDD SDOW SDS SETH SH SJB SLON SPXU SQQQ SRS SRTY TBF TBT TBX UBT UCO UGL UJB',
+  'ULE UPV UST UXRP VIXM VIXY XPP YCL YCS ZSL',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric'];
-// sum: geared and inverse weights add up to -300..300, hedged funds (HDG, HYHG, IGHG) net their short futures out, funds in
-// liquidation hold mostly cash (ANEW, CLIX, OND, SUPL; open-items etfs Q1)
+// sum: hedged funds (HDG, HYHG, IGHG) net their short futures out, option-income funds, funds in liquidation hold mostly cash
+// (ANEW, CLIX, OND, SUPL; open-items etfs Q1)
 for (const tickers of [
-  'ANEW BIB BIS BITU BZQ CLIX COIA CRCA DDM DIG EFU EMTY EQQQ ETHD ETHT FB FXP HDG HYHG IGHG IQQQ ISPY ITWO LTL',
-  'MVV MYY MZZ NVDB OND PLTA QB QLD QQUP QQXL RB REW ROM RXD RXL SAA SBB SBIT SCC SDP SEF SIJ SKF SKHU SKYU SMDD',
-  'SMN SPCF SSG SSO SUPL SZK TQQQ TSLI TTT TWM UBR UCC UCOP UCYB UDOW UGE UMDD UPAL UPLT UPRO UPW URE URSP URTY',
-  'USD UWM UXI UYG UYM YXI',
+  'ANEW CLIX FB HDG HYHG IGHG IQQQ ISPY ITWO OND QB RB SUPL',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['sum'];
-// numeric and sum: geared and inverse funds whose few swap or futures lines sit next to unweighted cash lines, the money market
-// fund IQMM (only Treasury bills, no weights)
-// and funds in liquidation (CTEX, DAT, MAKX, TINT, VERS; open-items etfs Q1)
+// numeric and sum: VIX futures funds outside the geared catalog (SVXY, UVXY), RINF, the money market fund IQMM (only Treasury
+// bills, no weights) and funds in liquidation (CTEX, DAT, MAKX, TINT, VERS; open-items etfs Q1)
 for (const tickers of [
-  'AGQ BITI BOIL CTEX DAT DOG DUG DXD EET EEV EFO EFZ EPV EUM EUO EWV EZJ GLL IQMM KOLD MAKX PSQ PST QID QQDN REK',
-  'RINF RWM SCO SDD SDOW SDS SETH SH SJB SLON SPXU SQQQ SRS SRTY SVXY TBF TBT TBX TINT UBT UCO UGL UJB ULE UPV',
-  'UST UVXY UXRP VERS XPP YCL YCS ZSL',
+  'CTEX DAT IQMM MAKX RINF SVXY TINT UVXY VERS',
 ]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric', 'sum'];
-/** The checks the holdings guard skips for one fund. */
-export function holdingsGuardRelax(ticker: string): string[] {
-  return HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [];
+
+/** True for a leveraged or inverse daily objective from the geared finder page (+2x, -1x, -3x); +1x and blank are not geared. */
+export function isGearedObjective(dailyObjective: string): boolean {
+  const match = /^([+-]?)(\d+(?:\.\d+)?)x$/i.exec(cleanText(dailyObjective).replace(/\s+/g, ''));
+  if (!match) return false;
+  return match[1] === '-' || Number(match[2]) > 1;
+}
+
+/** The checks the holdings guard skips for one fund: its table entry plus 'sum' when the catalog marks it leveraged or inverse. */
+export function holdingsGuardRelax(ticker: string, dailyObjective = ''): string[] {
+  const relax = HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [];
+  return isGearedObjective(dailyObjective) && !relax.includes('sum') ? [...relax, 'sum'] : relax;
 }
 
 export function holdingsHeaders(rows: HoldingsRow[]): string[] {
@@ -1784,20 +1787,6 @@ export function pageName(page: number): string {
 }
 
 export type SheetWriteResult = { manifest: { pages: string[]; pageSize: number; totalRows: number }; written: number; removed: number };
-
-/**
- * OFFLINE_SEED reads no holdings from the network: the published `holdings` block of meta.json (with its pages) and its
- * holdings source label are kept as they are. Null when the fund has no published holdings block.
- */
-export async function publishedHoldingsBlock(fundDirectory: string): Promise<{ holdings: SheetWriteResult['manifest'] & Record<string, unknown>; source: string } | null> {
-  try {
-    const meta = JSON.parse(await readFile(path.join(fundDirectory, 'meta.json'), 'utf8')) as Record<string, any>;
-    if (!meta.holdings || !Array.isArray(meta.holdings.pages)) return null;
-    return { holdings: meta.holdings, source: String(meta.source?.holdingsSource ?? meta.holdings.source ?? '') };
-  } catch {
-    return null;
-  }
-}
 
 /**
  * Writes `holdings/001.json…` pages only when their bytes change and removes
@@ -2514,15 +2503,10 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   for (const [ticker, row] of Object.entries(await readMissingRows(new Set(Object.keys(previousFunds))))) previousFunds[ticker] = row;
 
   // --- catalog --------------------------------------------------------------
-  let catalog: CatalogFund[] = [];
-  let catalogReadAt = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
-  let catalogSource = 'previously published index';
-  if (!config.offlineSeed) {
-    const loaded = await loadCatalogs(config, stats);
-    catalog = loaded.funds;
-    catalogReadAt = loaded.catalogReadAt;
-    if (catalog.length) catalogSource = 'ProShares strategic + geared finder pages';
-  }
+  const loaded = await loadCatalogs(config, stats);
+  let catalog: CatalogFund[] = loaded.funds;
+  const catalogReadAt = loaded.catalogReadAt;
+  const catalogSource = catalog.length ? 'ProShares strategic + geared finder pages' : 'previously published index';
   if (!catalog.length) {
     const fallback = Object.values(previousFunds).map(fund => ({
       ticker: String(fund.ticker),
@@ -2554,48 +2538,46 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   let exchanges = new Map<string, string>();
   let exchangeSource = '—';
 
-  if (!config.offlineSeed) {
+  try {
+    const text = await fetchText(HOLDINGS_ALL_URL, browserHeaders(), config, 'holdings file', 'psdlyhld.csv');
+    holdingsFile = parseHoldingsFile(text);
+    console.log(`[ holdings ] ${holdingsFile.funds.size} funds as of ${holdingsFile.asOf} from ${HOLDINGS_ALL_URL}`);
+  } catch (error) {
+    console.error(`[ holdings ] holdings file failed — ${errorMessage(error)}`);
+    stats.failed++;
+  }
+  try {
+    const text = await fetchText(PERFORMANCE_URL, browserHeaders(), config, 'performance file', 'etf_performance.csv');
+    performance = parsePerformanceFile(text);
+    console.log(`[ perf     ] ${performance.size} rows from ${PERFORMANCE_URL}`);
+  } catch (error) {
+    console.error(`[ perf     ] performance file failed — ${errorMessage(error)}`);
+    stats.failed++;
+  }
+  try {
+    const text = await fetchText(SPLITS_URL, browserHeaders(), config, 'splits file', 'etf_splits.csv');
+    splits = parseSplitsFile(text);
+    console.log(`[ splits   ] ${splits.size} symbols from ${SPLITS_URL}`);
+  } catch (error) {
+    console.error(`[ splits   ] splits file failed — ${errorMessage(error)}`);
+    stats.failed++;
+  }
+  {
     try {
-      const text = await fetchText(HOLDINGS_ALL_URL, browserHeaders(), config, 'holdings file', 'psdlyhld.csv');
-      holdingsFile = parseHoldingsFile(text);
-      console.log(`[ holdings ] ${holdingsFile.funds.size} funds as of ${holdingsFile.asOf} from ${HOLDINGS_ALL_URL}`);
-    } catch (error) {
-      console.error(`[ holdings ] holdings file failed — ${errorMessage(error)}`);
-      stats.failed++;
-    }
-    try {
-      const text = await fetchText(PERFORMANCE_URL, browserHeaders(), config, 'performance file', 'etf_performance.csv');
-      performance = parsePerformanceFile(text);
-      console.log(`[ perf     ] ${performance.size} rows from ${PERFORMANCE_URL}`);
-    } catch (error) {
-      console.error(`[ perf     ] performance file failed — ${errorMessage(error)}`);
-      stats.failed++;
-    }
-    try {
-      const text = await fetchText(SPLITS_URL, browserHeaders(), config, 'splits file', 'etf_splits.csv');
-      splits = parseSplitsFile(text);
-      console.log(`[ splits   ] ${splits.size} symbols from ${SPLITS_URL}`);
-    } catch (error) {
-      console.error(`[ splits   ] splits file failed — ${errorMessage(error)}`);
-      stats.failed++;
-    }
-    {
-      try {
-        const [listed, other] = await Promise.all([
-          fetchText(NASDAQ_LISTED_URL, browserHeaders(), config, 'nasdaqlisted symbol directory', 'nasdaq-nasdaqlisted.txt').catch(() => ''),
-          fetchText(NASDAQ_OTHER_LISTED_URL, browserHeaders(), config, 'otherlisted symbol directory', 'nasdaq-otherlisted.txt').catch(() => ''),
-        ]);
-        const merged = new Map<string, string>();
-        for (const [ticker, exchange] of parseSymbolDirectory(other, EXCHANGE_CODES)) merged.set(ticker, exchange);
-        for (const [ticker, exchange] of parseSymbolDirectory(listed, { ...EXCHANGE_CODES, Q: 'Nasdaq' })) merged.set(ticker, exchange);
-        if (merged.size) {
-          exchanges = merged;
-          exchangeSource = 'Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)';
-          console.log(`[ exchange ] ${exchanges.size} symbols resolved`);
-        }
-      } catch (error) {
-        console.error(`[ exchange ] symbol directory failed — ${errorMessage(error)}`);
+      const [listed, other] = await Promise.all([
+        fetchText(NASDAQ_LISTED_URL, browserHeaders(), config, 'nasdaqlisted symbol directory', 'nasdaq-nasdaqlisted.txt').catch(() => ''),
+        fetchText(NASDAQ_OTHER_LISTED_URL, browserHeaders(), config, 'otherlisted symbol directory', 'nasdaq-otherlisted.txt').catch(() => ''),
+      ]);
+      const merged = new Map<string, string>();
+      for (const [ticker, exchange] of parseSymbolDirectory(other, EXCHANGE_CODES)) merged.set(ticker, exchange);
+      for (const [ticker, exchange] of parseSymbolDirectory(listed, { ...EXCHANGE_CODES, Q: 'Nasdaq' })) merged.set(ticker, exchange);
+      if (merged.size) {
+        exchanges = merged;
+        exchangeSource = 'Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)';
+        console.log(`[ exchange ] ${exchanges.size} symbols resolved`);
       }
+    } catch (error) {
+      console.error(`[ exchange ] symbol directory failed — ${errorMessage(error)}`);
     }
   }
 
@@ -2651,7 +2633,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
   candidates = config.maxFetches > 0 ? selectBatch(candidates, config.maxFetches, cursor) : stalestFirst(candidates, previousFunds);
   stats.skipped += beforeBatch - candidates.length;
   const newFunds = catalog.map(fund => fund.ticker).filter(ticker => !previousFunds[ticker]);
-  if (newFunds.length && !config.offlineSeed) {
+  if (newFunds.length) {
     const line = `NEW FUNDS: ${newFunds.join(', ')}`;
     console.log(`[ new      ] ${line}`);
     if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${line}\n`, 'utf8');
@@ -2669,48 +2651,7 @@ export async function main(config?: UpdaterConfig): Promise<void> {
     const directory = path.join(API_ROOT, 'funds', fund.ticker);
     const previous = previousFunds[fund.ticker];
     try {
-      let page: FundPageData | null = null;
-      if (!config.offlineSeed) {
-        const html = await fetchText(fund.fundPage, browserHeaders(), config, `${fund.ticker} fund page`, `fund-${fund.ticker}.html`);
-        page = parseFundPage(html);
-      }
-      if (!page) {
-        if (!previous) throw new Error('no previously published data and offline');
-        const previousMetaFile = path.join(directory, 'meta.json');
-        if (!existsSync(previousMetaFile)) throw new Error('no previously published meta.json');
-        const previousMeta = JSON.parse(await readFile(previousMetaFile, 'utf8')) as Record<string, any>;
-        page = {
-          cusip: String(previousMeta.identifiers?.cusip || ''),
-          expenseRatio: numberOrNull(previousMeta.expenseRatio?.value),
-          expenseRatioText: String(previousMeta.expenseRatio?.display || '—'),
-          expenseRatioFootnote: String(previousMeta.expenseRatio?.footnote || ''),
-          grossExpenseRatio: numberOrNull(previousMeta.expenseRatio?.gross?.value),
-          grossExpenseRatioText: String(previousMeta.expenseRatio?.gross?.display || '—'),
-          netExpenseRatio: numberOrNull(previousMeta.expenseRatio?.net?.value),
-          netExpenseRatioText: String(previousMeta.expenseRatio?.net?.display || '—'),
-          inceptionDate: String(previous?.inceptionDate || '—'),
-          netAssetsText: String(previousMeta.aum?.display || '—'),
-          netAssetsValue: numberOrNull(previousMeta.aum?.value),
-          nav: numberOrNull(previousMeta.nav?.value),
-          navText: String(previousMeta.nav?.display || '—'),
-          marketPrice: numberOrNull(previousMeta.marketPrice?.value),
-          marketPriceText: String(previousMeta.marketPrice?.display || '—'),
-          priceAsOf: String(previousMeta.nav?.asOfDate || '—'),
-          distributionFrequency: String(previousMeta.distributions?.frequency || ''),
-          twelveMonthYield: numberOrNull(previousMeta.yields?.dividendYield),
-          twelveMonthYieldText: String(previousMeta.yields?.dividendYieldText || '—'),
-          sec30DayYield: numberOrNull(previousMeta.yields?.secYield),
-          sec30DayYieldText: String(previousMeta.yields?.secYieldText || '—'),
-          distributionsAsOf: String(previousMeta.distributions?.asOfDate || '—'),
-          distributionsNote: String(previousMeta.distributions?.note || ''),
-          characteristics: (previousMeta.officialMetrics?.characteristics || {}) as Record<string, string>,
-          characteristicsAsOf: String(previousMeta.officialMetrics?.characteristicsAsOf || '—'),
-          indexStats: (previousMeta.officialMetrics?.index || {}) as Record<string, string>,
-          indexAsOf: String(previousMeta.officialMetrics?.indexAsOf || '—'),
-          exposures: [],
-          returns: { monthEnd: {}, quarterEnd: {} },
-        };
-      }
+      const page = parseFundPage(await fetchText(fund.fundPage, browserHeaders(), config, `${fund.ticker} fund page`, `fund-${fund.ticker}.html`));
 
       // Filter checks that need published fund-page values.
       if (config.terRange && !matchesRange(page.expenseRatio, config.terRange)) {
@@ -2752,13 +2693,11 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       // in 2011; the per-fund file is therefore preferred, the bulk slice is the
       // fallback.
       let navRows: NavRow[] = [];
-      if (!config.offlineSeed) {
-        try {
-          const text = await fetchText(navHistoryUrl(fund.ticker), browserHeaders(), config, `${fund.ticker} NAV history`, '');
-          navRows = parseNavHistoryFile(text, fund.ticker);
-        } catch (error) {
-          outputNote(`${fund.ticker}: per-fund NAV history failed (${errorMessage(error)}); using the bulk file`);
-        }
+      try {
+        const text = await fetchText(navHistoryUrl(fund.ticker), browserHeaders(), config, `${fund.ticker} NAV history`, '');
+        navRows = parseNavHistoryFile(text, fund.ticker);
+      } catch (error) {
+        outputNote(`${fund.ticker}: per-fund NAV history failed (${errorMessage(error)}); using the bulk file`);
       }
       if (!navRows.length) {
         const bulk = await loadNavHistoryAll();
@@ -2771,20 +2710,18 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       let distributions: DistributionRow[] = [];
       let distributionsFailed = false;
       let distributionsRefreshedAt: string | null = null;
-      if (!config.offlineSeed) {
-        let publishedBlock: Record<string, any> | null = null;
-        if (previous) {
-          try {
-            publishedBlock = JSON.parse(await readFile(path.join(directory, 'meta.json'), 'utf8')).distributions ?? null;
-          } catch {
-            publishedBlock = null;
-          }
+      let publishedBlock: Record<string, any> | null = null;
+      if (previous) {
+        try {
+          publishedBlock = JSON.parse(await readFile(path.join(directory, 'meta.json'), 'utf8')).distributions ?? null;
+        } catch {
+          publishedBlock = null;
         }
-        const fetched = await fetchDistributions(fund.ticker, config, publishedBlock);
-        distributions = fetched.rows;
-        distributionsFailed = fetched.failed;
-        distributionsRefreshedAt = fetched.refreshedAt;
       }
+      const fetched = await fetchDistributions(fund.ticker, config, publishedBlock);
+      distributions = fetched.rows;
+      distributionsFailed = fetched.failed;
+      distributionsRefreshedAt = fetched.refreshedAt;
 
       // DIVIDEND_YIELD filters the same official-or-indicated value the feed
       // writes. An unpublished 12-Month Yield can still have a real indicated
@@ -2806,30 +2743,27 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       let holdings = holdingsFile.funds.get(fund.ticker);
       let holdingsAsOf = holdingsFile.asOf;
       let holdingsSourceLabel = `official ProShares daily holdings file (psdlyhld.csv, as of ${holdingsFile.asOf || '—'})`;
-      // OFFLINE_SEED never downloads holdings (the published sheet is kept below)
-      if (!config.offlineSeed) {
-        try {
-          const text = await fetchText(
-            holdingsUrl(fund.ticker),
-            browserHeaders(),
-            config,
-            `${fund.ticker} holdings file`,
-            `${fund.ticker}-psdlyhld.csv`,
-          );
-          const perFund = parseHoldingsFile(text);
-          const bucket = perFund.funds.get(fund.ticker);
-          if (bucket && bucket.rows.length) {
-            holdings = bucket;
-            holdingsAsOf = perFund.asOf || holdingsAsOf;
-            holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
-          }
-        } catch (error) {
-          outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
+      try {
+        const text = await fetchText(
+          holdingsUrl(fund.ticker),
+          browserHeaders(),
+          config,
+          `${fund.ticker} holdings file`,
+          `${fund.ticker}-psdlyhld.csv`,
+        );
+        const perFund = parseHoldingsFile(text);
+        const bucket = perFund.funds.get(fund.ticker);
+        if (bucket && bucket.rows.length) {
+          holdings = bucket;
+          holdingsAsOf = perFund.asOf || holdingsAsOf;
+          holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
         }
+      } catch (error) {
+        outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
       }
       // Fund-level consistency: when a required source failed for an already published fund, keep its previous
       // complete state instead of publishing fresh columns next to stale ones.
-      if (!config.offlineSeed && previous) {
+      if (previous) {
         if (!performance.size) throw new Error('performance file unavailable - kept the published fund');
         if (!navRows.length && Number(previous.history || 0) > 0) throw new Error('NAV history unavailable - kept the published fund');
         if (distributionsFailed) throw new Error('distribution history unavailable - kept the published fund');
@@ -2857,20 +2791,11 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       });
       // A freshly downloaded holdings sheet (per-fund or all-funds file) that looks broken never replaces the published one:
       // the fund keeps its previous complete state and is counted as failed.
-      const holdingsProblem = holdings ? holdingsGuard(artifacts.holdingsHeaders, artifacts.holdingsRows, numberOrNull(previous?.holdings), holdingsGuardRelax(fund.ticker)) : null;
+      const holdingsProblem = holdings ? holdingsGuard(artifacts.holdingsHeaders, artifacts.holdingsRows, numberOrNull(previous?.holdings), holdingsGuardRelax(fund.ticker, fund.dailyObjective)) : null;
       if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previous ? 'kept the published fund' : 'no data published for this fund yet'}`);
-      // OFFLINE_SEED downloaded no holdings: the published sheet, its holdings block and its source label stay untouched.
-      const keptHoldings = config.offlineSeed && !holdings ? await publishedHoldingsBlock(directory) : null;
-      if (keptHoldings) {
-        artifacts.meta.holdings = keptHoldings.holdings;
-        artifacts.meta.source = { ...(artifacts.meta.source as Record<string, unknown>), holdingsSource: keptHoldings.source };
-        artifacts.entry.holdings = keptHoldings.holdings.totalRows;
-      }
 
       await mkdir(directory, { recursive: true });
-      const holdingsWrite: SheetWriteResult = keptHoldings
-        ? { manifest: { pages: keptHoldings.holdings.pages, pageSize: keptHoldings.holdings.pageSize, totalRows: keptHoldings.holdings.totalRows }, written: 0, removed: 0 }
-        : await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
+      const holdingsWrite = await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
       const historyWrite = await writeSheetPages(directory, 'history', fund.ticker, artifacts.historyHeaders, artifacts.historyRows, config.historyPageSize, false);
       const meta = {
         ...artifacts.meta,

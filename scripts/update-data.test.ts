@@ -255,7 +255,6 @@ const testConfig: UpdaterConfig = {
   maxRetries: 3,
   tickers: [],
   category: '',
-  offlineSeed: false,
   performanceRanges: {},
   totalReturnRanges: {},
 };
@@ -311,7 +310,7 @@ describe('controls', () => {
     expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
     expect(resolveControls({ TICKERS: 'NOBL' }, { TICKERS: '' }, {}).TICKERS).toBe('');
     expect(resolveControls({ TICKERS: 'NOBL' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
-    expect(resolveControls({ OFFLINE_SEED: true }, {}, {}, { OFFLINE_SEED: 'false' }).OFFLINE_SEED).toBe('false');
+    expect(resolveControls({ VERBOSE: true }, {}, {}, { VERBOSE: 'false' }).VERBOSE).toBe('false');
   });
 
   test('brand env aliases work and the canonical name wins', () => {
@@ -328,7 +327,7 @@ describe('controls', () => {
     expect(resolveControls(defaults, {}, {}, {})).toEqual(stringified);
     expect(resolveControls(defaults, {}, Object.fromEntries(CONTROL_NAMES.map(name => [name, ''])), {})).toEqual(stringified);
     const config = readConfig(resolveControls(defaults));
-    expect(config).toMatchObject({ tickers: [], maxFetches: 0, concurrency: 3, requestSleep: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', distributionYears: 10, maxRetries: 3, storeRawDownloads: false, offlineSeed: false });
+    expect(config).toMatchObject({ tickers: [], maxFetches: 0, concurrency: 3, requestSleep: 2, holdingsPageSize: 250, historyPageSize: 1000, historyRange: 'max', distributionYears: 10, maxRetries: 3, storeRawDownloads: false });
     expect(config.performanceRanges).toEqual({});
     expect(config.totalReturnRanges).toEqual({});
     expect(await runtimeControls({})).toEqual(resolveControls(defaults));
@@ -355,7 +354,7 @@ describe('controls', () => {
     const bad: [string, unknown][] = [
       ['CONCURRENCY', 0], ['CONCURRENCY', 'x'], ['MAX_RETRIES', 0], ['MAX_RETRIES', -1], ['MAX_FETCHES', 1.5], ['DISTRIBUTION_YEARS', -1],
       ['HOLDINGS_PAGE_SIZE', 0], ['HISTORY_PAGE_SIZE', '1e3'], ['REQUEST_SLEEP', '-1'], ['REQUEST_SLEEP', 'fast'],
-      ['VERBOSE', 'maybe'], ['STORE_RAW_DOWNLOADS', 'sometimes'], ['OFFLINE_SEED', '2'],
+      ['VERBOSE', 'maybe'], ['STORE_RAW_DOWNLOADS', 'sometimes'],
       ['HISTORY_RANGE', 'forever'], ['HISTORY_RANGE', '0y'], ['HISTORY_RANGE', '0d'],
       ['AUM', '1:2:3'], ['AUM', 'huge:'], ['AUM', 'large:micro'], ['TER', 'x'], ['TER', '2:1'], ['TER', '5'],
       ['DIVIDEND_YIELD', '5:1'], ['SEC_YIELD', '1'], ['PERFORMANCE_5Y', 'a:b'], ['TOTAL_RETURN_10Y', '9:1'],
@@ -528,8 +527,11 @@ describe('parsing', () => {
     expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
     expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
     // relaxed per fund, never brand-wide: a plain equity fund and a fund not listed yet get every check
-    expect([holdingsGuardRelax('NOBL'), holdingsGuardRelax('NEWX'), holdingsGuardRelax('TQQQ'), holdingsGuardRelax('BITO'), holdingsGuardRelax('SQQQ')])
-      .toEqual([[], [], ['sum'], ['numeric'], ['numeric', 'sum']]);
+    expect([holdingsGuardRelax('NOBL'), holdingsGuardRelax('NEWX'), holdingsGuardRelax('TQQQ'), holdingsGuardRelax('BITO'), holdingsGuardRelax('HDG')])
+      .toEqual([[], [], [], ['numeric'], ['sum']]);
+    // the catalog's daily objective relaxes the sum of a leveraged or inverse fund, listed or new; +1x and blank do not
+    expect([['TQQQ', '+3x'], ['NEWX', '+2x'], ['NEWX', '-1x'], ['SQQQ', '-3x'], ['NEWX', '+1x'], ['NOBL', '']].map(([t, o]) => holdingsGuardRelax(t, o)))
+      .toEqual([['sum'], ['sum'], ['sum'], ['numeric', 'sum'], [], []]);
   });
 
   test('NAV history keeps one ticker, converts shares to units; per-fund URLs and HISTORY_RANGE windows', () => {
@@ -956,6 +958,25 @@ describe('pipeline', () => {
     });
   });
 
+  test('a geared fund passes the weight sum by its catalog objective without a relax entry, a strategic fund with the same sheet does not', async () => {
+    // four equities (96%) plus a swap (199%): about 295% in all, normal for a +3x fund, broken for an unlevered one
+    const swapSheet = (ticker: string): string => `${holdingsCsvFor([ticker])}\n"${ticker}","ProShares ${ticker}","","","NASDAQ 100 INDEX SWAP BARCLAYS CAPITAL",,,366121,1500000000,,`;
+    mockFeed();
+    const feed = globalThis.fetch;
+    globalThis.fetch = (async (input: unknown, init?: RequestInit) => {
+      const file = /ByFund\/(TQQQ|NOBL)-psdlyhld\.csv$/.exec(String(input));
+      return file ? new Response(swapSheet(file[1])) : feed(String(input), init);
+    }) as unknown as typeof fetch;
+    await withRepo(async ({ api, run }) => {
+      await run({ tickers: ['TQQQ', 'NOBL'] });
+      const byTicker = Object.fromEntries(readIndex(api).funds.map(fund => [fund.ticker, fund]));
+      expect(byTicker.TQQQ.dailyObjective).toBe('+3x');
+      expect(byTicker.TQQQ.holdings).toBe(6);
+      expect(byTicker.NOBL).toBeUndefined(); // rejected by the sum check: nothing published
+      expect(existsSync(path.join(api, 'funds', 'NOBL', 'meta.json'))).toBe(false);
+    });
+  });
+
   test('distributions: only the current and previous year are requested once rows are published, every year otherwise, reruns write nothing', async () => {
     const year = new Date().getUTCFullYear();
     const perYear = parseDistributionSummary(DISTRIBUTIONS_JSON).length;
@@ -1188,23 +1209,6 @@ describe('network', () => {
       expect(feed.urls).toContain(holdingsUrl('NOBL'));
       expect(feed.urls.filter(url => url.includes('distributionsummary?fund=NOBL')).length).toBeGreaterThan(0);
       expect(feed.urls.some(url => /TQQQ|IGHG/.test(url) && FUND_STAGE.test(url))).toBe(false);
-    });
-  });
-
-  test('OFFLINE_SEED requests no holdings file and keeps the published holdings as they are', async () => {
-    await withRepo(async ({ api, run }) => {
-      mockFeed();
-      await run();
-      const holdingsOf = (): unknown[] => TICKERS.map(ticker => [
-        snapshot(path.join(api, 'funds', ticker, 'holdings')),
-        JSON.parse(readFileSync(path.join(api, 'funds', ticker, 'meta.json'), 'utf8')).holdings,
-        readIndex(api).funds.find(fund => fund.ticker === ticker)?.holdings,
-      ]);
-      const published = holdingsOf();
-      const feed = mockFeed();
-      await run({ offlineSeed: true });
-      expect(feed.urls.filter(url => url.includes('psdlyhld'))).toEqual([]);
-      expect(holdingsOf()).toEqual(published);
     });
   });
 
