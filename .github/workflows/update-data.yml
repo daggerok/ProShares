@@ -85,11 +85,6 @@ on:
         required: false
         default: ""
         type: string
-      offline_seed:
-        description: "Replay the previously published catalog and api/proshares/raw samples instead of fetching; blank inherits scripts/update-data.config.json"
-        required: false
-        default: ""
-        type: string
       advanced:
         description: 'JSON object of supported control overrides not exposed above (keys are UPPER_CASE control names, values are scalars); nonblank individual inputs win'
         required: false

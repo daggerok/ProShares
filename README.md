@@ -123,13 +123,12 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history per fund (the endpoint is year-scoped). A fund that already publishes distributions re-reads only the current and previous year and keeps the older published rows; a full walk of all years runs when nothing is published yet or `distributions.refreshedAt` in its `meta.json` is 90 to 120 days old (a per-ticker offset spreads the refreshes over several runs). |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx; integer of at least 1. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
-| `OFFLINE_SEED` | `false` | Replay the published catalog and `api/proshares/raw` samples instead of fetching. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Annualized-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `":"` | Cumulative-return `min:max` ranges per tenor (set through `advanced` in the workflow). |
 
-Workflow inputs: `tickers`, `max_fetches`, `request_sleep`, `concurrency`, `category`, `aum`, `ter`, `dividend_yield`, `sec_yield`, `holdings_page_size`, `history_page_size`, `history_range`, `distribution_years`, `max_retries`, `store_raw_downloads`, `offline_seed`, `verbose` and `advanced`. The remaining controls are reachable through `advanced`, for example `{"PERFORMANCE_1Y": "5:", "TOTAL_RETURN_YTD": ":20"}`.
+Workflow inputs: `tickers`, `max_fetches`, `request_sleep`, `concurrency`, `category`, `aum`, `ter`, `dividend_yield`, `sec_yield`, `holdings_page_size`, `history_page_size`, `history_range`, `distribution_years`, `max_retries`, `store_raw_downloads`, `verbose` and `advanced`. The remaining controls are reachable through `advanced`, for example `{"PERFORMANCE_1Y": "5:", "TOTAL_RETURN_YTD": ":20"}`.
 
 There is no `SKIP_YAHOO` switch or Yahoo fallback: this updater uses the official ProShares pages, data host and distributions API. `SKIP_YAHOO` is not a control: it is rejected as an unknown key in the config file, `advanced` JSON and workflow inputs, and an environment variable of that name is ignored.
 
