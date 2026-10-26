@@ -1279,9 +1279,34 @@ export function holdingsNetAssets(rows: HoldingsRow[]): number {
 }
 
 /** Funds whose holdings legitimately fail a holdingsGuard check (geared, futures, look-through, top-N lists): ticker, or '*' for every fund -> relaxed checks. */
-// Geared and inverse funds publish swaps and futures with a "—" weight and weight sums of -300..300 (about 150 of 173 funds fail those two
-// checks today, and a new geared fund would never be published otherwise); the Name/weight column and row-count checks stay on for every fund.
-const HOLDINGS_GUARD_RELAX: Record<string, string[]> = { '*': ['numeric', 'sum'] };
+// Per fund, from the guard run over every published sheet of 2026-10-23 (173 funds: 23 pass every check, 150 fail one or both of
+// these two). Every other fund, and a new fund until it is listed here, gets every check; the column and row-count checks stay on for all.
+const HOLDINGS_GUARD_RELAX: Record<string, string[]> = {};
+// numeric: a few swap or futures lines next to cash lines that carry no weight by design (Net Other Assets, Treasury bills, the
+// money market fund), so fewer than 80% of the rows have one (autocallable, crypto, VIX and oil futures funds)
+for (const tickers of [
+  'ACQQ ACRT ACSP BETE BETH BITO EETH KRYP OILK VIXM VIXY',
+]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric'];
+// sum: geared and inverse weights add up to -300..300, hedged funds (HDG, HYHG, IGHG) net their short futures out, funds in
+// liquidation hold mostly cash (ANEW, CLIX, OND, SUPL; open-items etfs Q1)
+for (const tickers of [
+  'ANEW BIB BIS BITU BZQ CLIX COIA CRCA DDM DIG EFU EMTY EQQQ ETHD ETHT FB FXP HDG HYHG IGHG IQQQ ISPY ITWO LTL',
+  'MVV MYY MZZ NVDB OND PLTA QB QLD QQUP QQXL RB REW ROM RXD RXL SAA SBB SBIT SCC SDP SEF SIJ SKF SKHU SKYU SMDD',
+  'SMN SPCF SSG SSO SUPL SZK TQQQ TSLI TTT TWM UBR UCC UCOP UCYB UDOW UGE UMDD UPAL UPLT UPRO UPW URE URSP URTY',
+  'USD UWM UXI UYG UYM YXI',
+]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['sum'];
+// numeric and sum: geared and inverse funds whose few swap or futures lines sit next to unweighted cash lines, the money market
+// fund IQMM (only Treasury bills, no weights)
+// and funds in liquidation (CTEX, DAT, MAKX, TINT, VERS; open-items etfs Q1)
+for (const tickers of [
+  'AGQ BITI BOIL CTEX DAT DOG DUG DXD EET EEV EFO EFZ EPV EUM EUO EWV EZJ GLL IQMM KOLD MAKX PSQ PST QID QQDN REK',
+  'RINF RWM SCO SDD SDOW SDS SETH SH SJB SLON SPXU SQQQ SRS SRTY SVXY TBF TBT TBX TINT UBT UCO UGL UJB ULE UPV',
+  'UST UVXY UXRP VERS XPP YCL YCS ZSL',
+]) for (const ticker of tickers.split(' ')) HOLDINGS_GUARD_RELAX[ticker] = ['numeric', 'sum'];
+/** The checks the holdings guard skips for one fund. */
+export function holdingsGuardRelax(ticker: string): string[] {
+  return HOLDINGS_GUARD_RELAX[ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [];
+}
 
 export function holdingsHeaders(rows: HoldingsRow[]): string[] {
   const headers = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held'];
@@ -1759,6 +1784,20 @@ export function pageName(page: number): string {
 }
 
 export type SheetWriteResult = { manifest: { pages: string[]; pageSize: number; totalRows: number }; written: number; removed: number };
+
+/**
+ * OFFLINE_SEED reads no holdings from the network: the published `holdings` block of meta.json (with its pages) and its
+ * holdings source label are kept as they are. Null when the fund has no published holdings block.
+ */
+export async function publishedHoldingsBlock(fundDirectory: string): Promise<{ holdings: SheetWriteResult['manifest'] & Record<string, unknown>; source: string } | null> {
+  try {
+    const meta = JSON.parse(await readFile(path.join(fundDirectory, 'meta.json'), 'utf8')) as Record<string, any>;
+    if (!meta.holdings || !Array.isArray(meta.holdings.pages)) return null;
+    return { holdings: meta.holdings, source: String(meta.source?.holdingsSource ?? meta.holdings.source ?? '') };
+  } catch {
+    return null;
+  }
+}
 
 /**
  * Writes `holdings/001.json…` pages only when their bytes change and removes
@@ -2767,23 +2806,26 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       let holdings = holdingsFile.funds.get(fund.ticker);
       let holdingsAsOf = holdingsFile.asOf;
       let holdingsSourceLabel = `official ProShares daily holdings file (psdlyhld.csv, as of ${holdingsFile.asOf || '—'})`;
-      try {
-        const text = await fetchText(
-          holdingsUrl(fund.ticker),
-          browserHeaders(),
-          config,
-          `${fund.ticker} holdings file`,
-          `${fund.ticker}-psdlyhld.csv`,
-        );
-        const perFund = parseHoldingsFile(text);
-        const bucket = perFund.funds.get(fund.ticker);
-        if (bucket && bucket.rows.length) {
-          holdings = bucket;
-          holdingsAsOf = perFund.asOf || holdingsAsOf;
-          holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
+      // OFFLINE_SEED never downloads holdings (the published sheet is kept below)
+      if (!config.offlineSeed) {
+        try {
+          const text = await fetchText(
+            holdingsUrl(fund.ticker),
+            browserHeaders(),
+            config,
+            `${fund.ticker} holdings file`,
+            `${fund.ticker}-psdlyhld.csv`,
+          );
+          const perFund = parseHoldingsFile(text);
+          const bucket = perFund.funds.get(fund.ticker);
+          if (bucket && bucket.rows.length) {
+            holdings = bucket;
+            holdingsAsOf = perFund.asOf || holdingsAsOf;
+            holdingsSourceLabel = `official ProShares daily holdings download (ByFund/${fund.ticker}-psdlyhld.csv, as of ${perFund.asOf || '—'})`;
+          }
+        } catch (error) {
+          outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
         }
-      } catch (error) {
-        outputNote(`${fund.ticker}: per-fund holdings download failed — ${errorMessage(error)} · using the all-funds file`);
       }
       // Fund-level consistency: when a required source failed for an already published fund, keep its previous
       // complete state instead of publishing fresh columns next to stale ones.
@@ -2815,11 +2857,20 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       });
       // A freshly downloaded holdings sheet (per-fund or all-funds file) that looks broken never replaces the published one:
       // the fund keeps its previous complete state and is counted as failed.
-      const holdingsProblem = holdings ? holdingsGuard(artifacts.holdingsHeaders, artifacts.holdingsRows, numberOrNull(previous?.holdings), HOLDINGS_GUARD_RELAX[fund.ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? []) : null;
+      const holdingsProblem = holdings ? holdingsGuard(artifacts.holdingsHeaders, artifacts.holdingsRows, numberOrNull(previous?.holdings), holdingsGuardRelax(fund.ticker)) : null;
       if (holdingsProblem) throw new Error(`holdings guard: ${holdingsProblem}; ${previous ? 'kept the published fund' : 'no data published for this fund yet'}`);
+      // OFFLINE_SEED downloaded no holdings: the published sheet, its holdings block and its source label stay untouched.
+      const keptHoldings = config.offlineSeed && !holdings ? await publishedHoldingsBlock(directory) : null;
+      if (keptHoldings) {
+        artifacts.meta.holdings = keptHoldings.holdings;
+        artifacts.meta.source = { ...(artifacts.meta.source as Record<string, unknown>), holdingsSource: keptHoldings.source };
+        artifacts.entry.holdings = keptHoldings.holdings.totalRows;
+      }
 
       await mkdir(directory, { recursive: true });
-      const holdingsWrite = await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
+      const holdingsWrite: SheetWriteResult = keptHoldings
+        ? { manifest: { pages: keptHoldings.holdings.pages, pageSize: keptHoldings.holdings.pageSize, totalRows: keptHoldings.holdings.totalRows }, written: 0, removed: 0 }
+        : await writeSheetPages(directory, 'holdings', fund.ticker, artifacts.holdingsHeaders, artifacts.holdingsRows, config.holdingsPageSize, false);
       const historyWrite = await writeSheetPages(directory, 'history', fund.ticker, artifacts.historyHeaders, artifacts.historyRows, config.historyPageSize, false);
       const meta = {
         ...artifacts.meta,
