@@ -565,6 +565,29 @@ describe('parsing 2', () => {
     expect(applyHistoryRange(old, '1y').map(row => row.nav)).toEqual([2]); // the oldest rows go
     expect(applyHistoryRange(old, 'max')).toHaveLength(2);
   });
+
+  test('Q36: the per-fund exception lines publish -, correct tickers of the same fund and the same names in other funds stay', () => {
+    const us = parseSymbolNames(['ACT Symbol|Security Name|Exchange', 'SAP|SAP SE ADS|N', 'ASML|ASML Holding N.V. - New York Registry Shares|Q', 'APA|APA Corporation - Common Stock|Q',
+      'AIA|iShares Asia 50 ETF|Q', 'BHP|BHP Group Limited American Depositary Shares (Each representing two Ordinary Shares)|N', 'RIO|Rio Tinto Plc Common Stock|N',
+      'AMT|American Tower Corporation (REIT) Common Stock|N', 'SGML|Sigma Lithium Corporation - common shares|Q'].join('\n'));
+    const row = (ticker: string, identifier: string, name: string) => ({ name, ticker, identifier, coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '1' });
+    const known: Array<[string, ReturnType<typeof row>]> = [
+      ['EFAD', row('SAP', '4846288', 'SAP SE')], ['EFAD', row('ASML', 'B929F46', 'ASML HOLDING NV')], ['EFAD', row('APA', '6247306', 'APA GROUP')],
+      ['EUDV', row('SAP', '4846288', 'SAP SE')], ['EUDV', row('ASML', 'B929F46', 'ASML HOLDING NV')], ['TINY', row('ASML', 'B929F46', 'ASML HOLDING NV')],
+      ['ION', row('BHP', '6144690', 'BHP GROUP LTD')], ['ION', row('RIO', '0718875', 'RIO TINTO PLC')],
+      ['TOLZ', row('APA', '6247306', 'APA GROUP')], ['TOLZ', row('AIA', 'BKX3XG2', 'AUCKLAND INTL AIRPORT LTD')],
+    ];
+    expect(known.map(([fund, line]) => holdingTicker(line, us, fund))).toEqual(known.map(() => '-'));
+    expect(known.map(([fund, line]) => holdingTicker(line, null, fund))).toEqual(known.map(() => '-')); // also when the directory failed
+    // the same fund keeps its correct U.S. tickers
+    expect([holdingTicker(row('AMT', 'B7FBFL2', 'AMERICAN TOWER CORP'), us, 'TOLZ'), holdingTicker(row('SGML', 'BNM4ZD8', 'SIGMA LITHIUM CORP'), us, 'ION')]).toEqual(['AMT', 'SGML']);
+    // other funds, and no fund at all, are unaffected: the U.S. lines and the same names elsewhere keep their tickers
+    expect([
+      holdingTicker(row('ASML', 'B908F01', 'ASML HOLDING NV-NY REG SHS'), us, 'QQQA'), holdingTicker(row('SAP', '2775135', 'SAP SE-SPONSORED ADR'), us, 'SKYU'),
+      holdingTicker(row('SAP', '4846288', 'SAP SE'), us, 'NOBL'), holdingTicker(row('APA', '6247306', 'APA GROUP'), us),
+    ]).toEqual(['ASML', 'SAP', 'SAP', 'APA']);
+    expect(holdingsRowsForCsv([row('SAP', '4846288', 'SAP SE'), row('ASML', 'B929F46', 'ASML HOLDING NV')], ['Name', 'Ticker'], us, 'EUDV').map(r => r.Ticker)).toEqual(['-', '-']);
+  });
 });
 
 describe('parsing 3', () => {

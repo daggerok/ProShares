@@ -1372,27 +1372,58 @@ export function sameCompanyName(holding: string, listed: string, ticker: string)
 }
 
 /**
+ * Known wrong matches of the name check (Q36): fund ticker -> holding names (as the ProShares file spells them) that publish '-'.
+ * The file has no ISIN and no currency, so a local line whose code and name also fit a U.S. listing keeps that U.S. ticker:
+ * either the ADR or New York share of the same company (a different security) or another company with the same code.
+ * A strict name check would drop 138 correct tickers, so these lines are listed here instead. Evidence: the SEDOL of the
+ * line and its price in the file (market value / shares) against the U.S. listing, file of 10/23/2026.
+ */
+export const TICKER_EXCEPTIONS: Readonly<Record<string, ReadonlyArray<string>>> = {
+  EFAD: [
+    'SAP SE', // Xetra line (SEDOL 4846288, $240.21 in the file); U.S. SAP is the ADS ($238.14 close), held by SKYU under SEDOL 2775135
+    'ASML HOLDING NV', // Amsterdam line (SEDOL B929F46, $1574.52 in the file); U.S. ASML is the NY registry share ($1571.80 close, SEDOL B908F01 in QB and QQQA)
+    'APA GROUP', // Australian gas pipelines (ASX APA, SEDOL 6247306, $8.10); U.S. APA is APA Corporation ($51.90)
+  ],
+  EUDV: [
+    'SAP SE', // Xetra line, as in EFAD
+    'ASML HOLDING NV', // Amsterdam line, as in EFAD
+  ],
+  ION: [
+    'BHP GROUP LTD', // ASX line (SEDOL 6144690, $38.74); U.S. BHP is the ADS of two ordinary shares ($77.85)
+    'RIO TINTO PLC', // London line (SEDOL 0718875 = ISIN GB0007188757, $83.32 in the file); U.S. RIO is the ADS ($83.42 close)
+  ],
+  TINY: [
+    'ASML HOLDING NV', // Amsterdam line, as in EFAD
+  ],
+  TOLZ: [
+    'APA GROUP', // Australian gas pipelines, as in EFAD
+    'AUCKLAND INTL AIRPORT LTD', // NZX AIA (SEDOL BKX3XG2, $4.78); U.S. AIA is the iShares Asia 50 ETF ($127.69), its initials matched
+  ],
+};
+
+/**
  * The published ticker of a holdings row (PS-1). The ProShares file gives the local exchange code with no exchange (EFAD
  * lists TEL for Telenor, NEM for Nemetschek, which are TE Connectivity and Newmont in U.S. funds), so a bare ticker is kept
  * only for a U.S. listing: a ticker the Nasdaq Trader symbol directory lists, held under a North American SEDOL (starts with 2)
- * or under a name of the same company. Swaps, futures, currency contracts and debt rows get '-'. Without the directory (it
- * failed this run) the file's ticker is kept as before.
+ * or under a name of the same company. Swaps, futures, currency contracts and debt rows get '-', and so do the lines of
+ * `TICKER_EXCEPTIONS` for the fund. Without the directory (it failed this run) the file's ticker is kept as before.
  */
-export function holdingTicker(row: HoldingsRow, usListings: ReadonlyMap<string, string> | null): string {
+export function holdingTicker(row: HoldingsRow, usListings: ReadonlyMap<string, string> | null, fund = ''): string {
   const ticker = cleanText(row.ticker);
   if (!ticker || row.exposure !== '' || row.coupon !== '' || row.maturity !== '') return '-';
+  if ((TICKER_EXCEPTIONS[fund.toUpperCase()] ?? []).indexOf(cleanText(row.name).toUpperCase()) >= 0) return '-';
   if (!usListings) return ticker;
   const listed = usListings.get(ticker.toUpperCase().replace(/[/ ]/g, '.'));
   if (listed === undefined) return '-';
   return /^2[0-9A-Z]{6}$/.test(cleanText(row.identifier)) || sameCompanyName(row.name, listed, ticker) ? ticker : '-';
 }
 
-export function holdingsRowsForCsv(rows: HoldingsRow[], headers: string[], usListings: ReadonlyMap<string, string> | null = null): Record<string, string>[] {
+export function holdingsRowsForCsv(rows: HoldingsRow[], headers: string[], usListings: ReadonlyMap<string, string> | null = null, fund = ''): Record<string, string>[] {
   const totalNetAssets = holdingsNetAssets(rows);
   return rows.map(row => {
     const value: Record<string, string> = {
       Name: row.name || '—',
-      Ticker: holdingTicker(row, usListings),
+      Ticker: holdingTicker(row, usListings, fund),
       Identifier: row.identifier || '—',
       Weight: holdingWeight(row, totalNetAssets),
       'Market Value': row.marketValue || '—',
@@ -2158,7 +2189,7 @@ export function buildFeed(inputs: {
     ? 'not published on this fund page (data limitation)'
     : 'official ProShares SEC 30-Day Yield (page distributions block)';
   const holdingsCsvHeaders = holdingsHeaders(holdingsRows);
-  const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders, inputs.usListings ?? null);
+  const holdingsCsvRows = holdingsRowsForCsv(holdingsRows, holdingsCsvHeaders, inputs.usListings ?? null, fund.ticker);
 
   const historyHeaders = ['Date', 'NAV', 'Shares Outstanding', 'Total Net Assets'];
   const historyRows = orderedNavRows.map(row => ({
