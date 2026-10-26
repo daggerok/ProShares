@@ -45,8 +45,11 @@ import {
   historyRangeDays,
   holdingWeight,
   holdingsGuard,
+  holdingsWeightCount,
+  holdingTicker,
   holdingsGuardRelax,
   holdingsHeaders,
+  holdingsRowsForCsv,
   holdingsNetAssets,
   holdingsUrl,
   indicatedYield,
@@ -80,6 +83,7 @@ import {
   stalestFirst,
   parseSplitsFile,
   parseSymbolDirectory,
+  parseSymbolNames,
   paymentsPerYear,
   performanceAsOfIso,
   readConfig,
@@ -430,6 +434,12 @@ describe('parsing', () => {
     expect(formatUsDate('2026-06-24T00:00:00')).toBe('Jun 24 2026');
     expect(formatUsDate('')).toBe('—');
     expect(toIsoDate('9/18/2026')).toBe('2026-09-18');
+    // calendar text, never through the local time zone
+    for (const tz of ['Asia/Tokyo', 'America/Los_Angeles', 'UTC']) {
+      process.env.TZ = tz;
+      expect(['Sep 18 2026', 'September 18, 2026', '09/18/26', '2026-09-18'].map(toIsoDate)).toEqual(Array(4).fill('2026-09-18'));
+      expect(toIsoDate('not a date')).toBe('not a date');
+    }
     expect(['Jun 24 2026', 'Mar 25 2026', 'Dec 24 2025'].sort(compareDisplayDates)).toEqual(['Dec 24 2025', 'Mar 25 2026', 'Jun 24 2026']);
     expect(parseCsvRecords('﻿a,b\r\n"1,25",2\r\n"say ""hi""",3\r\n')).toEqual([['a', 'b'], ['1,25', '2'], ['say "hi"', '3']]);
     const index = headerIndex(['Fund Ticker', 'Shares/Contracts', 'Exposure Value (Notional + G/L)']);
@@ -598,6 +608,16 @@ describe('parsing 3', () => {
     ].join('\r\n');
     const map = parseSymbolDirectory(text, { N: 'NYSE', P: 'NYSE Arca' });
     expect([map.get('NOBL'), map.get('A'), map.size]).toEqual(['NYSE Arca', 'NYSE', 2]);
+    // PS-1: a bare local ticker is kept only for a U.S. listing of the same company; swaps, futures and debt rows get '-'
+    const us = parseSymbolNames(['ACT Symbol|Security Name|Exchange', 'TEL|TE Connectivity plc Ordinary Shares|N', 'NEM|Newmont Corporation|N', 'JBHT|J.B. Hunt Transport Services, Inc. - Common Stock|Q', 'GE|GE Aerospace Common Stock|N', 'BRK.B|Berkshire Hathaway Inc.|N', 'File Creation Time: 0918202600:00||'].join('\n'));
+    const row = (ticker: string, identifier: string, name: string, extra: Record<string, string> = {}) => ({ name, ticker, identifier, coupon: '', maturity: '', shares: '1', exposure: '', marketValue: '1', ...extra });
+    expect([
+      holdingTicker(row('TEL', '4732495', 'TELENOR ASA'), us), holdingTicker(row('NEM', '5633962', 'NEMETSCHEK SE'), us), holdingTicker(row('4768', '6267058', 'OTSUKA CORP'), us),
+      holdingTicker(row('JBHT', 'BYX9P26', 'HUNT (JB) TRANSPRT SVCS INC'), us), holdingTicker(row('GE', 'BL59CR9', 'GENERAL ELECTRIC'), us), holdingTicker(row('NEM', '2636607', 'NEWMONT CORP'), us),
+      holdingTicker(row('BRK/B', '2073390', 'BERKSHIRE HATHAWAY INC-CL B'), us), holdingTicker(row('IQV', 'BQMJ1N6', 'IQVIA INC', { coupon: '5', maturity: '2030-01-15' }), us),
+      holdingTicker(row('TEL', '4732495', 'TELENOR ASA'), null),
+    ]).toEqual(['-', '-', '-', 'JBHT', 'GE', 'NEM', 'BRK/B', '-', 'TEL']);
+    expect(holdingsRowsForCsv([row('TEL', '4732495', 'TELENOR ASA'), row('NEM', '2636607', 'NEWMONT CORP')], ['Name', 'Ticker'], us).map(r => r.Ticker)).toEqual(['-', 'NEM']);
   });
 
   test('published distribution rows read back to the same CSV rows (the merge keeps old years unchanged)', () => {
@@ -731,6 +751,8 @@ describe('metrics', () => {
     for (const key of ['tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn']) expect(metrics[key], key).toBeNull();
     expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2023' }, 3)).toBe(true);
     expect(tenorAvailable({ ...young, inceptionDate: 'Aug 01 2024' }, 3)).toBe(false);
+    // calendar anniversary (inclusive), no 5-day slack: 3 years on Aug 31 2026 only from an Aug 31 2023 inception
+    expect([tenorAvailable({ ...young, inceptionDate: 'Aug 31 2023' }, 3), tenorAvailable({ ...young, inceptionDate: 'Sep 03 2023' }, 3)]).toEqual([true, false]);
     expect(tenorAvailable(undefined, 1)).toBe(false);
   });
 });
@@ -1123,11 +1145,18 @@ describe('pipeline 2', () => {
     expect([distributionRefreshDue('IGHG', ago(110), now), distributionRefreshDue('NOBL', ago(110), now)]).toEqual([true, false]);
   });
 
-  test('unknown tickers fail before any fund is written', async () => {
-    mockFeed();
+  test('TICKERS outside the live catalog and the published feed stops the run before any other request; a stale catalog-only row is dropped (Q27)', async () => {
+    const feed = mockFeed();
     await withRepo(async ({ api, run }) => {
-      await expect(run({ tickers: ['ZZZZ'] })).rejects.toThrow(/absent from the catalog/);
+      await expect(run({ tickers: ['ZZZZ'] })).rejects.toThrow('TICKERS: ZZZZ not in the ProShares catalog or published feed; nothing was fetched or written');
       expect(readdirSync(path.join(api, 'funds'))).toEqual([]);
+      expect(feed.urls).toEqual([STRATEGIC_FINDER_URL, GEARED_FINDER_URL]);
+      await run({ tickers: ['NOBL'] });
+      const index = readIndex(api);
+      writeFileSync(path.join(api, 'index.json'), JSON.stringify({ ...index, funds: [...index.funds, { ...index.funds[0], ticker: 'ZZZZ', dataFile: null }] }));
+      await expect(run({ tickers: ['ZZZZ'] })).rejects.toThrow('TICKERS: ZZZZ not in');
+      await run({ tickers: ['NOBL'] });
+      expect(tickersIn(api)).not.toContain('ZZZZ');
     });
   });
 });
@@ -1337,6 +1366,51 @@ describe('pipeline 4', () => {
       await run({ tickers: ['NOBL'] });
       expect(readIndex(api).funds.find(fund => fund.ticker === 'NOBL')).toEqual(fresh);
       expect(fresh).toMatchObject({ dataFile: './funds/NOBL/meta.json', asOfDate: 'Sep 18 2026' });
+    });
+  });
+});
+
+describe('pipeline 5', () => {
+  test('a relaxed guard still keeps numeric published weights from a sheet without any weight (Q24)', async () => {
+    mockFeed();
+    await withRepo(async ({ mod, api, run }) => {
+      await run({ tickers: ['NOBL'] });
+      const published = snapshot(api);
+      const feed = globalThis.fetch;
+      const noValues = holdingsCsvFor(['NOBL']).replace(/,[\d.]+,$/gm, ',,');
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (String(input).endsWith('ByFund/NOBL-psdlyhld.csv') ? new Response(noValues) : feed(String(input), init))) as unknown as typeof fetch;
+      mod.HOLDINGS_GUARD_RELAX.NOBL = ['numeric', 'sum'];
+      await run({ tickers: ['NOBL'] });
+      expect(snapshot(api)).toEqual(published);
+      expect(process.exitCode).toBe(1);
+      expect(holdingsWeightCount(['Name', 'Weight'], [{ Name: 'A', Weight: '—' }, { Name: 'B', Weight: '2.5' }])).toBe(1);
+    });
+  });
+
+  test('NEW FUNDS announces a fund on its first successful publish, a failed new fund as not published yet (Q28)', async () => {
+    const silent = (url: string): boolean => url === PERFORMANCE_URL || url === HOLDINGS_ALL_URL || /ByFund\/NOBL-|fund=NOBL&/.test(url);
+    await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run({ tickers: ['TQQQ'] });
+      const index = readIndex(api);
+      writeFileSync(path.join(api, 'index.json'), JSON.stringify({ ...index, funds: [...index.funds.filter(row => row.ticker === 'TQQQ'), { ...index.funds.find(row => row.ticker === 'TQQQ'), ticker: 'IGHG', dataFile: null }] }));
+      const summary = path.join(path.dirname(api), 'summary.md');
+      process.env.GITHUB_STEP_SUMMARY = summary;
+      const news = async (tickers: string[]): Promise<string[]> => {
+        const lines: string[] = [];
+        console.log = (line?: unknown) => { if (/^NEW FUNDS/.test(String(line))) lines.push(String(line)); };
+        await run({ tickers });
+        quiet();
+        return lines;
+      };
+      mockFeed({ fail: silent });
+      const feed = globalThis.fetch;
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (/strategic\/nobl$/.test(String(input)) ? new Response('<html><body>Access denied</body></html>') : feed(String(input), init))) as unknown as typeof fetch;
+      expect(await news(['IGHG', 'NOBL'])).toEqual(['NEW FUNDS: IGHG', 'NEW FUNDS (not published yet): NOBL']);
+      expect(readFileSync(summary, 'utf8')).toContain('### NEW FUNDS\n\nNEW FUNDS: IGHG\nNEW FUNDS (not published yet): NOBL\n');
+      expect(await news(['IGHG', 'NOBL'])).toEqual([]);
+      mockFeed();
+      expect(await news(['NOBL'])).toEqual(['NEW FUNDS: NOBL']);
     });
   });
 });
