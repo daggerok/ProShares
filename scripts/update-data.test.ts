@@ -1310,6 +1310,35 @@ describe('pipeline 4', () => {
       }
     });
   });
+
+  test('a new fund that no source answered is failed with a catalog-only row; that row is never read back as published data', async () => {
+    // NOBL is new: its page is a block page answered with HTTP 200 and no official file carries it
+    const silent = (url: string): boolean => url === PERFORMANCE_URL || url === HOLDINGS_ALL_URL || /ByFund\/NOBL-|fund=NOBL&/.test(url);
+    const fresh = await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run({ tickers: ['NOBL'] });
+      return readIndex(api).funds.find(fund => fund.ticker === 'NOBL');
+    });
+    await withRepo(async ({ api, run }) => {
+      mockFeed();
+      await run({ tickers: ['TQQQ'] });
+      mockFeed({ fail: silent });
+      const feed = globalThis.fetch;
+      globalThis.fetch = (async (input: unknown, init?: RequestInit) => (/strategic\/nobl$/.test(String(input)) ? new Response('<html><body>Access denied</body></html>') : feed(String(input), init))) as unknown as typeof fetch;
+      await run({ tickers: ['NOBL'] });
+      expect(process.exitCode).toBe(1); // the only selected fund failed, never reported updated
+      process.exitCode = 0;
+      const byTicker = Object.fromEntries(readIndex(api).funds.map(fund => [fund.ticker, fund]));
+      expect(byTicker.NOBL).toMatchObject({ dataFile: null, holdings: 0, history: 0, asOfDate: '—' });
+      expect(Object.keys(byTicker.NOBL.metrics)).toEqual(Object.keys(byTicker.TQQQ.metrics));
+      expect(existsSync(path.join(api, 'funds', 'NOBL'))).toBe(false);
+      // the first good refresh publishes the same row as a fund that never had a catalog-only row
+      mockFeed();
+      await run({ tickers: ['NOBL'] });
+      expect(readIndex(api).funds.find(fund => fund.ticker === 'NOBL')).toEqual(fresh);
+      expect(fresh).toMatchObject({ dataFile: './funds/NOBL/meta.json', asOfDate: 'Sep 18 2026' });
+    });
+  });
 });
 
 // ---------------------------------------------------------------------------

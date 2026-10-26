@@ -2901,6 +2901,12 @@ export async function main(config?: UpdaterConfig): Promise<void> {
         if (distributionsFailed) throw new Error('distribution history unavailable - kept the published fund');
         if (!(holdings && holdings.rows.length) && Number(previous.holdings || 0) > 0) throw new Error('holdings unavailable - kept the published fund');
       }
+      // A new fund that no source answered (a block page answered with HTTP 200 and every file without the fund) is never
+      // published as an empty meta.json: it fails and keeps a catalog-only index row.
+      const pageAnswered = Boolean(page.cusip || page.nav !== null || page.marketPrice !== null || page.expenseRatio !== null || page.netAssetsValue !== null);
+      if (!previousMeta && !pageAnswered && !performanceNavMonth && !navRows.length && !(holdings && holdings.rows.length) && !distributions.length) {
+        throw new Error('no source answered; no data published for this fund yet');
+      }
       const splitRows = splits.get(fund.ticker) || [];
       const artifacts = buildFeed({
         fund,
