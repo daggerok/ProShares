@@ -119,7 +119,7 @@ These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separ
 | `CATEGORY` | `""` | Substring match on the ProShares asset class (Equity, Fixed Income, Commodity, Crypto-Linked, Cash, Alternative, Volatility). |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows per generated holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows per generated history JSON page (alias `HISTORICAL_PAGE_SIZE`). |
-| `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years, months or days such as `10y`, `36m` or `90d`; a zero window (`0y`) is an error. |
+| `HISTORY_RANGE` | `max` | NAV-history window: `max` or a number of years, months or days such as `10y`, `36m` or `90d`; a zero window (`0y`) is an error. A window refreshes only its own days: published rows older than the window are kept, and only when the published history has the window's first day with the same NAV (the history has no market price); a gap or a revised (split-adjusted) NAV keeps the fund as published and reports it failed. A fund with no published history gets just the window. |
 | `DISTRIBUTION_YEARS` | `10` | Calendar years of distribution history per fund (the endpoint is year-scoped). A fund that already publishes distributions re-reads only the current and previous year and keeps the older published rows; a full walk of all years runs when nothing is published yet or `distributions.refreshedAt` in its `meta.json` is 90 to 120 days old (a per-ticker offset spreads the refreshes over several runs). |
 | `MAX_RETRIES` | `3` | Retries after the initial request for network errors and HTTP 403/408/425/429/5xx; integer of at least 1. |
 | `STORE_RAW_DOWNLOADS` | `false` | Keep one raw sample of each source under `api/proshares/raw`. |
