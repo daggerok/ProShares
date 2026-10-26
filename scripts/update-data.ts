@@ -1524,6 +1524,49 @@ export function applyHistoryRange(rows: NavRow[], range: string): NavRow[] {
   return rows.filter(row => calendarEpoch(row.date) >= cutoff);
 }
 
+/**
+ * HISTORY_RANGE shortens what a run refreshes, never the published history (Q29, as First-Trust FT-4): published rows dated
+ * before the window's first day are kept in front of it. The join is honest only when the published history has that first
+ * day with the same NAV (the history file has no market price); otherwise (a gap, a revised or split-adjusted NAV) it returns
+ * null and the caller keeps the fund as published. Rows come back in the published text, so an unchanged run writes nothing.
+ */
+export function withOlderNavRows(windowRows: NavRow[], published: ReadonlyArray<Record<string, unknown>>): NavRow[] | null {
+  const first = windowRows[0];
+  if (!first) return windowRows;
+  const dated = published.filter(row => Number.isFinite(calendarEpoch(row.Date)));
+  const older = dated.filter(row => compareDisplayDates(cleanText(row.Date), first.date) < 0);
+  if (!older.length) return windowRows;
+  const joint = dated.find(row => cleanText(row.Date) === first.date);
+  const nav = joint ? numberOrNull(joint.NAV) : null;
+  if (!joint || nav === null || first.nav === null || Math.abs(nav - first.nav) > 1e-9) return null;
+  return older
+    .sort((a, b) => compareDisplayDates(cleanText(a.Date), cleanText(b.Date)))
+    .map(row => ({
+      date: cleanText(row.Date),
+      nav: numberOrNull(row.NAV),
+      sharesOutstanding: numberOrNull(row['Shares Outstanding']),
+      netAssets: numberOrNull(row['Total Net Assets']),
+    }))
+    .concat(windowRows);
+}
+
+/** Every row of a published sheet block, pages in order; null when a listed page is unreadable (the caller keeps the fund). */
+export async function publishedSheetRows(directory: string, block: unknown): Promise<Record<string, unknown>[] | null> {
+  const pages = (block as { pages?: unknown } | null | undefined)?.pages;
+  if (!Array.isArray(pages)) return [];
+  const rows: Record<string, unknown>[] = [];
+  for (const page of pages) {
+    try {
+      const pageRows = JSON.parse(await readFile(path.join(directory, String(page)), 'utf8')).rows;
+      if (!Array.isArray(pageRows)) return null;
+      pageRows.forEach((row: unknown) => { if (row && typeof row === 'object' && !Array.isArray(row)) rows.push(row as Record<string, unknown>); });
+    } catch {
+      return null;
+    }
+  }
+  return rows;
+}
+
 // ---------------------------------------------------------------------------
 // (e) Official performance file (etf_performance.csv)
 // ---------------------------------------------------------------------------
@@ -2894,6 +2937,13 @@ export async function main(config?: UpdaterConfig): Promise<void> {
       }
       navRows.sort((a, b) => compareDisplayDates(a.date, b.date));
       navRows = applyHistoryRange(navRows, config.historyRange);
+      // a window refreshes its own days and keeps the published older rows, only when it joins them on its first day (Q29)
+      if (historyRangeDays(config.historyRange) && navRows.length && previousMeta && Number(previous?.history || 0) > 0) {
+        const published = await publishedSheetRows(directory, previousMeta.history);
+        const joined = published ? withOlderNavRows(navRows, published) : null;
+        if (joined) navRows = joined;
+        else navProblem = navProblem || `HISTORY_RANGE=${config.historyRange} window does not join the published NAV history on ${navRows[0].date}`;
+      }
 
       // Distribution history (official endpoint): current + previous year when rows are already published.
       let distributions: DistributionRow[] = [];

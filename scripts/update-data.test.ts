@@ -1162,14 +1162,25 @@ describe('pipeline 2', () => {
 });
 
 describe('pipeline 3', () => {
-  test('HISTORY_RANGE trims the published NAV history from the old end', async () => {
+  test('HISTORY_RANGE keeps published NAV rows older than the window, only when the window joins them on its first day (Q29)', async () => {
     mockFeed();
     await withRepo(async ({ api, run }) => {
-      await run({ tickers: ['NOBL'] });
       const history = () => JSON.parse(readFileSync(path.join(api, 'funds', 'NOBL', 'meta.json'), 'utf8')).history.totalRows;
-      expect(history()).toBe(3);
+      // nothing published yet: the window is all there is
       await run({ tickers: ['NOBL'], historyRange: '1y' });
       expect(history()).toBe(2);
+      await run({ tickers: ['NOBL'] });
+      expect(history()).toBe(3);
+      // the window's first day (Sep 17 2026) has the published NAV: the 2020 row stays, nothing is written
+      const before = snapshot(api);
+      await run({ tickers: ['NOBL'], historyRange: '1y' });
+      expect(snapshot(api)).toEqual(before);
+      // a revised (split-adjusted) NAV on that day: the fund is kept as published and reported failed
+      mockFeedWith(url => (url.endsWith('ByFund/NOBL-historical_nav.csv') ? navCsvFor('NOBL').replace(',56.0278,55.8546,', ',28.0139,27.9273,') : null));
+      await run({ tickers: ['NOBL'], historyRange: '1y' });
+      expect(snapshot(api)).toEqual(before);
+      expect(process.exitCode).toBe(1);
+      process.exitCode = 0;
     });
   });
 
