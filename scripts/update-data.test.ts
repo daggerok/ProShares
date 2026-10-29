@@ -968,6 +968,8 @@ describe('pipeline', () => {
         expect(row.dataFile).toBe(`./funds/${row.ticker}/meta.json`);
         expect(existsSync(path.join(api, 'funds', row.ticker, 'meta.json'))).toBe(true);
         expect(row.metrics.returnsBasis.length).toBeGreaterThan(1);
+        // the 52-week range keys from the published history pages (shared range-52w block)
+        expect(Object.keys(row.metrics)).toEqual(expect.arrayContaining(['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis']));
       }
       const byTicker = Object.fromEntries(funds.map(fund => [fund.ticker, fund]));
       expect(byTicker.NOBL.metrics.ytd).toBe(12.35);
