@@ -132,7 +132,7 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+  return `[ ${`${String(index).padStart(width)}/${total}`.padEnd(8)} ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -2418,7 +2418,7 @@ export function formatElapsed(milliseconds: number): string {
 }
 
 export function formatRetry(label: string, error: string, backoffSeconds: number, attempt: number, maxRetries: number): string {
-  return `[retry] ${label} → ${error}, backoff ${backoffSeconds}s (attempt ${attempt}/${maxRetries})`;
+  return `[ retry    ] ${label} → ${error}, backoff ${backoffSeconds}s (attempt ${attempt}/${maxRetries})`;
 }
 
 /** Presentation only: never alter the entry/metadata written to the static feed. */
