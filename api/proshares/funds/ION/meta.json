@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ION&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Oct 23 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Oct 28 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ION-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "catalogReadAt": "2026-10-29T20:31:24Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$39.18",
-  "value": 39.18,
-  "asOfDate": "Oct 23 2026"
+  "display": "$40.14",
+  "value": 40.14,
+  "asOfDate": "Oct 28 2026"
  },
  "marketPrice": {
-  "display": "$38.84",
-  "value": 38.84,
-  "asOfDate": "Oct 23 2026"
+  "display": "$40.23",
+  "value": 40.23,
+  "asOfDate": "Oct 28 2026"
  },
  "premiumDiscount": {
-  "display": "-0.87%",
-  "value": -0.8678,
+  "display": "0.22%",
+  "value": 0.2242,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$8.82 M",
-  "value": 8815179.1784,
-  "asOfDate": "Oct 23 2026",
+  "display": "$9.03 M",
+  "value": 9030640.136,
+  "asOfDate": "Oct 28 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 1.79,
   "yield12MText": "1.79%",
-  "indicatedYield": 2.8392,
-  "indicatedYieldText": "2.84%",
+  "indicatedYield": 2.7713,
+  "indicatedYieldText": "2.77%",
   "secYield": 1.8,
   "secYieldText": "1.80%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -311,19 +311,18 @@
  },
  "holdings": {
   "pageSize": 250,
-  "totalRows": 60,
-  "asOfDate": "Oct 23 2026",
-  "asOf": "2026-10-23",
+  "totalRows": 53,
+  "asOfDate": "Oct 28 2026",
+  "asOf": "2026-10-28",
   "headers": [
    "Name",
    "Ticker",
    "Identifier",
    "Weight",
    "Market Value",
-   "Shares Held",
-   "Exposure Value"
+   "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Oct 23 2026)",
+  "source": "official ProShares daily holdings download (ByFund/ION-psdlyhld.csv, as of Oct 28 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -331,9 +330,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 980,
-  "asOf": "Oct 23 2026",
-  "asOfDate": "Oct 23 2026",
+  "totalRows": 983,
+  "asOf": "Oct 28 2026",
+  "asOfDate": "Oct 28 2026",
   "headers": [
    "Date",
    "NAV",
@@ -373,43 +372,43 @@
     "rows": [
      {
       "Company": "PACIFIC METALS CO LTD",
-      "Weight": 4.009736
-     },
-     {
-      "Company": "VALE INDONESIA TBK",
-      "Weight": 3.492766
-     },
-     {
-      "Company": "TIBET MINERAL DEVELOPMENT-A",
-      "Weight": 3.4842720000000003
+      "Weight": 3.9064170000000003
      },
      {
       "Company": "SIGMA LITHIUM CORP",
-      "Weight": 3.411044
-     },
-     {
-      "Company": "AFRICAN RAINBOW MINERALS LTD",
-      "Weight": 3.401496
+      "Weight": 3.528734
      },
      {
       "Company": "LIONTOWN LTD",
-      "Weight": 3.2530249999999996
+      "Weight": 3.5093039999999998
      },
      {
       "Company": "IGO LTD",
-      "Weight": 3.2299130000000003
+      "Weight": 3.4482619999999997
      },
      {
-      "Company": "QUIMICA Y MINERA CHIL-SP ADR",
-      "Weight": 3.2113089999999995
+      "Company": "AFRICAN RAINBOW MINERALS LTD",
+      "Weight": 3.4430389999999997
+     },
+     {
+      "Company": "TIBET MINERAL DEVELOPMENT-A",
+      "Weight": 3.3810029999999998
      },
      {
       "Company": "ALBEMARLE CORP",
-      "Weight": 3.210885
+      "Weight": 3.2436359999999995
+     },
+     {
+      "Company": "QUIMICA Y MINERA CHIL-SP ADR",
+      "Weight": 3.2327130000000004
+     },
+     {
+      "Company": "VALE INDONESIA TBK",
+      "Weight": 3.2230920000000003
      },
      {
       "Company": "YOUNGY CO LTD-A",
-      "Weight": 3.044448
+      "Weight": 3.00704
      }
     ]
    },
@@ -418,63 +417,63 @@
     "rows": [
      {
       "Country": "China",
-      "Weight": 33.727502
+      "Weight": 32.869361000000005
      },
      {
       "Country": "Australia",
-      "Weight": 15.123890000000001
+      "Weight": 16.198553
      },
      {
       "Country": "South Africa",
-      "Weight": 9.410206
+      "Weight": 9.420748
      },
      {
       "Country": "Canada",
-      "Weight": 8.596487
+      "Weight": 8.98022
      },
      {
       "Country": "Indonesia",
-      "Weight": 8.106816
+      "Weight": 7.600516
      },
      {
       "Country": "Japan",
-      "Weight": 5.1331809999999995
+      "Weight": 5.034861
      },
      {
       "Country": "United Kingdom",
-      "Weight": 3.591843
-     },
-     {
-      "Country": "Chile",
-      "Weight": 3.221873
+      "Weight": 3.5941229999999997
      },
      {
       "Country": "United States",
-      "Weight": 3.2214479999999996
+      "Weight": 3.2547
+     },
+     {
+      "Country": "Chile",
+      "Weight": 3.243741
      },
      {
       "Country": "France",
-      "Weight": 2.449714
-     },
-     {
-      "Country": "Brazil",
-      "Weight": 1.9573690000000001
-     },
-     {
-      "Country": "Hong Kong",
-      "Weight": 1.907702
+      "Weight": 2.5096279999999997
      },
      {
       "Country": "Netherlands",
-      "Weight": 1.886668
+      "Weight": 1.948985
+     },
+     {
+      "Country": "Hong Kong",
+      "Weight": 1.901392
+     },
+     {
+      "Country": "Brazil",
+      "Weight": 1.7671860000000001
      },
      {
       "Country": "Sweden",
-      "Weight": 1.205509
+      "Weight": 1.22004
      },
      {
       "Country": "South Korea",
-      "Weight": 0.45979200000000003
+      "Weight": 0.455946
      }
     ]
    },
@@ -483,47 +482,47 @@
     "rows": [
      {
       "Currency": "CNY",
-      "Weight": 26.67101587552801
+      "Weight": 25.94274714675906
      },
      {
       "Currency": "AUD",
-      "Weight": 15.123889686137975
+      "Weight": 16.19855254456916
      },
      {
       "Currency": "USD",
-      "Weight": 12.28274863125539
+      "Weight": 12.262343424155048
      },
      {
       "Currency": "ZAR",
-      "Weight": 9.41020592895894
+      "Weight": 9.420747588007163
      },
      {
       "Currency": "HKD",
-      "Weight": 8.964187373805547
+      "Weight": 8.82800582698526
      },
      {
       "Currency": "IDR",
-      "Weight": 8.1068164245248
+      "Weight": 7.6005159885202955
      },
      {
       "Currency": "CAD",
-      "Weight": 5.174221516672191
+      "Weight": 5.439449745699993
      },
      {
       "Currency": "JPY",
-      "Weight": 5.133180697247945
+      "Weight": 5.034861054753774
      },
      {
       "Currency": "EUR",
-      "Weight": 4.336381525295079
+      "Weight": 4.458613235300639
      },
      {
       "Currency": "GBP",
-      "Weight": 3.59184337299018
+      "Weight": 3.5941230033475775
      },
      {
       "Currency": "SEK",
-      "Weight": 1.2055089675839432
+      "Weight": 1.220040441902031
      }
     ]
    },
@@ -532,27 +531,27 @@
     "rows": [
      {
       "Sector": "Metals & Mining",
-      "Weight": 72.74021158093029
+      "Weight": 73.18851284187589
      },
      {
       "Sector": "Chemicals",
-      "Weight": 22.162796600625
+      "Weight": 21.90676089051868
      },
      {
       "Sector": "Electrical Equipment",
-      "Weight": 2.2472181173487553
+      "Weight": 2.1095984759221924
      },
      {
       "Sector": "Trading Companies & Distributors",
-      "Weight": 1.1066137586216607
+      "Weight": 1.1113281806880828
      },
      {
       "Sector": "Construction & Engineering",
-      "Weight": 0.7722048303261478
+      "Weight": 0.738785346053483
      },
      {
       "Sector": "Broadline Retail",
-      "Weight": 0.6430642420526503
+      "Weight": 0.6050580374546004
      }
     ]
    }

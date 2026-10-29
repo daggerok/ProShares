@@ -2,7 +2,7 @@
  "ticker": "SPCF",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 93,
+ "totalRows": 96,
  "headers": [
   "Date",
   "NAV",
@@ -567,6 +567,24 @@
    "NAV": "15.2713",
    "Shares Outstanding": "5900000",
    "Total Net Assets": "90100670"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "15.1406",
+   "Shares Outstanding": "5900000",
+   "Total Net Assets": "89329540"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "15.4815",
+   "Shares Outstanding": "6060000",
+   "Total Net Assets": "93817890"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "14.7755",
+   "Shares Outstanding": "6000000",
+   "Total Net Assets": "88653000"
   }
  ]
 }

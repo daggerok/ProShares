@@ -2,7 +2,7 @@
  "ticker": "SLON",
  "page": 1,
  "pageSize": 250,
- "totalRows": 3,
+ "totalRows": 4,
  "headers": [
   "Name",
   "Ticker",
@@ -10,35 +10,54 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
   {
-   "Name": "SOL FUTURES DIGITAL ASSETS 30/OCT/2026 QSOV6 CURNCY",
+   "Name": "SOL FUTURES DIGITAL ASSETS 27/NOV/2026 QSOX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "149.5299484336",
+   "Weight": "147.9191861122",
    "Market Value": "—",
-   "Shares Held": "712",
-   "Exposure Value": "36792600"
+   "Shares Held": "695",
+   "Exposure Value": "35775125",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "SOLANA FUTURES DIGITAL ASSETS 27/NOV/2026 LSDX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "51.0958813372",
+   "Weight": "51.2040475278",
    "Market Value": "—",
    "Shares Held": "1200",
-   "Exposure Value": "12572400"
+   "Exposure Value": "12384000",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BNZJKH9",
+   "Weight": "—",
+   "Market Value": "89932230.9",
+   "Shares Held": "90000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-11-05"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "24605505.71",
-   "Shares Held": "24605505.71",
-   "Exposure Value": "—"
+   "Market Value": "-65746642.85",
+   "Shares Held": "-65746642.85",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }

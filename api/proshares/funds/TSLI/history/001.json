@@ -2,7 +2,7 @@
  "ticker": "TSLI",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 285,
+ "totalRows": 288,
  "headers": [
   "Date",
   "NAV",
@@ -1719,6 +1719,24 @@
    "NAV": "18.1858",
    "Shares Outstanding": "180000",
    "Total Net Assets": "3273462.1858"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "20.0767",
+   "Shares Outstanding": "180000",
+   "Total Net Assets": "3613826.0767"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "21.6973",
+   "Shares Outstanding": "180000",
+   "Total Net Assets": "3905535.6973"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "21.3448",
+   "Shares Outstanding": "180000",
+   "Total Net Assets": "3842085.3448"
   }
  ]
 }

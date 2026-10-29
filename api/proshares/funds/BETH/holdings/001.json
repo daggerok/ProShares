@@ -2,7 +2,7 @@
  "ticker": "BETH",
  "page": 1,
  "pageSize": 250,
- "totalRows": 3,
+ "totalRows": 4,
  "headers": [
   "Name",
   "Ticker",
@@ -10,35 +10,54 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
   {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "84.6299609801",
+   "Weight": "84.7977269321",
    "Market Value": "—",
    "Shares Held": "24",
-   "Exposure Value": "9744600"
+   "Exposure Value": "9783000",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "CME ETHER FUTURE DIGITAL ASSETS 30/OCT/2026 DCRV6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "15.5740284391",
+   "Weight": "15.3941289003",
    "Market Value": "—",
    "Shares Held": "15",
-   "Exposure Value": "1793250"
+   "Exposure Value": "1776000",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BNZJKH9",
+   "Weight": "—",
+   "Market Value": "3996988.04",
+   "Shares Held": "4000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-11-05"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "11514361.92",
-   "Shares Held": "11514361.92",
-   "Exposure Value": "—"
+   "Market Value": "7539877.81",
+   "Shares Held": "7539877.81",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }

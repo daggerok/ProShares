@@ -2,7 +2,7 @@
  "ticker": "ACRT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 51,
+ "totalRows": 54,
  "headers": [
   "Date",
   "NAV",
@@ -315,6 +315,24 @@
    "NAV": "21.9431",
    "Shares Outstanding": "65000",
    "Total Net Assets": "1426323.4431"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "22.0821",
+   "Shares Outstanding": "65000",
+   "Total Net Assets": "1435358.5821"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "22.5067",
+   "Shares Outstanding": "65000",
+   "Total Net Assets": "1462958.0067"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "22.7015",
+   "Shares Outstanding": "65000",
+   "Total Net Assets": "1475620.2015"
   }
  ]
 }

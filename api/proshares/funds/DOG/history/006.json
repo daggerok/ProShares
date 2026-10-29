@@ -2,7 +2,7 @@
  "ticker": "DOG",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5120,
+ "totalRows": 5123,
  "headers": [
   "Date",
   "NAV",
@@ -729,6 +729,24 @@
    "NAV": "21.8113",
    "Shares Outstanding": "4673760",
    "Total Net Assets": "101940672.4315"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "21.7513",
+   "Shares Outstanding": "5273760",
+   "Total Net Assets": "114711027.1315"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "21.7491",
+   "Shares Outstanding": "5173760",
+   "Total Net Assets": "112524514.8705"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "21.7095",
+   "Shares Outstanding": "5173760",
+   "Total Net Assets": "112319634.1725"
   }
  ]
 }

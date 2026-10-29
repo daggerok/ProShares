@@ -2,7 +2,7 @@
  "ticker": "UPRO",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4362,
+ "totalRows": 4365,
  "headers": [
   "Date",
   "NAV",
@@ -2181,6 +2181,24 @@
    "NAV": "144.0468",
    "Shares Outstanding": "36800000",
    "Total Net Assets": "5300922240"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "147.0256",
+   "Shares Outstanding": "36800000",
+   "Total Net Assets": "5410542080"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "149.6136",
+   "Shares Outstanding": "36700000",
+   "Total Net Assets": "5490819120"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "150.8232",
+   "Shares Outstanding": "36700000",
+   "Total Net Assets": "5535211440"
   }
  ]
 }

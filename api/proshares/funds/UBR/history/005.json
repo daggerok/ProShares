@@ -2,7 +2,7 @@
  "ticker": "UBR",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4150,
+ "totalRows": 4153,
  "headers": [
   "Date",
   "NAV",
@@ -909,6 +909,24 @@
    "NAV": "42.4781",
    "Shares Outstanding": "91560",
    "Total Net Assets": "3889167.4017"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "25.6643",
+   "Shares Outstanding": "91560",
+   "Total Net Assets": "2349746.3151"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "25.8868",
+   "Shares Outstanding": "91560",
+   "Total Net Assets": "2370117.7476"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "24.8555",
+   "Shares Outstanding": "91560",
+   "Total Net Assets": "2275695.0135"
   }
  ]
 }

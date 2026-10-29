@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=SPXT&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/SPXT-psdlyhld.csv, as of Oct 23 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/SPXT-psdlyhld.csv, as of Oct 28 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SPXT-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "catalogReadAt": "2026-10-29T20:31:24Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$110.20",
-  "value": 110.2,
-  "asOfDate": "Oct 23 2026"
+  "display": "$110.65",
+  "value": 110.65,
+  "asOfDate": "Oct 28 2026"
  },
  "marketPrice": {
-  "display": "$110.28",
-  "value": 110.28,
-  "asOfDate": "Oct 23 2026"
+  "display": "$110.80",
+  "value": 110.8,
+  "asOfDate": "Oct 28 2026"
  },
  "premiumDiscount": {
-  "display": "0.07%",
-  "value": 0.0726,
+  "display": "0.14%",
+  "value": 0.1356,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$303.04 M",
-  "value": 303044060.1978,
-  "asOfDate": "Oct 23 2026",
+  "display": "$307.60 M",
+  "value": 307600160.6475,
+  "asOfDate": "Oct 28 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 1.34,
   "yield12MText": "1.34%",
-  "indicatedYield": 1.1672,
-  "indicatedYieldText": "1.17%",
+  "indicatedYield": 1.1624,
+  "indicatedYieldText": "1.16%",
   "secYield": 1.37,
   "secYieldText": "1.37%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -573,8 +573,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 429,
-  "asOfDate": "Oct 23 2026",
-  "asOf": "2026-10-23",
+  "asOfDate": "Oct 28 2026",
+  "asOf": "2026-10-28",
   "headers": [
    "Name",
    "Ticker",
@@ -583,7 +583,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/SPXT-psdlyhld.csv, as of Oct 23 2026)",
+  "source": "official ProShares daily holdings download (ByFund/SPXT-psdlyhld.csv, as of Oct 28 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -592,9 +592,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2789,
-  "asOf": "Oct 23 2026",
-  "asOfDate": "Oct 23 2026",
+  "totalRows": 2792,
+  "asOf": "Oct 28 2026",
+  "asOfDate": "Oct 28 2026",
   "headers": [
    "Date",
    "NAV",
@@ -726,11 +726,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 80.27166199999999
+      "Weight": 80.01844200000001
      },
      {
       "Country": "Other",
-      "Weight": 19.728338
+      "Weight": 19.981558
      }
     ]
    },
@@ -739,11 +739,11 @@
     "rows": [
      {
       "Currency": "Other",
-      "Weight": 70.59994595381175
+      "Weight": 70.56138314393074
      },
      {
       "Currency": "USD",
-      "Weight": 29.400054046188252
+      "Weight": 29.43861685606925
      }
     ]
    },

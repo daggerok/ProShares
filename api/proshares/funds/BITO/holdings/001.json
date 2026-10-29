@@ -2,7 +2,7 @@
  "ticker": "BITO",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 7,
  "headers": [
   "Name",
   "Ticker",
@@ -10,62 +10,87 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
-  {
-   "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "60.9510669060",
-   "Market Value": "—",
-   "Shares Held": "2365",
-   "Exposure Value": "960249125"
-  },
   {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 27/NOV/2026 BTCX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "19.0218202067",
+   "Weight": "59.3917987795",
    "Market Value": "—",
-   "Shares Held": "735",
-   "Exposure Value": "299677875"
+   "Shares Held": "2285",
+   "Exposure Value": "935022000",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 30/OCT/2026 BTCV6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "20.5841334986",
+   "Market Value": "—",
+   "Shares Held": "795",
+   "Exposure Value": "324061875",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "COINBASE BIT FUT DIGITAL ASSETS 30/OCT/2026 BTIV6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "15.4785066015",
+   "Weight": "15.5380534548",
    "Market Value": "—",
    "Shares Held": "3000",
-   "Exposure Value": "243855000"
+   "Exposure Value": "244620000",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "S&P CME BITCOIN FUTURES DAILY ROLL INDEX SWAP Societe Generale",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "4.5719717674",
+   "Weight": "4.5919139949",
    "Market Value": "—",
    "Shares Held": "219179",
-   "Exposure Value": "72028794.77"
+   "Exposure Value": "72291809.57",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "1076290000",
-   "Shares Held": "10750000",
-   "Exposure Value": "—"
+   "Market Value": "675540000",
+   "Shares Held": "6750000",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BNZJKH9",
+   "Weight": "—",
+   "Market Value": "399698804",
+   "Shares Held": "400000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-11-05"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "499152685",
-   "Shares Held": "499152685",
-   "Exposure Value": "—"
+   "Market Value": "499089671",
+   "Shares Held": "499089671",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "UPAL",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 131,
+ "totalRows": 134,
  "headers": [
   "Date",
   "NAV",
@@ -795,6 +795,24 @@
    "NAV": "14.5314",
    "Shares Outstanding": "20000",
    "Total Net Assets": "290642.5314"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "14.5207",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "290428.5207"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "14.2106",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "284226.2106"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "13.8814",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "277641.8814"
   }
  ]
 }

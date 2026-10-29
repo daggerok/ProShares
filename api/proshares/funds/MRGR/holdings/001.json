@@ -2,7 +2,7 @@
  "ticker": "MRGR",
  "page": 1,
  "pageSize": 250,
- "totalRows": 50,
+ "totalRows": 51,
  "headers": [
   "Name",
   "Ticker",
@@ -14,92 +14,92 @@
  ],
  "rows": [
   {
-   "Name": "S&P Merger Arbitrage Long Index SWAP Societe Generale",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "27.3591662841",
-   "Market Value": "—",
-   "Shares Held": "1330",
-   "Exposure Value": "4351321.1"
-  },
-  {
    "Name": "S&P Merger Arbitrage Short Sub-Index SWAP Societe Generale",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-24.7350995822",
+   "Weight": "-28.2207399449",
    "Market Value": "—",
-   "Shares Held": "-1509",
-   "Exposure Value": "-3933978.09"
+   "Shares Held": "-1689",
+   "Exposure Value": "-4483214.04"
+  },
+  {
+   "Name": "S&P Merger Arbitrage Long Index SWAP Societe Generale",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "27.4695379509",
+   "Market Value": "—",
+   "Shares Held": "1330",
+   "Exposure Value": "4363876.3"
   },
   {
    "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
    "Ticker": "-",
    "Identifier": "GBP/USD",
-   "Weight": "-9.2756023365",
+   "Weight": "-9.2559029919",
    "Market Value": "—",
    "Shares Held": "-1103000",
-   "Exposure Value": "-1475232.24"
+   "Exposure Value": "-1470414.82"
   },
   {
    "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
    "Ticker": "-",
    "Identifier": "EUR/USD",
-   "Weight": "-4.7263070415",
+   "Weight": "-4.7160279783",
    "Market Value": "—",
    "Shares Held": "-669000",
-   "Exposure Value": "-751692.48"
+   "Exposure Value": "-749199.45"
   },
   {
    "Name": "AUSTRALIA DOLLAR CURRENCY CONTRACT - USD",
    "Ticker": "-",
    "Identifier": "AUD/USD",
-   "Weight": "-4.6791832706",
+   "Weight": "-4.7004601646",
    "Market Value": "—",
    "Shares Held": "-1059000",
-   "Exposure Value": "-744197.71"
+   "Exposure Value": "-746726.31"
   },
   {
    "Name": "NORWAY KRONE CURRENCY CONTRACT - USD",
    "Ticker": "-",
    "Identifier": "NOK/USD",
-   "Weight": "-2.8711510370",
+   "Weight": "-2.8984403164",
    "Market Value": "—",
    "Shares Held": "-4262000",
-   "Exposure Value": "-456640.38"
+   "Exposure Value": "-460453.14"
   },
   {
    "Name": "CANADA DOLLAR CURRENCY CONTRACT - USD",
    "Ticker": "-",
    "Identifier": "CAD/USD",
-   "Weight": "-2.3165652608",
+   "Weight": "-2.3206796949",
    "Market Value": "—",
    "Shares Held": "-514000",
-   "Exposure Value": "-368436.64"
+   "Exposure Value": "-368668.71"
   },
   {
    "Name": "S&P Merger Arbitrage Long Sub-Index SWAP Citibank NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "0.0617124052",
+   "Weight": "0.0619613638",
    "Market Value": "—",
    "Shares Held": "3",
-   "Exposure Value": "9815.01"
+   "Exposure Value": "9843.33"
   },
   {
    "Name": "S&P Merger Arbitrage Short Sub-Index SWAP Citibank NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-0.0491751483",
+   "Weight": "-0.0501256482",
    "Market Value": "—",
    "Shares Held": "-3",
-   "Exposure Value": "-7821.03"
+   "Exposure Value": "-7963.08"
   },
   {
    "Name": "BLUENORD ASA",
-   "Ticker": "BNOR",
+   "Ticker": "-",
    "Identifier": "B23D2M5",
-   "Weight": "2.9346796021",
-   "Market Value": "466744.24",
+   "Weight": "2.9621533850",
+   "Market Value": "470574.75",
    "Shares Held": "6908",
    "Exposure Value": "—"
   },
@@ -107,44 +107,53 @@
    "Name": "PERSONALIS INC",
    "Ticker": "PSNL",
    "Identifier": "BJQ0608",
-   "Weight": "2.7315187359",
-   "Market Value": "434432.65",
+   "Weight": "2.7605276188",
+   "Market Value": "438544",
    "Shares Held": "27409",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ALLFUNDS GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "BNTJ354",
+   "Weight": "2.5482194622",
+   "Market Value": "404816.22",
+   "Shares Held": "36840",
    "Exposure Value": "—"
   },
   {
    "Name": "ROKU INC",
    "Ticker": "ROKU",
    "Identifier": "BZ1LFG7",
-   "Weight": "2.5804438411",
-   "Market Value": "410405.04",
+   "Weight": "2.5304545268",
+   "Market Value": "401994.04",
    "Shares Held": "2588",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ALLFUNDS GROUP PLC",
-   "Ticker": "ALLFG",
-   "Identifier": "BNTJ354",
-   "Weight": "2.5360879143",
-   "Market Value": "403350.48",
-   "Shares Held": "36840",
    "Exposure Value": "—"
   },
   {
    "Name": "SILICON LABORATORIES INC",
    "Ticker": "SLAB",
    "Identifier": "2568131",
-   "Weight": "2.4360736166",
-   "Market Value": "387443.77",
+   "Weight": "2.4442649607",
+   "Market Value": "388301.76",
    "Shares Held": "1751",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "RANGE RESOURCES CORP",
+   "Ticker": "RRC",
+   "Identifier": "2523334",
+   "Weight": "2.4094942374",
+   "Market Value": "382778",
+   "Shares Held": "6850",
    "Exposure Value": "—"
   },
   {
    "Name": "ORGANON & CO",
    "Ticker": "OGN",
    "Identifier": "BLDC8J4",
-   "Weight": "2.3876829036",
-   "Market Value": "379747.5",
+   "Weight": "2.3956334358",
+   "Market Value": "380576.04",
    "Shares Held": "27618",
    "Exposure Value": "—"
   },
@@ -152,116 +161,125 @@
    "Name": "DOUBLEVERIFY HOLDINGS INC",
    "Ticker": "DV",
    "Identifier": "BMDX9Z7",
-   "Weight": "2.3685439037",
-   "Market Value": "376703.55",
+   "Weight": "2.3677570445",
+   "Market Value": "376147.53",
    "Shares Held": "27801",
    "Exposure Value": "—"
   },
   {
-   "Name": "DCC ENERGY PLC",
-   "Ticker": "DCC",
-   "Identifier": "0242493",
-   "Weight": "2.3563718908",
-   "Market Value": "374767.66",
-   "Shares Held": "4345",
+   "Name": "CLEANAWAY WASTE MANAGEMENT L",
+   "Ticker": "-",
+   "Identifier": "BYQ8KW7",
+   "Weight": "2.3604845236",
+   "Market Value": "374992.2",
+   "Shares Held": "177000",
    "Exposure Value": "—"
   },
   {
    "Name": "BIO-TECHNE CORP",
    "Ticker": "TECH",
    "Identifier": "BSHZ3Q0",
-   "Weight": "2.3496906731",
-   "Market Value": "373705.05",
+   "Weight": "2.3569216286",
+   "Market Value": "374426.19",
    "Shares Held": "5151",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "DCC ENERGY PLC",
+   "Ticker": "-",
+   "Identifier": "0242493",
+   "Weight": "2.3514853511",
+   "Market Value": "373562.57",
+   "Shares Held": "4345",
    "Exposure Value": "—"
   },
   {
    "Name": "INTEGER HOLDINGS CORP",
    "Ticker": "ITGR",
    "Identifier": "BD06LM7",
-   "Weight": "2.3463042594",
-   "Market Value": "373166.46",
+   "Weight": "2.3491775676",
+   "Market Value": "373195.95",
    "Shares Held": "2949",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CLEANAWAY WASTE MANAGEMENT L",
-   "Ticker": "CWY",
-   "Identifier": "BYQ8KW7",
-   "Weight": "2.3417718761",
-   "Market Value": "372445.61",
-   "Shares Held": "177000",
    "Exposure Value": "—"
   },
   {
    "Name": "IHS HOLDING LTD",
    "Ticker": "IHS",
    "Identifier": "BMCG0L0",
-   "Weight": "2.3395628697",
-   "Market Value": "372094.28",
+   "Weight": "2.3477931618",
+   "Market Value": "372976.02",
    "Shares Held": "44087",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "STEADFAST GROUP LTD",
+   "Ticker": "-",
+   "Identifier": "BCT5FD7",
+   "Weight": "2.3411027801",
+   "Market Value": "371913.17",
+   "Shares Held": "90800",
    "Exposure Value": "—"
   },
   {
    "Name": "UTZ BRANDS INC",
    "Ticker": "UTZ",
    "Identifier": "BL989M6",
-   "Weight": "2.3359694069",
-   "Market Value": "371522.76",
+   "Weight": "2.3402829510",
+   "Market Value": "371782.93",
    "Shares Held": "26017",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "STEADFAST GROUP LTD",
-   "Ticker": "SDF",
-   "Identifier": "BCT5FD7",
-   "Weight": "2.3343292984",
-   "Market Value": "371261.91",
-   "Shares Held": "90800",
    "Exposure Value": "—"
   },
   {
    "Name": "MARKETAXESS HOLDINGS INC",
    "Ticker": "MKTX",
    "Identifier": "B03Q9D0",
-   "Weight": "2.3326920194",
-   "Market Value": "371001.51",
+   "Weight": "2.3374914154",
+   "Market Value": "371339.46",
    "Shares Held": "2253",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PAYONEER GLOBAL INC",
-   "Ticker": "PAYO",
-   "Identifier": "BLSPX60",
-   "Weight": "2.3319132429",
-   "Market Value": "370877.65",
-   "Shares Held": "51871",
    "Exposure Value": "—"
   },
   {
    "Name": "BRAZE INC-A",
    "Ticker": "BRZE",
    "Identifier": "BPLQR66",
-   "Weight": "2.3294192847",
-   "Market Value": "370481",
+   "Weight": "2.3270046032",
+   "Market Value": "369673.5",
    "Shares Held": "8075",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PAYONEER GLOBAL INC",
+   "Ticker": "PAYO",
+   "Identifier": "BLSPX60",
+   "Weight": "2.3247889748",
+   "Market Value": "369321.52",
+   "Shares Held": "51871",
    "Exposure Value": "—"
   },
   {
    "Name": "MARINEMAX INC",
    "Ticker": "HZO",
    "Identifier": "2250353",
-   "Weight": "2.3258797690",
-   "Market Value": "369918.06",
+   "Weight": "2.3245590903",
+   "Market Value": "369285",
    "Shares Held": "7034",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "OPTION CARE HEALTH INC",
+   "Ticker": "OPCH",
+   "Identifier": "BKM5C62",
+   "Weight": "2.3241625207",
+   "Market Value": "369222",
+   "Shares Held": "11800",
    "Exposure Value": "—"
   },
   {
    "Name": "VARONIS SYSTEMS INC",
    "Ticker": "VRNS",
    "Identifier": "BJZ2ZR5",
-   "Weight": "2.3203840696",
-   "Market Value": "369044",
+   "Weight": "2.3239925623",
+   "Market Value": "369195",
    "Shares Held": "7550",
    "Exposure Value": "—"
   },
@@ -269,152 +287,152 @@
    "Name": "SAFETY INSURANCE GROUP INC",
    "Ticker": "SAFT",
    "Identifier": "2958538",
-   "Weight": "2.3190420541",
-   "Market Value": "368830.56",
+   "Weight": "2.3170176575",
+   "Market Value": "368086.95",
    "Shares Held": "3541",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "OPTION CARE HEALTH INC",
-   "Ticker": "OPCH",
-   "Identifier": "BKM5C62",
-   "Weight": "2.3163097346",
-   "Market Value": "368396",
-   "Shares Held": "11800",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "MITIE GROUP PLC",
-   "Ticker": "MTO",
-   "Identifier": "0465740",
-   "Weight": "2.3112550442",
-   "Market Value": "367592.08",
-   "Shares Held": "130278",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ROTORK PLC",
-   "Ticker": "ROR",
-   "Identifier": "BVFNZH2",
-   "Weight": "2.3107768758",
-   "Market Value": "367516.03",
-   "Shares Held": "55837",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "LXP INDUSTRIAL TRUST",
-   "Ticker": "LXP",
-   "Identifier": "BSLN6B6",
-   "Weight": "2.3084748136",
-   "Market Value": "367149.9",
-   "Shares Held": "6009",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "BUMBLE INC-A",
-   "Ticker": "BMBL",
-   "Identifier": "BMZ2WT7",
-   "Weight": "2.3027663434",
-   "Market Value": "366242",
-   "Shares Held": "61450",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CENTERSPACE",
-   "Ticker": "CSR",
-   "Identifier": "BN47P80",
-   "Weight": "2.3014475289",
-   "Market Value": "366032.25",
-   "Shares Held": "6425",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PACIRA BIOSCIENCES INC",
-   "Ticker": "PCRX",
-   "Identifier": "B3X26D8",
-   "Weight": "2.3013767939",
-   "Market Value": "366021",
-   "Shares Held": "10050",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "CBIZ INC",
-   "Ticker": "CBZ",
-   "Identifier": "2730781",
-   "Weight": "2.2978550092",
-   "Market Value": "365460.88",
-   "Shares Held": "6652",
    "Exposure Value": "—"
   },
   {
    "Name": "PTC INC",
    "Ticker": "PTC",
    "Identifier": "B95N910",
-   "Weight": "2.2969252057",
-   "Market Value": "365313",
+   "Weight": "2.3134390885",
+   "Market Value": "367518.45",
    "Shares Held": "1885",
    "Exposure Value": "—"
   },
   {
+   "Name": "LXP INDUSTRIAL TRUST",
+   "Ticker": "LXP",
+   "Identifier": "BSLN6B6",
+   "Weight": "2.3126321637",
+   "Market Value": "367390.26",
+   "Shares Held": "6009",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ROTORK PLC",
+   "Ticker": "-",
+   "Identifier": "BVFNZH2",
+   "Weight": "2.3087960133",
+   "Market Value": "366780.84",
+   "Shares Held": "55837",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BUMBLE INC-A",
+   "Ticker": "BMBL",
+   "Identifier": "BMZ2WT7",
+   "Weight": "2.3054041468",
+   "Market Value": "366242",
+   "Shares Held": "61450",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PACIRA BIOSCIENCES INC",
+   "Ticker": "PCRX",
+   "Identifier": "B3X26D8",
+   "Weight": "2.3021151366",
+   "Market Value": "365719.5",
+   "Shares Held": "10050",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "MITIE GROUP PLC",
+   "Ticker": "-",
+   "Identifier": "0465740",
+   "Weight": "2.3020896429",
+   "Market Value": "365715.45",
+   "Shares Held": "130278",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CBIZ INC",
+   "Ticker": "CBZ",
+   "Identifier": "2730781",
+   "Weight": "2.3009059139",
+   "Market Value": "365527.4",
+   "Shares Held": "6652",
+   "Exposure Value": "—"
+  },
+  {
    "Name": "EASYJET PLC",
-   "Ticker": "EZJ",
+   "Ticker": "-",
    "Identifier": "B7KR2P8",
-   "Weight": "2.2935551397",
-   "Market Value": "364777.01",
+   "Weight": "2.2908213366",
+   "Market Value": "363925.34",
    "Shares Held": "40174",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "RXO INC",
-   "Ticker": "RXO",
-   "Identifier": "BN6QSL9",
-   "Weight": "2.2867047867",
-   "Market Value": "363687.5",
-   "Shares Held": "12650",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ATHABASCA OIL CORP",
-   "Ticker": "ATH",
-   "Identifier": "B8DG7Z4",
-   "Weight": "2.2855058759",
-   "Market Value": "363496.82",
-   "Shares Held": "42500",
    "Exposure Value": "—"
   },
   {
    "Name": "LANTHEUS HOLDINGS INC",
    "Ticker": "LNTH",
    "Identifier": "BP8S8J5",
-   "Weight": "2.2796998228",
-   "Market Value": "362573.4",
+   "Weight": "2.2891718587",
+   "Market Value": "363663.3",
    "Shares Held": "3633",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "CENTERSPACE",
+   "Ticker": "CSR",
+   "Identifier": "BN47P80",
+   "Weight": "2.2834574789",
+   "Market Value": "362755.5",
+   "Shares Held": "6425",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "ATHABASCA OIL CORP",
+   "Ticker": "-",
+   "Identifier": "B8DG7Z4",
+   "Weight": "2.2809353589",
+   "Market Value": "362354.83",
+   "Shares Held": "42500",
    "Exposure Value": "—"
   },
   {
    "Name": "CAESARS ENTERTAINMENT INC",
    "Ticker": "CZR",
    "Identifier": "BMWWGB0",
-   "Weight": "2.2673221441",
-   "Market Value": "360604.8",
+   "Weight": "2.2517915183",
+   "Market Value": "357724.97",
    "Shares Held": "12521",
    "Exposure Value": "—"
   },
   {
+   "Name": "RXO INC",
+   "Ticker": "RXO",
+   "Identifier": "BN6QSL9",
+   "Weight": "2.1977512241",
+   "Market Value": "349140",
+   "Shares Held": "12650",
+   "Exposure Value": "—"
+  },
+  {
    "Name": "DELIVERY HERO SE",
-   "Ticker": "DHER",
+   "Ticker": "-",
    "Identifier": "BZCNB42",
-   "Weight": "2.1542880826",
-   "Market Value": "342627.37",
+   "Weight": "2.1612522756",
+   "Market Value": "343341.69",
    "Shares Held": "8203",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LCI INDUSTRIES",
+   "Ticker": "LCII",
+   "Identifier": "BYQ44Y5",
+   "Weight": "2.1187388762",
+   "Market Value": "336587.91",
+   "Shares Held": "3449",
    "Exposure Value": "—"
   },
   {
    "Name": "SUPERNUS PHARMACEUTICALS INC",
    "Ticker": "SUPN",
    "Identifier": "B72ZBG4",
-   "Weight": "2.0415976988",
-   "Market Value": "324704.6",
+   "Weight": "2.0630197704",
+   "Market Value": "327736.24",
    "Shares Held": "7978",
    "Exposure Value": "—"
   },
@@ -422,8 +440,8 @@
    "Name": "TRICO BANCSHARES",
    "Ticker": "TCBK",
    "Identifier": "2904133",
-   "Weight": "2.0167233808",
-   "Market Value": "320748.48",
+   "Weight": "2.0305227132",
+   "Market Value": "322573.68",
    "Shares Held": "6084",
    "Exposure Value": "—"
   },
@@ -431,25 +449,16 @@
    "Name": "IRIDIUM COMMUNICATIONS INC",
    "Ticker": "IRDM",
    "Identifier": "B2QH310",
-   "Weight": "1.8637215393",
-   "Market Value": "296414.4",
+   "Weight": "1.9305730615",
+   "Market Value": "306695.44",
    "Shares Held": "6676",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "LCI INDUSTRIES",
-   "Ticker": "LCII",
-   "Identifier": "BYQ44Y5",
-   "Weight": "1.8404716109",
-   "Market Value": "292716.63",
-   "Shares Held": "3449",
    "Exposure Value": "—"
   },
   {
    "Name": "VERVE THERAPEUTICS INC COMMON STOCK USD",
    "Ticker": "-",
    "Identifier": "ODF5653",
-   "Weight": "0.1047726557",
+   "Weight": "0.1048926721",
    "Market Value": "16663.5",
    "Shares Held": "26450",
    "Exposure Value": "—"
@@ -459,8 +468,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "1507754.64",
-   "Shares Held": "1507754.64",
+   "Market Value": "1065477.35",
+   "Shares Held": "1065477.35",
    "Exposure Value": "—"
   }
  ]

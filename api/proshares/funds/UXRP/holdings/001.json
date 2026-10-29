@@ -2,7 +2,7 @@
  "ticker": "UXRP",
  "page": 1,
  "pageSize": 250,
- "totalRows": 3,
+ "totalRows": 4,
  "headers": [
   "Name",
   "Ticker",
@@ -10,35 +10,54 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value"
+  "Exposure Value",
+  "Coupon",
+  "Maturity Date"
  ],
  "rows": [
   {
-   "Name": "CME XRP FUTURES DIGITAL ASSETS 30/OCT/2026 XRLV6 CURNCY",
+   "Name": "CME XRP FUTURES DIGITAL ASSETS 27/NOV/2026 XRLX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "144.2584463362",
+   "Weight": "143.7436130606",
    "Market Value": "—",
-   "Shares Held": "944",
-   "Exposure Value": "61454400"
+   "Shares Held": "929",
+   "Exposure Value": "62266225",
+   "Coupon": "—",
+   "Maturity Date": "—"
   },
   {
    "Name": "XRP FUTURES DIGITAL ASSETS 27/NOV/2026 XMLX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "55.7955005820",
+   "Weight": "55.9435949866",
    "Market Value": "—",
    "Shares Held": "1800",
-   "Exposure Value": "23769000"
+   "Exposure Value": "24233400",
+   "Coupon": "—",
+   "Maturity Date": "—"
+  },
+  {
+   "Name": "TREASURY BILL",
+   "Ticker": "-",
+   "Identifier": "BNZJKH9",
+   "Weight": "—",
+   "Market Value": "159879521.6",
+   "Shares Held": "160000000",
+   "Exposure Value": "—",
+   "Coupon": "0",
+   "Maturity Date": "2026-11-05"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "42600209.25",
-   "Shares Held": "42600209.25",
-   "Exposure Value": "—"
+   "Market Value": "-116561962.18",
+   "Shares Held": "-116561962.18",
+   "Exposure Value": "—",
+   "Coupon": "—",
+   "Maturity Date": "—"
   }
  ]
 }

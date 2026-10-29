@@ -2,7 +2,7 @@
  "ticker": "DDM",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5120,
+ "totalRows": 5123,
  "headers": [
   "Date",
   "NAV",
@@ -729,6 +729,24 @@
    "NAV": "64.1285",
    "Shares Outstanding": "8000000",
    "Total Net Assets": "513028000"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "64.5027",
+   "Shares Outstanding": "8000000",
+   "Total Net Assets": "516021600"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "64.5427",
+   "Shares Outstanding": "8000000",
+   "Total Net Assets": "516341600"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "64.7964",
+   "Shares Outstanding": "8000000",
+   "Total Net Assets": "518371200"
   }
  ]
 }

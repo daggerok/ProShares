@@ -2,7 +2,7 @@
  "ticker": "SSO",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5120,
+ "totalRows": 5123,
  "headers": [
   "Date",
   "NAV",
@@ -729,6 +729,24 @@
    "NAV": "68.5354",
    "Shares Outstanding": "124250000",
    "Total Net Assets": "8515523450"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "69.4855",
+   "Shares Outstanding": "124250000",
+   "Total Net Assets": "8633573375"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "70.2946",
+   "Shares Outstanding": "124850000",
+   "Total Net Assets": "8776280810"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "70.6931",
+   "Shares Outstanding": "124850000",
+   "Total Net Assets": "8826033535"
   }
  ]
 }

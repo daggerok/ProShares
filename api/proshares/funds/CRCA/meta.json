@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=CRCA&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/CRCA-psdlyhld.csv, as of Oct 23 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/CRCA-psdlyhld.csv, as of Oct 28 2026)",
   "historySource": "official ProShares NAV history file (ByFund/CRCA-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-10-25T02:39:00Z",
+  "catalogReadAt": "2026-10-29T20:31:24Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$18.30",
-  "value": 18.3,
-  "asOfDate": "Oct 23 2026"
+  "display": "$16.43",
+  "value": 16.43,
+  "asOfDate": "Oct 28 2026"
  },
  "marketPrice": {
-  "display": "$18.36",
-  "value": 18.36,
-  "asOfDate": "Oct 23 2026"
+  "display": "$16.46",
+  "value": 16.46,
+  "asOfDate": "Oct 28 2026"
  },
  "premiumDiscount": {
-  "display": "0.33%",
-  "value": 0.3279,
+  "display": "0.18%",
+  "value": 0.1826,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$105.89 M",
-  "value": 105889022.8872,
-  "asOfDate": "Oct 23 2026",
+  "display": "$97.18 M",
+  "value": 97184728.9962,
+  "asOfDate": "Oct 28 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 2.7628,
-  "effectiveYieldText": "2.76%",
+  "effectiveYield": 3.0773,
+  "effectiveYieldText": "3.08%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 2.7628,
-  "indicatedYieldText": "2.76%",
+  "indicatedYield": 3.0773,
+  "indicatedYieldText": "3.08%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -231,8 +231,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 9,
-  "asOfDate": "Oct 23 2026",
-  "asOf": "2026-10-23",
+  "asOfDate": "Oct 28 2026",
+  "asOf": "2026-10-28",
   "headers": [
    "Name",
    "Ticker",
@@ -242,7 +242,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/CRCA-psdlyhld.csv, as of Oct 23 2026)",
+  "source": "official ProShares daily holdings download (ByFund/CRCA-psdlyhld.csv, as of Oct 28 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -250,9 +250,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 307,
-  "asOf": "Oct 23 2026",
-  "asOfDate": "Oct 23 2026",
+  "totalRows": 310,
+  "asOf": "Oct 28 2026",
+  "asOfDate": "Oct 28 2026",
   "headers": [
    "Date",
    "NAV",

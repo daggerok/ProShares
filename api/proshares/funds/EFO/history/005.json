@@ -2,7 +2,7 @@
  "ticker": "EFO",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4377,
+ "totalRows": 4380,
  "headers": [
   "Date",
   "NAV",
@@ -2271,6 +2271,24 @@
    "NAV": "69.3737",
    "Shares Outstanding": "355000",
    "Total Net Assets": "24627663.5"
+  },
+  {
+   "Date": "Oct 26 2026",
+   "NAV": "69.7429",
+   "Shares Outstanding": "355000",
+   "Total Net Assets": "24758729.5"
+  },
+  {
+   "Date": "Oct 27 2026",
+   "NAV": "70.6563",
+   "Shares Outstanding": "355000",
+   "Total Net Assets": "25082986.5"
+  },
+  {
+   "Date": "Oct 28 2026",
+   "NAV": "70.764",
+   "Shares Outstanding": "355000",
+   "Total Net Assets": "25121220"
   }
  ]
 }
