@@ -2,7 +2,7 @@
  "ticker": "MYY",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5123,
+ "totalRows": 5125,
  "headers": [
   "Date",
   "NAV",
@@ -747,6 +747,18 @@
    "NAV": "15.8224",
    "Shares Outstanding": "268670",
    "Total Net Assets": "4250956.7408"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "15.6374",
+   "Shares Outstanding": "268670",
+   "Total Net Assets": "4201253.3458"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "15.8313",
+   "Shares Outstanding": "268670",
+   "Total Net Assets": "4253347.8771"
   }
  ]
 }

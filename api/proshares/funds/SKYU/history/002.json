@@ -2,7 +2,7 @@
  "ticker": "SKYU",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1452,
+ "totalRows": 1454,
  "headers": [
   "Date",
   "NAV",
@@ -2721,6 +2721,18 @@
    "NAV": "56.5521",
    "Shares Outstanding": "75000",
    "Total Net Assets": "4241464.0521"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "53.4459",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "4008495.9459"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "48.6285",
+   "Shares Outstanding": "75000",
+   "Total Net Assets": "3647186.1285"
   }
  ]
 }

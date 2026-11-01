@@ -2,7 +2,7 @@
  "ticker": "UPW",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4970,
+ "totalRows": 4972,
  "headers": [
   "Date",
   "NAV",
@@ -5829,6 +5829,18 @@
    "NAV": "20.5765",
    "Shares Outstanding": "600000",
    "Total Net Assets": "12345900"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "21.2159",
+   "Shares Outstanding": "600000",
+   "Total Net Assets": "12729540"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "21.4887",
+   "Shares Outstanding": "600000",
+   "Total Net Assets": "12893220"
   }
  ]
 }

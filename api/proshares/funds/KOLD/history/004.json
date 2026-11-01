@@ -2,7 +2,7 @@
  "ticker": "KOLD",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3789,
+ "totalRows": 3791,
  "headers": [
   "Date",
   "NAV",
@@ -4743,6 +4743,18 @@
    "NAV": "31.65937087",
    "Shares Outstanding": "1633710",
    "Total Net Assets": "51722294.10276944"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "33.08374046",
+   "Shares Outstanding": "1633710",
+   "Total Net Assets": "54049303.79438752"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "33.49736558",
+   "Shares Outstanding": "1733710",
+   "Total Net Assets": "58074784.67443296"
   }
  ]
 }

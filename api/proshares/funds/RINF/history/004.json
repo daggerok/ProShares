@@ -2,7 +2,7 @@
  "ticker": "RINF",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3722,
+ "totalRows": 3724,
  "headers": [
   "Date",
   "NAV",
@@ -4341,6 +4341,18 @@
    "NAV": "32.6502",
    "Shares Outstanding": "590000",
    "Total Net Assets": "19263650.6502"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "32.4978",
+   "Shares Outstanding": "590000",
+   "Total Net Assets": "19173734.4978"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "32.3453",
+   "Shares Outstanding": "590000",
+   "Total Net Assets": "19083759.3453"
   }
  ]
 }

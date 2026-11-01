@@ -2,7 +2,7 @@
  "ticker": "QLD",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5123,
+ "totalRows": 5125,
  "headers": [
   "Date",
   "NAV",
@@ -747,6 +747,18 @@
    "NAV": "91.2744",
    "Shares Outstanding": "165500000",
    "Total Net Assets": "15105913200"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "88.7331",
+   "Shares Outstanding": "160550000",
+   "Total Net Assets": "14246099205"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "82.5643",
+   "Shares Outstanding": "161200000",
+   "Total Net Assets": "13309365160"
   }
  ]
 }

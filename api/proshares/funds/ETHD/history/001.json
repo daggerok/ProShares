@@ -2,7 +2,7 @@
  "ticker": "ETHD",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 602,
+ "totalRows": 604,
  "headers": [
   "Date",
   "NAV",
@@ -3621,6 +3621,18 @@
    "NAV": "30.5994",
    "Shares Outstanding": "1792930",
    "Total Net Assets": "54862429.245"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "31.5236",
+   "Shares Outstanding": "1862930",
+   "Total Net Assets": "58726102.53"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "34.3574",
+   "Shares Outstanding": "1882930",
+   "Total Net Assets": "64692407.395"
   }
  ]
 }

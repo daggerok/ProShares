@@ -2,7 +2,7 @@
  "ticker": "URSP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 297,
+ "totalRows": 299,
  "headers": [
   "Date",
   "NAV",
@@ -1791,6 +1791,18 @@
    "NAV": "50.2498",
    "Shares Outstanding": "810000",
    "Total Net Assets": "40702388.2498"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "51.4583",
+   "Shares Outstanding": "810000",
+   "Total Net Assets": "41681274.4583"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "50.6322",
+   "Shares Outstanding": "810000",
+   "Total Net Assets": "41012132.6322"
   }
  ]
 }

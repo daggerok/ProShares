@@ -2,7 +2,7 @@
  "ticker": "REK",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4182,
+ "totalRows": 4184,
  "headers": [
   "Date",
   "NAV",
@@ -1101,6 +1101,18 @@
    "NAV": "16.3733",
    "Shares Outstanding": "734890",
    "Total Net Assets": "12032541.6904"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "16.0055",
+   "Shares Outstanding": "654890",
+   "Total Net Assets": "10481809.884"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "15.9802",
+   "Shares Outstanding": "654890",
+   "Total Net Assets": "10465241.2176"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "SDP",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4970,
+ "totalRows": 4972,
  "headers": [
   "Date",
   "NAV",
@@ -5829,6 +5829,18 @@
    "NAV": "24.1859",
    "Shares Outstanding": "83410",
    "Total Net Assets": "2017418.4767"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "23.4393",
+   "Shares Outstanding": "83410",
+   "Total Net Assets": "1955142.3309"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "23.1425",
+   "Shares Outstanding": "83410",
+   "Total Net Assets": "1930385.3525"
   }
  ]
 }

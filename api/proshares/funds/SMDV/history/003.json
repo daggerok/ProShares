@@ -2,7 +2,7 @@
  "ticker": "SMDV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2952,
+ "totalRows": 2954,
  "headers": [
   "Date",
   "NAV",
@@ -5721,6 +5721,18 @@
    "NAV": "73.9282",
    "Shares Outstanding": "8990000",
    "Total Net Assets": "664614591.9282"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "74.7406",
+   "Shares Outstanding": "8990000",
+   "Total Net Assets": "671918068.7406"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "74.312",
+   "Shares Outstanding": "8990000",
+   "Total Net Assets": "668064954.312"
   }
  ]
 }

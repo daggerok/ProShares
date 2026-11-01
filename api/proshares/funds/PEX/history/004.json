@@ -2,7 +2,7 @@
  "ticker": "PEX",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3440,
+ "totalRows": 3442,
  "headers": [
   "Date",
   "NAV",
@@ -2649,6 +2649,18 @@
    "NAV": "22.7634",
    "Shares Outstanding": "460000",
    "Total Net Assets": "10471186.7634"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "23.1723",
+   "Shares Outstanding": "460000",
+   "Total Net Assets": "10659281.1723"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "23.1379",
+   "Shares Outstanding": "460000",
+   "Total Net Assets": "10643457.1379"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "TMDV",
  "page": 2,
  "pageSize": 1000,
- "totalRows": 1754,
+ "totalRows": 1756,
  "headers": [
   "Date",
   "NAV",
@@ -4533,6 +4533,18 @@
    "NAV": "52.3147",
    "Shares Outstanding": "90000",
    "Total Net Assets": "4708375.3147"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "53.0961",
+   "Shares Outstanding": "90000",
+   "Total Net Assets": "4778702.0961"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "53.1957",
+   "Shares Outstanding": "90000",
+   "Total Net Assets": "4787666.1957"
   }
  ]
 }

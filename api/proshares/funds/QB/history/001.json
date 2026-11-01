@@ -2,7 +2,7 @@
  "ticker": "QB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 341,
+ "totalRows": 343,
  "headers": [
   "Date",
   "NAV",
@@ -2055,6 +2055,18 @@
    "NAV": "48.4949",
    "Shares Outstanding": "80000",
    "Total Net Assets": "3879640.4949"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "48.3801",
+   "Shares Outstanding": "80000",
+   "Total Net Assets": "3870456.3801"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "47.6369",
+   "Shares Outstanding": "80000",
+   "Total Net Assets": "3810999.6369"
   }
  ]
 }

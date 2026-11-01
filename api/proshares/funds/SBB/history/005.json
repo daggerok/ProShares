@@ -2,7 +2,7 @@
  "ticker": "SBB",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4974,
+ "totalRows": 4976,
  "headers": [
   "Date",
   "NAV",
@@ -5853,6 +5853,18 @@
    "NAV": "23.4885",
    "Shares Outstanding": "161830",
    "Total Net Assets": "3801026.5125"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "23.1133",
+   "Shares Outstanding": "161830",
+   "Total Net Assets": "3740309.7725"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "23.4008",
+   "Shares Outstanding": "161830",
+   "Total Net Assets": "3786834.46"
   }
  ]
 }

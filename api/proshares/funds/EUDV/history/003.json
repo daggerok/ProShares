@@ -2,7 +2,7 @@
  "ticker": "EUDV",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2801,
+ "totalRows": 2803,
  "headers": [
   "Date",
   "NAV",
@@ -4815,6 +4815,18 @@
    "NAV": "54.8096",
    "Shares Outstanding": "155000",
    "Total Net Assets": "8495542.8096"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "55.4657",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "8597238.9657"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "55.8234",
+   "Shares Outstanding": "155000",
+   "Total Net Assets": "8652682.8234"
   }
  ]
 }

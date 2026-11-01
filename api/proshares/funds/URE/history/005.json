@@ -2,7 +2,7 @@
  "ticker": "URE",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4970,
+ "totalRows": 4972,
  "headers": [
   "Date",
   "NAV",
@@ -5829,6 +5829,18 @@
    "NAV": "62.1337",
    "Shares Outstanding": "798740",
    "Total Net Assets": "49628920.0728"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "64.9413",
+   "Shares Outstanding": "788740",
+   "Total Net Assets": "51222060.7272"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "65.187",
+   "Shares Outstanding": "788740",
+   "Total Net Assets": "51415855.128"
   }
  ]
 }

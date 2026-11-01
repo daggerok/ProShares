@@ -2,7 +2,7 @@
  "ticker": "EMTY",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2250,
+ "totalRows": 2252,
  "headers": [
   "Date",
   "NAV",
@@ -1509,6 +1509,18 @@
    "NAV": "23.2681",
    "Shares Outstanding": "124990",
    "Total Net Assets": "2908186.7466"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "22.8216",
+   "Shares Outstanding": "124990",
+   "Total Net Assets": "2852380.4976"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "22.8185",
+   "Shares Outstanding": "124990",
+   "Total Net Assets": "2851993.041"
   }
  ]
 }

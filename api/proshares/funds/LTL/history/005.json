@@ -2,7 +2,7 @@
  "ticker": "LTL",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4682,
+ "totalRows": 4684,
  "headers": [
   "Date",
   "NAV",
@@ -4101,6 +4101,18 @@
    "NAV": "20.4596",
    "Shares Outstanding": "190000",
    "Total Net Assets": "3887324"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "19.7033",
+   "Shares Outstanding": "190000",
+   "Total Net Assets": "3743627"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "19.1791",
+   "Shares Outstanding": "190000",
+   "Total Net Assets": "3644029"
   }
  ]
 }

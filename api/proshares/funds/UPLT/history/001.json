@@ -2,7 +2,7 @@
  "ticker": "UPLT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 134,
+ "totalRows": 136,
  "headers": [
   "Date",
   "NAV",
@@ -813,6 +813,18 @@
    "NAV": "18.0556",
    "Shares Outstanding": "20000",
    "Total Net Assets": "361130.0556"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "16.7231",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "334478.7231"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "15.5138",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "310291.5138"
   }
  ]
 }

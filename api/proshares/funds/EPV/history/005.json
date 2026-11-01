@@ -2,7 +2,7 @@
  "ticker": "EPV",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4370,
+ "totalRows": 4372,
  "headers": [
   "Date",
   "NAV",
@@ -2229,6 +2229,18 @@
    "NAV": "18.6709",
    "Shares Outstanding": "582370",
    "Total Net Assets": "10873278.6785"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "18.3199",
+   "Shares Outstanding": "582370",
+   "Total Net Assets": "10668868.5635"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "18.5811",
+   "Shares Outstanding": "582370",
+   "Total Net Assets": "10820982.3015"
   }
  ]
 }

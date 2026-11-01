@@ -2,7 +2,7 @@
  "ticker": "VIXM",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3979,
+ "totalRows": 3981,
  "headers": [
   "Date",
   "NAV",
@@ -5883,6 +5883,18 @@
    "NAV": "13.14419748",
    "Shares Outstanding": "3412400",
    "Total Net Assets": "44853298.91334444"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "12.94641509",
+   "Shares Outstanding": "3412400",
+   "Total Net Assets": "44178385.69236127"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "13.23930675",
+   "Shares Outstanding": "3412400",
+   "Total Net Assets": "45177850.07162025"
   }
  ]
 }

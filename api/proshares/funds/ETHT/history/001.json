@@ -2,7 +2,7 @@
  "ticker": "ETHT",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 602,
+ "totalRows": 604,
  "headers": [
   "Date",
   "NAV",
@@ -3621,6 +3621,18 @@
    "NAV": "14.8023",
    "Shares Outstanding": "16339900",
    "Total Net Assets": "241868072.1654"
+  },
+  {
+   "Date": "Oct 29 2026",
+   "NAV": "14.3504",
+   "Shares Outstanding": "16339900",
+   "Total Net Assets": "234484072.2592"
+  },
+  {
+   "Date": "Oct 30 2026",
+   "NAV": "13.0477",
+   "Shares Outstanding": "16339900",
+   "Total Net Assets": "213198087.1346"
   }
  ]
 }
