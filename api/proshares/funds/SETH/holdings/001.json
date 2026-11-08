@@ -2,7 +2,7 @@
  "ticker": "SETH",
  "page": 1,
  "pageSize": 250,
- "totalRows": 3,
+ "totalRows": 2,
  "headers": [
   "Name",
   "Ticker",
@@ -10,43 +10,26 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value",
-  "Coupon",
-  "Maturity Date"
+  "Exposure Value"
  ],
  "rows": [
   {
    "Name": "CME ETHER FUTURE DIGITAL ASSETS 27/NOV/2026 DCRX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-100.1755468971",
+   "Weight": "-99.0979422147",
    "Market Value": "—",
-   "Shares Held": "-75",
-   "Exposure Value": "-8390625",
-   "Coupon": "—",
-   "Maturity Date": "—"
-  },
-  {
-   "Name": "TREASURY BILL",
-   "Ticker": "-",
-   "Identifier": "BNZJKH9",
-   "Weight": "—",
-   "Market Value": "4998387",
-   "Shares Held": "5000000",
-   "Exposure Value": "—",
-   "Coupon": "0",
-   "Maturity Date": "2026-11-05"
+   "Shares Held": "-74",
+   "Exposure Value": "-8251000"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "3377534.33",
-   "Shares Held": "3377534.33",
-   "Exposure Value": "—",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Market Value": "8326106.29",
+   "Shares Held": "8326106.29",
+   "Exposure Value": "—"
   }
  ]
 }

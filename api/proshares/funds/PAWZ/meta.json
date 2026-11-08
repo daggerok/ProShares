@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=PAWZ&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/PAWZ-psdlyhld.csv, as of Oct 30 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/PAWZ-psdlyhld.csv, as of Nov 06 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PAWZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-01T03:41:24Z",
+  "catalogReadAt": "2026-11-08T03:45:29Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$52.22",
-  "value": 52.22,
-  "asOfDate": "Oct 30 2026"
+  "display": "$54.82",
+  "value": 54.82,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$52.05",
-  "value": 52.05,
-  "asOfDate": "Oct 30 2026"
+  "display": "$54.76",
+  "value": 54.76,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "-0.33%",
-  "value": -0.3255,
+  "display": "-0.11%",
+  "value": -0.1094,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$32.63 M",
-  "value": 32634927.2158,
-  "asOfDate": "Oct 30 2026",
+  "display": "$34.26 M",
+  "value": 34262554.82,
+  "asOfDate": "Nov 06 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 0.77,
   "yield12MText": "0.77%",
-  "indicatedYield": 0.4319,
-  "indicatedYieldText": "0.43%",
+  "indicatedYield": 0.4114,
+  "indicatedYieldText": "0.41%",
   "secYield": 0.85,
   "secYieldText": "0.85%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -85,43 +85,43 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Sep 30 2026",
+   "asOfDate": "Oct 31 2026",
    "inceptionDate": "Nov 06 2018",
-   "mo1": -9.89,
-   "mo3": -1.62,
-   "mo6": -7.68,
-   "ytd": -13.62,
-   "yr1": -15.59,
-   "yr3": 2.36,
-   "yr5": -9.03,
+   "mo1": 11.05,
+   "mo3": 3.51,
+   "mo6": 0.63,
+   "ytd": -4.07,
+   "yr1": -2.62,
+   "yr3": 7.89,
+   "yr5": -8.44,
    "yr10": null,
-   "sinceInception": 2.55,
-   "mo1Text": "-9.89%",
-   "ytdText": "-13.62%",
-   "yr1Text": "-15.59%",
-   "yr3Text": "2.36%",
-   "yr5Text": "-9.03%",
+   "sinceInception": 3.88,
+   "mo1Text": "11.05%",
+   "ytdText": "-4.07%",
+   "yr1Text": "-2.62%",
+   "yr3Text": "7.89%",
+   "yr5Text": "-8.44%",
    "yr10Text": "—",
-   "sinceInceptionText": "2.55%",
+   "sinceInceptionText": "3.88%",
    "marketPrice": {
-    "asOfDate": "Sep 30 2026",
+    "asOfDate": "Oct 31 2026",
     "inceptionDate": "Nov 06 2018",
-    "mo1": -9.81,
-    "mo3": -1.78,
-    "mo6": -8.04,
-    "ytd": -13.56,
-    "yr1": -15.58,
-    "yr3": 2.43,
-    "yr5": -9.03,
+    "mo1": 10.77,
+    "mo3": 3.38,
+    "mo6": 0.49,
+    "ytd": -4.26,
+    "yr1": -3.03,
+    "yr3": 7.75,
+    "yr5": -8.54,
     "yr10": null,
-    "sinceInception": 2.55,
-    "mo1Text": "-9.81%",
-    "ytdText": "-13.56%",
-    "yr1Text": "-15.58%",
-    "yr3Text": "2.43%",
-    "yr5Text": "-9.03%",
+    "sinceInception": 3.84,
+    "mo1Text": "10.77%",
+    "ytdText": "-4.26%",
+    "yr1Text": "-3.03%",
+    "yr3Text": "7.75%",
+    "yr5Text": "-8.54%",
     "yr10Text": "—",
-    "sinceInceptionText": "2.55%"
+    "sinceInceptionText": "3.84%"
    }
   },
   "quarterEnd": {
@@ -456,8 +456,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 28,
-  "asOfDate": "Oct 30 2026",
-  "asOf": "2026-10-30",
+  "asOfDate": "Nov 06 2026",
+  "asOf": "2026-11-06",
   "headers": [
    "Name",
    "Ticker",
@@ -466,7 +466,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/PAWZ-psdlyhld.csv, as of Oct 30 2026)",
+  "source": "official ProShares daily holdings download (ByFund/PAWZ-psdlyhld.csv, as of Nov 06 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -474,9 +474,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2007,
-  "asOf": "Oct 30 2026",
-  "asOfDate": "Oct 30 2026",
+  "totalRows": 2012,
+  "asOf": "Nov 06 2026",
+  "asOfDate": "Nov 06 2026",
   "headers": [
    "Date",
    "NAV",
@@ -492,11 +492,9 @@
  },
  "officialMetrics": {
   "characteristics": {
-   "Number of Holdings": "29",
-   "Price/Book Ratio": "3.997",
-   "Avg. Market Cap": "$34.60 billion"
+   "Number of Holdings": "29"
   },
-  "characteristicsAsOf": "Sep 30 2026",
+  "characteristicsAsOf": "Nov 06 2026",
   "index": {
    "Total Number of Holdings": "27",
    "Price/Earnings Ratio": "17.73",
@@ -517,44 +515,44 @@
     "label": "Top 10 Index Holdings",
     "rows": [
      {
+      "Company": "IDEXX LABORATORIES INC",
+      "Weight": 11.442573
+     },
+     {
       "Company": "CHEWY INC - CLASS A",
-      "Weight": 10.340537
+      "Weight": 10.436846
      },
      {
       "Company": "ZOETIS INC",
-      "Weight": 9.808176
-     },
-     {
-      "Company": "IDEXX LABORATORIES INC",
-      "Weight": 9.795027000000001
+      "Weight": 9.30474
      },
      {
       "Company": "FRESHPET INC",
-      "Weight": 9.696764
+      "Weight": 8.810574
      },
      {
       "Company": "VIRBAC SA",
-      "Weight": 7.524967
-     },
-     {
-      "Company": "PETS AT HOME GROUP PLC",
-      "Weight": 4.843954999999999
+      "Weight": 7.409064999999999
      },
      {
       "Company": "TRUPANION INC",
-      "Weight": 4.788603999999999
+      "Weight": 5.563267000000001
+     },
+     {
+      "Company": "PETS AT HOME GROUP PLC",
+      "Weight": 4.915059
      },
      {
       "Company": "CVS GROUP PLC",
-      "Weight": 4.745431
-     },
-     {
-      "Company": "NESTLE SA-REG",
-      "Weight": 4.653455
+      "Weight": 4.657926
      },
      {
       "Company": "PET VALU HOLDINGS LTD",
-      "Weight": 4.520608999999999
+      "Weight": 4.586196
+     },
+     {
+      "Company": "NESTLE SA-REG",
+      "Weight": 4.513931
      }
     ]
    },
@@ -563,35 +561,35 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 65.099784
+      "Weight": 65.75612199999999
      },
      {
       "Country": "United Kingdom",
-      "Weight": 9.638743
+      "Weight": 9.622997
      },
      {
       "Country": "France",
-      "Weight": 7.5636980000000005
-     },
-     {
-      "Country": "Switzerland",
-      "Weight": 4.6774070000000005
+      "Weight": 7.447772
      },
      {
       "Country": "Canada",
-      "Weight": 4.543876
+      "Weight": 4.610156
+     },
+     {
+      "Country": "Switzerland",
+      "Weight": 4.537513
      },
      {
       "Country": "Sweden",
-      "Weight": 4.048552
+      "Weight": 3.9049470000000004
      },
      {
       "Country": "Japan",
-      "Weight": 2.540956
+      "Weight": 2.294013
      },
      {
       "Country": "Thailand",
-      "Weight": 1.886984
+      "Weight": 1.82648
      }
     ]
    },
@@ -600,35 +598,35 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 65.09978412606301
+      "Weight": 65.75612232774344
      },
      {
       "Currency": "GBP",
-      "Weight": 9.638743259027219
+      "Weight": 9.622996910890373
      },
      {
       "Currency": "EUR",
-      "Weight": 7.563697948261787
-     },
-     {
-      "Currency": "CHF",
-      "Weight": 4.677406900448133
+      "Weight": 7.447771979815725
      },
      {
       "Currency": "CAD",
-      "Weight": 4.543876367227697
+      "Weight": 4.610155710485189
+     },
+     {
+      "Currency": "CHF",
+      "Weight": 4.5375132504224815
      },
      {
       "Currency": "SEK",
-      "Weight": 4.048551778561158
+      "Weight": 3.9049471776277738
      },
      {
       "Currency": "JPY",
-      "Weight": 2.5409556997518163
+      "Weight": 2.294013069837585
      },
      {
       "Currency": "THB",
-      "Weight": 1.8869839206591739
+      "Weight": 1.8264795731774388
      }
     ]
    },
@@ -637,27 +635,27 @@
     "rows": [
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 22.846114895606092
-     },
-     {
-      "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 22.03230025997414
+      "Weight": 23.286863202933947
      },
      {
       "Sector": "Health Care Equipment & Servic",
-      "Weight": 21.009514763180245
+      "Weight": 22.329535468908283
+     },
+     {
+      "Sector": "Pharmaceuticals, Biotechnology",
+      "Weight": 21.163493667118292
      },
      {
       "Sector": "Food, Beverage & Tobacco",
-      "Weight": 17.59699110470446
+      "Weight": 16.47236684955073
      },
      {
       "Sector": "Household & Personal Products",
-      "Weight": 8.971287532715253
+      "Weight": 8.660590472754402
      },
      {
       "Sector": "Insurance",
-      "Weight": 7.031721218189089
+      "Weight": 7.567443646541773
      }
     ]
    }

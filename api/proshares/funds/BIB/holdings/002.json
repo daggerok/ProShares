@@ -2,7 +2,7 @@
  "ticker": "BIB",
  "page": 2,
  "pageSize": 250,
- "totalRows": 256,
+ "totalRows": 254,
  "headers": [
   "Name",
   "Ticker",
@@ -13,24 +13,6 @@
   "Exposure Value"
  ],
  "rows": [
-  {
-   "Name": "EYEPOINT INC",
-   "Ticker": "EYPT",
-   "Identifier": "BMGS7L1",
-   "Weight": "0.0011567994",
-   "Market Value": "1199.89",
-   "Shares Held": "3444",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "AARDVARK THERAPEUTICS INC",
-   "Ticker": "AARD",
-   "Identifier": "BTXQTX3",
-   "Weight": "0.0011472645",
-   "Market Value": "1190",
-   "Shares Held": "875",
-   "Exposure Value": "—"
-  },
   {
    "Name": "CARTESIAN THERAPEUTICS-CVR",
    "Ticker": "-",
@@ -63,8 +45,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "24021075.47",
-   "Shares Held": "24021075.47",
+   "Market Value": "21402806.01",
+   "Shares Held": "21402806.01",
    "Exposure Value": "—"
   }
  ]

@@ -2,7 +2,7 @@
  "ticker": "BITI",
  "page": 1,
  "pageSize": 250,
- "totalRows": 4,
+ "totalRows": 3,
  "headers": [
   "Name",
   "Ticker",
@@ -10,54 +10,35 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value",
-  "Coupon",
-  "Maturity Date"
+  "Exposure Value"
  ],
  "rows": [
   {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 27/NOV/2026 BTCX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-100.5874586567",
+   "Weight": "-99.8023146733",
    "Market Value": "—",
-   "Shares Held": "-203",
-   "Exposure Value": "-78124550",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Shares Held": "-196",
+   "Exposure Value": "-74435900"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "31037200",
-   "Shares Held": "310000",
-   "Exposure Value": "—",
-   "Coupon": "—",
-   "Maturity Date": "—"
-  },
-  {
-   "Name": "TREASURY BILL",
-   "Ticker": "-",
-   "Identifier": "BNZJKH9",
-   "Weight": "—",
-   "Market Value": "14995161",
-   "Shares Held": "15000000",
-   "Exposure Value": "—",
-   "Coupon": "0",
-   "Maturity Date": "2026-11-05"
+   "Market Value": "46059800",
+   "Shares Held": "460000",
+   "Exposure Value": "—"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "31635919.96",
-   "Shares Held": "31635919.96",
-   "Exposure Value": "—",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Market Value": "28523540.32",
+   "Shares Held": "28523540.32",
+   "Exposure Value": "—"
   }
  ]
 }

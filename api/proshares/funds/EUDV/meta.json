@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=EUDV&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/EUDV-psdlyhld.csv, as of Oct 30 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/EUDV-psdlyhld.csv, as of Nov 06 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EUDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-01T03:41:24Z",
+  "catalogReadAt": "2026-11-08T03:45:29Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$55.82",
-  "value": 55.82,
-  "asOfDate": "Oct 30 2026"
+  "display": "$56.03",
+  "value": 56.03,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$55.63",
-  "value": 55.63,
-  "asOfDate": "Oct 30 2026"
+  "display": "$55.71",
+  "value": 55.71,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "-0.34%",
-  "value": -0.3404,
+  "display": "-0.57%",
+  "value": -0.5711,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$8.65 M",
-  "value": 8652682.8234,
-  "asOfDate": "Oct 30 2026",
+  "display": "$8.68 M",
+  "value": 8684427.0282,
+  "asOfDate": "Nov 06 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 2.11,
   "yield12MText": "2.11%",
-  "indicatedYield": 0.927,
-  "indicatedYieldText": "0.93%",
+  "indicatedYield": 0.9235,
+  "indicatedYieldText": "0.92%",
   "secYield": 2.24,
   "secYieldText": "2.24%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -85,43 +85,43 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Sep 30 2026",
+   "asOfDate": "Oct 31 2026",
    "inceptionDate": "Sep 10 2015",
-   "mo1": -6.1,
-   "mo3": -1.66,
-   "mo6": 4.37,
-   "ytd": 0.7,
-   "yr1": 1.04,
-   "yr3": 9.17,
-   "yr5": 2.05,
-   "yr10": 5.36,
-   "sinceInception": 4.47,
-   "mo1Text": "-6.10%",
-   "ytdText": "0.70%",
-   "yr1Text": "1.04%",
-   "yr3Text": "9.17%",
-   "yr5Text": "2.05%",
-   "yr10Text": "5.36%",
-   "sinceInceptionText": "4.47%",
+   "mo1": 7.61,
+   "mo3": 3.9,
+   "mo6": 5.97,
+   "ytd": 8.37,
+   "yr1": 10.11,
+   "yr3": 13.42,
+   "yr5": 2.76,
+   "yr10": 6.98,
+   "sinceInception": 5.13,
+   "mo1Text": "7.61%",
+   "ytdText": "8.37%",
+   "yr1Text": "10.11%",
+   "yr3Text": "13.42%",
+   "yr5Text": "2.76%",
+   "yr10Text": "6.98%",
+   "sinceInceptionText": "5.13%",
    "marketPrice": {
-    "asOfDate": "Sep 30 2026",
+    "asOfDate": "Oct 31 2026",
     "inceptionDate": "Sep 10 2015",
-    "mo1": -6.43,
-    "mo3": -1.96,
-    "mo6": 2.29,
-    "ytd": 0.48,
-    "yr1": 0.2,
-    "yr3": 9.05,
-    "yr5": 1.97,
-    "yr10": 5.21,
-    "sinceInception": 4.42,
-    "mo1Text": "-6.43%",
-    "ytdText": "0.48%",
-    "yr1Text": "0.20%",
-    "yr3Text": "9.05%",
-    "yr5Text": "1.97%",
-    "yr10Text": "5.21%",
-    "sinceInceptionText": "4.42%"
+    "mo1": 7.81,
+    "mo3": 3.35,
+    "mo6": 5.31,
+    "ytd": 8.32,
+    "yr1": 9.55,
+    "yr3": 13.11,
+    "yr5": 2.56,
+    "yr10": 6.93,
+    "sinceInception": 5.1,
+    "mo1Text": "7.81%",
+    "ytdText": "8.32%",
+    "yr1Text": "9.55%",
+    "yr3Text": "13.11%",
+    "yr5Text": "2.56%",
+    "yr10Text": "6.93%",
+    "sinceInceptionText": "5.10%"
    }
   },
   "quarterEnd": {
@@ -573,8 +573,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 46,
-  "asOfDate": "Oct 30 2026",
-  "asOf": "2026-10-30",
+  "asOfDate": "Nov 06 2026",
+  "asOf": "2026-11-06",
   "headers": [
    "Name",
    "Ticker",
@@ -583,7 +583,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/EUDV-psdlyhld.csv, as of Oct 30 2026)",
+  "source": "official ProShares daily holdings download (ByFund/EUDV-psdlyhld.csv, as of Nov 06 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -591,9 +591,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2803,
-  "asOf": "Oct 30 2026",
-  "asOfDate": "Oct 30 2026",
+  "totalRows": 2808,
+  "asOf": "Nov 06 2026",
+  "asOfDate": "Nov 06 2026",
   "headers": [
    "Date",
    "NAV",
@@ -609,11 +609,11 @@
  },
  "officialMetrics": {
   "characteristics": {
-   "Number of Holdings": "45",
-   "Price/Book Ratio": "3.48",
-   "Avg. Market Cap": "$74.56 billion"
+   "Number of Holdings": "47",
+   "Price/Book Ratio": "3.615",
+   "Avg. Market Cap": "$78.67 billion"
   },
-  "characteristicsAsOf": "Sep 30 2026",
+  "characteristicsAsOf": "Nov 06 2026",
   "index": {
    "Total Number of Holdings": "45",
    "Price/Earnings Ratio": "18.33",
@@ -777,56 +777,56 @@
     "label": "Fund Country Weighting",
     "rows": [
      {
-      "Country": "United Kingdom",
-      "Weight": 22.713102
+      "Country": "Switzerland",
+      "Weight": 22.348917
      },
      {
-      "Country": "Switzerland",
-      "Weight": 22.075418
+      "Country": "United Kingdom",
+      "Weight": 22.266173000000002
      },
      {
       "Country": "Belgium",
-      "Weight": 12.106157
+      "Weight": 12.350089
      },
      {
       "Country": "Germany",
-      "Weight": 9.505268000000001
+      "Weight": 9.189825
      },
      {
       "Country": "Italy",
-      "Weight": 6.275042999999999
+      "Weight": 6.453754
      },
      {
       "Country": "France",
-      "Weight": 6.076841
+      "Weight": 6.173507000000001
      },
      {
       "Country": "Netherlands",
-      "Weight": 4.5242379999999995
+      "Weight": 4.413371
      },
      {
       "Country": "Denmark",
-      "Weight": 4.1414159999999995
+      "Weight": 4.263505
      },
      {
       "Country": "Spain",
-      "Weight": 4.093027
+      "Weight": 4.048692
      },
      {
       "Country": "Ireland",
-      "Weight": 2.5070539999999997
+      "Weight": 2.48485
      },
      {
       "Country": "Norway",
-      "Weight": 2.156075
+      "Weight": 2.138191
      },
      {
       "Country": "Finland",
-      "Weight": 1.972947
+      "Weight": 1.9893729999999998
      },
      {
       "Country": "Sweden",
-      "Weight": 1.853415
+      "Weight": 1.879753
      }
     ]
    },
@@ -835,27 +835,27 @@
     "rows": [
      {
       "Currency": "EUR",
-      "Weight": 47.06057438408997
-     },
-     {
-      "Currency": "GBP",
-      "Weight": 22.713102298104456
+      "Weight": 47.10346075275195
      },
      {
       "Currency": "CHF",
-      "Weight": 22.07541793838532
+      "Weight": 22.34891682345373
+     },
+     {
+      "Currency": "GBP",
+      "Weight": 22.26617321242188
      },
      {
       "Currency": "DKK",
-      "Weight": 4.141415679661228
+      "Weight": 4.263505269749275
      },
      {
       "Currency": "NOK",
-      "Weight": 2.1560750141289713
+      "Weight": 2.1381912971980537
      },
      {
       "Currency": "SEK",
-      "Weight": 1.853414685630049
+      "Weight": 1.879752644425107
      }
     ]
    },
@@ -864,39 +864,39 @@
     "rows": [
      {
       "Sector": "Industrials",
-      "Weight": 19.048824579087867
+      "Weight": 18.70811131481671
      },
      {
       "Sector": "Health Care",
-      "Weight": 18.100540574574925
+      "Weight": 18.402905710808668
      },
      {
       "Sector": "Financials",
-      "Weight": 13.424618055311441
+      "Weight": 13.425049474115397
      },
      {
       "Sector": "Information Technology",
-      "Weight": 13.280285437930766
+      "Weight": 12.665798919350344
      },
      {
       "Sector": "Materials",
-      "Weight": 11.225636327301935
+      "Weight": 11.596180762880708
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 9.042670804427688
+      "Weight": 9.170405040472707
      },
      {
       "Sector": "Utilities",
-      "Weight": 8.800214442882996
+      "Weight": 8.979693713033072
      },
      {
       "Sector": "Communication Services",
-      "Weight": 4.089763182682884
+      "Weight": 4.088911108754118
      },
      {
       "Sector": "Real Estate",
-      "Weight": 2.0366440699871906
+      "Weight": 2.0264848885612188
      }
     ]
    }

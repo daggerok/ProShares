@@ -2,7 +2,7 @@
  "ticker": "URSP",
  "page": 3,
  "pageSize": 250,
- "totalRows": 507,
+ "totalRows": 508,
  "headers": [
   "Name",
   "Ticker",
@@ -14,57 +14,66 @@
  ],
  "rows": [
   {
-   "Name": "FOX CORP - CLASS A",
-   "Ticker": "FOXA",
-   "Identifier": "BJJMGL2",
-   "Weight": "0.0689282970",
-   "Market Value": "28268.28",
-   "Shares Held": "447",
-   "Exposure Value": "—"
-  },
-  {
    "Name": "INTEL CORP",
    "Ticker": "INTC",
    "Identifier": "2463247",
-   "Weight": "0.0687887252",
-   "Market Value": "28211.04",
-   "Shares Held": "429",
+   "Weight": "0.0614744202",
+   "Market Value": "21611.52",
+   "Shares Held": "384",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LUMENTUM HOLDINGS INC",
+   "Ticker": "LITE",
+   "Identifier": "BYM9ZP2",
+   "Weight": "0.0551530983",
+   "Market Value": "19389.24",
+   "Shares Held": "36",
    "Exposure Value": "—"
   },
   {
    "Name": "ALPHABET INC-CL A",
    "Ticker": "GOOGL",
    "Identifier": "BYVY8G0",
-   "Weight": "0.0511763396",
-   "Market Value": "20988",
-   "Shares Held": "75",
+   "Weight": "0.0542741982",
+   "Market Value": "19080.26",
+   "Shares Held": "67",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "SEAGATE TECHNOLOGY HOLDINGS",
+   "Ticker": "STX",
+   "Identifier": "BKVD2N4",
+   "Weight": "0.0537631232",
+   "Market Value": "18900.59",
+   "Shares Held": "41",
    "Exposure Value": "—"
   },
   {
    "Name": "FOX CORP - CLASS B",
    "Ticker": "FOX",
    "Identifier": "BJJMGY5",
-   "Weight": "0.0417959614",
-   "Market Value": "17141",
-   "Shares Held": "305",
+   "Weight": "0.0465434731",
+   "Market Value": "16362.5",
+   "Shares Held": "275",
    "Exposure Value": "—"
   },
   {
    "Name": "ALPHABET INC-CL C",
    "Ticker": "GOOG",
    "Identifier": "BYY88Y7",
-   "Weight": "0.0400256619",
-   "Market Value": "16414.98",
-   "Shares Held": "59",
+   "Weight": "0.0419975305",
+   "Market Value": "14764.36",
+   "Shares Held": "52",
    "Exposure Value": "—"
   },
   {
    "Name": "NEWS CORP - CLASS B",
    "Ticker": "NWS",
    "Identifier": "BBGVT51",
-   "Weight": "0.0290226025",
-   "Market Value": "11902.5",
-   "Shares Held": "375",
+   "Weight": "0.0277611586",
+   "Market Value": "9759.52",
+   "Shares Held": "337",
    "Exposure Value": "—"
   },
   {
@@ -72,8 +81,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "17652725.78",
-   "Shares Held": "17652725.78",
+   "Market Value": "14346962.1",
+   "Shares Held": "14346962.1",
    "Exposure Value": "—"
   }
  ]

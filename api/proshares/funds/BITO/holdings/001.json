@@ -2,7 +2,7 @@
  "ticker": "BITO",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 5,
  "headers": [
   "Name",
   "Ticker",
@@ -10,76 +10,53 @@
   "Weight",
   "Market Value",
   "Shares Held",
-  "Exposure Value",
-  "Coupon",
-  "Maturity Date"
+  "Exposure Value"
  ],
  "rows": [
   {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 27/NOV/2026 BTCX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "80.2579104758",
+   "Weight": "79.2541507294",
    "Market Value": "—",
-   "Shares Held": "3170",
-   "Exposure Value": "1219974500",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Shares Held": "2965",
+   "Exposure Value": "1126032875"
   },
   {
    "Name": "COINBASE BIT FUT DIGITAL ASSETS 27/NOV/2026 BTIX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "15.2272832328",
+   "Weight": "16.0685562680",
    "Market Value": "—",
    "Shares Held": "3000",
-   "Exposure Value": "231465000",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Exposure Value": "228300000"
   },
   {
    "Name": "S&P CME BITCOIN FUTURES DAILY ROLL INDEX SWAP Societe Generale",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "4.4727830158",
+   "Weight": "4.7220786590",
    "Market Value": "—",
    "Shares Held": "219179",
-   "Exposure Value": "67989325.8",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Exposure Value": "67090691.9"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "675810000",
-   "Shares Held": "6750000",
-   "Exposure Value": "—",
-   "Coupon": "—",
-   "Maturity Date": "—"
-  },
-  {
-   "Name": "TREASURY BILL",
-   "Ticker": "-",
-   "Identifier": "BNZJKH9",
-   "Weight": "—",
-   "Market Value": "399870960",
-   "Shares Held": "400000000",
-   "Exposure Value": "—",
-   "Coupon": "0",
-   "Maturity Date": "2026-11-05"
+   "Market Value": "976267500",
+   "Shares Held": "9750000",
+   "Exposure Value": "—"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "444386648",
-   "Shares Held": "444386648",
-   "Exposure Value": "—",
-   "Coupon": "—",
-   "Maturity Date": "—"
+   "Market Value": "444519758",
+   "Shares Held": "444519758",
+   "Exposure Value": "—"
   }
  ]
 }

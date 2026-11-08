@@ -2,7 +2,7 @@
  "ticker": "ZSL",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 7,
  "headers": [
   "Name",
   "Ticker",
@@ -14,31 +14,31 @@
  ],
  "rows": [
   {
-   "Name": "SILVER FUTURE DEC26",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "-107.4769048505",
-   "Market Value": "—",
-   "Shares Held": "-307",
-   "Exposure Value": "-75638660"
-  },
-  {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-47.3100045917",
+   "Weight": "-65.5418839275",
    "Market Value": "—",
    "Shares Held": "-93332.108",
-   "Exposure Value": "-33295202.88"
+   "Exposure Value": "-35096587.23"
+  },
+  {
+   "Name": "SILVER FUTURE DEC26",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-58.2001294767",
+   "Market Value": "—",
+   "Shares Held": "-120",
+   "Exposure Value": "-31165200"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - GOLDMAN SACHS",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-34.7459373124",
+   "Weight": "-48.1359959751",
    "Market Value": "—",
    "Shares Held": "-68546",
-   "Exposure Value": "-24453031.49"
+   "Exposure Value": "-25776024.13"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
@@ -46,25 +46,34 @@
    "Identifier": "—",
    "Weight": "—",
    "Market Value": "—",
-   "Shares Held": "170000",
-   "Exposure Value": "17020400"
+   "Shares Held": "125000",
+   "Exposure Value": "12515000"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-10.5930461127",
+   "Weight": "-14.6752934079",
    "Market Value": "—",
    "Shares Held": "-20897.722",
-   "Exposure Value": "-7455032.45"
+   "Exposure Value": "-7858375.2"
+  },
+  {
+   "Name": "SILVER FUTURE MAR27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-13.2533533842",
+   "Market Value": "—",
+   "Shares Held": "-27",
+   "Exposure Value": "-7096950"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "70376663.81",
-   "Shares Held": "70376663.81",
+   "Market Value": "53548334.48",
+   "Shares Held": "53548334.48",
    "Exposure Value": "—"
   }
  ]

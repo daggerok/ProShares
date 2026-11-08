@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=QB&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/QB-psdlyhld.csv, as of Oct 30 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/QB-psdlyhld.csv, as of Nov 06 2026)",
   "historySource": "official ProShares NAV history file (ByFund/QB-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-01T03:41:24Z",
+  "catalogReadAt": "2026-11-08T03:45:29Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$47.64",
-  "value": 47.64,
-  "asOfDate": "Oct 30 2026"
+  "display": "$45.36",
+  "value": 45.36,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$47.63",
-  "value": 47.63,
-  "asOfDate": "Oct 30 2026"
+  "display": "$45.38",
+  "value": 45.38,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "-0.02%",
-  "value": -0.021,
+  "display": "0.04%",
+  "value": 0.0441,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$3.81 M",
-  "value": 3810999.6369,
-  "asOfDate": "Oct 30 2026",
+  "display": "$3.63 M",
+  "value": 3628757.3589,
+  "asOfDate": "Nov 06 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 0.3636,
-  "effectiveYieldText": "0.36%",
+  "effectiveYield": 0.3819,
+  "effectiveYieldText": "0.38%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 0.3636,
-  "indicatedYieldText": "0.36%",
+  "indicatedYield": 0.3819,
+  "indicatedYieldText": "0.38%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -85,43 +85,43 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Sep 30 2026",
+   "asOfDate": "Oct 31 2026",
    "inceptionDate": "Jun 26 2025",
-   "mo1": 1.13,
-   "mo3": 4.96,
-   "mo6": 14.27,
-   "ytd": 16.79,
-   "yr1": 20.25,
+   "mo1": -3.16,
+   "mo3": -0.44,
+   "mo6": 5.76,
+   "ytd": 13.1,
+   "yr1": 13.04,
    "yr3": null,
    "yr5": null,
    "yr10": null,
-   "sinceInception": 18.58,
-   "mo1Text": "1.13%",
-   "ytdText": "16.79%",
-   "yr1Text": "20.25%",
+   "sinceInception": 14.57,
+   "mo1Text": "-3.16%",
+   "ytdText": "13.10%",
+   "yr1Text": "13.04%",
    "yr3Text": "—",
    "yr5Text": "—",
    "yr10Text": "—",
-   "sinceInceptionText": "18.58%",
+   "sinceInceptionText": "14.57%",
    "marketPrice": {
-    "asOfDate": "Sep 30 2026",
+    "asOfDate": "Oct 31 2026",
     "inceptionDate": "Jun 26 2025",
-    "mo1": 1.18,
-    "mo3": 4.97,
-    "mo6": 14.31,
-    "ytd": 16.84,
-    "yr1": 20.25,
+    "mo1": -3.21,
+    "mo3": -0.66,
+    "mo6": 5.78,
+    "ytd": 13.09,
+    "yr1": 13,
     "yr3": null,
     "yr5": null,
     "yr10": null,
-    "sinceInception": 18.62,
-    "mo1Text": "1.18%",
-    "ytdText": "16.84%",
-    "yr1Text": "20.25%",
+    "sinceInception": 14.56,
+    "mo1Text": "-3.21%",
+    "ytdText": "13.09%",
+    "yr1Text": "13.00%",
     "yr3Text": "—",
     "yr5Text": "—",
     "yr10Text": "—",
-    "sinceInceptionText": "18.62%"
+    "sinceInceptionText": "14.56%"
    }
   },
   "quarterEnd": {
@@ -231,8 +231,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 103,
-  "asOfDate": "Oct 30 2026",
-  "asOf": "2026-10-30",
+  "asOfDate": "Nov 06 2026",
+  "asOf": "2026-11-06",
   "headers": [
    "Name",
    "Ticker",
@@ -242,7 +242,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/QB-psdlyhld.csv, as of Oct 30 2026)",
+  "source": "official ProShares daily holdings download (ByFund/QB-psdlyhld.csv, as of Nov 06 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -250,9 +250,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 343,
-  "asOf": "Oct 30 2026",
-  "asOfDate": "Oct 30 2026",
+  "totalRows": 348,
+  "asOf": "Nov 06 2026",
+  "asOfDate": "Nov 06 2026",
   "headers": [
    "Date",
    "NAV",
@@ -268,13 +268,13 @@
   "characteristics": {},
   "characteristicsAsOf": "—",
   "index": {
-   "Expiration Date 11/02/": "2026",
-   "Strike Price - Short Call": "28,640",
-   "Strike Price - Long Put": "28,300",
-   "Strike Price - Short Put": "27,500",
-   "FIGI - Short Call BBG0269B2YS": "3",
-   "FIGI - Long Put BBG025ZSDTH": "0",
-   "FIGI - Short Put BBG025G7BP": "41",
+   "Expiration Date 11/09/": "2026",
+   "Strike Price - Short Call": "27,550",
+   "Strike Price - Long Put": "27,225",
+   "Strike Price - Short Put": "26,500",
+   "FIGI - Short Call BBG0266SFS": "99",
+   "FIGI - Long Put BBG026FD8QQ": "5",
+   "FIGI - Short Put BBG025MC8TY": "6",
    "Total Number of Holdings": "101",
    "Price/Earnings Ratio": "31.69",
    "Price/Book Ratio": "9.20",

@@ -17,44 +17,44 @@
    "Name": "NASDAQ 100 TOP 30 INDEX SWAP NOMURA CAPITAL",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "64.7659714733",
+   "Weight": "71.8206235638",
    "Market Value": "—",
-   "Shares Held": "2139",
-   "Exposure Value": "3179259.87"
+   "Shares Held": "2216",
+   "Exposure Value": "3100804.48"
   },
   {
    "Name": "NASDAQ 100 TOP 30 INDEX SWAP CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "47.5374358172",
+   "Weight": "50.8837450339",
    "Market Value": "—",
    "Shares Held": "1570",
-   "Exposure Value": "2333538.1"
+   "Exposure Value": "2196869.6"
   },
   {
    "Name": "NASDAQ 100 TOP 30 INDEX SWAP SOCIETE GENERALE SOCIETE GENERALE",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "43.9342798540",
+   "Weight": "47.0269516205",
    "Market Value": "—",
    "Shares Held": "1451",
-   "Exposure Value": "2156664.83"
+   "Exposure Value": "2030355.28"
   },
   {
    "Name": "NASDAQ 100 TOP 30 INDEX SWAP BANK OF AMERICA NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "21.6492144008",
+   "Weight": "6.7736959950",
    "Market Value": "—",
-   "Shares Held": "715",
-   "Exposure Value": "1062725.95"
+   "Shares Held": "209",
+   "Exposure Value": "292449.52"
   },
   {
    "Name": "APPLE INC",
    "Ticker": "AAPL",
    "Identifier": "2046251",
-   "Weight": "2.3659406000",
-   "Market Value": "116140.31",
+   "Weight": "2.6723934112",
+   "Market Value": "115378.69",
    "Shares Held": "337",
    "Exposure Value": "—"
   },
@@ -62,8 +62,8 @@
    "Name": "NVIDIA CORP",
    "Ticker": "NVDA",
    "Identifier": "2379504",
-   "Weight": "2.3220233268",
-   "Market Value": "113984.48",
+   "Weight": "2.4078792799",
+   "Market Value": "103958.48",
    "Shares Held": "557",
    "Exposure Value": "—"
   },
@@ -71,17 +71,26 @@
    "Name": "MICROSOFT CORP",
    "Ticker": "MSFT",
    "Identifier": "2588173",
-   "Weight": "1.8287103424",
-   "Market Value": "89768.52",
+   "Weight": "2.1138719020",
+   "Market Value": "91264.92",
    "Shares Held": "172",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "AMAZON.COM INC",
+   "Ticker": "AMZN",
+   "Identifier": "2000019",
+   "Weight": "1.1711483658",
+   "Market Value": "50563.5",
+   "Shares Held": "195",
    "Exposure Value": "—"
   },
   {
    "Name": "MICRON TECHNOLOGY INC",
    "Ticker": "MU",
    "Identifier": "2588184",
-   "Weight": "1.2976841944",
-   "Market Value": "63701.28",
+   "Weight": "1.1506847986",
+   "Market Value": "49680",
    "Shares Held": "72",
    "Exposure Value": "—"
   },
@@ -89,8 +98,8 @@
    "Name": "ADVANCED MICRO DEVICES",
    "Ticker": "AMD",
    "Identifier": "2007849",
-   "Weight": "1.1003325994",
-   "Market Value": "54013.6",
+   "Weight": "1.1128678485",
+   "Market Value": "48047.28",
    "Shares Held": "107",
    "Exposure Value": "—"
   },
@@ -98,26 +107,17 @@
    "Name": "TESLA INC",
    "Ticker": "TSLA",
    "Identifier": "B616C79",
-   "Weight": "1.0099414424",
-   "Market Value": "49576.44",
+   "Weight": "1.0288363579",
+   "Market Value": "44419.28",
    "Shares Held": "124",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "AMAZON.COM INC",
-   "Ticker": "AMZN",
-   "Identifier": "2000019",
-   "Weight": "0.9547718232",
-   "Market Value": "46868.25",
-   "Shares Held": "195",
    "Exposure Value": "—"
   },
   {
    "Name": "META PLATFORMS INC-CLASS A",
    "Ticker": "META",
    "Identifier": "B7TL820",
-   "Weight": "0.8769744688",
-   "Market Value": "43049.3",
+   "Weight": "0.9892577112",
+   "Market Value": "42710.5",
    "Shares Held": "70",
    "Exposure Value": "—"
   },
@@ -125,8 +125,8 @@
    "Name": "WALMART INC",
    "Ticker": "WMT",
    "Identifier": "2936921",
-   "Weight": "0.8001107357",
-   "Market Value": "39276.18",
+   "Weight": "0.9245168676",
+   "Market Value": "39915.36",
    "Shares Held": "318",
    "Exposure Value": "—"
   },
@@ -134,8 +134,8 @@
    "Name": "ALPHABET INC-CL A",
    "Ticker": "GOOGL",
    "Identifier": "BYVY8G0",
-   "Weight": "0.7752995939",
-   "Market Value": "38058.24",
+   "Weight": "0.8970634925",
+   "Market Value": "38730.08",
    "Shares Held": "136",
    "Exposure Value": "—"
   },
@@ -143,62 +143,62 @@
    "Name": "SPACE EXPLORATION TECHN-CL A",
    "Ticker": "SPCX",
    "Identifier": "BXCVG25",
-   "Weight": "0.7684417661",
-   "Market Value": "37721.6",
+   "Weight": "0.8707867435",
+   "Market Value": "37595.6",
    "Shares Held": "280",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "BROADCOM INC",
-   "Ticker": "AVGO",
-   "Identifier": "BDZ78H9",
-   "Weight": "0.7506257554",
-   "Market Value": "36847.04",
-   "Shares Held": "113",
    "Exposure Value": "—"
   },
   {
    "Name": "ALPHABET INC-CL C",
    "Ticker": "GOOG",
    "Identifier": "BYY88Y7",
-   "Weight": "0.7254695221",
-   "Market Value": "35612.16",
+   "Weight": "0.8417750335",
+   "Market Value": "36343.04",
    "Shares Held": "128",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "BROADCOM INC",
+   "Ticker": "AVGO",
+   "Identifier": "BDZ78H9",
+   "Weight": "0.7686743537",
+   "Market Value": "33186.97",
+   "Shares Held": "113",
    "Exposure Value": "—"
   },
   {
    "Name": "COSTCO WHOLESALE CORP",
    "Ticker": "COST",
    "Identifier": "2701271",
-   "Weight": "0.5980252349",
-   "Market Value": "29356.12",
+   "Weight": "0.7076720776",
+   "Market Value": "30553.24",
    "Shares Held": "29",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PALANTIR TECHNOLOGIES INC-A",
-   "Ticker": "PLTR",
-   "Identifier": "BN78DQ4",
-   "Weight": "0.5625867417",
-   "Market Value": "27616.5",
-   "Shares Held": "150",
    "Exposure Value": "—"
   },
   {
    "Name": "CISCO SYSTEMS INC",
    "Ticker": "CSCO",
    "Identifier": "2198163",
-   "Weight": "0.5492858478",
-   "Market Value": "26963.58",
+   "Weight": "0.5608268163",
+   "Market Value": "24213.3",
    "Shares Held": "258",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PALANTIR TECHNOLOGIES INC-A",
+   "Ticker": "PLTR",
+   "Identifier": "BN78DQ4",
+   "Weight": "0.5572066063",
+   "Market Value": "24057",
+   "Shares Held": "150",
    "Exposure Value": "—"
   },
   {
    "Name": "INTEL CORP",
    "Ticker": "INTC",
    "Identifier": "2463247",
-   "Weight": "0.4608303812",
-   "Market Value": "22621.44",
+   "Weight": "0.4484224219",
+   "Market Value": "19360.32",
    "Shares Held": "344",
    "Exposure Value": "—"
   },
@@ -206,62 +206,53 @@
    "Name": "APPLIED MATERIALS INC",
    "Ticker": "AMAT",
    "Identifier": "2046552",
-   "Weight": "0.4132273107",
-   "Market Value": "20284.68",
+   "Weight": "0.4007287606",
+   "Market Value": "17301.18",
    "Shares Held": "52",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "LAM RESEARCH CORP",
-   "Ticker": "LRCX",
-   "Identifier": "BSML4N7",
-   "Weight": "0.3994224285",
-   "Market Value": "19607.02",
-   "Shares Held": "82",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "PALO ALTO NETWORKS INC",
-   "Ticker": "PANW",
-   "Identifier": "B87ZMX0",
-   "Weight": "0.3950240397",
-   "Market Value": "19391.11",
-   "Shares Held": "53",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "TEXAS INSTRUMENTS INC",
-   "Ticker": "TXN",
-   "Identifier": "2885409",
-   "Weight": "0.3677119013",
-   "Market Value": "18050.4",
-   "Shares Held": "60",
    "Exposure Value": "—"
   },
   {
    "Name": "NETFLIX INC",
    "Ticker": "NFLX",
    "Identifier": "2857817",
-   "Weight": "0.3439865551",
-   "Market Value": "16885.76",
+   "Weight": "0.3994858913",
+   "Market Value": "17247.52",
    "Shares Held": "272",
    "Exposure Value": "—"
   },
   {
-   "Name": "CROWDSTRIKE HOLDINGS INC - A",
-   "Ticker": "CRWD",
-   "Identifier": "BJJP138",
-   "Weight": "0.3418078340",
-   "Market Value": "16778.81",
-   "Shares Held": "67",
+   "Name": "TEXAS INSTRUMENTS INC",
+   "Ticker": "TXN",
+   "Identifier": "2885409",
+   "Weight": "0.3854516132",
+   "Market Value": "16641.6",
+   "Shares Held": "60",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "PALO ALTO NETWORKS INC",
+   "Ticker": "PANW",
+   "Identifier": "B87ZMX0",
+   "Weight": "0.3852644648",
+   "Market Value": "16633.52",
+   "Shares Held": "53",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "LAM RESEARCH CORP",
+   "Ticker": "LRCX",
+   "Identifier": "BSML4N7",
+   "Weight": "0.3806913729",
+   "Market Value": "16436.08",
+   "Shares Held": "82",
    "Exposure Value": "—"
   },
   {
    "Name": "AMGEN INC",
    "Ticker": "AMGN",
    "Identifier": "2023607",
-   "Weight": "0.3322646484",
-   "Market Value": "16310.35",
+   "Weight": "0.3732475911",
+   "Market Value": "16114.7",
    "Shares Held": "35",
    "Exposure Value": "—"
   },
@@ -269,35 +260,53 @@
    "Name": "LINDE PLC",
    "Ticker": "LIN",
    "Identifier": "BNZHB81",
-   "Weight": "0.3142736473",
-   "Market Value": "15427.2",
+   "Weight": "0.3580255691",
+   "Market Value": "15457.5",
    "Shares Held": "30",
    "Exposure Value": "—"
   },
   {
-   "Name": "KLA CORP",
-   "Ticker": "KLAC",
-   "Identifier": "2480138",
-   "Weight": "0.2734320479",
-   "Market Value": "13422.35",
-   "Shares Held": "85",
+   "Name": "CROWDSTRIKE HOLDINGS INC - A",
+   "Ticker": "CRWD",
+   "Identifier": "BJJP138",
+   "Weight": "0.3365961493",
+   "Market Value": "14532.3",
+   "Shares Held": "67",
    "Exposure Value": "—"
   },
   {
    "Name": "PEPSICO INC",
    "Ticker": "PEP",
    "Identifier": "2681511",
-   "Weight": "0.2490049071",
-   "Market Value": "12223.26",
+   "Weight": "0.2913599690",
+   "Market Value": "12579.26",
    "Shares Held": "89",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "KLA CORP",
+   "Ticker": "KLAC",
+   "Identifier": "2480138",
+   "Weight": "0.2726541608",
+   "Market Value": "11771.65",
+   "Shares Held": "85",
+   "Exposure Value": "—"
+  },
+  {
+   "Name": "T-MOBILE US INC",
+   "Ticker": "TMUS",
+   "Identifier": "B94Q9V0",
+   "Weight": "0.2626725261",
+   "Market Value": "11340.7",
+   "Shares Held": "70",
    "Exposure Value": "—"
   },
   {
    "Name": "SANDISK CORP",
    "Ticker": "SNDK",
    "Identifier": "BSNPZV3",
-   "Weight": "0.2344523944",
-   "Market Value": "11508.9",
+   "Weight": "0.1934160322",
+   "Market Value": "8350.6",
    "Shares Held": "10",
    "Exposure Value": "—"
   },
@@ -305,26 +314,17 @@
    "Name": "MARVELL TECHNOLOGY INC",
    "Ticker": "MRVL",
    "Identifier": "BNKJSM5",
-   "Weight": "0.2280537380",
-   "Market Value": "11194.8",
+   "Weight": "0.1864164962",
+   "Market Value": "8048.4",
    "Shares Held": "57",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "T-MOBILE US INC",
-   "Ticker": "TMUS",
-   "Identifier": "B94Q9V0",
-   "Weight": "0.2230831166",
-   "Market Value": "10950.8",
-   "Shares Held": "70",
    "Exposure Value": "—"
   },
   {
    "Name": "SEAGATE TECHNOLOGY HOLDINGS",
    "Ticker": "STX",
    "Identifier": "BKVD2N4",
-   "Weight": "0.1969649459",
-   "Market Value": "9668.7",
+   "Weight": "0.1601612878",
+   "Market Value": "6914.85",
    "Shares Held": "15",
    "Exposure Value": "—"
   },
@@ -333,8 +333,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "3825963.84",
-   "Shares Held": "3825963.84",
+   "Market Value": "3298081.65",
+   "Shares Held": "3298081.65",
    "Exposure Value": "—"
   }
  ]

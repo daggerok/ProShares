@@ -2,7 +2,7 @@
  "ticker": "AGQ",
  "page": 1,
  "pageSize": 250,
- "totalRows": 6,
+ "totalRows": 7,
  "headers": [
   "Name",
   "Ticker",
@@ -17,28 +17,28 @@
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "70.5476313442",
+   "Weight": "69.8846063172",
    "Market Value": "—",
    "Shares Held": "1769495.8585",
-   "Exposure Value": "631248183.07"
+   "Exposure Value": "665400868.73"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "63.6043781159",
+   "Weight": "63.0066075933",
    "Market Value": "—",
    "Shares Held": "1595343.196",
-   "Exposure Value": "569121136.4"
+   "Exposure Value": "599912536.36"
   },
   {
    "Name": "SILVER FUTURE DEC26",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "50.1415427744",
+   "Weight": "41.1600668514",
    "Market Value": "—",
-   "Shares Held": "1821",
-   "Exposure Value": "448657980"
+   "Shares Held": "1509",
+   "Exposure Value": "391902390"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
@@ -46,25 +46,34 @@
    "Identifier": "—",
    "Weight": "—",
    "Market Value": "—",
-   "Shares Held": "3050000",
-   "Exposure Value": "305366000"
+   "Shares Held": "2900000",
+   "Exposure Value": "290348000"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - GOLDMAN SACHS",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "15.7115265200",
+   "Weight": "15.5638654983",
    "Market Value": "—",
    "Shares Held": "394081",
-   "Exposure Value": "140584061.86"
+   "Exposure Value": "148190140.42"
+  },
+  {
+   "Name": "SILVER FUTURE MAR27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "10.4075256765",
+   "Market Value": "—",
+   "Shares Held": "377",
+   "Exposure Value": "99094450"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "894782958.75",
-   "Shares Held": "894782958.75",
+   "Market Value": "952142258.21",
+   "Shares Held": "952142258.21",
    "Exposure Value": "—"
   }
  ]

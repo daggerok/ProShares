@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=BIS&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/BIS-psdlyhld.csv, as of Oct 30 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/BIS-psdlyhld.csv, as of Nov 06 2026)",
   "historySource": "official ProShares NAV history file (ByFund/BIS-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-01T03:41:24Z",
+  "catalogReadAt": "2026-11-08T03:45:29Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$10.47",
-  "value": 10.47,
-  "asOfDate": "Oct 30 2026"
+  "display": "$10.57",
+  "value": 10.57,
+  "asOfDate": "Nov 06 2026"
  },
  "marketPrice": {
-  "display": "$10.47",
-  "value": 10.47,
-  "asOfDate": "Oct 30 2026"
+  "display": "$10.56",
+  "value": 10.56,
+  "asOfDate": "Nov 06 2026"
  },
  "premiumDiscount": {
-  "display": "0.00%",
-  "value": 0,
+  "display": "-0.09%",
+  "value": -0.0946,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1.73 M",
-  "value": 1732685.9958,
-  "asOfDate": "Oct 30 2026",
+  "display": "$1.75 M",
+  "value": 1748973.0654,
+  "asOfDate": "Nov 06 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 5.3064,
-  "effectiveYieldText": "5.31%",
+  "effectiveYield": 5.2562,
+  "effectiveYieldText": "5.26%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 5.3064,
-  "indicatedYieldText": "5.31%",
+  "indicatedYield": 5.2562,
+  "indicatedYieldText": "5.26%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -85,43 +85,43 @@
  "returns": {
   "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
   "monthEnd": {
-   "asOfDate": "Sep 30 2026",
+   "asOfDate": "Oct 31 2026",
    "inceptionDate": "Apr 08 2010",
-   "mo1": 0.09,
-   "mo3": -16.75,
-   "mo6": -35.17,
-   "ytd": -39.25,
-   "yr1": -55.56,
-   "yr3": -34.6,
-   "yr5": -19,
-   "yr10": -25.71,
-   "sinceInception": -33.05,
-   "mo1Text": "0.09%",
-   "ytdText": "-39.25%",
-   "yr1Text": "-55.56%",
-   "yr3Text": "-34.60%",
-   "yr5Text": "-19.00%",
-   "yr10Text": "-25.71%",
-   "sinceInceptionText": "-33.05%",
+   "mo1": -6.37,
+   "mo3": -24.5,
+   "mo6": -38.76,
+   "ytd": -43.13,
+   "yr1": -49.81,
+   "yr3": -38.86,
+   "yr5": -20.53,
+   "yr10": -27.86,
+   "sinceInception": -33.18,
+   "mo1Text": "-6.37%",
+   "ytdText": "-43.13%",
+   "yr1Text": "-49.81%",
+   "yr3Text": "-38.86%",
+   "yr5Text": "-20.53%",
+   "yr10Text": "-27.86%",
+   "sinceInceptionText": "-33.18%",
    "marketPrice": {
-    "asOfDate": "Sep 30 2026",
+    "asOfDate": "Oct 31 2026",
     "inceptionDate": "Apr 08 2010",
-    "mo1": -0.13,
-    "mo3": -16.89,
-    "mo6": -35.45,
-    "ytd": -39.43,
-    "yr1": -55.6,
-    "yr3": -34.67,
-    "yr5": -19,
-    "yr10": -25.76,
-    "sinceInception": -33.06,
-    "mo1Text": "-0.13%",
-    "ytdText": "-39.43%",
-    "yr1Text": "-55.60%",
-    "yr3Text": "-34.67%",
-    "yr5Text": "-19.00%",
-    "yr10Text": "-25.76%",
-    "sinceInceptionText": "-33.06%"
+    "mo1": -6.18,
+    "mo3": -24.42,
+    "mo6": -38.68,
+    "ytd": -43.18,
+    "yr1": -49.74,
+    "yr3": -38.91,
+    "yr5": -20.55,
+    "yr10": -27.85,
+    "sinceInception": -33.18,
+    "mo1Text": "-6.18%",
+    "ytdText": "-43.18%",
+    "yr1Text": "-49.74%",
+    "yr3Text": "-38.91%",
+    "yr5Text": "-20.55%",
+    "yr10Text": "-27.85%",
+    "sinceInceptionText": "-33.18%"
    }
   },
   "quarterEnd": {
@@ -312,8 +312,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 6,
-  "asOfDate": "Oct 30 2026",
-  "asOf": "2026-10-30",
+  "asOfDate": "Nov 06 2026",
+  "asOf": "2026-11-06",
   "headers": [
    "Name",
    "Ticker",
@@ -323,7 +323,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/BIS-psdlyhld.csv, as of Oct 30 2026)",
+  "source": "official ProShares daily holdings download (ByFund/BIS-psdlyhld.csv, as of Nov 06 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -331,9 +331,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4169,
-  "asOf": "Oct 30 2026",
-  "asOfDate": "Oct 30 2026",
+  "totalRows": 4174,
+  "asOf": "Nov 06 2026",
+  "asOfDate": "Nov 06 2026",
   "headers": [
    "Date",
    "NAV",
