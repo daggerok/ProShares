@@ -102,6 +102,14 @@ Official NAV, price, yield and return figures are copied from ProShares sources 
 
 `official-distribution-rate`, `official-other` and `computed-trailing-12m` are not produced for new data; `official-other` appears only when an older row with unrecognized text is migrated.
 
+- Swing metrics (shared `swing` block, the formulas of the Stocks feed) from the Yahoo Finance daily closes since listing (chart API, split-adjusted, not dividend-adjusted; the published NAV and market price history is not split-adjusted), with the last close as the price. Read for every fund the run updates (none after the 25-minute soft deadline); a failed chart, or one that starts more than 31 days after the published history, keeps the published values; `null` (never `0`) when the history is too short:
+  - `pctFrom52wHigh` - last close against the highest close of the last 52 weeks, in percent
+  - `athPrice`, `athDate`, `athBasis` - highest close of the whole history, its date and the history it covers (`daily closes since <first date>`)
+  - `pctFromAth` - last close against `athPrice`, in percent
+  - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
+  - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
+  - `high60d`, `low60d` - highest and lowest of the last 60 closes
+
 These counts describe the **2026-09-24T04:14:19Z committed feed**, after a separately pushed data update that regenerated all 173 fund metadata files. The 132 missing SEC 30-day yields reflect pages without that field in this run, not a claim that those funds can never publish it; recheck on subsequent updates.
 
 ### Update controls

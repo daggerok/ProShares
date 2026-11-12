@@ -881,6 +881,10 @@ const holdingsCsvFor = (tickers: string[]): string =>
 const navCsvFor = (ticker: string): string =>
   NAV_CSV.replace(/NOBL/g, ticker) + `09/18/2020,ProShares ${ticker},${ticker},40,40,0,0,100000,4000000000\n`;
 
+// the swing block's daily chart (period1=0): 300 closes rising 0.1 a day from 2025-01-02
+const SWING_CHART_URL = /query1\.finance\.yahoo\.com\/v8\/finance\/chart\/[^?]+\?period1=0&period2=\d+&interval=1d&includePrePost=false/;
+const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d' }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
+
 type FeedOptions = { fail?: (url: string) => boolean; barrier?: number; distributionYears?: number[] };
 type FeedState = { urls: string[]; inFlight: number; peak: number };
 
@@ -906,6 +910,7 @@ function mockFeed(options: FeedOptions = {}): FeedState {
       return options.distributionYears.includes(Number(dist[1])) ? DISTRIBUTIONS_JSON.replace(/\d{4}(-\d\d-\d\dT)/g, `${dist[1]}$1`) : '[]';
     }
     if (dist) return Number(dist[1]) === year ? DISTRIBUTIONS_JSON : '[]';
+    if (SWING_CHART_URL.test(url)) return JSON.stringify(swingChart());
     return null;
   };
   globalThis.fetch = (async (input: unknown) => {
@@ -959,7 +964,7 @@ const tickersIn = (api: string): string[] => readIndex(api).funds.map(fund => St
 
 describe('pipeline', () => {
   test('a full run publishes every fund with a complete row and its meta file', async () => {
-    mockFeed();
+    const feed = mockFeed();
     await withRepo(async ({ api, run }) => {
       await run();
       const { funds } = readIndex(api);
@@ -971,7 +976,12 @@ describe('pipeline', () => {
         // the 52-week range keys from the published history pages (shared range-52w block)
         expect(Object.keys(row.metrics)).toEqual(expect.arrayContaining(['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis']));
       }
+      // the swing keys from the Yahoo daily closes (period1=0) of the funds the run updated (swing block)
+      const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-11, -2)).toEqual(SWING_KEYS);
+      expect(feed.urls.filter(url => SWING_CHART_URL.test(url)).map(url => /chart\/([^?]+)/.exec(url)?.[1]).sort()).toEqual([...TICKERS].sort());
       const byTicker = Object.fromEntries(funds.map(fund => [fund.ticker, fund]));
+      expect([byTicker.NOBL.metrics.athBasis, byTicker.NOBL.metrics.athPrice, byTicker.NOBL.metrics.high60d, byTicker.NOBL.metrics.volatility1y]).toEqual(['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)]);
       expect(byTicker.NOBL.metrics.ytd).toBe(12.35);
       expect(byTicker.IGHG.metrics.ytd).toBeNull(); // no performance row: null, never 0
       expect(byTicker.IGHG.metrics.performanceAsOf).toBeNull();
