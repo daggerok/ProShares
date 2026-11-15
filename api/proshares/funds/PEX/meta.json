@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=PEX&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Nov 06 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Nov 13 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-08T03:45:29Z",
+  "catalogReadAt": "2026-11-15T09:10:11Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$23.23",
-  "value": 23.23,
-  "asOfDate": "Nov 06 2026"
+  "display": "$23.21",
+  "value": 23.21,
+  "asOfDate": "Nov 13 2026"
  },
  "marketPrice": {
-  "display": "$23.10",
-  "value": 23.1,
-  "asOfDate": "Nov 06 2026"
+  "display": "$23.13",
+  "value": 23.13,
+  "asOfDate": "Nov 13 2026"
  },
  "premiumDiscount": {
-  "display": "-0.56%",
-  "value": -0.5596,
+  "display": "-0.34%",
+  "value": -0.3447,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
   "display": "$10.68 M",
-  "value": 10684029.2261,
-  "asOfDate": "Nov 06 2026",
+  "value": 10675979.2086,
+  "asOfDate": "Nov 13 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,7 +76,7 @@
   "distributionYieldText": null,
   "yield12M": 5.66,
   "yield12MText": "5.66%",
-  "indicatedYield": 4.2213,
+  "indicatedYield": 4.225,
   "indicatedYieldText": "4.22%",
   "secYield": 7.08,
   "secYieldText": "7.08%",
@@ -546,8 +546,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 31,
-  "asOfDate": "Nov 06 2026",
-  "asOf": "2026-11-06",
+  "asOfDate": "Nov 13 2026",
+  "asOf": "2026-11-13",
   "headers": [
    "Name",
    "Ticker",
@@ -556,7 +556,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Nov 06 2026)",
+  "source": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Nov 13 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -564,9 +564,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3447,
-  "asOf": "Nov 06 2026",
-  "asOfDate": "Nov 06 2026",
+  "totalRows": 3452,
+  "asOf": "Nov 13 2026",
+  "asOfDate": "Nov 13 2026",
   "headers": [
    "Date",
    "NAV",
@@ -663,31 +663,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 45.969568
+      "Weight": 45.692706
      },
      {
       "Country": "United Kingdom",
-      "Weight": 21.014314
+      "Weight": 21.398986999999998
      },
      {
       "Country": "Belgium",
-      "Weight": 10.503848
+      "Weight": 10.531087
      },
      {
       "Country": "Canada",
-      "Weight": 8.057895
+      "Weight": 8.105635
      },
      {
       "Country": "France",
-      "Weight": 7.62506
+      "Weight": 7.580139
      },
      {
       "Country": "Sweden",
-      "Weight": 4.311542
+      "Weight": 4.217309
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.5177709999999998
+      "Weight": 2.474137
      }
     ]
    },
@@ -696,27 +696,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 45.969568433391444
+      "Weight": 45.69270637367484
      },
      {
       "Currency": "GBP",
-      "Weight": 20.33993656196674
+      "Weight": 20.706525370297655
      },
      {
       "Currency": "EUR",
-      "Weight": 18.80328629327129
+      "Weight": 18.803687338297653
      },
      {
       "Currency": "CAD",
-      "Weight": 8.057894943969462
+      "Weight": 8.105634735706756
      },
      {
       "Currency": "SEK",
-      "Weight": 4.311542450054682
+      "Weight": 4.217308688767585
      },
      {
       "Currency": "CHF",
-      "Weight": 2.5177713173463774
+      "Weight": 2.474137493255518
      }
     ]
    }

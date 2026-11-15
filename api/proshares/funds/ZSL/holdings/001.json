@@ -2,7 +2,7 @@
  "ticker": "ZSL",
  "page": 1,
  "pageSize": 250,
- "totalRows": 7,
+ "totalRows": 6,
  "headers": [
   "Name",
   "Ticker",
@@ -14,31 +14,31 @@
  ],
  "rows": [
   {
+   "Name": "SILVER FUTURE MAR27",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-82.5273235002",
+   "Market Value": "—",
+   "Shares Held": "-184",
+   "Exposure Value": "-45740560"
+  },
+  {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - UBS AG",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-65.5418839275",
+   "Weight": "-59.8720841894",
    "Market Value": "—",
    "Shares Held": "-93332.108",
-   "Exposure Value": "-35096587.23"
-  },
-  {
-   "Name": "SILVER FUTURE DEC26",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "-58.2001294767",
-   "Market Value": "—",
-   "Shares Held": "-120",
-   "Exposure Value": "-31165200"
+   "Exposure Value": "-33183951"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - GOLDMAN SACHS",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-48.1359959751",
+   "Weight": "-43.9719188909",
    "Market Value": "—",
    "Shares Held": "-68546",
-   "Exposure Value": "-25776024.13"
+   "Exposure Value": "-24371324.66"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
@@ -47,33 +47,24 @@
    "Weight": "—",
    "Market Value": "—",
    "Shares Held": "125000",
-   "Exposure Value": "12515000"
+   "Exposure Value": "12516250"
   },
   {
    "Name": "BLOOMBERG SILVER SUBINDEX SWAP - CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-14.6752934079",
+   "Weight": "-13.4057849674",
    "Market Value": "—",
    "Shares Held": "-20897.722",
-   "Exposure Value": "-7858375.2"
-  },
-  {
-   "Name": "SILVER FUTURE MAR27",
-   "Ticker": "-",
-   "Identifier": "—",
-   "Weight": "-13.2533533842",
-   "Market Value": "—",
-   "Shares Held": "-27",
-   "Exposure Value": "-7096950"
+   "Exposure Value": "-7430122.36"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "53548334.48",
-   "Shares Held": "53548334.48",
+   "Market Value": "55424746.69",
+   "Shares Held": "55424746.69",
    "Exposure Value": "—"
   }
  ]
