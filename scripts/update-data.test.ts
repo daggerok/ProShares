@@ -883,7 +883,7 @@ const navCsvFor = (ticker: string): string =>
 
 // the swing block's daily chart (period1=0): 300 closes rising 0.1 a day from 2025-01-02
 const SWING_CHART_URL = /query1\.finance\.yahoo\.com\/v8\/finance\/chart\/[^?]+\?period1=0&period2=\d+&interval=1d&includePrePost=false/;
-const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d' }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
+const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d', firstTradeDate: Date.UTC(2025, 0, 2) / 1000 }, events: { dividends: { [Date.UTC(2025, 9, 20) / 1000]: { amount: 0.25, date: Date.UTC(2025, 9, 20) / 1000 } } }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
 
 type FeedOptions = { fail?: (url: string) => boolean; barrier?: number; distributionYears?: number[] };
 type FeedState = { urls: string[]; inFlight: number; peak: number };
@@ -978,10 +978,12 @@ describe('pipeline', () => {
       }
       // the swing keys from the Yahoo daily closes (period1=0) of the funds the run updated (swing block)
       const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
-      for (const row of funds) expect(Object.keys(row.metrics).slice(-11, -2)).toEqual(SWING_KEYS);
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-17, -8)).toEqual(SWING_KEYS);
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-8, -2)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y']);
       expect(feed.urls.filter(url => SWING_CHART_URL.test(url)).map(url => /chart\/([^?]+)/.exec(url)?.[1]).sort()).toEqual([...TICKERS].sort());
       const byTicker = Object.fromEntries(funds.map(fund => [fund.ticker, fund]));
       expect([byTicker.NOBL.metrics.athBasis, byTicker.NOBL.metrics.athPrice, byTicker.NOBL.metrics.high60d, byTicker.NOBL.metrics.volatility1y]).toEqual(['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)]);
+      expect([byTicker.NOBL.metrics.dividendRate, byTicker.NOBL.metrics.dividendGrowth, byTicker.NOBL.metrics.dividendGrowth3y, byTicker.NOBL.metrics.dividendGrowth5y, byTicker.NOBL.metrics.dividendStreak, byTicker.NOBL.metrics.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
       expect(byTicker.NOBL.metrics.ytd).toBe(12.35);
       expect(byTicker.IGHG.metrics.ytd).toBeNull(); // no performance row: null, never 0
       expect(byTicker.IGHG.metrics.performanceAsOf).toBeNull();
