@@ -909,7 +909,8 @@ function mockFeed(options: FeedOptions = {}): FeedState {
     if (dist && options.distributionYears) {
       return options.distributionYears.includes(Number(dist[1])) ? DISTRIBUTIONS_JSON.replace(/\d{4}(-\d\d-\d\dT)/g, `${dist[1]}$1`) : '[]';
     }
-    if (dist) return Number(dist[1]) === year ? DISTRIBUTIONS_JSON : '[]';
+    // the sample year moves to the asked year: the endpoint never answers a year with ex-dates of another one
+    if (dist) return Number(dist[1]) === year ? DISTRIBUTIONS_JSON.replace(/\d{4}(-\d\d-\d\dT)/g, `${year}$1`) : '[]';
     if (SWING_CHART_URL.test(url)) return JSON.stringify(swingChart());
     return null;
   };
