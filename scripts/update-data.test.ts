@@ -883,7 +883,7 @@ const navCsvFor = (ticker: string): string =>
 
 // the swing block's daily chart (period1=0): 300 closes rising 0.1 a day from 2025-01-02
 const SWING_CHART_URL = /query1\.finance\.yahoo\.com\/v8\/finance\/chart\/[^?]+\?period1=0&period2=\d+&interval=1d&includePrePost=false/;
-const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d', firstTradeDate: Date.UTC(2025, 0, 2) / 1000 }, events: { dividends: { [Date.UTC(2025, 9, 20) / 1000]: { amount: 0.25, date: Date.UTC(2025, 9, 20) / 1000 } } }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
+const swingChart = () => ({ chart: { result: [{ meta: { dataGranularity: '1d', firstTradeDate: Date.UTC(2025, 0, 2) / 1000 }, events: { dividends: { [Date.UTC(2025, 9, 20) / 1000]: { amount: 0.25, date: Date.UTC(2025, 9, 20) / 1000 } } }, timestamp: Array.from({ length: 300 }, (_, i) => Date.UTC(2025, 0, 2) / 1000 + i * 86_400), indicators: { quote: [{ close: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }], adjclose: [{ adjclose: Array.from({ length: 300 }, (_, i) => Math.round((40 + i / 10) * 100) / 100) }] } }] } });
 
 type FeedOptions = { fail?: (url: string) => boolean; barrier?: number; distributionYears?: number[] };
 type FeedState = { urls: string[]; inFlight: number; peak: number };
@@ -979,12 +979,16 @@ describe('pipeline', () => {
       }
       // the swing keys from the Yahoo daily closes (period1=0) of the funds the run updated (swing block)
       const SWING_KEYS = ['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d'];
-      for (const row of funds) expect(Object.keys(row.metrics).slice(-17, -8)).toEqual(SWING_KEYS);
-      for (const row of funds) expect(Object.keys(row.metrics).slice(-8, -2)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y']);
-      expect(feed.urls.filter(url => SWING_CHART_URL.test(url)).map(url => /chart\/([^?]+)/.exec(url)?.[1]).sort()).toEqual([...TICKERS].sort());
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-51, -42)).toEqual(SWING_KEYS);
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-42, -34)).toEqual(['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y', 'paymentsPerYear', 'payFrequency']);
+      // the 32 benchmark keys against SPY and QQQ (benchmark block) sit before the returns pair, read from the same chart request
+      for (const row of funds) expect(Object.keys(row.metrics).slice(-34, -2)).toEqual(['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxDrawdown1y', 'maxDrawdown3y', 'maxDrawdown5y', 'maxDrawdown10y', 'vsSpy1y', 'vsSpy3y', 'vsSpy5y', 'vsSpy10y', 'beta1ySpy', 'corr1ySpy', 'upCapture3ySpy', 'downCapture3ySpy', 'relStrength3mSpy', 'stressReturnSpy', 'stressBasisSpy', 'vsQqq1y', 'vsQqq3y', 'vsQqq5y', 'vsQqq10y', 'beta1yQqq', 'corr1yQqq', 'upCapture3yQqq', 'downCapture3yQqq', 'relStrength3mQqq', 'stressReturnQqq', 'stressBasisQqq', 'benchmarkAsOf']);
+      expect(feed.urls.filter(url => SWING_CHART_URL.test(url)).map(url => /chart\/([^?]+)/.exec(url)?.[1]).sort()).toEqual([...TICKERS, 'QQQ', 'SPY'].sort()); // exactly the SPY and the QQQ chart more than before, no request per fund
       const byTicker = Object.fromEntries(funds.map(fund => [fund.ticker, fund]));
       expect([byTicker.NOBL.metrics.athBasis, byTicker.NOBL.metrics.athPrice, byTicker.NOBL.metrics.high60d, byTicker.NOBL.metrics.volatility1y]).toEqual(['daily closes since 2025-01-02', 69.9, 69.9, expect.any(Number)]);
-      expect([byTicker.NOBL.metrics.dividendRate, byTicker.NOBL.metrics.dividendGrowth, byTicker.NOBL.metrics.dividendGrowth3y, byTicker.NOBL.metrics.dividendGrowth5y, byTicker.NOBL.metrics.dividendStreak, byTicker.NOBL.metrics.dividendCut10y]).toEqual([0.25, null, null, null, null, null]);
+      expect([byTicker.NOBL.metrics.dividendRate, byTicker.NOBL.metrics.dividendGrowth, byTicker.NOBL.metrics.dividendGrowth3y, byTicker.NOBL.metrics.dividendGrowth5y, byTicker.NOBL.metrics.dividendStreak, byTicker.NOBL.metrics.dividendCut10y, byTicker.NOBL.metrics.paymentsPerYear, byTicker.NOBL.metrics.payFrequency]).toEqual([0.25, null, null, null, null, null, 1, null]);
+      // 300 mocked daily bars (the benchmarks answer the same ones): beta and correlation 1, relative strength 0, the horizons null
+      expect([byTicker.NOBL.metrics.beta1ySpy, byTicker.NOBL.metrics.corr1ySpy, byTicker.NOBL.metrics.relStrength3mQqq, byTicker.NOBL.metrics.perf1y, byTicker.NOBL.metrics.vsSpy1y]).toEqual([1, 1, 0, null, null]);
       expect(byTicker.NOBL.metrics.ytd).toBe(12.35);
       expect(byTicker.IGHG.metrics.ytd).toBeNull(); // no performance row: null, never 0
       expect(byTicker.IGHG.metrics.performanceAsOf).toBeNull();
