@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ONLN&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Nov 13 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Nov 18 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ONLN-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-15T09:10:11Z",
+  "catalogReadAt": "2026-11-19T08:49:14Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$58.59",
-  "value": 58.59,
-  "asOfDate": "Nov 13 2026"
+  "display": "$57.07",
+  "value": 57.07,
+  "asOfDate": "Nov 18 2026"
  },
  "marketPrice": {
-  "display": "$58.61",
-  "value": 58.61,
-  "asOfDate": "Nov 13 2026"
+  "display": "$57.11",
+  "value": 57.11,
+  "asOfDate": "Nov 18 2026"
  },
  "premiumDiscount": {
-  "display": "0.03%",
-  "value": 0.0341,
+  "display": "0.07%",
+  "value": 0.0701,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$61.52 M",
-  "value": 61517143.5877,
-  "asOfDate": "Nov 13 2026",
+  "display": "$54.22 M",
+  "value": 54217412.0709,
+  "asOfDate": "Nov 18 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 0.31,
   "yield12MText": "0.31%",
-  "indicatedYield": 0.3236,
-  "indicatedYieldText": "0.32%",
+  "indicatedYield": 0.3323,
+  "indicatedYieldText": "0.33%",
   "secYield": -0.27,
   "secYieldText": "-0.27%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -249,8 +249,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 23,
-  "asOfDate": "Nov 13 2026",
-  "asOf": "2026-11-13",
+  "asOfDate": "Nov 18 2026",
+  "asOf": "2026-11-18",
   "headers": [
    "Name",
    "Ticker",
@@ -259,7 +259,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Nov 13 2026)",
+  "source": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Nov 18 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -267,9 +267,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 2097,
-  "asOf": "Nov 13 2026",
-  "asOfDate": "Nov 13 2026",
+  "totalRows": 2100,
+  "asOf": "Nov 18 2026",
+  "asOfDate": "Nov 18 2026",
   "headers": [
    "Date",
    "NAV",
@@ -310,43 +310,43 @@
     "rows": [
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 24.392652
+      "Weight": 25.172692
      },
      {
       "Company": "EBAY INC",
-      "Weight": 8.837695
+      "Weight": 9.124184
      },
      {
       "Company": "ALIBABA GROUP HOLDING-SP ADR",
-      "Weight": 7.1637
+      "Weight": 6.5821130000000005
      },
      {
       "Company": "CARVANA CO",
-      "Weight": 5.304021
+      "Weight": 5.407139
      },
      {
       "Company": "PDD HOLDINGS INC",
-      "Weight": 5.000146
-     },
-     {
-      "Company": "COUPANG INC",
-      "Weight": 3.852699
+      "Weight": 5.040279
      },
      {
       "Company": "WILLIAMS-SONOMA INC",
-      "Weight": 3.717356
+      "Weight": 3.9116690000000003
      },
      {
-      "Company": "REALREAL INC/THE",
-      "Weight": 3.712511
-     },
-     {
-      "Company": "MERCADOLIBRE INC",
-      "Weight": 3.692704
+      "Company": "COUPANG INC",
+      "Weight": 3.722646
      },
      {
       "Company": "PATTERN GROUP INC-CL A",
-      "Weight": 3.576408
+      "Weight": 3.661455
+     },
+     {
+      "Company": "MERCADOLIBRE INC",
+      "Weight": 3.622307
+     },
+     {
+      "Company": "REALREAL INC/THE",
+      "Weight": 3.3142030000000005
      }
     ]
    },
@@ -355,31 +355,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 60.456756
+      "Weight": 61.436435
      },
      {
       "Country": "Other",
-      "Weight": 16.020194
+      "Weight": 16.191353
      },
      {
       "Country": "China",
-      "Weight": 10.050523
+      "Weight": 9.23266
      },
      {
       "Country": "Ireland",
-      "Weight": 5.002251
+      "Weight": 5.043092
      },
      {
       "Country": "Uruguay",
-      "Weight": 3.6942589999999997
+      "Weight": 3.624328
      },
      {
       "Country": "Singapore",
-      "Weight": 2.987517
+      "Weight": 2.795583
      },
      {
       "Country": "Israel",
-      "Weight": 1.7885000000000002
+      "Weight": 1.676548
      },
      {
       "Country": "Russian Federation",
@@ -392,15 +392,15 @@
     "rows": [
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 77.86725849354339
+      "Weight": 77.88462503110671
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 3.0909445363814094
+      "Weight": 3.083261356613188
      },
      {
       "Sector": "Media & Entertainment",
-      "Weight": 2.9862596301981346
+      "Weight": 2.7940245021617365
      }
     ]
    }

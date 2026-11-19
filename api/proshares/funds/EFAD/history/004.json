@@ -2,7 +2,7 @@
  "ticker": "EFAD",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3079,
+ "totalRows": 3082,
  "headers": [
   "Date",
   "NAV",
@@ -483,6 +483,24 @@
    "NAV": "46.5692",
    "Shares Outstanding": "1430000",
    "Total Net Assets": "66594002.5692"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "NAV": "46.4818",
+   "Shares Outstanding": "1430000",
+   "Total Net Assets": "66469020.4818"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "NAV": "45.866",
+   "Shares Outstanding": "1430000",
+   "Total Net Assets": "65588425.866"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "NAV": "45.4952",
+   "Shares Outstanding": "1430000",
+   "Total Net Assets": "65058181.4952"
   }
  ]
 }

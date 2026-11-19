@@ -2,7 +2,7 @@
  "ticker": "PAWZ",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2017,
+ "totalRows": 2020,
  "headers": [
   "Date",
   "NAV",
@@ -111,6 +111,24 @@
    "NAV": "55.6535",
    "Shares Outstanding": "625000",
    "Total Net Assets": "34783493.1535"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "NAV": "55.4753",
+   "Shares Outstanding": "625000",
+   "Total Net Assets": "34672117.9753"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "NAV": "54.6374",
+   "Shares Outstanding": "625000",
+   "Total Net Assets": "34148429.6374"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "NAV": "55.0053",
+   "Shares Outstanding": "625000",
+   "Total Net Assets": "34378367.5053"
   }
  ]
 }

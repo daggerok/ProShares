@@ -2,7 +2,7 @@
  "ticker": "PLTA",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 300,
+ "totalRows": 303,
  "headers": [
   "Date",
   "NAV",
@@ -1809,6 +1809,24 @@
    "NAV": "16.2804",
    "Shares Outstanding": "260000",
    "Total Net Assets": "4232920.2804"
+  },
+  {
+   "Date": "Nov 16 2026",
+   "NAV": "14.8011",
+   "Shares Outstanding": "260000",
+   "Total Net Assets": "3848300.8011"
+  },
+  {
+   "Date": "Nov 17 2026",
+   "NAV": "14.0912",
+   "Shares Outstanding": "260000",
+   "Total Net Assets": "3663726.0912"
+  },
+  {
+   "Date": "Nov 18 2026",
+   "NAV": "14.1058",
+   "Shares Outstanding": "260000",
+   "Total Net Assets": "3667522.1058"
   }
  ]
 }
