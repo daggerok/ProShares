@@ -2,7 +2,7 @@
  "ticker": "EFU",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4800,
+ "totalRows": 4801,
  "headers": [
   "Date",
   "NAV",
@@ -4809,6 +4809,12 @@
    "NAV": "7.8135",
    "Shares Outstanding": "168700",
    "Total Net Assets": "1318160.8905"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "8.0462",
+   "Shares Outstanding": "168700",
+   "Total Net Assets": "1357418.0786"
   }
  ]
 }

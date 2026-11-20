@@ -2,7 +2,7 @@
  "ticker": "EETH",
  "page": 1,
  "pageSize": 250,
- "totalRows": 3,
+ "totalRows": 4,
  "headers": [
   "Name",
   "Ticker",
@@ -17,17 +17,26 @@
    "Name": "CME ETHER FUTURE DIGITAL ASSETS 27/NOV/2026 DCRX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "99.7842838852",
+   "Weight": "79.4230471734",
    "Market Value": "—",
-   "Shares Held": "490",
-   "Exposure Value": "42887250"
+   "Shares Held": "390",
+   "Exposure Value": "34261500"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 24/DEC/2026 DCRZ6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "20.6446257647",
+   "Market Value": "—",
+   "Shares Held": "101",
+   "Exposure Value": "8905675"
   },
   {
    "Name": "PROSHARES GENIUS MNY MKT ETF",
    "Ticker": "IQMM",
    "Identifier": "BTGTPK8",
    "Weight": "—",
-   "Market Value": "15013500",
+   "Market Value": "15015000",
    "Shares Held": "150000",
    "Exposure Value": "—"
   },
@@ -36,8 +45,8 @@
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "27966464.71",
-   "Shares Held": "27966464.71",
+   "Market Value": "28122982.26",
+   "Shares Held": "28122982.26",
    "Exposure Value": "—"
   }
  ]

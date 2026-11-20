@@ -2,7 +2,7 @@
  "ticker": "SPXU",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4380,
+ "totalRows": 4381,
  "headers": [
   "Date",
   "NAV",
@@ -2289,6 +2289,12 @@
    "NAV": "39.3647",
    "Shares Outstanding": "10784220",
    "Total Net Assets": "424517388.2105"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "41.7453",
+   "Shares Outstanding": "10084220",
+   "Total Net Assets": "420968580.4395"
   }
  ]
 }

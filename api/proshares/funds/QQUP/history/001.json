@@ -2,7 +2,7 @@
  "ticker": "QQUP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 364,
+ "totalRows": 365,
  "headers": [
   "Date",
   "NAV",
@@ -2193,6 +2193,12 @@
    "NAV": "53.3705",
    "Shares Outstanding": "390000",
    "Total Net Assets": "20814548.3705"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "50.8189",
+   "Shares Outstanding": "390000",
+   "Total Net Assets": "19819421.8189"
   }
  ]
 }

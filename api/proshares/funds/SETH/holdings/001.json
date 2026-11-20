@@ -2,7 +2,7 @@
  "ticker": "SETH",
  "page": 1,
  "pageSize": 250,
- "totalRows": 2,
+ "totalRows": 3,
  "headers": [
   "Name",
   "Ticker",
@@ -17,18 +17,27 @@
    "Name": "CME ETHER FUTURE DIGITAL ASSETS 27/NOV/2026 DCRX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-100.3331512905",
+   "Weight": "-82.7053219713",
    "Market Value": "—",
-   "Shares Held": "-110",
-   "Exposure Value": "-9627750"
+   "Shares Held": "-90",
+   "Exposure Value": "-7906500"
+  },
+  {
+   "Name": "CME ETHER FUTURE DIGITAL ASSETS 24/DEC/2026 DCRZ6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-16.6022578596",
+   "Market Value": "—",
+   "Shares Held": "-18",
+   "Exposure Value": "-1587150"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "9595781.53",
-   "Shares Held": "9595781.53",
+   "Market Value": "9559844.29",
+   "Shares Held": "9559844.29",
    "Exposure Value": "—"
   }
  ]

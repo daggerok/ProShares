@@ -2,7 +2,7 @@
  "ticker": "SBIT",
  "page": 1,
  "pageSize": 250,
- "totalRows": 7,
+ "totalRows": 8,
  "headers": [
   "Name",
   "Ticker",
@@ -17,63 +17,72 @@
    "Name": "BITCOIN TRUST (IBIT) SWAP BARCLAYS CAPITAL",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-77.6883577564",
+   "Weight": "-75.8698544869",
    "Market Value": "—",
    "Shares Held": "-3559235",
-   "Exposure Value": "-125854549.6"
+   "Exposure Value": "-124857963.8"
   },
   {
    "Name": "CME BITCOIN FUT DIGITAL ASSETS 27/NOV/2026 BTCX6 CURNCY",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-71.7768179464",
+   "Weight": "-56.9248296220",
    "Market Value": "—",
-   "Shares Held": "-372",
-   "Exposure Value": "-116277900"
+   "Shares Held": "-302",
+   "Exposure Value": "-93680400"
+  },
+  {
+   "Name": "CME BITCOIN FUT DIGITAL ASSETS 24/DEC/2026 BTCZ6 CURNCY",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-17.4070257147",
+   "Market Value": "—",
+   "Shares Held": "-92",
+   "Exposure Value": "-28646500"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP GOLDMAN",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.6544589703",
+   "Weight": "-13.3348399309",
    "Market Value": "—",
    "Shares Held": "-625569",
-   "Exposure Value": "-22120119.84"
+   "Exposure Value": "-21944960.52"
   },
   {
    "Name": "BITCOIN TRUST SWAP (FBTC) CITIBANK NA",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-13.6210125852",
+   "Weight": "-13.2973344670",
    "Market Value": "—",
    "Shares Held": "-405997",
-   "Exposure Value": "-22065936.95"
+   "Exposure Value": "-21883238.3"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP MAREX",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-12.4457524648",
+   "Weight": "-12.1544264257",
    "Market Value": "—",
    "Shares Held": "-570193",
-   "Exposure Value": "-20162024.48"
+   "Exposure Value": "-20002370.44"
   },
   {
    "Name": "BITCOIN TRUST (IBIT) SWAP Nomura",
    "Ticker": "-",
    "Identifier": "—",
-   "Weight": "-11.1693377901",
+   "Weight": "-10.9078896417",
    "Market Value": "—",
    "Shares Held": "-511715",
-   "Exposure Value": "-18094242.4"
+   "Exposure Value": "-17950962.2"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "161999240.6",
-   "Shares Held": "161999240.6",
+   "Market Value": "164568608.5",
+   "Shares Held": "164568608.5",
    "Exposure Value": "—"
   }
  ]

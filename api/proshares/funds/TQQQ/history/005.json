@@ -2,7 +2,7 @@
  "ticker": "TQQQ",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4221,
+ "totalRows": 4222,
  "headers": [
   "Date",
   "NAV",
@@ -1335,6 +1335,12 @@
    "NAV": "52.49",
    "Shares Outstanding": "571950000",
    "Total Net Assets": "30021655500"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "49.022",
+   "Shares Outstanding": "581450000",
+   "Total Net Assets": "28503841900"
   }
  ]
 }

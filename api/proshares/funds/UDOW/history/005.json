@@ -2,7 +2,7 @@
  "ticker": "UDOW",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4221,
+ "totalRows": 4222,
  "headers": [
   "Date",
   "NAV",
@@ -1335,6 +1335,12 @@
    "NAV": "58.8837",
    "Shares Outstanding": "12600000",
    "Total Net Assets": "741934620"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "55.0123",
+   "Shares Outstanding": "12950000",
+   "Total Net Assets": "712409285"
   }
  ]
 }

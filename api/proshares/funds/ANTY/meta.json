@@ -1,0 +1,202 @@
+{
+ "ticker": "ANTY",
+ "name": "UltraShort Anthropic",
+ "category": "Equity",
+ "categoryPath": "Equity > Single Stock",
+ "source": {
+  "fundPage": "https://www.proshares.com/our-etfs/leveraged-and-inverse/anty",
+  "fundFinder": "https://www.proshares.com/our-etfs/find-leveraged-and-inverse-etfs",
+  "holdingsDownload": "https://accounts.profunds.com/etfdata/ByFund/ANTY-psdlyhld.csv",
+  "holdingsAll": "https://accounts.profunds.com/etfdata/psdlyhld.csv",
+  "historyDownload": "https://accounts.profunds.com/etfdata/ByFund/ANTY-historical_nav.csv",
+  "historyAll": "https://accounts.profunds.com/etfdata/historical_nav.csv",
+  "performanceFile": "https://accounts.profunds.com/etfdata/etf_performance.csv",
+  "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
+  "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=ANTY&year=2026",
+  "exchangeSource": "—",
+  "holdingsSource": "official ProShares daily holdings file (psdlyhld.csv, as of Nov 19 2026)",
+  "historySource": "official ProShares NAV history file (ByFund/ANTY-historical_nav.csv)",
+  "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
+  "catalogReadAt": "2026-11-20T22:03:09Z",
+  "secYield": "not published on this fund page (data limitation)"
+ },
+ "identifiers": {
+  "cusip": "74350U351",
+  "isin": null,
+  "indexTicker": "ANT",
+  "indexName": "Anthropic (ANT)",
+  "sedolNote": "positions identify by SEDOL (Security Sedol) in the official holdings file"
+ },
+ "expenseRatio": {
+  "display": "0.95%",
+  "value": 0.95,
+  "gross": {
+   "display": "1.04%",
+   "value": 1.04
+  },
+  "net": {
+   "display": "0.95%",
+   "value": 0.95
+  },
+  "footnote": null,
+  "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
+ },
+ "nav": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "—"
+ },
+ "marketPrice": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "—"
+ },
+ "premiumDiscount": {
+  "display": "—",
+  "value": null,
+  "computed": true,
+  "formula": "(market price − NAV) / NAV"
+ },
+ "aum": {
+  "display": "—",
+  "value": null,
+  "asOfDate": "—",
+  "source": "fund page Net Assets (the NAV history file had no value)"
+ },
+ "yields": {
+  "dividendYield": null,
+  "dividendYieldText": "—",
+  "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
+  "effectiveYield": null,
+  "effectiveYieldText": "—",
+  "effectiveYieldBasis": "not published by ProShares and no distributions yet (data limitation)",
+  "effectiveYieldBasisCode": null,
+  "effectiveYieldComputed": false,
+  "distributionYield": null,
+  "distributionYieldText": null,
+  "yield12M": null,
+  "yield12MText": "—",
+  "indicatedYield": null,
+  "indicatedYieldText": "—",
+  "secYield": null,
+  "secYieldText": "—",
+  "secYieldKind": "not published on this fund page (data limitation)"
+ },
+ "returns": {
+  "derivedFrom": "official ProShares performance file (etf_performance.csv); cumulative tenors derived as (1 + annualized)^n − 1; market-price basis kept alongside",
+  "monthEnd": {
+   "asOfDate": "—",
+   "mo1": null,
+   "qtd": null,
+   "ytd": null,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "marketPrice": {
+    "asOfDate": "—",
+    "mo1": null,
+    "qtd": null,
+    "ytd": null,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null
+   }
+  },
+  "quarterEnd": {
+   "asOfDate": "—",
+   "mo1": null,
+   "qtd": null,
+   "ytd": null,
+   "yr1": null,
+   "yr3": null,
+   "yr5": null,
+   "yr10": null,
+   "sinceInception": null,
+   "marketPrice": {
+    "asOfDate": "—",
+    "mo1": null,
+    "qtd": null,
+    "ytd": null,
+    "yr1": null,
+    "yr3": null,
+    "yr5": null,
+    "yr10": null,
+    "sinceInception": null
+   }
+  }
+ },
+ "distributions": {
+  "frequency": "Quarterly",
+  "paymentsPerYear": 4,
+  "headers": [
+   "Ex-Date",
+   "Record Date",
+   "Payable Date",
+   "Dividend",
+   "ST Cap Gains",
+   "LT Cap Gains",
+   "Return of Capital"
+  ],
+  "rows": [],
+  "refreshedAt": "2026-11-20",
+  "asOfDate": "—",
+  "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
+ },
+ "holdings": {
+  "pageSize": 250,
+  "totalRows": 0,
+  "asOfDate": "Nov 19 2026",
+  "asOf": "2026-11-19",
+  "headers": [
+   "Name",
+   "Ticker",
+   "Identifier",
+   "Weight",
+   "Market Value",
+   "Shares Held"
+  ],
+  "source": "official ProShares daily holdings file (psdlyhld.csv, as of Nov 19 2026)",
+  "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
+  "pages": []
+ },
+ "history": {
+  "pageSize": 1000,
+  "totalRows": 0,
+  "asOf": "—",
+  "asOfDate": "—",
+  "headers": [
+   "Date",
+   "NAV",
+   "Shares Outstanding",
+   "Total Net Assets"
+  ],
+  "source": "official ProShares NAV history file (ByFund/ANTY-historical_nav.csv)",
+  "pages": []
+ },
+ "officialMetrics": {
+  "characteristics": {},
+  "characteristicsAsOf": "—",
+  "index": {},
+  "indexAsOf": "—",
+  "geared": {
+   "strategy": "Single Stock",
+   "dailyObjective": "-2x",
+   "benchmark": "Anthropic (ANT)"
+  },
+  "splits": [],
+  "exposures": []
+ },
+ "documents": {
+  "factSheet": "https://www.proshares.com/globalassets/proshares/fact-sheet/prosharesfactsheetanty.pdf",
+  "fundProfile": "https://www.proshares.com/globalassets/proshares/fund-profile/proshares_profile_anty.pdf",
+  "summaryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ANTY&document-label=summary-prospectus",
+  "statutoryProspectus": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ANTY&document-label=statutory-prospectus",
+  "sai": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ANTY&document-label=statement-of-additional-information",
+  "annualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ANTY&document-label=annual-report",
+  "semiAnnualReport": "https://www.proshares.com/regulatory-document-viewer-page?ticker=ANTY&document-label=semi-annual-report"
+ }
+}

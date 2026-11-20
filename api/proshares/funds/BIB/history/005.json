@@ -2,7 +2,7 @@
  "ticker": "BIB",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4182,
+ "totalRows": 4183,
  "headers": [
   "Date",
   "NAV",
@@ -1101,6 +1101,12 @@
    "NAV": "54.23585",
    "Shares Outstanding": "1760000",
    "Total Net Assets": "95455096"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "53.1324",
+   "Shares Outstanding": "1760000",
+   "Total Net Assets": "93513024"
   }
  ]
 }

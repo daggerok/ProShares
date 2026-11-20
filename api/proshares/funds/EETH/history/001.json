@@ -2,7 +2,7 @@
  "ticker": "EETH",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 788,
+ "totalRows": 789,
  "headers": [
   "Date",
   "NAV",
@@ -4737,6 +4737,12 @@
    "NAV": "20.9655",
    "Shares Outstanding": "2050000",
    "Total Net Assets": "42979275"
+  },
+  {
+   "Date": "Nov 19 2026",
+   "NAV": "21.0445",
+   "Shares Outstanding": "2050000",
+   "Total Net Assets": "43141225"
   }
  ]
 }
