@@ -1,0 +1,71 @@
+{
+ "ticker": "ANTU",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 6,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ANTU ANTHROPIC PBC SWAP MAREX",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "46.3962885060",
+   "Market Value": "—",
+   "Shares Held": "127782",
+   "Exposure Value": "10466623.62"
+  },
+  {
+   "Name": "ANTU ANTHROPIC PBC SWAP BNP PARIBAS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "40.8413839197",
+   "Market Value": "—",
+   "Shares Held": "112483",
+   "Exposure Value": "9213482.53"
+  },
+  {
+   "Name": "ANTU ANTHROPIC PBC SWAP NATIONAL BANK OF CANADA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "39.9460054825",
+   "Market Value": "—",
+   "Shares Held": "110017",
+   "Exposure Value": "9011492.47"
+  },
+  {
+   "Name": "ANTU ANTHROPIC PBC SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "37.5329133928",
+   "Market Value": "—",
+   "Shares Held": "103371",
+   "Exposure Value": "8467118.61"
+  },
+  {
+   "Name": "ANTU ANTHROPIC PBC SWAP NOMURA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "35.2813960818",
+   "Market Value": "—",
+   "Shares Held": "97170",
+   "Exposure Value": "7959194.7"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "22559182.98",
+   "Shares Held": "22559182.98",
+   "Exposure Value": "—"
+  }
+ ]
+}

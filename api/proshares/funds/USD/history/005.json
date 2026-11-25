@@ -2,7 +2,7 @@
  "ticker": "USD",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4986,
+ "totalRows": 4989,
  "headers": [
   "Date",
   "NAV",
@@ -5925,6 +5925,24 @@
    "NAV": "46.4576",
    "Shares Outstanding": "32410000",
    "Total Net Assets": "1505690816"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "34.8872",
+   "Shares Outstanding": "32500000",
+   "Total Net Assets": "1133834000"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "47.6926",
+   "Shares Outstanding": "32970000",
+   "Total Net Assets": "1572425022"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "41.1445",
+   "Shares Outstanding": "32970000",
+   "Total Net Assets": "1356534165"
   }
  ]
 }

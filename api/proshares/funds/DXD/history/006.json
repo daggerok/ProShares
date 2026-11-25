@@ -2,7 +2,7 @@
  "ticker": "DXD",
  "page": 6,
  "pageSize": 1000,
- "totalRows": 5124,
+ "totalRows": 5127,
  "headers": [
   "Date",
   "NAV",
@@ -753,6 +753,24 @@
    "NAV": "39.0009",
    "Shares Outstanding": "1229890",
    "Total Net Assets": "47966933.9037"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "40.5215",
+   "Shares Outstanding": "1479890",
+   "Total Net Assets": "59967484.1995"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "38.0897",
+   "Shares Outstanding": "1479890",
+   "Total Net Assets": "56368680.4021"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "37.4449",
+   "Shares Outstanding": "1329890",
+   "Total Net Assets": "49797710.3957"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "EET",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4396,
+ "totalRows": 4399,
  "headers": [
   "Date",
   "NAV",
@@ -2385,6 +2385,24 @@
    "NAV": "25.4896",
    "Shares Outstanding": "950000",
    "Total Net Assets": "24215120"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "22.8496",
+   "Shares Outstanding": "950000",
+   "Total Net Assets": "21707120"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "26.2325",
+   "Shares Outstanding": "950000",
+   "Total Net Assets": "24920875"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "25.1991",
+   "Shares Outstanding": "910000",
+   "Total Net Assets": "22931181"
   }
  ]
 }

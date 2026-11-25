@@ -1,0 +1,26 @@
+{
+ "ticker": "ION",
+ "page": 2,
+ "pageSize": 1000,
+ "totalRows": 1002,
+ "headers": [
+  "Date",
+  "NAV",
+  "Shares Outstanding",
+  "Total Net Assets"
+ ],
+ "rows": [
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "33.8808",
+   "Shares Outstanding": "225000",
+   "Total Net Assets": "7623213.8808"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "33.4301",
+   "Shares Outstanding": "225000",
+   "Total Net Assets": "7521805.9301"
+  }
+ ]
+}

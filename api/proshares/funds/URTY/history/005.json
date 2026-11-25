@@ -2,7 +2,7 @@
  "ticker": "URTY",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4222,
+ "totalRows": 4225,
  "headers": [
   "Date",
   "NAV",
@@ -1341,6 +1341,24 @@
    "NAV": "55.5135",
    "Shares Outstanding": "4150000",
    "Total Net Assets": "230381025"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "50.8669",
+   "Shares Outstanding": "4600000",
+   "Total Net Assets": "233987740"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "56.0569",
+   "Shares Outstanding": "4450000",
+   "Total Net Assets": "249453205"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "57.0107",
+   "Shares Outstanding": "4150000",
+   "Total Net Assets": "236594405"
   }
  ]
 }

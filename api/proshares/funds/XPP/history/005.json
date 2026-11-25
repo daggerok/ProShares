@@ -2,7 +2,7 @@
  "ticker": "XPP",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4396,
+ "totalRows": 4399,
  "headers": [
   "Date",
   "NAV",
@@ -2385,6 +2385,24 @@
    "NAV": "16.4567",
    "Shares Outstanding": "395000",
    "Total Net Assets": "6500396.5"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "15.8629",
+   "Shares Outstanding": "395000",
+   "Total Net Assets": "6265845.5"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "16.2656",
+   "Shares Outstanding": "395000",
+   "Total Net Assets": "6424912"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "16.0585",
+   "Shares Outstanding": "395000",
+   "Total Net Assets": "6343107.5"
   }
  ]
 }

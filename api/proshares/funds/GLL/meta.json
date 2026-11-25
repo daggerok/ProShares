@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=GLL&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/GLL-psdlyhld.csv, as of Nov 19 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/GLL-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/GLL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-20T22:03:09Z",
+  "catalogReadAt": "2026-11-25T05:01:16Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$31.60",
-  "value": 31.6,
-  "asOfDate": "Nov 19 2026"
+  "display": "$33.41",
+  "value": 33.41,
+  "asOfDate": "Nov 24 2026"
  },
  "marketPrice": {
-  "display": "$32.00",
-  "value": 32,
-  "asOfDate": "Nov 19 2026"
+  "display": "$33.62",
+  "value": 33.62,
+  "asOfDate": "Nov 24 2026"
  },
  "premiumDiscount": {
-  "display": "1.27%",
-  "value": 1.2658,
+  "display": "0.63%",
+  "value": 0.6286,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$99.13 M",
-  "value": 99128636.78091383,
-  "asOfDate": "Nov 19 2026",
+  "display": "$86.43 M",
+  "value": 86428866.40959868,
+  "asOfDate": "Nov 24 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -178,15 +178,15 @@
    "Return of Capital"
   ],
   "rows": [],
-  "refreshedAt": "2026-11-20",
+  "refreshedAt": "2026-11-25",
   "asOfDate": "—",
   "source": "https://www.proshares.com/api/distributionsummary (official, year-scoped)"
  },
  "holdings": {
   "pageSize": 250,
   "totalRows": 6,
-  "asOfDate": "Nov 19 2026",
-  "asOf": "2026-11-19",
+  "asOfDate": "Nov 24 2026",
+  "asOf": "2026-11-24",
   "headers": [
    "Name",
    "Ticker",
@@ -196,7 +196,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/GLL-psdlyhld.csv, as of Nov 19 2026)",
+  "source": "official ProShares daily holdings download (ByFund/GLL-psdlyhld.csv, as of Nov 24 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -204,9 +204,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4521,
-  "asOf": "Nov 19 2026",
-  "asOfDate": "Nov 19 2026",
+  "totalRows": 4524,
+  "asOf": "Nov 24 2026",
+  "asOfDate": "Nov 24 2026",
   "headers": [
    "Date",
    "NAV",

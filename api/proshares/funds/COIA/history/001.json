@@ -2,7 +2,7 @@
  "ticker": "COIA",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 304,
+ "totalRows": 307,
  "headers": [
   "Date",
   "NAV",
@@ -1833,6 +1833,24 @@
    "NAV": "2.6771",
    "Shares Outstanding": "174990",
    "Total Net Assets": "468465.729"
+  },
+  {
+   "Date": "Nov 20 2026",
+   "NAV": "2.3315",
+   "Shares Outstanding": "174990",
+   "Total Net Assets": "407989.185"
+  },
+  {
+   "Date": "Nov 23 2026",
+   "NAV": "2.6402",
+   "Shares Outstanding": "174990",
+   "Total Net Assets": "462008.598"
+  },
+  {
+   "Date": "Nov 24 2026",
+   "NAV": "2.3263",
+   "Shares Outstanding": "204990",
+   "Total Net Assets": "476868.237"
   }
  ]
 }

@@ -1,0 +1,62 @@
+{
+ "ticker": "ANTY",
+ "page": 1,
+ "pageSize": 250,
+ "totalRows": 5,
+ "headers": [
+  "Name",
+  "Ticker",
+  "Identifier",
+  "Weight",
+  "Market Value",
+  "Shares Held",
+  "Exposure Value"
+ ],
+ "rows": [
+  {
+   "Name": "ANTY ANTHROPIC PBC SWAP MAREX",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-71.8423353150",
+   "Market Value": "—",
+   "Shares Held": "-215487",
+   "Exposure Value": "-17650540.17"
+  },
+  {
+   "Name": "ANTY ANTHROPIC PBC SWAP Bank of America NA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-52.3757219383",
+   "Market Value": "—",
+   "Shares Held": "-157098",
+   "Exposure Value": "-12867897.18"
+  },
+  {
+   "Name": "ANTY ANTHROPIC PBC SWAP BNP PARIBAS",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-40.6232071129",
+   "Market Value": "—",
+   "Shares Held": "-121847",
+   "Exposure Value": "-9980487.77"
+  },
+  {
+   "Name": "ANTY ANTHROPIC PBC SWAP NOMURA",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "-35.1718619053",
+   "Market Value": "—",
+   "Shares Held": "-105496",
+   "Exposure Value": "-8641177.36"
+  },
+  {
+   "Name": "Net Other Assets (Liabilities)",
+   "Ticker": "-",
+   "Identifier": "—",
+   "Weight": "—",
+   "Market Value": "24568438.78",
+   "Shares Held": "24568438.78",
+   "Exposure Value": "—"
+  }
+ ]
+}
