@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T07:07:48Z",
+  "catalogReadAt": "2026-11-25T23:15:38Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -681,83 +681,87 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 49.780828
+      "Weight": 49.429254
      },
      {
       "Country": "Canada",
-      "Weight": 14.959207999999999
+      "Weight": 14.853559999999998
      },
      {
       "Country": "United Kingdom",
-      "Weight": 8.426741
+      "Weight": 8.367228
      },
      {
       "Country": "Spain",
-      "Weight": 6.2653550000000005
+      "Weight": 6.221106
      },
      {
       "Country": "France",
-      "Weight": 5.039645
+      "Weight": 5.004053
      },
      {
       "Country": "Germany",
-      "Weight": 3.312461
+      "Weight": 3.2890669999999997
      },
      {
       "Country": "Australia",
-      "Weight": 2.7813120000000002
+      "Weight": 2.761669
      },
      {
       "Country": "Italy",
-      "Weight": 2.33242
+      "Weight": 2.315947
      },
      {
       "Country": "China",
-      "Weight": 1.271411
+      "Weight": 1.262432
      },
      {
       "Country": "Mexico",
-      "Weight": 1.229393
+      "Weight": 1.220711
      },
      {
       "Country": "Japan",
-      "Weight": 1.0830549999999999
+      "Weight": 1.0754059999999999
      },
      {
       "Country": "Hong Kong",
-      "Weight": 0.8865460000000001
+      "Weight": 0.8802849999999999
      },
      {
       "Country": "Brazil",
-      "Weight": 0.764555
+      "Weight": 0.759155
+     },
+     {
+      "Country": "Other",
+      "Weight": 0.706244
      },
      {
       "Country": "New Zealand",
-      "Weight": 0.573453
+      "Weight": 0.569403
      },
      {
       "Country": "Belgium",
-      "Weight": 0.505986
+      "Weight": 0.502413
      },
      {
       "Country": "Switzerland",
-      "Weight": 0.333603
+      "Weight": 0.331247
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.177075
+      "Weight": 0.175825
      },
      {
       "Country": "Luxembourg",
-      "Weight": 0.105492
+      "Weight": 0.104747
      },
      {
       "Country": "Portugal",
-      "Weight": 0.10129200000000001
+      "Weight": 0.10057600000000001
      },
      {
       "Country": "Singapore",
-      "Weight": 0.070168
+      "Weight": 0.069673
      }
     ]
    },
@@ -766,39 +770,43 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 51.844944417650616
+      "Weight": 51.478792729773346
      },
      {
       "Currency": "EUR",
-      "Weight": 17.839725823272733
+      "Weight": 17.713733871794528
      },
      {
       "Currency": "CAD",
-      "Weight": 14.959208367611426
+      "Weight": 14.853559891089112
      },
      {
       "Currency": "GBP",
-      "Weight": 8.426741051167715
+      "Weight": 8.367227717826395
      },
      {
       "Currency": "AUD",
-      "Weight": 2.7813116764316494
+      "Weight": 2.7616688361069617
      },
      {
       "Currency": "HKD",
-      "Weight": 2.1579573426400236
+      "Weight": 2.142716903437126
      },
      {
       "Currency": "JPY",
-      "Weight": 1.0830548358991803
+      "Weight": 1.075405828639504
+     },
+     {
+      "Currency": "Other",
+      "Weight": 0.706243765887064
      },
      {
       "Currency": "NZD",
-      "Weight": 0.5734533741272602
+      "Weight": 0.5694033954222173
      },
      {
       "Currency": "CHF",
-      "Weight": 0.3336031111993897
+      "Weight": 0.33124706002373866
      }
     ]
    },
