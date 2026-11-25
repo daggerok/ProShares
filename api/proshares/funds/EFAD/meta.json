@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/EFAD-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EFAD-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T05:01:16Z",
+  "catalogReadAt": "2026-11-25T07:07:48Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -799,71 +799,71 @@
     "rows": [
      {
       "Country": "Japan",
-      "Weight": 26.550376999999997
+      "Weight": 26.546062
      },
      {
       "Country": "United Kingdom",
-      "Weight": 13.643899000000001
+      "Weight": 13.636024999999998
      },
      {
       "Country": "Switzerland",
-      "Weight": 13.588455
+      "Weight": 13.568368999999999
      },
      {
       "Country": "Australia",
-      "Weight": 8.243084
+      "Weight": 8.321973
      },
      {
       "Country": "Belgium",
-      "Weight": 7.470135999999999
+      "Weight": 7.49838
      },
      {
       "Country": "Germany",
-      "Weight": 5.197268
+      "Weight": 5.246035
      },
      {
       "Country": "Hong Kong",
-      "Weight": 4.333102
+      "Weight": 4.250569
      },
      {
       "Country": "France",
-      "Weight": 3.8932590000000005
+      "Weight": 3.9582819999999996
      },
      {
       "Country": "Italy",
-      "Weight": 2.730245
-     },
-     {
-      "Country": "Netherlands",
-      "Weight": 2.62759
+      "Weight": 2.663335
      },
      {
       "Country": "Denmark",
-      "Weight": 2.6067340000000003
+      "Weight": 2.635307
+     },
+     {
+      "Country": "Netherlands",
+      "Weight": 2.593312
      },
      {
       "Country": "Spain",
-      "Weight": 2.519615
+      "Weight": 2.4599550000000003
      },
      {
       "Country": "Ireland",
-      "Weight": 1.608017
+      "Weight": 1.62307
      },
      {
       "Country": "New Zealand",
-      "Weight": 1.433275
+      "Weight": 1.457271
      },
      {
       "Country": "Norway",
-      "Weight": 1.264063
-     },
-     {
-      "Country": "Sweden",
-      "Weight": 1.1526990000000001
+      "Weight": 1.257001
      },
      {
       "Country": "Finland",
-      "Weight": 1.1381830000000002
+      "Weight": 1.150441
+     },
+     {
+      "Country": "Sweden",
+      "Weight": 1.134614
      }
     ]
    },
@@ -872,43 +872,43 @@
     "rows": [
      {
       "Currency": "EUR",
-      "Weight": 27.184314005578685
+      "Weight": 27.192810047474573
      },
      {
       "Currency": "JPY",
-      "Weight": 26.550376691735387
+      "Weight": 26.54606173739739
      },
      {
       "Currency": "GBP",
-      "Weight": 13.643898776271374
+      "Weight": 13.636024724390754
      },
      {
       "Currency": "CHF",
-      "Weight": 13.5884546809966
+      "Weight": 13.56836921855232
      },
      {
       "Currency": "AUD",
-      "Weight": 8.243084249948678
+      "Weight": 8.321972877967761
      },
      {
       "Currency": "HKD",
-      "Weight": 4.333101561119732
+      "Weight": 4.250568903371208
      },
      {
       "Currency": "DKK",
-      "Weight": 2.606733871997037
+      "Weight": 2.635306533132368
      },
      {
       "Currency": "NZD",
-      "Weight": 1.4332749793246522
+      "Weight": 1.457270933386008
      },
      {
       "Currency": "NOK",
-      "Weight": 1.2640626531177395
+      "Weight": 1.2570010103622826
      },
      {
       "Currency": "SEK",
-      "Weight": 1.1526985299101091
+      "Weight": 1.134614013965329
      }
     ]
    },
@@ -917,43 +917,43 @@
     "rows": [
      {
       "Sector": "Health Care",
-      "Weight": 18.652295993196987
+      "Weight": 18.837473416086308
      },
      {
       "Sector": "Information Technology",
-      "Weight": 14.44144769262278
+      "Weight": 14.559750595489461
      },
      {
       "Sector": "Industrials",
-      "Weight": 14.38209485993555
+      "Weight": 14.271150669145799
      },
      {
       "Sector": "Financials",
-      "Weight": 12.430060310054134
+      "Weight": 12.456736282182295
      },
      {
       "Sector": "Materials",
-      "Weight": 9.808485467666578
+      "Weight": 9.770875510114136
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 8.627441737856682
+      "Weight": 8.635777666846513
      },
      {
       "Sector": "Utilities",
-      "Weight": 8.44371344220622
+      "Weight": 8.377178573885793
      },
      {
       "Sector": "Communication Services",
-      "Weight": 5.18768415727398
+      "Weight": 5.142088745957288
      },
      {
       "Sector": "Real Estate",
-      "Weight": 4.171391070399378
+      "Weight": 4.147758188266064
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 2.9859674502670384
+      "Weight": 2.9415695162705946
      }
     ]
    }

@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/QQQA-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/QQQA-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T05:01:16Z",
+  "catalogReadAt": "2026-11-25T07:07:48Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -434,15 +434,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 89.834039
+      "Weight": 89.783007
      },
      {
       "Country": "Canada",
-      "Weight": 5.119458000000001
+      "Weight": 5.197195000000001
      },
      {
       "Country": "Netherlands",
-      "Weight": 5.0465040000000005
+      "Weight": 5.019798000000001
      }
     ]
    },
@@ -460,23 +460,23 @@
     "rows": [
      {
       "Sector": "Information Technology",
-      "Weight": 76.15252518526239
+      "Weight": 75.05508734114909
      },
      {
       "Sector": "Industrials",
-      "Weight": 6.842405578104999
+      "Weight": 7.081046846988579
      },
      {
       "Sector": "Health Care",
-      "Weight": 6.130337430781031
+      "Weight": 6.772028708818096
      },
      {
       "Sector": "Communication Services",
-      "Weight": 5.4090124260427
+      "Weight": 5.500841234205914
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 5.3252595172235635
+      "Weight": 5.445036373860532
      }
     ]
    }

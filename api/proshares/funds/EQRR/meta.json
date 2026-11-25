@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/EQRR-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/EQRR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T05:01:16Z",
+  "catalogReadAt": "2026-11-25T07:07:48Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -628,23 +628,23 @@
     "rows": [
      {
       "Sector": "Energy",
-      "Weight": 31.350431206671125
-     },
-     {
-      "Sector": "Technology",
-      "Weight": 21.934276668178
+      "Weight": 31.853766681453305
      },
      {
       "Sector": "Financials",
-      "Weight": 21.16519880208684
+      "Weight": 21.40961165517555
+     },
+     {
+      "Sector": "Technology",
+      "Weight": 21.252216071594674
      },
      {
       "Sector": "Telecommunications",
-      "Weight": 14.211585791817749
+      "Weight": 14.01281131028883
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 11.185175605005076
+      "Weight": 11.306619182186749
      }
     ]
    }

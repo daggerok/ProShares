@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/NOBL-psdlyhld.csv, as of Nov 24 2026)",
   "historySource": "official ProShares NAV history file (ByFund/NOBL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T05:01:16Z",
+  "catalogReadAt": "2026-11-25T07:07:48Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -734,23 +734,23 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 92.47268
+      "Weight": 92.535788
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.84641
+      "Weight": 2.8591930000000003
      },
      {
       "Country": "United Kingdom",
-      "Weight": 1.8843320000000001
+      "Weight": 1.898686
      },
      {
       "Country": "Ireland",
-      "Weight": 1.541875
+      "Weight": 1.455148
      },
      {
       "Country": "Other",
-      "Weight": 1.2547030000000001
+      "Weight": 1.251184
      }
     ]
    },
@@ -759,11 +759,11 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 98.74529677210568
+      "Weight": 98.74881596208861
      },
      {
       "Currency": "Other",
-      "Weight": 1.2547032278943244
+      "Weight": 1.2511840379113854
      }
     ]
    },
@@ -772,43 +772,43 @@
     "rows": [
      {
       "Sector": "Consumer Staples",
-      "Weight": 22.386671602667775
+      "Weight": 22.444583970779274
      },
      {
       "Sector": "Industrials",
-      "Weight": 21.76846813981252
+      "Weight": 21.68221929129058
      },
      {
       "Sector": "Financials",
-      "Weight": 13.28747634008504
+      "Weight": 13.327459043211762
      },
      {
       "Sector": "Materials",
-      "Weight": 11.370460901413798
+      "Weight": 11.27825545423608
      },
      {
       "Sector": "Health Care",
-      "Weight": 10.436444388635463
+      "Weight": 10.415005133513024
      },
      {
       "Sector": "Utilities",
-      "Weight": 6.017577128347297
+      "Weight": 6.019961303413923
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 4.5986610771708225
+      "Weight": 4.617206221586828
      },
      {
       "Sector": "Real Estate",
-      "Weight": 4.400445739629614
+      "Weight": 4.417993324802559
      },
      {
       "Sector": "Information Technology",
-      "Weight": 2.953730583622499
+      "Weight": 2.999560060117405
      },
      {
       "Sector": "Energy",
-      "Weight": 1.291663310609645
+      "Weight": 1.2928112601253265
      }
     ]
    }
