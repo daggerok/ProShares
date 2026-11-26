@@ -2,7 +2,7 @@
  "ticker": "ANTU",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 3,
+ "totalRows": 4,
  "headers": [
   "Date",
   "NAV",
@@ -27,6 +27,12 @@
    "NAV": "21.0838",
    "Shares Outstanding": "1070000",
    "Total Net Assets": "22559687.0838"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "21.5137",
+   "Shares Outstanding": "985000",
+   "Total Net Assets": "21191016.0137"
   }
  ]
 }

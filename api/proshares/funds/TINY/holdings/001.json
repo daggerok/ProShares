@@ -2,313 +2,263 @@
  "ticker": "TINY",
  "page": 1,
  "pageSize": 250,
- "totalRows": 33,
+ "totalRows": 31,
  "headers": [
   "Name",
   "Ticker",
   "Identifier",
   "Weight",
   "Market Value",
-  "Shares Held",
-  "Exposure Value"
+  "Shares Held"
  ],
  "rows": [
-  {
-   "Name": "UNITED KINGDOM POUND CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "GBP/USD",
-   "Weight": "-0.0345560212",
-   "Market Value": "—",
-   "Shares Held": "-2300",
-   "Exposure Value": "-3016.33"
-  },
-  {
-   "Name": "EUROPEAN EURO CURRENCY CONTRACT - USD",
-   "Ticker": "-",
-   "Identifier": "EUR/USD",
-   "Weight": "-0.0122500066",
-   "Market Value": "—",
-   "Shares Held": "-975",
-   "Exposure Value": "-1069.28"
-  },
   {
    "Name": "BRUKER CORP",
    "Ticker": "BRKR",
    "Identifier": "2616137",
-   "Weight": "5.3164491182",
-   "Market Value": "464062.83",
-   "Shares Held": "7827",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "JEOL LTD",
-   "Ticker": "-",
-   "Identifier": "6470544",
-   "Weight": "5.1481262057",
-   "Market Value": "449370.24",
-   "Shares Held": "10121",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "AXCELIS TECHNOLOGIES INC",
-   "Ticker": "ACLS",
-   "Identifier": "BD420Q8",
-   "Weight": "4.9524927027",
-   "Market Value": "432293.76",
-   "Shares Held": "4464",
-   "Exposure Value": "—"
+   "Weight": "5.2069242360",
+   "Market Value": "443321.28",
+   "Shares Held": "7827"
   },
   {
    "Name": "CABOT CORP",
    "Ticker": "CBT",
    "Identifier": "2162500",
-   "Weight": "4.9308363756",
-   "Market Value": "430403.42",
-   "Shares Held": "6002",
-   "Exposure Value": "—"
+   "Weight": "5.1544224485",
+   "Market Value": "438851.24",
+   "Shares Held": "6002"
   },
   {
-   "Name": "NIKON CORP",
+   "Name": "AXCELIS TECHNOLOGIES INC",
+   "Ticker": "ACLS",
+   "Identifier": "BD420Q8",
+   "Weight": "5.0821219092",
+   "Market Value": "432695.52",
+   "Shares Held": "4464"
+  },
+  {
+   "Name": "JEOL LTD",
    "Ticker": "-",
-   "Identifier": "6642321",
-   "Weight": "4.8039952838",
-   "Market Value": "419331.7",
-   "Shares Held": "43065",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "QNITY ELECTRONICS INC",
-   "Ticker": "Q",
-   "Identifier": "BW1P234",
-   "Weight": "4.7989648167",
-   "Market Value": "418892.6",
-   "Shares Held": "3829",
-   "Exposure Value": "—"
+   "Identifier": "6470544",
+   "Weight": "4.9632465935",
+   "Market Value": "422574.39",
+   "Shares Held": "10121"
   },
   {
    "Name": "VEECO INSTRUMENTS INC",
    "Ticker": "VECO",
    "Identifier": "2938422",
-   "Weight": "4.7567295143",
-   "Market Value": "415205.96",
-   "Shares Held": "11492",
-   "Exposure Value": "—"
+   "Weight": "4.8915498780",
+   "Market Value": "416470.08",
+   "Shares Held": "11492"
   },
   {
-   "Name": "JGC HOLDINGS CORP",
-   "Ticker": "-",
-   "Identifier": "6473468",
-   "Weight": "4.7284370032",
-   "Market Value": "412736.36",
-   "Shares Held": "33277",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "LG CHEM LTD",
-   "Ticker": "-",
-   "Identifier": "6346913",
-   "Weight": "4.6225464150",
-   "Market Value": "403493.37",
-   "Shares Held": "2537",
-   "Exposure Value": "—"
+   "Name": "QNITY ELECTRONICS INC",
+   "Ticker": "Q",
+   "Identifier": "BW1P234",
+   "Weight": "4.8759298552",
+   "Market Value": "415140.18",
+   "Shares Held": "3829"
   },
   {
    "Name": "NLIGHT INC",
    "Ticker": "LASR",
    "Identifier": "BFZP4R9",
-   "Weight": "4.5015573225",
-   "Market Value": "392932.46",
-   "Shares Held": "12031",
-   "Exposure Value": "—"
+   "Weight": "4.8411859630",
+   "Market Value": "412182.06",
+   "Shares Held": "12031"
+  },
+  {
+   "Name": "NIKON CORP",
+   "Ticker": "-",
+   "Identifier": "6642321",
+   "Weight": "4.7745764725",
+   "Market Value": "406510.88",
+   "Shares Held": "43065"
+  },
+  {
+   "Name": "JGC HOLDINGS CORP",
+   "Ticker": "-",
+   "Identifier": "6473468",
+   "Weight": "4.6933557596",
+   "Market Value": "399595.69",
+   "Shares Held": "33277"
+  },
+  {
+   "Name": "LG CHEM LTD",
+   "Ticker": "-",
+   "Identifier": "6346913",
+   "Weight": "4.5924575059",
+   "Market Value": "391005.14",
+   "Shares Held": "2537"
   },
   {
    "Name": "ONTO INNOVATION INC",
    "Ticker": "ONTO",
    "Identifier": "BKZ7N95",
-   "Weight": "4.4041697245",
-   "Market Value": "384431.68",
-   "Shares Held": "2216",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "ASML HOLDING NV",
-   "Ticker": "-",
-   "Identifier": "B929F46",
-   "Weight": "4.2710482818",
-   "Market Value": "372811.76",
-   "Shares Held": "283",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "OXFORD INSTRUMENTS PLC",
-   "Ticker": "-",
-   "Identifier": "0665045",
-   "Weight": "4.2537772023",
-   "Market Value": "371304.2",
-   "Shares Held": "11613",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "APPLIED MATERIALS INC",
-   "Ticker": "AMAT",
-   "Identifier": "2046552",
-   "Weight": "4.2469148707",
-   "Market Value": "370705.2",
-   "Shares Held": "1145",
-   "Exposure Value": "—"
+   "Weight": "4.4806339276",
+   "Market Value": "381484.4",
+   "Shares Held": "2216"
   },
   {
    "Name": "ENTEGRIS INC",
    "Ticker": "ENTG",
    "Identifier": "2599700",
-   "Weight": "4.2363528373",
-   "Market Value": "369783.26",
-   "Shares Held": "2893",
-   "Exposure Value": "—"
+   "Weight": "4.3618894542",
+   "Market Value": "371374.41",
+   "Shares Held": "2893"
+  },
+  {
+   "Name": "OXFORD INSTRUMENTS PLC",
+   "Ticker": "-",
+   "Identifier": "0665045",
+   "Weight": "4.2199278880",
+   "Market Value": "359287.7",
+   "Shares Held": "11613"
+  },
+  {
+   "Name": "APPLIED MATERIALS INC",
+   "Ticker": "AMAT",
+   "Identifier": "2046552",
+   "Weight": "4.1848494909",
+   "Market Value": "356301.1",
+   "Shares Held": "1145"
+  },
+  {
+   "Name": "ASML HOLDING NV",
+   "Ticker": "-",
+   "Identifier": "B929F46",
+   "Weight": "4.1284416994",
+   "Market Value": "351498.5",
+   "Shares Held": "283"
   },
   {
    "Name": "LAM RESEARCH CORP",
    "Ticker": "LRCX",
    "Identifier": "BSML4N7",
-   "Weight": "4.1979010969",
-   "Market Value": "366426.88",
-   "Shares Held": "1868",
-   "Exposure Value": "—"
+   "Weight": "4.0591467723",
+   "Market Value": "345598.68",
+   "Shares Held": "1868"
   },
   {
    "Name": "ULTRA CLEAN HOLDINGS INC",
    "Ticker": "UCTT",
    "Identifier": "B00G0F2",
-   "Weight": "3.7143072047",
-   "Market Value": "324214.88",
-   "Shares Held": "8986",
-   "Exposure Value": "—"
-  },
-  {
-   "Name": "NANOBIOTIX",
-   "Ticker": "-",
-   "Identifier": "B8X9FN7",
-   "Weight": "3.6337297987",
-   "Market Value": "317181.43",
-   "Shares Held": "10832",
-   "Exposure Value": "—"
+   "Weight": "3.7161661175",
+   "Market Value": "316397.06",
+   "Shares Held": "8986"
   },
   {
    "Name": "PHOTRONICS INC",
    "Ticker": "PLAB",
    "Identifier": "2687315",
-   "Weight": "3.5223154345",
-   "Market Value": "307456.28",
-   "Shares Held": "12539",
-   "Exposure Value": "—"
+   "Weight": "3.6862639744",
+   "Market Value": "313851.17",
+   "Shares Held": "12539"
+  },
+  {
+   "Name": "NANOBIOTIX",
+   "Ticker": "-",
+   "Identifier": "B8X9FN7",
+   "Weight": "3.6558222541",
+   "Market Value": "311259.34",
+   "Shares Held": "10832"
   },
   {
    "Name": "SCREEN HOLDINGS CO LTD",
    "Ticker": "-",
    "Identifier": "6251028",
-   "Weight": "3.3613670654",
-   "Market Value": "293407.4",
-   "Shares Held": "6141",
-   "Exposure Value": "—"
+   "Weight": "3.1682259564",
+   "Market Value": "269745.04",
+   "Shares Held": "6141"
   },
   {
    "Name": "METIS TECHBIO CO LTD-H",
    "Ticker": "-",
    "Identifier": "BX58WZ8",
-   "Weight": "2.4795965210",
-   "Market Value": "216439.31",
-   "Shares Held": "226735",
-   "Exposure Value": "—"
+   "Weight": "2.4119475296",
+   "Market Value": "205354.95",
+   "Shares Held": "226735"
   },
   {
    "Name": "PARK SYSTEMS CORP",
    "Ticker": "-",
    "Identifier": "BD0CJ98",
-   "Weight": "2.3583500052",
-   "Market Value": "205855.93",
-   "Shares Held": "1466",
-   "Exposure Value": "—"
+   "Weight": "2.3306774866",
+   "Market Value": "198435.56",
+   "Shares Held": "1466"
   },
   {
    "Name": "WONIK QNC CORP",
    "Ticker": "-",
    "Identifier": "6725352",
-   "Weight": "1.1975747008",
-   "Market Value": "104534.04",
-   "Shares Held": "5503",
-   "Exposure Value": "—"
+   "Weight": "1.1260811473",
+   "Market Value": "95875.36",
+   "Shares Held": "5503"
   },
   {
    "Name": "QD LASER INC",
    "Ticker": "-",
    "Identifier": "BL6G536",
-   "Weight": "1.0702636710",
-   "Market Value": "93421.3",
-   "Shares Held": "8860",
-   "Exposure Value": "—"
+   "Weight": "0.9496219872",
+   "Market Value": "80851.5",
+   "Shares Held": "8860"
   },
   {
    "Name": "NVE CORP",
    "Ticker": "NVEC",
    "Identifier": "2072126",
-   "Weight": "0.8498778869",
-   "Market Value": "74184.24",
-   "Shares Held": "1014",
-   "Exposure Value": "—"
+   "Weight": "0.8873913650",
+   "Market Value": "75553.14",
+   "Shares Held": "1014"
   },
   {
    "Name": "TOYO GOSEI CO LTD",
    "Ticker": "-",
    "Identifier": "6221850",
-   "Weight": "0.7985676951",
-   "Market Value": "69705.47",
-   "Shares Held": "1705",
-   "Exposure Value": "—"
+   "Weight": "0.7445563037",
+   "Market Value": "63392.06",
+   "Shares Held": "1705"
   },
   {
    "Name": "EIKON THERAPEUTICS INC",
    "Ticker": "EIKN",
    "Identifier": "BV9C5Q4",
-   "Weight": "0.7170653064",
-   "Market Value": "62591.28",
-   "Shares Held": "11339",
-   "Exposure Value": "—"
+   "Weight": "0.7205011866",
+   "Market Value": "61343.99",
+   "Shares Held": "11339"
   },
   {
    "Name": "CIRCUIT FABOLOGY MICROELEC-H",
    "Ticker": "-",
    "Identifier": "BPQV595",
-   "Weight": "0.7126506161",
-   "Market Value": "62205.93",
-   "Shares Held": "3091",
-   "Exposure Value": "—"
+   "Weight": "0.6497519613",
+   "Market Value": "55320.35",
+   "Shares Held": "3091"
   },
   {
    "Name": "DUKSAN HI-METAL CO LTD",
    "Ticker": "-",
    "Identifier": "B0LFXD7",
-   "Weight": "0.5852886057",
-   "Market Value": "51088.74",
-   "Shares Held": "9512",
-   "Exposure Value": "—"
+   "Weight": "0.5348562925",
+   "Market Value": "45538.05",
+   "Shares Held": "9512"
   },
   {
    "Name": "XANADU QUANTUM TECHNOLO-CL B",
    "Ticker": "XNDU",
    "Identifier": "BWTYYX7",
-   "Weight": "0.4530121806",
-   "Market Value": "39542.58",
-   "Shares Held": "19971",
-   "Exposure Value": "—"
+   "Weight": "0.4808574541",
+   "Market Value": "40940.55",
+   "Shares Held": "19971"
   },
   {
    "Name": "Net Other Assets (Liabilities)",
    "Ticker": "-",
    "Identifier": "—",
    "Weight": "—",
-   "Market Value": "32797.16",
-   "Shares Held": "32797.16",
-   "Exposure Value": "—"
+   "Market Value": "36322.66",
+   "Shares Held": "36322.66"
   }
  ]
 }

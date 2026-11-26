@@ -2,7 +2,7 @@
  "ticker": "ACQQ",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 73,
+ "totalRows": 74,
  "headers": [
   "Date",
   "NAV",
@@ -447,6 +447,12 @@
    "NAV": "19.2936",
    "Shares Outstanding": "1830000",
    "Total Net Assets": "35307307.2936"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "19.1994",
+   "Shares Outstanding": "1830000",
+   "Total Net Assets": "35134921.1994"
   }
  ]
 }

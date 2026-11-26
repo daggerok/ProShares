@@ -2,7 +2,7 @@
  "ticker": "UBT",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4240,
+ "totalRows": 4241,
  "headers": [
   "Date",
   "NAV",
@@ -1449,6 +1449,12 @@
    "NAV": "29.2429",
    "Shares Outstanding": "2200000",
    "Total Net Assets": "64334380"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "29.771",
+   "Shares Outstanding": "2200000",
+   "Total Net Assets": "65496200"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "SEF",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4646,
+ "totalRows": 4647,
  "headers": [
   "Date",
   "NAV",
@@ -3885,6 +3885,12 @@
    "NAV": "30.1698",
    "Shares Outstanding": "443670",
    "Total Net Assets": "13385374.8264"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "29.9811",
+   "Shares Outstanding": "368670",
+   "Total Net Assets": "11053072.1748"
   }
  ]
 }

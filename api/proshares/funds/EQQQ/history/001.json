@@ -2,7 +2,7 @@
  "ticker": "EQQQ",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 90,
+ "totalRows": 91,
  "headers": [
   "Date",
   "NAV",
@@ -549,6 +549,12 @@
    "NAV": "33.0867",
    "Shares Outstanding": "130000",
    "Total Net Assets": "4301304.0867"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "33.2496",
+   "Shares Outstanding": "130000",
+   "Total Net Assets": "4322481.2496"
   }
  ]
 }

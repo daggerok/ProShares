@@ -2,7 +2,7 @@
  "ticker": "ONLN",
  "page": 3,
  "pageSize": 1000,
- "totalRows": 2104,
+ "totalRows": 2105,
  "headers": [
   "Date",
   "NAV",
@@ -633,6 +633,12 @@
    "NAV": "54.4016",
    "Shares Outstanding": "940000",
    "Total Net Assets": "51137558.4016"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "54.4629",
+   "Shares Outstanding": "940000",
+   "Total Net Assets": "51195180.4629"
   }
  ]
 }

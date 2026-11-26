@@ -2,7 +2,7 @@
  "ticker": "HYHG",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3400,
+ "totalRows": 3401,
  "headers": [
   "Date",
   "NAV",
@@ -2409,6 +2409,12 @@
    "NAV": "62.2456",
    "Shares Outstanding": "3800000",
    "Total Net Assets": "236533342.2456"
+  },
+  {
+   "Date": "Nov 25 2026",
+   "NAV": "62.055",
+   "Shares Outstanding": "3800000",
+   "Total Net Assets": "235809062.055"
   }
  ]
 }

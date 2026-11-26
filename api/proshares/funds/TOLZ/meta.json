@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=TOLZ&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 24 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T23:15:38Z",
+  "catalogReadAt": "2026-11-26T05:49:58Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$57.84",
-  "value": 57.84,
-  "asOfDate": "Nov 24 2026"
+  "display": "$58.26",
+  "value": 58.26,
+  "asOfDate": "Nov 25 2026"
  },
  "marketPrice": {
-  "display": "$57.82",
-  "value": 57.82,
-  "asOfDate": "Nov 24 2026"
+  "display": "$58.52",
+  "value": 58.52,
+  "asOfDate": "Nov 25 2026"
  },
  "premiumDiscount": {
-  "display": "-0.03%",
-  "value": -0.0346,
+  "display": "0.45%",
+  "value": 0.4463,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$173.52 M",
-  "value": 173523957.8413,
-  "asOfDate": "Nov 24 2026",
+  "display": "$174.79 M",
+  "value": 174792958.2643,
+  "asOfDate": "Nov 25 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 3.03,
   "yield12MText": "3.03%",
-  "indicatedYield": 2.9629,
-  "indicatedYieldText": "2.96%",
+  "indicatedYield": 2.9416,
+  "indicatedYieldText": "2.94%",
   "secYield": 3.17,
   "secYieldText": "3.17%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -573,8 +573,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 114,
-  "asOfDate": "Nov 24 2026",
-  "asOf": "2026-11-24",
+  "asOfDate": "Nov 25 2026",
+  "asOf": "2026-11-25",
   "headers": [
    "Name",
    "Ticker",
@@ -583,7 +583,7 @@
    "Market Value",
    "Shares Held"
   ],
-  "source": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 24 2026)",
+  "source": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 25 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -591,9 +591,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3188,
-  "asOf": "Nov 24 2026",
-  "asOfDate": "Nov 24 2026",
+  "totalRows": 3189,
+  "asOf": "Nov 25 2026",
+  "asOfDate": "Nov 25 2026",
   "headers": [
    "Date",
    "NAV",
@@ -635,44 +635,44 @@
     "label": "Top 10 Index Holdings",
     "rows": [
      {
-      "Company": "NATIONAL GRID PLC",
-      "Weight": 5.620385
+      "Company": "ENBRIDGE INC",
+      "Weight": 5.622791
      },
      {
-      "Company": "ENBRIDGE INC",
-      "Weight": 5.575252
+      "Company": "NATIONAL GRID PLC",
+      "Weight": 5.590745
      },
      {
       "Company": "VINCI SA",
-      "Weight": 4.113838
+      "Weight": 4.1111759999999995
      },
      {
       "Company": "AMERICAN TOWER CORP",
-      "Weight": 4.085393
+      "Weight": 4.094853
      },
      {
       "Company": "WILLIAMS COS INC",
-      "Weight": 3.871372
+      "Weight": 3.869544
      },
      {
       "Company": "TC ENERGY CORP",
-      "Weight": 3.5066029999999997
+      "Weight": 3.530843
      },
      {
       "Company": "E.ON SE",
-      "Weight": 3.085185
+      "Weight": 3.0686560000000003
      },
      {
       "Company": "CHENIERE ENERGY INC",
-      "Weight": 2.93175
+      "Weight": 2.969319
      },
      {
       "Company": "KINDER MORGAN INC",
-      "Weight": 2.92065
+      "Weight": 2.9564090000000003
      },
      {
       "Company": "TARGA RESOURCES CORP",
-      "Weight": 2.911795
+      "Weight": 2.914802
      }
     ]
    },
@@ -681,87 +681,87 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 49.429254
+      "Weight": 49.536863
      },
      {
       "Country": "Canada",
-      "Weight": 14.853559999999998
+      "Weight": 14.954353000000001
      },
      {
       "Country": "United Kingdom",
-      "Weight": 8.367228
+      "Weight": 8.299748
      },
      {
       "Country": "Spain",
-      "Weight": 6.221106
+      "Weight": 6.130291000000001
      },
      {
       "Country": "France",
-      "Weight": 5.004053
+      "Weight": 4.98698
      },
      {
       "Country": "Germany",
-      "Weight": 3.2890669999999997
+      "Weight": 3.2717509999999996
      },
      {
       "Country": "Australia",
-      "Weight": 2.761669
+      "Weight": 2.744454
      },
      {
       "Country": "Italy",
-      "Weight": 2.315947
+      "Weight": 2.313834
      },
      {
       "Country": "China",
-      "Weight": 1.262432
+      "Weight": 1.2448219999999999
      },
      {
       "Country": "Mexico",
-      "Weight": 1.220711
+      "Weight": 1.22095
      },
      {
       "Country": "Japan",
-      "Weight": 1.0754059999999999
+      "Weight": 1.099575
      },
      {
       "Country": "Hong Kong",
-      "Weight": 0.8802849999999999
+      "Weight": 0.874405
      },
      {
       "Country": "Brazil",
-      "Weight": 0.759155
+      "Weight": 0.781127
      },
      {
       "Country": "Other",
-      "Weight": 0.706244
+      "Weight": 0.6874
      },
      {
       "Country": "New Zealand",
-      "Weight": 0.569403
+      "Weight": 0.579258
      },
      {
       "Country": "Belgium",
-      "Weight": 0.502413
+      "Weight": 0.501583
      },
      {
       "Country": "Switzerland",
-      "Weight": 0.331247
+      "Weight": 0.327596
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.175825
+      "Weight": 0.173058
      },
      {
       "Country": "Luxembourg",
-      "Weight": 0.104747
+      "Weight": 0.10269400000000001
      },
      {
       "Country": "Portugal",
-      "Weight": 0.10057600000000001
+      "Weight": 0.100075
      },
      {
       "Country": "Singapore",
-      "Weight": 0.069673
+      "Weight": 0.06918099999999999
      }
     ]
    },
@@ -770,43 +770,43 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 51.478792729773346
+      "Weight": 51.60812185833215
      },
      {
       "Currency": "EUR",
-      "Weight": 17.713733871794528
+      "Weight": 17.580267267879268
      },
      {
       "Currency": "CAD",
-      "Weight": 14.853559891089112
+      "Weight": 14.954352684488395
      },
      {
       "Currency": "GBP",
-      "Weight": 8.367227717826395
+      "Weight": 8.299748070548794
      },
      {
       "Currency": "AUD",
-      "Weight": 2.7616688361069617
+      "Weight": 2.7444540235122346
      },
      {
       "Currency": "HKD",
-      "Weight": 2.142716903437126
+      "Weight": 2.1192269067435854
      },
      {
       "Currency": "JPY",
-      "Weight": 1.075405828639504
+      "Weight": 1.0995752798939753
      },
      {
       "Currency": "Other",
-      "Weight": 0.706243765887064
+      "Weight": 0.687400102800669
      },
      {
       "Currency": "NZD",
-      "Weight": 0.5694033954222173
+      "Weight": 0.579257812289025
      },
      {
       "Currency": "CHF",
-      "Weight": 0.33124706002373866
+      "Weight": 0.3275959935119042
      }
     ]
    },
@@ -815,39 +815,39 @@
     "rows": [
      {
       "Sector": "Oil & Gas Storage & Transportation",
-      "Weight": 39.14306020098634
+      "Weight": 39.334288915509156
      },
      {
       "Sector": "Electricity Transmission & Distribution",
-      "Weight": 22.093507565085112
+      "Weight": 22.027809505994373
      },
      {
       "Sector": "Communications",
-      "Weight": 8.567351383693966
+      "Weight": 8.549939821142626
      },
      {
       "Sector": "Master Limited Partnerships",
-      "Weight": 7.878404449893665
+      "Weight": 7.852319633158218
      },
      {
       "Sector": "Diversified",
-      "Weight": 7.878227042872793
+      "Weight": 7.818051574455024
      },
      {
       "Sector": "Water",
-      "Weight": 5.399141546420718
+      "Weight": 5.417883274824312
      },
      {
       "Sector": "Airports",
-      "Weight": 4.490536413110302
+      "Weight": 4.4696446979704865
      },
      {
       "Sector": "Toll Roads",
-      "Weight": 2.8462098934413813
+      "Weight": 2.8282992752047242
      },
      {
       "Sector": "Ports",
-      "Weight": 0.3778586628186002
+      "Weight": 0.3757224943252866
      }
     ]
    }

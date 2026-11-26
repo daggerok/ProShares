@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=MRGR&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 24 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MRGR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-25T05:01:16Z",
+  "catalogReadAt": "2026-11-26T05:49:58Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a gross and a net expense ratio for this fund; the feed headline is the net ratio"
  },
  "nav": {
-  "display": "$46.39",
-  "value": 46.39,
-  "asOfDate": "Nov 24 2026"
+  "display": "$46.31",
+  "value": 46.31,
+  "asOfDate": "Nov 25 2026"
  },
  "marketPrice": {
-  "display": "$46.53",
-  "value": 46.53,
-  "asOfDate": "Nov 24 2026"
+  "display": "$46.24",
+  "value": 46.24,
+  "asOfDate": "Nov 25 2026"
  },
  "premiumDiscount": {
-  "display": "0.30%",
-  "value": 0.3018,
+  "display": "-0.15%",
+  "value": -0.1512,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$18.56 M",
-  "value": 18556406.3909,
-  "asOfDate": "Nov 24 2026",
+  "display": "$18.52 M",
+  "value": 18524846.312,
+  "asOfDate": "Nov 25 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,7 +76,7 @@
   "distributionYieldText": null,
   "yield12M": 0.87,
   "yield12MText": "0.87%",
-  "indicatedYield": 0.3585,
+  "indicatedYield": 0.3591,
   "indicatedYieldText": "0.36%",
   "secYield": 0.49,
   "secYieldText": "0.49%",
@@ -456,8 +456,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 50,
-  "asOfDate": "Nov 24 2026",
-  "asOf": "2026-11-24",
+  "asOfDate": "Nov 25 2026",
+  "asOf": "2026-11-25",
   "headers": [
    "Name",
    "Ticker",
@@ -467,7 +467,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 24 2026)",
+  "source": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 25 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -475,9 +475,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 3510,
-  "asOf": "Nov 24 2026",
-  "asOfDate": "Nov 24 2026",
+  "totalRows": 3511,
+  "asOf": "Nov 25 2026",
+  "asOfDate": "Nov 25 2026",
   "headers": [
    "Date",
    "NAV",
@@ -685,31 +685,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 62.689195
+      "Weight": 62.749500000000005
      },
      {
       "Country": "United Kingdom",
-      "Weight": 15.697239
+      "Weight": 15.648274
      },
      {
       "Country": "Other",
-      "Weight": 9.410118
+      "Weight": 9.414178
      },
      {
       "Country": "Australia",
-      "Weight": 4.970865
+      "Weight": 4.959136
      },
      {
       "Country": "Norway",
-      "Weight": 2.526537
+      "Weight": 2.4850589999999997
      },
      {
       "Country": "Canada",
-      "Weight": 2.417522
+      "Weight": 2.418134
      },
      {
       "Country": "Germany",
-      "Weight": 2.2885240000000002
+      "Weight": 2.325719
      }
     ]
    },
@@ -718,31 +718,31 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 65.31790547398862
+      "Weight": 65.37715123428131
      },
      {
       "Currency": "GBP",
-      "Weight": 10.24144216948736
+      "Weight": 10.226621215372715
      },
      {
       "Currency": "Other",
-      "Weight": 9.410118137850274
+      "Weight": 9.414177956066414
      },
      {
       "Currency": "EUR",
-      "Weight": 5.115609783076267
+      "Weight": 5.1197200987279725
      },
      {
       "Currency": "AUD",
-      "Weight": 4.970865144720671
+      "Weight": 4.959136134932876
      },
      {
       "Currency": "NOK",
-      "Weight": 2.526536793640861
+      "Weight": 2.485059432204175
      },
      {
       "Currency": "CAD",
-      "Weight": 2.4175224972359572
+      "Weight": 2.4181339284145333
      }
     ]
    }
