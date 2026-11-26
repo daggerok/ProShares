@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T21:54:08Z",
+ "generatedAt": "2026-11-26T23:27:02Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-11-26T21:42:47Z"
+  "catalogReadAt": "2026-11-26T23:15:39Z"
  },
  "counts": {
   "funds": 179,
@@ -4115,7 +4115,7 @@
     "beta1ySpy": 0.95,
     "corr1ySpy": 0.98,
     "upCapture3ySpy": 103.55,
-    "downCapture3ySpy": 113.36,
+    "downCapture3ySpy": 113.37,
     "relStrength3mSpy": -0.8,
     "stressReturnSpy": -10.96,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -7504,7 +7504,7 @@
     "beta1ySpy": -1.74,
     "corr1ySpy": -0.75,
     "upCapture3ySpy": -136.42,
-    "downCapture3ySpy": -98.79,
+    "downCapture3ySpy": -98.78,
     "relStrength3mSpy": 23.38,
     "stressReturnSpy": 9.41,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -20523,7 +20523,7 @@
     "relStrength3mSpy": 20.7,
     "stressReturnSpy": 26.71,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
-    "vsQqq1y": -14.24,
+    "vsQqq1y": -14.25,
     "vsQqq3y": -42.4,
     "vsQqq5y": -26.83,
     "vsQqq10y": -44.96,
@@ -27489,7 +27489,7 @@
     "vsSpy10y": 19.22,
     "beta1ySpy": 4.32,
     "corr1ySpy": 0.94,
-    "upCapture3ySpy": 289.09,
+    "upCapture3ySpy": 289.1,
     "downCapture3ySpy": 432.19,
     "relStrength3mSpy": -31.17,
     "stressReturnSpy": -51.1,
