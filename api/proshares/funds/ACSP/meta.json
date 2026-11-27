@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ACSP-psdlyhld.csv, as of Nov 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ACSP-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-26T05:49:58Z",
+  "catalogReadAt": "2026-11-27T09:44:35Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -243,9 +243,11 @@
   },
   "characteristicsAsOf": "Oct 30 2026",
   "index": {
+   "Total # of Autocallables": "80",
+   "Autocallables Near Maturity w/ Principal at Risk (%)": "0%",
    "": "2026"
   },
-  "indexAsOf": "—",
+  "indexAsOf": "Nov 25 2026",
   "geared": {
    "strategy": "",
    "dailyObjective": "",

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T23:27:02Z",
+ "generatedAt": "2026-11-27T09:55:56Z",
  "source": {
   "provider": "ProShares Trust / ProShare Advisors LLC (US ETFs and geared ETFs)",
   "market": "us",
@@ -16,7 +16,7 @@
   "splits": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributions": "https://www.proshares.com/api/distributionsummary?fund=<TICKER>&year=<YYYY>",
   "exchange": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "catalogReadAt": "2026-11-26T23:15:39Z"
+  "catalogReadAt": "2026-11-27T09:44:35Z"
  },
  "counts": {
   "funds": 179,
@@ -7504,7 +7504,7 @@
     "beta1ySpy": -1.74,
     "corr1ySpy": -0.75,
     "upCapture3ySpy": -136.42,
-    "downCapture3ySpy": -98.78,
+    "downCapture3ySpy": -98.79,
     "relStrength3mSpy": 23.38,
     "stressReturnSpy": 9.41,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -18492,7 +18492,7 @@
     "beta1ySpy": 0.58,
     "corr1ySpy": 0.25,
     "upCapture3ySpy": 107.44,
-    "downCapture3ySpy": 121.54,
+    "downCapture3ySpy": 121.55,
     "relStrength3mSpy": 19.38,
     "stressReturnSpy": 10.95,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -18691,7 +18691,7 @@
     "beta1ySpy": 1.73,
     "corr1ySpy": 0.77,
     "upCapture3ySpy": 164.38,
-    "downCapture3ySpy": 293.74,
+    "downCapture3ySpy": 293.75,
     "relStrength3mSpy": -7.71,
     "stressReturnSpy": -11.8,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -22509,7 +22509,7 @@
     "beta1ySpy": -2.7,
     "corr1ySpy": -0.83,
     "upCapture3ySpy": -242.81,
-    "downCapture3ySpy": -310.81,
+    "downCapture3ySpy": -310.82,
     "relStrength3mSpy": 25.54,
     "stressReturnSpy": 23.88,
     "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -33073,7 +33073,7 @@
     "beta1yQqq": 1.09,
     "corr1yQqq": 0.66,
     "upCapture3yQqq": 91.17,
-    "downCapture3yQqq": 34.33,
+    "downCapture3yQqq": 34.32,
     "relStrength3mQqq": -6.4,
     "stressReturnQqq": -18.69,
     "stressBasisQqq": "QQQ -20% 2026-10-06 to 2026-11-20",
