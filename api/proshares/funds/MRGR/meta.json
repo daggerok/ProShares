@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 25 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MRGR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-26T05:49:58Z",
+  "catalogReadAt": "2026-11-28T00:14:09Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -510,19 +510,15 @@
   "splits": [],
   "exposures": [
    {
-    "label": "Index Exposure Weightings",
+    "label": "Index Mkt Cap Weightings (Short)",
     "rows": [
      {
-      "Exposure": "% Long",
-      "Weight": 113.20546
+      "Mkt Cap": "Over $10b",
+      "Weight": 60.512955000000005
      },
      {
-      "Exposure": "% Cash",
-      "Weight": 16.147929
-     },
-     {
-      "Exposure": "% Short",
-      "Weight": -29.353389000000004
+      "Mkt Cap": "$1b–$5b",
+      "Weight": 39.487044999999995
      }
     ]
    },
@@ -548,15 +544,19 @@
     ]
    },
    {
-    "label": "Index Mkt Cap Weightings (Short)",
+    "label": "Index Exposure Weightings",
     "rows": [
      {
-      "Mkt Cap": "Over $10b",
-      "Weight": 60.512955000000005
+      "Exposure": "% Long",
+      "Weight": 113.20546
      },
      {
-      "Mkt Cap": "$1b–$5b",
-      "Weight": 39.487044999999995
+      "Exposure": "% Cash",
+      "Weight": 16.147929
+     },
+     {
+      "Exposure": "% Short",
+      "Weight": -29.353389000000004
      }
     ]
    },
