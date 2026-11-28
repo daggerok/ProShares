@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/SMDV-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/SMDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -630,15 +630,15 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 97.04272
+      "Weight": 97.03549299999999
      },
      {
       "Country": "Bermuda",
-      "Weight": 1.5282
+      "Weight": 1.516338
      },
      {
       "Country": "Ireland",
-      "Weight": 1.42908
+      "Weight": 1.44817
      }
     ]
    },
@@ -656,39 +656,39 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 28.49787680859363
+      "Weight": 28.40475889292971
      },
      {
       "Sector": "Industrials",
-      "Weight": 25.74677478296652
+      "Weight": 25.82162000534759
      },
      {
       "Sector": "Utilities",
-      "Weight": 14.975871779063196
+      "Weight": 14.901365369100528
      },
      {
       "Sector": "Materials",
-      "Weight": 10.872297523532465
+      "Weight": 10.975426047781056
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 6.861219679105377
+      "Weight": 6.856241764946068
      },
      {
       "Sector": "Real Estate",
-      "Weight": 4.5176163369091995
+      "Weight": 4.47680359945333
      },
      {
       "Sector": "Health Care",
-      "Weight": 3.8888156573519685
+      "Weight": 3.8692242826645544
      },
      {
       "Sector": "Information Technology",
-      "Weight": 3.0291079597036883
+      "Weight": 3.0640442131814543
      },
      {
       "Sector": "Communication Services",
-      "Weight": 1.2783868168665116
+      "Weight": 1.2702009824226268
      }
     ]
    }

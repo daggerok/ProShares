@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/PEX-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/PEX-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -663,31 +663,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 46.000133999999996
+      "Weight": 45.302594
      },
      {
       "Country": "United Kingdom",
-      "Weight": 21.128229
+      "Weight": 21.496635
      },
      {
       "Country": "Belgium",
-      "Weight": 10.445544
+      "Weight": 10.608335
      },
      {
       "Country": "Canada",
-      "Weight": 8.502223
+      "Weight": 8.554873
      },
      {
       "Country": "France",
-      "Weight": 7.422583
+      "Weight": 7.436392
      },
      {
       "Country": "Sweden",
-      "Weight": 4.115374
+      "Weight": 4.193476
      },
      {
       "Country": "Switzerland",
-      "Weight": 2.385913
+      "Weight": 2.407696
      }
     ]
    },
@@ -696,27 +696,27 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 46.00013399073748
+      "Weight": 45.302593779691094
      },
      {
       "Currency": "GBP",
-      "Weight": 20.473487128068246
+      "Weight": 20.83778845476218
      },
      {
       "Currency": "EUR",
-      "Weight": 18.522869026570184
+      "Weight": 18.703573070343285
      },
      {
       "Currency": "CAD",
-      "Weight": 8.502223052282782
+      "Weight": 8.554872633189948
      },
      {
       "Currency": "SEK",
-      "Weight": 4.115374086597784
+      "Weight": 4.193476350996644
      },
      {
       "Currency": "CHF",
-      "Weight": 2.385912715743522
+      "Weight": 2.4076957110168524
      }
     ]
    }

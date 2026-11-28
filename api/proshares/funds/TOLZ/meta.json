@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TOLZ-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TOLZ-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -636,43 +636,43 @@
     "rows": [
      {
       "Company": "ENBRIDGE INC",
-      "Weight": 5.622791
+      "Weight": 5.589456
      },
      {
       "Company": "NATIONAL GRID PLC",
-      "Weight": 5.590745
+      "Weight": 5.566965
      },
      {
       "Company": "VINCI SA",
-      "Weight": 4.1111759999999995
+      "Weight": 4.176385
      },
      {
       "Company": "AMERICAN TOWER CORP",
-      "Weight": 4.094853
+      "Weight": 4.0736
      },
      {
       "Company": "WILLIAMS COS INC",
-      "Weight": 3.869544
+      "Weight": 3.8817030000000003
      },
      {
       "Company": "TC ENERGY CORP",
-      "Weight": 3.530843
+      "Weight": 3.517289
      },
      {
       "Company": "E.ON SE",
-      "Weight": 3.0686560000000003
+      "Weight": 3.0803409999999998
      },
      {
       "Company": "CHENIERE ENERGY INC",
-      "Weight": 2.969319
+      "Weight": 2.978256
      },
      {
       "Company": "KINDER MORGAN INC",
-      "Weight": 2.9564090000000003
+      "Weight": 2.970859
      },
      {
       "Company": "TARGA RESOURCES CORP",
-      "Weight": 2.914802
+      "Weight": 2.843862
      }
     ]
    },
@@ -681,87 +681,87 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 49.536863
+      "Weight": 49.419801
      },
      {
       "Country": "Canada",
-      "Weight": 14.954353000000001
+      "Weight": 14.839645
      },
      {
       "Country": "United Kingdom",
-      "Weight": 8.299748
+      "Weight": 8.281152
      },
      {
       "Country": "Spain",
-      "Weight": 6.130291000000001
+      "Weight": 6.209697
      },
      {
       "Country": "France",
-      "Weight": 4.98698
+      "Weight": 5.051156
      },
      {
       "Country": "Germany",
-      "Weight": 3.2717509999999996
+      "Weight": 3.286916
      },
      {
       "Country": "Australia",
-      "Weight": 2.744454
+      "Weight": 2.7432290000000004
      },
      {
       "Country": "Italy",
-      "Weight": 2.313834
+      "Weight": 2.327579
      },
      {
       "Country": "China",
-      "Weight": 1.2448219999999999
+      "Weight": 1.252614
      },
      {
       "Country": "Mexico",
-      "Weight": 1.22095
+      "Weight": 1.217163
      },
      {
       "Country": "Japan",
-      "Weight": 1.099575
+      "Weight": 1.088277
      },
      {
       "Country": "Hong Kong",
-      "Weight": 0.874405
+      "Weight": 0.8734520000000001
      },
      {
       "Country": "Brazil",
-      "Weight": 0.781127
+      "Weight": 0.8633989999999999
      },
      {
       "Country": "Other",
-      "Weight": 0.6874
+      "Weight": 0.69487
      },
      {
       "Country": "New Zealand",
-      "Weight": 0.579258
+      "Weight": 0.572608
      },
      {
       "Country": "Belgium",
-      "Weight": 0.501583
+      "Weight": 0.501974
      },
      {
       "Country": "Switzerland",
-      "Weight": 0.327596
+      "Weight": 0.329972
      },
      {
       "Country": "Netherlands",
-      "Weight": 0.173058
+      "Weight": 0.175195
      },
      {
       "Country": "Luxembourg",
-      "Weight": 0.10269400000000001
+      "Weight": 0.103963
      },
      {
       "Country": "Portugal",
-      "Weight": 0.100075
+      "Weight": 0.09864200000000001
      },
      {
       "Country": "Singapore",
-      "Weight": 0.06918099999999999
+      "Weight": 0.068694
      }
     ]
    },
@@ -770,43 +770,43 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 51.60812185833215
+      "Weight": 51.56905693312972
      },
      {
       "Currency": "EUR",
-      "Weight": 17.580267267879268
+      "Weight": 17.755122478344
      },
      {
       "Currency": "CAD",
-      "Weight": 14.954352684488395
+      "Weight": 14.839645498662351
      },
      {
       "Currency": "GBP",
-      "Weight": 8.299748070548794
+      "Weight": 8.281152094281385
      },
      {
       "Currency": "AUD",
-      "Weight": 2.7444540235122346
+      "Weight": 2.74322943014481
      },
      {
       "Currency": "HKD",
-      "Weight": 2.1192269067435854
+      "Weight": 2.1260657027215526
      },
      {
       "Currency": "JPY",
-      "Weight": 1.0995752798939753
+      "Weight": 1.088277443821849
      },
      {
       "Currency": "Other",
-      "Weight": 0.687400102800669
+      "Weight": 0.694870153705145
      },
      {
       "Currency": "NZD",
-      "Weight": 0.579257812289025
+      "Weight": 0.5726082728583506
      },
      {
       "Currency": "CHF",
-      "Weight": 0.3275959935119042
+      "Weight": 0.3299719923308395
      }
     ]
    },
@@ -815,39 +815,39 @@
     "rows": [
      {
       "Sector": "Oil & Gas Storage & Transportation",
-      "Weight": 39.334288915509156
+      "Weight": 39.21973657921361
      },
      {
       "Sector": "Electricity Transmission & Distribution",
-      "Weight": 22.027809505994373
+      "Weight": 21.937412335008077
      },
      {
       "Sector": "Communications",
-      "Weight": 8.549939821142626
-     },
-     {
-      "Sector": "Master Limited Partnerships",
-      "Weight": 7.852319633158218
+      "Weight": 8.54670696691054
      },
      {
       "Sector": "Diversified",
-      "Weight": 7.818051574455024
+      "Weight": 7.922382363399865
+     },
+     {
+      "Sector": "Master Limited Partnerships",
+      "Weight": 7.8556376982526155
      },
      {
       "Sector": "Water",
-      "Weight": 5.417883274824312
+      "Weight": 5.502649342810355
      },
      {
       "Sector": "Airports",
-      "Weight": 4.4696446979704865
+      "Weight": 4.4763776697087465
      },
      {
       "Sector": "Toll Roads",
-      "Weight": 2.8282992752047242
+      "Weight": 2.8322658265844414
      },
      {
       "Sector": "Ports",
-      "Weight": 0.3757224943252866
+      "Weight": 0.3761321036257022
      }
     ]
    }

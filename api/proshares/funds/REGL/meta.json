@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/REGL-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/REGL-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -725,11 +725,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.537179
+      "Weight": 98.54998
      },
      {
       "Country": "Bermuda",
-      "Weight": 1.4628210000000001
+      "Weight": 1.4500199999999999
      }
     ]
    },
@@ -747,43 +747,43 @@
     "rows": [
      {
       "Sector": "Financials",
-      "Weight": 30.26988283556723
+      "Weight": 30.13576338334949
      },
      {
       "Sector": "Industrials",
-      "Weight": 15.521939953752954
-     },
-     {
-      "Sector": "Utilities",
-      "Weight": 14.34885546383356
+      "Weight": 15.509270523971097
      },
      {
       "Sector": "Materials",
-      "Weight": 14.11868710481661
+      "Weight": 14.248596894443994
+     },
+     {
+      "Sector": "Utilities",
+      "Weight": 14.229769772328083
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 8.427746278039262
+      "Weight": 8.46167566717669
      },
      {
       "Sector": "Real Estate",
-      "Weight": 7.954198015123887
+      "Weight": 7.906272475839739
      },
      {
       "Sector": "Health Care",
-      "Weight": 3.230726973702381
+      "Weight": 3.2424137182304795
      },
      {
       "Sector": "Consumer Staples",
-      "Weight": 3.0497827602840926
+      "Weight": 3.0583506795186497
      },
      {
       "Sector": "Information Technology",
-      "Weight": 1.4060807213892694
+      "Weight": 1.4551300019109756
      },
      {
       "Sector": "Energy",
-      "Weight": 1.39597847175867
+      "Weight": 1.3972521338806005
      }
     ]
    }

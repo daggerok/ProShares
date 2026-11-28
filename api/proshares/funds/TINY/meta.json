@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TINY-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TINY-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -353,44 +353,44 @@
     "label": "Top 10 Index Holdings",
     "rows": [
      {
+      "Company": "AXCELIS TECHNOLOGIES INC",
+      "Weight": 5.134209
+     },
+     {
       "Company": "BRUKER CORP",
-      "Weight": 5.206924
+      "Weight": 5.006227
      },
      {
       "Company": "CABOT CORP",
-      "Weight": 5.154422
-     },
-     {
-      "Company": "AXCELIS TECHNOLOGIES INC",
-      "Weight": 5.082122
-     },
-     {
-      "Company": "JEOL LTD",
-      "Weight": 4.963247
-     },
-     {
-      "Company": "VEECO INSTRUMENTS INC",
-      "Weight": 4.8915500000000005
-     },
-     {
-      "Company": "QNITY ELECTRONICS INC",
-      "Weight": 4.875929999999999
+      "Weight": 4.987001
      },
      {
       "Company": "NLIGHT INC",
-      "Weight": 4.841186
+      "Weight": 4.943809
+     },
+     {
+      "Company": "VEECO INSTRUMENTS INC",
+      "Weight": 4.901976
+     },
+     {
+      "Company": "JEOL LTD",
+      "Weight": 4.8595369999999996
+     },
+     {
+      "Company": "QNITY ELECTRONICS INC",
+      "Weight": 4.742501
      },
      {
       "Company": "NIKON CORP",
-      "Weight": 4.774576
-     },
-     {
-      "Company": "JGC HOLDINGS CORP",
-      "Weight": 4.693356
+      "Weight": 4.693791
      },
      {
       "Company": "LG CHEM LTD",
-      "Weight": 4.592458
+      "Weight": 4.6680600000000005
+     },
+     {
+      "Company": "JGC HOLDINGS CORP",
+      "Weight": 4.586702
      }
     ]
    },
@@ -399,27 +399,27 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 52.687488
+      "Weight": 52.085465
      },
      {
       "Country": "Japan",
-      "Weight": 19.376246
+      "Weight": 19.358810000000002
      },
      {
       "Country": "Other",
-      "Weight": 11.497801
+      "Weight": 11.873333
      },
      {
       "Country": "South Korea",
-      "Weight": 8.620851
+      "Weight": 8.874952
      },
      {
       "Country": "Netherlands",
-      "Weight": 4.14613
+      "Weight": 4.157371
      },
      {
       "Country": "France",
-      "Weight": 3.6714860000000002
+      "Weight": 3.650068
      }
     ]
    },
@@ -428,23 +428,23 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 52.6874875047173
+      "Weight": 52.0854648278972
      },
      {
       "Currency": "JPY",
-      "Weight": 19.376245844361403
+      "Weight": 19.358810273230013
      },
      {
       "Currency": "Other",
-      "Weight": 11.497800624412656
+      "Weight": 11.873333086283907
      },
      {
       "Currency": "KRW",
-      "Weight": 8.620850630312983
+      "Weight": 8.874952275069358
      },
      {
       "Currency": "EUR",
-      "Weight": 7.817615396195652
+      "Weight": 7.807439537519528
      }
     ]
    },
@@ -453,27 +453,27 @@
     "rows": [
      {
       "Sector": "Semiconductors & Semiconductor",
-      "Weight": 46.446905852639354
+      "Weight": 46.495801522115904
      },
      {
       "Sector": "Technology Hardware & Equipment",
-      "Weight": 12.135110043225698
+      "Weight": 12.227973298113488
      },
      {
       "Sector": "Materials",
-      "Weight": 10.491436258144976
+      "Weight": 10.430858525444386
      },
      {
       "Sector": "Pharmaceuticals, Biotechnology",
-      "Weight": 9.583247676611446
+      "Weight": 9.334075947822228
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 4.774576472546004
+      "Weight": 4.693790540127814
      },
      {
       "Sector": "Capital Goods",
-      "Weight": 4.693355759641136
+      "Weight": 4.586701998979588
      }
     ]
    }

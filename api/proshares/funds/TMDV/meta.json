@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/TMDV-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/TMDV-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -585,11 +585,11 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 98.457932
+      "Weight": 98.47515999999999
      },
      {
       "Country": "Ireland",
-      "Weight": 1.542068
+      "Weight": 1.52484
      }
     ]
    },
@@ -607,39 +607,39 @@
     "rows": [
      {
       "Sector": "Consumer Staples",
-      "Weight": 23.148915136566803
+      "Weight": 23.083055923894428
      },
      {
       "Sector": "Industrials",
-      "Weight": 20.784842300625876
+      "Weight": 20.88264675486304
      },
      {
       "Sector": "Financials",
-      "Weight": 14.896187509139985
+      "Weight": 14.84418797569362
      },
      {
       "Sector": "Utilities",
-      "Weight": 13.5615749940488
+      "Weight": 13.500890736639601
      },
      {
       "Sector": "Materials",
-      "Weight": 12.109239807412042
+      "Weight": 12.19016298724673
      },
      {
       "Sector": "Health Care",
-      "Weight": 6.2425141658789824
+      "Weight": 6.194043997995609
      },
      {
       "Sector": "Consumer Discretionary",
-      "Weight": 4.703538189755378
+      "Weight": 4.681257012761167
      },
      {
       "Sector": "Real Estate",
-      "Weight": 2.838544468521054
+      "Weight": 2.8284245848394267
      },
      {
       "Sector": "Energy",
-      "Weight": 1.489764268201549
+      "Weight": 1.492535953628873
      }
     ]
    }

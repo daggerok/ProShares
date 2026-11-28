@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/MRGR-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/MRGR-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -685,31 +685,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 62.749500000000005
+      "Weight": 57.601659999999995
      },
      {
       "Country": "United Kingdom",
-      "Weight": 15.648274
+      "Weight": 15.542399000000001
      },
      {
       "Country": "Other",
-      "Weight": 9.414178
+      "Weight": 14.728469
      },
      {
       "Country": "Australia",
-      "Weight": 4.959136
+      "Weight": 4.915797
      },
      {
       "Country": "Norway",
-      "Weight": 2.4850589999999997
+      "Weight": 2.4940070000000003
      },
      {
       "Country": "Canada",
-      "Weight": 2.418134
+      "Weight": 2.3991309999999997
      },
      {
       "Country": "Germany",
-      "Weight": 2.325719
+      "Weight": 2.3185379999999998
      }
     ]
    },
@@ -718,31 +718,31 @@
     "rows": [
      {
       "Currency": "USD",
-      "Weight": 65.37715123428131
-     },
-     {
-      "Currency": "GBP",
-      "Weight": 10.226621215372715
+      "Weight": 60.199293636895746
      },
      {
       "Currency": "Other",
-      "Weight": 9.414177956066414
+      "Weight": 14.72846906873576
+     },
+     {
+      "Currency": "GBP",
+      "Weight": 10.120771961208181
      },
      {
       "Currency": "EUR",
-      "Weight": 5.1197200987279725
+      "Weight": 5.142531366203492
      },
      {
       "Currency": "AUD",
-      "Weight": 4.959136134932876
+      "Weight": 4.915796559000662
      },
      {
       "Currency": "NOK",
-      "Weight": 2.485059432204175
+      "Weight": 2.494006832997782
      },
      {
       "Currency": "CAD",
-      "Weight": 2.4181339284145333
+      "Weight": 2.399130574958377
      }
     ]
    }

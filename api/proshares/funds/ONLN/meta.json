@@ -17,7 +17,7 @@
   "holdingsSource": "official ProShares daily holdings download (ByFund/ONLN-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/ONLN-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-28T03:21:00Z",
+  "catalogReadAt": "2026-11-28T08:57:04Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -310,43 +310,43 @@
     "rows": [
      {
       "Company": "AMAZON.COM INC",
-      "Weight": 24.083195
+      "Weight": 24.367783000000003
      },
      {
       "Company": "EBAY INC",
-      "Weight": 9.095854000000001
+      "Weight": 8.683222
      },
      {
       "Company": "ALIBABA GROUP HOLDING-SP ADR",
-      "Weight": 7.052303
+      "Weight": 7.135686
      },
      {
       "Company": "PDD HOLDINGS INC",
-      "Weight": 5.962041
+      "Weight": 5.86961
      },
      {
       "Company": "CARVANA CO",
-      "Weight": 5.355394
+      "Weight": 5.384131
      },
      {
       "Company": "COUPANG INC",
-      "Weight": 4.395667
+      "Weight": 4.3418470000000005
      },
      {
       "Company": "MERCADOLIBRE INC",
-      "Weight": 3.9152020000000003
+      "Weight": 3.982177
      },
      {
       "Company": "PATTERN GROUP INC-CL A",
-      "Weight": 3.6480440000000005
+      "Weight": 3.590891
      },
      {
-      "Company": "WILLIAMS-SONOMA INC",
-      "Weight": 3.3476359999999996
+      "Company": "FIGS INC-CLASS A",
+      "Weight": 3.3195339999999995
      },
      {
       "Company": "GIGACLOUD TECHNOLOGY INC - A",
-      "Weight": 3.159538
+      "Weight": 3.303254
      }
     ]
    },
@@ -355,31 +355,31 @@
     "rows": [
      {
       "Country": "United States",
-      "Weight": 60.871306000000004
+      "Weight": 60.857249
      },
      {
       "Country": "Other",
-      "Weight": 14.645237
+      "Weight": 14.601168000000001
      },
      {
       "Country": "China",
-      "Weight": 9.990868
+      "Weight": 10.099425
      },
      {
       "Country": "Ireland",
-      "Weight": 5.96436
+      "Weight": 5.871116
      },
      {
       "Country": "Uruguay",
-      "Weight": 3.916725
+      "Weight": 3.983199
      },
      {
       "Country": "Singapore",
-      "Weight": 2.855756
+      "Weight": 2.8716559999999998
      },
      {
       "Country": "Israel",
-      "Weight": 1.755748
+      "Weight": 1.716188
      },
      {
       "Country": "Russian Federation",
@@ -392,15 +392,15 @@
     "rows": [
      {
       "Sector": "Consumer Discretionary Distrib",
-      "Weight": 79.31429534058236
+      "Weight": 79.18647742115284
      },
      {
       "Sector": "Consumer Durables & Apparel",
-      "Weight": 3.152622911571217
+      "Weight": 3.3195343440178875
      },
      {
       "Sector": "Media & Entertainment",
-      "Weight": 2.8546449132627676
+      "Weight": 2.8709193725060227
      }
     ]
    }
