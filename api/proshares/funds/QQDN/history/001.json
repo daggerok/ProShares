@@ -2,7 +2,7 @@
  "ticker": "QQDN",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 369,
+ "totalRows": 370,
  "headers": [
   "Date",
   "NAV",
@@ -2223,6 +2223,12 @@
    "NAV": "24.3606",
    "Shares Outstanding": "50000",
    "Total Net Assets": "1218054.3606"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "23.5326",
+   "Shares Outstanding": "50000",
+   "Total Net Assets": "1176653.5326"
   }
  ]
 }

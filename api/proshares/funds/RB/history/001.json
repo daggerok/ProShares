@@ -2,7 +2,7 @@
  "ticker": "RB",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 360,
+ "totalRows": 361,
  "headers": [
   "Date",
   "NAV",
@@ -2169,6 +2169,12 @@
    "NAV": "45.8006",
    "Shares Outstanding": "25000",
    "Total Net Assets": "1145060.8006"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "46.1925",
+   "Shares Outstanding": "25000",
+   "Total Net Assets": "1154858.6925"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "ticker": "ANTY",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 4,
+ "totalRows": 5,
  "headers": [
   "Date",
   "NAV",
@@ -33,6 +33,12 @@
    "NAV": "28.4512",
    "Shares Outstanding": "865000",
    "Total Net Assets": "24610316.4512"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "22.2008",
+   "Shares Outstanding": "985000",
+   "Total Net Assets": "21867810.2008"
   }
  ]
 }

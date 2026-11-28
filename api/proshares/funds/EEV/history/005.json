@@ -2,7 +2,7 @@
  "ticker": "EEV",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4800,
+ "totalRows": 4801,
  "headers": [
   "Date",
   "NAV",
@@ -4809,6 +4809,12 @@
    "NAV": "14.2222",
    "Shares Outstanding": "214360",
    "Total Net Assets": "3048713.4586"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "13.3767",
+   "Shares Outstanding": "214360",
+   "Total Net Assets": "2867469.5421"
   }
  ]
 }

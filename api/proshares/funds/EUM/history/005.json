@@ -2,7 +2,7 @@
  "ticker": "EUM",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4800,
+ "totalRows": 4801,
  "headers": [
   "Date",
   "NAV",
@@ -4809,6 +4809,12 @@
    "NAV": "18.427",
    "Shares Outstanding": "954970",
    "Total Net Assets": "17597305.898"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "17.8758",
+   "Shares Outstanding": "954970",
+   "Total Net Assets": "17070924.2292"
   }
  ]
 }

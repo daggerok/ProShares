@@ -2,7 +2,7 @@
  "ticker": "VIXY",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3999,
+ "totalRows": 4000,
  "headers": [
   "Date",
   "NAV",
@@ -6003,6 +6003,12 @@
    "NAV": "23.31295261",
    "Shares Outstanding": "4616250",
    "Total Net Assets": "107618464.11181772"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "21.45998296",
+   "Shares Outstanding": "4316250",
+   "Total Net Assets": "92626694.37106591"
   }
  ]
 }

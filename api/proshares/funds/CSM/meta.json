@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=CSM&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/CSM-psdlyhld.csv, as of Nov 25 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/CSM-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/CSM-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-26T05:49:58Z",
+  "catalogReadAt": "2026-11-28T03:21:00Z",
   "secYield": "official ProShares SEC 30-Day Yield (page distributions block)"
  },
  "identifiers": {
@@ -42,25 +42,25 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$81.87",
-  "value": 81.87,
-  "asOfDate": "Nov 25 2026"
+  "display": "$83.19",
+  "value": 83.19,
+  "asOfDate": "Nov 27 2026"
  },
  "marketPrice": {
-  "display": "$81.96",
-  "value": 81.96,
-  "asOfDate": "Nov 25 2026"
+  "display": "$83.05",
+  "value": 83.05,
+  "asOfDate": "Nov 27 2026"
  },
  "premiumDiscount": {
-  "display": "0.11%",
-  "value": 0.1099,
+  "display": "-0.17%",
+  "value": -0.1683,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$482.20 M",
-  "value": 482203109,
-  "asOfDate": "Nov 25 2026",
+  "display": "$489.97 M",
+  "value": 489973786,
+  "asOfDate": "Nov 27 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": 1.06,
   "yield12MText": "1.06%",
-  "indicatedYield": 1.038,
-  "indicatedYieldText": "1.04%",
+  "indicatedYield": 1.0215,
+  "indicatedYieldText": "1.02%",
   "secYield": 1.02,
   "secYieldText": "1.02%",
   "secYieldKind": "official ProShares SEC 30-Day Yield (page distributions block)"
@@ -573,8 +573,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 309,
-  "asOfDate": "Nov 25 2026",
-  "asOf": "2026-11-25",
+  "asOfDate": "Nov 27 2026",
+  "asOf": "2026-11-27",
   "headers": [
    "Name",
    "Ticker",
@@ -584,7 +584,7 @@
    "Shares Held",
    "Exposure Value"
   ],
-  "source": "official ProShares daily holdings download (ByFund/CSM-psdlyhld.csv, as of Nov 25 2026)",
+  "source": "official ProShares daily holdings download (ByFund/CSM-psdlyhld.csv, as of Nov 27 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json",
@@ -593,9 +593,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4372,
-  "asOf": "Nov 25 2026",
-  "asOfDate": "Nov 25 2026",
+  "totalRows": 4373,
+  "asOf": "Nov 27 2026",
+  "asOfDate": "Nov 27 2026",
   "headers": [
    "Date",
    "NAV",

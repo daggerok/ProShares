@@ -2,7 +2,7 @@
  "ticker": "EET",
  "page": 5,
  "pageSize": 1000,
- "totalRows": 4400,
+ "totalRows": 4401,
  "headers": [
   "Date",
   "NAV",
@@ -2409,6 +2409,12 @@
    "NAV": "24.9345",
    "Shares Outstanding": "910000",
    "Total Net Assets": "22690395"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "26.4221",
+   "Shares Outstanding": "910000",
+   "Total Net Assets": "24044111"
   }
  ]
 }

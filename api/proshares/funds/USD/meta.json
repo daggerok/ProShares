@@ -14,10 +14,10 @@
   "splitsFile": "https://accounts.profunds.com/etfdata/etf_splits.csv",
   "distributionsApi": "https://www.proshares.com/api/distributionsummary?fund=USD&year=2026",
   "exchangeSource": "Nasdaq Trader symbol directory (nasdaqlisted.txt + otherlisted.txt)",
-  "holdingsSource": "official ProShares daily holdings download (ByFund/USD-psdlyhld.csv, as of Nov 25 2026)",
+  "holdingsSource": "official ProShares daily holdings download (ByFund/USD-psdlyhld.csv, as of Nov 27 2026)",
   "historySource": "official ProShares NAV history file (ByFund/USD-historical_nav.csv)",
   "provider": "ProShares public fund pages and the official ProShares/ProFunds data host",
-  "catalogReadAt": "2026-11-26T05:49:58Z",
+  "catalogReadAt": "2026-11-28T03:21:00Z",
   "secYield": "not published on this fund page (data limitation)"
  },
  "identifiers": {
@@ -42,33 +42,33 @@
   "note": "ProShares publishes a single expense ratio for this fund"
  },
  "nav": {
-  "display": "$39.31",
-  "value": 39.31,
-  "asOfDate": "Nov 25 2026"
+  "display": "$41.76",
+  "value": 41.76,
+  "asOfDate": "Nov 27 2026"
  },
  "marketPrice": {
-  "display": "$39.37",
-  "value": 39.37,
-  "asOfDate": "Nov 25 2026"
+  "display": "$41.88",
+  "value": 41.88,
+  "asOfDate": "Nov 27 2026"
  },
  "premiumDiscount": {
-  "display": "0.15%",
-  "value": 0.1526,
+  "display": "0.29%",
+  "value": 0.2874,
   "computed": true,
   "formula": "(market price − NAV) / NAV"
  },
  "aum": {
-  "display": "$1.30 B",
-  "value": 1301167620,
-  "asOfDate": "Nov 25 2026",
+  "display": "$1.38 B",
+  "value": 1382236140,
+  "asOfDate": "Nov 27 2026",
   "source": "official ProShares NAV history file (Assets Under Management); display and value share this one source and date"
  },
  "yields": {
   "dividendYield": null,
   "dividendYieldText": "—",
   "dividendYieldKind": "official ProShares 12-Month Yield (sum of the last 12 months of dividends / the last month's NAV plus capital-gain distributions)",
-  "effectiveYield": 1.3407,
-  "effectiveYieldText": "1.34%",
+  "effectiveYield": 1.2621,
+  "effectiveYieldText": "1.26%",
   "effectiveYieldBasis": "indicated yield computed by the updater from the latest official distribution (ProShares publishes no 12-Month Yield for this fund)",
   "effectiveYieldBasisCode": "indicated",
   "effectiveYieldComputed": true,
@@ -76,8 +76,8 @@
   "distributionYieldText": null,
   "yield12M": null,
   "yield12MText": "—",
-  "indicatedYield": 1.3407,
-  "indicatedYieldText": "1.34%",
+  "indicatedYield": 1.2621,
+  "indicatedYieldText": "1.26%",
   "secYield": null,
   "secYieldText": "—",
   "secYieldKind": "not published on this fund page (data limitation)"
@@ -438,8 +438,8 @@
  "holdings": {
   "pageSize": 250,
   "totalRows": 53,
-  "asOfDate": "Nov 25 2026",
-  "asOf": "2026-11-25",
+  "asOfDate": "Nov 27 2026",
+  "asOf": "2026-11-27",
   "headers": [
    "Name",
    "Ticker",
@@ -451,7 +451,7 @@
    "Coupon",
    "Maturity Date"
   ],
-  "source": "official ProShares daily holdings download (ByFund/USD-psdlyhld.csv, as of Nov 25 2026)",
+  "source": "official ProShares daily holdings download (ByFund/USD-psdlyhld.csv, as of Nov 27 2026)",
   "weightNote": "Weight reproduces the fund page weight column: the position value (market value, or notional exposure for futures and swaps) divided by the fund total net assets in the same official file. The residual Net Other Assets line and its cash equivalents (Treasury bills, the ProShares money-market fund) carry no weight on the fund pages and stay blank.",
   "pages": [
    "./holdings/001.json"
@@ -459,9 +459,9 @@
  },
  "history": {
   "pageSize": 1000,
-  "totalRows": 4990,
-  "asOf": "Nov 25 2026",
-  "asOfDate": "Nov 25 2026",
+  "totalRows": 4991,
+  "asOf": "Nov 27 2026",
+  "asOfDate": "Nov 27 2026",
   "headers": [
    "Date",
    "NAV",

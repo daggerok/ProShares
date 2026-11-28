@@ -2,7 +2,7 @@
  "ticker": "UCOP",
  "page": 1,
  "pageSize": 1000,
- "totalRows": 154,
+ "totalRows": 155,
  "headers": [
   "Date",
   "NAV",
@@ -933,6 +933,12 @@
    "NAV": "26.7305",
    "Shares Outstanding": "20000",
    "Total Net Assets": "534636.7305"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "27.9344",
+   "Shares Outstanding": "20000",
+   "Total Net Assets": "558715.9344"
   }
  ]
 }

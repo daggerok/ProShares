@@ -2,7 +2,7 @@
  "ticker": "MRGR",
  "page": 4,
  "pageSize": 1000,
- "totalRows": 3511,
+ "totalRows": 3512,
  "headers": [
   "Date",
   "NAV",
@@ -3075,6 +3075,12 @@
    "NAV": "46.312",
    "Shares Outstanding": "400000",
    "Total Net Assets": "18524846.312"
+  },
+  {
+   "Date": "Nov 27 2026",
+   "NAV": "46.4286",
+   "Shares Outstanding": "400000",
+   "Total Net Assets": "18571486.4286"
   }
  ]
 }
